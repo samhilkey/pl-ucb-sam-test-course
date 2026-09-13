@@ -1,0 +1,10 @@
+{
+    "uuid": "D645E3D9-FC96-46E1-9F7C-DB7FDECCF3A2",
+    "longName": "Fall 2026",
+    "allowAccess": [
+        {
+            "startDate": "2026-08-20T00:00:00",
+            "endDate": "2026-12-20T23:59:59"
+        }
+    ]
+}
