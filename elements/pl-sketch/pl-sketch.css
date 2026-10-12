@@ -1,0 +1,93 @@
+.sketchresponse-debug {
+  background-color: hsla(0, 0%, 100%, 0.852);
+  font-family: 'Lucida Console', 'Courier New', monospace;
+  color: black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.js-overlay-toggle {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* STAR: hand-drawn submission panel, overlaid on the canvas. */
+.star-photo-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: auto;
+}
+
+.star-photo-panel[hidden] {
+  display: none;
+}
+
+.star-photo-panel-inner {
+  padding: 16px;
+}
+
+.star-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star-scale label {
+  font-size: 13px;
+  margin: 0;
+}
+
+.star-scale input[type='number'] {
+  width: 70px;
+}
+
+.star-canvas-wrap {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  min-height: 60px;
+}
+
+.star-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  touch-action: none; /* so dragging draws instead of scrolling the page */
+  cursor: crosshair;
+}
+
+.star-hint,
+.star-scale-read {
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+
+button.star-on {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+}
+
+.star-result {
+  font-size: 11px;
+  max-height: 140px;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 8px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
+
+/* The panel positions against the canvas container, so that has to establish
+   a positioning context. */
+.si-container {
+  position: relative;
+}
