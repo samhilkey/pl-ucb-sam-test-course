@@ -1,0 +1,78 @@
+<pl-question-panel>
+  <h4>Photo &rarr; fitted equation &rarr; pl-sketch canvas</h4>
+  <p>
+    The curve below came out of the Sketch to Graph interface. A student photographed a
+    hand-drawn graph, marked their axes, traced their curve, corrected the machine's reading
+    {{params.n_corrections}} times, and confirmed the result. That confirmation produced an
+    equation, and this page put the equation on a pl-sketch canvas.
+  </p>
+  <p>
+    Nothing here is hand-typed: the function, the plot window and the graded feature points
+    were all computed from the confirmed JSON when the page loaded.
+  </p>
+</pl-question-panel>
+
+<pl-card>
+  <pl-question-panel>
+    <p><strong>What the student's drawing became.</strong> {{params.description}}</p>
+    <p>
+      Fitted family: <code>{{params.family}}</code>.
+      Distance from the traced ink: <code>{{params.rms}}</code> units RMS.
+    </p>
+  </pl-question-panel>
+
+  <pl-sketch
+    answers-name="from-photo"
+    x-range="{{params.canvas_x_range}}"
+    y-range="{{params.canvas_y_range}}"
+  >
+    <pl-sketch-tool id="sp" type="spline" label="Your graph"></pl-sketch-tool>
+    <pl-sketch-tool id="pt" type="point" label="Turning points"></pl-sketch-tool>
+
+    {{{params.initial_tags}}}
+
+    <pl-sketch-grade
+      type="match"
+      tool-id="sp"
+      x="{{params.max_x}}"
+      y="{{params.max_y}}"
+      feedback="The local maximum is not in the right place."
+    ></pl-sketch-grade>
+    <pl-sketch-grade
+      type="match"
+      tool-id="sp"
+      x="{{params.min_x}}"
+      y="{{params.min_y}}"
+      feedback="The local minimum is not in the right place."
+    ></pl-sketch-grade>
+    <pl-sketch-grade
+      type="match-function"
+      tool-id="sp"
+      function="{{params.fitted_fn}}"
+      x-range="{{params.x_lo}},{{params.x_hi}}"
+      debug="true"
+      feedback="The curve has drifted away from the confirmed function."
+    ></pl-sketch-grade>
+  </pl-sketch>
+</pl-card>
+
+<pl-card>
+  <pl-question-panel>
+    <p>
+      <strong>The raw trace, for comparison.</strong> The canvas above is the fitted function
+      &mdash; smooth, and constrained to be a real function. This one is seeded from the
+      student's actual traced points, wobble included. Showing both makes the argument that
+      the fit cleans up transcription noise without inventing the features.
+    </p>
+  </pl-question-panel>
+
+  <pl-sketch
+    answers-name="raw-trace"
+    x-range="{{params.canvas_x_range}}"
+    y-range="{{params.canvas_y_range}}"
+    allow-blank="true"
+  >
+    <pl-sketch-tool id="sp2" type="spline" label="Traced drawing" color="dimgray"></pl-sketch-tool>
+    <pl-sketch-initial tool-id="sp2" coordinates="{{params.traced_coords}}"></pl-sketch-initial>
+  </pl-sketch>
+</pl-card>

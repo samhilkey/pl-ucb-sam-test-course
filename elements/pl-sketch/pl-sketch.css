@@ -76,6 +76,40 @@ button.star-on {
   color: #fff;
 }
 
+.star-fit-box {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-left: 4px solid #198754;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.star-fit-eq {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 15px;
+  margin: 0 0 4px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.star-fit-meta {
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+
+.star-fit-box .star-row {
+  margin-bottom: 0;
+}
+
+.star-fit-box label {
+  font-size: 13px;
+  margin: 0;
+}
+
+.star-degree input {
+  width: 60px;
+}
+
 .star-result {
   font-size: 11px;
   max-height: 140px;

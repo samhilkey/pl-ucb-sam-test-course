@@ -1,0 +1,68 @@
+<pl-question-panel>
+  <h4>Proof of concept: equation &rarr; canvas &rarr; grade</h4>
+  <p>
+    Nothing on either canvas below is written into this file. A few lines of Python chose an
+    equation when the page loaded, and the curve was generated from it. <strong>Reload the page
+    and you get a different equation and a different curve.</strong>
+  </p>
+  <p>
+    In the real system, that equation comes from fitting a parent function to a photo of a
+    hand-drawn graph. Everything downstream of the fit is what you see here.
+  </p>
+</pl-question-panel>
+
+<pl-card>
+  <pl-question-panel>
+    <p>
+      <strong>1. A correct fit.</strong> The question is grading against
+      $f(x) = {{params.target_latex}}$, and the curve seeded onto the canvas was generated from
+      that same equation. Drag the purple control points and submit to see the grading respond.
+    </p>
+  </pl-question-panel>
+
+  <pl-sketch answers-name="poc-correct" x-range="-6,6" y-range="-6,6">
+    <pl-sketch-tool id="sp" type="spline" label="Your graph"></pl-sketch-tool>
+    <pl-sketch-tool id="fd" type="free-draw"></pl-sketch-tool>
+    <pl-sketch-initial
+      tool-id="sp"
+      function="{{params.fitted_fn}}"
+      x-range="{{params.x_lo}},{{params.x_hi}}"
+    ></pl-sketch-initial>
+    <pl-sketch-grade
+      type="match-function"
+      tool-id="sp"
+      function="{{params.target_fn}}"
+      x-range="{{params.x_lo}},{{params.x_hi}}"
+      debug="true"
+      feedback="The sketched curve does not match the target function."
+    ></pl-sketch-grade>
+  </pl-sketch>
+</pl-card>
+
+<pl-card>
+  <pl-question-panel>
+    <p>
+      <strong>2. A bad fit.</strong> Same target function, but the curve seeded onto this canvas
+      was generated from an equation with the wrong vertical stretch. Submit without touching it:
+      grading should fail, which is the point. A seeded curve is a real submission, not decoration,
+      and a wrong fit does not quietly pass.
+    </p>
+  </pl-question-panel>
+
+  <pl-sketch answers-name="poc-wrong" x-range="-6,6" y-range="-6,6">
+    <pl-sketch-tool id="sp2" type="spline" label="Your graph"></pl-sketch-tool>
+    <pl-sketch-initial
+      tool-id="sp2"
+      function="{{params.wrong_fn}}"
+      x-range="{{params.x_lo}},{{params.x_hi}}"
+    ></pl-sketch-initial>
+    <pl-sketch-grade
+      type="match-function"
+      tool-id="sp2"
+      function="{{params.target_fn}}"
+      x-range="{{params.x_lo}},{{params.x_hi}}"
+      debug="true"
+      feedback="The sketched curve does not match the target function."
+    ></pl-sketch-grade>
+  </pl-sketch>
+</pl-card>

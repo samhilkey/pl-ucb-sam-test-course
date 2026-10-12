@@ -60,8 +60,33 @@ window.StarPhoto = (function () {
         <p class="star-scale-read text-muted"></p>
 
         <div class="star-row">
-          <button type="button" class="btn btn-sm btn-success star-use" disabled>Use this trace</button>
+          <button type="button" class="btn btn-sm btn-success star-use" disabled>Read my trace</button>
           <span class="star-status text-muted"></span>
+        </div>
+
+        <div class="star-fit-box" hidden>
+          <p class="star-fit-eq"></p>
+          <p class="star-fit-meta text-muted"></p>
+          <div class="star-row">
+            <label>
+              Curve type
+              <select class="star-family">
+                <option value="">Let it choose</option>
+                <option value="polynomial">Polynomial</option>
+                <option value="sine">Sine wave</option>
+                <option value="exponential">Exponential</option>
+                <option value="sqrt">Square root</option>
+                <option value="logarithmic">Logarithm</option>
+                <option value="abs">Absolute value</option>
+                <option value="rational">Rational (1/x type)</option>
+                <option value="tan">Tangent</option>
+              </select>
+            </label>
+            <label class="star-degree-wrap" hidden>
+              Degree <input type="number" class="star-degree" min="1" max="6" step="1" value="3">
+            </label>
+            <button type="button" class="btn btn-sm btn-light border star-refit">Refit</button>
+          </div>
         </div>
 
         <pre class="star-result" hidden></pre>
@@ -537,29 +562,73 @@ window.StarPhoto = (function () {
       drawPhoto();
     });
 
+    // ---- fitting ------------------------------------------------------------
+    let tracedPoints = null;
+    let currentModel = null;
+
+    function runFit(spec) {
+      if (!tracedPoints) return;
+      const model = window.StarFit.fit(tracedPoints, spec);
+      if (!model) {
+        setStatus('Could not fit a curve to that trace.');
+        return;
+      }
+      currentModel = model;
+
+      q('.star-fit-box').hidden = false;
+      q('.star-fit-eq').textContent = model.expr;
+      q('.star-fit-meta').textContent =
+        `${model.label} · within ${model.rmse.toFixed(3)} units of your drawing on average` +
+        (model.poles && model.poles.length
+          ? ` · vertical asymptote${model.poles.length > 1 ? 's' : ''} at ` +
+            model.poles.map((p) => p.toFixed(2)).join(', ')
+          : '');
+
+      // Keep the dropdown in step when the fitter chose for us.
+      if (!spec || !spec.family) q('.star-family').value = model.family;
+      const isPoly = model.family === 'polynomial';
+      q('.star-degree-wrap').hidden = !isPoly;
+      if (isPoly && model.degree) q('.star-degree').value = model.degree;
+
+      const out = q('.star-result');
+      out.hidden = false;
+      out.textContent =
+        'pl-sketch function:  ' + window.StarFit.toPlFunction(model.expr) + '\n' +
+        'domain:              ' + model.lo.toFixed(3) + ' to ' + model.hi.toFixed(3) + '\n\n' +
+        'sampled curve (' + window.StarFit.sampleCurve(model).length + ' points):\n' +
+        window.StarFit.sampleCurve(model).map((p) => `(${p[0]}, ${p[1]})`).join('  ');
+
+      onPoints({ points: tracedPoints, model: model });
+    }
+
     q('.star-use').addEventListener('click', () => {
       if (!markup) return;
       try {
         const result = markupToGraph();
-        const pts = result.curves[0].points;
+        tracedPoints = result.curves[0].points;
         const pct = Math.round(result.snapFraction * 100);
         setStatus(
           pct > 80
             ? `Snapped to ink along ${pct}% of your trace.`
             : `Only ${pct}% of your trace found ink. Widen the search width or trace closer to the curve.`,
         );
-        const xs = pts.map((p) => p[0]);
-        const ys = pts.map((p) => p[1]);
-        const out = q('.star-result');
-        out.hidden = false;
-        out.textContent =
-          `${pts.length} points, x from ${Math.min(...xs)} to ${Math.max(...xs)}, ` +
-          `y from ${Math.min(...ys)} to ${Math.max(...ys)}\n\n` +
-          pts.map((p) => `(${p[0]}, ${p[1]})`).join('  ');
-        onPoints(result);
+        runFit(null); // let the fitter choose the family
       } catch (err) {
         setStatus(err.message || 'Could not read the markup.');
       }
+    });
+
+    // Structured correction: the student overrides the family rather than
+    // describing the problem in words. Same constraint objects the prototype
+    // produced, without needing anything to interpret English.
+    q('.star-family').addEventListener('change', () => {
+      const fam = q('.star-family').value;
+      q('.star-degree-wrap').hidden = fam !== 'polynomial';
+      runFit(fam ? { family: fam, degree: +q('.star-degree').value || 3, constraints: [], traceWeight: 1 } : null);
+    });
+    q('.star-refit').addEventListener('click', () => {
+      const fam = q('.star-family').value;
+      runFit(fam ? { family: fam, degree: +q('.star-degree').value || 3, constraints: [], traceWeight: 1 } : null);
     });
 
     setMode('axes');
