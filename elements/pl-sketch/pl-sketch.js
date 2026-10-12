@@ -21,7 +21,7 @@ window.SketchInput = Object.assign(function (id, overlay_solution = false, hand_
 
     // STAR: the photo route, when the instructor turned it on for this question.
     if (hand_drawn) {
-      starAddHandDrawnButton(id, si);
+      starAddHandDrawnButton(id, si, config);
     }
 
     // Inject overlay toggle button into si-container if it is enabled
@@ -94,7 +94,9 @@ window.SketchInput = Object.assign(function (id, overlay_solution = false, hand_
 // go. Nothing in here talks to a model or to the network.
 // ---------------------------------------------------------------------------
 
-function starAddHandDrawnButton(id, si) {
+// `config` has to be passed in: it is a local inside window.SketchInput and is
+// not visible from out here.
+function starAddHandDrawnButton(id, si, config) {
   const mount = function () {
     const container = document.getElementById(id + '-si-container');
     if (!container || document.getElementById(id + '-star-photo-btn')) return;
@@ -131,22 +133,44 @@ function starAddHandDrawnButton(id, si) {
     `;
     container.append(panel);
 
-    // The capture UI builds itself into that mount point. It hands back points
-    // in graph coordinates; turning those into a curve on the canvas is the
-    // next piece of work.
-    window.StarPhoto.create({
-      root: document.getElementById(id + '-star-ui'),
-      onPoints: function (result) {
-        console.log('[STAR] traced points for ' + id, result);
-      },
-    });
-
+    // Open/close first. If building the capture UI below fails, the button
+    // still works and the panel still opens — showing an error the student can
+    // report, rather than a button that silently does nothing.
     document.getElementById(id + '-star-photo-btn').addEventListener('click', function () {
       panel.hidden = false;
     });
     document.getElementById(id + '-star-close').addEventListener('click', function () {
       panel.hidden = true;
     });
+
+    // The capture UI builds itself into that mount point. On confirm it hands
+    // back the fitted model, which we sample and place on this canvas.
+    try {
+      window.StarPhoto.create({
+        root: document.getElementById(id + '-star-ui'),
+        config: config,
+        onConfirm: function (model) {
+          const toolId = window.StarFit.curveToolId(config);
+          if (!toolId) {
+            return { ok: false, message: 'This question has no editable curve tool to draw into.' };
+          }
+          // Fewer control points than we sample for display: the student has to
+          // be able to drag these, and a spline interpolates between them.
+          const points = window.StarFit.sampleCurve(model, 16);
+          try {
+            window.StarFit.placeCurve(si, config, toolId, points);
+          } catch (err) {
+            return { ok: false, message: 'Could not place the curve: ' + err.message };
+          }
+          panel.hidden = true;
+          return { ok: true, message: 'Curve placed on the canvas.' };
+        },
+      });
+    } catch (err) {
+      console.error('[STAR] could not build the capture UI', err);
+      document.getElementById(id + '-star-ui').innerHTML =
+        '<p class="text-danger">The photo tool failed to load: ' + err.message + '</p>';
+    }
   };
 
   // Wait for the canvas to finish building before adding to it, the same way

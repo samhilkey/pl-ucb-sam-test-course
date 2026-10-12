@@ -19,7 +19,7 @@ window.StarPhoto = (function () {
 
   function create(options) {
     const root = options.root; // container element for the UI
-    const onPoints = options.onPoints || function () {};
+    const onConfirm = options.onConfirm || function () { return { ok: false, message: '' }; };
 
     // ---- per-instance state (was module-global in the prototype) ----
     let photoBmp = null;
@@ -86,6 +86,7 @@ window.StarPhoto = (function () {
               Degree <input type="number" class="star-degree" min="1" max="6" step="1" value="3">
             </label>
             <button type="button" class="btn btn-sm btn-light border star-refit">Refit</button>
+            <button type="button" class="btn btn-sm btn-success star-confirm">This matches my sketch</button>
           </div>
         </div>
 
@@ -598,8 +599,15 @@ window.StarPhoto = (function () {
         'sampled curve (' + window.StarFit.sampleCurve(model).length + ' points):\n' +
         window.StarFit.sampleCurve(model).map((p) => `(${p[0]}, ${p[1]})`).join('  ');
 
-      onPoints({ points: tracedPoints, model: model });
     }
+
+    // The student confirms the curve is a fair transcription of what they drew.
+    // Only at that point does anything reach the canvas.
+    q('.star-confirm').addEventListener('click', () => {
+      if (!currentModel) return;
+      const res = onConfirm(currentModel);
+      setStatus(res && res.message ? res.message : '');
+    });
 
     q('.star-use').addEventListener('click', () => {
       if (!markup) return;

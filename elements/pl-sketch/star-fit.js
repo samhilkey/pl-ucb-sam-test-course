@@ -501,7 +501,50 @@
     return out;
   }
 
+  /* --- putting a curve onto a live canvas -------------------------------- */
+
+  // SketchResponse stores plugin state in SVG PIXEL coordinates, not graph
+  // coordinates. This is the same mapping the element's Python uses on the way
+  // in (sketchresponse.utils.graph_to_screen):
+  //     px = (value - start) * canvas_size / (end - start)
+  // with y inverted, because SVG y grows downward. config.xrange/yrange are
+  // already the padded ranges the server computed, so no margin maths here.
+  function graphToPixels(config, points) {
+    const x0 = config.xrange[0];
+    const x1 = config.xrange[1];
+    const y0 = config.yrange[0];
+    const y1 = config.yrange[1];
+    return points.map((p) => ({
+      x: ((p[0] - x0) * config.width) / (x1 - x0),
+      y: ((p[1] - y1) * config.height) / (y0 - y1),
+    }));
+  }
+
+  // Replace one tool's drawing with the given curve. A spline's state is an
+  // array of splines, each an array of control points, so we hand over a
+  // single spline. SketchResponse re-renders on setState.
+  function placeCurve(si, config, toolId, points) {
+    const state = JSON.parse(si.getState());
+    state.data[toolId] = [graphToPixels(config, points)];
+    si.setState(JSON.stringify(state));
+  }
+
+  // Which tool should receive the curve: the first editable curve-drawing tool
+  // in the toolbar.
+  function curveToolId(config) {
+    const plugins = (config && config.plugins) || [];
+    const curveTypes = ['spline', 'polyline', 'freeform'];
+    for (let i = 0; i < plugins.length; i++) {
+      const p = plugins[i];
+      if (curveTypes.indexOf(p.name) !== -1 && !p.readonly) return p.id;
+    }
+    return null;
+  }
+
   const api = {
+    graphToPixels: graphToPixels,
+    placeCurve: placeCurve,
+    curveToolId: curveToolId,
     fit: fit,
     fitModel: fitModel,
     autoSpec: autoSpec,
