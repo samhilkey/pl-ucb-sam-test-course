@@ -31,6 +31,10 @@ window.StarPhoto = (function () {
     let drag = null;
     let refined = null;
     let lastHandle = 'X';
+    let tracedPoints = null;
+    let currentModel = null;
+    let photoLoading = false;
+    let photoRequest = 0;
 
     root.innerHTML = `
       <div class="star-photo-ui">
@@ -86,7 +90,7 @@ window.StarPhoto = (function () {
               Degree <input type="number" class="star-degree" min="1" max="6" step="1" value="3">
             </label>
             <button type="button" class="btn btn-sm btn-light border star-refit">Refit</button>
-            <button type="button" class="btn btn-sm btn-success star-confirm">This matches my sketch</button>
+            <button type="button" class="btn btn-sm btn-success star-confirm" disabled>This matches my sketch</button>
           </div>
         </div>
 
@@ -102,13 +106,40 @@ window.StarPhoto = (function () {
       statusEl.textContent = text || '';
     };
 
+    function clearFit() {
+      currentModel = null;
+      q('.star-confirm').disabled = true;
+      q('.star-fit-eq').textContent = '';
+      q('.star-fit-meta').textContent = '';
+      q('.star-result').textContent = '';
+      q('.star-result').hidden = true;
+    }
+
+    // A fit belongs to the photo, calibration and trace it was calculated from.
+    // Keep extracted points only when changing fit settings, not those inputs.
+    function invalidateTrace() {
+      tracedPoints = null;
+      refined = null;
+      clearFit();
+      q('.star-fit-box').hidden = true;
+      setStatus('Read your trace again to update the preview.');
+    }
+
     // ---- photo loading -----------------------------------------------------
-    async function showPhoto(blob) {
+    async function showPhoto(blob, request) {
+      let bitmap;
       try {
-        photoBmp = await createImageBitmap(blob, { imageOrientation: 'from-image' });
+        bitmap = await createImageBitmap(blob, { imageOrientation: 'from-image' });
       } catch (e) {
-        photoBmp = await createImageBitmap(blob);
+        bitmap = await createImageBitmap(blob);
       }
+      // A slower, superseded upload must not replace the latest chosen photo.
+      if (request !== photoRequest) {
+        bitmap.close();
+        return;
+      }
+      if (photoBmp) photoBmp.close();
+      photoBmp = bitmap;
       const sc = Math.min(1, 900 / Math.max(photoBmp.width, photoBmp.height));
       MW = Math.round(photoBmp.width * sc);
       MH = Math.round(photoBmp.height * sc);
@@ -270,7 +301,7 @@ window.StarPhoto = (function () {
     }
 
     canvas.addEventListener('pointerdown', (e) => {
-      if (!markup) return;
+      if (!markup || photoLoading) return;
       const p = canvasPt(e);
       canvas.setPointerCapture(e.pointerId);
       e.preventDefault();
@@ -284,23 +315,25 @@ window.StarPhoto = (function () {
           .sort((a, b) => a[1] - b[1])[0];
         drag = near[1] < Math.max(26, MW * 0.04) ? { kind: 'handle', key: near[0] } : null;
         if (drag) {
+          invalidateTrace();
           markup[drag.key] = p;
           if (drag.key !== 'O') applyEqual(drag.key);
           lastHandle = drag.key;
           drawPhoto();
         }
       } else {
+        invalidateTrace();
         drag = { kind: 'stroke' };
         markup.strokes.push([p]);
-        refined = null;
         drawPhoto();
       }
     });
 
     canvas.addEventListener('pointermove', (e) => {
-      if (!drag) return;
+      if (!drag || photoLoading) return;
       const p = canvasPt(e);
       e.preventDefault();
+      invalidateTrace();
       if (drag.kind === 'handle') {
         markup[drag.key] = p;
         if (drag.key !== 'O') applyEqual(drag.key);
@@ -523,11 +556,21 @@ window.StarPhoto = (function () {
     q('.star-file-btn input').addEventListener('change', async (e) => {
       const f = e.target.files && e.target.files[0];
       if (!f) return;
+      const request = ++photoRequest;
+      photoLoading = true;
+      drag = null;
+      invalidateTrace();
+      q('.star-use').disabled = true;
       setStatus('Loading photo…');
       try {
-        await showPhoto(f);
+        await showPhoto(f, request);
+        if (request !== photoRequest) return;
+        photoLoading = false;
         setStatus('Place the axes, then trace your curve.');
       } catch (err) {
+        if (request !== photoRequest) return;
+        photoLoading = false;
+        q('.star-use').disabled = true;
         setStatus('Could not read that image.');
       }
     });
@@ -537,80 +580,87 @@ window.StarPhoto = (function () {
     q('.star-undo').addEventListener('click', () => {
       if (markup && markup.strokes.length) {
         markup.strokes.pop();
-        refined = null;
+        invalidateTrace();
         drawPhoto();
       }
     });
     q('.star-clear').addEventListener('click', () => {
       if (markup) {
         markup.strokes = [];
-        refined = null;
+        invalidateTrace();
         drawPhoto();
       }
     });
-    q('.star-brush').addEventListener('input', drawPhoto);
+    q('.star-brush').addEventListener('input', () => {
+      invalidateTrace();
+      drawPhoto();
+    });
     q('.star-units').addEventListener('change', drawPhoto);
     q('.star-xval').addEventListener('input', () => {
+      invalidateTrace();
       applyEqual('X');
       drawPhoto();
     });
     q('.star-yval').addEventListener('input', () => {
+      invalidateTrace();
       applyEqual('Y');
       drawPhoto();
     });
     q('.star-equal').addEventListener('change', () => {
+      invalidateTrace();
       applyEqual(lastHandle === 'Y' ? 'Y' : 'X');
       drawPhoto();
     });
 
     // ---- fitting ------------------------------------------------------------
-    let tracedPoints = null;
-    let currentModel = null;
-
     function runFit(spec) {
-      if (!tracedPoints) return;
-      const model = window.StarFit.fit(tracedPoints, spec);
-      if (!model) {
-        setStatus('Could not fit a curve to that trace.');
-        return;
+      clearFit();
+      if (!tracedPoints || photoLoading) return;
+      try {
+        const model = window.StarFit.fit(tracedPoints, spec);
+        if (!model) throw new Error('Could not fit a curve to that trace.');
+
+        q('.star-fit-box').hidden = false;
+        q('.star-fit-eq').textContent = model.expr;
+        q('.star-fit-meta').textContent =
+          `${model.label} · within ${model.rmse.toFixed(3)} units of your drawing on average` +
+          (model.poles && model.poles.length
+            ? ` · vertical asymptote${model.poles.length > 1 ? 's' : ''} at ` +
+              model.poles.map((p) => p.toFixed(2)).join(', ')
+            : '');
+
+        // Keep the dropdown in step when the fitter chose for us.
+        if (!spec || !spec.family) q('.star-family').value = model.family;
+        const isPoly = model.family === 'polynomial';
+        q('.star-degree-wrap').hidden = !isPoly;
+        if (isPoly && model.degree) q('.star-degree').value = model.degree;
+
+        const out = q('.star-result');
+        out.hidden = false;
+        out.textContent =
+          'pl-sketch function:  ' + window.StarFit.toPlFunction(model.expr) + '\n' +
+          'domain:              ' + model.lo.toFixed(3) + ' to ' + model.hi.toFixed(3) + '\n\n' +
+          'sampled curve (' + window.StarFit.sampleCurve(model).length + ' points):\n' +
+          window.StarFit.sampleCurve(model).map((p) => `(${p[0]}, ${p[1]})`).join('  ');
+        currentModel = model;
+        q('.star-confirm').disabled = false;
+      } catch (err) {
+        clearFit();
+        setStatus(err.message || 'Could not fit a curve to that trace.');
       }
-      currentModel = model;
-
-      q('.star-fit-box').hidden = false;
-      q('.star-fit-eq').textContent = model.expr;
-      q('.star-fit-meta').textContent =
-        `${model.label} · within ${model.rmse.toFixed(3)} units of your drawing on average` +
-        (model.poles && model.poles.length
-          ? ` · vertical asymptote${model.poles.length > 1 ? 's' : ''} at ` +
-            model.poles.map((p) => p.toFixed(2)).join(', ')
-          : '');
-
-      // Keep the dropdown in step when the fitter chose for us.
-      if (!spec || !spec.family) q('.star-family').value = model.family;
-      const isPoly = model.family === 'polynomial';
-      q('.star-degree-wrap').hidden = !isPoly;
-      if (isPoly && model.degree) q('.star-degree').value = model.degree;
-
-      const out = q('.star-result');
-      out.hidden = false;
-      out.textContent =
-        'pl-sketch function:  ' + window.StarFit.toPlFunction(model.expr) + '\n' +
-        'domain:              ' + model.lo.toFixed(3) + ' to ' + model.hi.toFixed(3) + '\n\n' +
-        'sampled curve (' + window.StarFit.sampleCurve(model).length + ' points):\n' +
-        window.StarFit.sampleCurve(model).map((p) => `(${p[0]}, ${p[1]})`).join('  ');
-
     }
 
     // The student confirms the curve is a fair transcription of what they drew.
     // Only at that point does anything reach the canvas.
     q('.star-confirm').addEventListener('click', () => {
-      if (!currentModel) return;
+      if (!currentModel || photoLoading || q('.star-confirm').disabled) return;
       const res = onConfirm(currentModel);
       setStatus(res && res.message ? res.message : '');
     });
 
     q('.star-use').addEventListener('click', () => {
-      if (!markup) return;
+      if (!markup || photoLoading || q('.star-use').disabled) return;
+      invalidateTrace();
       try {
         const result = markupToGraph();
         tracedPoints = result.curves[0].points;
@@ -637,6 +687,10 @@ window.StarPhoto = (function () {
     q('.star-refit').addEventListener('click', () => {
       const fam = q('.star-family').value;
       runFit(fam ? { family: fam, degree: +q('.star-degree').value || 3, constraints: [], traceWeight: 1 } : null);
+    });
+    q('.star-degree').addEventListener('input', () => {
+      clearFit();
+      setStatus('Fit settings changed. Refit to update the preview.');
     });
 
     setMode('axes');
