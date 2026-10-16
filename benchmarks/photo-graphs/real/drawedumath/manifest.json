@@ -1,0 +1,107 @@
+{
+  "dataset": "DrawEduMath",
+  "authors": "Sami Baral, Li Lucy, Ryan Knight, Alice Ng, Luca Soldaini, Neil Heffernan, Kyle Lo",
+  "dataset_url": "https://huggingface.co/datasets/allenai/DrawEduMath",
+  "metadata_url": "https://huggingface.co/datasets/allenai/DrawEduMath/resolve/main/Data/DrawEduMath_QA.csv",
+  "paper_url": "https://aclanthology.org/2025.naacl-long.352/",
+  "license": "CC-BY-NC-4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "selection_note": "Small candidate set selected from teacher captions; source images are unmodified and include the printed problem beside the student response. Captions and visual screening are not numerical ground truth.",
+  "cases": [
+    {
+      "id": "01-multiple-lines-graph-paper",
+      "file": "01-multiple-lines-graph-paper.jpeg",
+      "source_image_name": "e6ea3fa7-6312-4bae-b4ea-a0a7a6bca686.jpeg",
+      "problem_id": "1483278",
+      "source_url": "https://assistments-datasets.s3.us-east-1.amazonaws.com/DrawEduMath/Images_w_Problem_Bodies/e6ea3fa7-6312-4bae-b4ea-a0a7a6bca686.jpeg",
+      "sha256": "e1db0b337c6edd75fe4b5dc52e1c6c8d1fadafa5798d6c9c901cd6150eab92a4",
+      "dataset_sha256": "e1db0b337c6edd75fe4b5dc52e1c6c8d1fadafa5798d6c9c901cd6150eab92a4",
+      "sha256_matches_dataset": true,
+      "candidate_use": "Multiple hand-drawn lines; unlabeled numerical axes",
+      "reference_geometry_status": "not yet manually annotated",
+      "inspection_status": "visually screened; not yet tested in STAR",
+      "visual_notes": "Two pencil lines on photographed graph paper; numerical axis labels are absent; image is dim and skewed."
+    },
+    {
+      "id": "02-conflicting-equation-labels",
+      "file": "02-conflicting-equation-labels.jpeg",
+      "source_image_name": "74d70723-f3ca-49c0-9245-fd9d39da296c.jpeg",
+      "problem_id": "1483278",
+      "source_url": "https://assistments-datasets.s3.us-east-1.amazonaws.com/DrawEduMath/Images_w_Problem_Bodies/74d70723-f3ca-49c0-9245-fd9d39da296c.jpeg",
+      "sha256": "bb33f456c89feed2a6e13efc48547daa28604c643025ccb61e5a1ae7941e7854",
+      "dataset_sha256": "bb33f456c89feed2a6e13efc48547daa28604c643025ccb61e5a1ae7941e7854",
+      "sha256_matches_dataset": true,
+      "candidate_use": "Drawn lines and written equation labels disagree, according to teacher caption",
+      "reference_geometry_status": "not yet manually annotated",
+      "inspection_status": "visually screened; not yet tested in STAR",
+      "visual_notes": "Two shallow lines on photographed grid paper with handwritten equation labels that indicate a different slope; source includes a black redaction box."
+    },
+    {
+      "id": "03-line-missing-origin",
+      "file": "03-line-missing-origin.jpeg",
+      "source_image_name": "fac88d4a-fa4a-471a-8f8f-893f24745100.jpeg",
+      "problem_id": "1458773",
+      "source_url": "https://assistments-datasets.s3.us-east-1.amazonaws.com/DrawEduMath/Images_w_Problem_Bodies/fac88d4a-fa4a-471a-8f8f-893f24745100.jpeg",
+      "sha256": "92ad4a083f8dae3d9cac2df04c062c765c4c783a671f4ac6be5dbcc8c7fd04b7",
+      "dataset_sha256": "92ad4a083f8dae3d9cac2df04c062c765c4c783a671f4ac6be5dbcc8c7fd04b7",
+      "sha256_matches_dataset": true,
+      "candidate_use": "Proportional graph whose student line misses the origin, according to teacher caption",
+      "reference_geometry_status": "not yet manually annotated",
+      "inspection_status": "visually screened; not yet tested in STAR",
+      "visual_notes": "Connected plotted points rise from the first nonzero point; the visible student line does not extend to the origin."
+    },
+    {
+      "id": "04-piecewise-curved-section",
+      "file": "04-piecewise-curved-section.jpeg",
+      "source_image_name": "eca69a8a-1408-418a-b13a-13986177da42.jpeg",
+      "problem_id": "1762467",
+      "source_url": "https://assistments-datasets.s3.us-east-1.amazonaws.com/DrawEduMath/Images_w_Problem_Bodies/eca69a8a-1408-418a-b13a-13986177da42.jpeg",
+      "sha256": "cfc6a566f125f3f8acfc6d36319f98e0d2d97ffd0063c07f1b5d55afd2feccf5",
+      "dataset_sha256": "cfc6a566f125f3f8acfc6d36319f98e0d2d97ffd0063c07f1b5d55afd2feccf5",
+      "sha256_matches_dataset": true,
+      "candidate_use": "Mixed rising, curved, and flat sections",
+      "reference_geometry_status": "not yet manually annotated",
+      "inspection_status": "visually screened; not yet tested in STAR",
+      "visual_notes": "Small, low-contrast student photograph contains a rising section, a rounded peak, and a nearly horizontal section."
+    },
+    {
+      "id": "05-sparse-points-shadow",
+      "file": "05-sparse-points-shadow.jpeg",
+      "source_image_name": "edfe5add-3c51-4644-9621-8f18d7752459.jpeg",
+      "problem_id": "1762467",
+      "source_url": "https://assistments-datasets.s3.us-east-1.amazonaws.com/DrawEduMath/Images_w_Problem_Bodies/edfe5add-3c51-4644-9621-8f18d7752459.jpeg",
+      "sha256": "334dc57b1ae7d0f5a3147874a3353cac76994003faf0983c07bc4c8ae610a9f1",
+      "dataset_sha256": "334dc57b1ae7d0f5a3147874a3353cac76994003faf0983c07bc4c8ae610a9f1",
+      "sha256_matches_dataset": true,
+      "candidate_use": "Incomplete graph with sparse points and shadows; check that recognition does not invent missing geometry",
+      "reference_geometry_status": "not yet manually annotated",
+      "inspection_status": "visually screened; not yet tested in STAR",
+      "visual_notes": "Photographed hand-drawn grid has sparse plotted points and strong shadows; a complete connected curve is not clearly visible. Useful as an incomplete-input case."
+    },
+    {
+      "id": "06-piecewise-graph-paper",
+      "file": "06-piecewise-graph-paper.jpeg",
+      "source_image_name": "928896ef-bbbf-4637-a9c4-56b0b80469d0.jpeg",
+      "problem_id": "1762474",
+      "source_url": "https://assistments-datasets.s3.us-east-1.amazonaws.com/DrawEduMath/Images_w_Problem_Bodies/928896ef-bbbf-4637-a9c4-56b0b80469d0.jpeg",
+      "sha256": "c17a18691682f482dfde15add70974c45566d9b8e3003a53a301cb6b55c03d3e",
+      "dataset_sha256": "c17a18691682f482dfde15add70974c45566d9b8e3003a53a301cb6b55c03d3e",
+      "sha256_matches_dataset": true,
+      "candidate_use": "Hand-drawn graph on grid paper with numerical scales",
+      "reference_geometry_status": "not yet manually annotated",
+      "inspection_status": "visually screened; not yet tested in STAR",
+      "visual_notes": "Photographed grid-paper graph has multiple straight segments and a sharp peak, labeled axes, and numerical scales."
+    }
+  ],
+  "local_variants": [
+    {
+      "file": "06-piecewise-graph-paper copy.jpeg",
+      "related_source_case": "06-piecewise-graph-paper",
+      "source_type": "local cropped version; exact crop bounds not recorded",
+      "width": 534,
+      "height": 424,
+      "sha256": "ba9de421ae16c9d4a31bc795b33c6d5782175747e6de7325328f019540b74164",
+      "included_in_experiment_01": false
+    }
+  ]
+}

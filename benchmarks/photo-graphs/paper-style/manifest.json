@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "source_type": "AI-generated synthetic photographs",
+  "generation_method": "built-in image_gen tool",
+  "exact_geometry_available": false,
+  "annotation_status": "manual calibration and trace annotation required",
+  "cases": [
+    {
+      "id": "01-parabola-plain-paper",
+      "title": "Parabola on plain paper",
+      "intended_function": "x**2",
+      "notes": "Pencil U-shaped curve, handwritten axes and labels on unruled paper. Exact curve geometry and calibration require manual annotation.",
+      "image": "images/01-parabola-plain-paper.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "727bd1215ad0f08266ea4376e097c5959a77cf3ac2dc4e5ef388b6ce98f8bb9f",
+      "reference_geometry_status": "not annotated",
+      "visually_reviewed": true
+    },
+    {
+      "id": "02-v-shaped-notebook-paper",
+      "title": "V-shaped graph on notebook paper",
+      "intended_function": "abs(x)-1",
+      "notes": "Sharp pencil corner on torn lined notebook paper, with a handwritten (0,-1) label. Exact scale and geometry require manual annotation.",
+      "image": "images/02-v-shaped-notebook-paper.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "3d75c3d447f6a28c93a07754057e65217ede83291be096fdbab3f1ec46351f94",
+      "reference_geometry_status": "not annotated",
+      "visually_reviewed": true
+    },
+    {
+      "id": "03-cubic-graph-paper",
+      "title": "Cubic-like graph on graph paper",
+      "intended_function": "x**3-3*x",
+      "notes": "Two turning points are visible. The photographed drawing does not exactly follow the intended function: zero crossings and labeled feature positions need manual review. Do not use the prompt's equation as ground truth.",
+      "image": "images/03-cubic-graph-paper.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "a45d9b6f3251fbd4a26f1dff89c32e5671214b56cc32f6091858195c1e520742",
+      "reference_geometry_status": "not annotated",
+      "visually_reviewed": true
+    }
+  ]
+}
