@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_graph_photo_fixtures",
+  "seed": 20261015,
+  "generator": "../generate_synthetic.py",
+  "dependencies": {
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6"
+  },
+  "image_count": 24,
+  "original_drawing_count": 6,
+  "split_policy": "Keep all variants of an original_drawing_id in the same evaluation split; 24 images are six drawings, not 24 independent drawings.",
+  "cases": [
+    {
+      "id": "01-line--clean",
+      "drawing_id": "01-line",
+      "title": "Straight line",
+      "variant": "clean",
+      "image": "images/01-line--clean.jpg",
+      "reference": "references/01-line--clean.json",
+      "sha256": "ede5ab9bb5c4f2fc117814d015e34aa91e2b5728c67cf6295c679b35ebb7e2dc",
+      "branch_count": 1
+    },
+    {
+      "id": "01-line--perspective",
+      "drawing_id": "01-line",
+      "title": "Straight line",
+      "variant": "perspective",
+      "image": "images/01-line--perspective.jpg",
+      "reference": "references/01-line--perspective.json",
+      "sha256": "90fb886cfd83a51a130490271d944f40a440269306592847765cddf7ec0e16ae",
+      "branch_count": 1
+    },
+    {
+      "id": "01-line--shadow",
+      "drawing_id": "01-line",
+      "title": "Straight line",
+      "variant": "shadow",
+      "image": "images/01-line--shadow.jpg",
+      "reference": "references/01-line--shadow.json",
+      "sha256": "108792f86a4b6178ea83e8bdcb8d4801a475e7acbd99a0dff39a8d6b72b1fe30",
+      "branch_count": 1
+    },
+    {
+      "id": "01-line--blur-dim",
+      "drawing_id": "01-line",
+      "title": "Straight line",
+      "variant": "blur-dim",
+      "image": "images/01-line--blur-dim.jpg",
+      "reference": "references/01-line--blur-dim.json",
+      "sha256": "672e839b80795d0fafe48057235214bfc3de87642f183286fef989cf852b7234",
+      "branch_count": 1
+    },
+    {
+      "id": "02-parabola--clean",
+      "drawing_id": "02-parabola",
+      "title": "Parabola",
+      "variant": "clean",
+      "image": "images/02-parabola--clean.jpg",
+      "reference": "references/02-parabola--clean.json",
+      "sha256": "118005e97ac36bca6f905ee65e90911dc5fbd4b5fe0c295cd1601cb0d186102e",
+      "branch_count": 1
+    },
+    {
+      "id": "02-parabola--perspective",
+      "drawing_id": "02-parabola",
+      "title": "Parabola",
+      "variant": "perspective",
+      "image": "images/02-parabola--perspective.jpg",
+      "reference": "references/02-parabola--perspective.json",
+      "sha256": "864ffd728f10eda8691445f8c4f557fa779e1b566897136cae38124f0ebc8dcb",
+      "branch_count": 1
+    },
+    {
+      "id": "02-parabola--shadow",
+      "drawing_id": "02-parabola",
+      "title": "Parabola",
+      "variant": "shadow",
+      "image": "images/02-parabola--shadow.jpg",
+      "reference": "references/02-parabola--shadow.json",
+      "sha256": "e3687f54f2e8995535925bd161da2204c5e101e7efed9eb7eb0c7d7789994dea",
+      "branch_count": 1
+    },
+    {
+      "id": "02-parabola--blur-dim",
+      "drawing_id": "02-parabola",
+      "title": "Parabola",
+      "variant": "blur-dim",
+      "image": "images/02-parabola--blur-dim.jpg",
+      "reference": "references/02-parabola--blur-dim.json",
+      "sha256": "c64fd0c22d8d10619ee3427062c9f857525e454340637746775eca15587a0bc2",
+      "branch_count": 1
+    },
+    {
+      "id": "03-shifted-parabola--clean",
+      "drawing_id": "03-shifted-parabola",
+      "title": "Deliberately shifted vertex",
+      "variant": "clean",
+      "image": "images/03-shifted-parabola--clean.jpg",
+      "reference": "references/03-shifted-parabola--clean.json",
+      "sha256": "d79478c2211ca5df3e7d84a1cdf01cd3c168bf647ae2bb5b3754ffb2ac1a8f98",
+      "branch_count": 1
+    },
+    {
+      "id": "03-shifted-parabola--perspective",
+      "drawing_id": "03-shifted-parabola",
+      "title": "Deliberately shifted vertex",
+      "variant": "perspective",
+      "image": "images/03-shifted-parabola--perspective.jpg",
+      "reference": "references/03-shifted-parabola--perspective.json",
+      "sha256": "c6be43d7533ddf14d1fe95978a2e5e85e9debbaf020600461c77e8612ebf3d0e",
+      "branch_count": 1
+    },
+    {
+      "id": "03-shifted-parabola--shadow",
+      "drawing_id": "03-shifted-parabola",
+      "title": "Deliberately shifted vertex",
+      "variant": "shadow",
+      "image": "images/03-shifted-parabola--shadow.jpg",
+      "reference": "references/03-shifted-parabola--shadow.json",
+      "sha256": "cc8f0098e753a2f6b90b74799ac16a53d166aeab33fb401b0b3203984da3b43f",
+      "branch_count": 1
+    },
+    {
+      "id": "03-shifted-parabola--blur-dim",
+      "drawing_id": "03-shifted-parabola",
+      "title": "Deliberately shifted vertex",
+      "variant": "blur-dim",
+      "image": "images/03-shifted-parabola--blur-dim.jpg",
+      "reference": "references/03-shifted-parabola--blur-dim.json",
+      "sha256": "6b08b5f3b93d497cc1c7f428b5963fa15e9b0bd9057b66f9c5e3f4a34f60f439",
+      "branch_count": 1
+    },
+    {
+      "id": "04-absolute-value--clean",
+      "drawing_id": "04-absolute-value",
+      "title": "V-shaped graph",
+      "variant": "clean",
+      "image": "images/04-absolute-value--clean.jpg",
+      "reference": "references/04-absolute-value--clean.json",
+      "sha256": "c9c81a073b0b69b89b04f964d4a871ad19f54cd076337ad3351a25646d8cef1b",
+      "branch_count": 1
+    },
+    {
+      "id": "04-absolute-value--perspective",
+      "drawing_id": "04-absolute-value",
+      "title": "V-shaped graph",
+      "variant": "perspective",
+      "image": "images/04-absolute-value--perspective.jpg",
+      "reference": "references/04-absolute-value--perspective.json",
+      "sha256": "2559d911d8b770237b607776b9578af37c2cb1c3a90fd4cebe17e7a4e4f0e3cc",
+      "branch_count": 1
+    },
+    {
+      "id": "04-absolute-value--shadow",
+      "drawing_id": "04-absolute-value",
+      "title": "V-shaped graph",
+      "variant": "shadow",
+      "image": "images/04-absolute-value--shadow.jpg",
+      "reference": "references/04-absolute-value--shadow.json",
+      "sha256": "1bd3dd4dd113dd5d2d28785f1b04c4091646304bdca91841a49fb6b5e51d454a",
+      "branch_count": 1
+    },
+    {
+      "id": "04-absolute-value--blur-dim",
+      "drawing_id": "04-absolute-value",
+      "title": "V-shaped graph",
+      "variant": "blur-dim",
+      "image": "images/04-absolute-value--blur-dim.jpg",
+      "reference": "references/04-absolute-value--blur-dim.json",
+      "sha256": "d89d5a535b1dea4f427ee18ddd1425a35b59097fa884e3a1c6ffb2d5bc1bd05c",
+      "branch_count": 1
+    },
+    {
+      "id": "05-cubic--clean",
+      "drawing_id": "05-cubic",
+      "title": "Maximum and minimum",
+      "variant": "clean",
+      "image": "images/05-cubic--clean.jpg",
+      "reference": "references/05-cubic--clean.json",
+      "sha256": "12f7381972cc8ae9351c4bd50fb3ddbf5353fb7424fd8e449015f61b54270bbf",
+      "branch_count": 1
+    },
+    {
+      "id": "05-cubic--perspective",
+      "drawing_id": "05-cubic",
+      "title": "Maximum and minimum",
+      "variant": "perspective",
+      "image": "images/05-cubic--perspective.jpg",
+      "reference": "references/05-cubic--perspective.json",
+      "sha256": "c177149ac8f5b6dd6832d5495787359b5ae363ebbc64bad6baea77e75e00ddaf",
+      "branch_count": 1
+    },
+    {
+      "id": "05-cubic--shadow",
+      "drawing_id": "05-cubic",
+      "title": "Maximum and minimum",
+      "variant": "shadow",
+      "image": "images/05-cubic--shadow.jpg",
+      "reference": "references/05-cubic--shadow.json",
+      "sha256": "5974cca9aa8c09372c2091ce116c22a2217d14364e910bf2f9e22ec7b0ff231d",
+      "branch_count": 1
+    },
+    {
+      "id": "05-cubic--blur-dim",
+      "drawing_id": "05-cubic",
+      "title": "Maximum and minimum",
+      "variant": "blur-dim",
+      "image": "images/05-cubic--blur-dim.jpg",
+      "reference": "references/05-cubic--blur-dim.json",
+      "sha256": "0b45e18fd4deef3dd120f8ffc0162a1cbda380282c10918903c7264b459954a7",
+      "branch_count": 1
+    },
+    {
+      "id": "06-reciprocal--clean",
+      "drawing_id": "06-reciprocal",
+      "title": "Two separate branches",
+      "variant": "clean",
+      "image": "images/06-reciprocal--clean.jpg",
+      "reference": "references/06-reciprocal--clean.json",
+      "sha256": "85707d5e1c9874437dfdf15b698164450ba786c0bb04adfaa9d1aaf1df3cda80",
+      "branch_count": 2
+    },
+    {
+      "id": "06-reciprocal--perspective",
+      "drawing_id": "06-reciprocal",
+      "title": "Two separate branches",
+      "variant": "perspective",
+      "image": "images/06-reciprocal--perspective.jpg",
+      "reference": "references/06-reciprocal--perspective.json",
+      "sha256": "5fb29bb49d005efd1d3e05258b2e0101eb5675f6e93e7b66ef7be31da564a450",
+      "branch_count": 2
+    },
+    {
+      "id": "06-reciprocal--shadow",
+      "drawing_id": "06-reciprocal",
+      "title": "Two separate branches",
+      "variant": "shadow",
+      "image": "images/06-reciprocal--shadow.jpg",
+      "reference": "references/06-reciprocal--shadow.json",
+      "sha256": "5f8c2a329a7e639ac006459f348bc1f955a98c9a0f499557e8fc5041bc1b880c",
+      "branch_count": 2
+    },
+    {
+      "id": "06-reciprocal--blur-dim",
+      "drawing_id": "06-reciprocal",
+      "title": "Two separate branches",
+      "variant": "blur-dim",
+      "image": "images/06-reciprocal--blur-dim.jpg",
+      "reference": "references/06-reciprocal--blur-dim.json",
+      "sha256": "6d8bfe7d002182558a6a3b8769e6b5f37848ced2e0164ce7ec88e56a0c24bf73",
+      "branch_count": 2
+    }
+  ]
+}

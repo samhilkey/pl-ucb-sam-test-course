@@ -10,4 +10,5 @@ __pycache__/
 
 node_modules
 
-**/.DS_Store.DS_Store
+# macOS Finder metadata
+.DS_Store
