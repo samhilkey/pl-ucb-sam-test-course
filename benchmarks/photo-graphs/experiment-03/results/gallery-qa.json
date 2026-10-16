@@ -1,0 +1,545 @@
+{
+  "identity": {
+    "url": "http://127.0.0.1:8769/experiment-03/gallery.html",
+    "title": "Complete-branch fitting · Experiment 03",
+    "heading": "Complete-branch fitting · Experiment 03"
+  },
+  "entries": 33,
+  "loaded_images": 132,
+  "images": [
+    {
+      "src": "../experiment-02/results/evidence/controlled--01-line--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--01-line--clean--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--01-line--clean.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--01-line--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--01-line--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--01-line--perspective--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--01-line--perspective.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--01-line--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--01-line--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--01-line--shadow--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--01-line--shadow.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--01-line--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--01-line--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--01-line--blur-dim--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--01-line--blur-dim.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--01-line--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--02-parabola--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--02-parabola--clean--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--02-parabola--clean.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--02-parabola--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--02-parabola--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--02-parabola--perspective--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--02-parabola--perspective.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--02-parabola--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--02-parabola--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--02-parabola--shadow--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--02-parabola--shadow.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--02-parabola--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--02-parabola--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--02-parabola--blur-dim--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--02-parabola--blur-dim.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--02-parabola--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--03-shifted-parabola--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--03-shifted-parabola--clean--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--03-shifted-parabola--clean.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--03-shifted-parabola--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--03-shifted-parabola--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--03-shifted-parabola--perspective--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--03-shifted-parabola--perspective.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--03-shifted-parabola--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--03-shifted-parabola--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--03-shifted-parabola--shadow--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--03-shifted-parabola--shadow.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--03-shifted-parabola--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--03-shifted-parabola--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--03-shifted-parabola--blur-dim--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--03-shifted-parabola--blur-dim.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--03-shifted-parabola--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--04-absolute-value--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--04-absolute-value--clean--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--04-absolute-value--clean.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--04-absolute-value--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--04-absolute-value--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--04-absolute-value--perspective--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--04-absolute-value--perspective.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--04-absolute-value--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--04-absolute-value--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--04-absolute-value--shadow--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--04-absolute-value--shadow.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--04-absolute-value--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--04-absolute-value--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--04-absolute-value--blur-dim--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--04-absolute-value--blur-dim.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--04-absolute-value--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--05-cubic--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--05-cubic--clean--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--05-cubic--clean.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--05-cubic--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--05-cubic--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--05-cubic--perspective--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--05-cubic--perspective.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--05-cubic--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--05-cubic--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--05-cubic--shadow--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--05-cubic--shadow.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--05-cubic--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--05-cubic--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--05-cubic--blur-dim--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--05-cubic--blur-dim.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--05-cubic--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--06-reciprocal--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--06-reciprocal--clean--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--06-reciprocal--clean.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--06-reciprocal--clean--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--06-reciprocal--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--06-reciprocal--perspective--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--06-reciprocal--perspective.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--06-reciprocal--perspective--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--06-reciprocal--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--06-reciprocal--shadow--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--06-reciprocal--shadow.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--06-reciprocal--shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/controlled--06-reciprocal--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--06-reciprocal--blur-dim--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/controlled--06-reciprocal--blur-dim.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/controlled--06-reciprocal--blur-dim--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/paper--01-parabola-plain-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/paper--01-parabola-plain-paper--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/paper--01-parabola-plain-paper.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/paper--01-parabola-plain-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/paper--02-v-shaped-notebook-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/paper--02-v-shaped-notebook-paper--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/paper--02-v-shaped-notebook-paper.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/paper--02-v-shaped-notebook-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/paper--03-cubic-graph-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/paper--03-cubic-graph-paper--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/paper--03-cubic-graph-paper.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/paper--03-cubic-graph-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/real--01-multiple-lines-graph-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--01-multiple-lines-graph-paper--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/real--01-multiple-lines-graph-paper.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--01-multiple-lines-graph-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/real--02-conflicting-equation-labels--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--02-conflicting-equation-labels--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/real--02-conflicting-equation-labels.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--02-conflicting-equation-labels--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/real--03-line-missing-origin--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--03-line-missing-origin--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/real--03-line-missing-origin.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--03-line-missing-origin--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/real--04-piecewise-curved-section--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--04-piecewise-curved-section--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/real--04-piecewise-curved-section.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--04-piecewise-curved-section--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/real--05-sparse-points-shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--05-sparse-points-shadow--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/real--05-sparse-points-shadow.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--05-sparse-points-shadow--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "../experiment-02/results/evidence/real--06-piecewise-graph-paper--canvas.png",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--06-piecewise-graph-paper--photo.png",
+      "loaded": true
+    },
+    {
+      "src": "results/overlays/real--06-piecewise-graph-paper.jpg",
+      "loaded": true
+    },
+    {
+      "src": "results/evidence/real--06-piecewise-graph-paper--canvas.png",
+      "loaded": true
+    }
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "mobile_no_horizontal_overflow": true,
+  "console_errors": []
+}

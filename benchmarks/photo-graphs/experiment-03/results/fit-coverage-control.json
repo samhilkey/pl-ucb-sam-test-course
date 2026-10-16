@@ -1,0 +1,50 @@
+{
+  "comparison_source": "1e29cc188f17a7044c026d8830ba69915146b0ac",
+  "source": "79053b22d2b2f4c66cc8875adada7302ebe30686",
+  "formula": "y = 0.8 / (1 - x^2)",
+  "points_per_branch": 81,
+  "cases": [
+    {
+      "id": "left",
+      "lo": -5,
+      "hi": -1.08,
+      "before": {
+        "family": "tan",
+        "expression": "y = -0.04822tan(0.2659(x - 4.555)) + 0.002374",
+        "finite_trace_points": 61,
+        "total_trace_points": 81,
+        "trace_domain_coverage": 0.7530864197530864,
+        "native_samples": 13
+      },
+      "after": {
+        "family": "rational",
+        "expression": "y = 0.3824/(x + 1.001) + 0.09096",
+        "finite_trace_points": 81,
+        "total_trace_points": 81,
+        "trace_domain_coverage": 1,
+        "native_samples": 17
+      }
+    },
+    {
+      "id": "right",
+      "lo": 1.08,
+      "hi": 5,
+      "before": {
+        "family": "tan",
+        "expression": "y = 0.04939tan(0.2809(x - 6.96)) - 0.000292",
+        "finite_trace_points": 61,
+        "total_trace_points": 81,
+        "trace_domain_coverage": 0.7530864197530864,
+        "native_samples": 13
+      },
+      "after": {
+        "family": "rational",
+        "expression": "y = -0.3824/(x - 1.001) + 0.09096",
+        "finite_trace_points": 81,
+        "total_trace_points": 81,
+        "trace_domain_coverage": 1,
+        "native_samples": 17
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "started_utc": "2026-10-16T22:41:55.715098+00:00",
+  "source_commit": "79053b22d2b2f4c66cc8875adada7302ebe30686",
+  "comparison_source_commit": "1e29cc188f17a7044c026d8830ba69915146b0ac",
+  "baseline_archive_commit": "7f62910",
+  "archive_merge_commit": "bec45638941c351daeca838e0bbbab005c27552f",
+  "source_files": {
+    "elements/pl-sketch/star-fit.js": "540932d485209ab86828a2c513c4cb4905ad5f580517918d9aae88a3f33905bf",
+    "elements/pl-sketch/star-photo.js": "494456aa8ef913dad5a4174f1f523fded6671e0d4b3692a66cdb407bc4743273",
+    "elements/pl-sketch/pl-sketch.js": "462402f6db63604122fe9dd828f3ef880b884a5ff019832cb54ac940450bdf7d",
+    "elements/pl-sketch/pl-sketch.py": "f58f56932da03cf17be5a869ba239b22a2ac8ca6c91fa7a44e96fd49d6712b12",
+    "questions/star-photo-test/question.html": "aac0c51e9c249d7d9f9324f4a548bcd1b5a4820e02312c383fa2b74ea18f8e3e"
+  },
+  "baseline_trees_before": {
+    "experiment-01": "3c8ebb62b9c4a221cae7530540436aead4918c1d",
+    "experiment-02": "df30614f9140bfbb340200eeffa205aafebe0976"
+  },
+  "catalog_sha256": "70d39cad8cca4c7fccb2e5d9844bef31f23a036357161bb8e83df7c39260b368",
+  "inputs": [
+    {
+      "id": "controlled--01-line--clean",
+      "sha256": "ede5ab9bb5c4f2fc117814d015e34aa91e2b5728c67cf6295c679b35ebb7e2dc"
+    },
+    {
+      "id": "controlled--01-line--perspective",
+      "sha256": "90fb886cfd83a51a130490271d944f40a440269306592847765cddf7ec0e16ae"
+    },
+    {
+      "id": "controlled--01-line--shadow",
+      "sha256": "108792f86a4b6178ea83e8bdcb8d4801a475e7acbd99a0dff39a8d6b72b1fe30"
+    },
+    {
+      "id": "controlled--01-line--blur-dim",
+      "sha256": "672e839b80795d0fafe48057235214bfc3de87642f183286fef989cf852b7234"
+    },
+    {
+      "id": "controlled--02-parabola--clean",
+      "sha256": "118005e97ac36bca6f905ee65e90911dc5fbd4b5fe0c295cd1601cb0d186102e"
+    },
+    {
+      "id": "controlled--02-parabola--perspective",
+      "sha256": "864ffd728f10eda8691445f8c4f557fa779e1b566897136cae38124f0ebc8dcb"
+    },
+    {
+      "id": "controlled--02-parabola--shadow",
+      "sha256": "e3687f54f2e8995535925bd161da2204c5e101e7efed9eb7eb0c7d7789994dea"
+    },
+    {
+      "id": "controlled--02-parabola--blur-dim",
+      "sha256": "c64fd0c22d8d10619ee3427062c9f857525e454340637746775eca15587a0bc2"
+    },
+    {
+      "id": "controlled--03-shifted-parabola--clean",
+      "sha256": "d79478c2211ca5df3e7d84a1cdf01cd3c168bf647ae2bb5b3754ffb2ac1a8f98"
+    },
+    {
+      "id": "controlled--03-shifted-parabola--perspective",
+      "sha256": "c6be43d7533ddf14d1fe95978a2e5e85e9debbaf020600461c77e8612ebf3d0e"
+    },
+    {
+      "id": "controlled--03-shifted-parabola--shadow",
+      "sha256": "cc8f0098e753a2f6b90b74799ac16a53d166aeab33fb401b0b3203984da3b43f"
+    },
+    {
+      "id": "controlled--03-shifted-parabola--blur-dim",
+      "sha256": "6b08b5f3b93d497cc1c7f428b5963fa15e9b0bd9057b66f9c5e3f4a34f60f439"
+    },
+    {
+      "id": "controlled--04-absolute-value--clean",
+      "sha256": "c9c81a073b0b69b89b04f964d4a871ad19f54cd076337ad3351a25646d8cef1b"
+    },
+    {
+      "id": "controlled--04-absolute-value--perspective",
+      "sha256": "2559d911d8b770237b607776b9578af37c2cb1c3a90fd4cebe17e7a4e4f0e3cc"
+    },
+    {
+      "id": "controlled--04-absolute-value--shadow",
+      "sha256": "1bd3dd4dd113dd5d2d28785f1b04c4091646304bdca91841a49fb6b5e51d454a"
+    },
+    {
+      "id": "controlled--04-absolute-value--blur-dim",
+      "sha256": "d89d5a535b1dea4f427ee18ddd1425a35b59097fa884e3a1c6ffb2d5bc1bd05c"
+    },
+    {
+      "id": "controlled--05-cubic--clean",
+      "sha256": "12f7381972cc8ae9351c4bd50fb3ddbf5353fb7424fd8e449015f61b54270bbf"
+    },
+    {
+      "id": "controlled--05-cubic--perspective",
+      "sha256": "c177149ac8f5b6dd6832d5495787359b5ae363ebbc64bad6baea77e75e00ddaf"
+    },
+    {
+      "id": "controlled--05-cubic--shadow",
+      "sha256": "5974cca9aa8c09372c2091ce116c22a2217d14364e910bf2f9e22ec7b0ff231d"
+    },
+    {
+      "id": "controlled--05-cubic--blur-dim",
+      "sha256": "0b45e18fd4deef3dd120f8ffc0162a1cbda380282c10918903c7264b459954a7"
+    },
+    {
+      "id": "controlled--06-reciprocal--clean",
+      "sha256": "85707d5e1c9874437dfdf15b698164450ba786c0bb04adfaa9d1aaf1df3cda80"
+    },
+    {
+      "id": "controlled--06-reciprocal--perspective",
+      "sha256": "5fb29bb49d005efd1d3e05258b2e0101eb5675f6e93e7b66ef7be31da564a450"
+    },
+    {
+      "id": "controlled--06-reciprocal--shadow",
+      "sha256": "5f8c2a329a7e639ac006459f348bc1f955a98c9a0f499557e8fc5041bc1b880c"
+    },
+    {
+      "id": "controlled--06-reciprocal--blur-dim",
+      "sha256": "6d8bfe7d002182558a6a3b8769e6b5f37848ced2e0164ce7ec88e56a0c24bf73"
+    },
+    {
+      "id": "paper--01-parabola-plain-paper",
+      "sha256": "727bd1215ad0f08266ea4376e097c5959a77cf3ac2dc4e5ef388b6ce98f8bb9f"
+    },
+    {
+      "id": "paper--02-v-shaped-notebook-paper",
+      "sha256": "3d75c3d447f6a28c93a07754057e65217ede83291be096fdbab3f1ec46351f94"
+    },
+    {
+      "id": "paper--03-cubic-graph-paper",
+      "sha256": "a45d9b6f3251fbd4a26f1dff89c32e5671214b56cc32f6091858195c1e520742"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--02-conflicting-equation-labels",
+      "sha256": "afe51d072b2d13e8552d337cc145a5f33b35dbdb4684495e4268ba6649a838f9"
+    },
+    {
+      "id": "real--03-line-missing-origin",
+      "sha256": "b5abae6cb25ea18f5e33cf80613679204f5c01ee1344626cce7d15fefb1d635d"
+    },
+    {
+      "id": "real--04-piecewise-curved-section",
+      "sha256": "3ae70e8e7e2b984cb53b76c559d39a18ba4d88a3281302d0c1c143f7dee2388f"
+    },
+    {
+      "id": "real--05-sparse-points-shadow",
+      "sha256": "3f0866c7bfd1d476e6bece92325cbe8bb95895d0e3bacde9a4ca87be56ee9755"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    }
+  ],
+  "environment": {
+    "browser": "Chrome 155.0.8059.80 headless",
+    "docker_container": "sam-test-course",
+    "docker_image_id": "sha256:f26864b04ac01d0bbd022113bdd1adefd02f7c6478983b62ca83d6ea7d2ab996",
+    "docker_analysis_platform": "linux/amd64",
+    "python": "3.13.15",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "node": "v20.19.6"
+  },
+  "browser_method": "Playwright CLI; Browser plugin unavailable",
+  "preconditions": {
+    "branch_browser_assertions": 80,
+    "confirmation_browser_assertions": 71,
+    "node_unit_tests": 13,
+    "application_console_errors": 0
+  },
+  "thresholds": {
+    "normalized_photo_p95_pixels": 10,
+    "reference_coverage": 0.9,
+    "native_rendering_p95_svg_pixels": 3
+  },
+  "additional_local_photo_check": "Three separately traced branches now retain all traced points and their steep ends; the supplied image and its diagnostic data are not included in this archive.",
+  "completed_utc": "2026-10-16T23:08:08.487465+00:00",
+  "browser": {
+    "version": "155.0.8059.80",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+  },
+  "baseline_trees_after": {
+    "experiment-01": "3c8ebb62b9c4a221cae7530540436aead4918c1d",
+    "experiment-02": "df30614f9140bfbb340200eeffa205aafebe0976"
+  },
+  "baselines_preserved": true,
+  "source_and_input_hashes_verified": true
+}

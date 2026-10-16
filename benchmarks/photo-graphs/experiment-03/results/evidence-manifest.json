@@ -1,0 +1,362 @@
+[
+  {
+    "file": "controlled--01-line--blur-dim--canvas.png",
+    "bytes": 16861,
+    "sha256": "843ce240d455455f6c0971d1e6d89032bc0678d5404b885920359b22c3c2ae42"
+  },
+  {
+    "file": "controlled--01-line--blur-dim--photo.png",
+    "bytes": 197637,
+    "sha256": "4d066a9645e8a47dd8ba06ebd0fa495b2b207ff1d9f6cfd61b1fc70f867e9f64"
+  },
+  {
+    "file": "controlled--01-line--clean--canvas.png",
+    "bytes": 16825,
+    "sha256": "e4f1c824600db7a98e5b67b117749d6bf723743e58acaefe721ace4c8bb8c4f0"
+  },
+  {
+    "file": "controlled--01-line--clean--photo.png",
+    "bytes": 531146,
+    "sha256": "174394cff833f565cf8c8992ce9d8e1d890ccf5e627c9b3e8b2b619bc12080dc"
+  },
+  {
+    "file": "controlled--01-line--perspective--canvas.png",
+    "bytes": 16741,
+    "sha256": "ba76834a70433530af916a1b482d7b86146b1af22958f974bce85efccb2a1c71"
+  },
+  {
+    "file": "controlled--01-line--perspective--photo.png",
+    "bytes": 649741,
+    "sha256": "47aa6b848bb7b8e42ef42967a54e3aad0d6a8fdd86a7fad71d7f67f5e3843fb5"
+  },
+  {
+    "file": "controlled--01-line--shadow--canvas.png",
+    "bytes": 16822,
+    "sha256": "9e6909e0fa5f3262e08d61c584800f8999b42fda450ac667b7e4e5487c352eee"
+  },
+  {
+    "file": "controlled--01-line--shadow--photo.png",
+    "bytes": 529901,
+    "sha256": "417ed2306910ff5f9334d55dcf6c300d3b8ae4261079c875318e79bf4bb267b8"
+  },
+  {
+    "file": "controlled--02-parabola--blur-dim--canvas.png",
+    "bytes": 17375,
+    "sha256": "4df8b2d173583e4bace90c7166a7b6a701e18cc3b1b52f3fc9b31751dbd06366"
+  },
+  {
+    "file": "controlled--02-parabola--blur-dim--photo.png",
+    "bytes": 199151,
+    "sha256": "5514ce5c64baff8a61bf014b39656beb05fd095001a79f0ba9fa249057a8baac"
+  },
+  {
+    "file": "controlled--02-parabola--clean--canvas.png",
+    "bytes": 17410,
+    "sha256": "786b3eba1390406717c874f775658c5cf0f9836bad7c1652c7ee16a629371eb5"
+  },
+  {
+    "file": "controlled--02-parabola--clean--photo.png",
+    "bytes": 526481,
+    "sha256": "4f663fc03419e7324c2754251ccf716625fa9173bf0246e4fedcbddca7412d43"
+  },
+  {
+    "file": "controlled--02-parabola--perspective--canvas.png",
+    "bytes": 17287,
+    "sha256": "4cd1dba63495125063948d26fe3c231404394350d64a170346f36606945333d5"
+  },
+  {
+    "file": "controlled--02-parabola--perspective--photo.png",
+    "bytes": 649258,
+    "sha256": "33ed7dcb36ce4c8dae1b6d55ed0af2e961589428693b6c2e63e14a0b4c942c8b"
+  },
+  {
+    "file": "controlled--02-parabola--shadow--canvas.png",
+    "bytes": 17517,
+    "sha256": "0029de66c6255783115d435d1a8b6bddc8b435f88283f3f08c209fe1010dcc3f"
+  },
+  {
+    "file": "controlled--02-parabola--shadow--photo.png",
+    "bytes": 529041,
+    "sha256": "e15738cf26edb534605ff4cf1dac78a9fce2d30452c45f8b2618d20f8ed3576b"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--blur-dim--canvas.png",
+    "bytes": 16992,
+    "sha256": "8cb7fb93fb2e93df91300777ffbb2ba1b11d7c2121b8dc006d0f333990663898"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--blur-dim--photo.png",
+    "bytes": 195231,
+    "sha256": "e0aa94953c4fbbb37d12832639923b608b70ad02decde900a74a741e9b4bc608"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--clean--canvas.png",
+    "bytes": 16979,
+    "sha256": "5767ca521f12f80847768454c3bcd6b74dd452c2e54ffc66e2ff4dec48eb324e"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--clean--photo.png",
+    "bytes": 524374,
+    "sha256": "8b35190b96bb6deb483d6da242c227ee0cf4f5c853ad3551df48a13f2d62fa72"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--perspective--canvas.png",
+    "bytes": 16947,
+    "sha256": "3a45132648ff25177032f1a837844b12e18c697b804a8ce860876e2c851bf5ab"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--perspective--photo.png",
+    "bytes": 646192,
+    "sha256": "f5666690f0769774d3f65068fe229f0dad4671bc5b367b3760ac4c801d78d364"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--shadow--canvas.png",
+    "bytes": 16921,
+    "sha256": "0256dfb533ca987d689229106d4440ef154c6f631c67c7e6e82da1c155e0b0f8"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--shadow--photo.png",
+    "bytes": 525250,
+    "sha256": "f935b803a9439d34dac1d715297d8be9831f7db0ad8fe49ed7d999239140cc18"
+  },
+  {
+    "file": "controlled--04-absolute-value--blur-dim--canvas.png",
+    "bytes": 17978,
+    "sha256": "54bec838d0bfc62b4235dc734077096779ddaae97121410b1e9c68c4be53f1c0"
+  },
+  {
+    "file": "controlled--04-absolute-value--blur-dim--photo.png",
+    "bytes": 206349,
+    "sha256": "ad8398d3d9d50ebb58a9038a6aa420c1551637ed197616c9c32f262bf89b0aef"
+  },
+  {
+    "file": "controlled--04-absolute-value--clean--canvas.png",
+    "bytes": 17965,
+    "sha256": "c114ceb1605d6dbb0972bca1bbcf11bae84472c9fa3363f646e8223b4b7cc571"
+  },
+  {
+    "file": "controlled--04-absolute-value--clean--photo.png",
+    "bytes": 538400,
+    "sha256": "decc48cdc3016cd02e1e58875b4648f31d5ee110e7091a5a247038f0bd93e0bd"
+  },
+  {
+    "file": "controlled--04-absolute-value--perspective--canvas.png",
+    "bytes": 17745,
+    "sha256": "13d43f57d1ad994ac14d0397deab6277f2bf189cebbf630c8640e3600731f121"
+  },
+  {
+    "file": "controlled--04-absolute-value--perspective--photo.png",
+    "bytes": 656021,
+    "sha256": "6bdaf03b2cbe0d1b25d7af37b8031ad14e924faeed67cab1414b74e8fe18e2cb"
+  },
+  {
+    "file": "controlled--04-absolute-value--shadow--canvas.png",
+    "bytes": 17982,
+    "sha256": "be4fffff0f0e03d5f123f6528ba4ceeee228f82896bd1106e0675f11ccb7b5e8"
+  },
+  {
+    "file": "controlled--04-absolute-value--shadow--photo.png",
+    "bytes": 537310,
+    "sha256": "cb4cff93dd60594cbe96b0b8b6742299d6371849d0ab94aede80755aab416017"
+  },
+  {
+    "file": "controlled--05-cubic--blur-dim--canvas.png",
+    "bytes": 18645,
+    "sha256": "a970d3eb01be5d69f96fba5e34c25e024d5da75e4566e0340127f2060ba41371"
+  },
+  {
+    "file": "controlled--05-cubic--blur-dim--photo.png",
+    "bytes": 209838,
+    "sha256": "bc797241838e0281c0aca82136958cf3be9f1a28c59b524c6494ecc937402c4f"
+  },
+  {
+    "file": "controlled--05-cubic--clean--canvas.png",
+    "bytes": 18615,
+    "sha256": "3a8ea4fe8eb7267adf4798ed8a037f6fde11b63726d5debcf6c9d38931c68f62"
+  },
+  {
+    "file": "controlled--05-cubic--clean--photo.png",
+    "bytes": 538952,
+    "sha256": "0703ce925ce11c7666dc142659254619ee066e56ff4bf44fd5263eb2c940f716"
+  },
+  {
+    "file": "controlled--05-cubic--perspective--canvas.png",
+    "bytes": 18748,
+    "sha256": "2ab32f33a47785842a6b97ca81ed48e221c5ecf83403f28edffe2013fca83b36"
+  },
+  {
+    "file": "controlled--05-cubic--perspective--photo.png",
+    "bytes": 658741,
+    "sha256": "da8650ffe3fdcbed1ee76fb1308eeb5d94c01cf92f2ce87b6168bc044cfc7e6a"
+  },
+  {
+    "file": "controlled--05-cubic--shadow--canvas.png",
+    "bytes": 18612,
+    "sha256": "2be34a35bc0102d153edb4519f079e8cade4c076d6b50068533177a058d13fc6"
+  },
+  {
+    "file": "controlled--05-cubic--shadow--photo.png",
+    "bytes": 540577,
+    "sha256": "373657693421943e217980ff37f523ecf7a03b6749f539b48cabe65ca33a1238"
+  },
+  {
+    "file": "controlled--06-reciprocal--blur-dim--canvas.png",
+    "bytes": 20163,
+    "sha256": "fc46a014840e42503117a7513b6680bc29a8e510ceeba4350abc417d7486949d"
+  },
+  {
+    "file": "controlled--06-reciprocal--blur-dim--photo.png",
+    "bytes": 206921,
+    "sha256": "58fb4c77710fa1f9a026ea2491a74a2711ab9b323775daa2fe7bbd87b88e1b5c"
+  },
+  {
+    "file": "controlled--06-reciprocal--clean--canvas.png",
+    "bytes": 20202,
+    "sha256": "7c929276b486afa81b606a306209d40b5c5fb8b504b3ccabc5973070a07db833"
+  },
+  {
+    "file": "controlled--06-reciprocal--clean--photo.png",
+    "bytes": 536811,
+    "sha256": "3f8a8b078fee687bdb2001e9709c518f1c5a0a5b31798139a382a669140fb9ec"
+  },
+  {
+    "file": "controlled--06-reciprocal--perspective--canvas.png",
+    "bytes": 20169,
+    "sha256": "020be401021b8b15e8dbd31114efd59b9fbdfb23477f8747d64df154197218f1"
+  },
+  {
+    "file": "controlled--06-reciprocal--perspective--photo.png",
+    "bytes": 655863,
+    "sha256": "2910bec6816defd930001025e132e55a34a71f2eafe29de64ec8c14fb1edb1b5"
+  },
+  {
+    "file": "controlled--06-reciprocal--shadow--canvas.png",
+    "bytes": 20199,
+    "sha256": "f3d487f6eba45c0f09ee19a10634c1a5d93d624302d33b2f7a447f44ffff0d5d"
+  },
+  {
+    "file": "controlled--06-reciprocal--shadow--photo.png",
+    "bytes": 537383,
+    "sha256": "68991fef525249b6eb5687f91abe9c298472b89b3993dedf3045aa2e3f2ae196"
+  },
+  {
+    "file": "gallery--changed-model.png",
+    "bytes": 346915,
+    "sha256": "c5c104e71a5a8a2ab646c50bdb46bf536f7ed40c586abe4cc0bf4cf651b09de2"
+  },
+  {
+    "file": "gallery--mobile.png",
+    "bytes": 327615,
+    "sha256": "3fd2abf1960a7229e4264ed7ce11ec98a24da6899be7baaed32c638387961219"
+  },
+  {
+    "file": "paper--01-parabola-plain-paper--canvas.png",
+    "bytes": 17537,
+    "sha256": "5c55ff4cbcd19ea55d893e0a254f42db3a7aebd9fb2dd07b0600fd23e3c91852"
+  },
+  {
+    "file": "paper--01-parabola-plain-paper--photo.png",
+    "bytes": 1449016,
+    "sha256": "fb89398bee4c55c998dca8839d8c780a9eb86e4f63a2b79630493db7a026f940"
+  },
+  {
+    "file": "paper--02-v-shaped-notebook-paper--canvas.png",
+    "bytes": 17030,
+    "sha256": "fa622924269b5c95da4f5b6337c0bf18a0df1a916a2b5a7b15285dfab6803538"
+  },
+  {
+    "file": "paper--02-v-shaped-notebook-paper--photo.png",
+    "bytes": 1286736,
+    "sha256": "c29be95846c26711b1876329288fb65a99745478f3a215cf4634e4df0cce2846"
+  },
+  {
+    "file": "paper--03-cubic-graph-paper--canvas.png",
+    "bytes": 18686,
+    "sha256": "166acec50eff36c3907c13413faf24b1228b9e532bd892b74d866b6c863dae55"
+  },
+  {
+    "file": "paper--03-cubic-graph-paper--photo.png",
+    "bytes": 1188567,
+    "sha256": "74696b58339c42118f1dddc6b99800ab8c5e317e137c52c3685795f88cd8e48a"
+  },
+  {
+    "file": "real--01-multiple-lines-graph-paper--canvas.png",
+    "bytes": 19206,
+    "sha256": "5438e9c67843dd66176429d62ff6b582dbf83f50495d40bfad8e9374ed1cc428"
+  },
+  {
+    "file": "real--01-multiple-lines-graph-paper--photo.png",
+    "bytes": 428786,
+    "sha256": "47b44f34e26b9077edb2274c333426a264abc4d3dd57bdc4c2654501123badaa"
+  },
+  {
+    "file": "real--02-conflicting-equation-labels--canvas.png",
+    "bytes": 19260,
+    "sha256": "314097bdd4996333037771e221cb08227da9983ffe2f8a0b234fae9fd1a0115c"
+  },
+  {
+    "file": "real--02-conflicting-equation-labels--photo.png",
+    "bytes": 779513,
+    "sha256": "5eda2ec389095b776dcd95e98bf13654d619b740a52f2c91dbf26e856c7da076"
+  },
+  {
+    "file": "real--03-line-missing-origin--canvas.png",
+    "bytes": 15644,
+    "sha256": "38e5069773d61c0a59695c0061da60209c2993e79a1d2a776deba98f76c91223"
+  },
+  {
+    "file": "real--03-line-missing-origin--photo.png",
+    "bytes": 642922,
+    "sha256": "98f1a9e5c2d727183d3a04179a46a95948e6ec082cc743f3a3d529a23fc01864"
+  },
+  {
+    "file": "real--04-piecewise-curved-section--canvas.png",
+    "bytes": 16349,
+    "sha256": "1a219f8346b6a298d7840ab4e1903243bb5574056b048edf4ceaf5921d9b3035"
+  },
+  {
+    "file": "real--04-piecewise-curved-section--photo.png",
+    "bytes": 612629,
+    "sha256": "add701cd34711a5a593a6f066e25ea2af44dedde6a69e8193a4ce3085c42bae6"
+  },
+  {
+    "file": "real--05-sparse-points-shadow--canvas.png",
+    "bytes": 15575,
+    "sha256": "72bf5c5f9439442d4d79ce686d61e95534a7dbbe89d866750ce579d6831f6a69"
+  },
+  {
+    "file": "real--05-sparse-points-shadow--photo.png",
+    "bytes": 434240,
+    "sha256": "e22175b7ad0acaebc537d1945a88c197f7bab206310e05436a3d9aa19e7a3aad"
+  },
+  {
+    "file": "real--06-piecewise-graph-paper--canvas.png",
+    "bytes": 16918,
+    "sha256": "f45acb3ed17e2adf6154e88f09ab79e88aa67c351f24433d38f87fbf5f2e0911"
+  },
+  {
+    "file": "real--06-piecewise-graph-paper--photo.png",
+    "bytes": 684150,
+    "sha256": "03d85f6910aee3a2d800387a1b89c7f6980599c02867361a4547f82972820974"
+  },
+  {
+    "file": "regression--mobile-two-lines--canvas.png",
+    "bytes": 9606,
+    "sha256": "e27e49947b7215af5c97c0f1e87e6fbeafcbef2e634243594fa8e483c28c6e0f"
+  },
+  {
+    "file": "regression--mobile-two-lines--preview.png",
+    "bytes": 20461,
+    "sha256": "c9a97b7b6bb21325ab8ba40b954000cf7b4587ceae2268c4e397aad6e96580b4"
+  },
+  {
+    "file": "regression--three-branches--canvas.png",
+    "bytes": 18420,
+    "sha256": "f3d1522711ae957c6937214005ba2128439bea2cb6a0e0e08015818d7f02653f"
+  },
+  {
+    "file": "regression--three-branches--preview.png",
+    "bytes": 180795,
+    "sha256": "6b9a0a61e9b6c1f67a8ffb9ebfc383ea44e3fe4cac3573e72a5f38619d4c1ee5"
+  }
+]

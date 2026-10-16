@@ -1,0 +1,2233 @@
+### Browser `photo-coverage-benchmark` opened with pid 83160.
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/pl/course/1/question/10/preview');
+```
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-16T22-46-30-204Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L1-L121
+
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Snapshot
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation "Skip link and accessibility guide" [ref=e4]:
+      - link "Skip to main content" [ref=e5] [cursor=pointer]:
+        - /url: "#content"
+      - link "Accessibility guide" [ref=e6] [cursor=pointer]:
+        - /url: https://docs.prairielearn.com/student-guide/accessibility/
+    - navigation "Global navigation" [ref=e7]:
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e10]: PrairieLearn
+          - generic [ref=e11]: Go home
+        - text: 
+        - generic [ref=e13]:
+          - list [ref=e14]:
+            - listitem [ref=e15]:
+              - link "Home" [ref=e16] [cursor=pointer]:
+                - /url: /
+            - listitem [aria-hidden] [ref=e17]:
+              - generic: →
+            - listitem [ref=e18]:
+              - link "Global Admin" [ref=e19] [cursor=pointer]:
+                - /url: /pl/administrator/admins
+            - listitem [aria-hidden] [ref=e20]:
+              - generic: →
+            - listitem [ref=e21]:
+              - link "Institutions" [ref=e22] [cursor=pointer]:
+                - /url: /pl/administrator/institutions
+            - listitem [aria-hidden] [ref=e23]:
+              - generic: →
+            - listitem [ref=e24]:
+              - link "Default" [ref=e25] [cursor=pointer]:
+                - /url: /pl/administrator/institution/1
+            - listitem [aria-hidden] [ref=e26]:
+              - generic: →
+            - listitem [ref=e27]:
+              - link "Courses" [ref=e28] [cursor=pointer]:
+                - /url: /pl/administrator/institution/1/courses
+            - listitem [aria-hidden] [ref=e29]:
+              - generic: →
+            - listitem [ref=e30]:
+              - link "cs000" [ref=e31] [cursor=pointer]:
+                - /url: /pl/course/1/course_admin/instances
+          - link "Load from disk" [ref=e32] [cursor=pointer]:
+            - /url: /pl/loadFromDisk
+          - button "Get help" [ref=e33] [cursor=pointer]
+          - list [ref=e34]:
+            - listitem [ref=e35]:
+              - button "Dev User staff" [ref=e36] [cursor=pointer]:
+                - text: Dev User
+                - generic [ref=e37]: staff
+    - text:  
+  - navigation "Course navigation" [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Course
+        - button "Collapse side nav" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: 
+      - generic [ref=e44]:
+        - button "Change course" [ref=e46] [cursor=pointer]:
+          - generic "cs000" [ref=e47]
+        - link "Course instances" [ref=e48] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/instances
+        - link "Questions" [ref=e51] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/questions
+        - link "Issues" [ref=e54] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/issues
+        - link "Staff" [ref=e57] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/staff
+        - link "Sync" [ref=e60] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/syncs
+        - link "Course files" [ref=e63] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/file_view
+        - link "Course settings" [ref=e66] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/settings
+      - generic [ref=e69]: Course instance
+      - button "Change course instance" [ref=e74] [cursor=pointer]:
+        - generic [ref=e75]: Select...
+  - generic [ref=e77]:
+    - navigation [ref=e78]:
+      - list [ref=e79]:
+        - listitem [ref=e80]:
+          - link "Files" [ref=e81] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/file_view
+        - listitem [ref=e83]:
+          - link "Preview" [ref=e84] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/preview
+        - listitem [ref=e86]:
+          - link "Settings" [ref=e87] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/settings
+        - listitem [ref=e89]:
+          - link "Statistics" [ref=e90] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/statistics
+        - listitem [ref=e92]:
+          - link "Issues" [ref=e93] [cursor=pointer]:
+            - /url: /pl/course/1/course_admin/issues?q=is%3Aopen%20qid%3Astar-photo-test
+    - main [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - 'heading "STAR: hand-drawn switch test" [level=1] [ref=e102]'
+            - button "View…" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - 'heading "Step 2 check: the instructor switch and the panel" [level=4] [ref=e108]'
+            - paragraph [ref=e109]:
+              - text: This canvas sets
+              - code [ref=e110]: allow-hand-drawn="true"
+              - text: . A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.
+            - paragraph [ref=e111]:
+              - text: Sketch the graph of
+              - img "f of x equals x squared, math" [ref=e293]
+              - text: .
+            - generic [ref=e134]:
+              - paragraph [ref=e135]:
+                - strong [ref=e136]: Switch on.
+                - text: Camera button expected.
+              - generic [ref=e138]:
+                - list [ref=e139]:
+                  - button [ref=e141] [cursor=pointer]:
+                    - img "Select" [ref=e142]
+                    - generic [ref=e143]: Select
+                  - button [ref=e145] [cursor=pointer]:
+                    - img "Spline tool" [ref=e146]
+                    - generic [ref=e147]: Your graph
+                  - separator
+                  - button [ref=e149] [cursor=pointer]:
+                    - img "Delete" [ref=e150]
+                    - generic [ref=e151]: Delete
+                  - button [ref=e153] [cursor=pointer]:
+                    - img "Undo" [ref=e154]
+                    - generic [ref=e155]: Undo
+                  - button [ref=e157] [cursor=pointer]:
+                    - img "Redo" [ref=e158]
+                    - generic [ref=e159]: Redo
+                  - button [ref=e161] [cursor=pointer]:
+                    - img "Help" [ref=e162]
+                    - generic [ref=e163]: Help
+                - img [ref=e164]:
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: "-4"
+                    - generic [ref=e170]: "-2"
+                    - generic [ref=e172]: "2"
+                    - generic [ref=e174]: "4"
+                    - generic [ref=e176]: "-4"
+                    - generic [ref=e178]: "-2"
+                    - generic [ref=e180]: "2"
+                    - generic [ref=e182]: "4"
+                    - generic [ref=e184]: "0"
+                    - generic [ref=e185]: x
+                    - generic [ref=e186]: "y"
+                - button "Submit a photo of a hand-drawn graph" [ref=e187] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=e188]: 
+            - generic [ref=e190]:
+              - paragraph [ref=e191]:
+                - strong [ref=e192]: Switch off.
+                - text: Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.
+              - generic [ref=e194]:
+                - list [ref=e195]:
+                  - button "Select Select" [ref=e197] [cursor=pointer]:
+                    - img "Select" [ref=e198]
+                    - generic [ref=e199]: Select
+                  - button [ref=e201] [cursor=pointer]:
+                    - img "Spline tool" [ref=e202]
+                    - generic [ref=e203]: Your graph
+                  - separator
+                  - button "Delete Delete" [ref=e205] [cursor=pointer]:
+                    - img "Delete" [ref=e206]
+                    - generic [ref=e207]: Delete
+                  - button "Undo Undo" [ref=e209] [cursor=pointer]:
+                    - img "Undo" [ref=e210]
+                    - generic [ref=e211]: Undo
+                  - button "Redo Redo" [ref=e213] [cursor=pointer]:
+                    - img "Redo" [ref=e214]
+                    - generic [ref=e215]: Redo
+                  - button "Help Help" [ref=e217] [cursor=pointer]:
+                    - img "Help" [ref=e218]
+                    - generic [ref=e219]: Help
+                - img [ref=e220]:
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: "-4"
+                    - generic [ref=e226]: "-2"
+                    - generic [ref=e228]: "2"
+                    - generic [ref=e230]: "4"
+                    - generic [ref=e232]: "-4"
+                    - generic [ref=e234]: "-2"
+                    - generic [ref=e236]: "2"
+                    - generic [ref=e238]: "4"
+                    - generic [ref=e240]: "0"
+                    - generic [ref=e241]: x
+                    - generic [ref=e242]: "y"
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - button "Save only" [ref=e248] [cursor=pointer]
+              - button "Save & Grade" [ref=e249] [cursor=pointer]
+            - link "New variant" [ref=e251] [cursor=pointer]:
+              - /url: /pl/course/1/question/10/preview/
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - heading "Student view placeholder" [level=2] [ref=e255]
+            - generic [ref=e256]: In student views this area is used for assessment and score info.
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - generic [ref=e260]: Tools
+              - button "<div class=\"d-flex justify-content-between flex-nowrap\"> Tools <span class=\"badge color-green1\">New</span> </div>" [ref=e261] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e262]: 
+            - button "Calculator" [ref=e264] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e265]: 
+              - text: Calculator
+          - generic [ref=e266]:
+            - heading "Staff information" [level=2] [ref=e268]
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - heading "Question" [level=3] [ref=e271]
+                - generic [ref=e272]:
+                  - generic [ref=e273]: "QID:"
+                  - link "star-photo-test" [ref=e275] [cursor=pointer]:
+                    - /url: /pl/course/1/question/10?variant_seed=12zflvv
+                - generic [ref=e276]:
+                  - generic [ref=e277]: "Title:"
+                  - generic [ref=e278]: "STAR: hand-drawn switch test"
+              - generic [ref=e279]:
+                - heading "Variant" [level=3] [ref=e280]
+                - generic [ref=e281]:
+                  - generic [ref=e282]: "Started at:"
+                  - generic [ref=e283]: 2026-10-16 17:46:24 (CDT)
+                - generic [ref=e284]:
+                  - generic [ref=e285]: "Duration:"
+                  - generic [ref=e286]: 0s
+                - group [ref=e288]:
+                  - generic "Show/Hide answer" [ref=e289] [cursor=pointer]
+              - button "Report an issue with this question" [ref=e291] [cursor=pointer]
+            - generic [ref=e292]: This box is not visible to students.
+    - text:   
+```
+
+### Result
+[{"id":"controlled--01-line--clean","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 98% of your trace.","fit_ms":20.69999998807907},{"id":"controlled--01-line--perspective","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 98% of your trace.","fit_ms":19.80000001192093},{"id":"controlled--01-line--shadow","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 98% of your trace.","fit_ms":20.30000001192093}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["controlled--01-line--clean","controlled--01-line--perspective","controlled--01-line--shadow"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["controlled--01-line--clean","controlled--01-line--perspective","controlled--01-line--shadow"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L122-L544
+
+### Result
+[{"id":"controlled--01-line--blur-dim","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 99% of your trace.","fit_ms":36.30000001192093},{"id":"controlled--02-parabola--clean","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 96% of your trace.","fit_ms":27.400000035762787},{"id":"controlled--02-parabola--perspective","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 95% of your trace.","fit_ms":26.30000001192093}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["controlled--01-line--blur-dim","controlled--02-parabola--clean","controlled--02-parabola--perspective"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["controlled--01-line--blur-dim","controlled--02-parabola--clean","controlled--02-parabola--perspective"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L545-L907
+
+### Result
+[{"id":"controlled--02-parabola--shadow","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 96% of your trace.","fit_ms":25.69999998807907},{"id":"controlled--02-parabola--blur-dim","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 96% of your trace.","fit_ms":25.5},{"id":"controlled--03-shifted-parabola--clean","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 99% of your trace.","fit_ms":22.700000047683716}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["controlled--02-parabola--shadow","controlled--02-parabola--blur-dim","controlled--03-shifted-parabola--clean"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["controlled--02-parabola--shadow","controlled--02-parabola--blur-dim","controlled--03-shifted-parabola--clean"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L908-L1270
+
+### Result
+[{"id":"controlled--03-shifted-parabola--perspective","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 99% of your trace.","fit_ms":29.299999952316284},{"id":"controlled--03-shifted-parabola--shadow","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 99% of your trace.","fit_ms":25.19999998807907},{"id":"controlled--03-shifted-parabola--blur-dim","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 99% of your trace.","fit_ms":33.10000002384186}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["controlled--03-shifted-parabola--perspective","controlled--03-shifted-parabola--shadow","controlled--03-shifted-parabola--blur-dim"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["controlled--03-shifted-parabola--perspective","controlled--03-shifted-parabola--shadow","controlled--03-shifted-parabola--blur-dim"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L1271-L1633
+
+### Result
+[{"id":"controlled--04-absolute-value--clean","status":"completed","families":["abs"],"ink":"Snapped to ink along 98% of your trace.","fit_ms":26.299999952316284},{"id":"controlled--04-absolute-value--perspective","status":"completed","families":["abs"],"ink":"Snapped to ink along 96% of your trace.","fit_ms":24.30000001192093},{"id":"controlled--04-absolute-value--shadow","status":"completed","families":["abs"],"ink":"Snapped to ink along 97% of your trace.","fit_ms":25.69999998807907}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["controlled--04-absolute-value--clean","controlled--04-absolute-value--perspective","controlled--04-absolute-value--shadow"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["controlled--04-absolute-value--clean","controlled--04-absolute-value--perspective","controlled--04-absolute-value--shadow"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L1634-L1996
+
+### Result
+[{"id":"controlled--04-absolute-value--blur-dim","status":"completed","families":["abs"],"ink":"Snapped to ink along 97% of your trace.","fit_ms":24.19999998807907},{"id":"controlled--05-cubic--clean","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 97% of your trace.","fit_ms":26.30000001192093},{"id":"controlled--05-cubic--perspective","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 97% of your trace.","fit_ms":30.5}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["controlled--04-absolute-value--blur-dim","controlled--05-cubic--clean","controlled--05-cubic--perspective"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["controlled--04-absolute-value--blur-dim","controlled--05-cubic--clean","controlled--05-cubic--perspective"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L1997-L2359
+
+### Result
+[{"id":"controlled--05-cubic--shadow","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 98% of your trace.","fit_ms":37.80000001192093},{"id":"controlled--05-cubic--blur-dim","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 97% of your trace.","fit_ms":26.5},{"id":"controlled--06-reciprocal--clean","status":"completed","families":["rational","rational"],"ink":"Snapped to ink along 100% of your trace.","fit_ms":49}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["controlled--05-cubic--shadow","controlled--05-cubic--blur-dim","controlled--06-reciprocal--clean"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["controlled--05-cubic--shadow","controlled--05-cubic--blur-dim","controlled--06-reciprocal--clean"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L2360-L2722
+
+### Result
+[{"id":"controlled--06-reciprocal--perspective","status":"completed","families":["rational","rational"],"ink":"Snapped to ink along 100% of your trace.","fit_ms":53.60000002384186},{"id":"controlled--06-reciprocal--shadow","status":"completed","families":["rational","rational"],"ink":"Snapped to ink along 100% of your trace.","fit_ms":45.40000003576279},{"id":"controlled--06-reciprocal--blur-dim","status":"completed","families":["rational","rational"],"ink":"Snapped to ink along 100% of your trace.","fit_ms":42}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["controlled--06-reciprocal--perspective","controlled--06-reciprocal--shadow","controlled--06-reciprocal--blur-dim"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["controlled--06-reciprocal--perspective","controlled--06-reciprocal--shadow","controlled--06-reciprocal--blur-dim"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L2723-L3085
+
+### Result
+[{"id":"paper--01-parabola-plain-paper","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 98% of your trace.","fit_ms":27.30000001192093},{"id":"paper--02-v-shaped-notebook-paper","status":"completed","families":["abs"],"ink":"Snapped to ink along 97% of your trace.","fit_ms":27.100000023841858},{"id":"paper--03-cubic-graph-paper","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 97% of your trace.","fit_ms":26.399999976158142}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["paper--01-parabola-plain-paper","paper--02-v-shaped-notebook-paper","paper--03-cubic-graph-paper"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["paper--01-parabola-plain-paper","paper--02-v-shaped-notebook-paper","paper--03-cubic-graph-paper"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L3086-L3448
+
+### Result
+[{"id":"real--01-multiple-lines-graph-paper","status":"completed","families":["polynomial","polynomial"],"ink":"Snapped to ink along 98% of your trace.","fit_ms":46.89999997615814},{"id":"real--02-conflicting-equation-labels","status":"completed","families":["polynomial","polynomial"],"ink":"Snapped to ink along 88% of your trace.","fit_ms":49.59999996423721},{"id":"real--03-line-missing-origin","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 100% of your trace.","fit_ms":29.599999964237213}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["real--01-multiple-lines-graph-paper","real--02-conflicting-equation-labels","real--03-line-missing-origin"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["real--01-multiple-lines-graph-paper","real--02-conflicting-equation-labels","real--03-line-missing-origin"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L3449-L3811
+
+### Result
+[{"id":"real--04-piecewise-curved-section","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 92% of your trace.","fit_ms":33.40000003576279},{"id":"real--05-sparse-points-shadow","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 88% of your trace.","fit_ms":28.299999952316284},{"id":"real--06-piecewise-graph-paper","status":"completed","families":["polynomial"],"ink":"Snapped to ink along 99% of your trace.","fit_ms":33.30000001192093}]
+### Ran Playwright code
+```js
+await (// Read this function with Playwright CLI run-code, substituting ["real--04-piecewise-curved-section","real--05-sparse-points-shadow","real--06-piecewise-graph-paper"]
+// with an array of catalog IDs. Results persist after every case.
+async (page) => {
+  const ids = ["real--04-piecewise-curved-section","real--05-sparse-points-shadow","real--06-piecewise-graph-paper"];
+  const collector = 'http://127.0.0.1:8768';
+  const catalog = await (await page.request.get(collector + '/catalog.json')).json();
+  const outcomes = [];
+  for (const id of ids) {
+    const c = catalog.cases.find(x => x.id === id);
+    if (!c) throw new Error('Unknown case: ' + id);
+    const errors = [], warnings = [];
+    const onConsole = msg => {
+      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'warning') warnings.push(msg.text());
+    };
+    const onError = error => errors.push(String(error));
+    page.on('console', onConsole);
+    page.on('pageerror', onError);
+    let result = {id, collection: c.collection, drawing_id: c.drawing_id,
+      variant: c.variant, started_utc: new Date().toISOString(), status: 'error'};
+    try {
+      await page.setViewportSize({width: 1600, height: 2200});
+      await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil:'networkidle'});
+      await page.locator('#hand-drawn-on-star-photo-btn').waitFor();
+      result.page_identity = {url: page.url(), title: await page.title()};
+      result.meaningful_page = await page.getByRole('heading', {name:'STAR: hand-drawn switch test', exact:true}).count() === 1;
+      await page.locator('#hand-drawn-on-star-photo-btn').click();
+      const panel = page.locator('#hand-drawn-on-star-panel');
+      // Batch-only visibility adaptation. Native layout is captured separately.
+      await panel.evaluate(el => {
+        Object.assign(el.style, {position:'fixed',left:'20px',top:'20px',right:'auto',
+          bottom:'auto',width:'1000px',height:'auto',maxHeight:'none',overflow:'visible',
+          zIndex:'10000'});
+      });
+      await page.evaluate(() => {
+        window.__starExperiment = {fits: []};
+        const original = window.StarFit.fit;
+        window.StarFit.fit = function(points, spec) {
+          const t = performance.now();
+          const model = original(points, spec);
+          const end = performance.now();
+          const b = window.__starExperiment;
+          if (!b.fits.length) b.extractMs = t - b.readStarted;
+          b.fits.push({points: JSON.parse(JSON.stringify(points)), model, ms: end - t});
+          b.processingMs = end - b.readStarted;
+          return model;
+        };
+        document.querySelector('#hand-drawn-on-star-ui .star-use')
+          .addEventListener('click', () => {
+            window.__starExperiment.readStarted = performance.now();
+          }, true);
+      });
+      const loadStart = Date.now();
+      await panel.locator('input[type=file]').setInputFiles(c.image);
+      await panel.locator('.star-status').filter({hasText:'Place the axes, then trace your curve.'}).waitFor();
+      result.image_load_wall_ms = Date.now() - loadStart;
+      const canvas = panel.locator('.star-canvas');
+      result.native_photo_size = await canvas.evaluate(el => [el.width, el.height]);
+      const [nw, nh] = result.native_photo_size;
+      const [w, h] = c.image_size;
+      const toNative = p => [p[0] * nw / w, p[1] * nh / h];
+      const screen = async p => {
+        const b = await canvas.boundingBox();
+        return [b.x + p[0] * b.width / nw, b.y + p[1] * b.height / nh];
+      };
+      const drag = async (from, to) => {
+        const a = await screen(from), b = await screen(to);
+        await page.mouse.move(a[0], a[1]);
+        await page.mouse.down();
+        await page.mouse.move(b[0], b[1], {steps: 6});
+        await page.mouse.up();
+      };
+      await panel.locator('.star-xval').fill(String(c.axes.x_value));
+      await panel.locator('.star-yval').fill(String(c.axes.y_value));
+      const defaults = [[nw*.5,nh*.55],[nw*.75,nh*.55],[nw*.5,nh*.3]];
+      const staging = [[nw*.1,nh*.9],[nw*.9,nh*.9],[nw*.1,nh*.1]];
+      const targets = [c.axes.origin,c.axes.x_marker,c.axes.y_marker].map(toNative);
+      for (let i=0;i<3;i++) await drag(defaults[i], staging[i]);
+      for (let i=0;i<3;i++) await drag(staging[i], targets[i]);
+      await panel.locator('.star-mode-curve').click();
+      for (const branch of c.guide_branches) {
+        const points = branch.map(toNative);
+        const b = await canvas.boundingBox();
+        for (let i=0;i<points.length;i++) {
+          await page.mouse.move(b.x + points[i][0]*b.width/nw, b.y + points[i][1]*b.height/nh);
+          if (i===0) await page.mouse.down();
+        }
+        await page.mouse.up();
+      }
+      await panel.locator('.star-use').click();
+      result.photo_screenshot = catalog.evidence_dir + '/' + id + '--photo.png';
+      await canvas.screenshot({path: result.photo_screenshot});
+      const fit = await page.evaluate(() => {
+        const b=window.__starExperiment;
+        const data={fit_branches:b.fits.map(f=>f.points),
+          fit_ms:b.fits.reduce((sum,f)=>sum+f.ms,0),
+          extraction_ms:b.extractMs,processing_ms:b.processingMs,
+          status_text:document.querySelector('#hand-drawn-on-star-ui .star-status').textContent,
+          models:[], trace_coverage:b.fits.map(f=>f.points.filter(p=>f.model && Number.isFinite(f.model.f(p[0]))).length/f.points.length)};
+        for(const fit of b.fits){
+          const m=fit.model;
+          if(!m) continue;
+          const samples=[];
+          for(let i=0;i<=800;i++){
+            const x=m.lo+(m.hi-m.lo)*i/800, y=m.f(x);
+            if(Number.isFinite(y)) samples.push([x,y]);
+          }
+          data.models.push({family:m.family,degree:m.degree || null,expression:m.expr,
+            reported_rmse:m.rmse,lo:m.lo,hi:m.hi,poles:m.poles || [],samples,
+            parameters:m.spec || null});
+        }
+        return data;
+      });
+      Object.assign(result,fit);
+      if (fit.models.length !== c.guide_branches.length) {
+        result.status = 'no_fit';
+      } else {
+        await page.evaluate(() => {
+          const original=window.StarFit.placeCurves;
+          window.StarFit.placeCurves=function(...args){
+            const t=performance.now();
+            const r=original(...args);
+            window.__starExperiment.transferMs=performance.now()-t;
+            return r;
+          };
+        });
+        await panel.locator('.star-confirm').click();
+        await page.waitForFunction(n => [...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d')).length === n, fit.models.length);
+        result.rendering = await page.evaluate(() => {
+          const si=window.SketchInput.instances['hand-drawn-on'];
+          const config=JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent));
+          const state=JSON.parse(si.getState());
+          const paths=[...document.querySelectorAll('#hand-drawn-on-si-container path.plugin-id-sp')].filter(p => p.getAttribute('d'));
+          return {
+            transfer_ms:window.__starExperiment.transferMs,
+            panel_hidden:document.getElementById('hand-drawn-on-star-panel').hidden,
+            config,state,gradeable:JSON.parse(si.getGradeable()),
+            paths:paths.map(path=>{
+              const length=path.getTotalLength();
+              const count=Math.max(201,Math.min(1001,Math.ceil(length/2)));
+              const points=[];
+              for(let i=0;i<=count;i++){
+                const p=path.getPointAtLength(length*i/count);
+                points.push([p.x,p.y]);
+              }
+              return {d:path.getAttribute('d'),length,points};
+            })
+          };
+        });
+        result.canvas_screenshot = catalog.evidence_dir + '/' + id + '--canvas.png';
+        await page.locator('#hand-drawn-on-si-container').screenshot({path:result.canvas_screenshot});
+        result.status = result.rendering.panel_hidden ? 'completed' : 'confirmation_failed';
+      }
+    } catch(error) {
+      result.error=String(error);
+      result.error_stack=error.stack;
+    } finally {
+      result.console_errors=errors;
+      result.warning_count=warnings.length;
+      result.warning_categories=[...new Set(warnings.map(x=>x.startsWith('Failed to decode downloaded font')?'font_decode':x.startsWith('OTS parsing error')?'font_parse':x))];
+      page.off('console',onConsole);
+      page.off('pageerror',onError);
+      result.finished_utc=new Date().toISOString();
+      await page.request.post(collector+'/results/'+id,{data:result});
+      outcomes.push({id,status:result.status,families:result.models?.map(m=>m.family),
+        ink:result.status_text,fit_ms:result.fit_ms,error:result.error});
+    }
+  }
+  return outcomes;
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T22-46-22-173Z.log#L3812-L4174
+
+### Result
+{"version":"155.0.8059.80","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"}
+### Ran Playwright code
+```js
+await (async (page) => ({version:page.context().browser().version(),userAgent:await page.evaluate(()=>navigator.userAgent)}))(page);
+```
+
+Browser 'photo-coverage-benchmark' closed

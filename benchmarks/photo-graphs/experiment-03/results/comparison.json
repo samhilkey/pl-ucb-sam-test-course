@@ -1,0 +1,92 @@
+{
+  "cases": 33,
+  "groups": {
+    "controlled": {
+      "before": {
+        "images": 24,
+        "drawings": 6,
+        "completed": 24,
+        "fidelity_evaluable": 24,
+        "fidelity_pass": 24,
+        "rendering_pass": 24,
+        "topology_pass": 24
+      },
+      "after": {
+        "images": 24,
+        "drawings": 6,
+        "completed": 24,
+        "fidelity_evaluable": 24,
+        "fidelity_pass": 24,
+        "rendering_pass": 24,
+        "topology_pass": 24
+      }
+    },
+    "paper-style": {
+      "before": {
+        "images": 3,
+        "drawings": 3,
+        "completed": 3,
+        "fidelity_evaluable": 3,
+        "fidelity_pass": 2,
+        "rendering_pass": 3,
+        "topology_pass": 3
+      },
+      "after": {
+        "images": 3,
+        "drawings": 3,
+        "completed": 3,
+        "fidelity_evaluable": 3,
+        "fidelity_pass": 2,
+        "rendering_pass": 3,
+        "topology_pass": 3
+      }
+    },
+    "real": {
+      "before": {
+        "images": 6,
+        "drawings": 6,
+        "completed": 6,
+        "fidelity_evaluable": 5,
+        "fidelity_pass": 2,
+        "rendering_pass": 6,
+        "topology_pass": 5
+      },
+      "after": {
+        "images": 6,
+        "drawings": 6,
+        "completed": 6,
+        "fidelity_evaluable": 5,
+        "fidelity_pass": 2,
+        "rendering_pass": 6,
+        "topology_pass": 5
+      }
+    }
+  },
+  "all_branch_inputs_unchanged": 33,
+  "all_models_unchanged": 32,
+  "complete_trace_domain_cases": 33,
+  "changed_models": [
+    {
+      "id": "real--04-piecewise-curved-section",
+      "collection": "real",
+      "before_pass": "False",
+      "after_pass": "False",
+      "before_families": "tan",
+      "after_families": "polynomial",
+      "before_branches": "1",
+      "after_branches": "1",
+      "expected_branches": "1",
+      "before_canvas_p95_px": "297.86074901649715",
+      "after_canvas_p95_px": "43.734934163275135",
+      "before_reference_coverage": "0.2112676056338028",
+      "after_reference_coverage": "0.5201207243460765",
+      "before_model_sample_counts": "553",
+      "after_model_sample_counts": "801",
+      "after_trace_domain_coverage_min": 1,
+      "all_branch_inputs_unchanged": true,
+      "all_models_unchanged": false
+    }
+  ],
+  "changed_outcomes": [],
+  "regressions": []
+}
