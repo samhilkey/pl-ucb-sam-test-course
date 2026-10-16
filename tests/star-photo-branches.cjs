@@ -18,6 +18,7 @@ async function checkBranches (page, options) {
     { id: 'two-lines', branches: [[-1.6, -0.3, x => 0.3 * x + 0.9], [0.3, 1.6, x => -0.4 * x - 0.6]] },
     { id: 'reciprocal', branches: [[-1.65, -0.38, x => 0.55 / x], [0.38, 1.65, x => 0.55 / x]] },
     { id: 'overlapping-x', branches: [[-1.4, 1.4, x => 0.2 * x + 1], [-1.4, 1.4, x => 0.2 * x - 1]] },
+    { id: 'three-branches', branches: [[-1.8, -0.5, x => 0.3 / (1 - (x / 0.45) ** 2)], [-0.4, 0.4, x => 0.3 / (1 - (x / 0.45) ** 2)], [0.5, 1.8, x => 0.3 / (1 - (x / 0.45) ** 2)]] },
     { id: 'mobile-two-lines', mobile: true, branches: [[-1.6, -0.3, x => 0.3 * x + 0.9], [0.3, 1.6, x => -0.4 * x - 0.6]] }
   ]
   const outcomes = []
@@ -67,7 +68,13 @@ async function checkBranches (page, options) {
       const fit = window.StarFit.fit
       window.StarFit.fit = function (points, spec) {
         const model = fit(points, spec)
-        window.__branchFits.push({ points, spec: model && model.spec, expression: model && model.expr, degree: model && model.degree })
+        window.__branchFits.push({
+          points,
+          spec: model && model.spec,
+          expression: model && model.expr,
+          degree: model && model.degree,
+          complete: model && points.every(([x]) => Number.isFinite(model.f(x))) && window.StarFit.sampleCurve(model, 16).length === 17
+        })
         return model
       }
       const place = window.StarFit.placeCurves
@@ -90,6 +97,7 @@ async function checkBranches (page, options) {
     await panel.locator('.star-use').click()
     const fits = await page.evaluate(() => window.__branchFits)
     check(fits.length === guides.length, fixture.id + ': every traced branch reaches the fitter')
+    check(fits.every(f => f.complete), fixture.id + ': models cover every traced point and the complete sampled domain')
     check(await confirm.isEnabled(), fixture.id + ': complete proposal is confirmable')
     check(await panel.locator('.star-fit-eq > div').count() === guides.length, fixture.id + ': preview lists every branch')
     check(await panel.locator('.star-branch-wrap').isHidden() === (guides.length === 1), fixture.id + ': branch selector matches proposal')
