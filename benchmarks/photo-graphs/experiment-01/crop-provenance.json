@@ -1,0 +1,80 @@
+[
+  {
+    "id": "real--01-multiple-lines-graph-paper",
+    "source": "real/drawedumath/01-multiple-lines-graph-paper.jpeg",
+    "input": "inputs/real--01-multiple-lines-graph-paper.png",
+    "crop_xyxy": [
+      1058,
+      100,
+      1859,
+      629
+    ],
+    "source_sha256": "e1db0b337c6edd75fe4b5dc52e1c6c8d1fadafa5798d6c9c901cd6150eab92a4",
+    "input_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+  },
+  {
+    "id": "real--02-conflicting-equation-labels",
+    "source": "real/drawedumath/02-conflicting-equation-labels.jpeg",
+    "input": "inputs/real--02-conflicting-equation-labels.png",
+    "crop_xyxy": [
+      1058,
+      100,
+      1565,
+      662
+    ],
+    "source_sha256": "bb33f456c89feed2a6e13efc48547daa28604c643025ccb61e5a1ae7941e7854",
+    "input_sha256": "afe51d072b2d13e8552d337cc145a5f33b35dbdb4684495e4268ba6649a838f9"
+  },
+  {
+    "id": "real--03-line-missing-origin",
+    "source": "real/drawedumath/03-line-missing-origin.jpeg",
+    "input": "inputs/real--03-line-missing-origin.png",
+    "crop_xyxy": [
+      714,
+      100,
+      1373,
+      864
+    ],
+    "source_sha256": "92ad4a083f8dae3d9cac2df04c062c765c4c783a671f4ac6be5dbcc8c7fd04b7",
+    "input_sha256": "b5abae6cb25ea18f5e33cf80613679204f5c01ee1344626cce7d15fefb1d635d"
+  },
+  {
+    "id": "real--04-piecewise-curved-section",
+    "source": "real/drawedumath/04-piecewise-curved-section.jpeg",
+    "input": "inputs/real--04-piecewise-curved-section.png",
+    "crop_xyxy": [
+      1166,
+      100,
+      1480,
+      501
+    ],
+    "source_sha256": "cfc6a566f125f3f8acfc6d36319f98e0d2d97ffd0063c07f1b5d55afd2feccf5",
+    "input_sha256": "3ae70e8e7e2b984cb53b76c559d39a18ba4d88a3281302d0c1c143f7dee2388f"
+  },
+  {
+    "id": "real--05-sparse-points-shadow",
+    "source": "real/drawedumath/05-sparse-points-shadow.jpeg",
+    "input": "inputs/real--05-sparse-points-shadow.png",
+    "crop_xyxy": [
+      1166,
+      100,
+      1892,
+      667
+    ],
+    "source_sha256": "334dc57b1ae7d0f5a3147874a3353cac76994003faf0983c07bc4c8ae610a9f1",
+    "input_sha256": "3f0866c7bfd1d476e6bece92325cbe8bb95895d0e3bacde9a4ca87be56ee9755"
+  },
+  {
+    "id": "real--06-piecewise-graph-paper",
+    "source": "real/drawedumath/06-piecewise-graph-paper.jpeg",
+    "input": "inputs/real--06-piecewise-graph-paper.png",
+    "crop_xyxy": [
+      1220,
+      100,
+      1749,
+      520
+    ],
+    "source_sha256": "c17a18691682f482dfde15add70974c45566d9b8e3003a53a301cb6b55c03d3e",
+    "input_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+  }
+]

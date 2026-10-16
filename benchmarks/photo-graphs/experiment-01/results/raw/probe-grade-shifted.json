@@ -1,0 +1,349 @@
+{
+  "id": "probe-grade-shifted",
+  "status": "completed",
+  "case_id": "controlled--03-shifted-parabola--clean",
+  "started_utc": "2026-10-16T05:46:20.563Z",
+  "before_submission": {
+    "photo_answer": {
+      "apiVersion": "0.1",
+      "meta": {
+        "config": {
+          "width": 800,
+          "height": 450,
+          "xrange": [
+            -5.128205128205128,
+            5.128205128205128
+          ],
+          "yrange": [
+            -5.232558139534884,
+            5.232558139534884
+          ],
+          "xscale": "linear",
+          "yscale": "linear",
+          "coordinates": "cartesian",
+          "readonly": false,
+          "enforceBounds": false,
+          "safetyBuffer": 10,
+          "plugins": [
+            {
+              "name": "axes",
+              "colors": {
+                "xaxisLabel": "blue",
+                "yaxisLabel": "blue"
+              },
+              "fontSize": {
+                "xaxisLabel": 14,
+                "yaxisLabel": 14
+              },
+              "xaxisLabel": {
+                "dx": 10,
+                "dy": 10,
+                "value": "x"
+              },
+              "yaxisLabel": {
+                "dx": 10,
+                "dy": 20,
+                "value": "y"
+              }
+            },
+            {
+              "id": "sp",
+              "name": "spline",
+              "size": null,
+              "color": "purple",
+              "group": null,
+              "label": "Your graph",
+              "limit": null,
+              "closed": null,
+              "helper": false,
+              "hollow": null,
+              "opacity": null,
+              "readonly": false,
+              "arrowHead": null,
+              "dashStyle": null,
+              "fillColor": null,
+              "lengthConstraint": null,
+              "directionConstraint": null
+            }
+          ]
+        },
+        "dataVersions": {
+          "$__history": "0.1",
+          "$__toolbar": "0.1",
+          "sp": "0.1"
+        }
+      },
+      "data": {
+        "$__history": {
+          "undoStack": [
+            {
+              "sp": {
+                "1": [
+                  []
+                ],
+                "_t": "a"
+              }
+            }
+          ],
+          "redoStack": []
+        },
+        "$__toolbar": {
+          "activeItemID": "select",
+          "selectedDropdownItemMap": {}
+        },
+        "sp": [
+          [
+            {
+              "x": 252.58,
+              "y": 28.92
+            },
+            {
+              "x": 270.99,
+              "y": 64.83
+            },
+            {
+              "x": 289.47,
+              "y": 95.87
+            },
+            {
+              "x": 307.88,
+              "y": 122.19
+            },
+            {
+              "x": 326.29,
+              "y": 143.64
+            },
+            {
+              "x": 344.7,
+              "y": 160.37
+            },
+            {
+              "x": 363.18,
+              "y": 172.28
+            },
+            {
+              "x": 381.59,
+              "y": 179.38
+            },
+            {
+              "x": 400,
+              "y": 181.7
+            },
+            {
+              "x": 418.41,
+              "y": 179.21
+            },
+            {
+              "x": 436.82,
+              "y": 171.94
+            },
+            {
+              "x": 455.3,
+              "y": 159.86
+            },
+            {
+              "x": 473.71,
+              "y": 143
+            },
+            {
+              "x": 492.12,
+              "y": 121.33
+            },
+            {
+              "x": 510.53,
+              "y": 94.88
+            },
+            {
+              "x": 529.01,
+              "y": 63.66
+            },
+            {
+              "x": 547.42,
+              "y": 27.63
+            }
+          ],
+          []
+        ]
+      }
+    },
+    "control_answer": {
+      "apiVersion": "0.1",
+      "meta": {
+        "config": {
+          "width": 800,
+          "height": 450,
+          "xrange": [
+            -5.128205128205128,
+            5.128205128205128
+          ],
+          "yrange": [
+            -5.232558139534884,
+            5.232558139534884
+          ],
+          "xscale": "linear",
+          "yscale": "linear",
+          "coordinates": "cartesian",
+          "readonly": false,
+          "enforceBounds": false,
+          "safetyBuffer": 10,
+          "plugins": [
+            {
+              "name": "axes",
+              "colors": {
+                "xaxisLabel": "blue",
+                "yaxisLabel": "blue"
+              },
+              "fontSize": {
+                "xaxisLabel": 14,
+                "yaxisLabel": 14
+              },
+              "xaxisLabel": {
+                "dx": 10,
+                "dy": 10,
+                "value": "x"
+              },
+              "yaxisLabel": {
+                "dx": 10,
+                "dy": 20,
+                "value": "y"
+              }
+            },
+            {
+              "id": "sp2",
+              "name": "spline",
+              "size": null,
+              "color": "purple",
+              "group": null,
+              "label": "Your graph",
+              "limit": null,
+              "closed": null,
+              "helper": false,
+              "hollow": null,
+              "opacity": null,
+              "readonly": false,
+              "arrowHead": null,
+              "dashStyle": null,
+              "fillColor": null,
+              "lengthConstraint": null,
+              "directionConstraint": null
+            }
+          ]
+        },
+        "dataVersions": {
+          "$__history": "0.1",
+          "$__toolbar": "0.1",
+          "sp2": "0.1"
+        }
+      },
+      "data": {
+        "$__history": {
+          "undoStack": [],
+          "redoStack": []
+        },
+        "$__toolbar": {
+          "activeItemID": "select",
+          "selectedDropdownItemMap": {}
+        },
+        "sp2": [
+          [
+            {
+              "x": 228.4,
+              "y": 16.88
+            },
+            {
+              "x": 249.85,
+              "y": 65.64
+            },
+            {
+              "x": 271.3,
+              "y": 107.91
+            },
+            {
+              "x": 292.75,
+              "y": 143.69
+            },
+            {
+              "x": 314.2,
+              "y": 172.97
+            },
+            {
+              "x": 335.65,
+              "y": 195.72
+            },
+            {
+              "x": 357.1,
+              "y": 211.97
+            },
+            {
+              "x": 378.55,
+              "y": 221.73
+            },
+            {
+              "x": 400,
+              "y": 225
+            },
+            {
+              "x": 421.45,
+              "y": 221.73
+            },
+            {
+              "x": 442.9,
+              "y": 212.01
+            },
+            {
+              "x": 464.35,
+              "y": 195.72
+            },
+            {
+              "x": 485.8,
+              "y": 172.97
+            },
+            {
+              "x": 507.25,
+              "y": 143.69
+            },
+            {
+              "x": 528.7,
+              "y": 107.91
+            },
+            {
+              "x": 550.15,
+              "y": 65.64
+            },
+            {
+              "x": 571.6,
+              "y": 16.88
+            }
+          ]
+        ]
+      }
+    },
+    "photo_expression": "y = 0.9987x^2 + 0.008142x + 1.007"
+  },
+  "url": "http://localhost:3000/pl/course/1/question/10/preview/?variant_id=43",
+  "body_text": "Skip to main content Accessibility guide\nPrairieLearn\nGo home \nHome\n\u2192\nGlobal Admin\n\u2192\nInstitutions\n\u2192\nDefault\n\u2192\nCourses\n\u2192\ncs000\nLoad from disk\nGet help\nDev User staff \n\nCOURSE\n\ncs000\nCourse instances\nQuestions\nIssues\nStaff\nSync\nCourse files\nCourse settings\nCOURSE INSTANCE\nSelect...\nFiles\nPreview\nSettings\nStatistics\nIssues\nSTAR: hand-drawn switch test\nView\u2026 \nStep 2 check: the instructor switch and the panel\n\nThis canvas sets allow-hand-drawn=\"true\". A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.\n\nSketch the graph of \n.\n\nSwitch on. Camera button expected.\n\n 0%\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Drawing does not match expected function.\n\nSwitch off. Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.\n\n 100%\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Correct!\nSave only\nSave & Grade\nNew variant\nCorrect answer\nNo answer to display.\nNo answer to display.\nSubmitted answer\ndev@example.com submitted at 2026-10-16 00:46:20 (CDT)\n50%\n \n 0%\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Drawing does not match expected function.\n 100%\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Correct!\nStudent view placeholder\nIn student views this area is used for assessment and score info.\nTools\n Calculator\nStaff information\nQuestion\nQID:\nstar-photo-test\nTitle:\nSTAR: hand-drawn switch test\nVariant\nStarted at:\n2026-10-16 00:46:16 (CDT)\nDuration:\n0s\nShow/Hide answer\nReport an issue with this question\nThis box is not visible to students.",
+  "grade_dom": [
+    {
+      "class": "alert alert-danger",
+      "text": "Feedback:\n        \n            \n              \n                \n                \n              \n              Drawing does not match expected function."
+    },
+    {
+      "class": "alert alert-success",
+      "text": "Feedback:\n        \n            \n              \n                \n                \n              \n              Correct!"
+    },
+    {
+      "class": "btn btn-primary question-grade disable-on-submit order-1 me-1",
+      "text": "Save & Grade"
+    },
+    {
+      "class": "alert alert-danger",
+      "text": "Feedback:\n        \n            \n              \n                \n                \n              \n              Drawing does not match expected function."
+    },
+    {
+      "class": "alert alert-success",
+      "text": "Feedback:\n        \n            \n              \n                \n                \n              \n              Correct!"
+    }
+  ],
+  "screenshot": "/tmp/star-step1-20261015/evidence/probe-grade-shifted.png",
+  "finished_utc": "2026-10-16T05:46:23.220Z"
+}

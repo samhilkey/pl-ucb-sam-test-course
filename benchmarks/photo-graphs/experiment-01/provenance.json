@@ -1,0 +1,25 @@
+{
+  "prepared_utc": "2026-10-16T05:26:06.698321+00:00",
+  "source_commit": "0917ee49e37e01c65db583a7d3db0df6a3ea7a0b",
+  "source_files": {
+    "elements/pl-sketch/star-photo.js": "387b2d009873ea5cf36b215f22f87310544bd4fada06cc6c8423d71741dcebe8",
+    "elements/pl-sketch/star-fit.js": "5a4e5336f123417777842f1acb05c0b47e34a0b2d15690774be6c1892656f499",
+    "elements/pl-sketch/pl-sketch.js": "d3e64bcce95c37b11a10c526d83478473697b980f77a0301da6c8be19c5c1213",
+    "elements/pl-sketch/pl-sketch.py": "f58f56932da03cf17be5a869ba239b22a2ac8ca6c91fa7a44e96fd49d6712b12",
+    "questions/star-photo-test/question.html": "aac0c51e9c249d7d9f9324f4a548bcd1b5a4820e02312c383fa2b74ea18f8e3e"
+  },
+  "browser_method": "Playwright CLI; Browser plugin absent",
+  "operator": "automated replay with reference-guided rough tracing",
+  "ui_layout_for_batch": "photo panel expanded in browser only; original layout tested separately",
+  "image_count": 33,
+  "drawing_count": 15,
+  "completed_utc": "2026-10-16T05:47:50.923003+00:00",
+  "browser_version": "Chrome 155.0.8059.80 (headless)",
+  "docker_container": "sam-test-course",
+  "docker_image": "prairielearn/prairielearn:latest",
+  "docker_image_id": "sha256:f26864b04ac01d0bbd022113bdd1adefd02f7c6478983b62ca83d6ea7d2ab996",
+  "python_version": "3.13.15",
+  "numpy_version": "2.4.6",
+  "pillow_version": "12.3.0",
+  "application_source_unchanged": true
+}

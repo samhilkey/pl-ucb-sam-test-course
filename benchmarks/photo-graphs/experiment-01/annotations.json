@@ -1,0 +1,895 @@
+{
+  "schema_version": 1,
+  "annotator": "Codex visual inspection; single annotator",
+  "reference_status": "approximate visual centerlines, not independent expert annotations",
+  "cases": [
+    {
+      "id": "paper--01-parabola-plain-paper",
+      "collection": "paper-style",
+      "source": "paper-style/images/01-parabola-plain-paper.png",
+      "origin": [
+        522,
+        989
+      ],
+      "x_marker": [
+        684,
+        983
+      ],
+      "y_marker": [
+        516,
+        825
+      ],
+      "x_value": 1,
+      "y_value": 1,
+      "axis_policy": "Visible unit ticks; approximate image locations",
+      "estimated_annotation_uncertainty_original_px": 6,
+      "reference_branch_count": 1,
+      "branches": [
+        [
+          [
+            153,
+            297
+          ],
+          [
+            166,
+            354
+          ],
+          [
+            190,
+            444
+          ],
+          [
+            221,
+            559
+          ],
+          [
+            251,
+            652
+          ],
+          [
+            288,
+            750
+          ],
+          [
+            334,
+            831
+          ],
+          [
+            375,
+            895
+          ],
+          [
+            423,
+            946
+          ],
+          [
+            470,
+            978
+          ],
+          [
+            522,
+            989
+          ],
+          [
+            567,
+            974
+          ],
+          [
+            607,
+            933
+          ],
+          [
+            646,
+            879
+          ],
+          [
+            678,
+            816
+          ],
+          [
+            711,
+            730
+          ],
+          [
+            744,
+            630
+          ],
+          [
+            768,
+            536
+          ],
+          [
+            789,
+            431
+          ],
+          [
+            802,
+            350
+          ],
+          [
+            812,
+            292
+          ]
+        ]
+      ],
+      "notes": "Do not use x**2 as photographic ground truth. Follow the visible pencil centerline."
+    },
+    {
+      "id": "paper--02-v-shaped-notebook-paper",
+      "collection": "paper-style",
+      "source": "paper-style/images/02-v-shaped-notebook-paper.png",
+      "origin": [
+        536,
+        658
+      ],
+      "x_marker": [
+        646,
+        661
+      ],
+      "y_marker": [
+        533,
+        526
+      ],
+      "x_value": 1,
+      "y_value": 1,
+      "axis_policy": "Visible unit ticks; approximate image locations",
+      "estimated_annotation_uncertainty_original_px": 6,
+      "reference_branch_count": 1,
+      "branches": [
+        [
+          [
+            201,
+            378
+          ],
+          [
+            240,
+            425
+          ],
+          [
+            278,
+            475
+          ],
+          [
+            323,
+            526
+          ],
+          [
+            368,
+            579
+          ],
+          [
+            410,
+            629
+          ],
+          [
+            430,
+            650
+          ],
+          [
+            475,
+            706
+          ],
+          [
+            515,
+            752
+          ],
+          [
+            538,
+            773
+          ],
+          [
+            573,
+            727
+          ],
+          [
+            611,
+            688
+          ],
+          [
+            648,
+            656
+          ],
+          [
+            692,
+            604
+          ],
+          [
+            738,
+            553
+          ],
+          [
+            784,
+            506
+          ],
+          [
+            822,
+            468
+          ],
+          [
+            864,
+            421
+          ]
+        ]
+      ],
+      "corner_px": [
+        538,
+        773
+      ],
+      "notes": "The vertex label says (0,-1), but the physical tick spacing is imperfect. Reference geometry follows the image."
+    },
+    {
+      "id": "paper--03-cubic-graph-paper",
+      "collection": "paper-style",
+      "source": "paper-style/images/03-cubic-graph-paper.png",
+      "origin": [
+        500,
+        654
+      ],
+      "x_marker": [
+        658,
+        650
+      ],
+      "y_marker": [
+        498,
+        519
+      ],
+      "x_value": 1,
+      "y_value": 1,
+      "axis_policy": "Visible unit ticks; approximate image locations",
+      "estimated_annotation_uncertainty_original_px": 8,
+      "reference_branch_count": 1,
+      "branches": [
+        [
+          [
+            129,
+            1127
+          ],
+          [
+            139,
+            1004
+          ],
+          [
+            152,
+            886
+          ],
+          [
+            169,
+            761
+          ],
+          [
+            189,
+            669
+          ],
+          [
+            211,
+            584
+          ],
+          [
+            237,
+            504
+          ],
+          [
+            268,
+            440
+          ],
+          [
+            298,
+            398
+          ],
+          [
+            333,
+            378
+          ],
+          [
+            363,
+            387
+          ],
+          [
+            393,
+            412
+          ],
+          [
+            425,
+            466
+          ],
+          [
+            454,
+            532
+          ],
+          [
+            480,
+            600
+          ],
+          [
+            501,
+            655
+          ],
+          [
+            532,
+            728
+          ],
+          [
+            563,
+            802
+          ],
+          [
+            596,
+            870
+          ],
+          [
+            626,
+            915
+          ],
+          [
+            655,
+            938
+          ],
+          [
+            685,
+            944
+          ],
+          [
+            714,
+            935
+          ],
+          [
+            742,
+            910
+          ],
+          [
+            771,
+            866
+          ],
+          [
+            798,
+            808
+          ],
+          [
+            822,
+            741
+          ],
+          [
+            846,
+            665
+          ],
+          [
+            865,
+            590
+          ],
+          [
+            881,
+            508
+          ],
+          [
+            894,
+            416
+          ],
+          [
+            905,
+            322
+          ],
+          [
+            914,
+            233
+          ],
+          [
+            920,
+            192
+          ]
+        ]
+      ],
+      "notes": "Visible curve differs from the requested generating equation. Use the annotated ink, not prompt coordinates."
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "origin": [
+        238,
+        255
+      ],
+      "x_marker": [
+        750,
+        237
+      ],
+      "y_marker": [
+        231,
+        52
+      ],
+      "x_value": 4,
+      "y_value": 4,
+      "axis_policy": "Normalized analysis frame; numerical tick labels are absent. X reference lies on the inferred axis extension. No claim about numeric-scale recognition.",
+      "reference_branch_count": 2,
+      "branches": [
+        [
+          [
+            17,
+            319
+          ],
+          [
+            100,
+            293
+          ],
+          [
+            180,
+            272
+          ],
+          [
+            238,
+            255
+          ],
+          [
+            336,
+            224
+          ],
+          [
+            442,
+            189
+          ],
+          [
+            550,
+            150
+          ],
+          [
+            670,
+            112
+          ],
+          [
+            770,
+            76
+          ]
+        ],
+        [
+          [
+            59,
+            432
+          ],
+          [
+            150,
+            409
+          ],
+          [
+            241,
+            384
+          ],
+          [
+            345,
+            357
+          ],
+          [
+            453,
+            330
+          ],
+          [
+            560,
+            296
+          ],
+          [
+            665,
+            265
+          ],
+          [
+            715,
+            247
+          ]
+        ]
+      ],
+      "notes": "Challenge case: two overlapping functions in one image; qualitative topology and photographic distances only.",
+      "collection": "real",
+      "source": "experiment-01/inputs/real--01-multiple-lines-graph-paper.png",
+      "estimated_annotation_uncertainty_original_px": 4
+    },
+    {
+      "id": "real--02-conflicting-equation-labels",
+      "origin": [
+        244,
+        235
+      ],
+      "x_marker": [
+        436,
+        226
+      ],
+      "y_marker": [
+        240,
+        46
+      ],
+      "x_value": 4,
+      "y_value": 4,
+      "axis_policy": "Normalized analysis coordinates: selected six-unit positive axis spans are each mapped to four units so the existing canvas window can display the curves.",
+      "reference_branch_count": 2,
+      "branches": [
+        [
+          [
+            65,
+            283
+          ],
+          [
+            110,
+            273
+          ],
+          [
+            160,
+            260
+          ],
+          [
+            205,
+            248
+          ],
+          [
+            244,
+            235
+          ],
+          [
+            290,
+            226
+          ],
+          [
+            333,
+            211
+          ],
+          [
+            376,
+            197
+          ],
+          [
+            430,
+            181
+          ],
+          [
+            459,
+            173
+          ]
+        ],
+        [
+          [
+            100,
+            448
+          ],
+          [
+            145,
+            433
+          ],
+          [
+            192,
+            420
+          ],
+          [
+            246,
+            406
+          ],
+          [
+            292,
+            392
+          ],
+          [
+            338,
+            382
+          ],
+          [
+            385,
+            366
+          ],
+          [
+            431,
+            351
+          ],
+          [
+            460,
+            344
+          ]
+        ]
+      ],
+      "notes": "Challenge case: two lines with conflicting written equations. Numerical-label interpretation is not tested.",
+      "collection": "real",
+      "source": "experiment-01/inputs/real--02-conflicting-equation-labels.png",
+      "estimated_annotation_uncertainty_original_px": 4
+    },
+    {
+      "id": "real--03-line-missing-origin",
+      "origin": [
+        80,
+        712
+      ],
+      "x_marker": [
+        584,
+        710
+      ],
+      "y_marker": [
+        78,
+        84
+      ],
+      "x_value": 4,
+      "y_value": 4,
+      "axis_policy": "Normalized analysis coordinates: approximately 20 physical x units and 144 physical y units are each mapped to four units.",
+      "reference_branch_count": 1,
+      "branches": [
+        [
+          [
+            130,
+            607
+          ],
+          [
+            156,
+            555
+          ],
+          [
+            181,
+            503
+          ],
+          [
+            208,
+            450
+          ],
+          [
+            233,
+            399
+          ],
+          [
+            257,
+            345
+          ],
+          [
+            282,
+            294
+          ],
+          [
+            306,
+            246
+          ],
+          [
+            331,
+            193
+          ],
+          [
+            353,
+            158
+          ]
+        ]
+      ],
+      "notes": "Preserve the visible limited domain. The student line starts away from the origin.",
+      "collection": "real",
+      "source": "experiment-01/inputs/real--03-line-missing-origin.png",
+      "estimated_annotation_uncertainty_original_px": 4
+    },
+    {
+      "id": "real--04-piecewise-curved-section",
+      "origin": [
+        16,
+        333
+      ],
+      "x_marker": [
+        267,
+        356
+      ],
+      "y_marker": [
+        37,
+        70
+      ],
+      "x_value": 4,
+      "y_value": 4,
+      "axis_policy": "Normalized analysis coordinates using visually estimated axes; physical tick spacing is irregular.",
+      "reference_branch_count": 1,
+      "branches": [
+        [
+          [
+            27,
+            265
+          ],
+          [
+            41,
+            248
+          ],
+          [
+            55,
+            223
+          ],
+          [
+            70,
+            199
+          ],
+          [
+            82,
+            182
+          ],
+          [
+            92,
+            159
+          ],
+          [
+            100,
+            133
+          ],
+          [
+            108,
+            124
+          ],
+          [
+            117,
+            128
+          ],
+          [
+            128,
+            148
+          ],
+          [
+            135,
+            164
+          ],
+          [
+            154,
+            157
+          ],
+          [
+            182,
+            153
+          ],
+          [
+            211,
+            153
+          ],
+          [
+            239,
+            151
+          ],
+          [
+            274,
+            149
+          ]
+        ]
+      ],
+      "notes": "Low-resolution, low-contrast, colored/mixed ink and a rounded peak followed by a flat section.",
+      "collection": "real",
+      "source": "experiment-01/inputs/real--04-piecewise-curved-section.png",
+      "estimated_annotation_uncertainty_original_px": 4
+    },
+    {
+      "id": "real--05-sparse-points-shadow",
+      "origin": [
+        63,
+        510
+      ],
+      "x_marker": [
+        665,
+        501
+      ],
+      "y_marker": [
+        77,
+        142
+      ],
+      "x_value": 4,
+      "y_value": 4,
+      "axis_policy": "Normalized analysis frame. Input is ambiguous; no numerical fidelity judgment.",
+      "reference_branch_count": 0,
+      "branches": [],
+      "guide_branches": [
+        [
+          [
+            63,
+            508
+          ],
+          [
+            140,
+            499
+          ],
+          [
+            210,
+            489
+          ],
+          [
+            286,
+            480
+          ],
+          [
+            355,
+            463
+          ],
+          [
+            422,
+            451
+          ]
+        ]
+      ],
+      "notes": "Exploratory incomplete-input probe. Sparse points are visible but no complete connected student curve is clear. A joining guide tests whether the fitter invents a continuous interpretation; not a verified binary ground-truth case.",
+      "collection": "real",
+      "source": "experiment-01/inputs/real--05-sparse-points-shadow.png",
+      "estimated_annotation_uncertainty_original_px": 4
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "origin": [
+        53,
+        324
+      ],
+      "x_marker": [
+        489,
+        338
+      ],
+      "y_marker": [
+        106,
+        44
+      ],
+      "x_value": 4,
+      "y_value": 4,
+      "axis_policy": "Normalized analysis coordinates: approximately 10 physical x units and 300 physical y units are each mapped to four units.",
+      "reference_branch_count": 1,
+      "branches": [
+        [
+          [
+            53,
+            324
+          ],
+          [
+            68,
+            319
+          ],
+          [
+            88,
+            309
+          ],
+          [
+            109,
+            296
+          ],
+          [
+            126,
+            269
+          ],
+          [
+            147,
+            237
+          ],
+          [
+            171,
+            199
+          ],
+          [
+            196,
+            163
+          ],
+          [
+            220,
+            126
+          ],
+          [
+            241,
+            95
+          ],
+          [
+            258,
+            120
+          ],
+          [
+            280,
+            154
+          ],
+          [
+            303,
+            188
+          ],
+          [
+            324,
+            216
+          ],
+          [
+            347,
+            247
+          ],
+          [
+            371,
+            281
+          ],
+          [
+            398,
+            329
+          ]
+        ]
+      ],
+      "corner_px": [
+        241,
+        95
+      ],
+      "notes": "Sharp piecewise peak; preserve the photographed geometry rather than a smooth polynomial.",
+      "collection": "real",
+      "source": "experiment-01/inputs/real--06-piecewise-graph-paper.png",
+      "estimated_annotation_uncertainty_original_px": 4
+    }
+  ]
+}

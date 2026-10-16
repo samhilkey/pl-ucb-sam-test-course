@@ -1,0 +1,76 @@
+{
+  "id": "probe-layout",
+  "status": "completed",
+  "checks": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "url": "http://localhost:3000/pl/course/1/question/10/preview",
+      "title": "[DEV] Question Preview (star-photo-test) \u2014 cs000 | PrairieLearn",
+      "geometry": {
+        "canvas": {
+          "x": 320.953125,
+          "y": 533.875,
+          "width": 755.03125,
+          "height": 1006.03125,
+          "top": 533.875,
+          "right": 1075.984375,
+          "bottom": 1539.90625,
+          "left": 320.953125
+        },
+        "panel": {
+          "x": 302.953125,
+          "y": 399.09375,
+          "width": 791.03125,
+          "height": 523.953125,
+          "top": 399.09375,
+          "right": 1093.984375,
+          "bottom": 923.046875,
+          "left": 302.953125
+        },
+        "visible_canvas_fraction": 0.38683875376634674,
+        "document_width": 1440,
+        "viewport_width": 1440,
+        "keyboard_canvas_controls": null
+      },
+      "start_screenshot": "/tmp/star-step1-20261015/evidence/ui-desktop-start.png",
+      "photo_screenshot": "/tmp/star-step1-20261015/evidence/ui-desktop-photo.png"
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:3000/pl/course/1/question/10/preview",
+      "title": "[DEV] Question Preview (star-photo-test) \u2014 cs000 | PrairieLearn",
+      "geometry": {
+        "canvas": {
+          "x": 69,
+          "y": 807.3125,
+          "width": 252,
+          "height": 335.328125,
+          "top": 807.3125,
+          "right": 321,
+          "bottom": 1142.640625,
+          "left": 69
+        },
+        "panel": {
+          "x": 51,
+          "y": 535.859375,
+          "width": 288,
+          "height": 241,
+          "top": 535.859375,
+          "right": 339,
+          "bottom": 776.859375,
+          "left": 51
+        },
+        "visible_canvas_fraction": 0,
+        "document_width": 390,
+        "viewport_width": 390,
+        "keyboard_canvas_controls": null
+      },
+      "start_screenshot": "/tmp/star-step1-20261015/evidence/ui-mobile-start.png",
+      "photo_screenshot": "/tmp/star-step1-20261015/evidence/ui-mobile-photo.png"
+    }
+  ]
+}

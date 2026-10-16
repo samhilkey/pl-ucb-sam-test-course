@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-10-16T05:50:52.515132+00:00",
+  "case_count": 33,
+  "completed_native_runs": 33,
+  "captured_case_screenshots": 66,
+  "total_evidence_screenshots": 74,
+  "native_svg_endpoint_checks_passed": 33,
+  "artifact_links_checked": true,
+  "json_and_script_syntax_checked": true,
+  "gallery_browser_check": {
+    "case_entries": 33,
+    "first_three_images_loaded": true
+  },
+  "application_source_hashes_unchanged": true,
+  "git_committed": false,
+  "git_pushed": false
+}

@@ -1,0 +1,372 @@
+[
+  {
+    "file": "controlled--01-line--blur-dim--canvas.png",
+    "bytes": 16861,
+    "sha256": "843ce240d455455f6c0971d1e6d89032bc0678d5404b885920359b22c3c2ae42"
+  },
+  {
+    "file": "controlled--01-line--blur-dim--photo.png",
+    "bytes": 194547,
+    "sha256": "f34ce003384efce0633aa5eacae6711a5ec09c6f612973bd35aeaa3b499885d8"
+  },
+  {
+    "file": "controlled--01-line--clean--canvas.png",
+    "bytes": 16825,
+    "sha256": "e4f1c824600db7a98e5b67b117749d6bf723743e58acaefe721ace4c8bb8c4f0"
+  },
+  {
+    "file": "controlled--01-line--clean--photo.png",
+    "bytes": 527608,
+    "sha256": "24b4d5d2e05b950af6675c5a02877a0de0eb2baf4b704cad36dcd352b1dcf358"
+  },
+  {
+    "file": "controlled--01-line--perspective--canvas.png",
+    "bytes": 16741,
+    "sha256": "ba76834a70433530af916a1b482d7b86146b1af22958f974bce85efccb2a1c71"
+  },
+  {
+    "file": "controlled--01-line--perspective--photo.png",
+    "bytes": 646167,
+    "sha256": "1cbfaaad056152afdde09915400be7cb9f0626f5143371f70bdedfa58f1dc930"
+  },
+  {
+    "file": "controlled--01-line--shadow--canvas.png",
+    "bytes": 16822,
+    "sha256": "9e6909e0fa5f3262e08d61c584800f8999b42fda450ac667b7e4e5487c352eee"
+  },
+  {
+    "file": "controlled--01-line--shadow--photo.png",
+    "bytes": 526471,
+    "sha256": "3250ecbfec9da40f7f035edd574e7879d0439717630de2f1f9812f451aab81ca"
+  },
+  {
+    "file": "controlled--02-parabola--blur-dim--canvas.png",
+    "bytes": 17375,
+    "sha256": "4df8b2d173583e4bace90c7166a7b6a701e18cc3b1b52f3fc9b31751dbd06366"
+  },
+  {
+    "file": "controlled--02-parabola--blur-dim--photo.png",
+    "bytes": 196409,
+    "sha256": "5003324440bc5964df25139e4405a14c1774faf0fa1709d2c538563d8d6044f3"
+  },
+  {
+    "file": "controlled--02-parabola--clean--canvas.png",
+    "bytes": 17410,
+    "sha256": "786b3eba1390406717c874f775658c5cf0f9836bad7c1652c7ee16a629371eb5"
+  },
+  {
+    "file": "controlled--02-parabola--clean--photo.png",
+    "bytes": 523666,
+    "sha256": "89436e43580d3610567aa924fd19e779ae6ab6f4775bc662ab0234ce5fb5d1e7"
+  },
+  {
+    "file": "controlled--02-parabola--perspective--canvas.png",
+    "bytes": 17287,
+    "sha256": "4cd1dba63495125063948d26fe3c231404394350d64a170346f36606945333d5"
+  },
+  {
+    "file": "controlled--02-parabola--perspective--photo.png",
+    "bytes": 645922,
+    "sha256": "ad52b6c2da2aaf77e51197b19378e321ce9dedb837a9b572cf3e2b0777f0e7f5"
+  },
+  {
+    "file": "controlled--02-parabola--shadow--canvas.png",
+    "bytes": 17517,
+    "sha256": "0029de66c6255783115d435d1a8b6bddc8b435f88283f3f08c209fe1010dcc3f"
+  },
+  {
+    "file": "controlled--02-parabola--shadow--photo.png",
+    "bytes": 526887,
+    "sha256": "79357aa7635c73a7ee678612f8e5779f416da48aaf65ee3640b4e82338fe4914"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--blur-dim--canvas.png",
+    "bytes": 16992,
+    "sha256": "8cb7fb93fb2e93df91300777ffbb2ba1b11d7c2121b8dc006d0f333990663898"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--blur-dim--photo.png",
+    "bytes": 192920,
+    "sha256": "49ebc5c8913b6ef8e1d159732b7472c42c87fb7ac73cd00e3bd1aa4c502888e8"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--clean--canvas.png",
+    "bytes": 16979,
+    "sha256": "5767ca521f12f80847768454c3bcd6b74dd452c2e54ffc66e2ff4dec48eb324e"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--clean--photo.png",
+    "bytes": 521813,
+    "sha256": "9033a333f152a4e088da36e15dd5c537ffb8612d14177ee7f55d7310e7c16a57"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--perspective--canvas.png",
+    "bytes": 16947,
+    "sha256": "3a45132648ff25177032f1a837844b12e18c697b804a8ce860876e2c851bf5ab"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--perspective--photo.png",
+    "bytes": 643414,
+    "sha256": "16e11ac5008aee00746535e891e89dae09991da3f1f685d48a5bf3f23fd93690"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--shadow--canvas.png",
+    "bytes": 16921,
+    "sha256": "0256dfb533ca987d689229106d4440ef154c6f631c67c7e6e82da1c155e0b0f8"
+  },
+  {
+    "file": "controlled--03-shifted-parabola--shadow--photo.png",
+    "bytes": 523079,
+    "sha256": "96182c56fc20a9ebecbd13e4113f1b5e5914274c734c7c353ae505eb1c77bf98"
+  },
+  {
+    "file": "controlled--04-absolute-value--blur-dim--canvas.png",
+    "bytes": 17978,
+    "sha256": "54bec838d0bfc62b4235dc734077096779ddaae97121410b1e9c68c4be53f1c0"
+  },
+  {
+    "file": "controlled--04-absolute-value--blur-dim--photo.png",
+    "bytes": 202980,
+    "sha256": "60f0692806b078fbb5876d45ee3eadfa8364cde3513b60f70a970db1926895c1"
+  },
+  {
+    "file": "controlled--04-absolute-value--clean--canvas.png",
+    "bytes": 17965,
+    "sha256": "c114ceb1605d6dbb0972bca1bbcf11bae84472c9fa3363f646e8223b4b7cc571"
+  },
+  {
+    "file": "controlled--04-absolute-value--clean--photo.png",
+    "bytes": 535769,
+    "sha256": "2d29106823f836786704cfef830bc546d54e74238d6b7fee362329dc5988c22d"
+  },
+  {
+    "file": "controlled--04-absolute-value--perspective--canvas.png",
+    "bytes": 17745,
+    "sha256": "13d43f57d1ad994ac14d0397deab6277f2bf189cebbf630c8640e3600731f121"
+  },
+  {
+    "file": "controlled--04-absolute-value--perspective--photo.png",
+    "bytes": 652155,
+    "sha256": "3d6a4a79e70eb8fdd616188ca90c30f30feee5e544dc08c8355f13a3966444b9"
+  },
+  {
+    "file": "controlled--04-absolute-value--shadow--canvas.png",
+    "bytes": 17982,
+    "sha256": "be4fffff0f0e03d5f123f6528ba4ceeee228f82896bd1106e0675f11ccb7b5e8"
+  },
+  {
+    "file": "controlled--04-absolute-value--shadow--photo.png",
+    "bytes": 534132,
+    "sha256": "d83aec1471a819904890128f89c8551c402159490bb1b6e1e56c0146cf31e276"
+  },
+  {
+    "file": "controlled--05-cubic--blur-dim--canvas.png",
+    "bytes": 18645,
+    "sha256": "a970d3eb01be5d69f96fba5e34c25e024d5da75e4566e0340127f2060ba41371"
+  },
+  {
+    "file": "controlled--05-cubic--blur-dim--photo.png",
+    "bytes": 205189,
+    "sha256": "2cfa48830af3d9eb725acdaef134d93be604ed7da66f611efb6fcf6d1f438a4e"
+  },
+  {
+    "file": "controlled--05-cubic--clean--canvas.png",
+    "bytes": 18615,
+    "sha256": "3a8ea4fe8eb7267adf4798ed8a037f6fde11b63726d5debcf6c9d38931c68f62"
+  },
+  {
+    "file": "controlled--05-cubic--clean--photo.png",
+    "bytes": 534338,
+    "sha256": "f80221bc4ca6f007b06628784740e0940249ab1cbecb0b5a03a2e860a3b00665"
+  },
+  {
+    "file": "controlled--05-cubic--perspective--canvas.png",
+    "bytes": 18748,
+    "sha256": "2ab32f33a47785842a6b97ca81ed48e221c5ecf83403f28edffe2013fca83b36"
+  },
+  {
+    "file": "controlled--05-cubic--perspective--photo.png",
+    "bytes": 653418,
+    "sha256": "ffc032207abc5af00257e3a793c893830f995cde38ba7e55ac364a5f5ab3b18b"
+  },
+  {
+    "file": "controlled--05-cubic--shadow--canvas.png",
+    "bytes": 18612,
+    "sha256": "2be34a35bc0102d153edb4519f079e8cade4c076d6b50068533177a058d13fc6"
+  },
+  {
+    "file": "controlled--05-cubic--shadow--photo.png",
+    "bytes": 535934,
+    "sha256": "4ae9aaa6553121966410ffcac68c9c547d27bd8e57ac5e3630daf18ed1ebae40"
+  },
+  {
+    "file": "controlled--06-reciprocal--blur-dim--canvas.png",
+    "bytes": 16777,
+    "sha256": "d6dfe1a9c04a008f96729c04c10c98f91d1a8b4ceb801a73766e075facb57e61"
+  },
+  {
+    "file": "controlled--06-reciprocal--blur-dim--photo.png",
+    "bytes": 203237,
+    "sha256": "27fa53e1ea270bf79d7435b5c8026741e0061c50dd578e9b9715ea9eaa723ccb"
+  },
+  {
+    "file": "controlled--06-reciprocal--clean--canvas.png",
+    "bytes": 16855,
+    "sha256": "fdfbb1c58d6ea5e9884c0ccefcadbec73fe9464341c6b12fbe6b989c0d407bfe"
+  },
+  {
+    "file": "controlled--06-reciprocal--clean--photo.png",
+    "bytes": 532558,
+    "sha256": "e266bf2f986c172cd16ffe57244288665939c50674a0ae7ccfcfc01689344177"
+  },
+  {
+    "file": "controlled--06-reciprocal--perspective--canvas.png",
+    "bytes": 16786,
+    "sha256": "1d165f51563ec13adf6ce5d24c0baec5f884b960d10d1544ec7f4ae86c5d7da5"
+  },
+  {
+    "file": "controlled--06-reciprocal--perspective--photo.png",
+    "bytes": 651639,
+    "sha256": "c873b6c5720295de14cd3a0bdb5cad6f0498fe9b7716de12f59deb8810fd8c54"
+  },
+  {
+    "file": "controlled--06-reciprocal--shadow--canvas.png",
+    "bytes": 16846,
+    "sha256": "1044dddcb2505fd65af03423f98dbe5013a1ccd3be7577530cd9bf86b2f27586"
+  },
+  {
+    "file": "controlled--06-reciprocal--shadow--photo.png",
+    "bytes": 533647,
+    "sha256": "8204f81d65ee59a8902cae8502465bd5b15d411ca6a972a60e47850f45baafb3"
+  },
+  {
+    "file": "paper--01-parabola-plain-paper--canvas.png",
+    "bytes": 17537,
+    "sha256": "5c55ff4cbcd19ea55d893e0a254f42db3a7aebd9fb2dd07b0600fd23e3c91852"
+  },
+  {
+    "file": "paper--01-parabola-plain-paper--photo.png",
+    "bytes": 1439888,
+    "sha256": "a17913b015a78244feca91ddb628bb3b3b5b9089d292cd387cad50402790341a"
+  },
+  {
+    "file": "paper--02-v-shaped-notebook-paper--canvas.png",
+    "bytes": 17030,
+    "sha256": "fa622924269b5c95da4f5b6337c0bf18a0df1a916a2b5a7b15285dfab6803538"
+  },
+  {
+    "file": "paper--02-v-shaped-notebook-paper--photo.png",
+    "bytes": 1280886,
+    "sha256": "dfd0fe02a8c65b66d2734c91d6f30861e1f1543856bbf1406ef0932940f8af1c"
+  },
+  {
+    "file": "paper--03-cubic-graph-paper--canvas.png",
+    "bytes": 18686,
+    "sha256": "166acec50eff36c3907c13413faf24b1228b9e532bd892b74d866b6c863dae55"
+  },
+  {
+    "file": "paper--03-cubic-graph-paper--photo.png",
+    "bytes": 1172810,
+    "sha256": "65460a014de8f43ead27c150d1288eba3a62878210f2178fb8d570520802ed20"
+  },
+  {
+    "file": "probe-empty-trace-stale-fit.png",
+    "bytes": 781927,
+    "sha256": "4726f9c19c852472f37cca2705c69843109d1be445e98aeb60594abb269b630f"
+  },
+  {
+    "file": "probe-grade-clean.png",
+    "bytes": 212925,
+    "sha256": "7698ad6f4a49e104a92fee8d14d2e48f1fd2ad59e2c03740a0471f57103c6fde"
+  },
+  {
+    "file": "probe-grade-shifted.png",
+    "bytes": 215406,
+    "sha256": "6afca7722ed83f68977522f58a11aee996859b454ec6a5322c1677ef1930e038"
+  },
+  {
+    "file": "probe-replaced-photo-stale-fit.png",
+    "bytes": 674254,
+    "sha256": "4675c51f361638b07b02eb529920c7fe7bf37f04286831f32584eeeb5ad642dd"
+  },
+  {
+    "file": "real--01-multiple-lines-graph-paper--canvas.png",
+    "bytes": 16456,
+    "sha256": "fabfb3914870adc3ff5bf9217d65ce702e0d40ba2198f28607a709a979036a8b"
+  },
+  {
+    "file": "real--01-multiple-lines-graph-paper--photo.png",
+    "bytes": 419011,
+    "sha256": "8ddb913431f9e84990adcbc39a66c22e2a90bbfa742413efae10aa6df468d3f1"
+  },
+  {
+    "file": "real--02-conflicting-equation-labels--canvas.png",
+    "bytes": 16383,
+    "sha256": "9f1cc586a2f3c82f4438b412fb2e1c7e27700fc72a6be1e7a72a9111a4830f57"
+  },
+  {
+    "file": "real--02-conflicting-equation-labels--photo.png",
+    "bytes": 767259,
+    "sha256": "70d9cf5f376436b5281c8865e47bcd90b2b37e1cec8db356890bc8e8e3055afc"
+  },
+  {
+    "file": "real--03-line-missing-origin--canvas.png",
+    "bytes": 15644,
+    "sha256": "38e5069773d61c0a59695c0061da60209c2993e79a1d2a776deba98f76c91223"
+  },
+  {
+    "file": "real--03-line-missing-origin--photo.png",
+    "bytes": 638171,
+    "sha256": "d89ff623abd5334c866368a9df714de698229ba4f1004e0fe730540bfceef0c9"
+  },
+  {
+    "file": "real--04-piecewise-curved-section--canvas.png",
+    "bytes": 14862,
+    "sha256": "0598de1e9089e7d25b084fb51407111f1e3879d6fea38053ffbe320d71f52874"
+  },
+  {
+    "file": "real--04-piecewise-curved-section--photo.png",
+    "bytes": 596146,
+    "sha256": "24539f3fb4a99692d0249173bd2ecde5c1671ac782dbbf901131ed87261e2324"
+  },
+  {
+    "file": "real--05-sparse-points-shadow--canvas.png",
+    "bytes": 15575,
+    "sha256": "72bf5c5f9439442d4d79ce686d61e95534a7dbbe89d866750ce579d6831f6a69"
+  },
+  {
+    "file": "real--05-sparse-points-shadow--photo.png",
+    "bytes": 432137,
+    "sha256": "b22b774b193c03d3b8dd75f5e7336b35e71700cc6149e30612f8b902ba6a25b7"
+  },
+  {
+    "file": "real--06-piecewise-graph-paper--canvas.png",
+    "bytes": 16918,
+    "sha256": "f45acb3ed17e2adf6154e88f09ab79e88aa67c351f24433d38f87fbf5f2e0911"
+  },
+  {
+    "file": "real--06-piecewise-graph-paper--photo.png",
+    "bytes": 674816,
+    "sha256": "2610d37ddf406ae649cf2a586ca0fa5343d61c961510d36ae69dba55bf7927b9"
+  },
+  {
+    "file": "ui-desktop-photo.png",
+    "bytes": 574227,
+    "sha256": "3bec10feb5d8422a177e17bc4213b3f14bc0b94b8b4de7cc0529f11b82e07293"
+  },
+  {
+    "file": "ui-desktop-start.png",
+    "bytes": 158737,
+    "sha256": "d7dd95897a35e3ef56c77bc29130b13fa728dee17059912cb697fd99a4c77ae6"
+  },
+  {
+    "file": "ui-mobile-photo.png",
+    "bytes": 74396,
+    "sha256": "df74b61c68b6cf577ab6fed6ad26652ffc07e037f8ffb66d2eb2e2da526fcc18"
+  },
+  {
+    "file": "ui-mobile-start.png",
+    "bytes": 57421,
+    "sha256": "bf32cb85bdfd09fba0aea275a1507167333bb6f3116a08586215bd9e40c99d4c"
+  }
+]

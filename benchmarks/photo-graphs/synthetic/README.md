@@ -1,6 +1,6 @@
 # Synthetic graph photo fixtures
 
-These are programmatic plot fixtures with simulated camera effects. Their coordinate references describe the generated images and their known camera transformations.
+These are programmatic plot fixtures with simulated camera effects. For images that resemble actual pencil homework on paper, see the separate [paper-style synthetic photographs](../paper-style/README.md). The coordinate references here apply only to the programmatic images, not to that new collection.
 
 This set contains **24 code-generated JPEG images**: six drawings with four camera variants each. They simulate paper, pencil strokes, handwritten-style labels, perspective, shadows, blur, and JPEG compression. They are synthetic fixtures, not photographs of human student work.
 
@@ -44,7 +44,7 @@ These references describe centerlines. They are not pixel segmentation masks: pe
 
 The V-shaped graph and separate reciprocal branches are challenge cases. The current fitter may smooth corners or drop the second stroke; the reference should be used to detect that behavior, not to assume it already works.
 
-These fixtures support controlled geometry checks. They do not establish performance on real handwriting.
+These fixtures were generated and visually inspected. All 24 were subsequently measured through the live STAR workflow in [experiment 01](../experiment-01/REPORT.md). They do not establish performance on real handwriting.
 
 ## Regenerate
 

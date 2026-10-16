@@ -14,7 +14,7 @@ Use these for visual and interaction trials of uploading, calibrating axes, trac
 
 The functions in the prompts describe intended subjects; they are **not verified geometric references**. In particular, the cubic-like drawing's zero crossings and labeled feature positions are imperfect. Its actual ink must be annotated instead of assuming that it follows the requested equation.
 
-The coordinate JSON files in `../synthetic/references/` belong to the older programmatic plots. They do not apply to these images. Geometric evaluation requires manual calibration, trace annotation, and independent review.
+The coordinate JSON files in `../synthetic/references/` belong to the older programmatic plots. They do not apply to these images. [Experiment 01](../experiment-01/REPORT.md) adds approximate visual trace/axis annotations and measures all three images through the live workflow. Those single-agent annotations still require independent review for stronger accuracy claims.
 
 The existing `star-photo-test` question grades against `x^2`. A different image can be useful for recognition testing even when it is not a correct answer to that question.
 
