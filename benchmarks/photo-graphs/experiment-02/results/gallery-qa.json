@@ -1,0 +1,17 @@
+{
+  "url": "http://127.0.0.1:8769/experiment-02/gallery.html",
+  "title": "Photo branch preservation \u00b7 Experiment 02",
+  "cases": 33,
+  "meaningful": true,
+  "images": [
+    {
+      "id": "controlled--06-reciprocal--clean",
+      "loaded": 4
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "loaded": 4
+    }
+  ],
+  "consoleErrors": []
+}

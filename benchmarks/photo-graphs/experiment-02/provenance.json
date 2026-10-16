@@ -1,0 +1,239 @@
+{
+  "started_utc": "2026-10-16T20:23:28.519546+00:00",
+  "source_commit": "1e29cc188f17a7044c026d8830ba69915146b0ac",
+  "comparison_base": "b360313485032538a70846d3b91cbf443f8abd4b",
+  "baseline_source_commit": "0917ee49e37e01c65db583a7d3db0df6a3ea7a0b",
+  "baseline_data_commit": "d600ab07391e99bb2cc5b2d60646dc4fb4870a4b",
+  "experiment_merge_commit": "cfe9c33e9c8c60d442128517aa9e1e39998f60cc",
+  "source_files": {
+    "elements/pl-sketch/star-photo.js": "22e5df8b8a382d37012cc9b73ffd9d0101a7a93ff3f69ea2750c0f9f6f3a8043",
+    "elements/pl-sketch/star-fit.js": "b937ffc132e7456bf8806359c2578cd6c17b9d1cf47c9a884ee6f11ee35093a1",
+    "elements/pl-sketch/pl-sketch.js": "462402f6db63604122fe9dd828f3ef880b884a5ff019832cb54ac940450bdf7d",
+    "elements/pl-sketch/pl-sketch.py": "f58f56932da03cf17be5a869ba239b22a2ac8ca6c91fa7a44e96fd49d6712b12",
+    "questions/star-photo-test/question.html": "aac0c51e9c249d7d9f9324f4a548bcd1b5a4820e02312c383fa2b74ea18f8e3e"
+  },
+  "catalog_sha256": "70d39cad8cca4c7fccb2e5d9844bef31f23a036357161bb8e83df7c39260b368",
+  "inputs": [
+    {
+      "id": "controlled--01-line--clean",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/01-line--clean.jpg",
+      "sha256": "ede5ab9bb5c4f2fc117814d015e34aa91e2b5728c67cf6295c679b35ebb7e2dc"
+    },
+    {
+      "id": "controlled--01-line--perspective",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/01-line--perspective.jpg",
+      "sha256": "90fb886cfd83a51a130490271d944f40a440269306592847765cddf7ec0e16ae"
+    },
+    {
+      "id": "controlled--01-line--shadow",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/01-line--shadow.jpg",
+      "sha256": "108792f86a4b6178ea83e8bdcb8d4801a475e7acbd99a0dff39a8d6b72b1fe30"
+    },
+    {
+      "id": "controlled--01-line--blur-dim",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/01-line--blur-dim.jpg",
+      "sha256": "672e839b80795d0fafe48057235214bfc3de87642f183286fef989cf852b7234"
+    },
+    {
+      "id": "controlled--02-parabola--clean",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/02-parabola--clean.jpg",
+      "sha256": "118005e97ac36bca6f905ee65e90911dc5fbd4b5fe0c295cd1601cb0d186102e"
+    },
+    {
+      "id": "controlled--02-parabola--perspective",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/02-parabola--perspective.jpg",
+      "sha256": "864ffd728f10eda8691445f8c4f557fa779e1b566897136cae38124f0ebc8dcb"
+    },
+    {
+      "id": "controlled--02-parabola--shadow",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/02-parabola--shadow.jpg",
+      "sha256": "e3687f54f2e8995535925bd161da2204c5e101e7efed9eb7eb0c7d7789994dea"
+    },
+    {
+      "id": "controlled--02-parabola--blur-dim",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/02-parabola--blur-dim.jpg",
+      "sha256": "c64fd0c22d8d10619ee3427062c9f857525e454340637746775eca15587a0bc2"
+    },
+    {
+      "id": "controlled--03-shifted-parabola--clean",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/03-shifted-parabola--clean.jpg",
+      "sha256": "d79478c2211ca5df3e7d84a1cdf01cd3c168bf647ae2bb5b3754ffb2ac1a8f98"
+    },
+    {
+      "id": "controlled--03-shifted-parabola--perspective",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/03-shifted-parabola--perspective.jpg",
+      "sha256": "c6be43d7533ddf14d1fe95978a2e5e85e9debbaf020600461c77e8612ebf3d0e"
+    },
+    {
+      "id": "controlled--03-shifted-parabola--shadow",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/03-shifted-parabola--shadow.jpg",
+      "sha256": "cc8f0098e753a2f6b90b74799ac16a53d166aeab33fb401b0b3203984da3b43f"
+    },
+    {
+      "id": "controlled--03-shifted-parabola--blur-dim",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/03-shifted-parabola--blur-dim.jpg",
+      "sha256": "6b08b5f3b93d497cc1c7f428b5963fa15e9b0bd9057b66f9c5e3f4a34f60f439"
+    },
+    {
+      "id": "controlled--04-absolute-value--clean",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/04-absolute-value--clean.jpg",
+      "sha256": "c9c81a073b0b69b89b04f964d4a871ad19f54cd076337ad3351a25646d8cef1b"
+    },
+    {
+      "id": "controlled--04-absolute-value--perspective",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/04-absolute-value--perspective.jpg",
+      "sha256": "2559d911d8b770237b607776b9578af37c2cb1c3a90fd4cebe17e7a4e4f0e3cc"
+    },
+    {
+      "id": "controlled--04-absolute-value--shadow",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/04-absolute-value--shadow.jpg",
+      "sha256": "1bd3dd4dd113dd5d2d28785f1b04c4091646304bdca91841a49fb6b5e51d454a"
+    },
+    {
+      "id": "controlled--04-absolute-value--blur-dim",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/04-absolute-value--blur-dim.jpg",
+      "sha256": "d89d5a535b1dea4f427ee18ddd1425a35b59097fa884e3a1c6ffb2d5bc1bd05c"
+    },
+    {
+      "id": "controlled--05-cubic--clean",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/05-cubic--clean.jpg",
+      "sha256": "12f7381972cc8ae9351c4bd50fb3ddbf5353fb7424fd8e449015f61b54270bbf"
+    },
+    {
+      "id": "controlled--05-cubic--perspective",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/05-cubic--perspective.jpg",
+      "sha256": "c177149ac8f5b6dd6832d5495787359b5ae363ebbc64bad6baea77e75e00ddaf"
+    },
+    {
+      "id": "controlled--05-cubic--shadow",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/05-cubic--shadow.jpg",
+      "sha256": "5974cca9aa8c09372c2091ce116c22a2217d14364e910bf2f9e22ec7b0ff231d"
+    },
+    {
+      "id": "controlled--05-cubic--blur-dim",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/05-cubic--blur-dim.jpg",
+      "sha256": "0b45e18fd4deef3dd120f8ffc0162a1cbda380282c10918903c7264b459954a7"
+    },
+    {
+      "id": "controlled--06-reciprocal--clean",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/06-reciprocal--clean.jpg",
+      "sha256": "85707d5e1c9874437dfdf15b698164450ba786c0bb04adfaa9d1aaf1df3cda80"
+    },
+    {
+      "id": "controlled--06-reciprocal--perspective",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/06-reciprocal--perspective.jpg",
+      "sha256": "5fb29bb49d005efd1d3e05258b2e0101eb5675f6e93e7b66ef7be31da564a450"
+    },
+    {
+      "id": "controlled--06-reciprocal--shadow",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/06-reciprocal--shadow.jpg",
+      "sha256": "5f8c2a329a7e639ac006459f348bc1f955a98c9a0f499557e8fc5041bc1b880c"
+    },
+    {
+      "id": "controlled--06-reciprocal--blur-dim",
+      "image": "/course/benchmarks/photo-graphs/synthetic/images/06-reciprocal--blur-dim.jpg",
+      "sha256": "6d8bfe7d002182558a6a3b8769e6b5f37848ced2e0164ce7ec88e56a0c24bf73"
+    },
+    {
+      "id": "paper--01-parabola-plain-paper",
+      "image": "/course/benchmarks/photo-graphs/paper-style/images/01-parabola-plain-paper.png",
+      "sha256": "727bd1215ad0f08266ea4376e097c5959a77cf3ac2dc4e5ef388b6ce98f8bb9f"
+    },
+    {
+      "id": "paper--02-v-shaped-notebook-paper",
+      "image": "/course/benchmarks/photo-graphs/paper-style/images/02-v-shaped-notebook-paper.png",
+      "sha256": "3d75c3d447f6a28c93a07754057e65217ede83291be096fdbab3f1ec46351f94"
+    },
+    {
+      "id": "paper--03-cubic-graph-paper",
+      "image": "/course/benchmarks/photo-graphs/paper-style/images/03-cubic-graph-paper.png",
+      "sha256": "a45d9b6f3251fbd4a26f1dff89c32e5671214b56cc32f6091858195c1e520742"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "image": "/course/benchmarks/photo-graphs/experiment-01/inputs/real--01-multiple-lines-graph-paper.png",
+      "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--02-conflicting-equation-labels",
+      "image": "/course/benchmarks/photo-graphs/experiment-01/inputs/real--02-conflicting-equation-labels.png",
+      "sha256": "afe51d072b2d13e8552d337cc145a5f33b35dbdb4684495e4268ba6649a838f9"
+    },
+    {
+      "id": "real--03-line-missing-origin",
+      "image": "/course/benchmarks/photo-graphs/experiment-01/inputs/real--03-line-missing-origin.png",
+      "sha256": "b5abae6cb25ea18f5e33cf80613679204f5c01ee1344626cce7d15fefb1d635d"
+    },
+    {
+      "id": "real--04-piecewise-curved-section",
+      "image": "/course/benchmarks/photo-graphs/experiment-01/inputs/real--04-piecewise-curved-section.png",
+      "sha256": "3ae70e8e7e2b984cb53b76c559d39a18ba4d88a3281302d0c1c143f7dee2388f"
+    },
+    {
+      "id": "real--05-sparse-points-shadow",
+      "image": "/course/benchmarks/photo-graphs/experiment-01/inputs/real--05-sparse-points-shadow.png",
+      "sha256": "3f0866c7bfd1d476e6bece92325cbe8bb95895d0e3bacde9a4ca87be56ee9755"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "image": "/course/benchmarks/photo-graphs/experiment-01/inputs/real--06-piecewise-graph-paper.png",
+      "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    }
+  ],
+  "baseline_tree_before": "3c8ebb62b9c4a221cae7530540436aead4918c1d",
+  "browser_method": "Playwright CLI; Browser plugin absent",
+  "viewport": [
+    1600,
+    2200
+  ],
+  "operator": "identical frozen reference-guided axis positions and perturbed tracing guides from experiment-01/catalog.json",
+  "thresholds": {
+    "photo_bidirectional_p95_px": 10,
+    "photo_reference_coverage": 0.9,
+    "rendering_bidirectional_p95_svg_px": 3
+  },
+  "regression_precondition": {
+    "confirmation_assertions_passed": 71,
+    "branch_assertions_passed": 65,
+    "transfer_unit_tests_passed": 3,
+    "application_console_errors": 0
+  },
+  "dataset_scope": "33 images from 15 drawings; 24 controlled, 3 AI paper-style, 6 real; sparse point input excluded from continuous fidelity denominator",
+  "completed_utc": "2026-10-16T21:03:13.546927+00:00",
+  "browser": {
+    "version": "155.0.8059.80",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+  },
+  "baseline_tree_after": "3c8ebb62b9c4a221cae7530540436aead4918c1d",
+  "baseline_preserved": true,
+  "environment": {
+    "browser": "Chrome 155.0.8059.80 headless",
+    "docker_container": "sam-test-course",
+    "docker_image_id": "sha256:f26864b04ac01d0bbd022113bdd1adefd02f7c6478983b62ca83d6ea7d2ab996",
+    "docker_analysis_platform": "linux/amd64",
+    "python": "3.13.15",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "node": "v20.19.6"
+  },
+  "ci": {
+    "passed": true,
+    "head_sha": "1e29cc188f17a7044c026d8830ba69915146b0ac",
+    "url": "https://github.com/samhilkey/pl-ucb-sam-test-course/actions/runs/38965925295"
+  },
+  "native_submission_probes": [
+    {
+      "id": "controlled--06-reciprocal--clean",
+      "submitted_branch_count": 2,
+      "overlap_error": false,
+      "invalid_submission": false
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "submitted_branch_count": 2,
+      "overlap_error": true,
+      "invalid_submission": true
+    }
+  ],
+  "application_source_unchanged_during_experiment": true
+}

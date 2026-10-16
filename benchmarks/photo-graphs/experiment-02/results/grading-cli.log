@@ -1,0 +1,891 @@
+### Browser `photo-branch-grading` opened with pid 34587.
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/pl/course/1/question/10/preview');
+```
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-16T20-53-32-524Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T20-53-23-991Z.log#L1-L121
+
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Snapshot
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation "Skip link and accessibility guide" [ref=e4]:
+      - link "Skip to main content" [ref=e5] [cursor=pointer]:
+        - /url: "#content"
+      - link "Accessibility guide" [ref=e6] [cursor=pointer]:
+        - /url: https://docs.prairielearn.com/student-guide/accessibility/
+    - navigation "Global navigation" [ref=e7]:
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e10]: PrairieLearn
+          - generic [ref=e11]: Go home
+        - text: 
+        - generic [ref=e13]:
+          - list [ref=e14]:
+            - listitem [ref=e15]:
+              - link "Home" [ref=e16] [cursor=pointer]:
+                - /url: /
+            - listitem [aria-hidden] [ref=e17]:
+              - generic: →
+            - listitem [ref=e18]:
+              - link "Global Admin" [ref=e19] [cursor=pointer]:
+                - /url: /pl/administrator/admins
+            - listitem [aria-hidden] [ref=e20]:
+              - generic: →
+            - listitem [ref=e21]:
+              - link "Institutions" [ref=e22] [cursor=pointer]:
+                - /url: /pl/administrator/institutions
+            - listitem [aria-hidden] [ref=e23]:
+              - generic: →
+            - listitem [ref=e24]:
+              - link "Default" [ref=e25] [cursor=pointer]:
+                - /url: /pl/administrator/institution/1
+            - listitem [aria-hidden] [ref=e26]:
+              - generic: →
+            - listitem [ref=e27]:
+              - link "Courses" [ref=e28] [cursor=pointer]:
+                - /url: /pl/administrator/institution/1/courses
+            - listitem [aria-hidden] [ref=e29]:
+              - generic: →
+            - listitem [ref=e30]:
+              - link "cs000" [ref=e31] [cursor=pointer]:
+                - /url: /pl/course/1/course_admin/instances
+          - link "Load from disk" [ref=e32] [cursor=pointer]:
+            - /url: /pl/loadFromDisk
+          - button "Get help" [ref=e33] [cursor=pointer]
+          - list [ref=e34]:
+            - listitem [ref=e35]:
+              - button "Dev User staff" [ref=e36] [cursor=pointer]:
+                - text: Dev User
+                - generic [ref=e37]: staff
+    - text:  
+  - navigation "Course navigation" [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Course
+        - button "Collapse side nav" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: 
+      - generic [ref=e44]:
+        - button "Change course" [ref=e46] [cursor=pointer]:
+          - generic "cs000" [ref=e47]
+        - link "Course instances" [ref=e48] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/instances
+        - link "Questions" [ref=e51] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/questions
+        - link "Issues" [ref=e54] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/issues
+        - link "Staff" [ref=e57] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/staff
+        - link "Sync" [ref=e60] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/syncs
+        - link "Course files" [ref=e63] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/file_view
+        - link "Course settings" [ref=e66] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/settings
+      - generic [ref=e69]: Course instance
+      - button "Change course instance" [ref=e74] [cursor=pointer]:
+        - generic [ref=e75]: Select...
+  - generic [ref=e77]:
+    - navigation [ref=e78]:
+      - list [ref=e79]:
+        - listitem [ref=e80]:
+          - link "Files" [ref=e81] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/file_view
+        - listitem [ref=e83]:
+          - link "Preview" [ref=e84] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/preview
+        - listitem [ref=e86]:
+          - link "Settings" [ref=e87] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/settings
+        - listitem [ref=e89]:
+          - link "Statistics" [ref=e90] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/statistics
+        - listitem [ref=e92]:
+          - link "Issues" [ref=e93] [cursor=pointer]:
+            - /url: /pl/course/1/course_admin/issues?q=is%3Aopen%20qid%3Astar-photo-test
+    - main [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - 'heading "STAR: hand-drawn switch test" [level=1] [ref=e102]'
+            - button "View…" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - 'heading "Step 2 check: the instructor switch and the panel" [level=4] [ref=e108]'
+            - paragraph [ref=e109]:
+              - text: This canvas sets
+              - code [ref=e110]: allow-hand-drawn="true"
+              - text: . A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.
+            - paragraph [ref=e111]:
+              - text: Sketch the graph of
+              - img "f of x equals x squared, math" [ref=e293]
+              - text: .
+            - generic [ref=e134]:
+              - paragraph [ref=e135]:
+                - strong [ref=e136]: Switch on.
+                - text: Camera button expected.
+              - generic [ref=e138]:
+                - list [ref=e139]:
+                  - button [ref=e141] [cursor=pointer]:
+                    - img "Select" [ref=e142]
+                    - generic [ref=e143]: Select
+                  - button [ref=e145] [cursor=pointer]:
+                    - img "Spline tool" [ref=e146]
+                    - generic [ref=e147]: Your graph
+                  - separator
+                  - button [ref=e149] [cursor=pointer]:
+                    - img "Delete" [ref=e150]
+                    - generic [ref=e151]: Delete
+                  - button [ref=e153] [cursor=pointer]:
+                    - img "Undo" [ref=e154]
+                    - generic [ref=e155]: Undo
+                  - button [ref=e157] [cursor=pointer]:
+                    - img "Redo" [ref=e158]
+                    - generic [ref=e159]: Redo
+                  - button [ref=e161] [cursor=pointer]:
+                    - img "Help" [ref=e162]
+                    - generic [ref=e163]: Help
+                - img [ref=e164]:
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: "-4"
+                    - generic [ref=e170]: "-2"
+                    - generic [ref=e172]: "2"
+                    - generic [ref=e174]: "4"
+                    - generic [ref=e176]: "-4"
+                    - generic [ref=e178]: "-2"
+                    - generic [ref=e180]: "2"
+                    - generic [ref=e182]: "4"
+                    - generic [ref=e184]: "0"
+                    - generic [ref=e185]: x
+                    - generic [ref=e186]: "y"
+                - button "Submit a photo of a hand-drawn graph" [ref=e187] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=e188]: 
+            - generic [ref=e190]:
+              - paragraph [ref=e191]:
+                - strong [ref=e192]: Switch off.
+                - text: Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.
+              - generic [ref=e194]:
+                - list [ref=e195]:
+                  - button "Select Select" [ref=e197] [cursor=pointer]:
+                    - img "Select" [ref=e198]
+                    - generic [ref=e199]: Select
+                  - button [ref=e201] [cursor=pointer]:
+                    - img "Spline tool" [ref=e202]
+                    - generic [ref=e203]: Your graph
+                  - separator
+                  - button "Delete Delete" [ref=e205] [cursor=pointer]:
+                    - img "Delete" [ref=e206]
+                    - generic [ref=e207]: Delete
+                  - button "Undo Undo" [ref=e209] [cursor=pointer]:
+                    - img "Undo" [ref=e210]
+                    - generic [ref=e211]: Undo
+                  - button "Redo Redo" [ref=e213] [cursor=pointer]:
+                    - img "Redo" [ref=e214]
+                    - generic [ref=e215]: Redo
+                  - button "Help Help" [ref=e217] [cursor=pointer]:
+                    - img "Help" [ref=e218]
+                    - generic [ref=e219]: Help
+                - img [ref=e220]:
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: "-4"
+                    - generic [ref=e226]: "-2"
+                    - generic [ref=e228]: "2"
+                    - generic [ref=e230]: "4"
+                    - generic [ref=e232]: "-4"
+                    - generic [ref=e234]: "-2"
+                    - generic [ref=e236]: "2"
+                    - generic [ref=e238]: "4"
+                    - generic [ref=e240]: "0"
+                    - generic [ref=e241]: x
+                    - generic [ref=e242]: "y"
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - button "Save only" [ref=e248] [cursor=pointer]
+              - button "Save & Grade" [ref=e249] [cursor=pointer]
+            - link "New variant" [ref=e251] [cursor=pointer]:
+              - /url: /pl/course/1/question/10/preview/
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - heading "Student view placeholder" [level=2] [ref=e255]
+            - generic [ref=e256]: In student views this area is used for assessment and score info.
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - generic [ref=e260]: Tools
+              - button "<div class=\"d-flex justify-content-between flex-nowrap\"> Tools <span class=\"badge color-green1\">New</span> </div>" [ref=e261] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e262]: 
+            - button "Calculator" [ref=e264] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e265]: 
+              - text: Calculator
+          - generic [ref=e266]:
+            - heading "Staff information" [level=2] [ref=e268]
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - heading "Question" [level=3] [ref=e271]
+                - generic [ref=e272]:
+                  - generic [ref=e273]: "QID:"
+                  - link "star-photo-test" [ref=e275] [cursor=pointer]:
+                    - /url: /pl/course/1/question/10?variant_seed=1b9tr3n
+                - generic [ref=e276]:
+                  - generic [ref=e277]: "Title:"
+                  - generic [ref=e278]: "STAR: hand-drawn switch test"
+              - generic [ref=e279]:
+                - heading "Variant" [level=3] [ref=e280]
+                - generic [ref=e281]:
+                  - generic [ref=e282]: "Started at:"
+                  - generic [ref=e283]: 2026-10-16 15:53:27 (CDT)
+                - generic [ref=e284]:
+                  - generic [ref=e285]: "Duration:"
+                  - generic [ref=e286]: 0s
+                - group [ref=e288]:
+                  - generic "Show/Hide answer" [ref=e289] [cursor=pointer]
+              - button "Report an issue with this question" [ref=e291] [cursor=pointer]
+            - generic [ref=e292]: This box is not visible to students.
+    - text:   
+```
+
+### Error
+Error: real--01-multiple-lines-graph-paper: unexpected native format-validation outcome
+
+Browser 'photo-branch-grading' closed
+
+
+### Browser `photo-branch-grading` opened with pid 35297.
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/pl/course/1/question/10/preview');
+```
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-16T20-54-55-074Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T20-54-52-817Z.log#L1-L121
+
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Snapshot
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation "Skip link and accessibility guide" [ref=e4]:
+      - link "Skip to main content" [ref=e5] [cursor=pointer]:
+        - /url: "#content"
+      - link "Accessibility guide" [ref=e6] [cursor=pointer]:
+        - /url: https://docs.prairielearn.com/student-guide/accessibility/
+    - navigation "Global navigation" [ref=e7]:
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e10]: PrairieLearn
+          - generic [ref=e11]: Go home
+        - text: 
+        - generic [ref=e13]:
+          - list [ref=e14]:
+            - listitem [ref=e15]:
+              - link "Home" [ref=e16] [cursor=pointer]:
+                - /url: /
+            - listitem [aria-hidden] [ref=e17]:
+              - generic: →
+            - listitem [ref=e18]:
+              - link "Global Admin" [ref=e19] [cursor=pointer]:
+                - /url: /pl/administrator/admins
+            - listitem [aria-hidden] [ref=e20]:
+              - generic: →
+            - listitem [ref=e21]:
+              - link "Institutions" [ref=e22] [cursor=pointer]:
+                - /url: /pl/administrator/institutions
+            - listitem [aria-hidden] [ref=e23]:
+              - generic: →
+            - listitem [ref=e24]:
+              - link "Default" [ref=e25] [cursor=pointer]:
+                - /url: /pl/administrator/institution/1
+            - listitem [aria-hidden] [ref=e26]:
+              - generic: →
+            - listitem [ref=e27]:
+              - link "Courses" [ref=e28] [cursor=pointer]:
+                - /url: /pl/administrator/institution/1/courses
+            - listitem [aria-hidden] [ref=e29]:
+              - generic: →
+            - listitem [ref=e30]:
+              - link "cs000" [ref=e31] [cursor=pointer]:
+                - /url: /pl/course/1/course_admin/instances
+          - link "Load from disk" [ref=e32] [cursor=pointer]:
+            - /url: /pl/loadFromDisk
+          - button "Get help" [ref=e33] [cursor=pointer]
+          - list [ref=e34]:
+            - listitem [ref=e35]:
+              - button "Dev User staff" [ref=e36] [cursor=pointer]:
+                - text: Dev User
+                - generic [ref=e37]: staff
+    - text:  
+  - navigation "Course navigation" [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Course
+        - button "Collapse side nav" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: 
+      - generic [ref=e44]:
+        - button "Change course" [ref=e46] [cursor=pointer]:
+          - generic "cs000" [ref=e47]
+        - link "Course instances" [ref=e48] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/instances
+        - link "Questions" [ref=e51] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/questions
+        - link "Issues" [ref=e54] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/issues
+        - link "Staff" [ref=e57] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/staff
+        - link "Sync" [ref=e60] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/syncs
+        - link "Course files" [ref=e63] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/file_view
+        - link "Course settings" [ref=e66] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/settings
+      - generic [ref=e69]: Course instance
+      - button "Change course instance" [ref=e74] [cursor=pointer]:
+        - generic [ref=e75]: Select...
+  - generic [ref=e77]:
+    - navigation [ref=e78]:
+      - list [ref=e79]:
+        - listitem [ref=e80]:
+          - link "Files" [ref=e81] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/file_view
+        - listitem [ref=e83]:
+          - link "Preview" [ref=e84] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/preview
+        - listitem [ref=e86]:
+          - link "Settings" [ref=e87] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/settings
+        - listitem [ref=e89]:
+          - link "Statistics" [ref=e90] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/statistics
+        - listitem [ref=e92]:
+          - link "Issues" [ref=e93] [cursor=pointer]:
+            - /url: /pl/course/1/course_admin/issues?q=is%3Aopen%20qid%3Astar-photo-test
+    - main [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - 'heading "STAR: hand-drawn switch test" [level=1] [ref=e102]'
+            - button "View…" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - 'heading "Step 2 check: the instructor switch and the panel" [level=4] [ref=e108]'
+            - paragraph [ref=e109]:
+              - text: This canvas sets
+              - code [ref=e110]: allow-hand-drawn="true"
+              - text: . A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.
+            - paragraph [ref=e111]:
+              - text: Sketch the graph of
+              - img "f of x equals x squared, math" [ref=e293]
+              - text: .
+            - generic [ref=e134]:
+              - paragraph [ref=e135]:
+                - strong [ref=e136]: Switch on.
+                - text: Camera button expected.
+              - generic [ref=e138]:
+                - list [ref=e139]:
+                  - button [ref=e141] [cursor=pointer]:
+                    - img "Select" [ref=e142]
+                    - generic [ref=e143]: Select
+                  - button [ref=e145] [cursor=pointer]:
+                    - img "Spline tool" [ref=e146]
+                    - generic [ref=e147]: Your graph
+                  - separator
+                  - button [ref=e149] [cursor=pointer]:
+                    - img "Delete" [ref=e150]
+                    - generic [ref=e151]: Delete
+                  - button [ref=e153] [cursor=pointer]:
+                    - img "Undo" [ref=e154]
+                    - generic [ref=e155]: Undo
+                  - button [ref=e157] [cursor=pointer]:
+                    - img "Redo" [ref=e158]
+                    - generic [ref=e159]: Redo
+                  - button [ref=e161] [cursor=pointer]:
+                    - img "Help" [ref=e162]
+                    - generic [ref=e163]: Help
+                - img [ref=e164]:
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: "-4"
+                    - generic [ref=e170]: "-2"
+                    - generic [ref=e172]: "2"
+                    - generic [ref=e174]: "4"
+                    - generic [ref=e176]: "-4"
+                    - generic [ref=e178]: "-2"
+                    - generic [ref=e180]: "2"
+                    - generic [ref=e182]: "4"
+                    - generic [ref=e184]: "0"
+                    - generic [ref=e185]: x
+                    - generic [ref=e186]: "y"
+                - button "Submit a photo of a hand-drawn graph" [ref=e187] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=e188]: 
+            - generic [ref=e190]:
+              - paragraph [ref=e191]:
+                - strong [ref=e192]: Switch off.
+                - text: Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.
+              - generic [ref=e194]:
+                - list [ref=e195]:
+                  - button "Select Select" [ref=e197] [cursor=pointer]:
+                    - img "Select" [ref=e198]
+                    - generic [ref=e199]: Select
+                  - button [ref=e201] [cursor=pointer]:
+                    - img "Spline tool" [ref=e202]
+                    - generic [ref=e203]: Your graph
+                  - separator
+                  - button "Delete Delete" [ref=e205] [cursor=pointer]:
+                    - img "Delete" [ref=e206]
+                    - generic [ref=e207]: Delete
+                  - button "Undo Undo" [ref=e209] [cursor=pointer]:
+                    - img "Undo" [ref=e210]
+                    - generic [ref=e211]: Undo
+                  - button "Redo Redo" [ref=e213] [cursor=pointer]:
+                    - img "Redo" [ref=e214]
+                    - generic [ref=e215]: Redo
+                  - button "Help Help" [ref=e217] [cursor=pointer]:
+                    - img "Help" [ref=e218]
+                    - generic [ref=e219]: Help
+                - img [ref=e220]:
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: "-4"
+                    - generic [ref=e226]: "-2"
+                    - generic [ref=e228]: "2"
+                    - generic [ref=e230]: "4"
+                    - generic [ref=e232]: "-4"
+                    - generic [ref=e234]: "-2"
+                    - generic [ref=e236]: "2"
+                    - generic [ref=e238]: "4"
+                    - generic [ref=e240]: "0"
+                    - generic [ref=e241]: x
+                    - generic [ref=e242]: "y"
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - button "Save only" [ref=e248] [cursor=pointer]
+              - button "Save & Grade" [ref=e249] [cursor=pointer]
+            - link "New variant" [ref=e251] [cursor=pointer]:
+              - /url: /pl/course/1/question/10/preview/
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - heading "Student view placeholder" [level=2] [ref=e255]
+            - generic [ref=e256]: In student views this area is used for assessment and score info.
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - generic [ref=e260]: Tools
+              - button "<div class=\"d-flex justify-content-between flex-nowrap\"> Tools <span class=\"badge color-green1\">New</span> </div>" [ref=e261] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e262]: 
+            - button "Calculator" [ref=e264] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e265]: 
+              - text: Calculator
+          - generic [ref=e266]:
+            - heading "Staff information" [level=2] [ref=e268]
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - heading "Question" [level=3] [ref=e271]
+                - generic [ref=e272]:
+                  - generic [ref=e273]: "QID:"
+                  - link "star-photo-test" [ref=e275] [cursor=pointer]:
+                    - /url: /pl/course/1/question/10?variant_seed=nitna4
+                - generic [ref=e276]:
+                  - generic [ref=e277]: "Title:"
+                  - generic [ref=e278]: "STAR: hand-drawn switch test"
+              - generic [ref=e279]:
+                - heading "Variant" [level=3] [ref=e280]
+                - generic [ref=e281]:
+                  - generic [ref=e282]: "Started at:"
+                  - generic [ref=e283]: 2026-10-16 15:54:53 (CDT)
+                - generic [ref=e284]:
+                  - generic [ref=e285]: "Duration:"
+                  - generic [ref=e286]: 0s
+                - group [ref=e288]:
+                  - generic "Show/Hide answer" [ref=e289] [cursor=pointer]
+              - button "Report an issue with this question" [ref=e291] [cursor=pointer]
+            - generic [ref=e292]: This box is not visible to students.
+    - text:   
+```
+
+### Result
+[{"id":"controlled--06-reciprocal--clean","mode":"submission replay of the saved full-photo-flow state","submitted_branch_count":2,"overlap_error":false,"expected_overlap_error":false,"submitted":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[{"sp":{"2":[[]],"_t":"a"}}],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":59.14,"y":244.35},{"x":78.25,"y":245.55},{"x":97.36,"y":246.89},{"x":116.47,"y":248.39},{"x":135.58,"y":250.11},{"x":154.69,"y":252.09},{"x":173.8,"y":254.41},{"x":192.91,"y":257.16},{"x":212.02,"y":260.48},{"x":231.13,"y":264.56},{"x":250.24,"y":269.63},{"x":269.35,"y":276.21},{"x":288.46,"y":285.07},{"x":307.57,"y":297.54},{"x":326.68,"y":316.55},{"x":345.79,"y":348.84},{"x":364.9,"y":416.22}],[{"x":434.32,"y":32.06},{"x":453.51,"y":99.4},{"x":472.62,"y":131.86},{"x":491.81,"y":150.95},{"x":510.99,"y":163.55},{"x":530.1,"y":172.5},{"x":549.29,"y":179.16},{"x":568.4,"y":184.32},{"x":587.59,"y":188.41},{"x":606.78,"y":191.76},{"x":625.89,"y":194.56},{"x":645.08,"y":196.92},{"x":664.26,"y":198.94},{"x":683.37,"y":200.66},{"x":702.56,"y":202.21},{"x":721.67,"y":203.54},{"x":740.86,"y":204.75}],[]]},"gradeable":{"sp":[{"spline":[[59.14,244.35],[65.51,244.75],[71.88,245.13],[78.25,245.55],[84.62,245.97],[90.99,246.42],[97.36,246.89],[103.73,247.36],[110.1,247.85],[116.47,248.39],[122.84,248.93],[129.21,249.49],[135.58,250.11],[141.95,250.73],[148.33,251.37],[154.69,252.09],[161.07,252.81],[167.44,253.57],[173.8,254.41],[180.18,255.26],[186.55,256.15],[192.91,257.16],[199.3,258.17],[205.67,259.25],[212.02,260.48],[218.41,261.72],[224.8,263.04],[231.13,264.56],[237.54,266.09],[243.94,267.71],[250.24,269.63],[256.68,271.59],[263.1,273.69],[269.35,276.21],[275.86,278.84],[282.33,281.65],[288.46,285.07],[295.1,288.78],[301.7,292.7],[307.57,297.54],[314.51,303.25],[321.31,309.34],[326.68,316.55],[334.15,326.58],[341.31,337.16],[345.79,348.84],[354.15,370.64],[358.53,393.76],[364.9,416.22]]},{"spline":[[434.32,32.06],[440.72,54.51],[445.15,77.61],[453.51,99.4],[458.01,111.12],[465.13,121.78],[472.62,131.86],[478,139.1],[484.85,145.2],[491.81,150.95],[497.71,155.82],[504.32,159.8],[510.99,163.55],[517.12,167],[523.59,169.85],[530.1,172.5],[536.37,175.06],[542.82,177.16],[549.29,179.16],[555.59,181.11],[561.99,182.77],[568.4,184.32],[574.76,185.86],[581.17,187.17],[587.59,188.41],[593.96,189.65],[600.37,190.73],[606.78,191.76],[613.14,192.78],[619.51,193.7],[625.89,194.56],[632.28,195.42],[638.68,196.19],[645.08,196.92],[651.47,197.65],[657.86,198.32],[664.26,198.94],[670.63,199.56],[677,200.12],[683.37,200.66],[689.76,201.21],[696.16,201.73],[702.56,202.21],[708.93,202.69],[715.3,203.12],[721.67,203.54],[728.07,203.96],[734.46,204.35],[740.86,204.75]]}]}},"body_text":"Skip to main content Accessibility guide\nPrairieLearn\nGo home \nHome\n→\nGlobal Admin\n→\nInstitutions\n→\nDefault\n→\nCourses\n→\ncs000\nLoad from disk\nGet help\nDev User staff \n\nCOURSE\n\ncs000\nCourse instances\nQuestions\nIssues\nStaff\nSync\nCourse files\nCourse settings\nCOURSE INSTANCE\nSelect...\nFiles\nPreview\nSettings\nStatistics\nIssues\nSTAR: hand-drawn switch test\nView… \nStep 2 check: the instructor switch and the panel\n\nThis canvas sets allow-hand-drawn=\"true\". A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.\n\nSketch the graph of \n.\n\nSwitch on. Camera button expected.\n\n 0%\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Drawing does not match expected function.\n\nSwitch off. Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.\n\n 100%\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Correct!\nSave only\nSave & Grade\nNew variant\nCorrect answer\nNo answer to display.\nNo answer to display.\nSubmitted answer\ndev@example.com submitted at 2026-10-16 15:55:01 (CDT)\n50%\n \n 0%\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Drawing does not match expected function.\n 100%\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Correct!\nStudent view placeholder\nIn student views this area is used for assessment and score info.\nTools\n Calculator\nStaff information\nQuestion\nQID:\nstar-photo-test\nTitle:\nSTAR: hand-drawn switch test\nVariant\nStarted at:\n2026-10-16 15:54:58 (CDT)\nDuration:\n0s\nShow/Hide answer\nReport an issue with this question\nThis box is not visible to students.","screenshot":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence/grading--controlled--06-reciprocal--clean.png","grade_dom":[{"class":"alert alert-danger","text":"Feedback:\n        \n            \n              \n                \n                \n              \n              Drawing does not match expected function."},{"class":"alert alert-success","text":"Feedback:\n        \n            \n              \n                \n                \n              \n              Correct!"},{"class":"btn btn-primary question-grade disable-on-submit order-1 me-1","text":"Save & Grade"},{"class":"alert alert-danger","text":"Feedback:\n        \n            \n              \n                \n                \n              \n              Drawing does not match expected function."},{"class":"alert alert-success","text":"Feedback:\n        \n            \n              \n                \n                \n              \n              Correct!"}]},{"id":"real--01-multiple-lines-graph-paper","mode":"submission replay of the saved full-photo-flow state","submitted_branch_count":2,"overlap_error":false,"expected_overlap_error":true,"submitted":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[{"sp":{"2":[[]],"_t":"a"}}],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":265.06,"y":275.87},{"x":293.84,"y":265.12},{"x":322.7,"y":254.28},{"x":351.48,"y":243.32},{"x":380.34,"y":232.18},{"x":409.13,"y":220.96},{"x":437.91,"y":209.61},{"x":466.77,"y":198.17},{"x":495.55,"y":186.56},{"x":524.33,"y":174.82},{"x":553.19,"y":162.99},{"x":581.97,"y":151},{"x":610.83,"y":138.91},{"x":639.62,"y":126.7},{"x":668.4,"y":114.36},{"x":697.26,"y":101.89},{"x":726.04,"y":89.29}],[{"x":288.46,"y":369.39},{"x":313.58,"y":363.07},{"x":338.69,"y":355.16},{"x":363.81,"y":346.56},{"x":388.92,"y":337.83},{"x":413.96,"y":329.36},{"x":439.08,"y":321.19},{"x":464.19,"y":313.41},{"x":489.31,"y":305.75},{"x":514.43,"y":298.1},{"x":539.54,"y":290.15},{"x":564.66,"y":281.76},{"x":589.77,"y":272.82},{"x":614.81,"y":263.31},{"x":639.93,"y":253.38},{"x":665.04,"y":243.53},{"x":690.16,"y":234.33}],[]]},"gradeable":{"sp":[{"spline":[[265.06,275.87],[274.65,272.29],[284.25,268.71],[293.84,265.12],[303.46,261.52],[313.09,257.92],[322.7,254.28],[332.3,250.65],[341.89,247],[351.48,243.32],[361.11,239.63],[370.73,235.91],[380.34,232.18],[389.94,228.46],[399.54,224.72],[409.13,220.96],[418.73,217.2],[428.32,213.4],[437.91,209.61],[447.53,205.81],[457.16,202.01],[466.77,198.17],[476.37,194.33],[485.96,190.45],[495.55,186.56],[505.15,182.67],[514.74,178.74],[524.33,174.82],[533.95,170.88],[543.58,166.96],[553.19,162.99],[562.79,159.02],[572.38,155.01],[581.97,151],[591.59,146.98],[601.22,142.96],[610.83,138.91],[620.44,134.86],[630.03,130.79],[639.62,126.7],[649.22,122.61],[658.81,118.49],[668.4,114.36],[678.03,110.22],[687.65,106.07],[697.26,101.89],[706.86,97.71],[716.45,93.49],[726.04,89.29]]},{"spline":[[288.46,369.39],[296.83,367.28],[305.27,365.42],[313.58,363.07],[322.02,360.68],[330.35,357.9],[338.69,355.16],[347.1,352.4],[355.44,349.45],[363.81,346.56],[372.19,343.67],[380.54,340.7],[388.92,337.83],[397.25,334.97],[405.6,332.13],[413.96,329.36],[422.32,326.59],[430.69,323.85],[439.08,321.19],[447.43,318.54],[455.81,315.98],[464.19,313.41],[472.56,310.84],[480.94,308.3],[489.31,305.75],[497.68,303.2],[506.07,300.7],[514.43,298.1],[522.81,295.5],[531.19,292.87],[539.54,290.15],[547.94,287.42],[556.31,284.64],[564.66,281.76],[573.06,278.86],[581.43,275.89],[589.77,272.82],[598.15,269.74],[606.48,266.54],[614.81,263.31],[623.21,260.06],[631.55,256.68],[639.93,253.38],[648.3,250.09],[656.63,246.72],[665.04,243.53],[673.38,240.37],[681.79,237.4],[690.16,234.33]]}]}},"body_text":"Skip to main content Accessibility guide\nPrairieLearn\nGo home \nHome\n→\nGlobal Admin\n→\nInstitutions\n→\nDefault\n→\nCourses\n→\ncs000\nLoad from disk\nGet help\nDev User staff \n\nCOURSE\n\ncs000\nCourse instances\nQuestions\nIssues\nStaff\nSync\nCourse files\nCourse settings\nCOURSE INSTANCE\nSelect...\nFiles\nPreview\nSettings\nStatistics\nIssues\nSTAR: hand-drawn switch test\nView… \nStep 2 check: the instructor switch and the panel\n\nThis canvas sets allow-hand-drawn=\"true\". A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.\n\nSketch the graph of \n.\n\nSwitch on. Camera button expected.\n\nInvalid\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\n\nSwitch off. Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.\n\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nSave only\nSave & Grade\nNew variant\nCorrect answer\nNo answer to display.\nNo answer to display.\nSubmitted answer\ndev@example.com submitted at 2026-10-16 15:55:07 (CDT)\ninvalid, not gradable\n \nInvalid\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nStudent view placeholder\nIn student views this area is used for assessment and score info.\nTools\n Calculator\nStaff information\nQuestion\nQID:\nstar-photo-test\nTitle:\nSTAR: hand-drawn switch test\nVariant\nStarted at:\n2026-10-16 15:55:04 (CDT)\nDuration:\n0s\nShow/Hide answer\nReport an issue with this question\nThis box is not visible to students.","screenshot":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence/grading--real--01-multiple-lines-graph-paper.png","grade_dom":[{"class":"btn btn-primary question-grade disable-on-submit order-1 me-1","text":"Save & Grade"}]}]
+### Ran Playwright code
+```js
+await (// Substitute [{"id":"controlled--06-reciprocal--clean","expectOverlapError":false,"output":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence","state":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":59.14,"y":244.35},{"x":78.25,"y":245.55},{"x":97.36,"y":246.89},{"x":116.47,"y":248.39},{"x":135.58,"y":250.11},{"x":154.69,"y":252.09},{"x":173.8,"y":254.41},{"x":192.91,"y":257.16},{"x":212.02,"y":260.48},{"x":231.13,"y":264.56},{"x":250.24,"y":269.63},{"x":269.35,"y":276.21},{"x":288.46,"y":285.07},{"x":307.57,"y":297.54},{"x":326.68,"y":316.55},{"x":345.79,"y":348.84},{"x":364.9,"y":416.22}],[{"x":434.32,"y":32.06},{"x":453.51,"y":99.4},{"x":472.62,"y":131.86},{"x":491.81,"y":150.95},{"x":510.99,"y":163.55},{"x":530.1,"y":172.5},{"x":549.29,"y":179.16},{"x":568.4,"y":184.32},{"x":587.59,"y":188.41},{"x":606.78,"y":191.76},{"x":625.89,"y":194.56},{"x":645.08,"y":196.92},{"x":664.26,"y":198.94},{"x":683.37,"y":200.66},{"x":702.56,"y":202.21},{"x":721.67,"y":203.54},{"x":740.86,"y":204.75}]]}}},{"id":"real--01-multiple-lines-graph-paper","expectOverlapError":true,"output":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence","state":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":265.06,"y":275.87},{"x":293.84,"y":265.12},{"x":322.7,"y":254.28},{"x":351.48,"y":243.32},{"x":380.34,"y":232.18},{"x":409.13,"y":220.96},{"x":437.91,"y":209.61},{"x":466.77,"y":198.17},{"x":495.55,"y":186.56},{"x":524.33,"y":174.82},{"x":553.19,"y":162.99},{"x":581.97,"y":151},{"x":610.83,"y":138.91},{"x":639.62,"y":126.7},{"x":668.4,"y":114.36},{"x":697.26,"y":101.89},{"x":726.04,"y":89.29}],[{"x":288.46,"y":369.39},{"x":313.58,"y":363.07},{"x":338.69,"y":355.16},{"x":363.81,"y":346.56},{"x":388.92,"y":337.83},{"x":413.96,"y":329.36},{"x":439.08,"y":321.19},{"x":464.19,"y":313.41},{"x":489.31,"y":305.75},{"x":514.43,"y":298.1},{"x":539.54,"y":290.15},{"x":564.66,"y":281.76},{"x":589.77,"y":272.82},{"x":614.81,"y":263.31},{"x":639.93,"y":253.38},{"x":665.04,"y":243.53},{"x":690.16,"y":234.33}]]}}}] with saved full-photo-flow native canvas states.
+async (page) => {
+  const cases = [{"id":"controlled--06-reciprocal--clean","expectOverlapError":false,"output":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence","state":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":59.14,"y":244.35},{"x":78.25,"y":245.55},{"x":97.36,"y":246.89},{"x":116.47,"y":248.39},{"x":135.58,"y":250.11},{"x":154.69,"y":252.09},{"x":173.8,"y":254.41},{"x":192.91,"y":257.16},{"x":212.02,"y":260.48},{"x":231.13,"y":264.56},{"x":250.24,"y":269.63},{"x":269.35,"y":276.21},{"x":288.46,"y":285.07},{"x":307.57,"y":297.54},{"x":326.68,"y":316.55},{"x":345.79,"y":348.84},{"x":364.9,"y":416.22}],[{"x":434.32,"y":32.06},{"x":453.51,"y":99.4},{"x":472.62,"y":131.86},{"x":491.81,"y":150.95},{"x":510.99,"y":163.55},{"x":530.1,"y":172.5},{"x":549.29,"y":179.16},{"x":568.4,"y":184.32},{"x":587.59,"y":188.41},{"x":606.78,"y":191.76},{"x":625.89,"y":194.56},{"x":645.08,"y":196.92},{"x":664.26,"y":198.94},{"x":683.37,"y":200.66},{"x":702.56,"y":202.21},{"x":721.67,"y":203.54},{"x":740.86,"y":204.75}]]}}},{"id":"real--01-multiple-lines-graph-paper","expectOverlapError":true,"output":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence","state":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":265.06,"y":275.87},{"x":293.84,"y":265.12},{"x":322.7,"y":254.28},{"x":351.48,"y":243.32},{"x":380.34,"y":232.18},{"x":409.13,"y":220.96},{"x":437.91,"y":209.61},{"x":466.77,"y":198.17},{"x":495.55,"y":186.56},{"x":524.33,"y":174.82},{"x":553.19,"y":162.99},{"x":581.97,"y":151},{"x":610.83,"y":138.91},{"x":639.62,"y":126.7},{"x":668.4,"y":114.36},{"x":697.26,"y":101.89},{"x":726.04,"y":89.29}],[{"x":288.46,"y":369.39},{"x":313.58,"y":363.07},{"x":338.69,"y":355.16},{"x":363.81,"y":346.56},{"x":388.92,"y":337.83},{"x":413.96,"y":329.36},{"x":439.08,"y":321.19},{"x":464.19,"y":313.41},{"x":489.31,"y":305.75},{"x":514.43,"y":298.1},{"x":539.54,"y":290.15},{"x":564.66,"y":281.76},{"x":589.77,"y":272.82},{"x":614.81,"y":263.31},{"x":639.93,"y":253.38},{"x":665.04,"y":243.53},{"x":690.16,"y":234.33}]]}}}];
+  const results = [];
+  for (const c of cases) {
+    await page.setViewportSize({width: 1600, height: 1200});
+    await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil: 'networkidle'});
+    await page.waitForFunction(() => window.SketchInput?.instances?.['hand-drawn-off']);
+    await page.evaluate(state => {
+      window.SketchInput.instances['hand-drawn-on'].setState(JSON.stringify(state));
+      const config = JSON.parse(atob(document.getElementById('hand-drawn-off-sketchresponse-data').textContent));
+      window.StarFit.placeCurve(window.SketchInput.instances['hand-drawn-off'], config, 'sp2',
+        window.StarFit.sampleCurve({lo: -2.2, hi: 2.2, f: x => x*x}, 16));
+    }, c.state);
+    let submitted = null;
+    const onRequest = request => {
+      if (request.method() !== 'POST') return;
+      const fields = new URLSearchParams(request.postData() || '');
+      const value = fields.get('hand-drawn-on-sketchresponse-submission');
+      if (value) submitted = JSON.parse(Buffer.from(value, 'base64').toString('utf8'));
+    };
+    page.on('request', onRequest);
+    try {
+      await page.getByRole('button', {name:'Save & Grade', exact:true}).click();
+      await page.waitForLoadState('networkidle');
+      await page.waitForFunction(() => document.body.innerText.includes('Submitted answer'));
+    } finally {
+      page.off('request', onRequest);
+    }
+    const body = await page.locator('body').innerText();
+    const fullText = await page.locator('body').textContent();
+    const overlapError = fullText.includes('are defined in the same range');
+    const screenshot = c.output + '/grading--' + c.id + '.png';
+    await page.screenshot({path: screenshot, fullPage:true});
+    results.push({id:c.id, mode:'submission replay of the saved full-photo-flow state',
+      submitted_branch_count:submitted && submitted.gradeable.sp.length, overlap_error:overlapError,
+      expected_overlap_error:c.expectOverlapError, submitted, body_text:body, screenshot,
+      grade_dom:await page.locator('[class*=score], [class*=grade], .alert').evaluateAll(els =>
+        els.map(el=>({class:el.className,text:el.textContent.trim()})).filter(x=>x.text))});
+  }
+  return results;
+}
+)(page);
+```
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview/?variant_id=126
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T20-54-52-817Z.log#L122-L669
+
+Browser 'photo-branch-grading' closed
+
+
+### Browser `photo-branch-grading` opened with pid 36101.
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/pl/course/1/question/10/preview');
+```
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-16T20-56-34-522Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T20-56-32-484Z.log#L1-L121
+
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Snapshot
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation "Skip link and accessibility guide" [ref=e4]:
+      - link "Skip to main content" [ref=e5] [cursor=pointer]:
+        - /url: "#content"
+      - link "Accessibility guide" [ref=e6] [cursor=pointer]:
+        - /url: https://docs.prairielearn.com/student-guide/accessibility/
+    - navigation "Global navigation" [ref=e7]:
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e10]: PrairieLearn
+          - generic [ref=e11]: Go home
+        - text: 
+        - generic [ref=e13]:
+          - list [ref=e14]:
+            - listitem [ref=e15]:
+              - link "Home" [ref=e16] [cursor=pointer]:
+                - /url: /
+            - listitem [aria-hidden] [ref=e17]:
+              - generic: →
+            - listitem [ref=e18]:
+              - link "Global Admin" [ref=e19] [cursor=pointer]:
+                - /url: /pl/administrator/admins
+            - listitem [aria-hidden] [ref=e20]:
+              - generic: →
+            - listitem [ref=e21]:
+              - link "Institutions" [ref=e22] [cursor=pointer]:
+                - /url: /pl/administrator/institutions
+            - listitem [aria-hidden] [ref=e23]:
+              - generic: →
+            - listitem [ref=e24]:
+              - link "Default" [ref=e25] [cursor=pointer]:
+                - /url: /pl/administrator/institution/1
+            - listitem [aria-hidden] [ref=e26]:
+              - generic: →
+            - listitem [ref=e27]:
+              - link "Courses" [ref=e28] [cursor=pointer]:
+                - /url: /pl/administrator/institution/1/courses
+            - listitem [aria-hidden] [ref=e29]:
+              - generic: →
+            - listitem [ref=e30]:
+              - link "cs000" [ref=e31] [cursor=pointer]:
+                - /url: /pl/course/1/course_admin/instances
+          - link "Load from disk" [ref=e32] [cursor=pointer]:
+            - /url: /pl/loadFromDisk
+          - button "Get help" [ref=e33] [cursor=pointer]
+          - list [ref=e34]:
+            - listitem [ref=e35]:
+              - button "Dev User staff" [ref=e36] [cursor=pointer]:
+                - text: Dev User
+                - generic [ref=e37]: staff
+    - text:  
+  - navigation "Course navigation" [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Course
+        - button "Collapse side nav" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: 
+      - generic [ref=e44]:
+        - button "Change course" [ref=e46] [cursor=pointer]:
+          - generic "cs000" [ref=e47]
+        - link "Course instances" [ref=e48] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/instances
+        - link "Questions" [ref=e51] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/questions
+        - link "Issues" [ref=e54] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/issues
+        - link "Staff" [ref=e57] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/staff
+        - link "Sync" [ref=e60] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/syncs
+        - link "Course files" [ref=e63] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/file_view
+        - link "Course settings" [ref=e66] [cursor=pointer]:
+          - /url: /pl/course/1/course_admin/settings
+      - generic [ref=e69]: Course instance
+      - button "Change course instance" [ref=e74] [cursor=pointer]:
+        - generic [ref=e75]: Select...
+  - generic [ref=e77]:
+    - navigation [ref=e78]:
+      - list [ref=e79]:
+        - listitem [ref=e80]:
+          - link "Files" [ref=e81] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/file_view
+        - listitem [ref=e83]:
+          - link "Preview" [ref=e84] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/preview
+        - listitem [ref=e86]:
+          - link "Settings" [ref=e87] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/settings
+        - listitem [ref=e89]:
+          - link "Statistics" [ref=e90] [cursor=pointer]:
+            - /url: /pl/course/1/question/10/statistics
+        - listitem [ref=e92]:
+          - link "Issues" [ref=e93] [cursor=pointer]:
+            - /url: /pl/course/1/course_admin/issues?q=is%3Aopen%20qid%3Astar-photo-test
+    - main [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - 'heading "STAR: hand-drawn switch test" [level=1] [ref=e102]'
+            - button "View…" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - 'heading "Step 2 check: the instructor switch and the panel" [level=4] [ref=e108]'
+            - paragraph [ref=e109]:
+              - text: This canvas sets
+              - code [ref=e110]: allow-hand-drawn="true"
+              - text: . A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.
+            - paragraph [ref=e111]:
+              - text: Sketch the graph of
+              - img "f of x equals x squared, math" [ref=e293]
+              - text: .
+            - generic [ref=e134]:
+              - paragraph [ref=e135]:
+                - strong [ref=e136]: Switch on.
+                - text: Camera button expected.
+              - generic [ref=e138]:
+                - list [ref=e139]:
+                  - button [ref=e141] [cursor=pointer]:
+                    - img "Select" [ref=e142]
+                    - generic [ref=e143]: Select
+                  - button [ref=e145] [cursor=pointer]:
+                    - img "Spline tool" [ref=e146]
+                    - generic [ref=e147]: Your graph
+                  - separator
+                  - button [ref=e149] [cursor=pointer]:
+                    - img "Delete" [ref=e150]
+                    - generic [ref=e151]: Delete
+                  - button [ref=e153] [cursor=pointer]:
+                    - img "Undo" [ref=e154]
+                    - generic [ref=e155]: Undo
+                  - button [ref=e157] [cursor=pointer]:
+                    - img "Redo" [ref=e158]
+                    - generic [ref=e159]: Redo
+                  - button [ref=e161] [cursor=pointer]:
+                    - img "Help" [ref=e162]
+                    - generic [ref=e163]: Help
+                - img [ref=e164]:
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: "-4"
+                    - generic [ref=e170]: "-2"
+                    - generic [ref=e172]: "2"
+                    - generic [ref=e174]: "4"
+                    - generic [ref=e176]: "-4"
+                    - generic [ref=e178]: "-2"
+                    - generic [ref=e180]: "2"
+                    - generic [ref=e182]: "4"
+                    - generic [ref=e184]: "0"
+                    - generic [ref=e185]: x
+                    - generic [ref=e186]: "y"
+                - button "Submit a photo of a hand-drawn graph" [ref=e187] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=e188]: 
+            - generic [ref=e190]:
+              - paragraph [ref=e191]:
+                - strong [ref=e192]: Switch off.
+                - text: Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.
+              - generic [ref=e194]:
+                - list [ref=e195]:
+                  - button "Select Select" [ref=e197] [cursor=pointer]:
+                    - img "Select" [ref=e198]
+                    - generic [ref=e199]: Select
+                  - button [ref=e201] [cursor=pointer]:
+                    - img "Spline tool" [ref=e202]
+                    - generic [ref=e203]: Your graph
+                  - separator
+                  - button "Delete Delete" [ref=e205] [cursor=pointer]:
+                    - img "Delete" [ref=e206]
+                    - generic [ref=e207]: Delete
+                  - button "Undo Undo" [ref=e209] [cursor=pointer]:
+                    - img "Undo" [ref=e210]
+                    - generic [ref=e211]: Undo
+                  - button "Redo Redo" [ref=e213] [cursor=pointer]:
+                    - img "Redo" [ref=e214]
+                    - generic [ref=e215]: Redo
+                  - button "Help Help" [ref=e217] [cursor=pointer]:
+                    - img "Help" [ref=e218]
+                    - generic [ref=e219]: Help
+                - img [ref=e220]:
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: "-4"
+                    - generic [ref=e226]: "-2"
+                    - generic [ref=e228]: "2"
+                    - generic [ref=e230]: "4"
+                    - generic [ref=e232]: "-4"
+                    - generic [ref=e234]: "-2"
+                    - generic [ref=e236]: "2"
+                    - generic [ref=e238]: "4"
+                    - generic [ref=e240]: "0"
+                    - generic [ref=e241]: x
+                    - generic [ref=e242]: "y"
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - button "Save only" [ref=e248] [cursor=pointer]
+              - button "Save & Grade" [ref=e249] [cursor=pointer]
+            - link "New variant" [ref=e251] [cursor=pointer]:
+              - /url: /pl/course/1/question/10/preview/
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - heading "Student view placeholder" [level=2] [ref=e255]
+            - generic [ref=e256]: In student views this area is used for assessment and score info.
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - generic [ref=e260]: Tools
+              - button "<div class=\"d-flex justify-content-between flex-nowrap\"> Tools <span class=\"badge color-green1\">New</span> </div>" [ref=e261] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e262]: 
+            - button "Calculator" [ref=e264] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e265]: 
+              - text: Calculator
+          - generic [ref=e266]:
+            - heading "Staff information" [level=2] [ref=e268]
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - heading "Question" [level=3] [ref=e271]
+                - generic [ref=e272]:
+                  - generic [ref=e273]: "QID:"
+                  - link "star-photo-test" [ref=e275] [cursor=pointer]:
+                    - /url: /pl/course/1/question/10?variant_seed=qm6eil
+                - generic [ref=e276]:
+                  - generic [ref=e277]: "Title:"
+                  - generic [ref=e278]: "STAR: hand-drawn switch test"
+              - generic [ref=e279]:
+                - heading "Variant" [level=3] [ref=e280]
+                - generic [ref=e281]:
+                  - generic [ref=e282]: "Started at:"
+                  - generic [ref=e283]: 2026-10-16 15:56:32 (CDT)
+                - generic [ref=e284]:
+                  - generic [ref=e285]: "Duration:"
+                  - generic [ref=e286]: 0s
+                - group [ref=e288]:
+                  - generic "Show/Hide answer" [ref=e289] [cursor=pointer]
+              - button "Report an issue with this question" [ref=e291] [cursor=pointer]
+            - generic [ref=e292]: This box is not visible to students.
+    - text:   
+```
+
+### Result
+[{"id":"controlled--06-reciprocal--clean","mode":"submission replay of the saved full-photo-flow state","submitted_branch_count":2,"overlap_error":false,"invalid_submission":false,"validation_details":[],"expected_overlap_error":false,"submitted":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[{"sp":{"2":[[]],"_t":"a"}}],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":59.14,"y":244.35},{"x":78.25,"y":245.55},{"x":97.36,"y":246.89},{"x":116.47,"y":248.39},{"x":135.58,"y":250.11},{"x":154.69,"y":252.09},{"x":173.8,"y":254.41},{"x":192.91,"y":257.16},{"x":212.02,"y":260.48},{"x":231.13,"y":264.56},{"x":250.24,"y":269.63},{"x":269.35,"y":276.21},{"x":288.46,"y":285.07},{"x":307.57,"y":297.54},{"x":326.68,"y":316.55},{"x":345.79,"y":348.84},{"x":364.9,"y":416.22}],[{"x":434.32,"y":32.06},{"x":453.51,"y":99.4},{"x":472.62,"y":131.86},{"x":491.81,"y":150.95},{"x":510.99,"y":163.55},{"x":530.1,"y":172.5},{"x":549.29,"y":179.16},{"x":568.4,"y":184.32},{"x":587.59,"y":188.41},{"x":606.78,"y":191.76},{"x":625.89,"y":194.56},{"x":645.08,"y":196.92},{"x":664.26,"y":198.94},{"x":683.37,"y":200.66},{"x":702.56,"y":202.21},{"x":721.67,"y":203.54},{"x":740.86,"y":204.75}],[]]},"gradeable":{"sp":[{"spline":[[59.14,244.35],[65.51,244.75],[71.88,245.13],[78.25,245.55],[84.62,245.97],[90.99,246.42],[97.36,246.89],[103.73,247.36],[110.1,247.85],[116.47,248.39],[122.84,248.93],[129.21,249.49],[135.58,250.11],[141.95,250.73],[148.33,251.37],[154.69,252.09],[161.07,252.81],[167.44,253.57],[173.8,254.41],[180.18,255.26],[186.55,256.15],[192.91,257.16],[199.3,258.17],[205.67,259.25],[212.02,260.48],[218.41,261.72],[224.8,263.04],[231.13,264.56],[237.54,266.09],[243.94,267.71],[250.24,269.63],[256.68,271.59],[263.1,273.69],[269.35,276.21],[275.86,278.84],[282.33,281.65],[288.46,285.07],[295.1,288.78],[301.7,292.7],[307.57,297.54],[314.51,303.25],[321.31,309.34],[326.68,316.55],[334.15,326.58],[341.31,337.16],[345.79,348.84],[354.15,370.64],[358.53,393.76],[364.9,416.22]]},{"spline":[[434.32,32.06],[440.72,54.51],[445.15,77.61],[453.51,99.4],[458.01,111.12],[465.13,121.78],[472.62,131.86],[478,139.1],[484.85,145.2],[491.81,150.95],[497.71,155.82],[504.32,159.8],[510.99,163.55],[517.12,167],[523.59,169.85],[530.1,172.5],[536.37,175.06],[542.82,177.16],[549.29,179.16],[555.59,181.11],[561.99,182.77],[568.4,184.32],[574.76,185.86],[581.17,187.17],[587.59,188.41],[593.96,189.65],[600.37,190.73],[606.78,191.76],[613.14,192.78],[619.51,193.7],[625.89,194.56],[632.28,195.42],[638.68,196.19],[645.08,196.92],[651.47,197.65],[657.86,198.32],[664.26,198.94],[670.63,199.56],[677,200.12],[683.37,200.66],[689.76,201.21],[696.16,201.73],[702.56,202.21],[708.93,202.69],[715.3,203.12],[721.67,203.54],[728.07,203.96],[734.46,204.35],[740.86,204.75]]}]}},"body_text":"Skip to main content Accessibility guide\nPrairieLearn\nGo home \nHome\n→\nGlobal Admin\n→\nInstitutions\n→\nDefault\n→\nCourses\n→\ncs000\nLoad from disk\nGet help\nDev User staff \n\nCOURSE\n\ncs000\nCourse instances\nQuestions\nIssues\nStaff\nSync\nCourse files\nCourse settings\nCOURSE INSTANCE\nSelect...\nFiles\nPreview\nSettings\nStatistics\nIssues\nSTAR: hand-drawn switch test\nView… \nStep 2 check: the instructor switch and the panel\n\nThis canvas sets allow-hand-drawn=\"true\". A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.\n\nSketch the graph of \n.\n\nSwitch on. Camera button expected.\n\n 0%\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Drawing does not match expected function.\n\nSwitch off. Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.\n\n 100%\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Correct!\nSave only\nSave & Grade\nNew variant\nCorrect answer\nNo answer to display.\nNo answer to display.\nSubmitted answer\ndev@example.com submitted at 2026-10-16 15:56:37 (CDT)\n50%\n \n 0%\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Drawing does not match expected function.\n 100%\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nFeedback:\n Correct!\nStudent view placeholder\nIn student views this area is used for assessment and score info.\nTools\n Calculator\nStaff information\nQuestion\nQID:\nstar-photo-test\nTitle:\nSTAR: hand-drawn switch test\nVariant\nStarted at:\n2026-10-16 15:56:35 (CDT)\nDuration:\n0s\nShow/Hide answer\nReport an issue with this question\nThis box is not visible to students.","screenshot":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence/grading--controlled--06-reciprocal--clean.png","grade_dom":[{"class":"alert alert-danger","text":"Feedback:\n        \n            \n              \n                \n                \n              \n              Drawing does not match expected function."},{"class":"alert alert-success","text":"Feedback:\n        \n            \n              \n                \n                \n              \n              Correct!"},{"class":"btn btn-primary question-grade disable-on-submit order-1 me-1","text":"Save & Grade"},{"class":"alert alert-danger","text":"Feedback:\n        \n            \n              \n                \n                \n              \n              Drawing does not match expected function."},{"class":"alert alert-success","text":"Feedback:\n        \n            \n              \n                \n                \n              \n              Correct!"}]},{"id":"real--01-multiple-lines-graph-paper","mode":"submission replay of the saved full-photo-flow state","submitted_branch_count":2,"overlap_error":true,"invalid_submission":true,"validation_details":["Multiple \"Your graph\" lines are defined in the same range. These lines are interpreted as functions, and only one y-value can exist for any x-coordinate.","Multiple \"Your graph\" lines are defined in the same range. These lines are interpreted as functions, and only one y-value can exist for any x-coordinate."],"expected_overlap_error":true,"submitted":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[{"sp":{"2":[[]],"_t":"a"}}],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":265.06,"y":275.87},{"x":293.84,"y":265.12},{"x":322.7,"y":254.28},{"x":351.48,"y":243.32},{"x":380.34,"y":232.18},{"x":409.13,"y":220.96},{"x":437.91,"y":209.61},{"x":466.77,"y":198.17},{"x":495.55,"y":186.56},{"x":524.33,"y":174.82},{"x":553.19,"y":162.99},{"x":581.97,"y":151},{"x":610.83,"y":138.91},{"x":639.62,"y":126.7},{"x":668.4,"y":114.36},{"x":697.26,"y":101.89},{"x":726.04,"y":89.29}],[{"x":288.46,"y":369.39},{"x":313.58,"y":363.07},{"x":338.69,"y":355.16},{"x":363.81,"y":346.56},{"x":388.92,"y":337.83},{"x":413.96,"y":329.36},{"x":439.08,"y":321.19},{"x":464.19,"y":313.41},{"x":489.31,"y":305.75},{"x":514.43,"y":298.1},{"x":539.54,"y":290.15},{"x":564.66,"y":281.76},{"x":589.77,"y":272.82},{"x":614.81,"y":263.31},{"x":639.93,"y":253.38},{"x":665.04,"y":243.53},{"x":690.16,"y":234.33}],[]]},"gradeable":{"sp":[{"spline":[[265.06,275.87],[274.65,272.29],[284.25,268.71],[293.84,265.12],[303.46,261.52],[313.09,257.92],[322.7,254.28],[332.3,250.65],[341.89,247],[351.48,243.32],[361.11,239.63],[370.73,235.91],[380.34,232.18],[389.94,228.46],[399.54,224.72],[409.13,220.96],[418.73,217.2],[428.32,213.4],[437.91,209.61],[447.53,205.81],[457.16,202.01],[466.77,198.17],[476.37,194.33],[485.96,190.45],[495.55,186.56],[505.15,182.67],[514.74,178.74],[524.33,174.82],[533.95,170.88],[543.58,166.96],[553.19,162.99],[562.79,159.02],[572.38,155.01],[581.97,151],[591.59,146.98],[601.22,142.96],[610.83,138.91],[620.44,134.86],[630.03,130.79],[639.62,126.7],[649.22,122.61],[658.81,118.49],[668.4,114.36],[678.03,110.22],[687.65,106.07],[697.26,101.89],[706.86,97.71],[716.45,93.49],[726.04,89.29]]},{"spline":[[288.46,369.39],[296.83,367.28],[305.27,365.42],[313.58,363.07],[322.02,360.68],[330.35,357.9],[338.69,355.16],[347.1,352.4],[355.44,349.45],[363.81,346.56],[372.19,343.67],[380.54,340.7],[388.92,337.83],[397.25,334.97],[405.6,332.13],[413.96,329.36],[422.32,326.59],[430.69,323.85],[439.08,321.19],[447.43,318.54],[455.81,315.98],[464.19,313.41],[472.56,310.84],[480.94,308.3],[489.31,305.75],[497.68,303.2],[506.07,300.7],[514.43,298.1],[522.81,295.5],[531.19,292.87],[539.54,290.15],[547.94,287.42],[556.31,284.64],[564.66,281.76],[573.06,278.86],[581.43,275.89],[589.77,272.82],[598.15,269.74],[606.48,266.54],[614.81,263.31],[623.21,260.06],[631.55,256.68],[639.93,253.38],[648.3,250.09],[656.63,246.72],[665.04,243.53],[673.38,240.37],[681.79,237.4],[690.16,234.33]]}]}},"body_text":"Skip to main content Accessibility guide\nPrairieLearn\nGo home \nHome\n→\nGlobal Admin\n→\nInstitutions\n→\nDefault\n→\nCourses\n→\ncs000\nLoad from disk\nGet help\nDev User staff \n\nCOURSE\n\ncs000\nCourse instances\nQuestions\nIssues\nStaff\nSync\nCourse files\nCourse settings\nCOURSE INSTANCE\nSelect...\nFiles\nPreview\nSettings\nStatistics\nIssues\nSTAR: hand-drawn switch test\nView… \nStep 2 check: the instructor switch and the panel\n\nThis canvas sets allow-hand-drawn=\"true\". A camera button should appear in the bottom-left corner of the canvas, and clicking it should open a panel over the drawing area.\n\nSketch the graph of \n.\n\nSwitch on. Camera button expected.\n\nInvalid\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\n\nSwitch off. Same question with the attribute omitted. No camera button, and the canvas behaves exactly as the stock element does. This is the control.\n\nSelect\nYour graph\nDelete\nUndo\nRedo\nHelp\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nSave only\nSave & Grade\nNew variant\nCorrect answer\nNo answer to display.\nNo answer to display.\nSubmitted answer\ndev@example.com submitted at 2026-10-16 15:56:41 (CDT)\ninvalid, not gradable\n \nInvalid\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\n-4\n-2\n2\n4\n-4\n-2\n2\n4\n0\nx\ny\nStudent view placeholder\nIn student views this area is used for assessment and score info.\nTools\n Calculator\nStaff information\nQuestion\nQID:\nstar-photo-test\nTitle:\nSTAR: hand-drawn switch test\nVariant\nStarted at:\n2026-10-16 15:56:40 (CDT)\nDuration:\n0s\nShow/Hide answer\nReport an issue with this question\nThis box is not visible to students.","screenshot":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence/grading--real--01-multiple-lines-graph-paper.png","grade_dom":[{"class":"btn btn-primary question-grade disable-on-submit order-1 me-1","text":"Save & Grade"}]}]
+### Ran Playwright code
+```js
+await (// Substitute [{"id":"controlled--06-reciprocal--clean","expectOverlapError":false,"output":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence","state":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":59.14,"y":244.35},{"x":78.25,"y":245.55},{"x":97.36,"y":246.89},{"x":116.47,"y":248.39},{"x":135.58,"y":250.11},{"x":154.69,"y":252.09},{"x":173.8,"y":254.41},{"x":192.91,"y":257.16},{"x":212.02,"y":260.48},{"x":231.13,"y":264.56},{"x":250.24,"y":269.63},{"x":269.35,"y":276.21},{"x":288.46,"y":285.07},{"x":307.57,"y":297.54},{"x":326.68,"y":316.55},{"x":345.79,"y":348.84},{"x":364.9,"y":416.22}],[{"x":434.32,"y":32.06},{"x":453.51,"y":99.4},{"x":472.62,"y":131.86},{"x":491.81,"y":150.95},{"x":510.99,"y":163.55},{"x":530.1,"y":172.5},{"x":549.29,"y":179.16},{"x":568.4,"y":184.32},{"x":587.59,"y":188.41},{"x":606.78,"y":191.76},{"x":625.89,"y":194.56},{"x":645.08,"y":196.92},{"x":664.26,"y":198.94},{"x":683.37,"y":200.66},{"x":702.56,"y":202.21},{"x":721.67,"y":203.54},{"x":740.86,"y":204.75}]]}}},{"id":"real--01-multiple-lines-graph-paper","expectOverlapError":true,"output":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence","state":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":265.06,"y":275.87},{"x":293.84,"y":265.12},{"x":322.7,"y":254.28},{"x":351.48,"y":243.32},{"x":380.34,"y":232.18},{"x":409.13,"y":220.96},{"x":437.91,"y":209.61},{"x":466.77,"y":198.17},{"x":495.55,"y":186.56},{"x":524.33,"y":174.82},{"x":553.19,"y":162.99},{"x":581.97,"y":151},{"x":610.83,"y":138.91},{"x":639.62,"y":126.7},{"x":668.4,"y":114.36},{"x":697.26,"y":101.89},{"x":726.04,"y":89.29}],[{"x":288.46,"y":369.39},{"x":313.58,"y":363.07},{"x":338.69,"y":355.16},{"x":363.81,"y":346.56},{"x":388.92,"y":337.83},{"x":413.96,"y":329.36},{"x":439.08,"y":321.19},{"x":464.19,"y":313.41},{"x":489.31,"y":305.75},{"x":514.43,"y":298.1},{"x":539.54,"y":290.15},{"x":564.66,"y":281.76},{"x":589.77,"y":272.82},{"x":614.81,"y":263.31},{"x":639.93,"y":253.38},{"x":665.04,"y":243.53},{"x":690.16,"y":234.33}]]}}}] with saved full-photo-flow native canvas states.
+async (page) => {
+  const cases = [{"id":"controlled--06-reciprocal--clean","expectOverlapError":false,"output":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence","state":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":59.14,"y":244.35},{"x":78.25,"y":245.55},{"x":97.36,"y":246.89},{"x":116.47,"y":248.39},{"x":135.58,"y":250.11},{"x":154.69,"y":252.09},{"x":173.8,"y":254.41},{"x":192.91,"y":257.16},{"x":212.02,"y":260.48},{"x":231.13,"y":264.56},{"x":250.24,"y":269.63},{"x":269.35,"y":276.21},{"x":288.46,"y":285.07},{"x":307.57,"y":297.54},{"x":326.68,"y":316.55},{"x":345.79,"y":348.84},{"x":364.9,"y":416.22}],[{"x":434.32,"y":32.06},{"x":453.51,"y":99.4},{"x":472.62,"y":131.86},{"x":491.81,"y":150.95},{"x":510.99,"y":163.55},{"x":530.1,"y":172.5},{"x":549.29,"y":179.16},{"x":568.4,"y":184.32},{"x":587.59,"y":188.41},{"x":606.78,"y":191.76},{"x":625.89,"y":194.56},{"x":645.08,"y":196.92},{"x":664.26,"y":198.94},{"x":683.37,"y":200.66},{"x":702.56,"y":202.21},{"x":721.67,"y":203.54},{"x":740.86,"y":204.75}]]}}},{"id":"real--01-multiple-lines-graph-paper","expectOverlapError":true,"output":"/private/tmp/pl-photo-branches-experiment-02/benchmarks/photo-graphs/experiment-02/results/evidence","state":{"apiVersion":"0.1","meta":{"config":{"width":800,"height":450,"xrange":[-5.128205128205128,5.128205128205128],"yrange":[-5.232558139534884,5.232558139534884],"xscale":"linear","yscale":"linear","coordinates":"cartesian","readonly":false,"enforceBounds":false,"safetyBuffer":10,"plugins":[{"name":"axes","colors":{"xaxisLabel":"blue","yaxisLabel":"blue"},"fontSize":{"xaxisLabel":14,"yaxisLabel":14},"xaxisLabel":{"dx":10,"dy":10,"value":"x"},"yaxisLabel":{"dx":10,"dy":20,"value":"y"}},{"id":"sp","name":"spline","size":null,"color":"purple","group":null,"label":"Your graph","limit":null,"closed":null,"helper":false,"hollow":null,"opacity":null,"readonly":false,"arrowHead":null,"dashStyle":null,"fillColor":null,"lengthConstraint":null,"directionConstraint":null}]},"dataVersions":{"$__history":"0.1","$__toolbar":"0.1","sp":"0.1"}},"data":{"$__history":{"undoStack":[],"redoStack":[]},"$__toolbar":{"activeItemID":"select","selectedDropdownItemMap":{}},"sp":[[{"x":265.06,"y":275.87},{"x":293.84,"y":265.12},{"x":322.7,"y":254.28},{"x":351.48,"y":243.32},{"x":380.34,"y":232.18},{"x":409.13,"y":220.96},{"x":437.91,"y":209.61},{"x":466.77,"y":198.17},{"x":495.55,"y":186.56},{"x":524.33,"y":174.82},{"x":553.19,"y":162.99},{"x":581.97,"y":151},{"x":610.83,"y":138.91},{"x":639.62,"y":126.7},{"x":668.4,"y":114.36},{"x":697.26,"y":101.89},{"x":726.04,"y":89.29}],[{"x":288.46,"y":369.39},{"x":313.58,"y":363.07},{"x":338.69,"y":355.16},{"x":363.81,"y":346.56},{"x":388.92,"y":337.83},{"x":413.96,"y":329.36},{"x":439.08,"y":321.19},{"x":464.19,"y":313.41},{"x":489.31,"y":305.75},{"x":514.43,"y":298.1},{"x":539.54,"y":290.15},{"x":564.66,"y":281.76},{"x":589.77,"y":272.82},{"x":614.81,"y":263.31},{"x":639.93,"y":253.38},{"x":665.04,"y":243.53},{"x":690.16,"y":234.33}]]}}}];
+  const results = [];
+  for (const c of cases) {
+    await page.setViewportSize({width: 1600, height: 1200});
+    await page.goto('http://localhost:3000/pl/course/1/question/10/preview', {waitUntil: 'networkidle'});
+    await page.waitForFunction(() => window.SketchInput?.instances?.['hand-drawn-off']);
+    await page.evaluate(state => {
+      window.SketchInput.instances['hand-drawn-on'].setState(JSON.stringify(state));
+      const config = JSON.parse(atob(document.getElementById('hand-drawn-off-sketchresponse-data').textContent));
+      window.StarFit.placeCurve(window.SketchInput.instances['hand-drawn-off'], config, 'sp2',
+        window.StarFit.sampleCurve({lo: -2.2, hi: 2.2, f: x => x*x}, 16));
+    }, c.state);
+    let submitted = null;
+    const onRequest = request => {
+      if (request.method() !== 'POST') return;
+      const fields = new URLSearchParams(request.postData() || '');
+      const value = fields.get('hand-drawn-on-sketchresponse-submission');
+      if (value) submitted = JSON.parse(Buffer.from(value, 'base64').toString('utf8'));
+    };
+    page.on('request', onRequest);
+    try {
+      await page.getByRole('button', {name:'Save & Grade', exact:true}).click();
+      await page.waitForLoadState('networkidle');
+      await page.waitForFunction(() => document.body.innerText.includes('Submitted answer'));
+    } finally {
+      page.off('request', onRequest);
+    }
+    const body = await page.locator('body').innerText();
+    const fullText = await page.locator('body').textContent();
+    const validationDetails = await page.locator('[data-bs-content], [data-content], [data-bs-title], [data-original-title], [title]').evaluateAll(els =>
+      els.flatMap(el => [...el.attributes].map(a => a.value)).filter(text => text.includes('defined in the same range')));
+    const overlapError = (fullText + validationDetails.join(' ')).includes('are defined in the same range');
+    const screenshot = c.output + '/grading--' + c.id + '.png';
+    await page.screenshot({path: screenshot, fullPage:true});
+    results.push({id:c.id, mode:'submission replay of the saved full-photo-flow state',
+      submitted_branch_count:submitted && submitted.gradeable.sp.length, overlap_error:overlapError,
+      invalid_submission:body.includes('invalid, not gradable'), validation_details:validationDetails,
+      expected_overlap_error:c.expectOverlapError, submitted, body_text:body, screenshot,
+      grade_dom:await page.locator('[class*=score], [class*=grade], .alert').evaluateAll(els =>
+        els.map(el=>({class:el.className,text:el.textContent.trim()})).filter(x=>x.text))});
+  }
+  return results;
+}
+)(page);
+```
+### Page
+- Page URL: http://localhost:3000/pl/course/1/question/10/preview/?variant_id=129
+- Page Title: [DEV] Question Preview (star-photo-test) — cs000 | PrairieLearn
+- Console: 0 errors, 120 warnings
+### Events
+- New console entries: .playwright-cli/console-2026-10-16T20-56-32-484Z.log#L122-L669
+
+Browser 'photo-branch-grading' closed

@@ -1,0 +1,8 @@
+{
+  "source_commit": "1e29cc188f17a7044c026d8830ba69915146b0ac",
+  "recorded_utc": "2026-10-16T21:04:51.192053+00:00",
+  "command": "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node tests/star-photo-confirmation.cjs",
+  "passed": 71,
+  "consoleErrors": [],
+  "note": "Summary of the completed CLI regression run; benchmark and branch raw observations are archived separately."
+}

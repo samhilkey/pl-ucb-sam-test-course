@@ -1,0 +1,3308 @@
+{
+  "passed": 65,
+  "checks": [
+    "single-line: correct page",
+    "single-line: meaningful page",
+    "single-line: every traced branch reaches the fitter",
+    "single-line: complete proposal is confirmable",
+    "single-line: preview lists every branch",
+    "single-line: branch selector matches proposal",
+    "single-line: native state retains every branch",
+    "single-line: submission data retains every branch",
+    "single-line: successful confirmation closes panel",
+    "two-lines: correct page",
+    "two-lines: meaningful page",
+    "two-lines: every traced branch reaches the fitter",
+    "two-lines: complete proposal is confirmable",
+    "two-lines: preview lists every branch",
+    "two-lines: branch selector matches proposal",
+    "Selecting a branch preserves the proposal without refitting",
+    "Changing branch degree invalidates the complete proposal",
+    "Invalidated multi-branch equations disappear",
+    "Invalidated multi-branch proposal cannot transfer",
+    "Editing branch 2 preserves branch 1 model",
+    "Degree override applies to the selected branch",
+    "Failure of a later branch blocks the whole proposal",
+    "Failure identifies the affected branch",
+    "A partially fitted proposal cannot transfer",
+    "two-lines: native state retains every branch",
+    "two-lines: submission data retains every branch",
+    "two-lines: successful confirmation closes panel",
+    "Undoing a branch invalidates the complete proposal",
+    "Undoing the second branch restores single-branch controls",
+    "Fresh single-branch confirmation removes the previous second branch",
+    "An unusable extra stroke blocks confirmation instead of disappearing",
+    "Unusable stroke identifies the branch to retrace or undo",
+    "Unusable later stroke cannot replace the native drawing",
+    "Undoing an unusable stroke restores a complete proposal",
+    "reciprocal: correct page",
+    "reciprocal: meaningful page",
+    "reciprocal: every traced branch reaches the fitter",
+    "reciprocal: complete proposal is confirmable",
+    "reciprocal: preview lists every branch",
+    "reciprocal: branch selector matches proposal",
+    "reciprocal: native state retains every branch",
+    "reciprocal: submission data retains every branch",
+    "reciprocal: successful confirmation closes panel",
+    "Reciprocal branches remain disconnected across the asymptote",
+    "overlapping-x: correct page",
+    "overlapping-x: meaningful page",
+    "overlapping-x: every traced branch reaches the fitter",
+    "overlapping-x: complete proposal is confirmable",
+    "overlapping-x: preview lists every branch",
+    "overlapping-x: branch selector matches proposal",
+    "overlapping-x: native state retains every branch",
+    "overlapping-x: submission data retains every branch",
+    "overlapping-x: successful confirmation closes panel",
+    "mobile-two-lines: correct page",
+    "mobile-two-lines: meaningful page",
+    "Mobile photo is visible for tracing without layout changes",
+    "Mobile photo is visible for tracing without layout changes",
+    "mobile-two-lines: every traced branch reaches the fitter",
+    "mobile-two-lines: complete proposal is confirmable",
+    "mobile-two-lines: preview lists every branch",
+    "mobile-two-lines: branch selector matches proposal",
+    "mobile-two-lines: native state retains every branch",
+    "mobile-two-lines: submission data retains every branch",
+    "mobile-two-lines: successful confirmation closes panel",
+    "No application console errors"
+  ],
+  "outcomes": [
+    {
+      "id": "single-line",
+      "expected": 1,
+      "output": 1,
+      "rendering": {
+        "state": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "$__history": "0.1",
+              "$__toolbar": "0.1",
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "$__history": {
+              "undoStack": [],
+              "redoStack": []
+            },
+            "$__toolbar": {
+              "activeItemID": "select",
+              "selectedDropdownItemMap": {}
+            },
+            "sp": [
+              [
+                {
+                  "x": 284.56,
+                  "y": 240.52
+                },
+                {
+                  "x": 299.07,
+                  "y": 236.91
+                },
+                {
+                  "x": 313.5,
+                  "y": 233.34
+                },
+                {
+                  "x": 328.01,
+                  "y": 229.73
+                },
+                {
+                  "x": 342.51,
+                  "y": 226.16
+                },
+                {
+                  "x": 356.94,
+                  "y": 222.55
+                },
+                {
+                  "x": 371.45,
+                  "y": 218.98
+                },
+                {
+                  "x": 385.88,
+                  "y": 215.37
+                },
+                {
+                  "x": 400.39,
+                  "y": 211.8
+                },
+                {
+                  "x": 414.9,
+                  "y": 208.19
+                },
+                {
+                  "x": 429.33,
+                  "y": 204.62
+                },
+                {
+                  "x": 443.84,
+                  "y": 201.01
+                },
+                {
+                  "x": 458.34,
+                  "y": 197.44
+                },
+                {
+                  "x": 472.77,
+                  "y": 193.83
+                },
+                {
+                  "x": 487.28,
+                  "y": 190.26
+                },
+                {
+                  "x": 501.71,
+                  "y": 186.64
+                },
+                {
+                  "x": 516.22,
+                  "y": 183.08
+                }
+              ]
+            ]
+          }
+        },
+        "gradeable": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "sp": [
+              {
+                "spline": [
+                  [
+                    284.56,
+                    240.52
+                  ],
+                  [
+                    289.4,
+                    239.32
+                  ],
+                  [
+                    294.23,
+                    238.11
+                  ],
+                  [
+                    299.07,
+                    236.91
+                  ],
+                  [
+                    303.88,
+                    235.72
+                  ],
+                  [
+                    308.69,
+                    234.53
+                  ],
+                  [
+                    313.5,
+                    233.34
+                  ],
+                  [
+                    318.34,
+                    232.14
+                  ],
+                  [
+                    323.17,
+                    230.93
+                  ],
+                  [
+                    328.01,
+                    229.73
+                  ],
+                  [
+                    332.84,
+                    228.53
+                  ],
+                  [
+                    337.68,
+                    227.36
+                  ],
+                  [
+                    342.51,
+                    226.16
+                  ],
+                  [
+                    347.32,
+                    224.97
+                  ],
+                  [
+                    352.13,
+                    223.74
+                  ],
+                  [
+                    356.94,
+                    222.55
+                  ],
+                  [
+                    361.77,
+                    221.35
+                  ],
+                  [
+                    366.62,
+                    220.18
+                  ],
+                  [
+                    371.45,
+                    218.98
+                  ],
+                  [
+                    376.26,
+                    217.79
+                  ],
+                  [
+                    381.07,
+                    216.56
+                  ],
+                  [
+                    385.88,
+                    215.37
+                  ],
+                  [
+                    390.71,
+                    214.17
+                  ],
+                  [
+                    395.55,
+                    213
+                  ],
+                  [
+                    400.39,
+                    211.8
+                  ],
+                  [
+                    405.23,
+                    210.6
+                  ],
+                  [
+                    410.06,
+                    209.39
+                  ],
+                  [
+                    414.9,
+                    208.19
+                  ],
+                  [
+                    419.71,
+                    207
+                  ],
+                  [
+                    424.52,
+                    205.81
+                  ],
+                  [
+                    429.33,
+                    204.62
+                  ],
+                  [
+                    434.17,
+                    203.42
+                  ],
+                  [
+                    439,
+                    202.21
+                  ],
+                  [
+                    443.84,
+                    201.01
+                  ],
+                  [
+                    448.67,
+                    199.81
+                  ],
+                  [
+                    453.51,
+                    198.64
+                  ],
+                  [
+                    458.34,
+                    197.44
+                  ],
+                  [
+                    463.15,
+                    196.25
+                  ],
+                  [
+                    467.96,
+                    195.02
+                  ],
+                  [
+                    472.77,
+                    193.83
+                  ],
+                  [
+                    477.6,
+                    192.63
+                  ],
+                  [
+                    482.45,
+                    191.46
+                  ],
+                  [
+                    487.28,
+                    190.26
+                  ],
+                  [
+                    492.09,
+                    189.06
+                  ],
+                  [
+                    496.9,
+                    187.83
+                  ],
+                  [
+                    501.71,
+                    186.64
+                  ],
+                  [
+                    506.54,
+                    185.44
+                  ],
+                  [
+                    511.38,
+                    184.27
+                  ],
+                  [
+                    516.22,
+                    183.08
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "two-lines",
+      "expected": 2,
+      "output": 2,
+      "rendering": {
+        "state": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "$__history": "0.1",
+              "$__toolbar": "0.1",
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "$__history": {
+              "undoStack": [],
+              "redoStack": []
+            },
+            "$__toolbar": {
+              "activeItemID": "select",
+              "selectedDropdownItemMap": {}
+            },
+            "sp": [
+              [
+                {
+                  "x": 276.76,
+                  "y": 206.42
+                },
+                {
+                  "x": 282.92,
+                  "y": 205.39
+                },
+                {
+                  "x": 289.16,
+                  "y": 204.36
+                },
+                {
+                  "x": 295.32,
+                  "y": 203.37
+                },
+                {
+                  "x": 301.49,
+                  "y": 202.34
+                },
+                {
+                  "x": 307.73,
+                  "y": 201.31
+                },
+                {
+                  "x": 313.89,
+                  "y": 200.28
+                },
+                {
+                  "x": 320.13,
+                  "y": 199.24
+                },
+                {
+                  "x": 326.29,
+                  "y": 198.25
+                },
+                {
+                  "x": 332.45,
+                  "y": 197.22
+                },
+                {
+                  "x": 338.69,
+                  "y": 196.19
+                },
+                {
+                  "x": 344.85,
+                  "y": 195.16
+                },
+                {
+                  "x": 351.02,
+                  "y": 194.13
+                },
+                {
+                  "x": 357.26,
+                  "y": 193.09
+                },
+                {
+                  "x": 363.42,
+                  "y": 192.11
+                },
+                {
+                  "x": 369.66,
+                  "y": 191.07
+                },
+                {
+                  "x": 375.82,
+                  "y": 190.04
+                }
+              ],
+              [
+                {
+                  "x": 424.96,
+                  "y": 256.13
+                },
+                {
+                  "x": 431.12,
+                  "y": 257.47
+                },
+                {
+                  "x": 437.36,
+                  "y": 258.84
+                },
+                {
+                  "x": 443.52,
+                  "y": 260.22
+                },
+                {
+                  "x": 449.76,
+                  "y": 261.55
+                },
+                {
+                  "x": 455.93,
+                  "y": 262.93
+                },
+                {
+                  "x": 462.09,
+                  "y": 264.3
+                },
+                {
+                  "x": 468.33,
+                  "y": 265.68
+                },
+                {
+                  "x": 474.49,
+                  "y": 267.01
+                },
+                {
+                  "x": 480.65,
+                  "y": 268.39
+                },
+                {
+                  "x": 486.89,
+                  "y": 269.76
+                },
+                {
+                  "x": 493.05,
+                  "y": 271.14
+                },
+                {
+                  "x": 499.29,
+                  "y": 272.47
+                },
+                {
+                  "x": 505.46,
+                  "y": 273.85
+                },
+                {
+                  "x": 511.62,
+                  "y": 275.22
+                },
+                {
+                  "x": 517.86,
+                  "y": 276.6
+                },
+                {
+                  "x": 524.02,
+                  "y": 277.93
+                }
+              ]
+            ]
+          }
+        },
+        "gradeable": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "sp": [
+              {
+                "spline": [
+                  [
+                    276.76,
+                    206.42
+                  ],
+                  [
+                    278.81,
+                    206.08
+                  ],
+                  [
+                    280.87,
+                    205.73
+                  ],
+                  [
+                    282.92,
+                    205.39
+                  ],
+                  [
+                    285,
+                    205.04
+                  ],
+                  [
+                    287.08,
+                    204.7
+                  ],
+                  [
+                    289.16,
+                    204.36
+                  ],
+                  [
+                    291.21,
+                    204.03
+                  ],
+                  [
+                    293.27,
+                    203.71
+                  ],
+                  [
+                    295.32,
+                    203.37
+                  ],
+                  [
+                    297.38,
+                    203.03
+                  ],
+                  [
+                    299.43,
+                    202.68
+                  ],
+                  [
+                    301.49,
+                    202.34
+                  ],
+                  [
+                    303.57,
+                    201.99
+                  ],
+                  [
+                    305.65,
+                    201.66
+                  ],
+                  [
+                    307.73,
+                    201.31
+                  ],
+                  [
+                    309.78,
+                    200.97
+                  ],
+                  [
+                    311.84,
+                    200.62
+                  ],
+                  [
+                    313.89,
+                    200.28
+                  ],
+                  [
+                    315.97,
+                    199.93
+                  ],
+                  [
+                    318.05,
+                    199.58
+                  ],
+                  [
+                    320.13,
+                    199.24
+                  ],
+                  [
+                    322.18,
+                    198.9
+                  ],
+                  [
+                    324.24,
+                    198.59
+                  ],
+                  [
+                    326.29,
+                    198.25
+                  ],
+                  [
+                    328.34,
+                    197.91
+                  ],
+                  [
+                    330.4,
+                    197.56
+                  ],
+                  [
+                    332.45,
+                    197.22
+                  ],
+                  [
+                    334.53,
+                    196.87
+                  ],
+                  [
+                    336.61,
+                    196.54
+                  ],
+                  [
+                    338.69,
+                    196.19
+                  ],
+                  [
+                    340.74,
+                    195.85
+                  ],
+                  [
+                    342.8,
+                    195.5
+                  ],
+                  [
+                    344.85,
+                    195.16
+                  ],
+                  [
+                    346.91,
+                    194.82
+                  ],
+                  [
+                    348.96,
+                    194.47
+                  ],
+                  [
+                    351.02,
+                    194.13
+                  ],
+                  [
+                    353.1,
+                    193.78
+                  ],
+                  [
+                    355.18,
+                    193.43
+                  ],
+                  [
+                    357.26,
+                    193.09
+                  ],
+                  [
+                    359.31,
+                    192.76
+                  ],
+                  [
+                    361.37,
+                    192.44
+                  ],
+                  [
+                    363.42,
+                    192.11
+                  ],
+                  [
+                    365.5,
+                    191.77
+                  ],
+                  [
+                    367.58,
+                    191.42
+                  ],
+                  [
+                    369.66,
+                    191.07
+                  ],
+                  [
+                    371.71,
+                    190.73
+                  ],
+                  [
+                    373.77,
+                    190.38
+                  ],
+                  [
+                    375.82,
+                    190.04
+                  ]
+                ]
+              },
+              {
+                "spline": [
+                  [
+                    424.96,
+                    256.13
+                  ],
+                  [
+                    427.01,
+                    256.58
+                  ],
+                  [
+                    429.07,
+                    257.02
+                  ],
+                  [
+                    431.12,
+                    257.47
+                  ],
+                  [
+                    433.2,
+                    257.92
+                  ],
+                  [
+                    435.28,
+                    258.38
+                  ],
+                  [
+                    437.36,
+                    258.84
+                  ],
+                  [
+                    439.41,
+                    259.3
+                  ],
+                  [
+                    441.46,
+                    259.77
+                  ],
+                  [
+                    443.52,
+                    260.22
+                  ],
+                  [
+                    445.6,
+                    260.67
+                  ],
+                  [
+                    447.68,
+                    261.1
+                  ],
+                  [
+                    449.76,
+                    261.55
+                  ],
+                  [
+                    451.82,
+                    262
+                  ],
+                  [
+                    453.87,
+                    262.47
+                  ],
+                  [
+                    455.93,
+                    262.93
+                  ],
+                  [
+                    457.98,
+                    263.39
+                  ],
+                  [
+                    460.04,
+                    263.84
+                  ],
+                  [
+                    462.09,
+                    264.3
+                  ],
+                  [
+                    464.17,
+                    264.76
+                  ],
+                  [
+                    466.25,
+                    265.23
+                  ],
+                  [
+                    468.33,
+                    265.68
+                  ],
+                  [
+                    470.38,
+                    266.13
+                  ],
+                  [
+                    472.44,
+                    266.56
+                  ],
+                  [
+                    474.49,
+                    267.01
+                  ],
+                  [
+                    476.55,
+                    267.46
+                  ],
+                  [
+                    478.6,
+                    267.93
+                  ],
+                  [
+                    480.65,
+                    268.39
+                  ],
+                  [
+                    482.73,
+                    268.85
+                  ],
+                  [
+                    484.81,
+                    269.3
+                  ],
+                  [
+                    486.89,
+                    269.76
+                  ],
+                  [
+                    488.94,
+                    270.22
+                  ],
+                  [
+                    490.99,
+                    270.69
+                  ],
+                  [
+                    493.05,
+                    271.14
+                  ],
+                  [
+                    495.13,
+                    271.59
+                  ],
+                  [
+                    497.21,
+                    272.02
+                  ],
+                  [
+                    499.29,
+                    272.47
+                  ],
+                  [
+                    501.35,
+                    272.92
+                  ],
+                  [
+                    503.4,
+                    273.39
+                  ],
+                  [
+                    505.46,
+                    273.85
+                  ],
+                  [
+                    507.51,
+                    274.31
+                  ],
+                  [
+                    509.57,
+                    274.76
+                  ],
+                  [
+                    511.62,
+                    275.22
+                  ],
+                  [
+                    513.7,
+                    275.68
+                  ],
+                  [
+                    515.78,
+                    276.15
+                  ],
+                  [
+                    517.86,
+                    276.6
+                  ],
+                  [
+                    519.91,
+                    277.05
+                  ],
+                  [
+                    521.97,
+                    277.49
+                  ],
+                  [
+                    524.02,
+                    277.93
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "reciprocal",
+      "expected": 2,
+      "output": 2,
+      "rendering": {
+        "state": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "$__history": "0.1",
+              "$__toolbar": "0.1",
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "$__history": {
+              "undoStack": [],
+              "redoStack": []
+            },
+            "$__toolbar": {
+              "activeItemID": "select",
+              "selectedDropdownItemMap": {}
+            },
+            "sp": [
+              [
+                {
+                  "x": 272.86,
+                  "y": 239.49
+                },
+                {
+                  "x": 278.94,
+                  "y": 239.88
+                },
+                {
+                  "x": 285.03,
+                  "y": 240.61
+                },
+                {
+                  "x": 291.11,
+                  "y": 241.6
+                },
+                {
+                  "x": 297.27,
+                  "y": 242.76
+                },
+                {
+                  "x": 303.36,
+                  "y": 244.01
+                },
+                {
+                  "x": 309.44,
+                  "y": 245.38
+                },
+                {
+                  "x": 315.53,
+                  "y": 246.8
+                },
+                {
+                  "x": 321.61,
+                  "y": 248.44
+                },
+                {
+                  "x": 327.69,
+                  "y": 250.28
+                },
+                {
+                  "x": 333.78,
+                  "y": 252.56
+                },
+                {
+                  "x": 339.86,
+                  "y": 255.36
+                },
+                {
+                  "x": 346.02,
+                  "y": 258.93
+                },
+                {
+                  "x": 352.11,
+                  "y": 263.53
+                },
+                {
+                  "x": 358.19,
+                  "y": 269.38
+                },
+                {
+                  "x": 364.28,
+                  "y": 276.82
+                },
+                {
+                  "x": 370.36,
+                  "y": 286.19
+                }
+              ],
+              [
+                {
+                  "x": 429.64,
+                  "y": 163.6
+                },
+                {
+                  "x": 435.8,
+                  "y": 173.01
+                },
+                {
+                  "x": 441.96,
+                  "y": 180.5
+                },
+                {
+                  "x": 448.05,
+                  "y": 186.34
+                },
+                {
+                  "x": 454.21,
+                  "y": 190.9
+                },
+                {
+                  "x": 460.37,
+                  "y": 194.47
+                },
+                {
+                  "x": 466.46,
+                  "y": 197.27
+                },
+                {
+                  "x": 472.62,
+                  "y": 199.5
+                },
+                {
+                  "x": 478.78,
+                  "y": 201.35
+                },
+                {
+                  "x": 484.94,
+                  "y": 202.94
+                },
+                {
+                  "x": 491.1,
+                  "y": 204.4
+                },
+                {
+                  "x": 497.19,
+                  "y": 205.74
+                },
+                {
+                  "x": 503.35,
+                  "y": 206.98
+                },
+                {
+                  "x": 509.51,
+                  "y": 208.1
+                },
+                {
+                  "x": 515.67,
+                  "y": 209.09
+                },
+                {
+                  "x": 521.76,
+                  "y": 209.78
+                },
+                {
+                  "x": 527.92,
+                  "y": 210.04
+                }
+              ]
+            ]
+          }
+        },
+        "gradeable": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "sp": [
+              {
+                "spline": [
+                  [
+                    272.86,
+                    239.49
+                  ],
+                  [
+                    274.89,
+                    239.62
+                  ],
+                  [
+                    276.92,
+                    239.69
+                  ],
+                  [
+                    278.94,
+                    239.88
+                  ],
+                  [
+                    280.98,
+                    240.07
+                  ],
+                  [
+                    283.01,
+                    240.32
+                  ],
+                  [
+                    285.03,
+                    240.61
+                  ],
+                  [
+                    287.06,
+                    240.9
+                  ],
+                  [
+                    289.09,
+                    241.24
+                  ],
+                  [
+                    291.11,
+                    241.6
+                  ],
+                  [
+                    293.17,
+                    241.96
+                  ],
+                  [
+                    295.22,
+                    242.36
+                  ],
+                  [
+                    297.27,
+                    242.76
+                  ],
+                  [
+                    299.3,
+                    243.16
+                  ],
+                  [
+                    301.33,
+                    243.57
+                  ],
+                  [
+                    303.36,
+                    244.01
+                  ],
+                  [
+                    305.39,
+                    244.45
+                  ],
+                  [
+                    307.42,
+                    244.92
+                  ],
+                  [
+                    309.44,
+                    245.38
+                  ],
+                  [
+                    311.47,
+                    245.85
+                  ],
+                  [
+                    313.51,
+                    246.29
+                  ],
+                  [
+                    315.53,
+                    246.8
+                  ],
+                  [
+                    317.57,
+                    247.31
+                  ],
+                  [
+                    319.59,
+                    247.86
+                  ],
+                  [
+                    321.61,
+                    248.44
+                  ],
+                  [
+                    323.65,
+                    249.02
+                  ],
+                  [
+                    325.68,
+                    249.6
+                  ],
+                  [
+                    327.69,
+                    250.28
+                  ],
+                  [
+                    329.74,
+                    250.98
+                  ],
+                  [
+                    331.78,
+                    251.73
+                  ],
+                  [
+                    333.78,
+                    252.56
+                  ],
+                  [
+                    335.84,
+                    253.42
+                  ],
+                  [
+                    337.88,
+                    254.33
+                  ],
+                  [
+                    339.86,
+                    255.36
+                  ],
+                  [
+                    341.97,
+                    256.46
+                  ],
+                  [
+                    344.05,
+                    257.61
+                  ],
+                  [
+                    346.02,
+                    258.93
+                  ],
+                  [
+                    348.14,
+                    260.34
+                  ],
+                  [
+                    350.18,
+                    261.87
+                  ],
+                  [
+                    352.11,
+                    263.53
+                  ],
+                  [
+                    354.24,
+                    265.36
+                  ],
+                  [
+                    356.29,
+                    267.31
+                  ],
+                  [
+                    358.19,
+                    269.38
+                  ],
+                  [
+                    360.35,
+                    271.74
+                  ],
+                  [
+                    362.4,
+                    274.22
+                  ],
+                  [
+                    364.28,
+                    276.82
+                  ],
+                  [
+                    366.46,
+                    279.84
+                  ],
+                  [
+                    368.33,
+                    283.07
+                  ],
+                  [
+                    370.36,
+                    286.19
+                  ]
+                ]
+              },
+              {
+                "spline": [
+                  [
+                    429.64,
+                    163.6
+                  ],
+                  [
+                    431.69,
+                    166.74
+                  ],
+                  [
+                    433.59,
+                    169.98
+                  ],
+                  [
+                    435.8,
+                    173.01
+                  ],
+                  [
+                    437.7,
+                    175.62
+                  ],
+                  [
+                    439.77,
+                    178.12
+                  ],
+                  [
+                    441.96,
+                    180.5
+                  ],
+                  [
+                    443.86,
+                    182.57
+                  ],
+                  [
+                    445.91,
+                    184.52
+                  ],
+                  [
+                    448.05,
+                    186.34
+                  ],
+                  [
+                    450,
+                    187.99
+                  ],
+                  [
+                    452.08,
+                    189.49
+                  ],
+                  [
+                    454.21,
+                    190.9
+                  ],
+                  [
+                    456.19,
+                    192.21
+                  ],
+                  [
+                    458.26,
+                    193.38
+                  ],
+                  [
+                    460.37,
+                    194.47
+                  ],
+                  [
+                    462.35,
+                    195.5
+                  ],
+                  [
+                    464.39,
+                    196.42
+                  ],
+                  [
+                    466.46,
+                    197.27
+                  ],
+                  [
+                    468.48,
+                    198.1
+                  ],
+                  [
+                    470.55,
+                    198.81
+                  ],
+                  [
+                    472.62,
+                    199.5
+                  ],
+                  [
+                    474.66,
+                    200.17
+                  ],
+                  [
+                    476.72,
+                    200.77
+                  ],
+                  [
+                    478.78,
+                    201.35
+                  ],
+                  [
+                    480.82,
+                    201.92
+                  ],
+                  [
+                    482.88,
+                    202.43
+                  ],
+                  [
+                    484.94,
+                    202.94
+                  ],
+                  [
+                    486.99,
+                    203.45
+                  ],
+                  [
+                    489.04,
+                    203.93
+                  ],
+                  [
+                    491.1,
+                    204.4
+                  ],
+                  [
+                    493.13,
+                    204.86
+                  ],
+                  [
+                    495.16,
+                    205.31
+                  ],
+                  [
+                    497.19,
+                    205.74
+                  ],
+                  [
+                    499.24,
+                    206.17
+                  ],
+                  [
+                    501.29,
+                    206.59
+                  ],
+                  [
+                    503.35,
+                    206.98
+                  ],
+                  [
+                    505.4,
+                    207.37
+                  ],
+                  [
+                    507.45,
+                    207.75
+                  ],
+                  [
+                    509.51,
+                    208.1
+                  ],
+                  [
+                    511.56,
+                    208.45
+                  ],
+                  [
+                    513.61,
+                    208.81
+                  ],
+                  [
+                    515.67,
+                    209.09
+                  ],
+                  [
+                    517.69,
+                    209.37
+                  ],
+                  [
+                    519.72,
+                    209.62
+                  ],
+                  [
+                    521.76,
+                    209.78
+                  ],
+                  [
+                    523.81,
+                    209.94
+                  ],
+                  [
+                    525.87,
+                    209.95
+                  ],
+                  [
+                    527.92,
+                    210.04
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "overlapping-x",
+      "expected": 2,
+      "output": 2,
+      "rendering": {
+        "state": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "$__history": "0.1",
+              "$__toolbar": "0.1",
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "$__history": {
+              "undoStack": [],
+              "redoStack": []
+            },
+            "$__toolbar": {
+              "activeItemID": "select",
+              "selectedDropdownItemMap": {}
+            },
+            "sp": [
+              [
+                {
+                  "x": 291.58,
+                  "y": 193.74
+                },
+                {
+                  "x": 305.15,
+                  "y": 192.28
+                },
+                {
+                  "x": 318.72,
+                  "y": 190.77
+                },
+                {
+                  "x": 332.22,
+                  "y": 189.27
+                },
+                {
+                  "x": 345.79,
+                  "y": 187.76
+                },
+                {
+                  "x": 359.36,
+                  "y": 186.26
+                },
+                {
+                  "x": 372.93,
+                  "y": 184.79
+                },
+                {
+                  "x": 386.43,
+                  "y": 183.29
+                },
+                {
+                  "x": 400,
+                  "y": 181.79
+                },
+                {
+                  "x": 413.57,
+                  "y": 180.28
+                },
+                {
+                  "x": 427.07,
+                  "y": 178.78
+                },
+                {
+                  "x": 440.64,
+                  "y": 177.31
+                },
+                {
+                  "x": 454.21,
+                  "y": 175.81
+                },
+                {
+                  "x": 467.78,
+                  "y": 174.3
+                },
+                {
+                  "x": 481.28,
+                  "y": 172.8
+                },
+                {
+                  "x": 494.85,
+                  "y": 171.34
+                },
+                {
+                  "x": 508.42,
+                  "y": 169.83
+                }
+              ],
+              [
+                {
+                  "x": 291.58,
+                  "y": 279.74
+                },
+                {
+                  "x": 305.15,
+                  "y": 278.28
+                },
+                {
+                  "x": 318.72,
+                  "y": 276.77
+                },
+                {
+                  "x": 332.22,
+                  "y": 275.27
+                },
+                {
+                  "x": 345.79,
+                  "y": 273.76
+                },
+                {
+                  "x": 359.36,
+                  "y": 272.26
+                },
+                {
+                  "x": 372.93,
+                  "y": 270.79
+                },
+                {
+                  "x": 386.43,
+                  "y": 269.29
+                },
+                {
+                  "x": 400,
+                  "y": 267.79
+                },
+                {
+                  "x": 413.57,
+                  "y": 266.28
+                },
+                {
+                  "x": 427.07,
+                  "y": 264.78
+                },
+                {
+                  "x": 440.64,
+                  "y": 263.31
+                },
+                {
+                  "x": 454.21,
+                  "y": 261.81
+                },
+                {
+                  "x": 467.78,
+                  "y": 260.3
+                },
+                {
+                  "x": 481.28,
+                  "y": 258.8
+                },
+                {
+                  "x": 494.85,
+                  "y": 257.34
+                },
+                {
+                  "x": 508.42,
+                  "y": 255.83
+                }
+              ]
+            ]
+          }
+        },
+        "gradeable": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "sp": [
+              {
+                "spline": [
+                  [
+                    291.58,
+                    193.74
+                  ],
+                  [
+                    296.1,
+                    193.25
+                  ],
+                  [
+                    300.63,
+                    192.77
+                  ],
+                  [
+                    305.15,
+                    192.28
+                  ],
+                  [
+                    309.67,
+                    191.78
+                  ],
+                  [
+                    314.2,
+                    191.27
+                  ],
+                  [
+                    318.72,
+                    190.77
+                  ],
+                  [
+                    323.22,
+                    190.27
+                  ],
+                  [
+                    327.72,
+                    189.77
+                  ],
+                  [
+                    332.22,
+                    189.27
+                  ],
+                  [
+                    336.74,
+                    188.77
+                  ],
+                  [
+                    341.27,
+                    188.26
+                  ],
+                  [
+                    345.79,
+                    187.76
+                  ],
+                  [
+                    350.31,
+                    187.26
+                  ],
+                  [
+                    354.84,
+                    186.76
+                  ],
+                  [
+                    359.36,
+                    186.26
+                  ],
+                  [
+                    363.88,
+                    185.77
+                  ],
+                  [
+                    368.41,
+                    185.29
+                  ],
+                  [
+                    372.93,
+                    184.79
+                  ],
+                  [
+                    377.43,
+                    184.3
+                  ],
+                  [
+                    381.93,
+                    183.79
+                  ],
+                  [
+                    386.43,
+                    183.29
+                  ],
+                  [
+                    390.95,
+                    182.79
+                  ],
+                  [
+                    395.48,
+                    182.29
+                  ],
+                  [
+                    400,
+                    181.79
+                  ],
+                  [
+                    404.52,
+                    181.29
+                  ],
+                  [
+                    409.05,
+                    180.78
+                  ],
+                  [
+                    413.57,
+                    180.28
+                  ],
+                  [
+                    418.07,
+                    179.78
+                  ],
+                  [
+                    422.57,
+                    179.27
+                  ],
+                  [
+                    427.07,
+                    178.78
+                  ],
+                  [
+                    431.59,
+                    178.28
+                  ],
+                  [
+                    436.12,
+                    177.8
+                  ],
+                  [
+                    440.64,
+                    177.31
+                  ],
+                  [
+                    445.16,
+                    176.81
+                  ],
+                  [
+                    449.69,
+                    176.31
+                  ],
+                  [
+                    454.21,
+                    175.81
+                  ],
+                  [
+                    458.73,
+                    175.31
+                  ],
+                  [
+                    463.26,
+                    174.8
+                  ],
+                  [
+                    467.78,
+                    174.3
+                  ],
+                  [
+                    472.28,
+                    173.8
+                  ],
+                  [
+                    476.78,
+                    173.29
+                  ],
+                  [
+                    481.28,
+                    172.8
+                  ],
+                  [
+                    485.8,
+                    172.31
+                  ],
+                  [
+                    490.33,
+                    171.83
+                  ],
+                  [
+                    494.85,
+                    171.34
+                  ],
+                  [
+                    499.37,
+                    170.84
+                  ],
+                  [
+                    503.9,
+                    170.33
+                  ],
+                  [
+                    508.42,
+                    169.83
+                  ]
+                ]
+              },
+              {
+                "spline": [
+                  [
+                    291.58,
+                    279.74
+                  ],
+                  [
+                    296.1,
+                    279.25
+                  ],
+                  [
+                    300.63,
+                    278.77
+                  ],
+                  [
+                    305.15,
+                    278.28
+                  ],
+                  [
+                    309.67,
+                    277.78
+                  ],
+                  [
+                    314.2,
+                    277.27
+                  ],
+                  [
+                    318.72,
+                    276.77
+                  ],
+                  [
+                    323.22,
+                    276.27
+                  ],
+                  [
+                    327.72,
+                    275.77
+                  ],
+                  [
+                    332.22,
+                    275.27
+                  ],
+                  [
+                    336.74,
+                    274.77
+                  ],
+                  [
+                    341.27,
+                    274.26
+                  ],
+                  [
+                    345.79,
+                    273.76
+                  ],
+                  [
+                    350.31,
+                    273.26
+                  ],
+                  [
+                    354.84,
+                    272.76
+                  ],
+                  [
+                    359.36,
+                    272.26
+                  ],
+                  [
+                    363.88,
+                    271.77
+                  ],
+                  [
+                    368.41,
+                    271.29
+                  ],
+                  [
+                    372.93,
+                    270.79
+                  ],
+                  [
+                    377.43,
+                    270.3
+                  ],
+                  [
+                    381.93,
+                    269.79
+                  ],
+                  [
+                    386.43,
+                    269.29
+                  ],
+                  [
+                    390.95,
+                    268.79
+                  ],
+                  [
+                    395.48,
+                    268.29
+                  ],
+                  [
+                    400,
+                    267.79
+                  ],
+                  [
+                    404.52,
+                    267.29
+                  ],
+                  [
+                    409.05,
+                    266.78
+                  ],
+                  [
+                    413.57,
+                    266.28
+                  ],
+                  [
+                    418.07,
+                    265.78
+                  ],
+                  [
+                    422.57,
+                    265.27
+                  ],
+                  [
+                    427.07,
+                    264.78
+                  ],
+                  [
+                    431.59,
+                    264.28
+                  ],
+                  [
+                    436.12,
+                    263.8
+                  ],
+                  [
+                    440.64,
+                    263.31
+                  ],
+                  [
+                    445.16,
+                    262.81
+                  ],
+                  [
+                    449.69,
+                    262.31
+                  ],
+                  [
+                    454.21,
+                    261.81
+                  ],
+                  [
+                    458.73,
+                    261.31
+                  ],
+                  [
+                    463.26,
+                    260.8
+                  ],
+                  [
+                    467.78,
+                    260.3
+                  ],
+                  [
+                    472.28,
+                    259.8
+                  ],
+                  [
+                    476.78,
+                    259.29
+                  ],
+                  [
+                    481.28,
+                    258.8
+                  ],
+                  [
+                    485.8,
+                    258.31
+                  ],
+                  [
+                    490.33,
+                    257.83
+                  ],
+                  [
+                    494.85,
+                    257.34
+                  ],
+                  [
+                    499.37,
+                    256.84
+                  ],
+                  [
+                    503.9,
+                    256.33
+                  ],
+                  [
+                    508.42,
+                    255.83
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "mobile-two-lines",
+      "expected": 2,
+      "output": 2,
+      "rendering": {
+        "state": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "$__history": "0.1",
+              "$__toolbar": "0.1",
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "$__history": {
+              "undoStack": [],
+              "redoStack": []
+            },
+            "$__toolbar": {
+              "activeItemID": "select",
+              "selectedDropdownItemMap": {}
+            },
+            "sp": [
+              [
+                {
+                  "x": 276.76,
+                  "y": 206.42
+                },
+                {
+                  "x": 282.92,
+                  "y": 205.39
+                },
+                {
+                  "x": 289.16,
+                  "y": 204.36
+                },
+                {
+                  "x": 295.32,
+                  "y": 203.37
+                },
+                {
+                  "x": 301.49,
+                  "y": 202.34
+                },
+                {
+                  "x": 307.73,
+                  "y": 201.31
+                },
+                {
+                  "x": 313.89,
+                  "y": 200.28
+                },
+                {
+                  "x": 320.13,
+                  "y": 199.24
+                },
+                {
+                  "x": 326.29,
+                  "y": 198.25
+                },
+                {
+                  "x": 332.45,
+                  "y": 197.22
+                },
+                {
+                  "x": 338.69,
+                  "y": 196.19
+                },
+                {
+                  "x": 344.85,
+                  "y": 195.16
+                },
+                {
+                  "x": 351.02,
+                  "y": 194.13
+                },
+                {
+                  "x": 357.26,
+                  "y": 193.09
+                },
+                {
+                  "x": 363.42,
+                  "y": 192.11
+                },
+                {
+                  "x": 369.66,
+                  "y": 191.07
+                },
+                {
+                  "x": 375.82,
+                  "y": 190.04
+                }
+              ],
+              [
+                {
+                  "x": 424.96,
+                  "y": 256.13
+                },
+                {
+                  "x": 431.12,
+                  "y": 257.47
+                },
+                {
+                  "x": 437.36,
+                  "y": 258.84
+                },
+                {
+                  "x": 443.52,
+                  "y": 260.22
+                },
+                {
+                  "x": 449.76,
+                  "y": 261.55
+                },
+                {
+                  "x": 455.93,
+                  "y": 262.93
+                },
+                {
+                  "x": 462.09,
+                  "y": 264.3
+                },
+                {
+                  "x": 468.33,
+                  "y": 265.68
+                },
+                {
+                  "x": 474.49,
+                  "y": 267.01
+                },
+                {
+                  "x": 480.65,
+                  "y": 268.39
+                },
+                {
+                  "x": 486.89,
+                  "y": 269.76
+                },
+                {
+                  "x": 493.05,
+                  "y": 271.14
+                },
+                {
+                  "x": 499.29,
+                  "y": 272.47
+                },
+                {
+                  "x": 505.46,
+                  "y": 273.85
+                },
+                {
+                  "x": 511.62,
+                  "y": 275.22
+                },
+                {
+                  "x": 517.86,
+                  "y": 276.6
+                },
+                {
+                  "x": 524.02,
+                  "y": 277.93
+                }
+              ]
+            ]
+          }
+        },
+        "gradeable": {
+          "apiVersion": "0.1",
+          "meta": {
+            "config": {
+              "width": 800,
+              "height": 450,
+              "xrange": [
+                -5.128205128205128,
+                5.128205128205128
+              ],
+              "yrange": [
+                -5.232558139534884,
+                5.232558139534884
+              ],
+              "xscale": "linear",
+              "yscale": "linear",
+              "coordinates": "cartesian",
+              "readonly": false,
+              "enforceBounds": false,
+              "safetyBuffer": 10,
+              "plugins": [
+                {
+                  "name": "axes",
+                  "colors": {
+                    "xaxisLabel": "blue",
+                    "yaxisLabel": "blue"
+                  },
+                  "fontSize": {
+                    "xaxisLabel": 14,
+                    "yaxisLabel": 14
+                  },
+                  "xaxisLabel": {
+                    "dx": 10,
+                    "dy": 10,
+                    "value": "x"
+                  },
+                  "yaxisLabel": {
+                    "dx": 10,
+                    "dy": 20,
+                    "value": "y"
+                  }
+                },
+                {
+                  "id": "sp",
+                  "name": "spline",
+                  "size": null,
+                  "color": "purple",
+                  "group": null,
+                  "label": "Your graph",
+                  "limit": null,
+                  "closed": null,
+                  "helper": false,
+                  "hollow": null,
+                  "opacity": null,
+                  "readonly": false,
+                  "arrowHead": null,
+                  "dashStyle": null,
+                  "fillColor": null,
+                  "lengthConstraint": null,
+                  "directionConstraint": null
+                }
+              ]
+            },
+            "dataVersions": {
+              "sp": "0.1"
+            }
+          },
+          "data": {
+            "sp": [
+              {
+                "spline": [
+                  [
+                    276.76,
+                    206.42
+                  ],
+                  [
+                    278.81,
+                    206.08
+                  ],
+                  [
+                    280.87,
+                    205.73
+                  ],
+                  [
+                    282.92,
+                    205.39
+                  ],
+                  [
+                    285,
+                    205.04
+                  ],
+                  [
+                    287.08,
+                    204.7
+                  ],
+                  [
+                    289.16,
+                    204.36
+                  ],
+                  [
+                    291.21,
+                    204.03
+                  ],
+                  [
+                    293.27,
+                    203.71
+                  ],
+                  [
+                    295.32,
+                    203.37
+                  ],
+                  [
+                    297.38,
+                    203.03
+                  ],
+                  [
+                    299.43,
+                    202.68
+                  ],
+                  [
+                    301.49,
+                    202.34
+                  ],
+                  [
+                    303.57,
+                    201.99
+                  ],
+                  [
+                    305.65,
+                    201.66
+                  ],
+                  [
+                    307.73,
+                    201.31
+                  ],
+                  [
+                    309.78,
+                    200.97
+                  ],
+                  [
+                    311.84,
+                    200.62
+                  ],
+                  [
+                    313.89,
+                    200.28
+                  ],
+                  [
+                    315.97,
+                    199.93
+                  ],
+                  [
+                    318.05,
+                    199.58
+                  ],
+                  [
+                    320.13,
+                    199.24
+                  ],
+                  [
+                    322.18,
+                    198.9
+                  ],
+                  [
+                    324.24,
+                    198.59
+                  ],
+                  [
+                    326.29,
+                    198.25
+                  ],
+                  [
+                    328.34,
+                    197.91
+                  ],
+                  [
+                    330.4,
+                    197.56
+                  ],
+                  [
+                    332.45,
+                    197.22
+                  ],
+                  [
+                    334.53,
+                    196.87
+                  ],
+                  [
+                    336.61,
+                    196.54
+                  ],
+                  [
+                    338.69,
+                    196.19
+                  ],
+                  [
+                    340.74,
+                    195.85
+                  ],
+                  [
+                    342.8,
+                    195.5
+                  ],
+                  [
+                    344.85,
+                    195.16
+                  ],
+                  [
+                    346.91,
+                    194.82
+                  ],
+                  [
+                    348.96,
+                    194.47
+                  ],
+                  [
+                    351.02,
+                    194.13
+                  ],
+                  [
+                    353.1,
+                    193.78
+                  ],
+                  [
+                    355.18,
+                    193.43
+                  ],
+                  [
+                    357.26,
+                    193.09
+                  ],
+                  [
+                    359.31,
+                    192.76
+                  ],
+                  [
+                    361.37,
+                    192.44
+                  ],
+                  [
+                    363.42,
+                    192.11
+                  ],
+                  [
+                    365.5,
+                    191.77
+                  ],
+                  [
+                    367.58,
+                    191.42
+                  ],
+                  [
+                    369.66,
+                    191.07
+                  ],
+                  [
+                    371.71,
+                    190.73
+                  ],
+                  [
+                    373.77,
+                    190.38
+                  ],
+                  [
+                    375.82,
+                    190.04
+                  ]
+                ]
+              },
+              {
+                "spline": [
+                  [
+                    424.96,
+                    256.13
+                  ],
+                  [
+                    427.01,
+                    256.58
+                  ],
+                  [
+                    429.07,
+                    257.02
+                  ],
+                  [
+                    431.12,
+                    257.47
+                  ],
+                  [
+                    433.2,
+                    257.92
+                  ],
+                  [
+                    435.28,
+                    258.38
+                  ],
+                  [
+                    437.36,
+                    258.84
+                  ],
+                  [
+                    439.41,
+                    259.3
+                  ],
+                  [
+                    441.46,
+                    259.77
+                  ],
+                  [
+                    443.52,
+                    260.22
+                  ],
+                  [
+                    445.6,
+                    260.67
+                  ],
+                  [
+                    447.68,
+                    261.1
+                  ],
+                  [
+                    449.76,
+                    261.55
+                  ],
+                  [
+                    451.82,
+                    262
+                  ],
+                  [
+                    453.87,
+                    262.47
+                  ],
+                  [
+                    455.93,
+                    262.93
+                  ],
+                  [
+                    457.98,
+                    263.39
+                  ],
+                  [
+                    460.04,
+                    263.84
+                  ],
+                  [
+                    462.09,
+                    264.3
+                  ],
+                  [
+                    464.17,
+                    264.76
+                  ],
+                  [
+                    466.25,
+                    265.23
+                  ],
+                  [
+                    468.33,
+                    265.68
+                  ],
+                  [
+                    470.38,
+                    266.13
+                  ],
+                  [
+                    472.44,
+                    266.56
+                  ],
+                  [
+                    474.49,
+                    267.01
+                  ],
+                  [
+                    476.55,
+                    267.46
+                  ],
+                  [
+                    478.6,
+                    267.93
+                  ],
+                  [
+                    480.65,
+                    268.39
+                  ],
+                  [
+                    482.73,
+                    268.85
+                  ],
+                  [
+                    484.81,
+                    269.3
+                  ],
+                  [
+                    486.89,
+                    269.76
+                  ],
+                  [
+                    488.94,
+                    270.22
+                  ],
+                  [
+                    490.99,
+                    270.69
+                  ],
+                  [
+                    493.05,
+                    271.14
+                  ],
+                  [
+                    495.13,
+                    271.59
+                  ],
+                  [
+                    497.21,
+                    272.02
+                  ],
+                  [
+                    499.29,
+                    272.47
+                  ],
+                  [
+                    501.35,
+                    272.92
+                  ],
+                  [
+                    503.4,
+                    273.39
+                  ],
+                  [
+                    505.46,
+                    273.85
+                  ],
+                  [
+                    507.51,
+                    274.31
+                  ],
+                  [
+                    509.57,
+                    274.76
+                  ],
+                  [
+                    511.62,
+                    275.22
+                  ],
+                  [
+                    513.7,
+                    275.68
+                  ],
+                  [
+                    515.78,
+                    276.15
+                  ],
+                  [
+                    517.86,
+                    276.6
+                  ],
+                  [
+                    519.91,
+                    277.05
+                  ],
+                  [
+                    521.97,
+                    277.49
+                  ],
+                  [
+                    524.02,
+                    277.93
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "consoleErrors": []
+}

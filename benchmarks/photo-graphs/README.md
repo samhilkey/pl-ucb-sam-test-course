@@ -9,3 +9,5 @@ The [completed Step 1 baseline experiment](experiment-01/REPORT.md) runs all 33 
 | [Programmatic plot fixtures](synthetic/README.md) | Twenty-four code-drawn plots with controlled camera effects | Known centerlines, features, and projective transforms |
 
 Use the paper-style collection for the requested appearance of paper homework. Use the programmatic plots for controlled geometry checks. Keep real student photos for evaluating whether improvements transfer to actual handwriting and camera conditions.
+
+The [experiment 02 branch-preservation comparison](experiment-02/REPORT.md) replays the same 33 images after preserving all traced branches. Its [paired gallery](experiment-02/gallery.html) shows original and updated canvases. Results and source hashes remain separate from the production fix.

@@ -1,0 +1,1069 @@
+{
+  "completed_cases": 33,
+  "groups": {
+    "controlled": {
+      "images": 24,
+      "drawings": 6,
+      "completed": 24,
+      "fidelity_evaluable": 24,
+      "fidelity_pass": 20,
+      "rendering_pass": 24,
+      "topology_pass": 20
+    },
+    "paper-style": {
+      "images": 3,
+      "drawings": 3,
+      "completed": 3,
+      "fidelity_evaluable": 3,
+      "fidelity_pass": 2,
+      "rendering_pass": 3,
+      "topology_pass": 3
+    },
+    "real": {
+      "images": 6,
+      "drawings": 6,
+      "completed": 6,
+      "fidelity_evaluable": 5,
+      "fidelity_pass": 1,
+      "rendering_pass": 6,
+      "topology_pass": 3
+    }
+  },
+  "timings": {
+    "image_load_wall_ms": {
+      "median": 29.0,
+      "p95": 33.4,
+      "max": 48.0
+    },
+    "extraction_ms": {
+      "median": 23.899999976158142,
+      "p95": 33.68000001907349,
+      "max": 54.30000001192093
+    },
+    "fit_ms": {
+      "median": 23.899999976158142,
+      "p95": 33.02000000476837,
+      "max": 33.89999997615814
+    },
+    "processing_ms": {
+      "median": 47.80000001192093,
+      "p95": 57.97999999523163,
+      "max": 78.0
+    },
+    "transfer_ms": {
+      "median": 1.2000000476837158,
+      "p95": 1.3399999976158141,
+      "max": 1.5
+    }
+  },
+  "status": {
+    "completed": 33
+  },
+  "metrics": [
+    {
+      "id": "controlled--01-line--clean",
+      "photo": {
+        "reference_to_output_p95": 0.8485237970125591,
+        "output_to_reference_p95": 0.8034137590510632,
+        "bidirectional_p95": 0.8485237970125591,
+        "reference_coverage": 1.0,
+        "max_distance": 2.5576367055805034
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 2.7110822773597056,
+        "output_to_reference_p95": 3.160274867117537,
+        "bidirectional_p95": 3.160274867117537,
+        "reference_coverage": 1.0,
+        "max_distance": 7.759536309499028
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.025978151741290423,
+        "output_to_reference_p95": 0.02597665638971609,
+        "bidirectional_p95": 0.025978151741290423,
+        "reference_coverage": 1.0,
+        "max_distance": 0.02788256111733082
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 0.8619242180358895,
+        "output_to_reference_p95": 0.8095719246511069,
+        "bidirectional_p95": 0.8619242180358895,
+        "reference_coverage": 1.0,
+        "max_distance": 2.5638645902768635
+      }
+    },
+    {
+      "id": "controlled--01-line--perspective",
+      "photo": {
+        "reference_to_output_p95": 1.1944869254008925,
+        "output_to_reference_p95": 1.191121155058631,
+        "bidirectional_p95": 1.1944869254008925,
+        "reference_coverage": 1.0,
+        "max_distance": 2.4960292661937
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 1.1777426397613773,
+        "output_to_reference_p95": 1.1496344895353616,
+        "bidirectional_p95": 1.1777426397613773,
+        "reference_coverage": 1.0,
+        "max_distance": 2.845597550762736
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.023339686641900975,
+        "output_to_reference_p95": 0.023339983773004676,
+        "bidirectional_p95": 0.023339983773004676,
+        "reference_coverage": 1.0,
+        "max_distance": 0.03129565087025959
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.1899338650390456,
+        "output_to_reference_p95": 1.1871114113968055,
+        "bidirectional_p95": 1.1899338650390456,
+        "reference_coverage": 1.0,
+        "max_distance": 2.4982416706702946
+      }
+    },
+    {
+      "id": "controlled--01-line--shadow",
+      "photo": {
+        "reference_to_output_p95": 1.1107620832791938,
+        "output_to_reference_p95": 1.1004413422203345,
+        "bidirectional_p95": 1.1107620832791938,
+        "reference_coverage": 1.0,
+        "max_distance": 2.6566236764613516
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 1.4686245649037428,
+        "output_to_reference_p95": 1.4841088215183302,
+        "bidirectional_p95": 1.4841088215183302,
+        "reference_coverage": 1.0,
+        "max_distance": 5.116723749862037
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.01671079065254899,
+        "output_to_reference_p95": 0.016710767869549958,
+        "bidirectional_p95": 0.01671079065254899,
+        "reference_coverage": 1.0,
+        "max_distance": 0.022167611350075913
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.115569277761521,
+        "output_to_reference_p95": 1.0931481461491581,
+        "bidirectional_p95": 1.115569277761521,
+        "reference_coverage": 1.0,
+        "max_distance": 2.655767320772381
+      }
+    },
+    {
+      "id": "controlled--01-line--blur-dim",
+      "photo": {
+        "reference_to_output_p95": 1.059757654517719,
+        "output_to_reference_p95": 1.0472364664109168,
+        "bidirectional_p95": 1.059757654517719,
+        "reference_coverage": 1.0,
+        "max_distance": 2.0517343549053493
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 1.0683635207847375,
+        "output_to_reference_p95": 1.0662726147212063,
+        "bidirectional_p95": 1.0683635207847375,
+        "reference_coverage": 1.0,
+        "max_distance": 4.772843762089839
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.02041289558155594,
+        "output_to_reference_p95": 0.020412418980919132,
+        "bidirectional_p95": 0.02041289558155594,
+        "reference_coverage": 1.0,
+        "max_distance": 0.02358779463618986
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.0566579086332213,
+        "output_to_reference_p95": 1.0500928930415006,
+        "bidirectional_p95": 1.0566579086332213,
+        "reference_coverage": 1.0,
+        "max_distance": 2.0492753923937324
+      }
+    },
+    {
+      "id": "controlled--02-parabola--clean",
+      "photo": {
+        "reference_to_output_p95": 1.4808650221132766,
+        "output_to_reference_p95": 1.4046959685032392,
+        "bidirectional_p95": 1.4808650221132766,
+        "reference_coverage": 1.0,
+        "max_distance": 4.273949554182539
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 3.120612156174617,
+        "output_to_reference_p95": 3.9338957990832895,
+        "bidirectional_p95": 3.9338957990832895,
+        "reference_coverage": 1.0,
+        "max_distance": 10.008180381018434
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.1490294683556937,
+        "output_to_reference_p95": 0.14903545437120774,
+        "bidirectional_p95": 0.14903545437120774,
+        "reference_coverage": 1.0,
+        "max_distance": 0.17090545367674032
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.470851654141575,
+        "output_to_reference_p95": 1.3926842237675414,
+        "bidirectional_p95": 1.470851654141575,
+        "reference_coverage": 1.0,
+        "max_distance": 4.300703865100938
+      }
+    },
+    {
+      "id": "controlled--02-parabola--perspective",
+      "photo": {
+        "reference_to_output_p95": 1.1229026700987161,
+        "output_to_reference_p95": 1.0539328218470987,
+        "bidirectional_p95": 1.1229026700987161,
+        "reference_coverage": 1.0,
+        "max_distance": 5.008271615493846
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.875066392353256,
+        "output_to_reference_p95": 0.8634388561042099,
+        "bidirectional_p95": 0.875066392353256,
+        "reference_coverage": 1.0,
+        "max_distance": 2.323444752275663
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.15195723003025458,
+        "output_to_reference_p95": 0.1520091397577723,
+        "bidirectional_p95": 0.1520091397577723,
+        "reference_coverage": 1.0,
+        "max_distance": 0.17277257039437985
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.1553550288769303,
+        "output_to_reference_p95": 1.087615352264,
+        "bidirectional_p95": 1.1553550288769303,
+        "reference_coverage": 1.0,
+        "max_distance": 5.000590282225051
+      }
+    },
+    {
+      "id": "controlled--02-parabola--shadow",
+      "photo": {
+        "reference_to_output_p95": 1.3034640885102924,
+        "output_to_reference_p95": 1.2472227569360013,
+        "bidirectional_p95": 1.3034640885102924,
+        "reference_coverage": 1.0,
+        "max_distance": 2.55091615842486
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 1.0147423927287245,
+        "output_to_reference_p95": 1.0115716954495417,
+        "bidirectional_p95": 1.0147423927287245,
+        "reference_coverage": 1.0,
+        "max_distance": 2.281487869025932
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.15653004935782586,
+        "output_to_reference_p95": 0.15651904842995656,
+        "bidirectional_p95": 0.15653004935782586,
+        "reference_coverage": 1.0,
+        "max_distance": 0.17731173084481608
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.3007278142689376,
+        "output_to_reference_p95": 1.2527378031382346,
+        "bidirectional_p95": 1.3007278142689376,
+        "reference_coverage": 1.0,
+        "max_distance": 2.539763475368738
+      }
+    },
+    {
+      "id": "controlled--02-parabola--blur-dim",
+      "photo": {
+        "reference_to_output_p95": 1.1568384492897827,
+        "output_to_reference_p95": 1.1325373332649964,
+        "bidirectional_p95": 1.1568384492897827,
+        "reference_coverage": 1.0,
+        "max_distance": 2.3105533812186767
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.7618315467404064,
+        "output_to_reference_p95": 0.7520724407098659,
+        "bidirectional_p95": 0.7618315467404064,
+        "reference_coverage": 1.0,
+        "max_distance": 2.2471057256867195
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.15531274971074657,
+        "output_to_reference_p95": 0.15532157472704575,
+        "bidirectional_p95": 0.15532157472704575,
+        "reference_coverage": 1.0,
+        "max_distance": 0.1769979212346955
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.1709453278118322,
+        "output_to_reference_p95": 1.1345175459130603,
+        "bidirectional_p95": 1.1709453278118322,
+        "reference_coverage": 1.0,
+        "max_distance": 2.3052664012614406
+      }
+    },
+    {
+      "id": "controlled--03-shifted-parabola--clean",
+      "photo": {
+        "reference_to_output_p95": 0.8913859917618739,
+        "output_to_reference_p95": 0.8597722161313383,
+        "bidirectional_p95": 0.8913859917618739,
+        "reference_coverage": 1.0,
+        "max_distance": 4.140988108949286
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.7978959383834338,
+        "output_to_reference_p95": 0.7870641643293486,
+        "bidirectional_p95": 0.7978959383834338,
+        "reference_coverage": 1.0,
+        "max_distance": 2.6116102027113786
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.12445645294551957,
+        "output_to_reference_p95": 0.1244234944954026,
+        "bidirectional_p95": 0.12445645294551957,
+        "reference_coverage": 1.0,
+        "max_distance": 0.14934748011929624
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 0.9135380427157676,
+        "output_to_reference_p95": 0.9012768380954062,
+        "bidirectional_p95": 0.9135380427157676,
+        "reference_coverage": 1.0,
+        "max_distance": 4.106584637450412
+      }
+    },
+    {
+      "id": "controlled--03-shifted-parabola--perspective",
+      "photo": {
+        "reference_to_output_p95": 0.8606727960971539,
+        "output_to_reference_p95": 0.8479815455884566,
+        "bidirectional_p95": 0.8606727960971539,
+        "reference_coverage": 1.0,
+        "max_distance": 4.7100456832706525
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.79203637872908,
+        "output_to_reference_p95": 0.7777389712711333,
+        "bidirectional_p95": 0.79203637872908,
+        "reference_coverage": 1.0,
+        "max_distance": 1.905003230155479
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.12765511112126568,
+        "output_to_reference_p95": 0.1276021074249591,
+        "bidirectional_p95": 0.12765511112126568,
+        "reference_coverage": 1.0,
+        "max_distance": 0.16318163213664472
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 0.86909259444128,
+        "output_to_reference_p95": 0.8603938311882728,
+        "bidirectional_p95": 0.86909259444128,
+        "reference_coverage": 1.0,
+        "max_distance": 4.704100383600744
+      }
+    },
+    {
+      "id": "controlled--03-shifted-parabola--shadow",
+      "photo": {
+        "reference_to_output_p95": 0.7797433333829343,
+        "output_to_reference_p95": 0.7634514031644377,
+        "bidirectional_p95": 0.7797433333829343,
+        "reference_coverage": 1.0,
+        "max_distance": 3.441445995926459
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.7565797980476751,
+        "output_to_reference_p95": 0.7433949469903616,
+        "bidirectional_p95": 0.7565797980476751,
+        "reference_coverage": 1.0,
+        "max_distance": 2.6116102027113786
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.1266943911845552,
+        "output_to_reference_p95": 0.1265433502464676,
+        "bidirectional_p95": 0.1266943911845552,
+        "reference_coverage": 1.0,
+        "max_distance": 0.14887532550224877
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 0.8496730962273918,
+        "output_to_reference_p95": 0.8231980164105769,
+        "bidirectional_p95": 0.8496730962273918,
+        "reference_coverage": 1.0,
+        "max_distance": 3.4280882485653374
+      }
+    },
+    {
+      "id": "controlled--03-shifted-parabola--blur-dim",
+      "photo": {
+        "reference_to_output_p95": 0.9316178568780203,
+        "output_to_reference_p95": 0.9167937891417198,
+        "bidirectional_p95": 0.9316178568780203,
+        "reference_coverage": 1.0,
+        "max_distance": 3.9955473428545027
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.9123250225583024,
+        "output_to_reference_p95": 0.9004290127539212,
+        "bidirectional_p95": 0.9123250225583024,
+        "reference_coverage": 1.0,
+        "max_distance": 2.29091461697598
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.11517266725791736,
+        "output_to_reference_p95": 0.11517239181678095,
+        "bidirectional_p95": 0.11517266725791736,
+        "reference_coverage": 1.0,
+        "max_distance": 0.13943438410206152
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.024416306545698,
+        "output_to_reference_p95": 1.0048148304189588,
+        "bidirectional_p95": 1.024416306545698,
+        "reference_coverage": 1.0,
+        "max_distance": 4.029153661854707
+      }
+    },
+    {
+      "id": "controlled--04-absolute-value--clean",
+      "photo": {
+        "reference_to_output_p95": 1.1496610810610484,
+        "output_to_reference_p95": 1.1307457817256696,
+        "bidirectional_p95": 1.1496610810610484,
+        "reference_coverage": 1.0,
+        "max_distance": 2.295922822754826
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.8369398827515718,
+        "output_to_reference_p95": 0.8271879334070743,
+        "bidirectional_p95": 0.8369398827515718,
+        "reference_coverage": 1.0,
+        "max_distance": 2.5730451804670964
+      },
+      "rendering": {
+        "reference_to_output_p95": 2.3643435199042035,
+        "output_to_reference_p95": 2.412317413676811,
+        "bidirectional_p95": 2.412317413676811,
+        "reference_coverage": 0.9742765273311897,
+        "max_distance": 3.324224626076187
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 3.127002301104564,
+        "output_to_reference_p95": 3.250633198817848,
+        "bidirectional_p95": 3.250633198817848,
+        "reference_coverage": 1.0,
+        "max_distance": 4.763782451609029
+      }
+    },
+    {
+      "id": "controlled--04-absolute-value--perspective",
+      "photo": {
+        "reference_to_output_p95": 1.2687920451726673,
+        "output_to_reference_p95": 1.2495835783310845,
+        "bidirectional_p95": 1.2687920451726673,
+        "reference_coverage": 1.0,
+        "max_distance": 2.2448873542972785
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.9052951680824315,
+        "output_to_reference_p95": 0.894328271261834,
+        "bidirectional_p95": 0.9052951680824315,
+        "reference_coverage": 1.0,
+        "max_distance": 1.9611285885396528
+      },
+      "rendering": {
+        "reference_to_output_p95": 1.3362549282602427,
+        "output_to_reference_p95": 1.3424286102057417,
+        "bidirectional_p95": 1.3424286102057417,
+        "reference_coverage": 0.9923161361141603,
+        "max_distance": 3.0695887164211877
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.615692898927494,
+        "output_to_reference_p95": 1.5532664905351947,
+        "bidirectional_p95": 1.615692898927494,
+        "reference_coverage": 1.0,
+        "max_distance": 3.5930400418459616
+      }
+    },
+    {
+      "id": "controlled--04-absolute-value--shadow",
+      "photo": {
+        "reference_to_output_p95": 1.1014775500692247,
+        "output_to_reference_p95": 1.0846889151820904,
+        "bidirectional_p95": 1.1014775500692247,
+        "reference_coverage": 1.0,
+        "max_distance": 1.970779439321905
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.7545246736623409,
+        "output_to_reference_p95": 0.748667372317126,
+        "bidirectional_p95": 0.7545246736623409,
+        "reference_coverage": 1.0,
+        "max_distance": 2.1364409553934838
+      },
+      "rendering": {
+        "reference_to_output_p95": 2.3350124436077615,
+        "output_to_reference_p95": 2.4032055200925884,
+        "bidirectional_p95": 2.4032055200925884,
+        "reference_coverage": 0.9753747323340471,
+        "max_distance": 3.29822440420872
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 3.164745687773954,
+        "output_to_reference_p95": 3.2492763206468536,
+        "bidirectional_p95": 3.2492763206468536,
+        "reference_coverage": 1.0,
+        "max_distance": 4.93596208153925
+      }
+    },
+    {
+      "id": "controlled--04-absolute-value--blur-dim",
+      "photo": {
+        "reference_to_output_p95": 1.2198530465582986,
+        "output_to_reference_p95": 1.1898393202639017,
+        "bidirectional_p95": 1.2198530465582986,
+        "reference_coverage": 1.0,
+        "max_distance": 2.3466438952243815
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 0.9159600938675354,
+        "output_to_reference_p95": 0.9009329637629149,
+        "bidirectional_p95": 0.9159600938675354,
+        "reference_coverage": 1.0,
+        "max_distance": 3.269151145052614
+      },
+      "rendering": {
+        "reference_to_output_p95": 2.183878158913617,
+        "output_to_reference_p95": 2.227707982919199,
+        "bidirectional_p95": 2.227707982919199,
+        "reference_coverage": 0.9861554845580405,
+        "max_distance": 3.2972267894093337
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 2.5327341323669508,
+        "output_to_reference_p95": 2.6126513735745895,
+        "bidirectional_p95": 2.6126513735745895,
+        "reference_coverage": 1.0,
+        "max_distance": 4.003907666136709
+      }
+    },
+    {
+      "id": "controlled--05-cubic--clean",
+      "photo": {
+        "reference_to_output_p95": 0.8683696459243635,
+        "output_to_reference_p95": 0.8738027375751773,
+        "bidirectional_p95": 0.8738027375751773,
+        "reference_coverage": 1.0,
+        "max_distance": 12.14130319896095
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 1.632821484234054,
+        "output_to_reference_p95": 1.57039566349113,
+        "bidirectional_p95": 1.632821484234054,
+        "reference_coverage": 1.0,
+        "max_distance": 3.8981052897697612
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.46543344428801137,
+        "output_to_reference_p95": 0.4654405248575337,
+        "bidirectional_p95": 0.4654405248575337,
+        "reference_coverage": 1.0,
+        "max_distance": 0.49151719082086803
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.0463362807801435,
+        "output_to_reference_p95": 1.066991950658575,
+        "bidirectional_p95": 1.066991950658575,
+        "reference_coverage": 1.0,
+        "max_distance": 12.12862186738148
+      }
+    },
+    {
+      "id": "controlled--05-cubic--perspective",
+      "photo": {
+        "reference_to_output_p95": 1.5701659470347125,
+        "output_to_reference_p95": 1.5710716531616225,
+        "bidirectional_p95": 1.5710716531616225,
+        "reference_coverage": 1.0,
+        "max_distance": 9.60485837462136
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 1.4838132339904937,
+        "output_to_reference_p95": 1.460897694547299,
+        "bidirectional_p95": 1.4838132339904937,
+        "reference_coverage": 1.0,
+        "max_distance": 6.718211551554014
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.4344120810276442,
+        "output_to_reference_p95": 0.43419736954266486,
+        "bidirectional_p95": 0.4344120810276442,
+        "reference_coverage": 1.0,
+        "max_distance": 0.5236888063154483
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.7017444028161106,
+        "output_to_reference_p95": 1.6943590471115761,
+        "bidirectional_p95": 1.7017444028161106,
+        "reference_coverage": 1.0,
+        "max_distance": 9.615404929313208
+      }
+    },
+    {
+      "id": "controlled--05-cubic--shadow",
+      "photo": {
+        "reference_to_output_p95": 0.9071193636501549,
+        "output_to_reference_p95": 0.9155485841924296,
+        "bidirectional_p95": 0.9155485841924296,
+        "reference_coverage": 1.0,
+        "max_distance": 6.139494724398311
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 1.3084794217899747,
+        "output_to_reference_p95": 1.2559171548968655,
+        "bidirectional_p95": 1.3084794217899747,
+        "reference_coverage": 1.0,
+        "max_distance": 3.8981052897697612
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.45084318142473645,
+        "output_to_reference_p95": 0.45080466704886224,
+        "bidirectional_p95": 0.45084318142473645,
+        "reference_coverage": 1.0,
+        "max_distance": 0.47419953638423834
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.1833537723706464,
+        "output_to_reference_p95": 1.2109122902298963,
+        "bidirectional_p95": 1.2109122902298963,
+        "reference_coverage": 1.0,
+        "max_distance": 6.147993593021668
+      }
+    },
+    {
+      "id": "controlled--05-cubic--blur-dim",
+      "photo": {
+        "reference_to_output_p95": 2.1560831060199197,
+        "output_to_reference_p95": 2.1865799606548255,
+        "bidirectional_p95": 2.1865799606548255,
+        "reference_coverage": 1.0,
+        "max_distance": 5.2637053432325045
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 1.1613724916508132,
+        "output_to_reference_p95": 1.1157667200508885,
+        "bidirectional_p95": 1.1613724916508132,
+        "reference_coverage": 1.0,
+        "max_distance": 3.415903227767666
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.4375245850212036,
+        "output_to_reference_p95": 0.43752901037167613,
+        "bidirectional_p95": 0.43752901037167613,
+        "reference_coverage": 1.0,
+        "max_distance": 0.5031953632280765
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 2.143070415982562,
+        "output_to_reference_p95": 2.173520629979821,
+        "bidirectional_p95": 2.173520629979821,
+        "reference_coverage": 1.0,
+        "max_distance": 5.259209100330385
+      }
+    },
+    {
+      "id": "controlled--06-reciprocal--clean",
+      "photo": {
+        "reference_to_output_p95": 425.4509518005331,
+        "output_to_reference_p95": 0.9238633351602481,
+        "bidirectional_p95": 425.4509518005331,
+        "reference_coverage": 0.5004135649296939,
+        "max_distance": 447.06682097822386
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 425.51142416490507,
+        "output_to_reference_p95": 0.7856319008795649,
+        "bidirectional_p95": 425.51142416490507,
+        "reference_coverage": 0.5004135649296939,
+        "max_distance": 447.0826180006111
+      },
+      "rendering": {
+        "reference_to_output_p95": 1.107356351353071,
+        "output_to_reference_p95": 1.107029654012122,
+        "bidirectional_p95": 1.107356351353071,
+        "reference_coverage": 1.0,
+        "max_distance": 1.2194790745531245
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 425.40921584702835,
+        "output_to_reference_p95": 1.4432559642398,
+        "bidirectional_p95": 425.40921584702835,
+        "reference_coverage": 0.5004135649296939,
+        "max_distance": 447.0893513937272
+      }
+    },
+    {
+      "id": "controlled--06-reciprocal--perspective",
+      "photo": {
+        "reference_to_output_p95": 384.32263121815595,
+        "output_to_reference_p95": 0.9179816167354158,
+        "bidirectional_p95": 384.32263121815595,
+        "reference_coverage": 0.5075901328273245,
+        "max_distance": 409.43832374172126
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 384.1365129954411,
+        "output_to_reference_p95": 0.7269786054927353,
+        "bidirectional_p95": 384.1365129954411,
+        "reference_coverage": 0.5075901328273245,
+        "max_distance": 409.1815786916879
+      },
+      "rendering": {
+        "reference_to_output_p95": 1.11702347254104,
+        "output_to_reference_p95": 1.116652691661265,
+        "bidirectional_p95": 1.11702347254104,
+        "reference_coverage": 1.0,
+        "max_distance": 1.218897490318441
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 384.2857706103088,
+        "output_to_reference_p95": 1.3331426609774037,
+        "bidirectional_p95": 384.2857706103088,
+        "reference_coverage": 0.5075901328273245,
+        "max_distance": 409.3431147216478
+      }
+    },
+    {
+      "id": "controlled--06-reciprocal--shadow",
+      "photo": {
+        "reference_to_output_p95": 425.5418767577945,
+        "output_to_reference_p95": 0.9609613576570649,
+        "bidirectional_p95": 425.5418767577945,
+        "reference_coverage": 0.5004135649296939,
+        "max_distance": 447.15005648630677
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 425.51142416490507,
+        "output_to_reference_p95": 0.6788190101206849,
+        "bidirectional_p95": 425.51142416490507,
+        "reference_coverage": 0.5004135649296939,
+        "max_distance": 447.0826180006111
+      },
+      "rendering": {
+        "reference_to_output_p95": 1.0903656242546795,
+        "output_to_reference_p95": 1.0899846238569209,
+        "bidirectional_p95": 1.0903656242546795,
+        "reference_coverage": 1.0,
+        "max_distance": 1.2030550182385809
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 425.50130387251164,
+        "output_to_reference_p95": 1.328422873133894,
+        "bidirectional_p95": 425.50130387251164,
+        "reference_coverage": 0.5004135649296939,
+        "max_distance": 447.17673369477365
+      }
+    },
+    {
+      "id": "controlled--06-reciprocal--blur-dim",
+      "photo": {
+        "reference_to_output_p95": 382.47659514397446,
+        "output_to_reference_p95": 0.7980754892493113,
+        "bidirectional_p95": 382.47659514397446,
+        "reference_coverage": 0.4950045413260672,
+        "max_distance": 403.2698411330108
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 382.44951547467156,
+        "output_to_reference_p95": 0.6294425329048441,
+        "bidirectional_p95": 382.44951547467156,
+        "reference_coverage": 0.4950045413260672,
+        "max_distance": 403.16299737721283
+      },
+      "rendering": {
+        "reference_to_output_p95": 1.0721061958220743,
+        "output_to_reference_p95": 1.0728643445040165,
+        "bidirectional_p95": 1.0728643445040165,
+        "reference_coverage": 1.0,
+        "max_distance": 1.1866934772166857
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 382.4639855915706,
+        "output_to_reference_p95": 1.2492784645709978,
+        "bidirectional_p95": 382.4639855915706,
+        "reference_coverage": 0.4950045413260672,
+        "max_distance": 403.27552202883203
+      }
+    },
+    {
+      "id": "paper--01-parabola-plain-paper",
+      "photo": {
+        "reference_to_output_p95": 4.77711171058989,
+        "output_to_reference_p95": 4.823360543341314,
+        "bidirectional_p95": 4.823360543341314,
+        "reference_coverage": 1.0,
+        "max_distance": 11.538271272114615
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 5.86510044959257,
+        "output_to_reference_p95": 5.8832574956077845,
+        "bidirectional_p95": 5.8832574956077845,
+        "reference_coverage": 1.0,
+        "max_distance": 6.366601534137819
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.2760517577479467,
+        "output_to_reference_p95": 0.2759117532709298,
+        "bidirectional_p95": 0.2760517577479467,
+        "reference_coverage": 1.0,
+        "max_distance": 0.3084213243277932
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 5.020958008266323,
+        "output_to_reference_p95": 5.043303482147412,
+        "bidirectional_p95": 5.043303482147412,
+        "reference_coverage": 1.0,
+        "max_distance": 11.574983823341116
+      }
+    },
+    {
+      "id": "paper--02-v-shaped-notebook-paper",
+      "photo": {
+        "reference_to_output_p95": 5.031066116750331,
+        "output_to_reference_p95": 4.943485879271922,
+        "bidirectional_p95": 5.031066116750331,
+        "reference_coverage": 1.0,
+        "max_distance": 7.248753740622381
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 3.3814341009070774,
+        "output_to_reference_p95": 3.354790883575957,
+        "bidirectional_p95": 3.3814341009070774,
+        "reference_coverage": 1.0,
+        "max_distance": 3.9611869224873466
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.7064712129695468,
+        "output_to_reference_p95": 0.7016664576590692,
+        "bidirectional_p95": 0.7064712129695468,
+        "reference_coverage": 1.0,
+        "max_distance": 2.0368285580911647
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 5.533001795706084,
+        "output_to_reference_p95": 5.495154529109698,
+        "bidirectional_p95": 5.533001795706084,
+        "reference_coverage": 1.0,
+        "max_distance": 7.270680295074057
+      }
+    },
+    {
+      "id": "paper--03-cubic-graph-paper",
+      "photo": {
+        "reference_to_output_p95": 12.111566748454646,
+        "output_to_reference_p95": 11.806124597021569,
+        "bidirectional_p95": 12.111566748454646,
+        "reference_coverage": 0.8873396542108198,
+        "max_distance": 14.742531496914024
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 3.6274963499000705,
+        "output_to_reference_p95": 3.598520114460128,
+        "bidirectional_p95": 3.6274963499000705,
+        "reference_coverage": 1.0,
+        "max_distance": 6.951307411933658
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.5165710498829217,
+        "output_to_reference_p95": 0.5165780240088679,
+        "bidirectional_p95": 0.5165780240088679,
+        "reference_coverage": 1.0,
+        "max_distance": 0.6249527695792875
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 12.054012760512459,
+        "output_to_reference_p95": 11.708513909375508,
+        "bidirectional_p95": 12.054012760512459,
+        "reference_coverage": 0.8873396542108198,
+        "max_distance": 14.724556162028277
+      }
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "photo": {
+        "reference_to_output_p95": 161.3721208672913,
+        "output_to_reference_p95": 5.019468467533538,
+        "bidirectional_p95": 161.3721208672913,
+        "reference_coverage": 0.5371621621621622,
+        "max_distance": 162.37908326430994
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 161.54138606400056,
+        "output_to_reference_p95": 5.656236156611782,
+        "bidirectional_p95": 161.54138606400056,
+        "reference_coverage": 0.5371621621621622,
+        "max_distance": 162.7633922000962
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.025137364559936263,
+        "output_to_reference_p95": 0.02513582524246768,
+        "bidirectional_p95": 0.025137364559936263,
+        "reference_coverage": 1.0,
+        "max_distance": 0.029377983596795193
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 161.34587884702495,
+        "output_to_reference_p95": 4.992032997758422,
+        "bidirectional_p95": 161.34587884702495,
+        "reference_coverage": 0.5371621621621622,
+        "max_distance": 162.3570265373982
+      }
+    },
+    {
+      "id": "real--02-conflicting-equation-labels",
+      "photo": {
+        "reference_to_output_p95": 268.95802335647846,
+        "output_to_reference_p95": 12.087051040247117,
+        "bidirectional_p95": 268.95802335647846,
+        "reference_coverage": 0.44373808010171645,
+        "max_distance": 270.7440309258371
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 266.1165389259869,
+        "output_to_reference_p95": 18.317618455365377,
+        "bidirectional_p95": 266.1165389259869,
+        "reference_coverage": 0.41449459631277813,
+        "max_distance": 270.1144177260111
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.17034384956195076,
+        "output_to_reference_p95": 0.170337872282418,
+        "bidirectional_p95": 0.17034384956195076,
+        "reference_coverage": 1.0,
+        "max_distance": 0.4069521633888902
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 268.95900495204825,
+        "output_to_reference_p95": 12.071070155909885,
+        "bidirectional_p95": 268.95900495204825,
+        "reference_coverage": 0.44373808010171645,
+        "max_distance": 270.7681342101796
+      }
+    },
+    {
+      "id": "real--03-line-missing-origin",
+      "photo": {
+        "reference_to_output_p95": 1.9081905204094494,
+        "output_to_reference_p95": 1.8672613600889576,
+        "bidirectional_p95": 1.9081905204094494,
+        "reference_coverage": 1.0,
+        "max_distance": 6.410493912656525
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 3.5845725503613326,
+        "output_to_reference_p95": 3.7111628368486023,
+        "bidirectional_p95": 3.7111628368486023,
+        "reference_coverage": 1.0,
+        "max_distance": 5.846181496779298
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.017300587876569497,
+        "output_to_reference_p95": 0.017339797114265254,
+        "bidirectional_p95": 0.017339797114265254,
+        "reference_coverage": 1.0,
+        "max_distance": 0.02032421014501833
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 1.9133974133507017,
+        "output_to_reference_p95": 1.87490374818582,
+        "bidirectional_p95": 1.9133974133507017,
+        "reference_coverage": 1.0,
+        "max_distance": 6.375245843201667
+      }
+    },
+    {
+      "id": "real--04-piecewise-curved-section",
+      "photo": {
+        "reference_to_output_p95": 297.2977675186341,
+        "output_to_reference_p95": 28.306837439762432,
+        "bidirectional_p95": 297.2977675186341,
+        "reference_coverage": 0.21227364185110664,
+        "max_distance": 336.8055367485068
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 16.623043774714503,
+        "output_to_reference_p95": 22.427741361695883,
+        "bidirectional_p95": 22.427741361695883,
+        "reference_coverage": 0.8501006036217303,
+        "max_distance": 30.525897010566947
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.02908529241133681,
+        "output_to_reference_p95": 0.026883206730927072,
+        "bidirectional_p95": 0.02908529241133681,
+        "reference_coverage": 1.0,
+        "max_distance": 0.7041136138849622
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 297.86074901649715,
+        "output_to_reference_p95": 28.353862578850507,
+        "bidirectional_p95": 297.86074901649715,
+        "reference_coverage": 0.2112676056338028,
+        "max_distance": 337.3829292492705
+      }
+    },
+    {
+      "id": "real--05-sparse-points-shadow",
+      "photo": {},
+      "extraction_all_branches": {},
+      "rendering": {
+        "reference_to_output_p95": 0.04074262402984237,
+        "output_to_reference_p95": 0.04073363697918604,
+        "bidirectional_p95": 0.04074262402984237,
+        "reference_coverage": 1.0,
+        "max_distance": 0.06621931936645696
+      },
+      "canvas_photo": {}
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "photo": {
+        "reference_to_output_p95": 21.016667762723646,
+        "output_to_reference_p95": 18.280309490925323,
+        "bidirectional_p95": 21.016667762723646,
+        "reference_coverage": 0.6875502008032128,
+        "max_distance": 49.66946220214605
+      },
+      "extraction_all_branches": {
+        "reference_to_output_p95": 12.271883414533947,
+        "output_to_reference_p95": 12.362644597576661,
+        "bidirectional_p95": 12.362644597576661,
+        "reference_coverage": 0.8827309236947791,
+        "max_distance": 13.671293171244551
+      },
+      "rendering": {
+        "reference_to_output_p95": 0.6329964983464784,
+        "output_to_reference_p95": 0.6040547274818069,
+        "bidirectional_p95": 0.6329964983464784,
+        "reference_coverage": 1.0,
+        "max_distance": 1.1280969752578174
+      },
+      "canvas_photo": {
+        "reference_to_output_p95": 21.702198254094263,
+        "output_to_reference_p95": 19.29531655518105,
+        "bidirectional_p95": 21.702198254094263,
+        "reference_coverage": 0.685140562248996,
+        "max_distance": 49.63160197928348
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "cases": 33,
+  "metrics_compared": [
+    "photo_bidirectional_p95_px",
+    "reference_coverage_10px",
+    "rendering_bidirectional_p95_svg_px",
+    "canvas_photo_bidirectional_p95_px",
+    "canvas_reference_coverage_10px",
+    "full_fidelity_pass",
+    "output_branches",
+    "topology_pass"
+  ],
+  "differences": [],
+  "passed": true
+}

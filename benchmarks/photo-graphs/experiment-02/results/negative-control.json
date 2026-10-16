@@ -1,0 +1,5 @@
+{
+  "source_commit": "b360313485032538a70846d3b91cbf443f8abd4b",
+  "served_scripts": 3,
+  "expected_failure": "two-lines: every traced branch reaches the fitter"
+}
