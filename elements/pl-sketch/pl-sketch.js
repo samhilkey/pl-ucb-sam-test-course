@@ -1,35 +1,37 @@
+/* global $ */
 // STAR: registry of live SketchResponse instances, keyed by the element's
 // answers-name. The upstream element keeps `si` as a local variable, so nothing
 // outside this function can reach the running canvas. Our photo workflow has to
 // add a curve to a canvas that is already on screen, so we publish the handle.
-window.SketchInput = window.SketchInput || {};
-window.SketchInput.instances = window.SketchInput.instances || {};
+window.SketchInput = window.SketchInput || {}
+window.SketchInput.instances = window.SketchInput.instances || {}
 
-const starInstances = window.SketchInput.instances;
+const starInstances = window.SketchInput.instances
 
-window.SketchInput = Object.assign(function (id, overlay_solution = false, hand_drawn = false) {
-  function prepareData() {
+window.SketchInput = Object.assign(function (id, overlaySolution = false, handDrawn = false) {
+  function prepareData () {
     // Load SketchResponse
-    const si = new window.sketchresponse.default(
+    const SketchResponse = window.sketchresponse.default
+    const si = new SketchResponse(
       document.getElementById(id + '-si-container'),
       id,
-      config,
-    );
+      config
+    )
 
     // STAR: publish the handle so the hand-drawn workflow can reach this canvas.
-    starInstances[id] = si;
+    starInstances[id] = si
 
     // STAR: the photo route, when the instructor turned it on for this question.
-    if (hand_drawn) {
-      starAddHandDrawnButton(id, si, config);
+    if (handDrawn) {
+      starAddHandDrawnButton(id, si, config)
     }
 
     // Inject overlay toggle button into si-container if it is enabled
-    if (overlay_solution) {
+    if (overlaySolution) {
       si.messageBus.on('ready', function (_) {
-        const container = document.getElementById(id + '-si-container');
-        const buttonWrapper = document.createElement('div');
-        buttonWrapper.className = 'position-relative';
+        const container = document.getElementById(id + '-si-container')
+        const buttonWrapper = document.createElement('div')
+        buttonWrapper.className = 'position-relative'
         buttonWrapper.innerHTML = `
         <button
             type="button"
@@ -42,49 +44,49 @@ window.SketchInput = Object.assign(function (id, overlay_solution = false, hand_
         >
             <i class="bi bi-layers-fill" aria-hidden="true"></i>
         </button>
-      `;
-        container.append(buttonWrapper);
+      `
+        container.append(buttonWrapper)
 
-        const overlayButton = document.getElementById(id + '-overlay-toggle');
+        const overlayButton = document.getElementById(id + '-overlay-toggle')
         overlayButton.addEventListener('click', function () {
-          const overlays = document.querySelectorAll(`#${id}-si-container .overlay`);
+          const overlays = document.querySelectorAll(`#${id}-si-container .overlay`)
           if (overlays.length > 0) {
             overlays.forEach((overlay) => {
-              overlay.style.display = overlay.style.display === 'none' ? 'inherit' : 'none';
-            });
-            const icon = overlayButton.querySelector('i');
+              overlay.style.display = overlay.style.display === 'none' ? 'inherit' : 'none'
+            })
+            const icon = overlayButton.querySelector('i')
             if (icon) {
-              icon.classList.toggle('bi-layers-half');
-              icon.classList.toggle('bi-layers-fill');
+              icon.classList.toggle('bi-layers-half')
+              icon.classList.toggle('bi-layers-fill')
             }
           }
-        });
-      });
+        })
+      })
     }
 
     si.messageBus.on('warnUser', function (_, error) {
-      console.error(error);
-    });
+      console.error(error)
+    })
     const updateState = function () {
-      const siGradeable = JSON.parse(si.getGradeable());
-      const siState = JSON.parse(si.getState());
+      const siGradeable = JSON.parse(si.getGradeable())
+      const siState = JSON.parse(si.getState())
       // State is needed for restoring submissions, gradeable for grading; merge the two dicts to reduce redundancy
-      siState['gradeable'] = siGradeable['data'];
+      siState.gradeable = siGradeable.data
       $('#' + id + '-sketchresponse-submission').val(
-        btoa(unescape(encodeURIComponent(JSON.stringify(siState)))),
-      );
-    };
+        btoa(unescape(encodeURIComponent(JSON.stringify(siState))))
+      )
+    }
     // si.getGradeable exits drawing mode, so only call it upon form submission instead of live updates
-    const questionForm = document.getElementById(id + '-si-container').closest('form');
+    const questionForm = document.getElementById(id + '-si-container').closest('form')
     if (questionForm) {
-      questionForm.addEventListener('submit', updateState);
+      questionForm.addEventListener('submit', updateState)
     }
   }
-  const configData = decodeURIComponent(escape(atob($('#' + id + '-sketchresponse-data').text())));
-  const config = JSON.parse(configData);
+  const configData = decodeURIComponent(escape(atob($('#' + id + '-sketchresponse-data').text())))
+  const config = JSON.parse(configData)
 
-  prepareData();
-}, { instances: starInstances });
+  prepareData()
+}, { instances: starInstances })
 
 // ---------------------------------------------------------------------------
 // STAR: hand-drawn submission route.
@@ -96,13 +98,13 @@ window.SketchInput = Object.assign(function (id, overlay_solution = false, hand_
 
 // `config` has to be passed in: it is a local inside window.SketchInput and is
 // not visible from out here.
-function starAddHandDrawnButton(id, si, config) {
+function starAddHandDrawnButton (id, si, config) {
   const mount = function () {
-    const container = document.getElementById(id + '-si-container');
-    if (!container || document.getElementById(id + '-star-photo-btn')) return;
+    const container = document.getElementById(id + '-si-container')
+    if (!container || document.getElementById(id + '-star-photo-btn')) return
 
-    const wrapper = document.createElement('div');
-    wrapper.className = 'position-relative';
+    const wrapper = document.createElement('div')
+    wrapper.className = 'position-relative'
     wrapper.innerHTML = `
       <button
         type="button"
@@ -113,13 +115,13 @@ function starAddHandDrawnButton(id, si, config) {
       >
         <i class="bi bi-camera-fill" aria-hidden="true"></i>
       </button>
-    `;
-    container.append(wrapper);
+    `
+    container.append(wrapper)
 
-    const panel = document.createElement('div');
-    panel.id = id + '-star-panel';
-    panel.className = 'star-photo-panel';
-    panel.hidden = true;
+    const panel = document.createElement('div')
+    panel.id = id + '-star-panel'
+    panel.className = 'star-photo-panel'
+    panel.hidden = true
     panel.innerHTML = `
       <div class="star-photo-panel-inner">
         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -130,55 +132,55 @@ function starAddHandDrawnButton(id, si, config) {
         </div>
         <div id="${id}-star-ui"></div>
       </div>
-    `;
-    container.append(panel);
+    `
+    container.append(panel)
 
     // Open/close first. If building the capture UI below fails, the button
     // still works and the panel still opens — showing an error the student can
     // report, rather than a button that silently does nothing.
     document.getElementById(id + '-star-photo-btn').addEventListener('click', function () {
-      panel.hidden = false;
-    });
+      panel.hidden = false
+    })
     document.getElementById(id + '-star-close').addEventListener('click', function () {
-      panel.hidden = true;
-    });
+      panel.hidden = true
+    })
 
     // The capture UI builds itself into that mount point. On confirm it hands
-    // back the fitted model, which we sample and place on this canvas.
+    // back every fitted branch, which we sample and place on this canvas.
     try {
       window.StarPhoto.create({
         root: document.getElementById(id + '-star-ui'),
-        config: config,
-        onConfirm: function (model) {
-          const toolId = window.StarFit.curveToolId(config);
+        config,
+        onConfirm: function (models) {
+          const toolId = window.StarFit.curveToolId(config)
           if (!toolId) {
-            return { ok: false, message: 'This question has no editable curve tool to draw into.' };
+            return { ok: false, message: 'This question has no editable curve tool to draw into.' }
           }
           // Fewer control points than we sample for display: the student has to
           // be able to drag these, and a spline interpolates between them.
-          const points = window.StarFit.sampleCurve(model, 16);
           try {
-            window.StarFit.placeCurve(si, config, toolId, points);
+            const curves = models.map((model) => window.StarFit.sampleCurve(model, 16))
+            window.StarFit.placeCurves(si, config, toolId, curves)
           } catch (err) {
-            return { ok: false, message: 'Could not place the curve: ' + err.message };
+            return { ok: false, message: 'Could not place the curve: ' + err.message }
           }
-          panel.hidden = true;
-          return { ok: true, message: 'Curve placed on the canvas.' };
-        },
-      });
+          panel.hidden = true
+          return { ok: true, message: models.length === 1 ? 'Curve placed on the canvas.' : 'All branches placed on the canvas.' }
+        }
+      })
     } catch (err) {
-      console.error('[STAR] could not build the capture UI', err);
+      console.error('[STAR] could not build the capture UI', err)
       document.getElementById(id + '-star-ui').innerHTML =
-        '<p class="text-danger">The photo tool failed to load: ' + err.message + '</p>';
+        '<p class="text-danger">The photo tool failed to load: ' + err.message + '</p>'
     }
-  };
+  }
 
   // Wait for the canvas to finish building before adding to it, the same way
   // the overlay toggle does. Fall back to mounting directly if the bus is
   // missing, so a change upstream cannot silently remove the button.
   if (si && si.messageBus && typeof si.messageBus.on === 'function') {
-    si.messageBus.on('ready', mount);
+    si.messageBus.on('ready', mount)
   } else {
-    mount();
+    mount()
   }
 }
