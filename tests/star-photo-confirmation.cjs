@@ -49,8 +49,8 @@ async function checkConfirmation (page, options) {
   }
   await page.evaluate(() => {
     window.__photoConfirmCalls = 0
-    const original = window.StarFit.placeCurve
-    window.StarFit.placeCurve = function (...args) {
+    const original = window.StarFit.placeCurves
+    window.StarFit.placeCurves = function (...args) {
       window.__photoConfirmCalls++
       return original(...args)
     }

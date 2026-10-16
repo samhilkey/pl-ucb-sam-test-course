@@ -31,8 +31,10 @@ window.StarPhoto = (function () {
     let drag = null
     let refined = null
     let lastHandle = 'X'
-    let tracedPoints = null
-    let currentModel = null
+    let tracedCurves = null
+    let currentModels = null
+    let branchSpecs = []
+    let activeBranch = 0
     let photoLoading = false
     let photoRequest = 0
 
@@ -69,9 +71,12 @@ window.StarPhoto = (function () {
         </div>
 
         <div class="star-fit-box" hidden>
-          <p class="star-fit-eq"></p>
+          <div class="star-fit-eq"></div>
           <p class="star-fit-meta text-muted"></p>
           <div class="star-row">
+            <label class="star-branch-wrap" hidden>
+              Edit branch <select class="star-branch"></select>
+            </label>
             <label>
               Curve type
               <select class="star-family">
@@ -107,18 +112,21 @@ window.StarPhoto = (function () {
     }
 
     function clearFit () {
-      currentModel = null
+      currentModels = null
       q('.star-confirm').disabled = true
       q('.star-fit-eq').textContent = ''
       q('.star-fit-meta').textContent = ''
       q('.star-result').textContent = ''
       q('.star-result').hidden = true
+      drawPhoto()
     }
 
     // A fit belongs to the photo, calibration and trace it was calculated from.
     // Keep extracted points only when changing fit settings, not those inputs.
     function invalidateTrace () {
-      tracedPoints = null
+      tracedCurves = null
+      branchSpecs = []
+      activeBranch = 0
       refined = null
       clearFit()
       q('.star-fit-box').hidden = true
@@ -247,6 +255,22 @@ window.StarPhoto = (function () {
         refined.forEach((st) => {
           x.beginPath()
           st.forEach((p, i) => (i ? x.lineTo(p[0], p[1]) : x.moveTo(p[0], p[1])))
+          x.stroke()
+        })
+      }
+      // Preview each fitted branch separately, in the same calibrated frame.
+      // Starting a new path for every branch keeps gaps disconnected.
+      if (currentModels) {
+        x.strokeStyle = '#d87900'
+        x.lineWidth = 2.5
+        currentModels.forEach((model) => {
+          x.beginPath()
+          window.StarFit.sampleCurve(model).forEach(([gx, gy], i) => {
+            const px = O[0] + uxv[0] * gx + uyv[0] * gy
+            const py = O[1] + uxv[1] * gx + uyv[1] * gy
+            if (i) x.lineTo(px, py)
+            else x.moveTo(px, py)
+          })
           x.stroke()
         })
       }
@@ -517,8 +541,8 @@ window.StarPhoto = (function () {
       const curves = []
       let snap = 0
       let n = 0
-      markup.strokes.forEach((st) => {
-        if (st.length < 3) return
+      markup.strokes.forEach((st, branchIndex) => {
+        if (st.length < 3) throw new Error(`Branch ${branchIndex + 1}: trace a longer curve before reading.`)
         const r = snapStroke(st, R)
         refined.push(r.pts)
         snap += r.snapped
@@ -542,7 +566,8 @@ window.StarPhoto = (function () {
         const out = []
         for (let i = 0; i < pts.length; i += step) out.push(pts[i])
         if (pts.length) out.push(pts[pts.length - 1])
-        if (out.length > 2) curves.push({ points: out })
+        if (out.length < 3) throw new Error(`Branch ${branchIndex + 1}: trace a curve with more distinct x positions.`)
+        curves.push({ points: out })
       })
 
       if (!curves.length) throw new Error('No usable trace. Switch to "Trace the curve" and drag along your line.')
@@ -613,36 +638,63 @@ window.StarPhoto = (function () {
     })
 
     // ---- fitting ------------------------------------------------------------
-    function runFit (spec) {
-      clearFit()
-      if (!tracedPoints || photoLoading) return
-      try {
-        const model = window.StarFit.fit(tracedPoints, spec)
-        if (!model) throw new Error('Could not fit a curve to that trace.')
-
-        q('.star-fit-box').hidden = false
-        q('.star-fit-eq').textContent = model.expr
-        q('.star-fit-meta').textContent =
+    function updateFitControls () {
+      const model = currentModels && currentModels[activeBranch]
+      const spec = branchSpecs[activeBranch]
+      const family = (spec && spec.family) || (model && model.family) || ''
+      q('.star-family').value = family
+      q('.star-degree-wrap').hidden = family !== 'polynomial'
+      q('.star-degree').value = (spec && spec.degree) || (model && model.degree) || 3
+      q('.star-fit-meta').textContent = model
+        ? (currentModels.length > 1 ? `Branch ${activeBranch + 1} · ` : '') +
           `${model.label} · within ${model.rmse.toFixed(3)} units of your drawing on average` +
           (model.poles && model.poles.length
-            ? ` · vertical asymptote${model.poles.length > 1 ? 's' : ''} at ` +
-              model.poles.map((p) => p.toFixed(2)).join(', ')
+            ? ' · vertical asymptotes at ' + model.poles.map((p) => p.toFixed(2)).join(', ')
             : '')
+        : ''
+    }
 
-        // Keep the dropdown in step when the fitter chose for us.
-        if (!spec || !spec.family) q('.star-family').value = model.family
-        const isPoly = model.family === 'polynomial'
-        q('.star-degree-wrap').hidden = !isPoly
-        if (isPoly && model.degree) q('.star-degree').value = model.degree
+    function selectedSpec () {
+      const family = q('.star-family').value
+      return family ? { family, degree: +q('.star-degree').value || 3, constraints: [], traceWeight: 1 } : null
+    }
+
+    function runFit (spec) {
+      if (spec !== undefined) branchSpecs[activeBranch] = spec
+      clearFit()
+      if (!tracedCurves || photoLoading) return
+      try {
+        const models = tracedCurves.map((points, i) => {
+          try {
+            const model = window.StarFit.fit(points, branchSpecs[i])
+            if (!model || window.StarFit.sampleCurve(model, 16).length < 2) {
+              throw new Error('Could not fit a curve to that trace.')
+            }
+            return model
+          } catch (err) {
+            throw new Error(`Branch ${i + 1}: ${err.message || 'Could not fit that trace.'}`)
+          }
+        })
+
+        q('.star-fit-box').hidden = false
+        q('.star-fit-eq').replaceChildren(...models.map((model, i) => {
+          const line = document.createElement('div')
+          line.textContent = (models.length > 1 ? `Branch ${i + 1}: ` : '') + model.expr
+          return line
+        }))
 
         const out = q('.star-result')
         out.hidden = false
-        out.textContent =
+        out.textContent = models.map((model, i) =>
+          (models.length > 1 ? `Branch ${i + 1}\n` : '') +
           'pl-sketch function:  ' + window.StarFit.toPlFunction(model.expr) + '\n' +
           'domain:              ' + model.lo.toFixed(3) + ' to ' + model.hi.toFixed(3) + '\n\n' +
           'sampled curve (' + window.StarFit.sampleCurve(model).length + ' points):\n' +
           window.StarFit.sampleCurve(model).map((p) => `(${p[0]}, ${p[1]})`).join('  ')
-        currentModel = model
+        ).join('\n\n')
+        currentModels = models
+        updateFitControls()
+        drawPhoto()
         q('.star-confirm').disabled = false
       } catch (err) {
         clearFit()
@@ -653,8 +705,8 @@ window.StarPhoto = (function () {
     // The student confirms the curve is a fair transcription of what they drew.
     // Only at that point does anything reach the canvas.
     q('.star-confirm').addEventListener('click', () => {
-      if (!currentModel || photoLoading || q('.star-confirm').disabled) return
-      const res = onConfirm(currentModel)
+      if (!currentModels || photoLoading || q('.star-confirm').disabled) return
+      const res = onConfirm(currentModels)
       setStatus(res && res.message ? res.message : '')
     })
 
@@ -663,14 +715,22 @@ window.StarPhoto = (function () {
       invalidateTrace()
       try {
         const result = markupToGraph()
-        tracedPoints = result.curves[0].points
+        tracedCurves = result.curves.map((curve) => curve.points)
+        branchSpecs = tracedCurves.map(() => null)
+        q('.star-branch-wrap').hidden = tracedCurves.length === 1
+        q('.star-branch').replaceChildren(...tracedCurves.map((_, i) => {
+          const option = document.createElement('option')
+          option.value = i
+          option.textContent = `Branch ${i + 1}`
+          return option
+        }))
         const pct = Math.round(result.snapFraction * 100)
         setStatus(
           pct > 80
             ? `Snapped to ink along ${pct}% of your trace.`
             : `Only ${pct}% of your trace found ink. Widen the search width or trace closer to the curve.`
         )
-        runFit(null) // let the fitter choose the family
+        runFit() // let the fitter choose a family for each branch
       } catch (err) {
         setStatus(err.message || 'Could not read the markup.')
       }
@@ -680,15 +740,17 @@ window.StarPhoto = (function () {
     // describing the problem in words. Same constraint objects the prototype
     // produced, without needing anything to interpret English.
     q('.star-family').addEventListener('change', () => {
-      const fam = q('.star-family').value
-      q('.star-degree-wrap').hidden = fam !== 'polynomial'
-      runFit(fam ? { family: fam, degree: +q('.star-degree').value || 3, constraints: [], traceWeight: 1 } : null)
+      runFit(selectedSpec())
     })
     q('.star-refit').addEventListener('click', () => {
-      const fam = q('.star-family').value
-      runFit(fam ? { family: fam, degree: +q('.star-degree').value || 3, constraints: [], traceWeight: 1 } : null)
+      runFit(selectedSpec())
+    })
+    q('.star-branch').addEventListener('change', () => {
+      activeBranch = +q('.star-branch').value
+      updateFitControls()
     })
     q('.star-degree').addEventListener('input', () => {
+      branchSpecs[activeBranch] = selectedSpec()
       clearFit()
       setStatus('Fit settings changed. Refit to update the preview.')
     })
