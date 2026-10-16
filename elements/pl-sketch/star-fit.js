@@ -147,8 +147,9 @@
           n++
         }
       })
-      // A model that cannot cover most of the drawing does not count.
-      if (n < Math.max(4, pts.length * 0.45)) return null
+      // A stroke represents one complete branch. Scoring only the points a
+      // model accepts lets a short, flat fragment beat a faithful full fit.
+      if (n < 4 || n !== pts.length) return null
       const rmse = Math.sqrt(se / n)
       const cerr = cons.reduce(
         (a, c) => a + (c.type === 'point' && Number.isFinite(f(c.x)) ? Math.abs(f(c.x) - c.y) : 0),
@@ -399,6 +400,9 @@
       cost: FAMS[fam].cost(extra.degree == null ? 3 : extra.degree)
     })
     if (!out.poles) out.poles = []
+    // A pole inside a continuous stroke would join disconnected intervals,
+    // even when it happens to fall between the supplied trace points.
+    if (out.poles.some((p) => p > lo && p < hi)) return null
     return out
   }
 

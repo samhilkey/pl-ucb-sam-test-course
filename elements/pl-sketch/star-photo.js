@@ -667,8 +667,9 @@ window.StarPhoto = (function () {
         const models = tracedCurves.map((points, i) => {
           try {
             const model = window.StarFit.fit(points, branchSpecs[i])
-            if (!model || window.StarFit.sampleCurve(model, 16).length < 2) {
-              throw new Error('Could not fit a curve to that trace.')
+            if (!model || window.StarFit.sampleCurve(model, 16).length !== 17 ||
+                points.some(([x]) => !Number.isFinite(model.f(x)))) {
+              throw new Error('Could not fit the whole branch. Choose another curve type or retrace it.')
             }
             return model
           } catch (err) {
