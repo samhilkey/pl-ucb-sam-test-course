@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: transfer keeps disconnected branches separate and preserves other tools
+ok 1 - transfer keeps disconnected branches separate and preserves other tools
+  ---
+  duration_ms: 1.800292
+  ...
+# Subtest: an invalid later branch cannot partially overwrite the existing drawing
+ok 2 - an invalid later branch cannot partially overwrite the existing drawing
+  ---
+  duration_ms: 0.683208
+  ...
+# Subtest: single-curve callers retain their existing coordinate mapping
+ok 3 - single-curve callers retain their existing coordinate mapping
+  ---
+  duration_ms: 0.125084
+  ...
+# Subtest: the left steep branch cannot be replaced by a flat partial fit
+ok 4 - the left steep branch cannot be replaced by a flat partial fit
+  ---
+  duration_ms: 40.898334
+  ...
+# Subtest: the right steep branch cannot be replaced by a flat partial fit
+ok 5 - the right steep branch cannot be replaced by a flat partial fit
+  ---
+  duration_ms: 27.401667
+  ...
+# Subtest: a forced rational pole between trace points cannot bridge one continuous stroke
+ok 6 - a forced rational pole between trace points cannot bridge one continuous stroke
+  ---
+  duration_ms: 0.197542
+  ...
+# Subtest: a forced tangent cannot ignore trace points around its poles
+ok 7 - a forced tangent cannot ignore trace points around its poles
+  ---
+  duration_ms: 0.819625
+  ...
+# Subtest: line still admits a complete model
+ok 8 - line still admits a complete model
+  ---
+  duration_ms: 41.801459
+  ...
+# Subtest: parabola still admits a complete model
+ok 9 - parabola still admits a complete model
+  ---
+  duration_ms: 31.3025
+  ...
+# Subtest: square root still admits a complete model
+ok 10 - square root still admits a complete model
+  ---
+  duration_ms: 24.633417
+  ...
+# Subtest: logarithm still admits a complete model
+ok 11 - logarithm still admits a complete model
+  ---
+  duration_ms: 24.609875
+  ...
+# Subtest: sine still admits a complete model
+ok 12 - sine still admits a complete model
+  ---
+  duration_ms: 25.904875
+  ...
+# Subtest: continuous tangent still admits a complete model
+ok 13 - continuous tangent still admits a complete model
+  ---
+  duration_ms: 23.555792
+  ...
+# Subtest: shape simplification removes straight-line sampling without removing corners
+ok 14 - shape simplification removes straight-line sampling without removing corners
+  ---
+  duration_ms: 1.264458
+  ...
+# Subtest: transcription retains vertices and endpoints regardless of sample count
+ok 15 - transcription retains vertices and endpoints regardless of sample count
+  ---
+  duration_ms: 0.235333
+  ...
+# Subtest: invalid function branches fail instead of inventing a shape
+ok 16 - invalid function branches fail instead of inventing a shape
+  ---
+  duration_ms: 0.420459
+  ...
+# Subtest: native corner supports stay on adjacent segments and leave other branches unchanged
+ok 17 - native corner supports stay on adjacent segments and leave other branches unchanged
+  ---
+  duration_ms: 0.338125
+  ...
+# Subtest: freeform receives cubic controls with straight segments for rendering and grading
+ok 18 - freeform receives cubic controls with straight segments for rendering and grading
+  ---
+  duration_ms: 0.287042
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 286.130292
