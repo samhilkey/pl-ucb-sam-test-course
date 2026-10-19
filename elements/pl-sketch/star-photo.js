@@ -36,70 +36,126 @@ window.StarPhoto = (function () {
     let branchSpecs = []
     let activeBranch = 0
     let photoLoading = false
+    let photoReady = false
     let photoRequest = 0
+    let step = 'photo'
+    let zoom = 1
+    let pan = [0, 0]
+    let movingPhoto = false
+    let fittedSize = [0, 0]
 
     root.innerHTML = `
-      <div class="star-photo-ui">
-        <div class="star-row">
-          <label class="btn btn-sm btn-primary star-file-btn">
-            Take or choose photo
-            <input type="file" accept="image/jpeg,image/png,image/webp" capture="environment" hidden>
-          </label>
-          <button type="button" class="btn btn-sm btn-light border star-mode-axes star-on">1 &middot; Place the axes</button>
-          <button type="button" class="btn btn-sm btn-light border star-mode-curve">2 &middot; Trace the curve</button>
-          <button type="button" class="btn btn-sm btn-light border star-undo">Undo stroke</button>
-          <button type="button" class="btn btn-sm btn-light border star-clear">Clear trace</button>
-        </div>
-
-        <p class="star-hint text-muted"></p>
-
-        <div class="star-canvas-wrap"><canvas class="star-canvas"></canvas></div>
-
-        <div class="star-row star-scale">
-          <label>x-dot sits at x = <input type="number" step="any" value="1" class="star-xval"></label>
-          <label>y-dot sits at y = <input type="number" step="any" value="1" class="star-yval"></label>
-          <label><input type="checkbox" class="star-equal"> Same scale on both axes</label>
-          <label><input type="checkbox" class="star-units" checked> Show unit grid</label>
-          <label>Search width <input type="range" min="6" max="48" value="16" class="star-brush"></label>
-        </div>
-
-        <p class="star-scale-read text-muted"></p>
-
-        <div class="star-row">
-          <button type="button" class="btn btn-sm btn-success star-use" disabled>Read my trace</button>
-          <span class="star-status text-muted"></span>
-        </div>
-
-        <div class="star-fit-box" hidden>
-          <div class="star-fit-eq"></div>
-          <p class="star-fit-meta text-muted"></p>
-          <div class="star-row">
-            <label class="star-branch-wrap" hidden>
-              Edit branch <select class="star-branch"></select>
-            </label>
-            <label>
-              Curve type
-              <select class="star-family">
-                <option value="">Let it choose</option>
-                <option value="polynomial">Polynomial</option>
-                <option value="sine">Sine wave</option>
-                <option value="exponential">Exponential</option>
-                <option value="sqrt">Square root</option>
-                <option value="logarithmic">Logarithm</option>
-                <option value="abs">Absolute value</option>
-                <option value="rational">Rational (1/x type)</option>
-                <option value="tan">Tangent</option>
-              </select>
-            </label>
-            <label class="star-degree-wrap" hidden>
-              Degree <input type="number" class="star-degree" min="1" max="6" step="1" value="3">
-            </label>
-            <button type="button" class="btn btn-sm btn-light border star-refit">Refit</button>
-            <button type="button" class="btn btn-sm btn-success star-confirm" disabled>This matches my sketch</button>
+      <div class="star-photo-ui" data-step="photo">
+        <nav class="star-steps" aria-label="Photo graph steps">
+          <button type="button" class="star-step star-mode-photo"><span>1</span> Photo</button>
+          <button type="button" class="star-step star-mode-axes" disabled><span>2</span> Axes</button>
+          <button type="button" class="star-step star-mode-curve" disabled><span>3</span> Trace</button>
+          <button type="button" class="star-step star-mode-review" disabled><span>4</span> Review</button>
+        </nav>
+        <div class="star-workspace">
+          <div class="star-photo-stage">
+            <div class="star-view-toolbar">
+              <div class="star-view-controls" role="group" aria-label="Photo view">
+                <button type="button" class="star-zoom-out" aria-label="Zoom out" disabled>&minus;</button>
+                <output class="star-zoom-level" aria-label="Photo zoom">100%</output>
+                <button type="button" class="star-zoom-in" aria-label="Zoom in" disabled>+</button>
+                <button type="button" class="star-fit-view" disabled>Fit</button>
+                <button type="button" class="star-pan" aria-pressed="false" disabled>Move photo</button>
+              </div>
+              <div class="star-view-controls">
+                <label class="star-grid-toggle"><input type="checkbox" class="star-units" checked> Unit grid</label>
+                <label class="star-trace-toggle" hidden><input type="checkbox" class="star-show-trace"> Show trace</label>
+              </div>
+            </div>
+            <p class="star-hint" id="${root.id}-hint"></p>
+            <div class="star-canvas-wrap">
+              <div class="star-empty"><strong>Your photo goes here</strong><span>Include the full graph and its axis labels.</span></div>
+              <canvas class="star-canvas" tabindex="0" aria-label="Graph photo" aria-describedby="${root.id}-hint" hidden></canvas>
+            </div>
+            <div class="star-photo-legend">
+              <span class="star-branch-count" role="status">No branches traced</span>
+              <span class="star-legend-trace">Your trace</span>
+              <span class="star-legend-ink" hidden>Detected line</span>
+              <span class="star-legend-preview">Preview</span>
+            </div>
+          </div>
+          <div class="star-controls">
+            <section class="star-step-panel" data-panel="photo">
+              <h6>Start with your paper graph</h6>
+              <p>Take a photo or choose one from your device. Keep the axes and numbers readable.</p>
+              <button type="button" class="btn btn-primary star-file-btn">
+                Take or choose photo
+                <input type="file" accept="image/jpeg,image/png,image/webp" capture="environment" hidden>
+              </button>
+              <p class="star-photo-name"></p>
+            </section>
+            <section class="star-step-panel star-scale" data-panel="axes" hidden>
+              <h6>Match the paper coordinates</h6>
+              <p>Place <strong>O</strong> at the origin. Put each colored marker on a known point along its axis.</p>
+              <div class="star-axis-values">
+                <label>Value at x marker <input type="number" step="any" value="1" class="star-xval"></label>
+                <label>Value at y marker <input type="number" step="any" value="1" class="star-yval"></label>
+              </div>
+              <p class="star-axis-error" role="alert" hidden></p>
+              <label class="star-checkbox"><input type="checkbox" class="star-equal"> Same scale on both axes</label>
+              <details class="star-axis-options"><summary>Keyboard controls</summary>
+                <label>Keyboard marker
+                  <select class="star-marker"><option value="O">O &middot; origin</option><option value="X">x &middot; reference point</option><option value="Y">y &middot; reference point</option></select>
+                </label>
+                <p class="star-small">Focus the photo and use arrow keys to move this marker. Hold Shift for larger steps.</p>
+              </details>
+              <p class="star-scale-read"></p>
+            </section>
+            <section class="star-step-panel" data-panel="curve" hidden>
+              <h6>One stroke for each branch</h6>
+              <p>Trace only the curve. Lift your finger or mouse at each gap or asymptote, then start the next branch.</p>
+              <div class="star-row">
+                <button type="button" class="btn btn-light border star-undo">Undo stroke</button>
+                <button type="button" class="btn btn-light border star-clear">Clear trace</button>
+              </div>
+              <details class="star-trace-options"><summary>Trace options</summary>
+                <label>Search width <input type="range" min="6" max="48" value="16" class="star-brush"></label>
+                <p class="star-small">Increase this if the detected line misses the ink near your trace.</p>
+              </details>
+            </section>
+            <section class="star-step-panel" data-panel="review" hidden>
+              <h6 class="star-review-title">Check your preview</h6>
+              <p>The <strong>orange line</strong> is the graph that will go on the canvas. Check its branches, endpoints, and important coordinates against your paper.</p>
+              <button type="button" class="btn btn-light border star-edit-trace">Edit my trace</button>
+              <div class="star-fit-box" hidden>
+                <label class="star-branch-wrap" hidden>Edit branch <select class="star-branch"></select></label>
+                <p class="star-fit-meta"></p>
+                <details class="star-fit-options"><summary>Adjust curve type</summary>
+                  <label>Curve type
+                    <select class="star-family">
+                      <option value="">Let it choose</option>
+                      <option value="polynomial">Polynomial</option>
+                      <option value="sine">Sine wave</option>
+                      <option value="exponential">Exponential</option>
+                      <option value="sqrt">Square root</option>
+                      <option value="logarithmic">Logarithm</option>
+                      <option value="abs">Absolute value</option>
+                      <option value="rational">Rational (1/x type)</option>
+                      <option value="tan">Tangent</option>
+                    </select>
+                  </label>
+                  <label class="star-degree-wrap" hidden>Degree <input type="number" class="star-degree" min="1" max="6" step="1" value="3"></label>
+                  <button type="button" class="btn btn-light border star-refit">Refit</button>
+                </details>
+                <details class="star-equations"><summary>View fitted equations</summary><div class="star-fit-eq"></div></details>
+              </div>
+            </section>
           </div>
         </div>
-
-        <pre class="star-result" hidden></pre>
+        <div class="star-workflow-footer">
+          <span class="star-status" role="status" aria-live="polite"></span>
+          <div class="star-footer-actions">
+            <button type="button" class="btn btn-light border star-back" hidden>Back</button>
+            <button type="button" class="btn btn-primary star-next" disabled>Continue to axes</button>
+            <button type="button" class="btn btn-primary star-use" disabled hidden>Read my trace</button>
+            <button type="button" class="btn btn-success star-confirm" disabled hidden>This matches my sketch</button>
+          </div>
+        </div>
       </div>
     `
 
@@ -108,7 +164,7 @@ window.StarPhoto = (function () {
     const statusEl = q('.star-status')
 
     const setStatus = (text) => {
-      statusEl.textContent = text || ''
+      if (statusEl.textContent !== (text || '')) statusEl.textContent = text || ''
     }
 
     function clearFit () {
@@ -116,8 +172,7 @@ window.StarPhoto = (function () {
       q('.star-confirm').disabled = true
       q('.star-fit-eq').textContent = ''
       q('.star-fit-meta').textContent = ''
-      q('.star-result').textContent = ''
-      q('.star-result').hidden = true
+      updateWorkflow()
       drawPhoto()
     }
 
@@ -159,19 +214,118 @@ window.StarPhoto = (function () {
         Y: [MW * 0.5, MH * 0.3],
         strokes: []
       }
+      zoom = 1
+      pan = [0, 0]
+      canvas.hidden = false
       setMode('axes')
-      q('.star-use').disabled = false
+      resizeView()
       drawPhoto()
     }
 
+    function calibrationError () {
+      if (!markup) return ''
+      const xv = Number(q('.star-xval').value)
+      const yv = Number(q('.star-yval').value)
+      if (!Number.isFinite(xv) || !Number.isFinite(yv) || !xv || !yv) {
+        return 'Enter a nonzero number for each axis marker.'
+      }
+      const ax = [markup.X[0] - markup.O[0], markup.X[1] - markup.O[1]]
+      const ay = [markup.Y[0] - markup.O[0], markup.Y[1] - markup.O[1]]
+      if (Math.abs(ax[0] * ay[1] - ax[1] * ay[0]) < 1) {
+        return 'Move the three markers apart so they are not on one straight line.'
+      }
+      return ''
+    }
+
+    function updateWorkflow () {
+      const ready = photoReady && !photoLoading
+      const count = markup ? markup.strokes.filter(st => st.length >= 3).length : 0
+      const error = calibrationError()
+      q('.star-photo-ui').dataset.step = step
+      for (const name of ['photo', 'axes', 'curve', 'review']) {
+        const button = q('.star-mode-' + name)
+        button.classList.toggle('star-on', step === name)
+        if (step === name) button.setAttribute('aria-current', 'step')
+        else button.removeAttribute('aria-current')
+        q(`[data-panel="${name}"]`).hidden = step !== name
+      }
+      q('.star-mode-axes').disabled = !ready
+      q('.star-mode-curve').disabled = !ready || !!error
+      q('.star-mode-review').disabled = !ready || !tracedCurves
+      q('.star-back').hidden = step === 'photo'
+      q('.star-next').hidden = step !== 'photo' && step !== 'axes'
+      q('.star-next').textContent = step === 'photo' ? 'Continue to axes' : 'Continue to tracing'
+      q('.star-next').disabled = !ready || (step === 'axes' && !!error)
+      q('.star-use').hidden = step !== 'curve'
+      q('.star-use').disabled = !ready
+      q('.star-confirm').hidden = step !== 'review'
+      q('.star-confirm').disabled = !ready || !currentModels || !!error
+      q('.star-undo').disabled = !count
+      q('.star-clear').disabled = !count
+      q('.star-axis-error').hidden = !error
+      q('.star-axis-error').textContent = error
+      const branchLabel = count ? `${count} branch${count === 1 ? '' : 'es'} traced` : 'No branches traced'
+      if (q('.star-branch-count').textContent !== branchLabel) q('.star-branch-count').textContent = branchLabel
+      q('.star-review-title').textContent = currentModels
+        ? `Review ${currentModels.length} branch${currentModels.length === 1 ? '' : 'es'}`
+        : 'Update your preview'
+      q('.star-empty').hidden = !!photoBmp
+      q('.star-trace-toggle').hidden = step !== 'review'
+      const showTrace = step !== 'review' || q('.star-show-trace').checked
+      q('.star-legend-trace').hidden = !showTrace
+      q('.star-legend-ink').hidden = !refined || !showTrace
+      q('.star-legend-preview').hidden = !currentModels
+      q('.star-zoom-in').disabled = !ready || zoom >= 4
+      q('.star-zoom-out').disabled = !ready || zoom <= 1
+      q('.star-fit-view').disabled = !ready
+      q('.star-pan').disabled = !ready
+      q('.star-pan').hidden = step === 'photo' || step === 'review'
+      q('.star-pan').setAttribute('aria-pressed', String(movingPhoto))
+      canvas.style.cursor = movingPhoto || step === 'review' ? 'grab' : 'crosshair'
+      const hints = {
+        photo: 'Choose a clear photo that includes your graph and its axes.',
+        axes: 'Drag O to the origin. Place x and y on known points along their axes, then enter those values.',
+        curve: 'Trace each continuous branch separately. Lift your finger or mouse between branches.',
+        review: 'Compare the orange preview with your paper. You can zoom and drag the photo to inspect it.'
+      }
+      q('.star-hint').textContent = movingPhoto
+        ? 'Drag to move around the photo. Turn Move photo off to place markers or trace.'
+        : hints[step]
+      canvas.setAttribute('aria-label', step === 'axes' ? 'Graph photo: move axis markers with the arrow keys' : 'Graph photo: ' + hints[step])
+    }
+
     function setMode (m) {
+      step = m
       mode = m
-      q('.star-mode-axes').classList.toggle('star-on', m === 'axes')
-      q('.star-mode-curve').classList.toggle('star-on', m === 'curve')
-      q('.star-hint').textContent =
-        m === 'axes'
-          ? 'Drag the three dots: O onto your origin, then x and y onto the points where they equal the numbers below. The blue grid shows the scale that implies — drag until it lines up with the paper.'
-          : 'Drag roughly along your curve. Several strokes are fine, one per branch. The tracer snaps to the ink near your line.'
+      movingPhoto = false
+      drag = null
+      updateWorkflow()
+      q('.star-controls').scrollTop = 0
+    }
+
+    // View changes use CSS only. The bitmap, calibration and trace stay in the
+    // same photo coordinates, including while the photo is zoomed or panned.
+    function transformView () {
+      const wrap = q('.star-canvas-wrap')
+      const limit = [Math.max(0, (fittedSize[0] * zoom - wrap.clientWidth) / 2),
+        Math.max(0, (fittedSize[1] * zoom - wrap.clientHeight) / 2)]
+      pan = pan.map((value, i) => Math.max(-limit[i], Math.min(limit[i], value)))
+      canvas.style.transform = `translate(${pan[0]}px, ${pan[1]}px) scale(${zoom})`
+      const zoomLabel = Math.round(zoom * 100) + '%'
+      if (q('.star-zoom-level').textContent !== zoomLabel) q('.star-zoom-level').textContent = zoomLabel
+      updateWorkflow()
+      drawPhoto()
+    }
+
+    function resizeView () {
+      if (!photoBmp) return
+      const wrap = q('.star-canvas-wrap')
+      const scale = Math.min((wrap.clientWidth - 2) / MW, (wrap.clientHeight - 2) / MH)
+      if (scale <= 0) return
+      fittedSize = [MW * scale, MH * scale]
+      canvas.style.width = fittedSize[0] + 'px'
+      canvas.style.height = fittedSize[1] + 'px'
+      transformView()
     }
 
     // ---- drawing the photo, handles and unit grid --------------------------
@@ -243,13 +397,16 @@ window.StarPhoto = (function () {
       x.lineWidth = Math.max(6, +q('.star-brush').value)
       x.lineCap = 'round'
       x.lineJoin = 'round'
-      markup.strokes.forEach((st) => {
-        x.beginPath()
-        st.forEach((p, i) => (i ? x.lineTo(p[0], p[1]) : x.moveTo(p[0], p[1])))
-        if (st.length === 1) x.lineTo(st[0][0] + 0.1, st[0][1])
-        x.stroke()
-      })
-      if (refined) {
+      const showTrace = step !== 'review' || q('.star-show-trace').checked
+      if (showTrace) {
+        markup.strokes.forEach((st) => {
+          x.beginPath()
+          st.forEach((p, i) => (i ? x.lineTo(p[0], p[1]) : x.moveTo(p[0], p[1])))
+          if (st.length === 1) x.lineTo(st[0][0] + 0.1, st[0][1])
+          x.stroke()
+        })
+      }
+      if (refined && showTrace) {
         x.strokeStyle = 'rgba(30,100,215,.95)'
         x.lineWidth = 4
         refined.forEach((st) => {
@@ -276,6 +433,8 @@ window.StarPhoto = (function () {
       }
 
       const dot = (p, r, fill, txt) => {
+        const displayScale = canvas.getBoundingClientRect().width / MW || 1
+        r = Math.max(r, 12 / displayScale)
         x.beginPath()
         x.arc(p[0], p[1], r, 0, 7)
         x.fillStyle = fill
@@ -284,19 +443,19 @@ window.StarPhoto = (function () {
         x.strokeStyle = '#fff'
         x.stroke()
         x.fillStyle = '#fff'
-        x.font = '600 13px ui-sans-serif,system-ui'
+        x.font = `600 ${Math.max(13, 12 / displayScale)}px ui-sans-serif,system-ui`
         x.textAlign = 'center'
         x.textBaseline = 'middle'
         x.fillText(txt, p[0], p[1])
       }
-      dot(X, 11, '#b0431f', 'x')
-      dot(Y, 11, '#1f6bb0', 'y')
-      dot(O, 13, '#c2452d', 'O')
+      if (step !== 'review') {
+        dot(X, 11, '#b0431f', 'x')
+        dot(Y, 11, '#1f6bb0', 'y')
+        dot(O, 13, '#c2452d', 'O')
+      }
 
-      const ratio = lux && luy ? lux / luy : 1
       q('.star-scale-read').textContent =
-        `Scale: ${lux.toFixed(1)} px per x-unit, ${luy.toFixed(1)} px per y-unit` +
-        (Math.abs(ratio - 1) < 0.03 ? ' — square units.' : ' — units are not square.')
+        `Reference points: x = ${xv}, y = ${yv}.`
     }
 
     function applyEqual (from) {
@@ -325,11 +484,14 @@ window.StarPhoto = (function () {
     }
 
     canvas.addEventListener('pointerdown', (e) => {
-      if (!markup || photoLoading) return
+      if (!markup || !photoReady || photoLoading || e.button !== 0) return
       const p = canvasPt(e)
       canvas.setPointerCapture(e.pointerId)
+      canvas.focus({ preventScroll: true })
       e.preventDefault()
-      if (mode === 'axes') {
+      if (movingPhoto || mode === 'review' || mode === 'photo') {
+        drag = { kind: 'pan', start: [e.clientX, e.clientY], pan: [...pan] }
+      } else if (mode === 'axes') {
         const near = [
           ['O', markup.O],
           ['X', markup.X],
@@ -337,12 +499,14 @@ window.StarPhoto = (function () {
         ]
           .map(([k, v]) => [k, Math.hypot(v[0] - p[0], v[1] - p[1])])
           .sort((a, b) => a[1] - b[1])[0]
-        drag = near[1] < Math.max(26, MW * 0.04) ? { kind: 'handle', key: near[0] } : null
+        const displayScale = canvas.getBoundingClientRect().width / MW
+        drag = near[1] < Math.max(26, 22 / displayScale) ? { kind: 'handle', key: near[0] } : null
         if (drag) {
           invalidateTrace()
           markup[drag.key] = p
           if (drag.key !== 'O') applyEqual(drag.key)
           lastHandle = drag.key
+          q('.star-marker').value = drag.key
           drawPhoto()
         }
       } else {
@@ -355,8 +519,13 @@ window.StarPhoto = (function () {
 
     canvas.addEventListener('pointermove', (e) => {
       if (!drag || photoLoading) return
-      const p = canvasPt(e)
       e.preventDefault()
+      if (drag.kind === 'pan') {
+        pan = [drag.pan[0] + e.clientX - drag.start[0], drag.pan[1] + e.clientY - drag.start[1]]
+        transformView()
+        return
+      }
+      const p = canvasPt(e)
       invalidateTrace()
       if (drag.kind === 'handle') {
         markup[drag.key] = p
@@ -375,10 +544,24 @@ window.StarPhoto = (function () {
         if (st.length < 3) markup.strokes.pop()
       }
       drag = null
+      updateWorkflow()
       drawPhoto()
     }
     canvas.addEventListener('pointerup', endDrag)
     canvas.addEventListener('pointercancel', endDrag)
+    canvas.addEventListener('keydown', (e) => {
+      const offsets = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }
+      if (!photoReady || photoLoading || mode !== 'axes' || movingPhoto || !offsets[e.key]) return
+      e.preventDefault()
+      const key = q('.star-marker').value
+      const delta = e.shiftKey ? 10 : 1
+      invalidateTrace()
+      markup[key] = markup[key].map((value, i) => Math.max(0, Math.min(i ? MH : MW, value + offsets[e.key][i] * delta)))
+      if (key !== 'O') applyEqual(key)
+      lastHandle = key
+      updateWorkflow()
+      drawPhoto()
+    })
 
     // ---- ink detection -----------------------------------------------------
     // Adaptive threshold: a pixel counts as ink when it is meaningfully darker
@@ -520,6 +703,8 @@ window.StarPhoto = (function () {
     // graph coordinates, which also means a photo taken at a slight angle still
     // reads correctly: the axes need not be perpendicular on the page.
     function markupToGraph () {
+      const error = calibrationError()
+      if (error) throw new Error(error)
       const O = markup.O
       const X = markup.X
       const Y = markup.Y
@@ -583,6 +768,7 @@ window.StarPhoto = (function () {
       if (!f) return
       const request = ++photoRequest
       photoLoading = true
+      photoReady = false
       drag = null
       invalidateTrace()
       q('.star-use').disabled = true
@@ -591,17 +777,56 @@ window.StarPhoto = (function () {
         await showPhoto(f, request)
         if (request !== photoRequest) return
         photoLoading = false
+        photoReady = true
+        q('.star-photo-name').textContent = f.name
+        updateWorkflow()
+        resizeView()
         setStatus('Place the axes, then trace your curve.')
       } catch (err) {
         if (request !== photoRequest) return
         photoLoading = false
-        q('.star-use').disabled = true
+        if (photoBmp) photoBmp.close()
+        photoBmp = null
+        markup = null
+        canvas.hidden = true
+        q('.star-photo-name').textContent = ''
+        setMode('photo')
         setStatus('Could not read that image.')
       }
     })
 
+    q('.star-file-btn').addEventListener('click', (e) => {
+      const input = q('.star-file-btn input')
+      if (e.target !== input) input.click()
+    })
+    q('.star-mode-photo').addEventListener('click', () => setMode('photo'))
     q('.star-mode-axes').addEventListener('click', () => setMode('axes'))
     q('.star-mode-curve').addEventListener('click', () => setMode('curve'))
+    q('.star-mode-review').addEventListener('click', () => setMode('review'))
+    q('.star-edit-trace').addEventListener('click', () => setMode('curve'))
+    q('.star-back').addEventListener('click', () => {
+      setMode(step === 'review' ? 'curve' : step === 'curve' ? 'axes' : 'photo')
+    })
+    q('.star-next').addEventListener('click', () => {
+      if (!q('.star-next').disabled) setMode(step === 'photo' ? 'axes' : 'curve')
+    })
+    q('.star-zoom-in').addEventListener('click', () => {
+      zoom = Math.min(4, zoom * 1.25)
+      transformView()
+    })
+    q('.star-zoom-out').addEventListener('click', () => {
+      zoom = Math.max(1, zoom / 1.25)
+      transformView()
+    })
+    q('.star-fit-view').addEventListener('click', () => {
+      zoom = 1
+      pan = [0, 0]
+      transformView()
+    })
+    q('.star-pan').addEventListener('click', () => {
+      movingPhoto = !movingPhoto
+      updateWorkflow()
+    })
     q('.star-undo').addEventListener('click', () => {
       if (markup && markup.strokes.length) {
         markup.strokes.pop()
@@ -621,19 +846,26 @@ window.StarPhoto = (function () {
       drawPhoto()
     })
     q('.star-units').addEventListener('change', drawPhoto)
+    q('.star-show-trace').addEventListener('change', () => {
+      updateWorkflow()
+      drawPhoto()
+    })
     q('.star-xval').addEventListener('input', () => {
       invalidateTrace()
       applyEqual('X')
+      updateWorkflow()
       drawPhoto()
     })
     q('.star-yval').addEventListener('input', () => {
       invalidateTrace()
       applyEqual('Y')
+      updateWorkflow()
       drawPhoto()
     })
     q('.star-equal').addEventListener('change', () => {
       invalidateTrace()
       applyEqual(lastHandle === 'Y' ? 'Y' : 'X')
+      updateWorkflow()
       drawPhoto()
     })
 
@@ -647,10 +879,7 @@ window.StarPhoto = (function () {
       q('.star-degree').value = (spec && spec.degree) || (model && model.degree) || 3
       q('.star-fit-meta').textContent = model
         ? (currentModels.length > 1 ? `Branch ${activeBranch + 1} · ` : '') +
-          `${model.label} · within ${model.rmse.toFixed(3)} units of your drawing on average` +
-          (model.poles && model.poles.length
-            ? ' · vertical asymptotes at ' + model.poles.map((p) => p.toFixed(2)).join(', ')
-            : '')
+          `${model.label} · x from ${model.lo.toFixed(2)} to ${model.hi.toFixed(2)}`
         : ''
     }
 
@@ -663,6 +892,8 @@ window.StarPhoto = (function () {
       if (spec !== undefined) branchSpecs[activeBranch] = spec
       clearFit()
       if (!tracedCurves || photoLoading) return
+      q('.star-fit-box').hidden = false
+      setMode('review')
       try {
         const models = tracedCurves.map((points, i) => {
           try {
@@ -684,17 +915,9 @@ window.StarPhoto = (function () {
           return line
         }))
 
-        const out = q('.star-result')
-        out.hidden = false
-        out.textContent = models.map((model, i) =>
-          (models.length > 1 ? `Branch ${i + 1}\n` : '') +
-          'pl-sketch function:  ' + window.StarFit.toPlFunction(model.expr) + '\n' +
-          'domain:              ' + model.lo.toFixed(3) + ' to ' + model.hi.toFixed(3) + '\n\n' +
-          'sampled curve (' + window.StarFit.sampleCurve(model).length + ' points):\n' +
-          window.StarFit.sampleCurve(model).map((p) => `(${p[0]}, ${p[1]})`).join('  ')
-        ).join('\n\n')
         currentModels = models
         updateFitControls()
+        updateWorkflow()
         drawPhoto()
         q('.star-confirm').disabled = false
       } catch (err) {
@@ -728,8 +951,8 @@ window.StarPhoto = (function () {
         const pct = Math.round(result.snapFraction * 100)
         setStatus(
           pct > 80
-            ? `Snapped to ink along ${pct}% of your trace.`
-            : `Only ${pct}% of your trace found ink. Widen the search width or trace closer to the curve.`
+            ? 'Preview ready. Compare the orange graph with your paper before confirming.'
+            : 'Some ink was missed. Check the preview, widen the search width, or trace closer to the curve.'
         )
         runFit() // let the fitter choose a family for each branch
       } catch (err) {
@@ -756,8 +979,9 @@ window.StarPhoto = (function () {
       setStatus('Fit settings changed. Refit to update the preview.')
     })
 
-    setMode('axes')
-    return { drawPhoto }
+    if (window.ResizeObserver) new window.ResizeObserver(resizeView).observe(q('.star-canvas-wrap'))
+    setMode('photo')
+    return { drawPhoto, resizeView }
   }
 
   return { create }

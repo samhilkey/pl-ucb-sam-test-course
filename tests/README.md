@@ -5,6 +5,7 @@ Start local PrairieLearn and load this course, then run:
 ```bash
 node tests/star-photo-confirmation.cjs
 node tests/star-photo-branches.cjs
+node tests/star-photo-workflow.cjs
 node --test tests/star-fit-branches.cjs
 node --test tests/star-fit-coverage.cjs
 ```
@@ -23,9 +24,8 @@ Optional environment variables:
 The check covers photo replacement, clearing/undoing/adding strokes, calibration
 changes, search width, polynomial degree, family changes, failed reads/refits,
 slow/out-of-order uploads, invalid images, recovery, and successful native canvas
-transfer. Display-only controls must preserve a valid proposal. The photo panel
-is expanded during this state regression check so its existing scroll layout
-does not conceal tracing controls.
+transfer. Display-only controls must preserve a valid proposal. Both browser
+regressions use the native photo dialog without CSS expansion or layout overrides.
 
 The branch check covers a single line, two disjoint lines, two reciprocal
 branches, a three-branch graph with steep ends, and overlapping x-ranges. It checks every branch in
@@ -41,5 +41,15 @@ function-input validation may reject them on submission; this change does not
 relax that validation or assess the mathematical correctness of the drawing.
 The Node unit checks verify coordinate mapping and atomic transfer: a bad later
 branch must leave all existing tool drawings intact.
+
+The workflow check uses a portrait three-branch fixture at desktop 1440 by 1000
+and mobile 390 by 844. It verifies that the complete photo and primary action
+remain on screen, step navigation, axis-value validation, keyboard marker edits,
+zoom/pan without accidental tracing or refitting, review, Escape/focus recovery,
+and three-branch native state/submission data. Mobile canvas gestures use
+Chromium touch events through CDP; these are browser-emulated touches, not a
+physical-device camera or student usability study. Screenshots and results
+default to `/tmp/pl-sketch-photo-workflow`.
+
 Coverage tests prevent a model from winning by excluding steep sections and
 verify that one continuous branch cannot contain an internal fitted pole.

@@ -21,21 +21,14 @@ async function checkConfirmation (page, options) {
   check(await page.getByRole('heading', { name: 'STAR: hand-drawn switch test', exact: true }).isVisible(), 'Meaningful question content')
   await page.locator('#hand-drawn-on-star-photo-btn').click()
   const panel = page.locator('#hand-drawn-on-star-panel')
-  // Expose the whole image; this test concerns state, not the panel layout.
-  await panel.evaluate(el => Object.assign(el.style, {
-    position: 'fixed',
-    left: '20px',
-    top: '20px',
-    width: '1000px',
-    height: 'auto',
-    maxHeight: 'none',
-    overflow: 'visible',
-    zIndex: '10000'
-  }))
   const confirm = panel.locator('.star-confirm')
   const read = panel.locator('.star-use')
   const canvas = panel.locator('.star-canvas')
+  const fitOptions = async () => {
+    if (!await panel.locator('.star-fit-options').evaluate(el => el.open)) await panel.locator('.star-fit-options > summary').click()
+  }
   const fresh = async () => {
+    await panel.locator('.star-mode-curve').click()
     await read.click()
     check(await confirm.isEnabled() && await confirm.isVisible(), 'Fresh reading enables confirmation')
   }
@@ -86,8 +79,10 @@ async function checkConfirmation (page, options) {
   await upload(first)
   await stroke()
   await fresh()
+  await panel.locator('.star-mode-curve').click()
   await panel.locator('.star-clear').click()
   await unavailable('Clear trace')
+  await panel.locator('.star-mode-curve').click()
   await read.click()
   check((await panel.locator('.star-status').textContent()).includes('No usable trace'), 'Empty trace shows an actionable error')
   await unavailable('Failed empty-trace reading')
@@ -98,10 +93,12 @@ async function checkConfirmation (page, options) {
   await panel.screenshot({ path: options.output + '/fresh-preview.png' })
 
   const changes = [
-    ['Change x units', async () => panel.locator('.star-xval').fill('2')],
-    ['Change y units', async () => panel.locator('.star-yval').fill('2')],
-    ['Change equal-axis scale', async () => panel.locator('.star-equal').check()],
+    ['Change x units', async () => { await panel.locator('.star-mode-axes').click(); await panel.locator('.star-xval').fill('2') }],
+    ['Change y units', async () => { await panel.locator('.star-mode-axes').click(); await panel.locator('.star-yval').fill('2') }],
+    ['Change equal-axis scale', async () => { await panel.locator('.star-mode-axes').click(); await panel.locator('.star-equal').check() }],
     ['Change search width', async () => {
+      await panel.locator('.star-mode-curve').click()
+      await panel.locator('.star-trace-options > summary').click()
       await panel.locator('.star-brush').focus()
       await page.keyboard.press('ArrowRight')
     }],
@@ -114,7 +111,7 @@ async function checkConfirmation (page, options) {
       await page.mouse.up()
     }],
     ['Add stroke', stroke],
-    ['Undo stroke', async () => panel.locator('.star-undo').click()]
+    ['Undo stroke', async () => { await panel.locator('.star-mode-curve').click(); await panel.locator('.star-undo').click() }]
   ]
   for (const [name, change] of changes) {
     await change()
@@ -123,6 +120,7 @@ async function checkConfirmation (page, options) {
     await fresh()
   }
   await panel.screenshot({ path: options.output + '/updated-preview.png' })
+  await fitOptions()
   await panel.locator('.star-degree').fill('2')
   await unavailable('Change polynomial degree')
   await panel.locator('.star-refit').click()
@@ -132,6 +130,7 @@ async function checkConfirmation (page, options) {
   await panel.locator('.star-units').uncheck()
   await panel.locator('.star-mode-axes').click()
   check(await confirm.isEnabled(), 'Display-only controls preserve a valid fit')
+  await panel.locator('.star-mode-review').click()
 
   for (const kind of ['null', 'throw']) {
     await page.evaluate(kind => {
