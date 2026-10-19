@@ -36,7 +36,9 @@ It also exercises branch-specific refitting, a failed later branch, and undo
 followed by replacing a two-branch drawing with one branch. Sharp V, peak and
 plateau fixtures measure preview-to-native error and rendered-to-gradeable
 agreement. A native peak edit is submitted through Save & Grade and checked
-after page restoration. Screenshots and raw
+after page restoration, with the independent control answer filled. The imported
+shape must be valid for the existing function grader; it can still earn a low
+score because the question asks for a different mathematical curve. Screenshots and raw
 observations default to `/tmp/pl-sketch-photo-branches`.
 The mobile case uses the original panel at 390 by 844 pixels and scrolls to the
 photo and controls without changing its layout.

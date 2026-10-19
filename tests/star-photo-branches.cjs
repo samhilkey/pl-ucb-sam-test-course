@@ -202,6 +202,13 @@ async function checkBranches (page, options) {
       const edited = await page.evaluate(() => JSON.parse(window.SketchInput.instances['hand-drawn-on'].getState()).data.sp)
       await page.locator('#hand-drawn-on-si-container').screenshot({ path: options.output + '/sharp-peak--edited.png' })
       check(edited[0].some(p => p.y < peak.before.y - 5), 'Confirmed corner remains editable through native mouse controls')
+      // Fill the independent switch-off control so its missing answer cannot
+      // hide a validation error in the imported shape.
+      await page.evaluate(() => {
+        const config = JSON.parse(atob(document.getElementById('hand-drawn-off-sketchresponse-data').textContent))
+        window.StarFit.placeCurve(window.SketchInput.instances['hand-drawn-off'], config, 'sp2',
+          window.StarFit.sampleCurve({ lo: -2.2, hi: 2.2, f: x => x * x }, 16))
+      })
       await Promise.all([
         page.waitForNavigation({ waitUntil: 'networkidle' }),
         page.getByRole('button', { name: 'Save & Grade', exact: true }).click()
@@ -212,6 +219,7 @@ async function checkBranches (page, options) {
       })
       check(JSON.stringify(restored.state.filter(b => b.length)) === JSON.stringify(edited.filter(b => b.length)), 'Edited corner survives an actual Save & Grade and page restoration')
       check(restored.gradeable.length === 1 && restored.gradeable[0].spline.every(p => p.every(Number.isFinite)), 'Restored shape has complete finite gradeable geometry')
+      check(!(await page.locator('body').innerText()).includes('invalid, not gradable'), 'Existing function grader accepts the edited shape as a valid answer')
       await page.locator('#hand-drawn-on-si-container').screenshot({ path: options.output + '/sharp-peak--restored.png' })
       rendering.restored = restored
     }
