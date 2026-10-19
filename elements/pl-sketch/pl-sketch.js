@@ -118,14 +118,15 @@ function starAddHandDrawnButton (id, si, config) {
     `
     container.append(wrapper)
 
-    const panel = document.createElement('div')
+    const panel = document.createElement('dialog')
     panel.id = id + '-star-panel'
     panel.className = 'star-photo-panel'
     panel.hidden = true
+    panel.setAttribute('aria-labelledby', id + '-star-title')
     panel.innerHTML = `
       <div class="star-photo-panel-inner">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h5 class="m-0">Submit a hand-drawn graph</h5>
+        <div class="star-panel-header">
+          <h5 id="${id}-star-title">Use your paper graph</h5>
           <button type="button" class="btn btn-sm btn-light border" id="${id}-star-close">
             Close
           </button>
@@ -134,21 +135,43 @@ function starAddHandDrawnButton (id, si, config) {
       </div>
     `
     container.append(panel)
+    let photoUI
+    const photoButton = document.getElementById(id + '-star-photo-btn')
+    const closePanel = function () {
+      if (panel.open) panel.close()
+      panel.hidden = true
+      photoButton.focus({ preventScroll: true })
+    }
 
     // Open/close first. If building the capture UI below fails, the button
     // still works and the panel still opens — showing an error the student can
     // report, rather than a button that silently does nothing.
-    document.getElementById(id + '-star-photo-btn').addEventListener('click', function () {
+    photoButton.addEventListener('click', function () {
       panel.hidden = false
+      if (!panel.open) panel.showModal()
+      if (photoUI) photoUI.resizeView()
     })
     document.getElementById(id + '-star-close').addEventListener('click', function () {
-      panel.hidden = true
+      closePanel()
+    })
+    panel.addEventListener('cancel', function (event) {
+      event.preventDefault()
+      closePanel()
+    })
+    // Editing photo coordinates must not submit the surrounding question form
+    // or send drawing shortcuts to the native canvas behind this dialog.
+    panel.addEventListener('keydown', function (event) {
+      event.stopPropagation()
+      if (event.key === 'Enter' && event.target.matches('input[type="number"]')) event.preventDefault()
+    })
+    panel.addEventListener('keyup', function (event) {
+      event.stopPropagation()
     })
 
     // The capture UI builds itself into that mount point. On confirm it hands
     // back every fitted branch, which we sample and place on this canvas.
     try {
-      window.StarPhoto.create({
+      photoUI = window.StarPhoto.create({
         root: document.getElementById(id + '-star-ui'),
         config,
         onConfirm: function (models) {
@@ -164,7 +187,7 @@ function starAddHandDrawnButton (id, si, config) {
           } catch (err) {
             return { ok: false, message: 'Could not place the curve: ' + err.message }
           }
-          panel.hidden = true
+          closePanel()
           return { ok: true, message: models.length === 1 ? 'Curve placed on the canvas.' : 'All branches placed on the canvas.' }
         }
       })

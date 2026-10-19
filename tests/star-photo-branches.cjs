@@ -29,18 +29,6 @@ async function checkBranches (page, options) {
     check(await page.getByRole('heading', { name: 'STAR: hand-drawn switch test', exact: true }).isVisible(), fixture.id + ': meaningful page')
     await page.locator('#hand-drawn-on-star-photo-btn').click()
     const panel = page.locator('#hand-drawn-on-star-panel')
-    if (!fixture.mobile) {
-      await panel.evaluate(el => Object.assign(el.style, {
-        position: 'fixed',
-        left: '20px',
-        top: '20px',
-        width: '1000px',
-        height: 'auto',
-        maxHeight: 'none',
-        overflow: 'visible',
-        zIndex: '10000'
-      }))
-    }
     const canvas = panel.locator('.star-canvas')
     const confirm = panel.locator('.star-confirm')
     const guides = fixture.branches.map(([lo, hi, f]) => Array.from({ length: 45 }, (_, i) => {
@@ -105,6 +93,7 @@ async function checkBranches (page, options) {
     if (fixture.id === 'two-lines') {
       await panel.locator('.star-branch').selectOption('1')
       check(await page.evaluate(() => window.__branchFits.length) === 2, 'Selecting a branch preserves the proposal without refitting')
+      await panel.locator('.star-fit-options > summary').click()
       await panel.locator('.star-family').selectOption('polynomial')
       await panel.locator('.star-degree').fill('2')
       check(await confirm.isDisabled(), 'Changing branch degree invalidates the complete proposal')
@@ -126,6 +115,7 @@ async function checkBranches (page, options) {
       await confirm.dispatchEvent('click')
       check(await page.evaluate(() => window.__branchTransfers) === 0, 'A partially fitted proposal cannot transfer')
       await page.evaluate(() => { window.StarFit.fit = window.__branchOriginalFit })
+      await panel.locator('.star-mode-curve').click()
       await panel.locator('.star-use').click()
     }
 
@@ -150,6 +140,7 @@ async function checkBranches (page, options) {
     outcomes.push({ id: fixture.id, expected: guides.length, output: branches.length, rendering })
     if (fixture.id === 'two-lines') {
       await page.locator('#hand-drawn-on-star-photo-btn').click()
+      await panel.locator('.star-mode-curve').click()
       await panel.locator('.star-undo').click()
       check(await confirm.isDisabled(), 'Undoing a branch invalidates the complete proposal')
       await panel.locator('.star-use').click()
