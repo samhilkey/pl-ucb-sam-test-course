@@ -1,9 +1,12 @@
-# Photo confirmation regression check
+# Photo regression checks
 
 Start local PrairieLearn and load this course, then run:
 
 ```bash
 node tests/star-photo-confirmation.cjs
+node tests/star-photo-branches.cjs
+node --test tests/star-fit-branches.cjs
+node --test tests/star-fit-coverage.cjs
 ```
 
 Requires Node.js, Playwright CLI (`playwright-cli` on PATH), and Chrome.
@@ -23,3 +26,20 @@ slow/out-of-order uploads, invalid images, recovery, and successful native canva
 transfer. Display-only controls must preserve a valid proposal. The photo panel
 is expanded during this state regression check so its existing scroll layout
 does not conceal tracing controls.
+
+The branch check covers a single line, two disjoint lines, two reciprocal
+branches, a three-branch graph with steep ends, and overlapping x-ranges. It checks every branch in
+the preview, native SVG, saved canvas state, and gradeable submission data.
+It also exercises branch-specific refitting, a failed later branch, and undo
+followed by replacing a two-branch drawing with one branch. Screenshots and raw
+observations default to `/tmp/pl-sketch-photo-branches`.
+The mobile case uses the original panel at 390 by 844 pixels and scrolls to the
+photo and controls without changing its layout.
+
+Overlapping x-ranges are preserved for review. The existing PrairieLearn
+function-input validation may reject them on submission; this change does not
+relax that validation or assess the mathematical correctness of the drawing.
+The Node unit checks verify coordinate mapping and atomic transfer: a bad later
+branch must leave all existing tool drawings intact.
+Coverage tests prevent a model from winning by excluding steep sections and
+verify that one continuous branch cannot contain an internal fitted pole.
