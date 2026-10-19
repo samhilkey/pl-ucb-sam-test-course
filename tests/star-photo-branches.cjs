@@ -19,10 +19,15 @@ async function checkBranches (page, options) {
     { id: 'reciprocal', branches: [[-1.65, -0.38, x => 0.55 / x], [0.38, 1.65, x => 0.55 / x]] },
     { id: 'overlapping-x', branches: [[-1.4, 1.4, x => 0.2 * x + 1], [-1.4, 1.4, x => 0.2 * x - 1]] },
     { id: 'three-branches', branches: [[-1.8, -0.5, x => 0.3 / (1 - (x / 0.45) ** 2)], [-0.4, 0.4, x => 0.3 / (1 - (x / 0.45) ** 2)], [0.5, 1.8, x => 0.3 / (1 - (x / 0.45) ** 2)]] },
-    { id: 'mobile-two-lines', mobile: true, branches: [[-1.6, -0.3, x => 0.3 * x + 0.9], [0.3, 1.6, x => -0.4 * x - 0.6]] }
+    { id: 'mobile-two-lines', mobile: true, branches: [[-1.6, -0.3, x => 0.3 * x + 0.9], [0.3, 1.6, x => -0.4 * x - 0.6]] },
+    { id: 'sharp-v', vertices: [[-1.5, 1.4], [0, -1.3], [1.5, 1.4]] },
+    { id: 'sharp-peak', vertices: [[-1.5, -1], [-0.25, 1.5], [0.6, -0.7], [1.5, 0.2]] },
+    { id: 'plateau', vertices: [[-1.5, -1], [-0.6, 1.3], [0.6, 1.3], [1.5, -1]] },
+    { id: 'mobile-peak', mobile: true, vertices: [[-1.5, -1], [-0.25, 1.5], [0.6, -0.7], [1.5, 0.2]] }
   ]
   const outcomes = []
   for (const fixture of fixtures) {
+    if (options.cases && !options.cases.includes(fixture.id)) continue
     await page.setViewportSize(fixture.mobile ? { width: 390, height: 844 } : { width: 1600, height: 1500 })
     await page.goto(options.url, { waitUntil: 'networkidle' })
     check((await page.title()).includes('star-photo-test'), fixture.id + ': correct page')
@@ -31,10 +36,15 @@ async function checkBranches (page, options) {
     const panel = page.locator('#hand-drawn-on-star-panel')
     const canvas = panel.locator('.star-canvas')
     const confirm = panel.locator('.star-confirm')
-    const guides = fixture.branches.map(([lo, hi, f]) => Array.from({ length: 45 }, (_, i) => {
-      const x = lo + (hi - lo) * i / 44
-      return [300 + 150 * x, 220 - 100 * f(x)]
-    }))
+    const guides = fixture.vertices
+      ? [fixture.vertices.slice(1).flatMap((b, j) => {
+          const a = fixture.vertices[j]
+          return Array.from({ length: 17 }, (_, k) => [300 + 150 * (a[0] + (b[0] - a[0]) * k / 16), 220 - 100 * (a[1] + (b[1] - a[1]) * k / 16)])
+        })]
+      : fixture.branches.map(([lo, hi, f]) => Array.from({ length: 45 }, (_, i) => {
+        const x = lo + (hi - lo) * i / 44
+        return [300 + 150 * x, 220 - 100 * f(x)]
+      }))
     const data = await page.evaluate(guides => {
       const c = document.createElement('canvas')
       c.width = 600; c.height = 400
@@ -61,7 +71,9 @@ async function checkBranches (page, options) {
           spec: model && model.spec,
           expression: model && model.expr,
           degree: model && model.degree,
-          complete: model && points.every(([x]) => Number.isFinite(model.f(x))) && window.StarFit.sampleCurve(model, 16).length === 17
+          family: model && model.family,
+          complete: model && points.every(([x]) => Number.isFinite(model.f(x))) &&
+            (model.family === 'trace' ? window.StarFit.sampleCurve(model, 16).length >= 2 : window.StarFit.sampleCurve(model, 16).length === 17)
         })
         return model
       }
@@ -86,6 +98,7 @@ async function checkBranches (page, options) {
     const fits = await page.evaluate(() => window.__branchFits)
     check(fits.length === guides.length, fixture.id + ': every traced branch reaches the fitter')
     check(fits.every(f => f.complete), fixture.id + ': models cover every traced point and the complete sampled domain')
+    check(fits.every(f => f.family === 'trace'), fixture.id + ': default keeps the traced shape without choosing an equation')
     check(await confirm.isEnabled(), fixture.id + ': complete proposal is confirmable')
     check(await panel.locator('.star-fit-eq > div').count() === guides.length, fixture.id + ': preview lists every branch')
     check(await panel.locator('.star-branch-wrap').isHidden() === (guides.length === 1), fixture.id + ': branch selector matches proposal')
@@ -131,6 +144,36 @@ async function checkBranches (page, options) {
     check(branches.length === guides.length, fixture.id + ': native state retains every branch')
     check(rendering.gradeable.data.sp.length === guides.length, fixture.id + ': submission data retains every branch')
     check(await panel.isHidden(), fixture.id + ': successful confirmation closes panel')
+    if (fixture.vertices) {
+      const geometry = await page.evaluate(() => {
+        const si = window.SketchInput.instances['hand-drawn-on']
+        const config = JSON.parse(si.getState()).meta.config
+        const vertices = window.StarFit.graphToPixels(config, window.__branchFits[0].points)
+        const path = document.querySelector('#hand-drawn-on-si-container path.plugin-id-sp')
+        const controls = JSON.parse(si.getGradeable()).data.sp[0].spline
+        const grade = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+        grade.setAttribute('d', 'M' + controls[0].join(',') + 'C' + controls.slice(1).map(p => p.join(',')).join(' '))
+        const distance = (p, a, b) => {
+          const dx = b.x - a.x; const dy = b.y - a.y
+          const t = Math.max(0, Math.min(1, ((p.x - a.x) * dx + (p.y - a.y) * dy) / (dx * dx + dy * dy)))
+          return Math.hypot(p.x - a.x - t * dx, p.y - a.y - t * dy)
+        }
+        let previewError = 0; let gradingError = 0
+        const samples = []
+        for (let i = 0; i <= 1000; i++) {
+          const p = path.getPointAtLength(path.getTotalLength() * i / 1000)
+          const g = grade.getPointAtLength(grade.getTotalLength() * i / 1000)
+          samples.push({ x: p.x, y: p.y })
+          previewError = Math.max(previewError, Math.min(...vertices.slice(1).map((b, j) => distance(p, vertices[j], b))))
+          gradingError = Math.max(gradingError, Math.hypot(p.x - g.x, p.y - g.y))
+        }
+        const vertexError = Math.max(...vertices.map(v => Math.min(...samples.map(p => Math.hypot(p.x - v.x, p.y - v.y)))))
+        return { previewError, gradingError, vertexError, vertices: vertices.length }
+      })
+      check(geometry.previewError < 3 && geometry.vertexError < 3, fixture.id + ': native spline preserves preview and corner locations within 3 SVG pixels')
+      check(geometry.gradingError < 0.05, fixture.id + ': actual rendered and submitted cubic geometry agree')
+      rendering.geometry = geometry
+    }
     if (fixture.id === 'reciprocal') {
       const config = await page.evaluate(() => JSON.parse(atob(document.getElementById('hand-drawn-on-sketchresponse-data').textContent)))
       const originPx = -config.xrange[0] * config.width / (config.xrange[1] - config.xrange[0])
@@ -138,6 +181,40 @@ async function checkBranches (page, options) {
     }
     await page.locator('#hand-drawn-on-si-container').screenshot({ path: options.output + '/' + fixture.id + '--canvas.png' })
     outcomes.push({ id: fixture.id, expected: guides.length, output: branches.length, rendering })
+    if (fixture.id === 'sharp-peak') {
+      await page.locator('#hand-drawn-on-si-container').scrollIntoViewIfNeeded()
+      const peak = await page.evaluate(() => {
+        const si = window.SketchInput.instances['hand-drawn-on']
+        const points = JSON.parse(si.getState()).data.sp[0]
+        const highest = points.reduce((a, b) => a.y < b.y ? a : b)
+        const path = document.querySelector('#hand-drawn-on-si-container path.plugin-id-sp')
+        const p = path.ownerSVGElement.createSVGPoint()
+        p.x = highest.x; p.y = highest.y
+        const screen = p.matrixTransform(path.getScreenCTM())
+        return { x: screen.x, y: screen.y, before: highest }
+      })
+      check(peak.x > 0 && peak.y > 0 && peak.y < 1500, 'Native corner is on screen before editing')
+      await page.getByRole('button', { name: 'Select Select', exact: true }).first().click()
+      await page.mouse.move(peak.x, peak.y)
+      await page.mouse.down()
+      await page.mouse.move(peak.x, peak.y - 30, { steps: 6 })
+      await page.mouse.up()
+      const edited = await page.evaluate(() => JSON.parse(window.SketchInput.instances['hand-drawn-on'].getState()).data.sp)
+      await page.locator('#hand-drawn-on-si-container').screenshot({ path: options.output + '/sharp-peak--edited.png' })
+      check(edited[0].some(p => p.y < peak.before.y - 5), 'Confirmed corner remains editable through native mouse controls')
+      await Promise.all([
+        page.waitForNavigation({ waitUntil: 'networkidle' }),
+        page.getByRole('button', { name: 'Save & Grade', exact: true }).click()
+      ])
+      const restored = await page.evaluate(() => {
+        const si = window.SketchInput.instances['hand-drawn-on']
+        return { state: JSON.parse(si.getState()).data.sp, gradeable: JSON.parse(si.getGradeable()).data.sp }
+      })
+      check(JSON.stringify(restored.state.filter(b => b.length)) === JSON.stringify(edited.filter(b => b.length)), 'Edited corner survives an actual Save & Grade and page restoration')
+      check(restored.gradeable.length === 1 && restored.gradeable[0].spline.every(p => p.every(Number.isFinite)), 'Restored shape has complete finite gradeable geometry')
+      await page.locator('#hand-drawn-on-si-container').screenshot({ path: options.output + '/sharp-peak--restored.png' })
+      rendering.restored = restored
+    }
     if (fixture.id === 'two-lines') {
       await page.locator('#hand-drawn-on-star-photo-btn').click()
       await panel.locator('.star-mode-curve').click()
@@ -176,7 +253,8 @@ module.exports = checkBranches
 if (require.main === module) {
   const options = {
     url: process.env.PL_PHOTO_TEST_URL || 'http://localhost:3000/pl/course/1/question/10/preview',
-    output: resolve(process.env.PL_PHOTO_TEST_OUTPUT || '/tmp/pl-sketch-photo-branches')
+    output: resolve(process.env.PL_PHOTO_TEST_OUTPUT || '/tmp/pl-sketch-photo-branches'),
+    cases: process.env.PL_PHOTO_TEST_CASES ? process.env.PL_PHOTO_TEST_CASES.split(',') : null
   }
   mkdirSync(options.output, { recursive: true })
   const cli = process.env.PL_PHOTO_TEST_CLI || 'playwright-cli'

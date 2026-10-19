@@ -179,11 +179,11 @@ function starAddHandDrawnButton (id, si, config) {
           if (!toolId) {
             return { ok: false, message: 'This question has no editable curve tool to draw into.' }
           }
-          // Fewer control points than we sample for display: the student has to
-          // be able to drag these, and a spline interpolates between them.
+          // Mathematical fits use sparse editable samples. Transcribed shapes
+          // retain their vertices, with support anchors to protect sharp corners.
           try {
             const curves = models.map((model) => window.StarFit.sampleCurve(model, 16))
-            window.StarFit.placeCurves(si, config, toolId, curves)
+            window.StarFit.placeCurves(si, config, toolId, curves, { preserveCorners: models.map(model => model.family === 'trace') })
           } catch (err) {
             return { ok: false, message: 'Could not place the curve: ' + err.message }
           }
