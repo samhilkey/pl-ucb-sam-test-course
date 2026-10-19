@@ -32,6 +32,7 @@ window.StarPhoto = (function () {
     let refined = null
     let lastHandle = 'X'
     let tracedCurves = null
+    let tracedShapes = null
     let currentModels = null
     let branchSpecs = []
     let activeBranch = 0
@@ -128,7 +129,8 @@ window.StarPhoto = (function () {
                 <details class="star-fit-options"><summary>Adjust curve type</summary>
                   <label>Curve type
                     <select class="star-family">
-                      <option value="">Let it choose</option>
+                      <option value="trace">Keep my traced shape</option>
+                      <option value="">Fit a mathematical curve automatically</option>
                       <option value="polynomial">Polynomial</option>
                       <option value="sine">Sine wave</option>
                       <option value="exponential">Exponential</option>
@@ -142,7 +144,7 @@ window.StarPhoto = (function () {
                   <label class="star-degree-wrap" hidden>Degree <input type="number" class="star-degree" min="1" max="6" step="1" value="3"></label>
                   <button type="button" class="btn btn-light border star-refit">Refit</button>
                 </details>
-                <details class="star-equations"><summary>View fitted equations</summary><div class="star-fit-eq"></div></details>
+                <details class="star-equations"><summary>View curve details</summary><div class="star-fit-eq"></div></details>
               </div>
             </section>
           </div>
@@ -180,6 +182,7 @@ window.StarPhoto = (function () {
     // Keep extracted points only when changing fit settings, not those inputs.
     function invalidateTrace () {
       tracedCurves = null
+      tracedShapes = null
       branchSpecs = []
       activeBranch = 0
       refined = null
@@ -695,7 +698,7 @@ window.StarPhoto = (function () {
         }
         return [sx / n, sy / n]
       })
-      return { pts: sm, snapped: hits / Math.max(1, path.length) }
+      return { pts: sm, raw: out, snapped: hits / Math.max(1, path.length) }
     }
 
     // ---- pixels to graph coordinates ---------------------------------------
@@ -752,7 +755,13 @@ window.StarPhoto = (function () {
         for (let i = 0; i < pts.length; i += step) out.push(pts[i])
         if (pts.length) out.push(pts[pts.length - 1])
         if (out.length < 3) throw new Error(`Branch ${branchIndex + 1}: trace a curve with more distinct x positions.`)
-        curves.push({ points: out })
+        // Keep the unsmoothed ink for shape transcription. Sort in calibrated
+        // x, as with the mathematical path, but retain photo-pixel precision and
+        // simplify by a small geometric tolerance instead of dropping samples.
+        const ordered = r.raw.slice().sort((a, b) => toData(a)[0] - toData(b)[0])
+        const shape = window.StarFit.simplifyTrace(ordered, 1.25).map(toData)
+          .filter((p, i, all) => !i || p[0] - all[i - 1][0] > 1e-8)
+        curves.push({ points: out, tracePoints: shape })
       })
 
       if (!curves.length) throw new Error('No usable trace. Switch to "Trace the curve" and drag along your line.')
@@ -895,10 +904,13 @@ window.StarPhoto = (function () {
       q('.star-fit-box').hidden = false
       setMode('review')
       try {
-        const models = tracedCurves.map((points, i) => {
+        const models = tracedCurves.map((fittingPoints, i) => {
           try {
+            const points = branchSpecs[i] && branchSpecs[i].family === 'trace' ? tracedShapes[i] : fittingPoints
             const model = window.StarFit.fit(points, branchSpecs[i])
-            if (!model || window.StarFit.sampleCurve(model, 16).length !== 17 ||
+            const sampled = model && window.StarFit.sampleCurve(model, 16)
+            if (!model || (model.family === 'trace' ? sampled.length < 2 : sampled.length !== 17) ||
+                sampled.some(p => !p.every(Number.isFinite)) ||
                 points.some(([x]) => !Number.isFinite(model.f(x)))) {
               throw new Error('Could not fit the whole branch. Choose another curve type or retrace it.')
             }
@@ -940,7 +952,8 @@ window.StarPhoto = (function () {
       try {
         const result = markupToGraph()
         tracedCurves = result.curves.map((curve) => curve.points)
-        branchSpecs = tracedCurves.map(() => null)
+        tracedShapes = result.curves.map((curve) => curve.tracePoints)
+        branchSpecs = tracedCurves.map(() => ({ family: 'trace' }))
         q('.star-branch-wrap').hidden = tracedCurves.length === 1
         q('.star-branch').replaceChildren(...tracedCurves.map((_, i) => {
           const option = document.createElement('option')
@@ -954,7 +967,7 @@ window.StarPhoto = (function () {
             ? 'Preview ready. Compare the orange graph with your paper before confirming.'
             : 'Some ink was missed. Check the preview, widen the search width, or trace closer to the curve.'
         )
-        runFit() // let the fitter choose a family for each branch
+        runFit()
       } catch (err) {
         setStatus(err.message || 'Could not read the markup.')
       }

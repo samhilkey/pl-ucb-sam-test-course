@@ -70,6 +70,7 @@
     tan: { cost: () => 6.5 }
   }
   const FAM_LABEL = {
+    trace: 'traced shape',
     polynomial: 'polynomial',
     sine: 'sine wave',
     exponential: 'exponential',
@@ -448,11 +449,65 @@
   }
 
   function fit (pts, spec) {
+    if (spec && spec.family === 'trace') return traceModel(pts)
     const chosen = spec || autoSpec(pts)
     const model = fitModel(chosen, pts)
     if (!model) return null
     model.spec = chosen
     return model
+  }
+
+  // Ramer-Douglas-Peucker in photo pixels: remove small ink/sampling wobble
+  // without averaging across a peak or replacing a piecewise shape by a formula.
+  function simplifyTrace (points, tolerance) {
+    if (points.length < 3) return points.map(p => p.slice())
+    const keep = new Set([0, points.length - 1])
+    const pending = [[0, points.length - 1]]
+    while (pending.length) {
+      const [first, last] = pending.pop()
+      const a = points[first]
+      const b = points[last]
+      const dx = b[0] - a[0]
+      const dy = b[1] - a[1]
+      const length2 = dx * dx + dy * dy
+      let maximum = tolerance * tolerance
+      let index = -1
+      for (let i = first + 1; i < last; i++) {
+        const p = points[i]
+        const t = length2 ? Math.max(0, Math.min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dy) / length2)) : 0
+        const distance2 = (p[0] - a[0] - t * dx) ** 2 + (p[1] - a[1] - t * dy) ** 2
+        if (distance2 > maximum) { maximum = distance2; index = i }
+      }
+      if (index !== -1) {
+        keep.add(index)
+        pending.push([first, index], [index, last])
+      }
+    }
+    return [...keep].sort((a, b) => a - b).map(i => points[i].slice())
+  }
+
+  function traceModel (pts) {
+    if (!Array.isArray(pts) || pts.length < 2 || pts.some((p, i) =>
+      !Array.isArray(p) || p.length !== 2 || !p.every(Number.isFinite) || (i && p[0] <= pts[i - 1][0]))) {
+      throw new Error('A traced branch needs increasing, distinct x positions.')
+    }
+    const points = pts.map(p => p.slice())
+    const lo = points[0][0]
+    const hi = points[points.length - 1][0]
+    const f = x => {
+      if (!Number.isFinite(x) || x < lo || x > hi) return NaN
+      let left = 0
+      let right = points.length - 1
+      while (right - left > 1) {
+        const middle = (left + right) >> 1
+        if (points[middle][0] <= x) left = middle
+        else right = middle
+      }
+      const a = points[left]
+      const b = points[right]
+      return a[1] + (b[1] - a[1]) * (x - a[0]) / (b[0] - a[0])
+    }
+    return { family: 'trace', label: FAM_LABEL.trace, expr: 'Traced shape (no fitted equation)', points, lo, hi, f, rmse: 0, poles: [], spec: { family: 'trace' } }
   }
 
   /* --- pl-sketch interop ------------------------------------------------- */
@@ -495,6 +550,7 @@
   // Sample the fitted function into points, which is what a spline on the
   // canvas is made of.
   function sampleCurve (model, n) {
+    if (model.family === 'trace') return model.points.map(p => p.slice())
     n = n || 60
     const out = []
     for (let i = 0; i <= n; i++) {
@@ -526,15 +582,51 @@
 
   // Replace one tool's drawing atomically, preserving each branch as a separate
   // spline. Validate every branch before touching the live canvas.
-  function placeCurves (si, config, toolId, curves) {
+  function placeCurves (si, config, toolId, curves, options) {
     if (!Array.isArray(curves) || !curves.length || curves.some((points) =>
       !Array.isArray(points) || points.length < 2 || points.some((p) =>
         !Array.isArray(p) || p.length !== 2 || !p.every(Number.isFinite)))) {
       throw new Error('Every branch needs at least two finite points.')
     }
     const state = JSON.parse(si.getState())
-    state.data[toolId] = curves.map((points) => graphToPixels(config, points))
+    const plugin = (config.plugins || []).find(p => p.id === toolId)
+    state.data[toolId] = curves.map((points, i) => {
+      let pixels = graphToPixels(config, points)
+      if (plugin && plugin.name === 'freeform') {
+        // Freeform stores cubic controls, rather than spline interpolation points.
+        const controls = [pixels[0]]
+        for (let j = 1; j < pixels.length; j++) {
+          const a = pixels[j - 1]
+          const b = pixels[j]
+          for (let k = 1; k <= 3; k++) controls.push({ x: a.x + (b.x - a.x) * k / 3, y: a.y + (b.y - a.y) * k / 3 })
+        }
+        return controls
+      }
+      if (options && options.preserveCorners && options.preserveCorners[i]) pixels = cornerAnchors(pixels)
+      return pixels
+    })
     si.setState(JSON.stringify(state))
+  }
+
+  // Native splines interpolate their anchors but smooth the tangent at a corner.
+  // Short supports confine that rounding to a few SVG pixels. Twelve pixels
+  // also separates handles on long edges (native hit targets have radius 8).
+  // The same anchors drive rendering, editing, serialization and grading.
+  function cornerAnchors (points) {
+    const out = [points[0]]
+    for (let i = 1; i < points.length - 1; i++) {
+      const a = points[i - 1]
+      const p = points[i]
+      const b = points[i + 1]
+      const before = Math.hypot(a.x - p.x, a.y - p.y)
+      const after = Math.hypot(b.x - p.x, b.y - p.y)
+      if (!before || !after) continue
+      const distance = Math.min(12, before / 4, after / 4)
+      out.push({ x: p.x + (a.x - p.x) * distance / before, y: p.y + (a.y - p.y) * distance / before },
+        p, { x: p.x + (b.x - p.x) * distance / after, y: p.y + (b.y - p.y) * distance / after })
+    }
+    out.push(points[points.length - 1])
+    return out
   }
 
   // Retain the single-curve helper for existing callers.
@@ -565,6 +657,7 @@
     toPlFunction,
     splitDomainAtPoles,
     sampleCurve,
+    simplifyTrace,
     FAM_LABEL
   }
 

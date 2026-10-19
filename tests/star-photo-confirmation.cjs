@@ -121,6 +121,7 @@ async function checkConfirmation (page, options) {
   }
   await panel.screenshot({ path: options.output + '/updated-preview.png' })
   await fitOptions()
+  await panel.locator('.star-family').selectOption('polynomial')
   await panel.locator('.star-degree').fill('2')
   await unavailable('Change polynomial degree')
   await panel.locator('.star-refit').click()
