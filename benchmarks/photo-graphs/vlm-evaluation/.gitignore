@@ -1,0 +1,8 @@
+.venv/
+.env
+.env.*
+__pycache__/
+# Local run artifacts are opt-in to version control; .gitkeep files stay tracked.
+predictions/*/
+overlays/*/
+reports/*/

@@ -1,0 +1,41 @@
+{
+  "version": "pilot-1",
+  "cases": [
+    {
+      "id": "controlled--02-parabola--clean",
+      "image": "../synthetic/images/02-parabola--clean.jpg",
+      "image_size": [1200, 1200],
+      "sha256": "118005e97ac36bca6f905ee65e90911dc5fbd4b5fe0c295cd1601cb0d186102e"
+    },
+    {
+      "id": "controlled--04-absolute-value--clean",
+      "image": "../synthetic/images/04-absolute-value--clean.jpg",
+      "image_size": [1200, 1200],
+      "sha256": "c9c81a073b0b69b89b04f964d4a871ad19f54cd076337ad3351a25646d8cef1b"
+    },
+    {
+      "id": "controlled--06-reciprocal--clean",
+      "image": "../synthetic/images/06-reciprocal--clean.jpg",
+      "image_size": [1200, 1200],
+      "sha256": "85707d5e1c9874437dfdf15b698164450ba786c0bb04adfaa9d1aaf1df3cda80"
+    },
+    {
+      "id": "paper--03-cubic-graph-paper",
+      "image": "../paper-style/images/03-cubic-graph-paper.png",
+      "image_size": [1086, 1448],
+      "sha256": "a45d9b6f3251fbd4a26f1dff89c32e5671214b56cc32f6091858195c1e520742"
+    },
+    {
+      "id": "real--04-piecewise-curved-section",
+      "image": "../experiment-01/inputs/real--04-piecewise-curved-section.png",
+      "image_size": [314, 401],
+      "sha256": "3ae70e8e7e2b984cb53b76c559d39a18ba4d88a3281302d0c1c143f7dee2388f"
+    },
+    {
+      "id": "real--05-sparse-points-shadow",
+      "image": "../experiment-01/inputs/real--05-sparse-points-shadow.png",
+      "image_size": [726, 567],
+      "sha256": "3f0866c7bfd1d476e6bece92325cbe8bb95895d0e3bacde9a4ca87be56ee9755"
+    }
+  ]
+}

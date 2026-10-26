@@ -1,0 +1,510 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:star:graph-recognition:1.1",
+  "title": "STAR visible graph transcription 1.1",
+  "description": "Image-only transcription contract with explicit corner vertices and indexed endpoint references. No reference annotations or equations are output fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "coordinate_frame",
+    "image",
+    "axes",
+    "calibration",
+    "branches",
+    "isolated_points",
+    "uncertainty"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "coordinate_frame": {
+      "const": "original_image_pixels_top_left_xy",
+      "description": "(0,0) is the center of the upper-left pixel of the exact supplied raster. x increases rightward; y increases downward. Subpixel values are allowed. Position bounds are 0 <= x <= width-1 and 0 <= y <= height-1. No resize, crop, rectification, EXIF rotation, browser coordinates, or 900-pixel normalization is implied."
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "axes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin_px",
+        "x",
+        "y"
+      ],
+      "properties": {
+        "origin_px": {
+          "$ref": "#/$defs/nullablePixel"
+        },
+        "x": {
+          "$ref": "#/$defs/axis"
+        },
+        "y": {
+          "$ref": "#/$defs/axis"
+        }
+      }
+    },
+    "calibration": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "One global affine calibration for linear Cartesian axes. pixel = origin_px + graph.x*x_unit_vector_px + graph.y*y_unit_vector_px. Signed unit vectors may have negative components. Perspective distortion, nonlinear scales, irregular ticks, or conflicting labels require uncertain/unavailable status unless a global affine mapping is supported by visible evidence. Never use an evaluator's normalized analysis axes as physical graph units.",
+      "required": [
+        "mapping",
+        "status",
+        "x_unit_vector_px",
+        "y_unit_vector_px",
+        "uncertainty_px",
+        "evidence"
+      ],
+      "properties": {
+        "mapping": {
+          "const": "affine"
+        },
+        "status": {
+          "enum": [
+            "reliable",
+            "uncertain",
+            "unavailable"
+          ],
+          "description": "reliable: origin and both numeric scales supported by visible evidence; uncertain: partial or conflicting calibration; unavailable: no usable numeric calibration. Each unit vector may be null when uncertain; both must be null when unavailable."
+        },
+        "x_unit_vector_px": {
+          "$ref": "#/$defs/nullablePair"
+        },
+        "y_unit_vector_px": {
+          "$ref": "#/$defs/nullablePair"
+        },
+        "uncertainty_px": {
+          "$ref": "#/$defs/uncertainty"
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "branches": {
+      "description": "Independent polylines of visible connected ink. Connect consecutive points only within each branch. Never connect branches, infer an ideal function, extrapolate, bridge a gap, or spline-smooth a corner. Each visible disconnection requires separate branch records. Empty means none detected, not verified absence.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "points",
+          "endpoints",
+          "confidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "points": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "$ref": "#/$defs/vertex"
+            },
+            "description": "Traversal-ordered samples. Mark every sharp corner with vertex_kind=corner. Consecutive samples must be distinct; never repeat a sample to encode a corner."
+          },
+          "endpoints": {
+            "type": "array",
+            "maxItems": 2,
+            "description": "Indexed references to this branch's first or last sample, with visible endpoint types. Closed loops have no endpoints. Indexing is zero-based.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "point_index",
+                "kind"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "open",
+                    "closed",
+                    "arrow",
+                    "clipped",
+                    "uncertain"
+                  ]
+                },
+                "point_index": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          },
+          "confidence": {
+            "$ref": "#/$defs/confidence"
+          }
+        }
+      }
+    },
+    "isolated_points": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/point"
+      },
+      "description": "Detected standalone plotted marks. Render as separate points, with no inferred connecting segments. [] means none detected; a verified absence or verified reference count must come from independent annotation."
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confidence",
+        "reasons",
+        "assistance_required",
+        "clarification_request"
+      ],
+      "properties": {
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "assistance_required": {
+          "type": "boolean",
+          "description": "True for ambiguous/incomplete interpretation or missing/uncertain numeric calibration. This is an inference result, separate from the evaluator-only diagnostic policy."
+        },
+        "clarification_request": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "A concrete question for the student when clarification is requested, otherwise null. A non-null request requires assistance_required=true."
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "calibration": {
+            "properties": {
+              "status": {
+                "const": "reliable"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "axes": {
+            "properties": {
+              "origin_px": {
+                "$ref": "#/$defs/pixel"
+              }
+            }
+          },
+          "calibration": {
+            "properties": {
+              "x_unit_vector_px": {
+                "$ref": "#/$defs/pair"
+              },
+              "y_unit_vector_px": {
+                "$ref": "#/$defs/pair"
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "branches": {
+            "items": {
+              "properties": {
+                "points": {
+                  "items": {
+                    "properties": {
+                      "graph": {
+                        "type": "null"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "isolated_points": {
+            "items": {
+              "$ref": "#/$defs/pixelOnlyPoint"
+            }
+          },
+          "uncertainty": {
+            "properties": {
+              "assistance_required": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "calibration": {
+            "properties": {
+              "status": {
+                "const": "unavailable"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "calibration": {
+            "properties": {
+              "x_unit_vector_px": {
+                "type": "null"
+              },
+              "y_unit_vector_px": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "uncertainty": {
+            "properties": {
+              "assistance_required": {
+                "const": true
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "uncertainty": {
+            "properties": {
+              "reasons": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "pair": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number"
+      },
+      "description": "Finite [x,y] pair; components may be negative for graph coordinates and unit vectors."
+    },
+    "pixel": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number",
+        "minimum": 0
+      },
+      "description": "Native image [x,y] position. Image-dependent upper bounds require semantic validation."
+    },
+    "nullablePixel": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/pixel"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "nullablePair": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/pair"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "uncertainty": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Subjective localization uncertainty radius in native pixels, or null if unknown. Not a statistically calibrated confidence interval."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Subjective confidence, not a calibrated probability."
+    },
+    "pixelOnlyPoint": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/point"
+        },
+        {
+          "properties": {
+            "graph": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pixel",
+        "graph",
+        "uncertainty_px"
+      ],
+      "properties": {
+        "pixel": {
+          "$ref": "#/$defs/pixel"
+        },
+        "graph": {
+          "$ref": "#/$defs/nullablePair",
+          "description": "Physical graph [x,y] inferred only from reliable visible numeric calibration; null otherwise. Never normalized evaluator coordinates."
+        },
+        "uncertainty_px": {
+          "$ref": "#/$defs/uncertainty"
+        }
+      }
+    },
+    "axis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "visible",
+        "label",
+        "line_px",
+        "tick_labels"
+      ],
+      "properties": {
+        "visible": {
+          "type": "boolean",
+          "description": "Whether an axis was detected. false is not independent proof that no axis exists; explain ambiguous visibility in uncertainty.reasons."
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "line_px": {
+          "anyOf": [
+            {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "$ref": "#/$defs/pixel"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Two positions on the visible axis centerline, or null if it cannot be located."
+        },
+        "tick_labels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text",
+              "value",
+              "position_px",
+              "confidence"
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "position_px": {
+                "$ref": "#/$defs/pixel",
+                "description": "Location of the tick on the axis, rather than the text bounding-box center."
+              },
+              "confidence": {
+                "$ref": "#/$defs/confidence"
+              }
+            }
+          }
+        }
+      }
+    },
+    "vertex": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pixel",
+        "graph",
+        "uncertainty_px",
+        "vertex_kind"
+      ],
+      "properties": {
+        "pixel": {
+          "$ref": "#/$defs/pixel"
+        },
+        "graph": {
+          "$ref": "#/$defs/nullablePair",
+          "description": "Physical graph [x,y] inferred only from reliable visible numeric calibration; null otherwise. Never normalized evaluator coordinates."
+        },
+        "uncertainty_px": {
+          "$ref": "#/$defs/uncertainty"
+        },
+        "vertex_kind": {
+          "enum": [
+            "sample",
+            "corner"
+          ],
+          "description": "corner is an explicit breakpoint: downstream adapters must split here or use a non-smooth native vertex. Never feed it through a smooth spline as an ordinary sample."
+        }
+      }
+    }
+  }
+}

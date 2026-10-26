@@ -1,0 +1,111 @@
+{
+  "version": "pilot-evaluation-1.1",
+  "scope": "EVALUATOR ONLY. Never load or transmit this file during inference.",
+  "path_base": "directory_containing_this_file",
+  "reference_catalog": {
+    "path": "../experiment-01/catalog.json",
+    "sha256": "70d39cad8cca4c7fccb2e5d9844bef31f23a036357161bb8e83df7c39260b368"
+  },
+  "reference_annotations": {
+    "path": "../experiment-01/annotations.json",
+    "sha256": "063ca846d103f29bbd964bf6dc008a1ee9258c84d12955e75c11b7895141628f"
+  },
+  "image_resolution": "Resolve images only through pilot.json relative to its directory. Join catalog entries by ID and verify input_sha256; ignore catalog.image, including its historical /course paths.",
+  "score_groups": {
+    "controlled": "Known generated ink centerlines, including intentional wobble; never substitute ideal_function.",
+    "paper-style": "Approximate visual references, not independently verified. Report annotation uncertainty and exploratory metrics separately.",
+    "real": "Approximate visual references and, for some cases, arbitrary normalized axes. Report exploratory pixel metrics separately."
+  },
+  "cases": [
+    {
+      "id": "controlled--02-parabola--clean",
+      "collection": "controlled",
+      "reference_status": "known_generated_centerline",
+      "diagnostic_only": false,
+      "scoring": {
+        "curve_geometry": true,
+        "branch_count": true,
+        "numeric_axes": true,
+        "isolated_points": false
+      },
+      "review_focus": "Visible smooth curve and coordinates; compare to the actual centerline."
+    },
+    {
+      "id": "controlled--04-absolute-value--clean",
+      "collection": "controlled",
+      "reference_status": "known_generated_centerline",
+      "diagnostic_only": false,
+      "scoring": {
+        "curve_geometry": true,
+        "branch_count": true,
+        "numeric_axes": true,
+        "isolated_points": false
+      },
+      "review_focus": "Retain the visible sharp corner as an actual polyline vertex."
+    },
+    {
+      "id": "controlled--06-reciprocal--clean",
+      "collection": "controlled",
+      "reference_status": "known_generated_centerline",
+      "diagnostic_only": false,
+      "scoring": {
+        "curve_geometry": true,
+        "branch_count": true,
+        "numeric_axes": true,
+        "isolated_points": false
+      },
+      "review_focus": "Preserve two disconnected branches without a connecting segment."
+    },
+    {
+      "id": "paper--03-cubic-graph-paper",
+      "collection": "paper-style",
+      "reference_status": "approximate_visual_annotation",
+      "annotation_uncertainty_original_px": 8,
+      "diagnostic_only": false,
+      "scoring": {
+        "curve_geometry": true,
+        "branch_count": true,
+        "numeric_axes": false,
+        "isolated_points": false
+      },
+      "review_focus": "Preserve photographed ink and label conflicts. The intended generation equation is not ground truth."
+    },
+    {
+      "id": "real--04-piecewise-curved-section",
+      "collection": "real",
+      "reference_status": "approximate_visual_annotation",
+      "annotation_uncertainty_original_px": 4,
+      "diagnostic_only": false,
+      "scoring": {
+        "curve_geometry": true,
+        "branch_count": true,
+        "numeric_axes": false,
+        "isolated_points": false
+      },
+      "review_focus": "Preserve partial/curved/flat sections. The reference's normalized axes are not numeric-scale ground truth."
+    },
+    {
+      "id": "real--05-sparse-points-shadow",
+      "collection": "real",
+      "reference_status": "unverified_sparse_point_diagnostic",
+      "diagnostic_only": true,
+      "scoring": {
+        "curve_geometry": false,
+        "branch_count": false,
+        "numeric_axes": false,
+        "isolated_points": false
+      },
+      "reference_verification_required": true,
+      "review_focus": "Inspect isolated point output, any invented connections, and uncertainty/assistance. Do not treat legacy reference_branch_count=0 or branches=[] as verified absence. No point locations/counts have been independently annotated.",
+      "qualitative_review": {
+        "required": true,
+        "fields": [
+          "isolated_points_preserved",
+          "invented_connecting_curves",
+          "clarification_requested"
+        ],
+        "unverified_judgments": "Leave preservation/invention unverified pending photo review; record point counts, curve counts, and clarification requests independently."
+      }
+    }
+  ]
+}
