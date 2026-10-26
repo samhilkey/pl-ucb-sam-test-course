@@ -29,6 +29,8 @@ locally. The tests block sockets and HTTP transport, inject synthetic responses,
 and exercise all six cases end to end. Their temporary predictions, metrics, and
 overlays are labeled `mock` / `MOCK TEST ONLY`; they are not recognition evidence.
 See [the offline verification report](reports/STEP-03-OFFLINE.md).
+The subsequent [pre-inference review](reports/PRE-INFERENCE-REVIEW.md) audits the
+published commits, the exact single-case request, and separation of mock evidence.
 
 ## Six-case image-only manifest
 
@@ -149,8 +151,8 @@ selects an existing alternative variable by name.
 export VLM_MODEL='your-vision-model'
 export VLM_BASE_URL='https://api.openai.com/v1'
 # VLM_API_KEY must already be present in the environment.
-python -B benchmarks/photo-graphs/vlm-evaluation/run_vlm_eval.py --execute --run-id pilot-001
-python -B benchmarks/photo-graphs/vlm-evaluation/evaluate.py --run-id pilot-001
+python -B benchmarks/photo-graphs/vlm-evaluation/run_vlm_eval.py --execute --run-id parabola-001 --case controlled--02-parabola--clean
+python -B benchmarks/photo-graphs/vlm-evaluation/evaluate.py --run-id parabola-001
 ```
 
 The initial transport follows the official
@@ -186,6 +188,13 @@ hashes, then adapts branch-aware point-to-segment utilities from
 `experiment-01/analyze_results.py` and `prepare_cases.py`. It never invokes those
 scripts' main functions. A unit test checks numerical equivalence on fixture
 geometry. Reports record the source utility and evaluator hashes.
+
+Mock runs are rejected by default. `--allow-mock` enables offline diagnostics only:
+their summary's real `groups` remain empty, metrics appear under `mock_groups`,
+`real_recognition_cases` is zero, and every results row has
+`is_real_recognition=false`. Existing mock labels/watermarks remain in place. A
+source label is provenance recorded by the runner, not cryptographic attestation
+against deliberate edits to local artifacts.
 
 Each run produces `reports/<report-id>/results.csv`, `summary.json`, `REPORT.md`,
 `qualitative-review.csv`, and `stroke-plans.json`, plus original/reference/prediction

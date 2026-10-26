@@ -1,0 +1,47 @@
+{
+  "status": "offline_payload_audit_no_model_result",
+  "frozen_input_source_commit": "b03c5f6bb83c537e7ab7cb501d63e6b158f70b36",
+  "case_id": "controlled--02-parabola--clean",
+  "model_example": "gpt-4.1-mini-2025-04-14",
+  "image_size": [
+    1200,
+    1200
+  ],
+  "original_image_sha256": "118005e97ac36bca6f905ee65e90911dc5fbd4b5fe0c295cd1601cb0d186102e",
+  "transmitted_png_sha256": "f659717b52d11f4577a4bff3a9926db8a59a422606c691fe810dc2191f49529e",
+  "prompt_sha256": "6bcec52cadd58687c4b77842ea9c950f0eada92cf7f7c79ad5c78a4f6a4321ae",
+  "schema_sha256": "b3715d2a1dd03004af41605a0d254b336280460908e4bf4410ea43574741742d",
+  "request_sha256_canonical": "d3abff4cc3e50e8555c105cda1242741d6f8f1851ca4316919ac984c9c3b1246",
+  "wire_body_sha256": "cd22453aea0388f873342672c9ac7aa493269e61248d68f5b73b1a7bd226366f",
+  "wire_body_bytes": 1110250,
+  "content_parts": [
+    "frozen_generic_prompt_and_output_schema",
+    "native_dimensions",
+    "one_metadata_free_png"
+  ],
+  "withheld_reference_data_in_payload": false,
+  "local_wire_adapter_calls_with_blocked_network": 1,
+  "live_api_requests": 0,
+  "cost_example": {
+    "currency": "USD",
+    "input_per_million": 0.4,
+    "output_per_million": 1.6,
+    "image_token_estimate": 2340,
+    "instruction_characters": 12438,
+    "text_token_estimate_range_heuristic_only": [
+      2487,
+      4146
+    ],
+    "max_output_tokens": 8000,
+    "cost_at_full_output_budget_estimate_range": [
+      0.0147308,
+      0.0153944
+    ],
+    "model_is_deprecated": true,
+    "account_access_verified": false,
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+      "https://developers.openai.com/api/docs/guides/images-vision"
+    ]
+  }
+}

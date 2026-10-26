@@ -86,7 +86,7 @@ def write_mock_run(root, run_id="offline-mock"):
     args = runner.parser().parse_args(["--execute", "--model", "OFFLINE_MOCK", "--run-id", run_id, "--output-root", str(root)])
     with redirect_stdout(io.StringIO()):
         assert runner.run(args, send=mock_image_only_response) == 0
-        return evaluator.evaluate(run_id, root)
+        return evaluator.evaluate(run_id, root, allow_mock=True)
 
 
 class OfflineCase(unittest.TestCase):
@@ -217,6 +217,27 @@ class GeometryTests(OfflineCase):
         self.assertEqual(plan["pieces"], [[0,1],[1,2]])
         self.assertEqual(plan["endpoints"], p["branches"][0]["endpoints"])
 
+    def test_corner_splits_share_vertices_preserve_edges_and_remain_one_branch(self):
+        p = prediction()
+        p["branches"] = [branch([vertex(10,10), vertex(20,40,kind="corner"), vertex(40,20),
+                                 vertex(60,40,kind="corner"), vertex(80,10)])]
+        original = p["branches"][0]
+        plans = geometry.stroke_plan(p)
+        self.assertEqual(len(plans),1)
+        self.assertEqual(len(p["branches"]),1)
+        pieces = plans[0]["pieces"]
+        self.assertEqual(pieces,[[0,1],[1,2,3],[3,4]])
+        for before, after in zip(pieces,pieces[1:]):
+            self.assertEqual(before[-1],after[0])
+            self.assertIs(original["points"][before[-1]],original["points"][after[0]])
+        self.assertEqual([edge for piece in pieces for edge in zip(piece,piece[1:])],list(zip(range(4),range(1,5))))
+        whole = [[point["pixel"] for point in original["points"]]]
+        split = [[original["points"][i]["pixel"] for i in piece] for piece in pieces]
+        metrics = geometry.compare(whole,split)
+        self.assertAlmostEqual(metrics["bidirectional_p95"],0,places=10)
+        self.assertEqual(metrics["reference_coverage"],1)
+        self.assertEqual(plans[0]["endpoints"],[{"point_index":0,"kind":"open"},{"point_index":4,"kind":"uncertain"}])
+
     def test_adapted_metrics_match_frozen_baseline(self):
         baseline = HERE.parent/"experiment-01"
         with patch.object(sys, "path", [str(baseline), *sys.path]):
@@ -279,6 +300,39 @@ class InputBoundaryTests(OfflineCase):
         text = json.dumps(payload)
         for secret in [c["id"], c["image"], c["sha256"], "PRIVATE_EQUATION_SENTINEL", "PRIVATE_TRACE_SENTINEL"]:
             self.assertNotIn(secret,text)
+
+    def test_exact_single_case_payload_matches_frozen_local_inputs(self):
+        case = common.read_json(HERE/"pilot.json")["cases"][0]
+        prompt = (HERE/"prompts/transcribe-v1.1.txt").read_text()
+        schema = common.read_json(HERE/"prediction.schema.json")
+        captured = []
+        original_open = Path.open
+        def guarded(path,*args,**kwargs):
+            self.assertNotIn(path.name,{"evaluation-policy.json","catalog.json","annotations.json"})
+            self.assertNotIn("references",path.parts)
+            return original_open(path,*args,**kwargs)
+        def capture(url,payload,key,timeout):
+            captured.append(deepcopy(payload))
+            return mock_image_only_response(url,payload,key,timeout)
+        with tempfile.TemporaryDirectory() as root:
+            args = runner.parser().parse_args(["--execute","--model","OFFLINE_MOCK","--case",case["id"],"--run-id","payload-audit","--output-root",root])
+            with patch.object(Path,"open",guarded), redirect_stdout(io.StringIO()):
+                self.assertEqual(runner.run(args,send=capture),0)
+            self.assertEqual(len(captured),1)
+            body = captured[0]
+            self.assertEqual(set(body),{"model","messages","max_completion_tokens","response_format"})
+            self.assertEqual(body["messages"][0],{"role":"system","content":prompt+"\nJSON Schema:\n"+json.dumps(schema)})
+            user = body["messages"][1]
+            self.assertEqual(user["role"],"user")
+            self.assertEqual(user["content"][0],{"type":"text","text":"Image width=1200 height=1200 pixels."})
+            self.assertEqual(len(user["content"]),2)
+            self.assertEqual(user["content"][1]["image_url"]["detail"],"high")
+            png = base64.b64decode(user["content"][1]["image_url"]["url"].split(",",1)[1])
+            self.assertEqual(png,common.image_bytes(case))
+            metadata = common.read_json(Path(root)/"predictions/payload-audit/run.json")
+            self.assertEqual(metadata["source_kind"],"mock")
+            self.assertEqual(metadata["prompt"],prompt)
+            self.assertEqual(metadata["schema"],schema)
 
 
 class RunnerTests(OfflineCase):
@@ -385,7 +439,10 @@ class EvaluationTests(OfflineCase):
         self.assertTrue(review["clarification_requested"])
         self.assertEqual(review["isolated_points_preserved"],"unverified")
         self.assertEqual(review["invented_connecting_curves"],"unverified")
-        self.assertEqual(summary["groups"]["real"]["quantitative_eligible"],1)
+        self.assertEqual(summary["groups"],{})
+        self.assertEqual(summary["real_recognition_cases"],0)
+        self.assertTrue(all(not row["is_real_recognition"] for row in summary["rows"]))
+        self.assertEqual(summary["mock_groups"]["real"]["quantitative_eligible"],1)
         with (report/"results.csv").open() as f: self.assertEqual(len(list(csv.DictReader(f))),6)
         with (report/"qualitative-review.csv").open() as f: self.assertEqual(len(list(csv.DictReader(f))),6)
         for path in (self.root/"overlays/offline-mock").glob('*.png'):
@@ -411,7 +468,7 @@ class EvaluationTests(OfflineCase):
     def test_invalid_artifact_cannot_be_scored_as_success(self):
         write_mock_run(self.root)
         path = next((self.root/"predictions/offline-mock/validated").glob('*.json')); path.write_text('{}')
-        with redirect_stdout(io.StringIO()): summary = evaluator.evaluate("offline-mock",self.root,report_id="integrity-check")
+        with redirect_stdout(io.StringIO()): summary = evaluator.evaluate("offline-mock",self.root,report_id="integrity-check",allow_mock=True)
         row = next(r for r in summary["rows"] if r["id"]==path.stem)
         self.assertEqual(row["status"],"artifact_error"); self.assertIsNone(row["geometry_fidelity_pass"])
 
@@ -420,11 +477,11 @@ class EvaluationTests(OfflineCase):
         args = runner.parser().parse_args(["--execute","--model","OFFLINE_MOCK","--run-id","failed","--output-root",self.temp,"--case",case["id"]])
         with redirect_stdout(io.StringIO()):
             self.assertEqual(runner.run(args,send=Mock(return_value=(200,'{'))),1)
-            summary = evaluator.evaluate("failed",self.root)
+            summary = evaluator.evaluate("failed",self.root,allow_mock=True)
         row = summary["rows"][0]
         self.assertEqual(row["status"],"invalid_response")
         self.assertIsNone(row["geometry_fidelity_pass"])
-        self.assertEqual(summary["groups"]["controlled"]["unscored_missing_or_invalid"],1)
+        self.assertEqual(summary["mock_groups"]["controlled"]["unscored_missing_or_invalid"],1)
         with (self.root/"reports/failed/results.csv").open() as f:
             reader = csv.DictReader(f)
             self.assertIn("bidirectional_p95_native_px",reader.fieldnames)
@@ -433,8 +490,15 @@ class EvaluationTests(OfflineCase):
     def test_existing_manual_review_is_preserved(self):
         write_mock_run(self.root)
         path = self.root/"reports/offline-mock/qualitative-review.csv"; before = path.read_bytes()
-        with self.assertRaisesRegex(ValueError,"already exists"): evaluator.evaluate("offline-mock",self.root)
+        with self.assertRaisesRegex(ValueError,"already exists"): evaluator.evaluate("offline-mock",self.root,allow_mock=True)
         self.assertEqual(path.read_bytes(),before)
+
+    def test_mock_evaluation_is_rejected_by_default_before_creating_report(self):
+        write_mock_run(self.root)
+        with self.assertRaisesRegex(ValueError,"Mock run is not recognition evidence"):
+            evaluator.evaluate("offline-mock",self.root,report_id="should-not-exist")
+        self.assertFalse((self.root/"reports/should-not-exist").exists())
+        self.assertFalse((self.root/"overlays/should-not-exist").exists())
 
     def test_controlled_axis_error_is_independent_of_geometry(self):
         p = reliable()

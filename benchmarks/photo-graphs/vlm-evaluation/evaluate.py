@@ -172,7 +172,7 @@ def write_csv(path, rows):
         writer.writerows(rows)
 
 
-def evaluate(run_id, output_root=HERE, manifest_path=HERE / "pilot.json", policy_path=HERE / "evaluation-policy.json", report_id=None):
+def evaluate(run_id, output_root=HERE, manifest_path=HERE / "pilot.json", policy_path=HERE / "evaluation-policy.json", report_id=None, allow_mock=False):
     safe_id(run_id)
     report_id = safe_id(report_id or run_id)
     output_root = Path(output_root).resolve()
@@ -186,6 +186,8 @@ def evaluate(run_id, output_root=HERE, manifest_path=HERE / "pilot.json", policy
         raise ValueError("Saved schema snapshot checksum mismatch")
     if metadata["source_kind"] not in {"api", "mock"} or metadata["schema_version"] != "1.1":
         raise ValueError("Unsupported source kind or schema version")
+    if metadata["source_kind"] == "mock" and not allow_mock:
+        raise ValueError("Mock run is not recognition evidence; use --allow-mock only for offline diagnostics")
     selected = metadata["manifest"]["cases"]
     manifest_by_id = {c["id"]: c for c in manifest["cases"]}
     if len({c["id"] for c in selected}) != len(selected) or not selected:
@@ -233,6 +235,7 @@ def evaluate(run_id, output_root=HERE, manifest_path=HERE / "pilot.json", policy
                 prediction = None
         review = {"id": ident, "source_kind": metadata["source_kind"], **qualitative(prediction, rule)}
         review_rows.append(review)
+        row["is_real_recognition"] = metadata["source_kind"] == "api" and row["status"] == "validated"
         row.update({k: review[k] for k in ["isolated_points_reported", "connecting_curve_proposed", "clarification_requested", "clarification_request"]})
         row["overlay"] = "../../overlays/"+report_id+"/"+ident+".png"
         overlay(manifest_path.parent/case["image"], overlay_dir/(ident+".png"), case, ref, rule, prediction, row["status"], metadata["source_kind"])
@@ -248,7 +251,10 @@ def evaluate(run_id, output_root=HERE, manifest_path=HERE / "pilot.json", policy
                               "unscored_missing_or_invalid": sum(r["status"] != "validated" for r in eligible)}
     summary = {"run_id": run_id, "report_id": report_id, "source_kind": metadata["source_kind"],
                "generated_utc": datetime.now(timezone.utc).isoformat(), "status_counts": dict(Counter(r["status"] for r in rows)),
-               "groups": groups, "rows": rows, "qualitative": review_rows,
+               "groups": groups if metadata["source_kind"] == "api" else {},
+               "mock_groups": groups if metadata["source_kind"] == "mock" else {},
+               "real_recognition_cases": sum(r["is_real_recognition"] for r in rows),
+               "rows": rows, "qualitative": review_rows,
                "model": metadata["requested_model"], "prompt_sha256": metadata["prompt_sha256"],
                "policy_sha256": sha256(Path(policy_path).read_bytes()), "reference_hashes": {k: policy[k] for k in ["reference_catalog", "reference_annotations"]},
                "evaluation_code_sha256": {p: sha256((HERE/p).read_bytes()) for p in ["evaluate.py", "geometry.py", "common.py"]},
@@ -275,5 +281,6 @@ if __name__ == "__main__":
     parser.add_argument("--manifest", default=str(HERE/"pilot.json"))
     parser.add_argument("--policy", default=str(HERE/"evaluation-policy.json"))
     parser.add_argument("--report-id")
+    parser.add_argument("--allow-mock", action="store_true", help="Offline diagnostics only; mock metrics never populate real recognition groups")
     args = parser.parse_args()
-    evaluate(args.run_id, args.output_root, args.manifest, args.policy, args.report_id)
+    evaluate(args.run_id, args.output_root, args.manifest, args.policy, args.report_id, args.allow_mock)
