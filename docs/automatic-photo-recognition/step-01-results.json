@@ -1,0 +1,475 @@
+{
+  "step": 1,
+  "date": "2026-11-02",
+  "scope": "Existing assisted photo workflow baseline; no automatic recognition implemented or evaluated",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "baseline_commit": "547801c5148c6289806c731a059c225474bccc1d",
+  "origin_master_verified_by_fetch": true,
+  "initial_worktree": "clean",
+  "environment": {
+    "node": "20.19.6",
+    "playwright_cli": "0.1.23",
+    "browser": "Chrome",
+    "browser_plugin": "not available; repository Playwright CLI tests used",
+    "image": "prairielearn/prairielearn@sha256:be0af7a6abc47c2ce95acc6e26457fc831e3e169da8cd053bb8f7af60b83e207",
+    "architecture": "linux/arm64",
+    "javascript_sketchresponse": "0.2.1",
+    "python_sketchresponse": "0.1.5",
+    "preview_url": "http://localhost:3000/pl/course/1/question/10/preview"
+  },
+  "node_tests": {
+    "command": "node --test tests/star-fit-branches.cjs tests/star-fit-coverage.cjs",
+    "passed": 13,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "browser_tests": [
+    {
+      "command": "node tests/star-photo-confirmation.cjs",
+      "exit_code": 0,
+      "passed_assertions": 71,
+      "console_errors": [],
+      "checks": [
+        "Correct question loaded",
+        "Meaningful question content",
+        "Fresh reading enables confirmation",
+        "Clear trace: confirmation disabled",
+        "Clear trace: old equation cleared",
+        "Clear trace: old model cannot reach canvas",
+        "Empty trace shows an actionable error",
+        "Failed empty-trace reading: confirmation disabled",
+        "Failed empty-trace reading: old equation cleared",
+        "Failed empty-trace reading: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Replace photo: confirmation disabled",
+        "Replace photo: old equation cleared",
+        "Replace photo: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Change x units: confirmation disabled",
+        "Change x units: old equation cleared",
+        "Change x units: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Change y units: confirmation disabled",
+        "Change y units: old equation cleared",
+        "Change y units: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Change equal-axis scale: confirmation disabled",
+        "Change equal-axis scale: old equation cleared",
+        "Change equal-axis scale: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Change search width: confirmation disabled",
+        "Change search width: old equation cleared",
+        "Change search width: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Move origin: confirmation disabled",
+        "Move origin: old equation cleared",
+        "Move origin: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Add stroke: confirmation disabled",
+        "Add stroke: old equation cleared",
+        "Add stroke: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Undo stroke: confirmation disabled",
+        "Undo stroke: old equation cleared",
+        "Undo stroke: old model cannot reach canvas",
+        "Fresh reading enables confirmation",
+        "Change polynomial degree: confirmation disabled",
+        "Change polynomial degree: old equation cleared",
+        "Change polynomial degree: old model cannot reach canvas",
+        "Refit re-enables confirmation",
+        "Changing curve family generates a fresh fit",
+        "Display-only controls preserve a valid fit",
+        "Failed refit (null): confirmation disabled",
+        "Failed refit (null): old equation cleared",
+        "Failed refit (null): old model cannot reach canvas",
+        "Successful refit recovers from null",
+        "Failed refit (throw): confirmation disabled",
+        "Failed refit (throw): old equation cleared",
+        "Failed refit (throw): old model cannot reach canvas",
+        "Successful refit recovers from throw",
+        "Photo loading: confirmation disabled",
+        "Photo loading: old equation cleared",
+        "Photo loading: old model cannot reach canvas",
+        "Reading is disabled while a photo loads",
+        "Fresh reading enables confirmation",
+        "Late older upload cannot replace the newest photo or preview",
+        "Failed photo load: confirmation disabled",
+        "Failed photo load: old equation cleared",
+        "Failed photo load: old model cannot reach canvas",
+        "Failed photo load cannot reread the previous photo",
+        "Fresh reading enables confirmation",
+        "Fresh confirmation closes photo panel",
+        "Exactly one fresh model reached native canvas",
+        "No application console errors"
+      ],
+      "log": "star-photo-confirmation.log",
+      "log_sha256": "11cbd3612c23701fb3f31c9790d4b805fef3c8dfcf7e891d951f98d54ea9218a"
+    },
+    {
+      "command": "node tests/star-photo-branches.cjs",
+      "exit_code": 0,
+      "passed_assertions": 80,
+      "console_errors": [],
+      "checks": [
+        "single-line: correct page",
+        "single-line: meaningful page",
+        "single-line: every traced branch reaches the fitter",
+        "single-line: models cover every traced point and the complete sampled domain",
+        "single-line: complete proposal is confirmable",
+        "single-line: preview lists every branch",
+        "single-line: branch selector matches proposal",
+        "single-line: native state retains every branch",
+        "single-line: submission data retains every branch",
+        "single-line: successful confirmation closes panel",
+        "two-lines: correct page",
+        "two-lines: meaningful page",
+        "two-lines: every traced branch reaches the fitter",
+        "two-lines: models cover every traced point and the complete sampled domain",
+        "two-lines: complete proposal is confirmable",
+        "two-lines: preview lists every branch",
+        "two-lines: branch selector matches proposal",
+        "Selecting a branch preserves the proposal without refitting",
+        "Changing branch degree invalidates the complete proposal",
+        "Invalidated multi-branch equations disappear",
+        "Invalidated multi-branch proposal cannot transfer",
+        "Editing branch 2 preserves branch 1 model",
+        "Degree override applies to the selected branch",
+        "Failure of a later branch blocks the whole proposal",
+        "Failure identifies the affected branch",
+        "A partially fitted proposal cannot transfer",
+        "two-lines: native state retains every branch",
+        "two-lines: submission data retains every branch",
+        "two-lines: successful confirmation closes panel",
+        "Undoing a branch invalidates the complete proposal",
+        "Undoing the second branch restores single-branch controls",
+        "Fresh single-branch confirmation removes the previous second branch",
+        "An unusable extra stroke blocks confirmation instead of disappearing",
+        "Unusable stroke identifies the branch to retrace or undo",
+        "Unusable later stroke cannot replace the native drawing",
+        "Undoing an unusable stroke restores a complete proposal",
+        "reciprocal: correct page",
+        "reciprocal: meaningful page",
+        "reciprocal: every traced branch reaches the fitter",
+        "reciprocal: models cover every traced point and the complete sampled domain",
+        "reciprocal: complete proposal is confirmable",
+        "reciprocal: preview lists every branch",
+        "reciprocal: branch selector matches proposal",
+        "reciprocal: native state retains every branch",
+        "reciprocal: submission data retains every branch",
+        "reciprocal: successful confirmation closes panel",
+        "Reciprocal branches remain disconnected across the asymptote",
+        "overlapping-x: correct page",
+        "overlapping-x: meaningful page",
+        "overlapping-x: every traced branch reaches the fitter",
+        "overlapping-x: models cover every traced point and the complete sampled domain",
+        "overlapping-x: complete proposal is confirmable",
+        "overlapping-x: preview lists every branch",
+        "overlapping-x: branch selector matches proposal",
+        "overlapping-x: native state retains every branch",
+        "overlapping-x: submission data retains every branch",
+        "overlapping-x: successful confirmation closes panel",
+        "three-branches: correct page",
+        "three-branches: meaningful page",
+        "three-branches: every traced branch reaches the fitter",
+        "three-branches: models cover every traced point and the complete sampled domain",
+        "three-branches: complete proposal is confirmable",
+        "three-branches: preview lists every branch",
+        "three-branches: branch selector matches proposal",
+        "three-branches: native state retains every branch",
+        "three-branches: submission data retains every branch",
+        "three-branches: successful confirmation closes panel",
+        "mobile-two-lines: correct page",
+        "mobile-two-lines: meaningful page",
+        "Mobile photo is visible for tracing without layout changes",
+        "Mobile photo is visible for tracing without layout changes",
+        "mobile-two-lines: every traced branch reaches the fitter",
+        "mobile-two-lines: models cover every traced point and the complete sampled domain",
+        "mobile-two-lines: complete proposal is confirmable",
+        "mobile-two-lines: preview lists every branch",
+        "mobile-two-lines: branch selector matches proposal",
+        "mobile-two-lines: native state retains every branch",
+        "mobile-two-lines: submission data retains every branch",
+        "mobile-two-lines: successful confirmation closes panel",
+        "No application console errors"
+      ],
+      "log": "star-photo-branches.log",
+      "log_sha256": "d6944e5ca6fa7d607c595ec8fc838b0c85f6801f05eae03064ec333d0d9a1414",
+      "cases": [
+        {
+          "id": "single-line",
+          "expected_branches": 1,
+          "native_branches": 1
+        },
+        {
+          "id": "two-lines",
+          "expected_branches": 2,
+          "native_branches": 2
+        },
+        {
+          "id": "reciprocal",
+          "expected_branches": 2,
+          "native_branches": 2
+        },
+        {
+          "id": "overlapping-x",
+          "expected_branches": 2,
+          "native_branches": 2
+        },
+        {
+          "id": "three-branches",
+          "expected_branches": 3,
+          "native_branches": 3
+        },
+        {
+          "id": "mobile-two-lines",
+          "expected_branches": 2,
+          "native_branches": 2
+        }
+      ]
+    },
+    {
+      "command": "node tests/star-photo-workflow.cjs",
+      "exit_code": 0,
+      "passed_assertions": 67,
+      "console_errors": [],
+      "checks": [
+        "desktop: correct question",
+        "desktop: meaningful page",
+        "desktop: instructor switch-off control stays unchanged",
+        "desktop: native modal opens",
+        "desktop: later steps wait for a photo",
+        "desktop: keyboard focus stays in the dialog",
+        "desktop: upload advances to calibration",
+        "desktop: entire portrait photo fits without scrolling",
+        "desktop: calibration action stays on screen",
+        "desktop: dialog has no horizontal overflow",
+        "desktop: zero reference cannot proceed silently as one",
+        "desktop: invalid calibration has a visible explanation",
+        "desktop: Enter in a coordinate field does not submit the question",
+        "desktop: keyboard moves an axis marker",
+        "desktop: keyboard can restore the original calibration",
+        "desktop: tracing step exposes its primary action",
+        "desktop: zoom controls magnify the photo",
+        "desktop: move-photo gesture pans the magnified image",
+        "desktop: panning creates no accidental stroke",
+        "desktop: three separate gestures give three branches",
+        "desktop: reading advances to review",
+        "desktop: confirmation is enabled and on screen",
+        "desktop: review represents every branch",
+        "desktop: view gestures did not add fitting inputs",
+        "desktop: tracing while zoomed preserves graph coordinates",
+        "desktop: zoom, pan and trace visibility preserve the current proposal",
+        "desktop: view changes do not refit",
+        "desktop: keyboard calibration invalidates the proposal",
+        "desktop: Escape closes and restores focus",
+        "desktop: reopening preserves the reviewed proposal",
+        "desktop: all three branches reach the native canvas",
+        "desktop: all three branches reach submission data",
+        "desktop: confirmation closes dialog and restores focus",
+        "mobile: correct question",
+        "mobile: meaningful page",
+        "mobile: instructor switch-off control stays unchanged",
+        "mobile: native modal opens",
+        "mobile: later steps wait for a photo",
+        "mobile: keyboard focus stays in the dialog",
+        "mobile: upload advances to calibration",
+        "mobile: entire portrait photo fits without scrolling",
+        "mobile: calibration action stays on screen",
+        "mobile: dialog has no horizontal overflow",
+        "mobile: zero reference cannot proceed silently as one",
+        "mobile: invalid calibration has a visible explanation",
+        "mobile: Enter in a coordinate field does not submit the question",
+        "mobile: keyboard moves an axis marker",
+        "mobile: keyboard can restore the original calibration",
+        "mobile: tracing step exposes its primary action",
+        "mobile: zoom controls magnify the photo",
+        "mobile: move-photo gesture pans the magnified image",
+        "mobile: panning creates no accidental stroke",
+        "mobile: three separate gestures give three branches",
+        "mobile: reading advances to review",
+        "mobile: confirmation is enabled and on screen",
+        "mobile: review represents every branch",
+        "mobile: view gestures did not add fitting inputs",
+        "mobile: tracing while zoomed preserves graph coordinates",
+        "mobile: zoom, pan and trace visibility preserve the current proposal",
+        "mobile: view changes do not refit",
+        "mobile: keyboard calibration invalidates the proposal",
+        "mobile: Escape closes and restores focus",
+        "mobile: reopening preserves the reviewed proposal",
+        "mobile: all three branches reach the native canvas",
+        "mobile: all three branches reach submission data",
+        "mobile: confirmation closes dialog and restores focus",
+        "No application console errors"
+      ],
+      "log": "star-photo-workflow.log",
+      "log_sha256": "e6885675141423e88fc0c453a731ea9a055a1086f1c3a7bfa09738c43001957c",
+      "cases": [
+        {
+          "name": "desktop",
+          "viewport": [
+            1440,
+            1000
+          ],
+          "photo": {
+            "x": 393.75,
+            "y": 326.796875,
+            "width": 352.5,
+            "height": 470
+          },
+          "native_branches": 3,
+          "pointer_input": "mouse"
+        },
+        {
+          "name": "mobile",
+          "viewport": [
+            390,
+            844
+          ],
+          "photo": {
+            "x": 100.5,
+            "y": 215.890625,
+            "width": 189,
+            "height": 252
+          },
+          "native_branches": 3,
+          "pointer_input": "Chromium touch events"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Tests exercise manually traced controlled image fixtures; no automatic or physical-photo recognition rate is measured.",
+    "These existing scripts inspect gradeable data but do not perform real Save & Grade and refresh restoration.",
+    "The installed runtime emits font decoding warnings; existing regression listeners record no application console errors.",
+    "Initial browser test attempts were blocked by sandbox npm cache writes; reported results come from the successful elevated rerun."
+  ],
+  "local_evidence_root": "/private/tmp/star-automatic-cv-step-01",
+  "browser_assertions_passed": 218,
+  "evidence": [
+    {
+      "path": "node-tests.log",
+      "sha256": "35c99b76fe00b53e518cc484c932d80983b28806e60dfa20f81ba90bb4e57b73",
+      "bytes": 2256
+    },
+    {
+      "path": "star-photo-branches/mobile-two-lines--canvas.png",
+      "sha256": "8dd69b980c1424d1cde4e8db977e4532bc614ed70f2caae6670219c1c8732a43",
+      "bytes": 9614
+    },
+    {
+      "path": "star-photo-branches/mobile-two-lines--preview.png",
+      "sha256": "a506a7482dc231dd177ef22828feedc38d0b514711fcf42d52be6edd0df5cedc",
+      "bytes": 52763
+    },
+    {
+      "path": "star-photo-branches/overlapping-x--canvas.png",
+      "sha256": "70aeb00ea36f3ddbbddc463d7493017240efb65715dfa13ef81134eb641c2b09",
+      "bytes": 17740
+    },
+    {
+      "path": "star-photo-branches/overlapping-x--preview.png",
+      "sha256": "62a3ef22adeb7bb8b653e783f386b1a567296ab7984876474987af6efb700f21",
+      "bytes": 84681
+    },
+    {
+      "path": "star-photo-branches/reciprocal--canvas.png",
+      "sha256": "12fd44f666152b8eac00d3dcd122085e29187757f27197c6a6fb3929cf99ddd6",
+      "bytes": 17322
+    },
+    {
+      "path": "star-photo-branches/reciprocal--preview.png",
+      "sha256": "727a0a5be0a3fb32f139df67524296ce68299e9f1d67d9a15c1f8d16171d9bac",
+      "bytes": 81305
+    },
+    {
+      "path": "star-photo-branches/results.json",
+      "sha256": "48ec1f34ff27c06ef98397ecd6de5ba4e380de9436be0863cee68ab104e9a3a3",
+      "bytes": 109637
+    },
+    {
+      "path": "star-photo-branches/single-line--canvas.png",
+      "sha256": "c979964a9a22fd9e809bd1e7faf8fd2f9d65d7e7fcfe2a83486ad35db3b83309",
+      "bytes": 15764
+    },
+    {
+      "path": "star-photo-branches/single-line--preview.png",
+      "sha256": "ad7049020784cd6c383e4246b543cd6d660373bf49206c3516765548dc191e0f",
+      "bytes": 75910
+    },
+    {
+      "path": "star-photo-branches/three-branches--canvas.png",
+      "sha256": "196c73146ddd18bb94a2c967109381da56aa57b455bd79470bc66c79e38b4e0a",
+      "bytes": 18457
+    },
+    {
+      "path": "star-photo-branches/three-branches--preview.png",
+      "sha256": "84f95bf5e9d731d8e69ce521d5d6ae1d0242669536d09d7bcfc02e4ae068b44f",
+      "bytes": 86246
+    },
+    {
+      "path": "star-photo-branches/two-lines--canvas.png",
+      "sha256": "8280ec7117afd1302b7171a1a685971f9526c4b45863b122cc52b661c99eb076",
+      "bytes": 17005
+    },
+    {
+      "path": "star-photo-branches/two-lines--preview.png",
+      "sha256": "1095b49f678f4e11c4c8ae43beac8ec0ddb8df380bb8a974736d5f4405ff6a8e",
+      "bytes": 83017
+    },
+    {
+      "path": "star-photo-confirmation/confirmed-canvas.png",
+      "sha256": "a7251a52f8503026f72fa27d9b4202141be687e1a042ac5ee3272b07963ea24a",
+      "bytes": 16313
+    },
+    {
+      "path": "star-photo-confirmation/fresh-preview.png",
+      "sha256": "5f1e5c3dc570f52933a71596ee4241014853cd568e9f265bd6f88a550171302b",
+      "bytes": 80943
+    },
+    {
+      "path": "star-photo-confirmation/invalidated-preview.png",
+      "sha256": "65a5058bc9d0a463d705f8e84fd80a054269ba0535118deef2976652505a2cb0",
+      "bytes": 85350
+    },
+    {
+      "path": "star-photo-confirmation/updated-preview.png",
+      "sha256": "1288dee07abb37b4fbe51fc5d8d363bd7624a7e44dc4e31b0a9108b8fadc3255",
+      "bytes": 112687
+    },
+    {
+      "path": "star-photo-workflow/desktop--axes.png",
+      "sha256": "318a1ac50a0e62d3b0822098278ed0c36f8cf4d96eced4f723cca1121500ef93",
+      "bytes": 73631
+    },
+    {
+      "path": "star-photo-workflow/desktop--canvas.png",
+      "sha256": "ebe22fe4a521433ae95f64d5707d5d98b1d2410f49a9f48cd7a6990a1c68aa2a",
+      "bytes": 24265
+    },
+    {
+      "path": "star-photo-workflow/desktop--review.png",
+      "sha256": "8fae70e58a272b44a2060f5245b10ab3759fd4fdc2dbad014a7d6addf5af9d76",
+      "bytes": 81201
+    },
+    {
+      "path": "star-photo-workflow/mobile--axes.png",
+      "sha256": "adee4549ff1f93913a2dd37ec9bf256fa24da89589fe5c4ffcdaf0cbbff0b069",
+      "bytes": 53404
+    },
+    {
+      "path": "star-photo-workflow/mobile--canvas.png",
+      "sha256": "f8254cbfb90b9d518ec677f50f75604ba36681df887ee665afb85048445e092b",
+      "bytes": 10267
+    },
+    {
+      "path": "star-photo-workflow/mobile--review.png",
+      "sha256": "00f40610b493e70f74a4792d2bd3866fda7e8dca343055aa98bb0732fbb13589",
+      "bytes": 53589
+    },
+    {
+      "path": "star-photo-workflow/results.json",
+      "sha256": "9c87a70435be546f32ef5ef842dd2bbdc426aa1de509138e2b30810eefcc1e7e",
+      "bytes": 4198
+    }
+  ]
+}
