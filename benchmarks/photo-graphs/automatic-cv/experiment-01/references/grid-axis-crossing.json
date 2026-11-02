@@ -1,0 +1,42 @@
+{
+  "source_kind": "controlled_raster",
+  "drawing_id": "controlled-crossing",
+  "centerlines_pixel": [
+    [
+      [
+        150,
+        370
+      ],
+      [
+        220,
+        325
+      ],
+      [
+        270,
+        290
+      ],
+      [
+        330,
+        245
+      ],
+      [
+        420,
+        177
+      ],
+      [
+        500,
+        120
+      ]
+    ]
+  ],
+  "origin_pixel": [
+    270,
+    300
+  ],
+  "grid_spacing_pixel": [
+    40,
+    40
+  ],
+  "expected_strokes": 1,
+  "expected_status": "automatic"
+}

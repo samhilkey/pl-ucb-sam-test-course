@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STAR automatic CV — Step 2 evidence</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0 auto; max-width: 1440px; padding: 32px 24px; font: 16px/1.5 system-ui, sans-serif; color: #202832; background: #f8fafb; }
+    h1 { font-size: 30px; margin: 4px 0 12px; } h2 { font-size: 23px; margin-top: 28px; }
+    p { max-width: 95ch; } a { color: #075ca8; } button, input { font: inherit; }
+    button { padding: 8px 12px; cursor: pointer; border: 1px solid #8394a2; border-radius: 4px; background: white; color: #164c76; }
+    button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid #0678c7; outline-offset: 3px; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .legend { padding: 12px 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; }
+    .legend span { border-bottom: 3px solid var(--color); }
+    .comparison { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    figure { margin: 0; min-width: 0; } img { display: block; width: 100%; height: auto; background: white; border: 1px solid #d4dde3; }
+    figcaption { margin: 5px 0 12px; font-size: 14px; }
+    article { border-top: 1px solid #c6d1da; padding: 18px 0; }
+    article h2 { margin: 0 0 8px; } .status { font-weight: 650; color: #165339; }
+    .review { color: #8a3e08; } #live { padding: 16px; background: white; border: 1px solid #c6d1da; }
+    #live canvas { width: 100%; max-width: 800px; height: auto; } [hidden] { display: none !important; }
+    .meta { font-size: 14px; color: #455666; } .code { font-family: ui-monospace, monospace; }
+    @media (max-width: 700px) { body { padding: 18px 12px; } h1 { font-size: 25px; } .comparison { grid-template-columns: 1fr; } }
+  </style>
+  <script defer src="/modules/star-geometry.js"></script>
+  <script defer src="/modules/star-recognition.js"></script>
+  <script defer src="review.js"></script>
+</head>
+<body>
+  <p class="meta">STAR Sketch2Graph / deterministic CV / development experiment 01</p>
+  <h1>Automatic extraction: pixels to geometry</h1>
+  <p>Step 2 evidence. The four supported examples are <strong>controlled raster fixtures, not photographs</strong>.
+    Two real student-photo crops are reported separately. Native PrairieLearn import, grading, and restoration remain untested in this step.</p>
+  <p id="summary" role="status">Loading recorded results…</p>
+  <div class="legend" aria-label="Overlay legend">
+    <span style="--color:#1eaa55">Grid candidates</span><span style="--color:#00aadc">Axis candidates</span>
+    <span style="--color:#2832eb">Extracted skeleton</span><span style="--color:#f07500">Proposed polyline</span>
+    <span style="--color:#dc193c">Corner</span><span style="--color:#009141">Endpoint</span>
+  </div>
+  <section id="live" aria-labelledby="try-heading">
+    <h2 id="try-heading">Run recognition locally</h2>
+    <p>The recognizer receives image pixels only. It does not receive references, expected curves, or manual traces.</p>
+    <div class="row"><label>Choose an image <input id="upload" type="file" accept="image/png,image/jpeg,image/webp"></label><a id="download" hidden>Download geometry JSON</a></div>
+    <p id="live-status" role="status">Choose a local image or re-run a fixture below.</p>
+    <canvas id="live-overlay" aria-label="Latest image and recognition overlay" hidden></canvas>
+  </section>
+  <main id="cases" aria-label="Case comparisons"></main>
+</body>
+</html>

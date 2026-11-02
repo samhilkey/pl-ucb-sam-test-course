@@ -1,0 +1,554 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 640,
+    "height": 480,
+    "processing": {
+      "width": 640,
+      "height": 480,
+      "source_to_processing": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "coordinate_frame": {
+    "status": "detected",
+    "origin_pixel": [
+      270,
+      300
+    ],
+    "axes": {
+      "x": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              0,
+              300
+            ],
+            "end": [
+              639,
+              300
+            ],
+            "support": 0.9109375,
+            "width_pixel": 3
+          }
+        ]
+      },
+      "y": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              270,
+              0
+            ],
+            "end": [
+              270,
+              479
+            ],
+            "support": 0.9229166666666667,
+            "width_pixel": 3
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "detected",
+        "spacing_pixel": 40,
+        "lines_pixel": [
+          30,
+          70,
+          110,
+          150,
+          190,
+          230,
+          310,
+          350,
+          390,
+          430,
+          470,
+          569.1017936212539
+        ]
+      },
+      "y": {
+        "status": "detected",
+        "spacing_pixel": 40,
+        "lines_pixel": [
+          20,
+          60,
+          100,
+          140,
+          180,
+          220,
+          260,
+          340,
+          380,
+          420,
+          460
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "calibrated",
+    "axes": {
+      "x": {
+        "status": "known",
+        "source": "photo_detected",
+        "labels": [
+          {
+            "value": 1,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                307,
+                312
+              ],
+              [
+                312,
+                325
+              ]
+            ],
+            "anchor_pixel": [
+              310,
+              300
+            ],
+            "tick": 1
+          },
+          {
+            "value": 2,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                345,
+                312
+              ],
+              [
+                354,
+                325
+              ]
+            ],
+            "anchor_pixel": [
+              350,
+              300
+            ],
+            "tick": 2
+          },
+          {
+            "value": 3,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                385,
+                312
+              ],
+              [
+                394,
+                325
+              ]
+            ],
+            "anchor_pixel": [
+              390,
+              300
+            ],
+            "tick": 3
+          }
+        ],
+        "units_per_grid": 1,
+        "intersection_value": 0
+      },
+      "y": {
+        "status": "known",
+        "source": "photo_detected",
+        "labels": [
+          {
+            "value": 1,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                247,
+                253
+              ],
+              [
+                252,
+                266
+              ]
+            ],
+            "anchor_pixel": [
+              270,
+              260
+            ],
+            "tick": 1
+          },
+          {
+            "value": 2,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                245,
+                213
+              ],
+              [
+                254,
+                226
+              ]
+            ],
+            "anchor_pixel": [
+              270,
+              220
+            ],
+            "tick": 2
+          },
+          {
+            "value": 3,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                245,
+                173
+              ],
+              [
+                254,
+                186
+              ]
+            ],
+            "anchor_pixel": [
+              270,
+              180
+            ],
+            "tick": 3
+          }
+        ],
+        "units_per_grid": 1,
+        "intersection_value": 0
+      }
+    },
+    "origin_graph": [
+      0,
+      0
+    ],
+    "x_unit_vector_pixel": [
+      40,
+      0
+    ],
+    "y_unit_vector_pixel": [
+      0,
+      -40
+    ]
+  },
+  "strokes": [
+    {
+      "id": "stroke-1",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            499,
+            121
+          ],
+          "graph": [
+            5.725,
+            4.475
+          ],
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            426,
+            172
+          ],
+          "graph": [
+            3.9,
+            3.2
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            274,
+            286
+          ],
+          "graph": [
+            0.1,
+            0.35
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            268,
+            291
+          ],
+          "graph": [
+            -0.05,
+            0.225
+          ],
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            268,
+            293
+          ],
+          "graph": [
+            -0.05,
+            0.175
+          ],
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-2",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            268,
+            293
+          ],
+          "graph": [
+            -0.05,
+            0.175
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            265,
+            293
+          ],
+          "graph": [
+            -0.125,
+            0.175
+          ],
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            263,
+            297
+          ],
+          "graph": [
+            -0.175,
+            0.075
+          ],
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-3",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            268,
+            293
+          ],
+          "graph": [
+            -0.05,
+            0.175
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            270,
+            300
+          ],
+          "graph": [
+            0,
+            0
+          ],
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            263,
+            297
+          ],
+          "graph": [
+            -0.175,
+            0.075
+          ],
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-4",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            263,
+            297
+          ],
+          "graph": [
+            -0.175,
+            0.075
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            249,
+            303
+          ],
+          "graph": [
+            -0.525,
+            -0.075
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            246,
+            307
+          ],
+          "graph": [
+            -0.6,
+            -0.175
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            222,
+            324
+          ],
+          "graph": [
+            -1.2,
+            -0.6
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            152,
+            368
+          ],
+          "graph": [
+            -2.95,
+            -1.7
+          ],
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    }
+  ],
+  "topology": {
+    "stroke_count": 4,
+    "component_count": 1,
+    "components": [
+      {
+        "id": "component-1",
+        "stroke_ids": [
+          "stroke-1",
+          "stroke-2",
+          "stroke-3",
+          "stroke-4"
+        ]
+      }
+    ],
+    "junctions": [
+      {
+        "pixel": [
+          268,
+          293
+        ],
+        "stroke_ids": [
+          "stroke-1",
+          "stroke-2",
+          "stroke-3"
+        ]
+      },
+      {
+        "pixel": [
+          263,
+          297
+        ],
+        "stroke_ids": [
+          "stroke-2",
+          "stroke-3",
+          "stroke-4"
+        ]
+      }
+    ]
+  },
+  "status": "needs_review",
+  "warnings": [
+    {
+      "code": "ink_junction",
+      "message": "Touching or branching ink has multiple possible paths; no branch pairing was guessed."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "strokes",
+      "reason": "ink_junction"
+    }
+  ],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [
+      {
+        "pixel": [
+          268,
+          293
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          263,
+          297
+        ],
+        "reason": "ink_junction"
+      }
+    ],
+    "rejected_small_components": [],
+    "assumptions": [
+      "Upright, approximately straight-on graph paper.",
+      "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+      "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+    ]
+  }
+}

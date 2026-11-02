@@ -1,0 +1,88 @@
+{
+  "source_kind": "real_photo",
+  "reference_status": "approximate visual centerlines, not independent expert annotations",
+  "annotator": "Codex visual inspection; single annotator",
+  "drawing_id": "drawedumath-06",
+  "centerlines_pixel": [
+    [
+      [
+        53,
+        324
+      ],
+      [
+        68,
+        319
+      ],
+      [
+        88,
+        309
+      ],
+      [
+        109,
+        296
+      ],
+      [
+        126,
+        269
+      ],
+      [
+        147,
+        237
+      ],
+      [
+        171,
+        199
+      ],
+      [
+        196,
+        163
+      ],
+      [
+        220,
+        126
+      ],
+      [
+        241,
+        95
+      ],
+      [
+        258,
+        120
+      ],
+      [
+        280,
+        154
+      ],
+      [
+        303,
+        188
+      ],
+      [
+        324,
+        216
+      ],
+      [
+        347,
+        247
+      ],
+      [
+        371,
+        281
+      ],
+      [
+        398,
+        329
+      ]
+    ]
+  ],
+  "origin_pixel": null,
+  "grid_spacing_pixel": null,
+  "expected_strokes": 1,
+  "expected_status": null,
+  "annotation_uncertainty_pixel": 4,
+  "corner_pixel": [
+    241,
+    95
+  ],
+  "notes": "Sharp piecewise peak; preserve the photographed geometry rather than a smooth polynomial."
+}

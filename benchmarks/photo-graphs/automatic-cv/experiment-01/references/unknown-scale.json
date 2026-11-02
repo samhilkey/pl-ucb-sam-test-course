@@ -1,0 +1,38 @@
+{
+  "source_kind": "controlled_raster",
+  "drawing_id": "controlled-line",
+  "centerlines_pixel": [
+    [
+      [
+        100,
+        238
+      ],
+      [
+        185,
+        210
+      ],
+      [
+        280,
+        180
+      ],
+      [
+        390,
+        147
+      ],
+      [
+        518,
+        106
+      ]
+    ]
+  ],
+  "origin_pixel": [
+    270,
+    300
+  ],
+  "grid_spacing_pixel": [
+    40,
+    40
+  ],
+  "expected_strokes": 1,
+  "expected_status": "needs_review"
+}

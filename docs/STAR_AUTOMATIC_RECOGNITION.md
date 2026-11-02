@@ -215,3 +215,31 @@ evidence directory. This run used directories named for each script inside
    from recognition quality.
 
 **Review boundary:** step 2 must not start until the user approves step 1.
+
+## Step 2: deterministic extraction
+
+Step 1 was approved. Added independent `star-recognition.js` and
+`star-geometry.js` modules, without changing the legacy photo UI, fitting,
+grading, dependency registration, or test question. Inspected the separate
+shape-preserving branch and reused only its pixel-space simplifier.
+
+Results: four of four supported **controlled raster** cases extract and
+calibrate automatically. All four controlled challenges require review. Neither
+of two actual student-photo crops succeeds automatically. These are development
+diagnostics, not a held-out physical-photo success rate. Native import remains
+untested until step 3.
+
+Validation: 49 Node tests passed (13 existing + 36 new); all 218 existing browser
+assertions passed, plus 23 browser assertions for the recognition viewer.
+
+Read the [step-2 report](../benchmarks/photo-graphs/automatic-cv/experiment-01/REPORT.md)
+for measured geometry, failures, algorithms, commands, original/overlay/proposal
+comparisons, and attribution. The [geometry contract](automatic-photo-recognition/geometry-v1.md)
+describes the adapter boundary. Run the standalone evidence viewer with:
+
+```bash
+python3 benchmarks/photo-graphs/automatic-cv/experiment-01/serve.py --port 8765
+```
+
+Open `http://127.0.0.1:8765/`. This is an extraction reviewer, not native import.
+**Review boundary:** stop after the step-2 commit; step 3 requires user approval.

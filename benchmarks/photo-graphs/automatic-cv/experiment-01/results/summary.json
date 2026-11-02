@@ -1,0 +1,393 @@
+{
+  "experiment": "automatic-cv/experiment-01",
+  "step": 2,
+  "code_parent": "e026c4e7508fc9ad89e9199d95104f319a767b56",
+  "code_sha256": {
+    "recognizer": "444e7b3b4c730cabb33e12d0f4144aca1d205241cbbfea1c01324da2cd030628",
+    "geometry": "88f0b7ec617aee8bd1dd5ebf08c2553d86e6e5034cb0b0687afe261e58279089"
+  },
+  "protocol": "Development diagnostics, not held-out validation. Controlled fixtures have printed bitmap labels matching the limited OCR vocabulary. Real-photo references are approximate prior visual annotations.",
+  "recognition_inputs": "RGBA pixels only; no calibration options, reference geometry, IDs, expected outputs, equations, or grader input supplied.",
+  "counts": {
+    "supported_controlled_automatic": 4,
+    "supported_controlled_cases": 4,
+    "controlled_challenge_cases": 4,
+    "controlled_challenge_automatic": 0,
+    "real_photo_automatic": 0,
+    "real_photo_cases": 2,
+    "independent_real_drawings": 2,
+    "controlled_raster_recipes": 7
+  },
+  "metric_policy": "Distances use image-space centerlines sampled at <=1px intervals. Coverage uses <=3px. Missing stroke: <10% coverage; partial: 10%-90%. False connection: one output path follows >=10 samples on two reference strokes. Engineering diagnostics, not grading validity. Null distance means unavailable, never zero.",
+  "outcomes": [
+    {
+      "id": "line",
+      "drawing_id": "controlled-line",
+      "source_kind": "controlled_raster",
+      "input": "inputs/line.png",
+      "reference": "references/line.json",
+      "status": "automatic",
+      "calibration": "calibrated",
+      "warnings": [],
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.6382634432050687,
+        "geometry_to_reference_p95_pixel": 0.6346424528566803,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 2,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "duration_ms": 161.3,
+      "native_import": "untested_step_3",
+      "input_sha256": "e2edc2e932912e6d2218ae52b735757f202e0210df338c7c2251d0839e9454ba",
+      "geometry_sha256": "7e3460699c3540ecb64242bef48698ba9620716999e0bf938f968d41ca6b1a9e"
+    },
+    {
+      "id": "sharp-v",
+      "drawing_id": "controlled-v",
+      "source_kind": "controlled_raster",
+      "input": "inputs/sharp-v.png",
+      "reference": "references/sharp-v.json",
+      "status": "automatic",
+      "calibration": "calibrated",
+      "warnings": [],
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.4156232164338605,
+        "geometry_to_reference_p95_pixel": 0.41493034675777224,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 0,
+        "corner_error_pixel": 2.23606797749979,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "duration_ms": 162.2,
+      "native_import": "untested_step_3",
+      "input_sha256": "0043cb8801da761af52373cac0aa8bd4d5f7322a1e4524ca54e5afe333addb85",
+      "geometry_sha256": "bcc54b3b7b4c2d2c1f1b6b2661639095e46873d7a6bf24c1bb065ed803ba1f99"
+    },
+    {
+      "id": "smooth-curve",
+      "drawing_id": "controlled-smooth",
+      "source_kind": "controlled_raster",
+      "input": "inputs/smooth-curve.png",
+      "reference": "references/smooth-curve.json",
+      "status": "automatic",
+      "calibration": "calibrated",
+      "warnings": [],
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.7077841948317843,
+        "geometry_to_reference_p95_pixel": 0.7077841948317843,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 2,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "duration_ms": 92.9,
+      "native_import": "untested_step_3",
+      "input_sha256": "15bb61ed114929cc1ec3d11206acfbbcd17d5b54b87b7b4551c172b333973c93",
+      "geometry_sha256": "c65c6d2e896df813c32f5bacc9c77f4f24ccbf8d5d62f8dfd8d5df5f7f009c34"
+    },
+    {
+      "id": "two-branches",
+      "drawing_id": "controlled-two",
+      "source_kind": "controlled_raster",
+      "input": "inputs/two-branches.png",
+      "reference": "references/two-branches.json",
+      "status": "automatic",
+      "calibration": "calibrated",
+      "warnings": [],
+      "metrics": {
+        "expected_strokes": 2,
+        "extracted_paths": 2,
+        "extracted_components": 2,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.6742482069462241,
+        "geometry_to_reference_p95_pixel": 0.6540405164230926,
+        "reference_centerline_coverage_within_3px": [
+          1,
+          1
+        ],
+        "endpoint_max_error_pixel": 1.4142135623730951,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "duration_ms": 97.3,
+      "native_import": "untested_step_3",
+      "input_sha256": "8563409f735a6fde07694a2e4a2b0a416d9524d9f78843a30770104587ed0355",
+      "geometry_sha256": "bb32f451c140dce4edecdfe41fa7aff97af58922b4c8b2349848d90c54e2b3e2"
+    },
+    {
+      "id": "ambiguous-axes",
+      "drawing_id": "controlled-ambiguous",
+      "source_kind": "controlled_raster",
+      "input": "inputs/ambiguous-axes.png",
+      "reference": "references/ambiguous-axes.json",
+      "status": "needs_review",
+      "calibration": "uncertain",
+      "warnings": [
+        "ambiguous_axes",
+        "uncertain_grid",
+        "unknown_x_scale",
+        "unknown_y_scale",
+        "ink_junction"
+      ],
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 5,
+        "extracted_components": 2,
+        "branch_count_correct": false,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 4,
+        "reference_to_geometry_p95_pixel": 0.422586896454555,
+        "geometry_to_reference_p95_pixel": 169.79209509148404,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 1.4142135623730951,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": null,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "duration_ms": 90.9,
+      "native_import": "untested_step_3",
+      "input_sha256": "d7af373265680677ce3c6725f17f0262421157b5ee5efb6fafbe76df2135ba8b",
+      "geometry_sha256": "73b1bbaca12401aa5c2333d72b57f5f44bb6dfa17f7a7ee2d40f9bc600f3e5f7"
+    },
+    {
+      "id": "unknown-scale",
+      "drawing_id": "controlled-line",
+      "source_kind": "controlled_raster",
+      "input": "inputs/unknown-scale.png",
+      "reference": "references/unknown-scale.json",
+      "status": "needs_review",
+      "calibration": "uncertain",
+      "warnings": [
+        "unknown_x_scale",
+        "unknown_y_scale"
+      ],
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.5900219334761377,
+        "geometry_to_reference_p95_pixel": 0.5820889024012617,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 2,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "duration_ms": 93.8,
+      "native_import": "untested_step_3",
+      "input_sha256": "9ae4a62857e5242aedc31a7a139b63ba5a4e247b24241f5a6e21441cbbffee2f",
+      "geometry_sha256": "e71a4d1b46e99997399863d0d12c31fc4645f2ff6eec2934991a680a62f00b93"
+    },
+    {
+      "id": "grid-axis-crossing",
+      "drawing_id": "controlled-crossing",
+      "source_kind": "controlled_raster",
+      "input": "inputs/grid-axis-crossing.png",
+      "reference": "references/grid-axis-crossing.json",
+      "status": "needs_review",
+      "calibration": "calibrated",
+      "warnings": [
+        "ink_junction"
+      ],
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 4,
+        "extracted_components": 1,
+        "branch_count_correct": false,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.8000000000000455,
+        "geometry_to_reference_p95_pixel": 1.310771072830437,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 2.8284271247461903,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "duration_ms": 74.4,
+      "native_import": "untested_step_3",
+      "input_sha256": "8627db46163dbd7767f3c62de532a1b3a8f37c9bcff0a3f25a950138fb8490b8",
+      "geometry_sha256": "5a9a4b02f203dce748c4cf3ba2dec0c51a353e1afac20678c82d61ce61ba5fff"
+    },
+    {
+      "id": "touching-junction",
+      "drawing_id": "controlled-junction",
+      "source_kind": "controlled_raster",
+      "input": "inputs/touching-junction.png",
+      "reference": "references/touching-junction.json",
+      "status": "needs_review",
+      "calibration": "calibrated",
+      "warnings": [
+        "ink_junction"
+      ],
+      "metrics": {
+        "expected_strokes": null,
+        "extracted_paths": 3,
+        "extracted_components": 1,
+        "branch_count_correct": null,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.4752126700619738,
+        "geometry_to_reference_p95_pixel": 0.4632555155910208,
+        "reference_centerline_coverage_within_3px": [
+          1,
+          1
+        ],
+        "endpoint_max_error_pixel": 2.8284271247461903,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "duration_ms": 69.5,
+      "native_import": "untested_step_3",
+      "input_sha256": "72f0e64210394885ec07507b7c5ca1b14ddab613554e0a940d917d147b4168e6",
+      "geometry_sha256": "43c3aac55d184a044902e195deb02f30fab9a3c5831c5b2b637e06c6d79f832e"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "drawing_id": "drawedumath-01",
+      "source_kind": "real_photo",
+      "input": "inputs/real--01-multiple-lines-graph-paper.png",
+      "source_branch": "experiment/photo-trace-shapes",
+      "source_commit": "99dc33c4722add067321640cefbad1dfcc54ae1d",
+      "source_path": "benchmarks/photo-graphs/experiment-01/inputs/real--01-multiple-lines-graph-paper.png",
+      "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "reference": "references/real--01-multiple-lines-graph-paper.json",
+      "status": "abstained",
+      "calibration": "uncertain",
+      "warnings": [
+        "ambiguous_axes",
+        "uncertain_grid",
+        "unknown_x_scale",
+        "unknown_y_scale",
+        "no_supported_ink"
+      ],
+      "metrics": {
+        "expected_strokes": 2,
+        "extracted_paths": 0,
+        "extracted_components": 0,
+        "branch_count_correct": false,
+        "missing_strokes": 2,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": null,
+        "geometry_to_reference_p95_pixel": null,
+        "reference_centerline_coverage_within_3px": [
+          0,
+          0
+        ],
+        "endpoint_max_error_pixel": null,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "duration_ms": 104.6,
+      "native_import": "untested_step_3",
+      "input_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "geometry_sha256": "563cd45d8f6490b119f29a511dec65a31f00750096f8800ad70cf0f6833aae12"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "drawing_id": "drawedumath-06",
+      "source_kind": "real_photo",
+      "input": "inputs/real--06-piecewise-graph-paper.png",
+      "source_branch": "experiment/photo-trace-shapes",
+      "source_commit": "99dc33c4722add067321640cefbad1dfcc54ae1d",
+      "source_path": "benchmarks/photo-graphs/experiment-01/inputs/real--06-piecewise-graph-paper.png",
+      "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "reference": "references/real--06-piecewise-graph-paper.json",
+      "status": "needs_review",
+      "calibration": "uncertain",
+      "warnings": [
+        "ambiguous_axes",
+        "uncertain_grid",
+        "unknown_x_scale",
+        "unknown_y_scale",
+        "ink_junction",
+        "clipped_ink",
+        "clipped_ink",
+        "clipped_ink"
+      ],
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 4,
+        "extracted_components": 2,
+        "branch_count_correct": false,
+        "missing_strokes": 1,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 3,
+        "reference_to_geometry_p95_pixel": 303.68718671093245,
+        "geometry_to_reference_p95_pixel": 250.96279796816557,
+        "reference_centerline_coverage_within_3px": [
+          0.020202020202020204
+        ],
+        "endpoint_max_error_pixel": 308.58548248418947,
+        "corner_error_pixel": 253.51331325987596,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "duration_ms": 64.8,
+      "native_import": "untested_step_3",
+      "input_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "geometry_sha256": "4fa0a01ce808decca9fcb4506768f71f94d4f0a3e1778b0947c14f89efbc2b00"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "source_kind": "real_photo",
+  "reference_status": "approximate visual centerlines, not independent expert annotations",
+  "annotator": "Codex visual inspection; single annotator",
+  "drawing_id": "drawedumath-01",
+  "centerlines_pixel": [
+    [
+      [
+        17,
+        319
+      ],
+      [
+        100,
+        293
+      ],
+      [
+        180,
+        272
+      ],
+      [
+        238,
+        255
+      ],
+      [
+        336,
+        224
+      ],
+      [
+        442,
+        189
+      ],
+      [
+        550,
+        150
+      ],
+      [
+        670,
+        112
+      ],
+      [
+        770,
+        76
+      ]
+    ],
+    [
+      [
+        59,
+        432
+      ],
+      [
+        150,
+        409
+      ],
+      [
+        241,
+        384
+      ],
+      [
+        345,
+        357
+      ],
+      [
+        453,
+        330
+      ],
+      [
+        560,
+        296
+      ],
+      [
+        665,
+        265
+      ],
+      [
+        715,
+        247
+      ]
+    ]
+  ],
+  "origin_pixel": null,
+  "grid_spacing_pixel": null,
+  "expected_strokes": 2,
+  "expected_status": null,
+  "annotation_uncertainty_pixel": 4,
+  "corner_pixel": null,
+  "notes": "Challenge case: two overlapping functions in one image; qualitative topology and photographic distances only."
+}

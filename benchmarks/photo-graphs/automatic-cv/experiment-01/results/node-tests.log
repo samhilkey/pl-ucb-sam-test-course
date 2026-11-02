@@ -1,0 +1,255 @@
+TAP version 13
+# Subtest: transfer keeps disconnected branches separate and preserves other tools
+ok 1 - transfer keeps disconnected branches separate and preserves other tools
+  ---
+  duration_ms: 1.074084
+  ...
+# Subtest: an invalid later branch cannot partially overwrite the existing drawing
+ok 2 - an invalid later branch cannot partially overwrite the existing drawing
+  ---
+  duration_ms: 0.544083
+  ...
+# Subtest: single-curve callers retain their existing coordinate mapping
+ok 3 - single-curve callers retain their existing coordinate mapping
+  ---
+  duration_ms: 0.126125
+  ...
+# Subtest: the left steep branch cannot be replaced by a flat partial fit
+ok 4 - the left steep branch cannot be replaced by a flat partial fit
+  ---
+  duration_ms: 40.358167
+  ...
+# Subtest: the right steep branch cannot be replaced by a flat partial fit
+ok 5 - the right steep branch cannot be replaced by a flat partial fit
+  ---
+  duration_ms: 26.529584
+  ...
+# Subtest: a forced rational pole between trace points cannot bridge one continuous stroke
+ok 6 - a forced rational pole between trace points cannot bridge one continuous stroke
+  ---
+  duration_ms: 0.1675
+  ...
+# Subtest: a forced tangent cannot ignore trace points around its poles
+ok 7 - a forced tangent cannot ignore trace points around its poles
+  ---
+  duration_ms: 0.644833
+  ...
+# Subtest: line still admits a complete model
+ok 8 - line still admits a complete model
+  ---
+  duration_ms: 29.540792
+  ...
+# Subtest: parabola still admits a complete model
+ok 9 - parabola still admits a complete model
+  ---
+  duration_ms: 25.407458
+  ...
+# Subtest: square root still admits a complete model
+ok 10 - square root still admits a complete model
+  ---
+  duration_ms: 37.425792
+  ...
+# Subtest: logarithm still admits a complete model
+ok 11 - logarithm still admits a complete model
+  ---
+  duration_ms: 28.065458
+  ...
+# Subtest: sine still admits a complete model
+ok 12 - sine still admits a complete model
+  ---
+  duration_ms: 31.343333
+  ...
+# Subtest: continuous tangent still admits a complete model
+ok 13 - continuous tangent still admits a complete model
+  ---
+  duration_ms: 23.989416
+  ...
+# Subtest: simplification preserves drawing order, vertical runs, backtracking and a sharp vertex
+ok 14 - simplification preserves drawing order, vertical runs, backtracking and a sharp vertex
+  ---
+  duration_ms: 0.982292
+  ...
+# Subtest: affine calibration handles rotated nonorthogonal axes and nonzero intersection values
+ok 15 - affine calibration handles rotated nonorthogonal axes and nonzero intersection values
+  ---
+  duration_ms: 0.149
+  ...
+# Subtest: validation rejects nonfinite pixel
+ok 16 - validation rejects nonfinite pixel
+  ---
+  duration_ms: 0.302542
+  ...
+# Subtest: validation rejects outside image
+ok 17 - validation rejects outside image
+  ---
+  duration_ms: 0.131833
+  ...
+# Subtest: validation rejects inconsistent graph
+ok 18 - validation rejects inconsistent graph
+  ---
+  duration_ms: 0.194917
+  ...
+# Subtest: validation rejects singular calibration
+ok 19 - validation rejects singular calibration
+  ---
+  duration_ms: 0.109791
+  ...
+# Subtest: validation rejects unknown evidence
+ok 20 - validation rejects unknown evidence
+  ---
+  duration_ms: 0.098083
+  ...
+# Subtest: validation rejects missing label evidence
+ok 21 - validation rejects missing label evidence
+  ---
+  duration_ms: 0.092625
+  ...
+# Subtest: validation rejects wrong label scale
+ok 22 - validation rejects wrong label scale
+  ---
+  duration_ms: 0.162
+  ...
+# Subtest: validation rejects wrong unit vector
+ok 23 - validation rejects wrong unit vector
+  ---
+  duration_ms: 0.166666
+  ...
+# Subtest: validation rejects wrong axis intersection
+ok 24 - validation rejects wrong axis intersection
+  ---
+  duration_ms: 0.109292
+  ...
+# Subtest: validation rejects nonfinite grid line
+ok 25 - validation rejects nonfinite grid line
+  ---
+  duration_ms: 0.089292
+  ...
+# Subtest: validation rejects duplicate ID
+ok 26 - validation rejects duplicate ID
+  ---
+  duration_ms: 0.113916
+  ...
+# Subtest: validation rejects wrong component
+ok 27 - validation rejects wrong component
+  ---
+  duration_ms: 0.158
+  ...
+# Subtest: validation rejects disconnected membership
+ok 28 - validation rejects disconnected membership
+  ---
+  duration_ms: 0.166375
+  ...
+# Subtest: validation rejects wrong counts
+ok 29 - validation rejects wrong counts
+  ---
+  duration_ms: 0.159333
+  ...
+# Subtest: validation rejects false loop
+ok 30 - validation rejects false loop
+  ---
+  duration_ms: 0.113292
+  ...
+# Subtest: validation rejects false automatic confidence
+ok 31 - validation rejects false automatic confidence
+  ---
+  duration_ms: 0.216125
+  ...
+# Subtest: validation rejects unresolved automatic region
+ok 32 - validation rejects unresolved automatic region
+  ---
+  duration_ms: 0.127292
+  ...
+# Subtest: validation rejects wrong resize transform
+ok 33 - validation rejects wrong resize transform
+  ---
+  duration_ms: 0.274958
+  ...
+# Subtest: line: extraction and scale come from pixels without a trace, equation, or reference
+ok 34 - line: extraction and scale come from pixels without a trace, equation, or reference
+  ---
+  duration_ms: 204.8025
+  ...
+# Subtest: sharp-v: extraction and scale come from pixels without a trace, equation, or reference
+ok 35 - sharp-v: extraction and scale come from pixels without a trace, equation, or reference
+  ---
+  duration_ms: 144.151333
+  ...
+# Subtest: smooth-curve: extraction and scale come from pixels without a trace, equation, or reference
+ok 36 - smooth-curve: extraction and scale come from pixels without a trace, equation, or reference
+  ---
+  duration_ms: 105.666875
+  ...
+# Subtest: two-branches: extraction and scale come from pixels without a trace, equation, or reference
+ok 37 - two-branches: extraction and scale come from pixels without a trace, equation, or reference
+  ---
+  duration_ms: 121.24925
+  ...
+# Subtest: missing scale keeps ordered pixel paths and never assumes units from grid squares
+ok 38 - missing scale keeps ordered pixel paths and never assumes units from grid squares
+  ---
+  duration_ms: 105.511375
+  ...
+# Subtest: explicit configuration calibration has distinct provenance
+ok 39 - explicit configuration calibration has distinct provenance
+  ---
+  duration_ms: 252.78125
+  ...
+# Subtest: ambiguous axes cannot manufacture an origin or mathematical coordinates
+ok 40 - ambiguous axes cannot manufacture an origin or mathematical coordinates
+  ---
+  duration_ms: 76.600334
+  ...
+# Subtest: black ink crossing axes remains connected but ambiguous spurs require review
+ok 41 - black ink crossing axes remains connected but ambiguous spurs require review
+  ---
+  duration_ms: 111.676167
+  ...
+# Subtest: touching ink is represented as a junction, never paired into an invented function
+ok 42 - touching ink is represented as a junction, never paired into an invented function
+  ---
+  duration_ms: 101.646333
+  ...
+# Subtest: resizing exports source-image coordinates and an explicit pixel-center transform
+ok 43 - resizing exports source-image coordinates and an explicit pixel-center transform
+  ---
+  duration_ms: 244.380292
+  ...
+# Subtest: blank and transparent images abstain; no centered calibration is inserted
+ok 44 - blank and transparent images abstain; no centered calibration is inserted
+  ---
+  duration_ms: 14.684583
+  ...
+# Subtest: a broad dark background cannot be reported as a detected axis pair
+ok 45 - a broad dark background cannot be reported as a detected axis pair
+  ---
+  duration_ms: 5.827083
+  ...
+# Subtest: real-photo challenge failures are explicit and are not counted as automatic successes
+ok 46 - real-photo challenge failures are explicit and are not counted as automatic successes
+  ---
+  duration_ms: 177.275667
+  ...
+# Subtest: input contract rejects invalid image storage, limits, and solution-like options
+ok 47 - input contract rejects invalid image storage, limits, and solution-like options
+  ---
+  duration_ms: 30.056917
+  ...
+# Subtest: simplification stays within its declared tolerance of every extracted skeleton sample
+ok 48 - simplification stays within its declared tolerance of every extracted skeleton sample
+  ---
+  duration_ms: 328.487209
+  ...
+# Subtest: a closed ink loop remains a closed stroke instead of a sorted function
+ok 49 - a closed ink loop remains a closed stroke instead of a sorted function
+  ---
+  duration_ms: 17.032625
+  ...
+1..49
+# tests 49
+# suites 0
+# pass 49
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2091.591375

@@ -53,3 +53,21 @@ default to `/tmp/pl-sketch-photo-workflow`.
 
 Coverage tests prevent a model from winning by excluding steep sections and
 verify that one continuous branch cannot contain an internal fitted pole.
+
+## Automatic CV extraction (step 2)
+
+```bash
+node --test tests/star-recognition.test.cjs tests/star-geometry.test.cjs
+node benchmarks/photo-graphs/automatic-cv/experiment-01/evaluate.cjs
+python3 benchmarks/photo-graphs/automatic-cv/experiment-01/serve.py --port 8765
+# In another terminal, with the same Playwright CLI configuration as above:
+node tests/star-recognition-browser.cjs
+```
+
+The pure Node tests recognize actual PNG pixels without manual guides or
+equations. Fixtures and evaluator-only references are under the new
+`benchmarks/photo-graphs/automatic-cv/experiment-01` namespace. Four supported
+controlled rasters and explicit challenge/failure cases are tested separately
+from real photographs. The browser check decodes images through Canvas and
+compares output to Node, at desktop and mobile sizes. This checks geometry
+extraction only; native import and actual Save & Grade remain step-3 work.

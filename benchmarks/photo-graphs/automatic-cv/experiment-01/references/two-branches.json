@@ -1,0 +1,64 @@
+{
+  "source_kind": "controlled_raster",
+  "drawing_id": "controlled-two",
+  "centerlines_pixel": [
+    [
+      [
+        106,
+        334
+      ],
+      [
+        144,
+        344
+      ],
+      [
+        181,
+        361
+      ],
+      [
+        210,
+        391
+      ],
+      [
+        227,
+        431
+      ]
+    ],
+    [
+      [
+        320,
+        74
+      ],
+      [
+        339,
+        120
+      ],
+      [
+        366,
+        155
+      ],
+      [
+        400,
+        172
+      ],
+      [
+        445,
+        185
+      ],
+      [
+        501,
+        191
+      ]
+    ]
+  ],
+  "origin_pixel": [
+    270,
+    300
+  ],
+  "grid_spacing_pixel": [
+    40,
+    40
+  ],
+  "expected_strokes": 2,
+  "expected_status": "automatic"
+}

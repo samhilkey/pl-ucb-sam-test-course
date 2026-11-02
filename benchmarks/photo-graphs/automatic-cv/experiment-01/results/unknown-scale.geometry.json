@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 640,
+    "height": 480,
+    "processing": {
+      "width": 640,
+      "height": 480,
+      "source_to_processing": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "coordinate_frame": {
+    "status": "detected",
+    "origin_pixel": [
+      270,
+      300
+    ],
+    "axes": {
+      "x": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              0,
+              300
+            ],
+            "end": [
+              639,
+              300
+            ],
+            "support": 0.9109375,
+            "width_pixel": 3
+          }
+        ]
+      },
+      "y": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              270,
+              0
+            ],
+            "end": [
+              270,
+              479
+            ],
+            "support": 0.9229166666666667,
+            "width_pixel": 3
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "detected",
+        "spacing_pixel": 40,
+        "lines_pixel": [
+          30,
+          70,
+          110,
+          150,
+          190,
+          230,
+          310,
+          350,
+          390,
+          430,
+          470,
+          569.1093800141198
+        ]
+      },
+      "y": {
+        "status": "detected",
+        "spacing_pixel": 40,
+        "lines_pixel": [
+          20,
+          60,
+          100,
+          140,
+          180,
+          220,
+          260,
+          340,
+          380,
+          420,
+          460
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "strokes": [
+    {
+      "id": "stroke-1",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            516,
+            106
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            384,
+            149
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            189,
+            208
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            101,
+            238
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    }
+  ],
+  "topology": {
+    "stroke_count": 1,
+    "component_count": 1,
+    "components": [
+      {
+        "id": "component-1",
+        "stroke_ids": [
+          "stroke-1"
+        ]
+      }
+    ],
+    "junctions": []
+  },
+  "status": "needs_review",
+  "warnings": [
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    }
+  ],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [],
+    "rejected_small_components": [
+      {
+        "bounds_pixel": [
+          [
+            267,
+            297
+          ],
+          [
+            273,
+            303
+          ]
+        ],
+        "pixels_processing": 25
+      }
+    ],
+    "assumptions": [
+      "Upright, approximately straight-on graph paper.",
+      "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+      "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+    ]
+  }
+}

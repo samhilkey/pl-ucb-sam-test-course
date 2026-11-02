@@ -1,0 +1,38 @@
+{
+  "source_kind": "controlled_raster",
+  "drawing_id": "controlled-v",
+  "centerlines_pixel": [
+    [
+      [
+        112,
+        100
+      ],
+      [
+        200,
+        202
+      ],
+      [
+        278,
+        250
+      ],
+      [
+        340,
+        166
+      ],
+      [
+        425,
+        82
+      ]
+    ]
+  ],
+  "origin_pixel": [
+    270,
+    300
+  ],
+  "grid_spacing_pixel": [
+    40,
+    40
+  ],
+  "expected_strokes": 1,
+  "expected_status": "automatic"
+}

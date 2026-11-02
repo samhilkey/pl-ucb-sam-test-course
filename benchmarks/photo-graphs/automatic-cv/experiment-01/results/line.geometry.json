@@ -1,0 +1,375 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 640,
+    "height": 480,
+    "processing": {
+      "width": 640,
+      "height": 480,
+      "source_to_processing": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "coordinate_frame": {
+    "status": "detected",
+    "origin_pixel": [
+      270,
+      300
+    ],
+    "axes": {
+      "x": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              0,
+              300
+            ],
+            "end": [
+              639,
+              300
+            ],
+            "support": 0.9109375,
+            "width_pixel": 3
+          }
+        ]
+      },
+      "y": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              270,
+              0
+            ],
+            "end": [
+              270,
+              479
+            ],
+            "support": 0.9229166666666667,
+            "width_pixel": 3
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "detected",
+        "spacing_pixel": 40,
+        "lines_pixel": [
+          30,
+          70,
+          110,
+          150,
+          190,
+          230,
+          310,
+          350,
+          390,
+          430,
+          470,
+          569.1093800141198
+        ]
+      },
+      "y": {
+        "status": "detected",
+        "spacing_pixel": 40,
+        "lines_pixel": [
+          20,
+          60,
+          100,
+          140,
+          180,
+          220,
+          260,
+          340,
+          380,
+          420,
+          460
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "calibrated",
+    "axes": {
+      "x": {
+        "status": "known",
+        "source": "photo_detected",
+        "labels": [
+          {
+            "value": 1,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                307,
+                312
+              ],
+              [
+                312,
+                325
+              ]
+            ],
+            "anchor_pixel": [
+              310,
+              300
+            ],
+            "tick": 1
+          },
+          {
+            "value": 2,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                345,
+                312
+              ],
+              [
+                354,
+                325
+              ]
+            ],
+            "anchor_pixel": [
+              350,
+              300
+            ],
+            "tick": 2
+          },
+          {
+            "value": 3,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                385,
+                312
+              ],
+              [
+                394,
+                325
+              ]
+            ],
+            "anchor_pixel": [
+              390,
+              300
+            ],
+            "tick": 3
+          }
+        ],
+        "units_per_grid": 1,
+        "intersection_value": 0
+      },
+      "y": {
+        "status": "known",
+        "source": "photo_detected",
+        "labels": [
+          {
+            "value": 1,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                247,
+                253
+              ],
+              [
+                252,
+                266
+              ]
+            ],
+            "anchor_pixel": [
+              270,
+              260
+            ],
+            "tick": 1
+          },
+          {
+            "value": 2,
+            "match_error": 0,
+            "bounds_pixel": [
+              [
+                245,
+                213
+              ],
+              [
+                254,
+                226
+              ]
+            ],
+            "anchor_pixel": [
+              270,
+              220
+            ],
+            "tick": 2
+          }
+        ],
+        "units_per_grid": 1,
+        "intersection_value": 0
+      }
+    },
+    "origin_graph": [
+      0,
+      0
+    ],
+    "x_unit_vector_pixel": [
+      40,
+      0
+    ],
+    "y_unit_vector_pixel": [
+      0,
+      -40
+    ]
+  },
+  "strokes": [
+    {
+      "id": "stroke-1",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            516,
+            106
+          ],
+          "graph": [
+            6.15,
+            4.85
+          ],
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            384,
+            149
+          ],
+          "graph": [
+            2.85,
+            3.775
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            281,
+            179
+          ],
+          "graph": [
+            0.275,
+            3.025
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            267,
+            185
+          ],
+          "graph": [
+            -0.075,
+            2.875
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            251,
+            188
+          ],
+          "graph": [
+            -0.475,
+            2.8
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            249,
+            190
+          ],
+          "graph": [
+            -0.525,
+            2.75
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            189,
+            208
+          ],
+          "graph": [
+            -2.025,
+            2.3
+          ],
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            101,
+            238
+          ],
+          "graph": [
+            -4.225,
+            1.55
+          ],
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    }
+  ],
+  "topology": {
+    "stroke_count": 1,
+    "component_count": 1,
+    "components": [
+      {
+        "id": "component-1",
+        "stroke_ids": [
+          "stroke-1"
+        ]
+      }
+    ],
+    "junctions": []
+  },
+  "status": "automatic",
+  "warnings": [],
+  "assistance": [],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [],
+    "rejected_small_components": [
+      {
+        "bounds_pixel": [
+          [
+            267,
+            297
+          ],
+          [
+            273,
+            303
+          ]
+        ],
+        "pixels_processing": 25
+      }
+    ],
+    "assumptions": [
+      "Upright, approximately straight-on graph paper.",
+      "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+      "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "source_kind": "controlled_raster",
+  "drawing_id": "controlled-junction",
+  "centerlines_pixel": [
+    [
+      [
+        120,
+        130
+      ],
+      [
+        190,
+        180
+      ],
+      [
+        240,
+        220
+      ],
+      [
+        330,
+        150
+      ]
+    ],
+    [
+      [
+        240,
+        220
+      ],
+      [
+        290,
+        270
+      ],
+      [
+        370,
+        310
+      ]
+    ]
+  ],
+  "origin_pixel": [
+    270,
+    300
+  ],
+  "grid_spacing_pixel": [
+    40,
+    40
+  ],
+  "expected_strokes": null,
+  "expected_status": "needs_review"
+}

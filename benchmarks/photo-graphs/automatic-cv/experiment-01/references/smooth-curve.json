@@ -1,0 +1,78 @@
+{
+  "source_kind": "controlled_raster",
+  "drawing_id": "controlled-smooth",
+  "centerlines_pixel": [
+    [
+      [
+        116,
+        86
+      ],
+      [
+        130,
+        123
+      ],
+      [
+        145,
+        163
+      ],
+      [
+        163,
+        198
+      ],
+      [
+        185,
+        229
+      ],
+      [
+        211,
+        252
+      ],
+      [
+        240,
+        264
+      ],
+      [
+        273,
+        271
+      ],
+      [
+        304,
+        265
+      ],
+      [
+        330,
+        249
+      ],
+      [
+        354,
+        222
+      ],
+      [
+        371,
+        188
+      ],
+      [
+        389,
+        151
+      ],
+      [
+        406,
+        111
+      ],
+      [
+        420,
+        73
+      ]
+    ]
+  ],
+  "origin_pixel": [
+    270,
+    300
+  ],
+  "grid_spacing_pixel": [
+    40,
+    40
+  ],
+  "expected_strokes": 1,
+  "expected_status": "automatic"
+}

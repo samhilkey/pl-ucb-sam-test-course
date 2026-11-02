@@ -1,0 +1,24 @@
+[
+  {
+    "id": "real--01-multiple-lines-graph-paper",
+    "drawing_id": "drawedumath-01",
+    "source_kind": "real_photo",
+    "input": "inputs/real--01-multiple-lines-graph-paper.png",
+    "source_branch": "experiment/photo-trace-shapes",
+    "source_commit": "99dc33c4722add067321640cefbad1dfcc54ae1d",
+    "source_path": "benchmarks/photo-graphs/experiment-01/inputs/real--01-multiple-lines-graph-paper.png",
+    "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+    "reference": "references/real--01-multiple-lines-graph-paper.json"
+  },
+  {
+    "id": "real--06-piecewise-graph-paper",
+    "drawing_id": "drawedumath-06",
+    "source_kind": "real_photo",
+    "input": "inputs/real--06-piecewise-graph-paper.png",
+    "source_branch": "experiment/photo-trace-shapes",
+    "source_commit": "99dc33c4722add067321640cefbad1dfcc54ae1d",
+    "source_path": "benchmarks/photo-graphs/experiment-01/inputs/real--06-piecewise-graph-paper.png",
+    "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+    "reference": "references/real--06-piecewise-graph-paper.json"
+  }
+]

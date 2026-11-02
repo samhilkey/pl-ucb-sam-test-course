@@ -1,0 +1,58 @@
+[
+  {
+    "id": "line",
+    "drawing_id": "controlled-line",
+    "source_kind": "controlled_raster",
+    "input": "inputs/line.png",
+    "reference": "references/line.json"
+  },
+  {
+    "id": "sharp-v",
+    "drawing_id": "controlled-v",
+    "source_kind": "controlled_raster",
+    "input": "inputs/sharp-v.png",
+    "reference": "references/sharp-v.json"
+  },
+  {
+    "id": "smooth-curve",
+    "drawing_id": "controlled-smooth",
+    "source_kind": "controlled_raster",
+    "input": "inputs/smooth-curve.png",
+    "reference": "references/smooth-curve.json"
+  },
+  {
+    "id": "two-branches",
+    "drawing_id": "controlled-two",
+    "source_kind": "controlled_raster",
+    "input": "inputs/two-branches.png",
+    "reference": "references/two-branches.json"
+  },
+  {
+    "id": "ambiguous-axes",
+    "drawing_id": "controlled-ambiguous",
+    "source_kind": "controlled_raster",
+    "input": "inputs/ambiguous-axes.png",
+    "reference": "references/ambiguous-axes.json"
+  },
+  {
+    "id": "unknown-scale",
+    "drawing_id": "controlled-line",
+    "source_kind": "controlled_raster",
+    "input": "inputs/unknown-scale.png",
+    "reference": "references/unknown-scale.json"
+  },
+  {
+    "id": "grid-axis-crossing",
+    "drawing_id": "controlled-crossing",
+    "source_kind": "controlled_raster",
+    "input": "inputs/grid-axis-crossing.png",
+    "reference": "references/grid-axis-crossing.json"
+  },
+  {
+    "id": "touching-junction",
+    "drawing_id": "controlled-junction",
+    "source_kind": "controlled_raster",
+    "input": "inputs/touching-junction.png",
+    "reference": "references/touching-junction.json"
+  }
+]

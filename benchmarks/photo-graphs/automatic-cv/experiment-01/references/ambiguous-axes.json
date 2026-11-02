@@ -1,0 +1,30 @@
+{
+  "source_kind": "controlled_raster",
+  "drawing_id": "controlled-ambiguous",
+  "centerlines_pixel": [
+    [
+      [
+        100,
+        140
+      ],
+      [
+        200,
+        200
+      ],
+      [
+        390,
+        105
+      ]
+    ]
+  ],
+  "origin_pixel": [
+    270,
+    300
+  ],
+  "grid_spacing_pixel": [
+    40,
+    40
+  ],
+  "expected_strokes": 1,
+  "expected_status": "needs_review"
+}
