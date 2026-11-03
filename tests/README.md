@@ -71,3 +71,23 @@ controlled rasters and explicit challenge/failure cases are tested separately
 from real photographs. The browser check decodes images through Canvas and
 compares output to Node, at desktop and mobile sizes. This checks geometry
 extraction only; native import and actual Save & Grade remain step-3 work.
+
+## Native automatic import (step 3)
+
+```bash
+node --test tests/star-native.test.cjs
+# Requires local PrairieLearn with the new question loaded:
+export STAR_NATIVE_TEST_URL=http://localhost:3000/pl/course/1/question/254/preview
+node tests/star-native-browser.cjs
+```
+
+The native browser script uses actual file upload and CV recognition, explicitly
+confirms the proposal, exercises native Select dragging, sends real Save & Grade
+requests, and refreshes/restores all four controlled cases. It verifies retained
+prior objects and the existing mathematical grader's incorrect outcomes, rejects
+ambiguous/stale proposals, checks stock manual drawing, and measures the actual
+polyline/spline/freeform SVG and gradeable representations. It also tests the
+assisted photo route's freeform encoding, submission, and restoration. Local question IDs
+may differ; find `star-automatic-photo-test` under the course's Questions page.
+Use `PL_PHOTO_TEST_OUTPUT` to save the raw result and screenshots. Read the
+step-3 report under `benchmarks/photo-graphs/automatic-cv/experiment-02-native/`.

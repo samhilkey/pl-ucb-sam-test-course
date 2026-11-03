@@ -1,0 +1,126 @@
+{
+  "apiVersion": "0.1",
+  "meta": {
+    "config": {
+      "width": 800,
+      "height": 600,
+      "xrange": [
+        -5.153846153846154,
+        7.153846153846154
+      ],
+      "yrange": [
+        -4.172413793103448,
+        6.172413793103448
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "coordinates": "cartesian",
+      "readonly": false,
+      "enforceBounds": false,
+      "safetyBuffer": 10,
+      "plugins": [
+        {
+          "name": "axes",
+          "colors": {
+            "xaxisLabel": "blue",
+            "yaxisLabel": "blue"
+          },
+          "fontSize": {
+            "xaxisLabel": 14,
+            "yaxisLabel": 14
+          },
+          "xaxisLabel": {
+            "dx": 10,
+            "dy": 10,
+            "value": "x"
+          },
+          "yaxisLabel": {
+            "dx": 10,
+            "dy": 20,
+            "value": "y"
+          }
+        },
+        {
+          "id": "auto-ink",
+          "name": "freeform",
+          "size": null,
+          "color": "blue",
+          "group": null,
+          "label": "Graph strokes",
+          "limit": null,
+          "closed": null,
+          "helper": false,
+          "hollow": null,
+          "opacity": null,
+          "readonly": false,
+          "arrowHead": null,
+          "dashStyle": null,
+          "fillColor": null,
+          "lengthConstraint": null,
+          "directionConstraint": null
+        },
+        {
+          "id": "auto-notes",
+          "name": "point",
+          "size": 15,
+          "color": "black",
+          "group": null,
+          "label": "Other marks",
+          "limit": null,
+          "closed": null,
+          "helper": false,
+          "hollow": false,
+          "opacity": null,
+          "readonly": false,
+          "arrowHead": null,
+          "dashStyle": null,
+          "fillColor": null,
+          "lengthConstraint": null,
+          "directionConstraint": null
+        }
+      ]
+    },
+    "dataVersions": {
+      "$__history": "0.1",
+      "$__toolbar": "0.1",
+      "auto-ink": "0.1",
+      "auto-notes": "0.1"
+    }
+  },
+  "data": {
+    "$__history": {
+      "undoStack": [],
+      "redoStack": []
+    },
+    "$__toolbar": {
+      "activeItemID": "select",
+      "selectedDropdownItemMap": {}
+    },
+    "auto-ink": [
+      [
+        {
+          "x": 780.25,
+          "y": 561
+        },
+        {
+          "x": 783.5,
+          "y": 557.1333333333333
+        },
+        {
+          "x": 786.7499999999999,
+          "y": 553.2666666666668
+        },
+        {
+          "x": 789.9999999999999,
+          "y": 549.4000000000001
+        }
+      ]
+    ],
+    "auto-notes": [
+      {
+        "x": 735,
+        "y": 540
+      }
+    ]
+  }
+}

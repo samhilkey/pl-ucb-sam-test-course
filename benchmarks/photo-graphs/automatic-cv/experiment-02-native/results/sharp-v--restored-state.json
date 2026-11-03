@@ -1,0 +1,192 @@
+{
+  "apiVersion": "0.1",
+  "meta": {
+    "config": {
+      "width": 800,
+      "height": 600,
+      "xrange": [
+        -5.153846153846154,
+        7.153846153846154
+      ],
+      "yrange": [
+        -4.172413793103448,
+        6.172413793103448
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "coordinates": "cartesian",
+      "readonly": false,
+      "enforceBounds": false,
+      "safetyBuffer": 10,
+      "plugins": [
+        {
+          "name": "axes",
+          "colors": {
+            "xaxisLabel": "blue",
+            "yaxisLabel": "blue"
+          },
+          "fontSize": {
+            "xaxisLabel": 14,
+            "yaxisLabel": 14
+          },
+          "xaxisLabel": {
+            "dx": 10,
+            "dy": 10,
+            "value": "x"
+          },
+          "yaxisLabel": {
+            "dx": 10,
+            "dy": 20,
+            "value": "y"
+          }
+        },
+        {
+          "id": "auto-ink",
+          "name": "freeform",
+          "size": null,
+          "color": "blue",
+          "group": null,
+          "label": "Graph strokes",
+          "limit": null,
+          "closed": null,
+          "helper": false,
+          "hollow": null,
+          "opacity": null,
+          "readonly": false,
+          "arrowHead": null,
+          "dashStyle": null,
+          "fillColor": null,
+          "lengthConstraint": null,
+          "directionConstraint": null
+        },
+        {
+          "id": "auto-notes",
+          "name": "point",
+          "size": 15,
+          "color": "black",
+          "group": null,
+          "label": "Other marks",
+          "limit": null,
+          "closed": null,
+          "helper": false,
+          "hollow": false,
+          "opacity": null,
+          "readonly": false,
+          "arrowHead": null,
+          "dashStyle": null,
+          "fillColor": null,
+          "lengthConstraint": null,
+          "directionConstraint": null
+        }
+      ]
+    },
+    "dataVersions": {
+      "$__history": "0.1",
+      "$__toolbar": "0.1",
+      "auto-ink": "0.1",
+      "auto-notes": "0.1"
+    }
+  },
+  "data": {
+    "$__history": {
+      "undoStack": [],
+      "redoStack": []
+    },
+    "$__toolbar": {
+      "activeItemID": "select",
+      "selectedDropdownItemMap": {}
+    },
+    "auto-ink": [
+      [
+        {
+          "x": 780.25,
+          "y": 561
+        },
+        {
+          "x": 783.5,
+          "y": 557.1333333333333
+        },
+        {
+          "x": 786.7499999999999,
+          "y": 553.2666666666668
+        },
+        {
+          "x": 789.9999999999999,
+          "y": 549.4000000000001
+        }
+      ],
+      [
+        {
+          "x": 586.875,
+          "y": 41.9
+        },
+        {
+          "x": 539.75,
+          "y": 83.46666666666667
+        },
+        {
+          "x": 492.62500000000006,
+          "y": 125.03333333333333
+        },
+        {
+          "x": 445.50000000000006,
+          "y": 166.6
+        },
+        {
+          "x": 413.5416666666667,
+          "y": 205.26666666666668
+        },
+        {
+          "x": 381.5833333333333,
+          "y": 243.93333333333334
+        },
+        {
+          "x": 349.62499999999994,
+          "y": 282.6
+        },
+        {
+          "x": 345.29166666666663,
+          "y": 281.6333333333334
+        },
+        {
+          "x": 340.95833333333337,
+          "y": 280.6666666666667
+        },
+        {
+          "x": 336.62500000000006,
+          "y": 279.70000000000005
+        },
+        {
+          "x": 298.70833333333337,
+          "y": 258.9166666666667
+        },
+        {
+          "x": 260.7916666666667,
+          "y": 238.13333333333335
+        },
+        {
+          "x": 222.875,
+          "y": 217.35000000000002
+        },
+        {
+          "x": 174.66666666666666,
+          "y": 167.5666666666667
+        },
+        {
+          "x": 126.45833333333333,
+          "y": 117.78333333333335
+        },
+        {
+          "x": 78.25,
+          "y": 68
+        }
+      ]
+    ],
+    "auto-notes": [
+      {
+        "x": 735,
+        "y": 540
+      }
+    ]
+  }
+}

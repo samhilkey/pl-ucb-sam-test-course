@@ -10,6 +10,10 @@
     "elementScripts": [
       "star-fit.js",
       "star-photo.js",
+      "star-geometry.js",
+      "star-recognition.js",
+      "star-native.js",
+      "star-automatic.js",
       "pl-sketch.js"
     ],
     "elementStyles": [

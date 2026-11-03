@@ -1,0 +1,474 @@
+{
+  "native_state": {
+    "apiVersion": "0.1",
+    "meta": {
+      "config": {
+        "width": 800,
+        "height": 600,
+        "xrange": [
+          -5.153846153846154,
+          7.153846153846154
+        ],
+        "yrange": [
+          -4.172413793103448,
+          6.172413793103448
+        ],
+        "xscale": "linear",
+        "yscale": "linear",
+        "coordinates": "cartesian",
+        "readonly": false,
+        "enforceBounds": false,
+        "safetyBuffer": 10,
+        "plugins": [
+          {
+            "name": "axes",
+            "colors": {
+              "xaxisLabel": "blue",
+              "yaxisLabel": "blue"
+            },
+            "fontSize": {
+              "xaxisLabel": 14,
+              "yaxisLabel": 14
+            },
+            "xaxisLabel": {
+              "dx": 10,
+              "dy": 10,
+              "value": "x"
+            },
+            "yaxisLabel": {
+              "dx": 10,
+              "dy": 20,
+              "value": "y"
+            }
+          },
+          {
+            "id": "auto-ink",
+            "name": "freeform",
+            "size": null,
+            "color": "blue",
+            "group": null,
+            "label": "Graph strokes",
+            "limit": null,
+            "closed": null,
+            "helper": false,
+            "hollow": null,
+            "opacity": null,
+            "readonly": false,
+            "arrowHead": null,
+            "dashStyle": null,
+            "fillColor": null,
+            "lengthConstraint": null,
+            "directionConstraint": null
+          },
+          {
+            "id": "auto-notes",
+            "name": "point",
+            "size": 15,
+            "color": "black",
+            "group": null,
+            "label": "Other marks",
+            "limit": null,
+            "closed": null,
+            "helper": false,
+            "hollow": false,
+            "opacity": null,
+            "readonly": false,
+            "arrowHead": null,
+            "dashStyle": null,
+            "fillColor": null,
+            "lengthConstraint": null,
+            "directionConstraint": null
+          }
+        ]
+      },
+      "dataVersions": {
+        "$__history": "0.1",
+        "$__toolbar": "0.1",
+        "auto-ink": "0.1",
+        "auto-notes": "0.1"
+      }
+    },
+    "data": {
+      "$__history": {
+        "undoStack": [
+          {
+            "auto-ink": {
+              "0": [
+                [
+                  {
+                    "x": 130,
+                    "y": 400
+                  },
+                  {
+                    "x": 278.53,
+                    "y": 330.47
+                  },
+                  {
+                    "x": 427.07,
+                    "y": 260.95
+                  },
+                  {
+                    "x": 575.6,
+                    "y": 191.42
+                  }
+                ]
+              ],
+              "_t": "a"
+            }
+          }
+        ],
+        "redoStack": []
+      },
+      "$__toolbar": {
+        "activeItemID": "auto-ink",
+        "selectedDropdownItemMap": {}
+      },
+      "auto-ink": [
+        [
+          {
+            "x": 130,
+            "y": 400
+          },
+          {
+            "x": 278.53,
+            "y": 330.47
+          },
+          {
+            "x": 427.07,
+            "y": 260.95
+          },
+          {
+            "x": 575.6,
+            "y": 191.42
+          }
+        ]
+      ],
+      "auto-notes": []
+    }
+  },
+  "submitted": {
+    "apiVersion": "0.1",
+    "meta": {
+      "config": {
+        "width": 800,
+        "height": 600,
+        "xrange": [
+          -5.153846153846154,
+          7.153846153846154
+        ],
+        "yrange": [
+          -4.172413793103448,
+          6.172413793103448
+        ],
+        "xscale": "linear",
+        "yscale": "linear",
+        "coordinates": "cartesian",
+        "readonly": false,
+        "enforceBounds": false,
+        "safetyBuffer": 10,
+        "plugins": [
+          {
+            "name": "axes",
+            "colors": {
+              "xaxisLabel": "blue",
+              "yaxisLabel": "blue"
+            },
+            "fontSize": {
+              "xaxisLabel": 14,
+              "yaxisLabel": 14
+            },
+            "xaxisLabel": {
+              "dx": 10,
+              "dy": 10,
+              "value": "x"
+            },
+            "yaxisLabel": {
+              "dx": 10,
+              "dy": 20,
+              "value": "y"
+            }
+          },
+          {
+            "id": "auto-ink",
+            "name": "freeform",
+            "size": null,
+            "color": "blue",
+            "group": null,
+            "label": "Graph strokes",
+            "limit": null,
+            "closed": null,
+            "helper": false,
+            "hollow": null,
+            "opacity": null,
+            "readonly": false,
+            "arrowHead": null,
+            "dashStyle": null,
+            "fillColor": null,
+            "lengthConstraint": null,
+            "directionConstraint": null
+          },
+          {
+            "id": "auto-notes",
+            "name": "point",
+            "size": 15,
+            "color": "black",
+            "group": null,
+            "label": "Other marks",
+            "limit": null,
+            "closed": null,
+            "helper": false,
+            "hollow": false,
+            "opacity": null,
+            "readonly": false,
+            "arrowHead": null,
+            "dashStyle": null,
+            "fillColor": null,
+            "lengthConstraint": null,
+            "directionConstraint": null
+          }
+        ]
+      },
+      "dataVersions": {
+        "$__history": "0.1",
+        "$__toolbar": "0.1",
+        "auto-ink": "0.1",
+        "auto-notes": "0.1"
+      }
+    },
+    "data": {
+      "$__history": {
+        "undoStack": [
+          {
+            "auto-ink": {
+              "0": [
+                [
+                  {
+                    "x": 130,
+                    "y": 400
+                  },
+                  {
+                    "x": 278.53,
+                    "y": 330.47
+                  },
+                  {
+                    "x": 427.07,
+                    "y": 260.95
+                  },
+                  {
+                    "x": 575.6,
+                    "y": 191.42
+                  }
+                ]
+              ],
+              "_t": "a"
+            }
+          }
+        ],
+        "redoStack": []
+      },
+      "$__toolbar": {
+        "activeItemID": "auto-ink",
+        "selectedDropdownItemMap": {}
+      },
+      "auto-ink": [
+        [
+          {
+            "x": 130,
+            "y": 400
+          },
+          {
+            "x": 278.53,
+            "y": 330.47
+          },
+          {
+            "x": 427.07,
+            "y": 260.95
+          },
+          {
+            "x": 575.6,
+            "y": 191.42
+          }
+        ]
+      ],
+      "auto-notes": []
+    },
+    "gradeable": {
+      "auto-ink": [
+        {
+          "spline": [
+            [
+              130,
+              400
+            ],
+            [
+              278.53,
+              330.47
+            ],
+            [
+              427.07,
+              260.95
+            ],
+            [
+              575.6,
+              191.42
+            ]
+          ]
+        }
+      ],
+      "auto-notes": []
+    }
+  },
+  "restored_state": {
+    "apiVersion": "0.1",
+    "meta": {
+      "config": {
+        "width": 800,
+        "height": 600,
+        "xrange": [
+          -5.153846153846154,
+          7.153846153846154
+        ],
+        "yrange": [
+          -4.172413793103448,
+          6.172413793103448
+        ],
+        "xscale": "linear",
+        "yscale": "linear",
+        "coordinates": "cartesian",
+        "readonly": false,
+        "enforceBounds": false,
+        "safetyBuffer": 10,
+        "plugins": [
+          {
+            "name": "axes",
+            "colors": {
+              "xaxisLabel": "blue",
+              "yaxisLabel": "blue"
+            },
+            "fontSize": {
+              "xaxisLabel": 14,
+              "yaxisLabel": 14
+            },
+            "xaxisLabel": {
+              "dx": 10,
+              "dy": 10,
+              "value": "x"
+            },
+            "yaxisLabel": {
+              "dx": 10,
+              "dy": 20,
+              "value": "y"
+            }
+          },
+          {
+            "id": "auto-ink",
+            "name": "freeform",
+            "size": null,
+            "color": "blue",
+            "group": null,
+            "label": "Graph strokes",
+            "limit": null,
+            "closed": null,
+            "helper": false,
+            "hollow": null,
+            "opacity": null,
+            "readonly": false,
+            "arrowHead": null,
+            "dashStyle": null,
+            "fillColor": null,
+            "lengthConstraint": null,
+            "directionConstraint": null
+          },
+          {
+            "id": "auto-notes",
+            "name": "point",
+            "size": 15,
+            "color": "black",
+            "group": null,
+            "label": "Other marks",
+            "limit": null,
+            "closed": null,
+            "helper": false,
+            "hollow": false,
+            "opacity": null,
+            "readonly": false,
+            "arrowHead": null,
+            "dashStyle": null,
+            "fillColor": null,
+            "lengthConstraint": null,
+            "directionConstraint": null
+          }
+        ]
+      },
+      "dataVersions": {
+        "$__history": "0.1",
+        "$__toolbar": "0.1",
+        "auto-ink": "0.1",
+        "auto-notes": "0.1"
+      }
+    },
+    "data": {
+      "$__history": {
+        "undoStack": [
+          {
+            "auto-ink": {
+              "0": [
+                [
+                  {
+                    "x": 130,
+                    "y": 400
+                  },
+                  {
+                    "x": 278.53,
+                    "y": 330.47
+                  },
+                  {
+                    "x": 427.07,
+                    "y": 260.95
+                  },
+                  {
+                    "x": 575.6,
+                    "y": 191.42
+                  }
+                ]
+              ],
+              "_t": "a"
+            }
+          }
+        ],
+        "redoStack": []
+      },
+      "$__toolbar": {
+        "activeItemID": "auto-ink",
+        "selectedDropdownItemMap": {}
+      },
+      "auto-ink": [
+        [
+          {
+            "x": 130,
+            "y": 400
+          },
+          {
+            "x": 278.53,
+            "y": 330.47
+          },
+          {
+            "x": 427.07,
+            "y": 260.95
+          },
+          {
+            "x": 575.6,
+            "y": 191.42
+          }
+        ]
+      ],
+      "auto-notes": []
+    }
+  },
+  "rendered_path_d": [
+    "M130,400C278.53,330.47 427.07,260.95 575.6,191.42"
+  ],
+  "restored_path_d": [
+    "M130,400C278.53,330.47 427.07,260.95 575.6,191.42"
+  ]
+}

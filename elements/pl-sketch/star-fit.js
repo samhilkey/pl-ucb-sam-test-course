@@ -524,8 +524,8 @@
     }))
   }
 
-  // Replace one tool's drawing atomically, preserving each branch as a separate
-  // spline. Validate every branch before touching the live canvas.
+  // Replace one tool's drawing, preserving each branch as a separate native
+  // path. Validate every branch before touching the live canvas.
   function placeCurves (si, config, toolId, curves) {
     if (!Array.isArray(curves) || !curves.length || curves.some((points) =>
       !Array.isArray(points) || points.length < 2 || points.some((p) =>
@@ -533,7 +533,16 @@
       throw new Error('Every branch needs at least two finite points.')
     }
     const state = JSON.parse(si.getState())
-    state.data[toolId] = curves.map((points) => graphToPixels(config, points))
+    const plugin = (config.plugins || []).find(p => p.id === toolId)
+    state.data[toolId] = curves.map((points) => {
+      const pixels = graphToPixels(config, points)
+      if (!plugin || plugin.name !== 'freeform') return pixels
+      // The assisted fit route also needs the real freeform control format.
+      // Share the verified geometric encoder; mathematical fitting stays here.
+      const native = typeof module !== 'undefined' && module.exports ? require('./star-native.js') : root.StarNative
+      if (!native) throw new Error('The native geometry encoder is unavailable.')
+      return native.encode(pixels, 'freeform')
+    })
     si.setState(JSON.stringify(state))
   }
 

@@ -1,0 +1,18 @@
+<pl-question-panel>
+  <h4>Automatic photo recognition sandbox</h4>
+  <p>
+    Use <strong>Recognize a graph photo</strong> to review a detected graph before
+    adding it to the editable canvas. Recognition is experimental; the supported
+    sample images use thick strokes, straight-on graph paper, and printed numeric labels.
+    The assisted photo workflow is also available through the camera button.
+  </p>
+  <p>
+    Sketch $f(x)=x^2$. This sandbox keeps the native $x^2$ grader: an imported
+    sample can be graded incorrect while faithfully preserving its original marks.
+  </p>
+</pl-question-panel>
+<pl-sketch answers-name="automatic-photo" x-range="-5,7" y-range="-4,6" width="800" height="600" allow-hand-drawn="true" automatic-photo="true">
+  <pl-sketch-tool id="auto-ink" type="free-draw" label="Graph strokes"></pl-sketch-tool>
+  <pl-sketch-tool id="auto-notes" type="point" label="Other marks"></pl-sketch-tool>
+  <pl-sketch-grade type="match-function" tool-id="auto-ink" function="x**2" x-range="-2.2,2.2"></pl-sketch-grade>
+</pl-sketch>

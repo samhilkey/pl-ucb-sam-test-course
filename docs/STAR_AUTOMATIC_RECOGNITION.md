@@ -14,8 +14,9 @@ approval before beginning the next step.
    separately from automatic success.
 3. **Native import:** add a direct geometry adapter and automatic photo review in
    the test question; verify shape, editing, submission, and restoration.
-4. **Student correction:** add local landmark and axis corrections, with revision
-   checks and confirmation invalidation.
+4. **Real-photo recognition reliability:** prioritize the current 0/2 real-photo
+   result for the November 9 demo, per the user's step-3 instructions. Broader
+   landmark correction follows this recognition work.
 5. **Evidence and validation:** run regressions and the five-case evaluation,
    save original/overlay/native comparisons, and report measured limitations.
 
@@ -243,3 +244,26 @@ python3 benchmarks/photo-graphs/automatic-cv/experiment-01/serve.py --port 8765
 
 Open `http://127.0.0.1:8765/`. This is an extraction reviewer, not native import.
 **Review boundary:** stop after the step-2 commit; step 3 requires user approval.
+
+## Step 3: native import
+
+Step 2 was approved. Added a direct, guarded `StarNative` adapter and opt-in
+`automatic-photo="true"` review UI. Four controlled cases pass exact native state
+restoration, whole-branch editing, and actual native Save & Grade. The five-path
+ambiguous-axis proposal is blocked. The original assisted question is unchanged;
+the new `star-automatic-photo-test` sandbox uses an editable freeform tool.
+
+Validation: 64 Node tests, 218 existing browser assertions, and 163 new native
+browser assertions passed. The actual installed polyline, spline, and freeform
+representations were compared; freeform preserves the extracted segments for
+both rendering and grading. The assisted route also uses the correct freeform
+control format. Real-photo recognition remains 0/2.
+
+Read the [step-3 report](../benchmarks/photo-graphs/automatic-cv/experiment-02-native/REPORT.md)
+for exact metrics, native state and submission evidence, editing limitations,
+and reproduction steps. Local demo:
+`http://localhost:3000/pl/course/1/question/254/preview/` (fresh variant).
+Evidence gallery: `http://127.0.0.1:8766/`.
+
+**Review boundary:** stop after the step-3 commit. The next approved step should
+improve real-photo recognition before expanding the correction interface.

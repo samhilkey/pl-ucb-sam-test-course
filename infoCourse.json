@@ -143,6 +143,12 @@
       "description": "This question was originally written by Dan Garcia (ddgarcia@berkeley.edu)",
       "author": true
     },
+    {
+      "name": "star-sketch2graph",
+      "color": "brown1",
+      "description": "STAR Sketch2Graph research engineering material, implemented with Codex.",
+      "author": true
+    },
 
     {
       "name": "berkeley",

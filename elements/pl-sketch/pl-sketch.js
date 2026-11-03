@@ -8,7 +8,7 @@ window.SketchInput.instances = window.SketchInput.instances || {}
 
 const starInstances = window.SketchInput.instances
 
-window.SketchInput = Object.assign(function (id, overlaySolution = false, handDrawn = false) {
+window.SketchInput = Object.assign(function (id, overlaySolution = false, handDrawn = false, automaticPhoto = false) {
   function prepareData () {
     // Load SketchResponse
     const SketchResponse = window.sketchresponse.default
@@ -24,6 +24,9 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
     // STAR: the photo route, when the instructor turned it on for this question.
     if (handDrawn) {
       starAddHandDrawnButton(id, si, config)
+    }
+    if (automaticPhoto) {
+      si.messageBus.on('ready', function () { window.StarAutomatic.mount({ id, si, config }) })
     }
 
     // Inject overlay toggle button into si-container if it is enabled

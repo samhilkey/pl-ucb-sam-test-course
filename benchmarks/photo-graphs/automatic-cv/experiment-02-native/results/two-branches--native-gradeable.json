@@ -1,0 +1,244 @@
+{
+  "apiVersion": "0.1",
+  "meta": {
+    "config": {
+      "width": 800,
+      "height": 600,
+      "xrange": [
+        -5.153846153846154,
+        7.153846153846154
+      ],
+      "yrange": [
+        -4.172413793103448,
+        6.172413793103448
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "coordinates": "cartesian",
+      "readonly": false,
+      "enforceBounds": false,
+      "safetyBuffer": 10,
+      "plugins": [
+        {
+          "name": "axes",
+          "colors": {
+            "xaxisLabel": "blue",
+            "yaxisLabel": "blue"
+          },
+          "fontSize": {
+            "xaxisLabel": 14,
+            "yaxisLabel": 14
+          },
+          "xaxisLabel": {
+            "dx": 10,
+            "dy": 10,
+            "value": "x"
+          },
+          "yaxisLabel": {
+            "dx": 10,
+            "dy": 20,
+            "value": "y"
+          }
+        },
+        {
+          "id": "auto-ink",
+          "name": "freeform",
+          "size": null,
+          "color": "blue",
+          "group": null,
+          "label": "Graph strokes",
+          "limit": null,
+          "closed": null,
+          "helper": false,
+          "hollow": null,
+          "opacity": null,
+          "readonly": false,
+          "arrowHead": null,
+          "dashStyle": null,
+          "fillColor": null,
+          "lengthConstraint": null,
+          "directionConstraint": null
+        },
+        {
+          "id": "auto-notes",
+          "name": "point",
+          "size": 15,
+          "color": "black",
+          "group": null,
+          "label": "Other marks",
+          "limit": null,
+          "closed": null,
+          "helper": false,
+          "hollow": false,
+          "opacity": null,
+          "readonly": false,
+          "arrowHead": null,
+          "dashStyle": null,
+          "fillColor": null,
+          "lengthConstraint": null,
+          "directionConstraint": null
+        }
+      ]
+    },
+    "dataVersions": {
+      "auto-ink": "0.1",
+      "auto-notes": "0.1"
+    }
+  },
+  "data": {
+    "auto-ink": [
+      {
+        "spline": [
+          [
+            780.25,
+            561
+          ],
+          [
+            783.5,
+            557.1333333333333
+          ],
+          [
+            786.7499999999999,
+            553.2666666666668
+          ],
+          [
+            789.9999999999999,
+            549.4000000000001
+          ]
+        ]
+      },
+      {
+        "spline": [
+          [
+            416.25000000000006,
+            30.299999999999986
+          ],
+          [
+            426.00000000000006,
+            52.04999999999998
+          ],
+          [
+            435.75000000000006,
+            73.79999999999998
+          ],
+          [
+            445.50000000000006,
+            95.54999999999998
+          ],
+          [
+            460.6666666666667,
+            112.94999999999999
+          ],
+          [
+            475.8333333333333,
+            130.35
+          ],
+          [
+            490.99999999999994,
+            147.75
+          ],
+          [
+            511.04166666666663,
+            156.45
+          ],
+          [
+            531.0833333333333,
+            165.15
+          ],
+          [
+            551.125,
+            173.85
+          ],
+          [
+            573.3333333333334,
+            179.65
+          ],
+          [
+            595.5416666666666,
+            185.45
+          ],
+          [
+            617.75,
+            191.25
+          ],
+          [
+            648.0833333333333,
+            194.15
+          ],
+          [
+            678.4166666666666,
+            197.04999999999998
+          ],
+          [
+            708.7499999999999,
+            199.95
+          ]
+        ]
+      },
+      {
+        "spline": [
+          [
+            70.125,
+            407.29999999999995
+          ],
+          [
+            91.25,
+            412.13333333333327
+          ],
+          [
+            112.375,
+            416.96666666666664
+          ],
+          [
+            133.5,
+            421.79999999999995
+          ],
+          [
+            151.91666666666666,
+            429.5333333333333
+          ],
+          [
+            170.33333333333334,
+            437.26666666666665
+          ],
+          [
+            188.75,
+            445
+          ],
+          [
+            205,
+            459.98333333333335
+          ],
+          [
+            221.25,
+            474.96666666666664
+          ],
+          [
+            237.5,
+            489.95
+          ],
+          [
+            246.16666666666666,
+            508.8
+          ],
+          [
+            254.8333333333333,
+            527.65
+          ],
+          [
+            263.49999999999994,
+            546.5
+          ]
+        ]
+      }
+    ],
+    "auto-notes": [
+      {
+        "point": [
+          735,
+          540
+        ]
+      }
+    ]
+  }
+}

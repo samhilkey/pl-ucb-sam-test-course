@@ -1,0 +1,188 @@
+{
+  "apiVersion": "0.1",
+  "meta": {
+    "config": {
+      "width": 800,
+      "height": 600,
+      "xrange": [
+        -5.153846153846154,
+        7.153846153846154
+      ],
+      "yrange": [
+        -4.172413793103448,
+        6.172413793103448
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "coordinates": "cartesian",
+      "readonly": false,
+      "enforceBounds": false,
+      "safetyBuffer": 10,
+      "plugins": [
+        {
+          "name": "axes",
+          "colors": {
+            "xaxisLabel": "blue",
+            "yaxisLabel": "blue"
+          },
+          "fontSize": {
+            "xaxisLabel": 14,
+            "yaxisLabel": 14
+          },
+          "xaxisLabel": {
+            "dx": 10,
+            "dy": 10,
+            "value": "x"
+          },
+          "yaxisLabel": {
+            "dx": 10,
+            "dy": 20,
+            "value": "y"
+          }
+        },
+        {
+          "id": "auto-ink",
+          "name": "freeform",
+          "size": null,
+          "color": "blue",
+          "group": null,
+          "label": "Graph strokes",
+          "limit": null,
+          "closed": null,
+          "helper": false,
+          "hollow": null,
+          "opacity": null,
+          "readonly": false,
+          "arrowHead": null,
+          "dashStyle": null,
+          "fillColor": null,
+          "lengthConstraint": null,
+          "directionConstraint": null
+        },
+        {
+          "id": "auto-notes",
+          "name": "point",
+          "size": 15,
+          "color": "black",
+          "group": null,
+          "label": "Other marks",
+          "limit": null,
+          "closed": null,
+          "helper": false,
+          "hollow": false,
+          "opacity": null,
+          "readonly": false,
+          "arrowHead": null,
+          "dashStyle": null,
+          "fillColor": null,
+          "lengthConstraint": null,
+          "directionConstraint": null
+        }
+      ]
+    },
+    "dataVersions": {
+      "auto-ink": "0.1",
+      "auto-notes": "0.1"
+    }
+  },
+  "data": {
+    "auto-ink": [
+      {
+        "spline": [
+          [
+            780.25,
+            561
+          ],
+          [
+            783.5,
+            557.1333333333333
+          ],
+          [
+            786.7499999999999,
+            553.2666666666668
+          ],
+          [
+            789.9999999999999,
+            549.4000000000001
+          ]
+        ]
+      },
+      {
+        "spline": [
+          [
+            612.875,
+            59.9
+          ],
+          [
+            565.75,
+            101.46666666666667
+          ],
+          [
+            518.625,
+            143.03333333333333
+          ],
+          [
+            471.50000000000006,
+            184.6
+          ],
+          [
+            439.5416666666667,
+            223.26666666666668
+          ],
+          [
+            407.5833333333333,
+            261.93333333333334
+          ],
+          [
+            375.62499999999994,
+            300.6
+          ],
+          [
+            371.29166666666663,
+            299.6333333333334
+          ],
+          [
+            366.95833333333337,
+            298.6666666666667
+          ],
+          [
+            362.62500000000006,
+            297.70000000000005
+          ],
+          [
+            324.70833333333337,
+            276.9166666666667
+          ],
+          [
+            286.7916666666667,
+            256.1333333333333
+          ],
+          [
+            248.875,
+            235.35000000000002
+          ],
+          [
+            200.66666666666666,
+            185.5666666666667
+          ],
+          [
+            152.45833333333331,
+            135.78333333333336
+          ],
+          [
+            104.25,
+            86
+          ]
+        ]
+      }
+    ],
+    "auto-notes": [
+      {
+        "point": [
+          735,
+          540
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "step": 3,
+  "native_assertions": 163,
+  "legacy_assertions": 218,
+  "outcomes": [
+    {
+      "id": "line",
+      "source_kind": "controlled_raster",
+      "recognition_status": "automatic",
+      "imported_branches": 1,
+      "native_objects_total": 2,
+      "import_fidelity": {
+        "rendered_to_cv_max_pixel": 0.00001907397247642127,
+        "cv_vertices_to_rendered_max_pixel": 0.04078818197528172,
+        "gradeable_vertex_max_pixel": 5.684341886080802e-14
+      },
+      "restore_fidelity": {
+        "rendered_to_cv_max_pixel": 0.00001907397247642127,
+        "cv_vertices_to_rendered_max_pixel": 0.04078818197528172,
+        "gradeable_vertex_max_pixel": 5.684341886080802e-14
+      },
+      "edit_delta_native": [
+        26,
+        18
+      ],
+      "exact_native_state_restored": true,
+      "exact_edited_state_restored": true
+    },
+    {
+      "id": "sharp-v",
+      "source_kind": "controlled_raster",
+      "recognition_status": "automatic",
+      "imported_branches": 1,
+      "native_objects_total": 2,
+      "import_fidelity": {
+        "rendered_to_cv_max_pixel": 0.0000184029293496795,
+        "cv_vertices_to_rendered_max_pixel": 0.02030364256618065,
+        "gradeable_vertex_max_pixel": 2.842170943040401e-14
+      },
+      "restore_fidelity": {
+        "rendered_to_cv_max_pixel": 0.0000184029293496795,
+        "cv_vertices_to_rendered_max_pixel": 0.02030364256618065,
+        "gradeable_vertex_max_pixel": 2.842170943040401e-14
+      },
+      "edit_delta_native": [
+        26,
+        18
+      ],
+      "exact_native_state_restored": true,
+      "exact_edited_state_restored": true
+    },
+    {
+      "id": "smooth-curve",
+      "source_kind": "controlled_raster",
+      "recognition_status": "automatic",
+      "imported_branches": 1,
+      "native_objects_total": 2,
+      "import_fidelity": {
+        "rendered_to_cv_max_pixel": 0.000020127901777307455,
+        "cv_vertices_to_rendered_max_pixel": 0.02269778924909229,
+        "gradeable_vertex_max_pixel": 5.684341886080802e-14
+      },
+      "restore_fidelity": {
+        "rendered_to_cv_max_pixel": 0.000020127901777307455,
+        "cv_vertices_to_rendered_max_pixel": 0.02269778924909229,
+        "gradeable_vertex_max_pixel": 5.684341886080802e-14
+      },
+      "edit_delta_native": [
+        26,
+        17.999999999999996
+      ],
+      "exact_native_state_restored": true,
+      "exact_edited_state_restored": true
+    },
+    {
+      "id": "two-branches",
+      "source_kind": "controlled_raster",
+      "recognition_status": "automatic",
+      "imported_branches": 2,
+      "native_objects_total": 3,
+      "import_fidelity": {
+        "rendered_to_cv_max_pixel": 0.000018046793606701405,
+        "cv_vertices_to_rendered_max_pixel": 0.03130826676666056,
+        "gradeable_vertex_max_pixel": 5.684341886080802e-14
+      },
+      "restore_fidelity": {
+        "rendered_to_cv_max_pixel": 0.000018046793606701405,
+        "cv_vertices_to_rendered_max_pixel": 0.03130826676666056,
+        "gradeable_vertex_max_pixel": 5.684341886080802e-14
+      },
+      "edit_delta_native": [
+        26,
+        17.999999999999996
+      ],
+      "exact_native_state_restored": true,
+      "exact_edited_state_restored": true
+    }
+  ],
+  "recognition": {
+    "real_photo_automatic": 0,
+    "real_photo_cases": 2,
+    "note": "Unchanged step-2 result; native import is not recognition success."
+  },
+  "runtime": {
+    "javascript_sketchresponse": "0.2.1",
+    "python_sketchresponse": "0.1.5",
+    "question": "star-automatic-photo-test",
+    "tested_url": "http://localhost:3000/pl/course/1/question/254/preview"
+  },
+  "source_sha256": {
+    "star-native.js": "999ab6f35bd1200eecb58f16fee27474cd8c6f03587b3ec0b5ba0089ec0d9fb3",
+    "star-automatic.js": "92ab8539bd40a3755addc0df1cadc187639ab7541bdf29d2bdf292876b87d091",
+    "star-fit.js": "5c656b5068c7f11a847a3dd7038cc0b88dfe7169928a9731f26850ef70d21406",
+    "pl-sketch.js": "379c552ffe980bf6abc52baa631271033ee5b3e26efa358e6fb7b4e33ef9e90f",
+    "pl-sketch.py": "e26d0473be84a2459f9a7710d3e162099ccf1b137cc3fc6a73eaae9ca910c637",
+    "pl-sketch.mustache": "1d4f9859313007e68fbc7ca54036509a835ddeab0f043449c4d8064b2ab071c7",
+    "pl-sketch.css": "350b222581ad0bded1ca27c9caff6d334ffa854a94206f6a891d087e6862cb85",
+    "info.json": "24cd6527b244fdfcc037dd147afb99e66623f6ff9a3dd013b5a9bb043c55404e"
+  }
+}

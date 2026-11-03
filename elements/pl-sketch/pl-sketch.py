@@ -118,12 +118,14 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "overlay-solution",
         "allow-blank",
         "allow-hand-drawn",  # STAR
+        "automatic-photo",  # STAR: independent experimental CV import switch
     ]
     pl.check_attribs(element, required_attribs, optional_attribs)
 
     # STAR: validate here so a typo in the attribute surfaces at sync time
     # rather than silently doing nothing when the question renders.
     pl.get_boolean_attrib(element, "allow-hand-drawn", ALLOW_HAND_DRAWN_DEFAULT)
+    pl.get_boolean_attrib(element, "automatic-photo", False)
 
     name = pl.get_string_attrib(element, "answers-name")
     pl.check_answers_names(data, name)
@@ -1003,6 +1005,12 @@ def render(element_html: str, data: pl.QuestionData) -> str:
         ).decode("utf-8")
         html_params["overlay_solution"] = json.dumps(overlay_displayed)
         html_params["hand_drawn"] = json.dumps(hand_drawn)  # STAR
+        html_params["automatic_photo"] = json.dumps(
+            pl.get_boolean_attrib(element, "automatic-photo", False)
+            and data["panel"] == "question"
+            and data["editable"]
+            and not read_only
+        )
 
     with open("pl-sketch.mustache") as f:
         return chevron.render(f, html_params).strip()
