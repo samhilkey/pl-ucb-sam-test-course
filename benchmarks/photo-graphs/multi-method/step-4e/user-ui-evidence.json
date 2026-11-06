@@ -1,0 +1,51 @@
+{
+  "source": "User-reported Google AI Studio UI values in reply to audit clarification; no authenticated API verification",
+  "received_date_local": "2026-11-05",
+  "project_alias": "STAR Sketch2Graph",
+  "numeric_project_identifier_retained": false,
+  "reported_key_project_association": true,
+  "independently_verified_key_project_binding": false,
+  "reported_billing_tier": "Free",
+  "billing_enabled": null,
+  "active_billing_account_linked": null,
+  "reported_exact_model": "gemini-3.5-flash-lite",
+  "displayed_model_row_reported": true,
+  "reported_quota_text": {
+    "rpm": "3/15",
+    "tpm": "3.75k/250k",
+    "rpd": "8/500"
+  },
+  "interpretation_assumption": "Left value is used and right value is limit; k=1000. No dashboard measurement timestamp/window was supplied.",
+  "interpreted_usage_and_limit": {
+    "rpm": {
+      "used": 3,
+      "limit": 15
+    },
+    "input_tpm": {
+      "used": 3750,
+      "limit": 250000
+    },
+    "rpd": {
+      "used": 8,
+      "limit": 500
+    }
+  },
+  "conditional_arithmetic_headroom": {
+    "rpm": 12,
+    "input_tpm": 246250,
+    "rpd": 492
+  },
+  "live_remaining_quota_verified": false,
+  "quota_checked_at": null,
+  "quota_measurement_window": null,
+  "example_command": {
+    "model_alias": "gemini-flash-latest",
+    "executed": false,
+    "inference_authorization": false,
+    "accepted_as_model_access_or_cost_test": false,
+    "note": "Different identifier from the frozen exact model; an inference example, not readiness verification. Full command and any project number are not retained."
+  },
+  "google_image_clearances_supplied": false,
+  "eligibility_attestation_supplied": false,
+  "key_value_or_fragment_retained": false
+}

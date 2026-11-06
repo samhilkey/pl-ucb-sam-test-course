@@ -1,22 +1,22 @@
 {
   "step": "4E",
   "algorithm": "SHA-256",
-  "scope": "New audit files only; excludes this manifest. No private credential file read or hashed for this manifest.",
+  "scope": "Audit files including redacted user UI follow-up; excludes this manifest. No private credential file read or hashed for this manifest.",
   "files": [
     {
       "path": "benchmarks/photo-graphs/multi-method/step-4e/REPORT.md",
-      "bytes": 7174,
-      "sha256": "ab934d329567e30db99ff90b9e29140d79be598ef1d43def66c9102ece7ff84e"
+      "bytes": 8318,
+      "sha256": "28a00704b687899841aab88d01e204f71c04f37143809e8e6ff2e580d8fa164d"
     },
     {
       "path": "benchmarks/photo-graphs/multi-method/step-4e/USER-CHECKS.md",
-      "bytes": 5192,
-      "sha256": "34b3af41d7a33b83b501027a80ed078e43a993d271c825186fc2e149ec2952d6"
+      "bytes": 5527,
+      "sha256": "90b3aca72008d6e49d4eb2f02e5a56988a517371978a0f3c3d33acf28dcb6409"
     },
     {
       "path": "benchmarks/photo-graphs/multi-method/step-4e/audit.json",
-      "bytes": 6075,
-      "sha256": "d2d4cd79d865edfe7902f3bc77144dc1ccc59f7f1ded0fb0255f3576cd915ede"
+      "bytes": 7513,
+      "sha256": "36011846c2261409954dcd03c40fa4b8fb6e162d49c977096e4be3f1edb97c65"
     },
     {
       "path": "benchmarks/photo-graphs/multi-method/step-4e/local-checks.json",
@@ -25,8 +25,8 @@
     },
     {
       "path": "benchmarks/photo-graphs/multi-method/step-4e/offline-tests.log",
-      "bytes": 2289,
-      "sha256": "5ce7a0ecb299082457a60592450ea09f19e1113a46304356ee5e5cf132a026bb"
+      "bytes": 2291,
+      "sha256": "8bfeb7bde38e15780c2e37a146e31fd1635489e4ee2523a94eb62daf337222ee"
     },
     {
       "path": "benchmarks/photo-graphs/multi-method/step-4e/public-sources.json",
@@ -39,9 +39,14 @@
       "sha256": "8e5611c549180886ad9fe6913bc8520a5179c9f588be9a66d9fa23f789a16475"
     },
     {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/user-ui-evidence.json",
+      "bytes": 1691,
+      "sha256": "4d09cf3732aac2e0bcf3105e5875315faba24c9457bc6374d7444453cc1607dc"
+    },
+    {
       "path": "benchmarks/photo-graphs/multi-method/step-4e/verification.json",
-      "bytes": 1189,
-      "sha256": "cbcc126ac2c3795458f37be60f3fcf8a7849f34d6f7bc325f209e355670bd2da"
+      "bytes": 1492,
+      "sha256": "e22e097f0c5e7478c09fc3271bebdbd31abe2c43617de0fb8b51cd8699b14fb9"
     },
     {
       "path": "benchmarks/photo-graphs/multi-method/step-4e/verify-local.cjs",

@@ -1,13 +1,16 @@
 # Step 4E — Gemini prerequisite verification, no inference
 
 **Recommendation: BLOCKED.** The credential configuration passes local checks.
-The configured key's project, actual Free-tier/billing state, exact-model access,
-quota and prospective $0 protection remain unknown. Both intended photographs
+The user now reports the key's project, displayed Free tier and exact-model quota
+row. Disabled billing, eligibility, live quota and prospective $0 protection
+remain unverified. Both intended photographs
 lack an image-specific clearance record for Google's unpaid-service processing.
 No inference is authorized by this audit.
 
-Branch: `feat/automatic-photo-recognition-cv`. Frozen demo/parent commit:
-`1d9be84f67d1f699249cedbbbf5fcbf26fc1ad0c`. All changes are confined to this new
+Branch: `feat/automatic-photo-recognition-cv`. Frozen demo commit:
+`1d9be84f67d1f699249cedbbbf5fcbf26fc1ad0c`; initial audit commit:
+`79220cf3ffdb6327d592ff6e945187b46dfe3722`. This follow-up records UI facts received
+after the first audit was committed. All changes are confined to this
 audit directory. The November 9 assisted demo, environment files, production
 code, tests and existing benchmarks remain unchanged.
 
@@ -16,21 +19,29 @@ code, tests and existing benchmarks remain unchanged.
 | Prerequisite | Status | Evidence / unresolved item |
 | --- | --- | --- |
 | `.env.local` loads; ignored/untracked; no key output/client reference | **VERIFIED** | Node 20.19.6 loaded the user file in an isolated process. Presence-only result is true; only blank `.env.example` is tracked; local index/client checks pass. This does not authenticate or validate the key. |
-| Configured key → owning AI Studio project | **UNKNOWN** | No local project/key-name metadata; no accessible authenticated AI Studio browser. No project binding supplied. |
-| Project Free tier and disabled billing | **UNKNOWN** | No selected-project dashboard evidence; public documentation is not account verification. |
-| Project access to `gemini-3.5-flash-lite`, RPM/input-TPM/RPD and available quota | **UNKNOWN** | All account-specific values remain null; no API probe or trial inference performed. |
+| Configured key → owning AI Studio project | **VERIFIED — user-reported UI** | User identifies the API key's project as STAR Sketch2Graph. No independent key authentication; numeric project identifier omitted. |
+| Displayed project Free tier | **VERIFIED — user-reported UI** | User reports Free tier; this is separately recorded from billing-enabled status. |
+| Billing disabled / no active billing account linked | **UNKNOWN** | Those explicit billing states were not supplied; not inferred from a Free label. |
+| Displayed exact-model access and RPM/TPM/RPD row | **VERIFIED — user-reported UI** | `gemini-3.5-flash-lite`: RPM 3/15, TPM 3.75k/250k, RPD 8/500. No API access test. |
+| Immediate remaining quota | **UNKNOWN** | Conditional used/limit arithmetic is available, but the dashboard time/window and live availability are not verified. |
 | Exact two inputs and source provenance | **VERIFIED** | Both original PNG hashes, dimensions and recorded JPEG crops match the frozen Step 4A list. Local use was explicitly approved. |
 | real--01 Google unpaid-service clearance | **BLOCKED** | No image-specific third-party submission/rights clearance supplied. |
 | real--06 Google unpaid-service clearance | **BLOCKED** | Same blocker, independently recorded for this exact hash. |
 | Operator/client/region eligibility under applicable terms | **UNKNOWN** | No current eligibility attestation supplied; not inferred from timezone or dataset availability. |
-| Two future requests remain at $0 | **UNKNOWN** | Cannot establish without the actual project/tier/billing/quota evidence. A budget alert or public free price is insufficient. |
+| Two future requests remain at $0 | **UNKNOWN** | Disabled billing, eligibility and immediate quota remain unresolved. A Free label, budget alert or public price alone is insufficient. |
+
+[user-ui-evidence.json](user-ui-evidence.json) records only the non-sensitive alias
+and supplied UI values. Interpreting each fraction as **used / limit** and k as
+1,000 gives nominal headroom of **12 RPM, 246,250 input TPM, and 492 RPD**. These
+are conditional calculations, not freshly measured available quota. The supplied
+8/500 reflects reported project usage, not requests made by this audit.
 
 The Playwright inventory was empty; CUA reported no available browser for the
 AI Studio URL. This means no usable account session was available **to this
 audit**, not that the user is signed out. `gcloud` is not installed. No login,
 key lookup endpoint, credential-store search, account change, key transmission
-or authenticated Gemini/Google API request was attempted. No project identifier,
-key value, fragment or credential hash was preserved.
+or authenticated Gemini/Google API request was attempted. No numeric project
+identifier, key value, fragment or credential hash was preserved.
 
 ## Exact images and permission boundary
 
@@ -60,11 +71,15 @@ be checked. No substitute image or provider was selected.
 ## Actions to unblock
 
 Follow [USER-CHECKS.md](USER-CHECKS.md) in AI Studio and provide only redacted text:
-privately confirm the key's project; record that same project's tier/billing,
-exact model row, active limits/current usage, eligibility, and a permission basis
-for each hash. Do not send the key or any key fragment. An asynchronous request
-for these account facts was sent; no redacted account/clearance evidence had been
-received when this audit was finalized. Unknowns are retained instead of guessed.
+confirm explicit billing-disabled/no-active-account status, the quota check
+time/window, operator/client/region eligibility, and a permission basis for each
+image hash. The supplied project/Free/model facts are now recorded as user UI
+evidence; they are not independent API verification. Do not send any key fragment.
+
+The pasted sample `curl` targets `gemini-flash-latest`, a different identifier
+from the frozen `gemini-3.5-flash-lite`, and would perform inference. It was not
+executed or treated as authorization/access/cost evidence. No full command or
+numeric project ID was copied into this package.
 
 If any gate remains unverified, keep the pilot blocked. If all become verified,
 the result can become **READY FOR SEPARATE INFERENCE APPROVAL**; it still does not

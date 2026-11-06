@@ -1,15 +1,13 @@
 {
   "step": "4E",
   "date_local": "2026-11-05",
-  "parent_commit": "1d9be84f67d1f699249cedbbbf5fcbf26fc1ad0c",
+  "parent_commit": "79220cf3ffdb6327d592ff6e945187b46dfe3722",
   "branch": "feat/automatic-photo-recognition-cv",
   "status": "BLOCKED",
   "scope": "Readiness audit only; final commit SHA/clean tree verified after commit",
   "checks": {
     "local_credential_configuration_passed": true,
     "only_blank_template_tracked": true,
-    "no_project_binding_available": true,
-    "account_fields_remain_null": true,
     "two_pinned_image_identities_and_provenance_passed": true,
     "both_external_clearances_blocked": true,
     "missing_account_evidence_not_inferred_from_public_docs": true,
@@ -20,7 +18,13 @@
     "frozen_demo_unchanged": true,
     "external_key_transmission": false,
     "inference_authenticated_api_upload_or_billing_change": false,
-    "final_staged_key_absence_check_required": true
+    "final_staged_key_absence_check_required": true,
+    "user_reported_key_project_free_tier_and_model_row_recorded": true,
+    "independent_api_verification_not_claimed": true,
+    "numeric_project_identifier_redacted": true,
+    "billing_eligibility_live_quota_and_cost_remain_unverified": true,
+    "conditional_quota_arithmetic_verified": true,
+    "pasted_inference_command_not_executed": true
   },
-  "evidence_policy": "No key value, fragment, credential hash, account screenshot, raw export or private project/account identifier preserved. Generic public documentation URLs/hashes only."
+  "evidence_policy": "No key value, fragment, credential hash, raw account export/screenshot or numeric project/account identifier retained. Non-sensitive project alias and user-reported quota values are explicitly attributed."
 }

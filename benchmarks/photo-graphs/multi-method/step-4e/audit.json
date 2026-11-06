@@ -13,18 +13,31 @@
     },
     {
       "prerequisite": "key_project_binding",
-      "status": "UNKNOWN",
-      "evidence_or_gap": "No local metadata, accessible authenticated UI or user-supplied redacted project binding."
+      "status": "VERIFIED",
+      "evidence_or_gap": "User-reported AI Studio key/project association: STAR Sketch2Graph. Evidence is human UI report, not independent key/API authentication.",
+      "verification_kind": "user_reported_ui"
     },
     {
-      "prerequisite": "project_free_tier_and_billing",
-      "status": "UNKNOWN",
-      "evidence_or_gap": "No project dashboard evidence."
+      "prerequisite": "project_free_tier",
+      "status": "VERIFIED",
+      "evidence_or_gap": "User reports displayed Free tier for that project.",
+      "verification_kind": "user_reported_ui"
     },
     {
-      "prerequisite": "model_access_and_quota",
+      "prerequisite": "project_billing_disabled",
       "status": "UNKNOWN",
-      "evidence_or_gap": "No selected-project exact-model availability/limits/usage evidence."
+      "evidence_or_gap": "Explicit billing-enabled and active-linked-account states were not supplied."
+    },
+    {
+      "prerequisite": "model_displayed_access_and_limits",
+      "status": "VERIFIED",
+      "evidence_or_gap": "User reports exact gemini-3.5-flash-lite row with RPM 3/15, TPM 3.75k/250k, RPD 8/500. Access shown in UI, not tested by API.",
+      "verification_kind": "user_reported_ui"
+    },
+    {
+      "prerequisite": "live_remaining_quota",
+      "status": "UNKNOWN",
+      "evidence_or_gap": "Used/limit interpretation yields conditional headroom; measurement time/window and immediate live availability are not verified."
     },
     {
       "prerequisite": "exact_image_identity_and_provenance",
@@ -49,24 +62,34 @@
     {
       "prerequisite": "prospective_zero_cost",
       "status": "UNKNOWN",
-      "evidence_or_gap": "Unbilled eligible Free project and sufficient quota not established."
+      "evidence_or_gap": "Free tier is user-reported, but disabled billing, eligibility and current quota remain unverified."
     }
   ],
   "account": {
-    "project_alias": null,
+    "project_alias": "STAR Sketch2Graph",
     "project_id": null,
-    "configured_key_bound_to_project": null,
-    "billing_tier": null,
+    "configured_key_bound_to_project": true,
+    "billing_tier": "Free",
     "billing_enabled": null,
     "active_billing_account_linked": null,
     "exact_model": "gemini-3.5-flash-lite",
-    "project_model_access": null,
-    "rpm_limit": null,
-    "input_tpm_limit": null,
-    "rpd_limit": null,
+    "project_model_access": true,
+    "rpm_limit": 15,
+    "input_tpm_limit": 250000,
+    "rpd_limit": 500,
     "remaining_quota": null,
     "verified_at": null,
-    "evidence": "No accessible authenticated account UI; not inferred from public documentation."
+    "evidence": "user-ui-evidence.json; numeric project identifier omitted; billing/permission/eligibility/live-quota gaps retained",
+    "key_project_binding_evidence_kind": "user_reported_ui",
+    "independently_verified_key_project_binding": false,
+    "billing_tier_evidence_kind": "user_reported_ui",
+    "project_model_access_evidence_kind": "user_reported_displayed_model_row_not_api_test",
+    "reported_usage": {
+      "rpm": 3,
+      "input_tpm": 3750,
+      "rpd": 8
+    },
+    "quota_values_interpretation": "Conditional used/limit, k=1000; timestamp/window not supplied"
   },
   "access_checks": {
     "playwright_inventory_empty": true,
@@ -82,7 +105,7 @@
       "GEMINI_PROJECT_NUMBER": false,
       "GEMINI_KEY_NAME": false
     },
-    "user_redacted_evidence_received": false,
+    "user_redacted_evidence_received": true,
     "user_sign_in_status": "unknown; not inferred from tool inventory"
   },
   "images": [
@@ -170,5 +193,10 @@
     "unchanged": true,
     "deadline": "2026-11-09",
     "independent_of_this_audit": true
+  },
+  "follow_up": {
+    "reason": "User UI facts arrived after the initial Step4E commit",
+    "initial_audit_commit": "79220cf3ffdb6327d592ff6e945187b46dfe3722",
+    "new_inference_permission": false
   }
 }

@@ -1,5 +1,11 @@
 # Read-only AI Studio checks needed from the project owner
 
+Update: the user has supplied the STAR Sketch2Graph project association, displayed
+Free tier and exact-model quota row. These are recorded as user-reported UI
+evidence. Remaining gaps are explicit billing states, quota check time/window,
+eligibility and the two image clearances; known values need not be repeated
+unless they change.
+
 Do not run a prompt, upload an image, test the key, call `generateContent`,
 `countTokens`, model listing or an API-key lookup endpoint. Do not enable/link
 billing, upgrade tiers, create/rotate a key or change projects to bypass a gate.
