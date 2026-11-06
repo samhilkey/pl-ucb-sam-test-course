@@ -1,0 +1,241 @@
+{
+  "coordinate_frame": {
+    "status": "uncertain",
+    "origin_pixel": null,
+    "axes": {
+      "x": {
+        "status": "uncertain",
+        "candidates": [
+          {
+            "start": [
+              0,
+              54
+            ],
+            "end": [
+              800,
+              54
+            ],
+            "support": 0.6404494382022472,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              0,
+              100.49503968253968
+            ],
+            "end": [
+              800,
+              100.49503968253968
+            ],
+            "support": 0.6354556803995006,
+            "width_pixel": 2
+          },
+          {
+            "start": [
+              0,
+              105.00634417129262
+            ],
+            "end": [
+              800,
+              105.00634417129262
+            ],
+            "support": 0.6416978776529338,
+            "width_pixel": 5
+          },
+          {
+            "start": [
+              0,
+              384.9835609509358
+            ],
+            "end": [
+              800,
+              384.9835609509358
+            ],
+            "support": 0.7715355805243446,
+            "width_pixel": 7
+          },
+          {
+            "start": [
+              0,
+              410.5000965437343
+            ],
+            "end": [
+              800,
+              410.5000965437343
+            ],
+            "support": 0.982521847690387,
+            "width_pixel": 8
+          },
+          {
+            "start": [
+              0,
+              420.4990215264188
+            ],
+            "end": [
+              800,
+              420.4990215264188
+            ],
+            "support": 0.6392009987515606,
+            "width_pixel": 2
+          },
+          {
+            "start": [
+              0,
+              423
+            ],
+            "end": [
+              800,
+              423
+            ],
+            "support": 0.6229712858926342,
+            "width_pixel": 1
+          }
+        ]
+      },
+      "y": {
+        "status": "uncertain",
+        "candidates": [
+          {
+            "start": [
+              0,
+              0
+            ],
+            "end": [
+              0,
+              528
+            ],
+            "support": 0.7580340264650284,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              2,
+              0
+            ],
+            "end": [
+              2,
+              528
+            ],
+            "support": 0.7599243856332704,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              4,
+              0
+            ],
+            "end": [
+              4,
+              528
+            ],
+            "support": 0.6616257088846881,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              6,
+              0
+            ],
+            "end": [
+              6,
+              528
+            ],
+            "support": 0.6408317580340265,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              454,
+              0
+            ],
+            "end": [
+              454,
+              528
+            ],
+            "support": 0.6294896030245747,
+            "width_pixel": 1
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          400.7799222627519
+        ]
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          263.8835232912755
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "status": "abstained",
+  "warnings": [
+    {
+      "code": "ambiguous_axes",
+      "message": "A unique upright dark axis pair was not detected. Confirm the coordinate frame."
+    },
+    {
+      "code": "uncertain_grid",
+      "message": "Regular graph-paper spacing was not recovered on both axes."
+    },
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    },
+    {
+      "code": "no_supported_ink",
+      "message": "No supported thick-marker stroke was extracted. Thin or pale marks may be missed."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "axes",
+      "reason": "ambiguous_axes"
+    },
+    {
+      "target": "grid",
+      "reason": "uncertain_grid"
+    },
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    },
+    {
+      "target": "strokes",
+      "reason": "no_supported_ink"
+    }
+  ]
+}

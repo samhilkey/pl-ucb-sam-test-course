@@ -1,0 +1,138 @@
+{
+  "version": "contrast-01",
+  "reference_quality": "approximate_prior_visual_annotations_not_independent_ground_truth",
+  "cases": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "reference": "../../automatic-cv/experiment-01/references/real--01-multiple-lines-graph-paper.json",
+      "reference_sha256": "dbdaefb9d17106876f0584c816dbeaa0e7896f9e5eeff79f152373609ad64794",
+      "baseline_geometry": "../../automatic-cv/experiment-01/results/real--01-multiple-lines-graph-paper.geometry.json",
+      "baseline_geometry_sha256": "563cd45d8f6490b119f29a511dec65a31f00750096f8800ad70cf0f6833aae12"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "reference": "../../automatic-cv/experiment-01/references/real--06-piecewise-graph-paper.json",
+      "reference_sha256": "ced79fa250ac884a5a0aa97d0f0b4d870fbe388dcb4553c6d35f74719bb59fc1",
+      "baseline_geometry": "../../automatic-cv/experiment-01/results/real--06-piecewise-graph-paper.geometry.json",
+      "baseline_geometry_sha256": "4fa0a01ce808decca9fcb4506768f71f94d4f0a3e1778b0947c14f89efbc2b00"
+    }
+  ],
+  "quantitative_claims": "exploratory_diagnostics_only",
+  "additional_diagnostic_annotations_status": "approximate new visual evaluator-only annotations; single Codex observer; not independent human ground truth; no tuning or inference access",
+  "diagnostic_axes": {
+    "real--01-multiple-lines-graph-paper": {
+      "x": [
+        [
+          30,
+          267
+        ],
+        [
+          452,
+          246
+        ]
+      ],
+      "y": [
+        [
+          229,
+          21
+        ],
+        [
+          247,
+          516
+        ]
+      ],
+      "numeric_labels": "absent; scale cannot be identified from this crop alone"
+    },
+    "real--06-piecewise-graph-paper": {
+      "x": [
+        [
+          50,
+          324
+        ],
+        [
+          516,
+          336
+        ]
+      ],
+      "y": [
+        [
+          50,
+          324
+        ],
+        [
+          106,
+          15
+        ]
+      ],
+      "numeric_labels": "visible multi-digit y labels and handwritten x ticks; not within the existing bitmap single-digit OCR assumptions"
+    }
+  },
+  "overlap_regions": {
+    "real--01-multiple-lines-graph-paper": [
+      {
+        "id": "upper-y-axis-crossing",
+        "kind": "axis_crossing",
+        "pixel": [
+          238,
+          255
+        ],
+        "radius_pixel": 12
+      },
+      {
+        "id": "lower-y-axis-crossing",
+        "kind": "axis_crossing",
+        "pixel": [
+          241,
+          384
+        ],
+        "radius_pixel": 12
+      }
+    ],
+    "real--06-piecewise-graph-paper": [
+      {
+        "id": "left-axis-endpoint",
+        "kind": "axis_endpoint",
+        "pixel": [
+          53,
+          324
+        ],
+        "radius_pixel": 12
+      },
+      {
+        "id": "right-axis-endpoint",
+        "kind": "axis_endpoint",
+        "pixel": [
+          398,
+          329
+        ],
+        "radius_pixel": 12
+      },
+      {
+        "id": "peak-on-grid",
+        "kind": "grid_overlap_and_corner",
+        "pixel": [
+          241,
+          95
+        ],
+        "radius_pixel": 12
+      }
+    ]
+  },
+  "axis_candidate_matching": {
+    "max_angle_error_degrees": 5,
+    "max_reference_line_p95_distance_pixel": 6,
+    "caveat": "approximate engineering diagnostic, not independent axis ground truth; raw candidates retained"
+  },
+  "metric_policy": {
+    "reference_sample_step_pixel": 1,
+    "coverage_tolerances_pixel": [
+      3,
+      5,
+      10
+    ],
+    "new_thresholds": "report diagnostics only; no parameter selection or auto-success from geometry count",
+    "student_ink": "coverage of approximate visible-ink reference centerlines; not a dense pixel-perfect student-ink annotation",
+    "false_positive_paths": "inherited entirely-spurious-path count plus fraction of path samples >5px from any reference",
+    "unknown": "null when no geometry or no independent numeric labels; never count unavailable distance as zero error"
+  }
+}

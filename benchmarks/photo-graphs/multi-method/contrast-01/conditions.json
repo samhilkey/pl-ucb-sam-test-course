@@ -1,0 +1,85 @@
+{
+  "version": "contrast-01",
+  "parameter_policy": "fixed before running the comparison; no reference-based parameter search",
+  "conditions": [
+    {
+      "id": "original",
+      "method": "identity",
+      "parameters": {}
+    },
+    {
+      "id": "grayscale",
+      "method": "luminance",
+      "parameters": {
+        "weights_rgb": [
+          0.299,
+          0.587,
+          0.114
+        ]
+      }
+    },
+    {
+      "id": "percentile",
+      "method": "percentile_rgb_shared_luminance_limits",
+      "parameters": {
+        "low_percentile": 1,
+        "high_percentile": 99,
+        "quantile_method": "linear"
+      }
+    },
+    {
+      "id": "background",
+      "method": "divide_by_gaussian_luminance_background",
+      "parameters": {
+        "sigma_pixels": 21,
+        "target_background": 235,
+        "minimum_background": 16,
+        "border": "reflect_101"
+      }
+    },
+    {
+      "id": "clahe",
+      "method": "clahe_lab_luminance",
+      "parameters": {
+        "clip_limit": 2.0,
+        "tile_grid": [
+          8,
+          8
+        ]
+      }
+    },
+    {
+      "id": "red",
+      "method": "percentile_single_rgb_channel",
+      "parameters": {
+        "channel": 0,
+        "low_percentile": 1,
+        "high_percentile": 99,
+        "quantile_method": "linear"
+      }
+    },
+    {
+      "id": "green",
+      "method": "percentile_single_rgb_channel",
+      "parameters": {
+        "channel": 1,
+        "low_percentile": 1,
+        "high_percentile": 99,
+        "quantile_method": "linear"
+      }
+    },
+    {
+      "id": "blue",
+      "method": "percentile_single_rgb_channel",
+      "parameters": {
+        "channel": 2,
+        "low_percentile": 1,
+        "high_percentile": 99,
+        "quantile_method": "linear"
+      }
+    }
+  ],
+  "downstream": "unchanged StarRecognition.recognize(RGBA), default options; no spatial crop/resize/warp in experimental preprocessing; no external OCR/VLM/calibration; no reference or equation supplied",
+  "output_policy": "source dimensions and pixel centers unchanged; no axis/grid subtraction, erosion, dilation, inpainting, fitting, gap bridging or coordinate movement introduced by the experimental transforms; original recognizer morphology stays fixed",
+  "decision_policy": "geometry fidelity and contamination/topology before JSON/status; numeric accuracy limited by approximate references, no independent-human claim"
+}

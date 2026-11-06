@@ -1,0 +1,557 @@
+{
+  "experiment": "contrast-01",
+  "stage": "image_only_preprocessing",
+  "conditions_sha256": "7a3784ca8108e020fb93ec752086b5d0a2c31cde8213257c3275a09e2533a782",
+  "inputs_sha256": "41f5a2e7cb15a1c9e8ee46955b20fd3eebeeed6303a15fbf1a24fc167830d3bf",
+  "preprocess_code_sha256": "74258097e50dd87f2bb1ec9953939c7c73d88f3f8cb8362767d70e72cbc9926a",
+  "versions": {
+    "python": "3.14.1 (main, Dec  2 2025, 12:51:37) [Clang 17.0.0 (clang-1700.4.4.1)]",
+    "opencv": "4.13.0",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0"
+  },
+  "spatial_transform": "identity; same source dimensions and pixel centers",
+  "reference_geometry_read": false,
+  "rows": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "original",
+      "image": "real--01-multiple-lines-graph-paper/original/image.png",
+      "original": "real--01-multiple-lines-graph-paper/before.png",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "image_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "transform": {
+        "id": "original",
+        "method": "identity",
+        "parameters": {}
+      },
+      "transform_diagnostics": {
+        "luminance_p01_p99": [
+          112.28800201416016,
+          162.77200317382812
+        ],
+        "luminance_std": 8.468757629394531,
+        "channel_zero_fraction": 0.0,
+        "channel_255_fraction": 0.0
+      },
+      "transform_duration_ms": 18.716000020503998
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "grayscale",
+      "image": "real--01-multiple-lines-graph-paper/grayscale/image.png",
+      "original": "real--01-multiple-lines-graph-paper/before.png",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "image_sha256": "abcaefcb67d0398a13d3ea537236aaeec6a544431f49061956a5823f818bf12b",
+      "transform": {
+        "id": "grayscale",
+        "method": "luminance",
+        "parameters": {
+          "weights_rgb": [
+            0.299,
+            0.587,
+            0.114
+          ]
+        }
+      },
+      "transform_diagnostics": {
+        "luminance_p01_p99": [
+          112.0,
+          163.0
+        ],
+        "luminance_std": 8.464385032653809,
+        "channel_zero_fraction": 0.0,
+        "channel_255_fraction": 0.0
+      },
+      "transform_duration_ms": 9.590458124876022
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "percentile",
+      "image": "real--01-multiple-lines-graph-paper/percentile/image.png",
+      "original": "real--01-multiple-lines-graph-paper/before.png",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "image_sha256": "44862532ab698ceda41fa450b99deb142d8b46a1105d568e23eedbaab45fd364",
+      "transform": {
+        "id": "percentile",
+        "method": "percentile_rgb_shared_luminance_limits",
+        "parameters": {
+          "low_percentile": 1,
+          "high_percentile": 99,
+          "quantile_method": "linear"
+        }
+      },
+      "transform_diagnostics": {
+        "low": 112.28800201416016,
+        "high": 162.77200317382812,
+        "gain": 5.05110518466039,
+        "degenerate": false,
+        "luminance_p01_p99": [
+          4.0,
+          251.85299682617188
+        ],
+        "luminance_std": 37.95384216308594,
+        "channel_zero_fraction": 0.010323422124360932,
+        "channel_255_fraction": 0.024972722345335503
+      },
+      "transform_duration_ms": 12.836707988753915
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "background",
+      "image": "real--01-multiple-lines-graph-paper/background/image.png",
+      "original": "real--01-multiple-lines-graph-paper/before.png",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "image_sha256": "3ca974b5237fef08247082ed6360f16b2009b0c6775ec2fe68264554726dc9a4",
+      "transform": {
+        "id": "background",
+        "method": "divide_by_gaussian_luminance_background",
+        "parameters": {
+          "sigma_pixels": 21,
+          "target_background": 235,
+          "minimum_background": 16,
+          "border": "reflect_101"
+        }
+      },
+      "transform_diagnostics": {
+        "background_min": 136.37025451660156,
+        "background_max": 159.63389587402344,
+        "luminance_p01_p99": [
+          174.875,
+          248.0
+        ],
+        "luminance_std": 10.76736068725586,
+        "channel_zero_fraction": 0.0,
+        "channel_255_fraction": 0.0019060924946526358
+      },
+      "transform_duration_ms": 22.703666938468814
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "clahe",
+      "image": "real--01-multiple-lines-graph-paper/clahe/image.png",
+      "original": "real--01-multiple-lines-graph-paper/before.png",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "image_sha256": "d2d0e79d28b6e148ffb4560047d43a330938135607497b97cb7631825641dfdb",
+      "transform": {
+        "id": "clahe",
+        "method": "clahe_lab_luminance",
+        "parameters": {
+          "clip_limit": 2.0,
+          "tile_grid": [
+            8,
+            8
+          ]
+        }
+      },
+      "transform_diagnostics": {
+        "luminance_p01_p99": [
+          97.39099884033203,
+          176.0
+        ],
+        "luminance_std": 13.3668794631958,
+        "channel_zero_fraction": 0.0,
+        "channel_255_fraction": 0.0
+      },
+      "transform_duration_ms": 92.32933400198817
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "red",
+      "image": "real--01-multiple-lines-graph-paper/red/image.png",
+      "original": "real--01-multiple-lines-graph-paper/before.png",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "image_sha256": "7ad143a8f1824ab475a7051e486f49ab92c8a02a8bcb3eb1e2a257534dbfd672",
+      "transform": {
+        "id": "red",
+        "method": "percentile_single_rgb_channel",
+        "parameters": {
+          "channel": 0,
+          "low_percentile": 1,
+          "high_percentile": 99,
+          "quantile_method": "linear"
+        }
+      },
+      "transform_diagnostics": {
+        "low": 112.0,
+        "high": 165.0,
+        "gain": 4.811320754716981,
+        "degenerate": false,
+        "luminance_p01_p99": [
+          0.0,
+          255.0
+        ],
+        "luminance_std": 44.740787506103516,
+        "channel_zero_fraction": 0.010313195462193997,
+        "channel_255_fraction": 0.01839147190775236
+      },
+      "transform_duration_ms": 12.08075019530952
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "green",
+      "image": "real--01-multiple-lines-graph-paper/green/image.png",
+      "original": "real--01-multiple-lines-graph-paper/before.png",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "image_sha256": "b64531047af34ddb6f68c502386501b06ab175c3a46f2756d42a7c83230e66e1",
+      "transform": {
+        "id": "green",
+        "method": "percentile_single_rgb_channel",
+        "parameters": {
+          "channel": 1,
+          "low_percentile": 1,
+          "high_percentile": 99,
+          "quantile_method": "linear"
+        }
+      },
+      "transform_diagnostics": {
+        "low": 113.0,
+        "high": 163.0,
+        "gain": 5.1,
+        "degenerate": false,
+        "luminance_p01_p99": [
+          0.0,
+          255.0
+        ],
+        "luminance_std": 35.830528259277344,
+        "channel_zero_fraction": 0.010289595472577993,
+        "channel_255_fraction": 0.012208274628359163
+      },
+      "transform_duration_ms": 10.276290820911527
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "blue",
+      "image": "real--01-multiple-lines-graph-paper/blue/image.png",
+      "original": "real--01-multiple-lines-graph-paper/before.png",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "image_sha256": "8ebfb0da2d2ac0fbba6e742dcdc86baab99734d7f545938df5bc1c8a3e459b6d",
+      "transform": {
+        "id": "blue",
+        "method": "percentile_single_rgb_channel",
+        "parameters": {
+          "channel": 2,
+          "low_percentile": 1,
+          "high_percentile": 99,
+          "quantile_method": "linear"
+        }
+      },
+      "transform_diagnostics": {
+        "low": 111.0,
+        "high": 163.0,
+        "gain": 4.903846153846154,
+        "degenerate": false,
+        "luminance_p01_p99": [
+          0.0,
+          255.0
+        ],
+        "luminance_std": 42.94852066040039,
+        "channel_zero_fraction": 0.010336795451810002,
+        "channel_255_fraction": 0.010494915382237232
+      },
+      "transform_duration_ms": 10.76466590166092
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "original",
+      "image": "real--06-piecewise-graph-paper/original/image.png",
+      "original": "real--06-piecewise-graph-paper/before.png",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "image_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "transform": {
+        "id": "original",
+        "method": "identity",
+        "parameters": {}
+      },
+      "transform_diagnostics": {
+        "luminance_p01_p99": [
+          110.85873970031739,
+          216.32699584960938
+        ],
+        "luminance_std": 19.112314224243164,
+        "channel_zero_fraction": 0.0,
+        "channel_255_fraction": 0.0
+      },
+      "transform_duration_ms": 3.3437497913837433
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "grayscale",
+      "image": "real--06-piecewise-graph-paper/grayscale/image.png",
+      "original": "real--06-piecewise-graph-paper/before.png",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "image_sha256": "9b1bfbac7e9a9a135ed5242cf1d410ac683ff8e0499c22352d859766ca664a57",
+      "transform": {
+        "id": "grayscale",
+        "method": "luminance",
+        "parameters": {
+          "weights_rgb": [
+            0.299,
+            0.587,
+            0.114
+          ]
+        }
+      },
+      "transform_diagnostics": {
+        "luminance_p01_p99": [
+          110.99999237060547,
+          216.0
+        ],
+        "luminance_std": 19.109827041625977,
+        "channel_zero_fraction": 0.0,
+        "channel_255_fraction": 0.0
+      },
+      "transform_duration_ms": 4.007125040516257
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "percentile",
+      "image": "real--06-piecewise-graph-paper/percentile/image.png",
+      "original": "real--06-piecewise-graph-paper/before.png",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "image_sha256": "8afa34aacda9847717aa280e77a93a5f3f7918fee7c161ea096b4cba44b1d52b",
+      "transform": {
+        "id": "percentile",
+        "method": "percentile_rgb_shared_luminance_limits",
+        "parameters": {
+          "low_percentile": 1,
+          "high_percentile": 99,
+          "quantile_method": "linear"
+        }
+      },
+      "transform_diagnostics": {
+        "low": 110.85873970031739,
+        "high": 216.32699584960938,
+        "gain": 2.4177890989213235,
+        "degenerate": false,
+        "luminance_p01_p99": [
+          1.3680000305175781,
+          253.12498474121094
+        ],
+        "luminance_std": 43.43464660644531,
+        "channel_zero_fraction": 0.010405977135655775,
+        "channel_255_fraction": 0.015942028985507246
+      },
+      "transform_duration_ms": 6.095415912568569
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "background",
+      "image": "real--06-piecewise-graph-paper/background/image.png",
+      "original": "real--06-piecewise-graph-paper/before.png",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "image_sha256": "2c33f654842c22595f385a1b436f3cf8eb074defc27422badffcb0eadad61666",
+      "transform": {
+        "id": "background",
+        "method": "divide_by_gaussian_luminance_background",
+        "parameters": {
+          "sigma_pixels": 21,
+          "target_background": 235,
+          "minimum_background": 16,
+          "border": "reflect_101"
+        }
+      },
+      "transform_diagnostics": {
+        "background_min": 165.54136657714844,
+        "background_max": 210.38125610351562,
+        "luminance_p01_p99": [
+          145.3419952392578,
+          255.0
+        ],
+        "luminance_std": 19.954166412353516,
+        "channel_zero_fraction": 0.0,
+        "channel_255_fraction": 0.045074564167191765
+      },
+      "transform_duration_ms": 11.239416897296906
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "clahe",
+      "image": "real--06-piecewise-graph-paper/clahe/image.png",
+      "original": "real--06-piecewise-graph-paper/before.png",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "image_sha256": "771943ac77be5135a59ed64ebbecf95fcc6c991da0b4d6da4665a69e99bc571a",
+      "transform": {
+        "id": "clahe",
+        "method": "clahe_lab_luminance",
+        "parameters": {
+          "clip_limit": 2.0,
+          "tile_grid": [
+            8,
+            8
+          ]
+        }
+      },
+      "transform_diagnostics": {
+        "luminance_p01_p99": [
+          75.09510955810546,
+          224.2449951171875
+        ],
+        "luminance_std": 30.828845977783203,
+        "channel_zero_fraction": 0.0,
+        "channel_255_fraction": 0.0
+      },
+      "transform_duration_ms": 4.536624997854233
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "red",
+      "image": "real--06-piecewise-graph-paper/red/image.png",
+      "original": "real--06-piecewise-graph-paper/before.png",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "image_sha256": "5359ae8eece7b8547037e88c0cff6391a49aac9cf95fe8e3293f850dd9cc5eb1",
+      "transform": {
+        "id": "red",
+        "method": "percentile_single_rgb_channel",
+        "parameters": {
+          "channel": 0,
+          "low_percentile": 1,
+          "high_percentile": 99,
+          "quantile_method": "linear"
+        }
+      },
+      "transform_diagnostics": {
+        "low": 111.0,
+        "high": 220.0,
+        "gain": 2.3394495412844036,
+        "degenerate": false,
+        "luminance_p01_p99": [
+          0.0,
+          255.0
+        ],
+        "luminance_std": 44.02772521972656,
+        "channel_zero_fraction": 0.01007291385363219,
+        "channel_255_fraction": 0.013043478260869565
+      },
+      "transform_duration_ms": 4.76212496869266
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "green",
+      "image": "real--06-piecewise-graph-paper/green/image.png",
+      "original": "real--06-piecewise-graph-paper/before.png",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "image_sha256": "9c1bcf3ec9276236b7928754edd3228836fda8b31fd64b2854f3a0d30743bd09",
+      "transform": {
+        "id": "green",
+        "method": "percentile_single_rgb_channel",
+        "parameters": {
+          "channel": 1,
+          "low_percentile": 1,
+          "high_percentile": 99,
+          "quantile_method": "linear"
+        }
+      },
+      "transform_diagnostics": {
+        "low": 111.0,
+        "high": 216.0,
+        "gain": 2.4285714285714284,
+        "degenerate": false,
+        "luminance_p01_p99": [
+          0.0,
+          255.0
+        ],
+        "luminance_std": 43.347564697265625,
+        "channel_zero_fraction": 0.01044198397695562,
+        "channel_255_fraction": 0.010135925825906921
+      },
+      "transform_duration_ms": 4.723374964669347
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "blue",
+      "image": "real--06-piecewise-graph-paper/blue/image.png",
+      "original": "real--06-piecewise-graph-paper/before.png",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "image_sha256": "833b2c2c20d089ff2ebbf5dddae270ab868f149536433b60dec01834e445b232",
+      "transform": {
+        "id": "blue",
+        "method": "percentile_single_rgb_channel",
+        "parameters": {
+          "channel": 2,
+          "low_percentile": 1,
+          "high_percentile": 99,
+          "quantile_method": "linear"
+        }
+      },
+      "transform_diagnostics": {
+        "low": 110.0,
+        "high": 216.0,
+        "gain": 2.4056603773584904,
+        "degenerate": false,
+        "luminance_p01_p99": [
+          0.0,
+          255.0
+        ],
+        "luminance_std": 43.77474594116211,
+        "channel_zero_fraction": 0.010279953191106311,
+        "channel_255_fraction": 0.010563507066342605
+      },
+      "transform_duration_ms": 4.81466599740088
+    }
+  ]
+}

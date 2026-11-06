@@ -287,3 +287,24 @@ demo takes priority over unnecessary provider comparisons.
 approved, at-most-two-request VLM-only experiment; 4C OCR/CV, 4D hybrid, 4E
 selection/integration and 4F independent demo acceptance each retain an explicit
 approval checkpoint.
+
+## Focused contrast experiment after Step 4A
+
+The professor's auto-contrast suggestion was tested on the two existing failed
+photo crops under eight fixed preprocessing conditions, using identical unchanged
+downstream recognition. Both original failures reproduce exact historical
+geometry. CLAHE raises real--06 reference coverage from 2.0% to 24.9% at 3px, but
+its best single path covers only 7.1%; no condition recovers the complete graph,
+correct axis pair or numerical calibration. Percentile RGB contrast produces
+substantial artifacts, and the tested background normalization worsens extraction.
+
+The original dark masks already capture much of the pencil ink. Existing
+thick-marker opening and component filtering then remove most of it. Production
+preprocessing and prior benchmarks remain unchanged. Read the
+[contrast experiment report](../benchmarks/photo-graphs/multi-method/contrast-01/REPORT.md)
+for paired masks/overlays, topology/contamination metrics and limits of the
+approximate visual references. Validation: 80 Node and five Python checks passed.
+
+**Review boundary:** commit this focused experiment locally and stop. No VLM
+inference occurred. A Gemini pilot or any CV/OCR/hybrid refinement requires the
+next explicit approval; this experiment does not complete those later steps.

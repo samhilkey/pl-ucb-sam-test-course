@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 801,
+    "height": 529,
+    "processing": {
+      "width": 801,
+      "height": 529,
+      "source_to_processing": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "coordinate_frame": {
+    "status": "uncertain",
+    "origin_pixel": null,
+    "axes": {
+      "x": {
+        "status": "uncertain",
+        "candidates": []
+      },
+      "y": {
+        "status": "uncertain",
+        "candidates": []
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          404.4487395046152
+        ]
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          262.6097959547685
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "strokes": [],
+  "topology": {
+    "stroke_count": 0,
+    "component_count": 0,
+    "components": [],
+    "junctions": []
+  },
+  "status": "abstained",
+  "warnings": [
+    {
+      "code": "ambiguous_axes",
+      "message": "A unique upright dark axis pair was not detected. Confirm the coordinate frame."
+    },
+    {
+      "code": "uncertain_grid",
+      "message": "Regular graph-paper spacing was not recovered on both axes."
+    },
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    },
+    {
+      "code": "no_supported_ink",
+      "message": "No supported thick-marker stroke was extracted. Thin or pale marks may be missed."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "axes",
+      "reason": "ambiguous_axes"
+    },
+    {
+      "target": "grid",
+      "reason": "uncertain_grid"
+    },
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    },
+    {
+      "target": "strokes",
+      "reason": "no_supported_ink"
+    }
+  ],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [],
+    "rejected_small_components": [
+      {
+        "bounds_pixel": [
+          [
+            449,
+            326
+          ],
+          [
+            456,
+            333
+          ]
+        ],
+        "pixels_processing": 34
+      },
+      {
+        "bounds_pixel": [
+          [
+            342,
+            353
+          ],
+          [
+            349,
+            359
+          ]
+        ],
+        "pixels_processing": 30
+      }
+    ],
+    "assumptions": [
+      "Upright, approximately straight-on graph paper.",
+      "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+      "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+    ]
+  }
+}

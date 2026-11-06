@@ -1,0 +1,1006 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 801,
+    "height": 529,
+    "processing": {
+      "width": 801,
+      "height": 529,
+      "source_to_processing": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "coordinate_frame": {
+    "status": "uncertain",
+    "origin_pixel": null,
+    "axes": {
+      "x": {
+        "status": "uncertain",
+        "candidates": []
+      },
+      "y": {
+        "status": "uncertain",
+        "candidates": []
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          408.5934581097938
+        ]
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          262.3760585377727
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "strokes": [
+    {
+      "id": "stroke-1",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            773,
+            85
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            780,
+            77
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            776,
+            73
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            762,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            758,
+            80
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-2",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            716,
+            239
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            720,
+            244
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            720,
+            247
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            716,
+            250
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-3",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            716,
+            250
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            714,
+            251
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-4",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            716,
+            250
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            715,
+            252
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-5",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            714,
+            251
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            713,
+            252
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            715,
+            253
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-6",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            714,
+            251
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            715,
+            252
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-7",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            715,
+            252
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            715,
+            253
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-8",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            715,
+            253
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            715,
+            256
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-9",
+      "component_id": "component-3",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            230,
+            256
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            221,
+            258
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            210,
+            257
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-10",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            34,
+            319
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            26,
+            322
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            25,
+            324
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            18,
+            324
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-11",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": true,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            18,
+            324
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            16,
+            322
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            18,
+            324
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    }
+  ],
+  "topology": {
+    "stroke_count": 11,
+    "component_count": 4,
+    "components": [
+      {
+        "id": "component-1",
+        "stroke_ids": [
+          "stroke-1"
+        ]
+      },
+      {
+        "id": "component-2",
+        "stroke_ids": [
+          "stroke-2",
+          "stroke-3",
+          "stroke-4",
+          "stroke-5",
+          "stroke-6",
+          "stroke-7",
+          "stroke-8"
+        ]
+      },
+      {
+        "id": "component-3",
+        "stroke_ids": [
+          "stroke-9"
+        ]
+      },
+      {
+        "id": "component-4",
+        "stroke_ids": [
+          "stroke-10",
+          "stroke-11"
+        ]
+      }
+    ],
+    "junctions": [
+      {
+        "pixel": [
+          716,
+          250
+        ],
+        "stroke_ids": [
+          "stroke-2",
+          "stroke-3",
+          "stroke-4"
+        ]
+      },
+      {
+        "pixel": [
+          714,
+          251
+        ],
+        "stroke_ids": [
+          "stroke-3",
+          "stroke-5",
+          "stroke-6"
+        ]
+      },
+      {
+        "pixel": [
+          715,
+          252
+        ],
+        "stroke_ids": [
+          "stroke-4",
+          "stroke-6",
+          "stroke-7"
+        ]
+      },
+      {
+        "pixel": [
+          715,
+          253
+        ],
+        "stroke_ids": [
+          "stroke-5",
+          "stroke-7",
+          "stroke-8"
+        ]
+      },
+      {
+        "pixel": [
+          18,
+          324
+        ],
+        "stroke_ids": [
+          "stroke-10",
+          "stroke-11"
+        ]
+      }
+    ]
+  },
+  "status": "needs_review",
+  "warnings": [
+    {
+      "code": "ambiguous_axes",
+      "message": "A unique upright dark axis pair was not detected. Confirm the coordinate frame."
+    },
+    {
+      "code": "uncertain_grid",
+      "message": "Regular graph-paper spacing was not recovered on both axes."
+    },
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    },
+    {
+      "code": "ink_junction",
+      "message": "Touching or branching ink has multiple possible paths; no branch pairing was guessed."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "axes",
+      "reason": "ambiguous_axes"
+    },
+    {
+      "target": "grid",
+      "reason": "uncertain_grid"
+    },
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    },
+    {
+      "target": "strokes",
+      "reason": "ink_junction"
+    }
+  ],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [
+      {
+        "pixel": [
+          716,
+          250
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          714,
+          251
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          715,
+          252
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          715,
+          253
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          18,
+          324
+        ],
+        "reason": "ink_junction"
+      }
+    ],
+    "rejected_small_components": [
+      {
+        "bounds_pixel": [
+          [
+            794,
+            6
+          ],
+          [
+            798,
+            10
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            739,
+            10
+          ],
+          [
+            743,
+            14
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            720,
+            11
+          ],
+          [
+            725,
+            15
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            795,
+            36
+          ],
+          [
+            800,
+            40
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            740,
+            83
+          ],
+          [
+            745,
+            87
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            770,
+            100
+          ],
+          [
+            775,
+            104
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            440,
+            185
+          ],
+          [
+            448,
+            195
+          ]
+        ],
+        "pixels_processing": 59
+      },
+      {
+        "bounds_pixel": [
+          [
+            333,
+            220
+          ],
+          [
+            342,
+            226
+          ]
+        ],
+        "pixels_processing": 46
+      },
+      {
+        "bounds_pixel": [
+          [
+            705,
+            249
+          ],
+          [
+            709,
+            253
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            235,
+            250
+          ],
+          [
+            251,
+            258
+          ]
+        ],
+        "pixels_processing": 89
+      },
+      {
+        "bounds_pixel": [
+          [
+            692,
+            252
+          ],
+          [
+            701,
+            257
+          ]
+        ],
+        "pixels_processing": 37
+      },
+      {
+        "bounds_pixel": [
+          [
+            687,
+            255
+          ],
+          [
+            691,
+            259
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            676,
+            257
+          ],
+          [
+            685,
+            262
+          ]
+        ],
+        "pixels_processing": 34
+      },
+      {
+        "bounds_pixel": [
+          [
+            659,
+            263
+          ],
+          [
+            663,
+            267
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            648,
+            265
+          ],
+          [
+            658,
+            271
+          ]
+        ],
+        "pixels_processing": 35
+      },
+      {
+        "bounds_pixel": [
+          [
+            640,
+            270
+          ],
+          [
+            644,
+            274
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            628,
+            273
+          ],
+          [
+            634,
+            278
+          ]
+        ],
+        "pixels_processing": 26
+      },
+      {
+        "bounds_pixel": [
+          [
+            576,
+            288
+          ],
+          [
+            586,
+            294
+          ]
+        ],
+        "pixels_processing": 38
+      },
+      {
+        "bounds_pixel": [
+          [
+            48,
+            312
+          ],
+          [
+            52,
+            316
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            19,
+            314
+          ],
+          [
+            23,
+            318
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            446,
+            324
+          ],
+          [
+            458,
+            334
+          ]
+        ],
+        "pixels_processing": 89
+      },
+      {
+        "bounds_pixel": [
+          [
+            436,
+            330
+          ],
+          [
+            440,
+            334
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            339,
+            351
+          ],
+          [
+            351,
+            361
+          ]
+        ],
+        "pixels_processing": 82
+      },
+      {
+        "bounds_pixel": [
+          [
+            237,
+            380
+          ],
+          [
+            247,
+            390
+          ]
+        ],
+        "pixels_processing": 65
+      },
+      {
+        "bounds_pixel": [
+          [
+            54,
+            431
+          ],
+          [
+            59,
+            437
+          ]
+        ],
+        "pixels_processing": 24
+      },
+      {
+        "bounds_pixel": [
+          [
+            464,
+            513
+          ],
+          [
+            468,
+            517
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            249,
+            523
+          ],
+          [
+            254,
+            528
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            493,
+            523
+          ],
+          [
+            497,
+            527
+          ]
+        ],
+        "pixels_processing": 13
+      }
+    ],
+    "assumptions": [
+      "Upright, approximately straight-on graph paper.",
+      "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+      "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+    ]
+  }
+}

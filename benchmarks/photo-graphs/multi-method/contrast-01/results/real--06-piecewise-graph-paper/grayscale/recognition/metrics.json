@@ -1,0 +1,159 @@
+{
+  "id": "real--06-piecewise-graph-paper",
+  "condition": "grayscale",
+  "geometry": "real--06-piecewise-graph-paper/grayscale/recognition/geometry.json",
+  "duration_ms": 49.617499999999836,
+  "status": "needs_review",
+  "geometry_sha256": "ef1df3037d56faddfeda531393709200eebe88013bda5d65d31111e089b7b114",
+  "masks": {
+    "neutral": 10767,
+    "grid": 218962,
+    "dark": 3703,
+    "color": 0,
+    "ink": 144,
+    "skeleton": 29
+  },
+  "image_sha256": "9b1bfbac7e9a9a135ed5242cf1d410ac683ff8e0499c22352d859766ca664a57",
+  "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+  "baseline_exact_reproduction": null,
+  "transform_duration_ms": 4.007125040516257,
+  "metrics": {
+    "inherited": {
+      "expected_strokes": 1,
+      "extracted_paths": 3,
+      "extracted_components": 1,
+      "branch_count_correct": false,
+      "missing_strokes": 1,
+      "partially_missing_strokes": 0,
+      "false_connections": 0,
+      "spurious_paths": 3,
+      "reference_to_geometry_p95_pixel": 476.8127935060262,
+      "geometry_to_reference_p95_pixel": 250.96279796816557,
+      "reference_centerline_coverage_within_3px": [
+        0
+      ],
+      "endpoint_max_error_pixel": 503.87002292257864,
+      "corner_error_pixel": 253.51331325987596,
+      "axis_origin_error_pixel": null,
+      "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+    },
+    "reference_coverage": {
+      "within_3px_per_branch": [
+        0
+      ],
+      "within_5px_per_branch": [
+        0
+      ],
+      "within_10px_per_branch": [
+        0
+      ]
+    },
+    "best_single_path_coverage_within_3px_per_branch": [
+      0
+    ],
+    "matched_path_fragments_per_branch": [
+      0
+    ],
+    "output_length_farther_than_5px_fraction": 1,
+    "output_arclength_samples": 31,
+    "junction_count": 1,
+    "component_count": 1,
+    "mask_reference_coverage_within_3px_per_branch": {
+      "dark": [
+        0.6161616161616161
+      ],
+      "ink": [
+        0
+      ],
+      "skeleton": [
+        0
+      ]
+    },
+    "overlap_regions": [
+      {
+        "id": "left-axis-endpoint",
+        "kind": "axis_endpoint",
+        "pixel": [
+          53,
+          324
+        ],
+        "radius_pixel": 12,
+        "reference_samples": 13,
+        "geometry_coverage_within_3px": 0,
+        "best_single_path_coverage_within_3px": 0,
+        "mask_coverage_within_3px": {
+          "dark": 1,
+          "ink": 0,
+          "skeleton": 0
+        }
+      },
+      {
+        "id": "right-axis-endpoint",
+        "kind": "axis_endpoint",
+        "pixel": [
+          398,
+          329
+        ],
+        "radius_pixel": 12,
+        "reference_samples": 13,
+        "geometry_coverage_within_3px": 0,
+        "best_single_path_coverage_within_3px": 0,
+        "mask_coverage_within_3px": {
+          "dark": 1,
+          "ink": 0,
+          "skeleton": 0
+        }
+      },
+      {
+        "id": "peak-on-grid",
+        "kind": "grid_overlap_and_corner",
+        "pixel": [
+          241,
+          95
+        ],
+        "radius_pixel": 12,
+        "reference_samples": 25,
+        "geometry_coverage_within_3px": 0,
+        "best_single_path_coverage_within_3px": 0,
+        "mask_coverage_within_3px": {
+          "dark": 0.88,
+          "ink": 0,
+          "skeleton": 0
+        }
+      }
+    ],
+    "scale_calibration": {
+      "status": "uncertain",
+      "x_status": "unknown",
+      "y_status": "unknown",
+      "x_labels": [],
+      "y_labels": [],
+      "independently_measured_scale_accuracy": null,
+      "note": "No independent numeric tick/scale annotation; unknown is not zero error. Raw label evidence retained for inspection."
+    }
+  },
+  "axes": {
+    "x": {
+      "reported_status": "uncertain",
+      "candidates": [],
+      "matches_visible_axis_diagnostic": false
+    },
+    "y": {
+      "reported_status": "uncertain",
+      "candidates": [],
+      "matches_visible_axis_diagnostic": false
+    }
+  },
+  "independent_accuracy_claim": false,
+  "automatic_success": false,
+  "warnings": [
+    "ambiguous_axes",
+    "uncertain_grid",
+    "unknown_x_scale",
+    "unknown_y_scale",
+    "ink_junction",
+    "clipped_ink",
+    "clipped_ink",
+    "clipped_ink"
+  ]
+}

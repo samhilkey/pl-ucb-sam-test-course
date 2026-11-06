@@ -1,0 +1,146 @@
+{
+  "coordinate_frame": {
+    "status": "uncertain",
+    "origin_pixel": null,
+    "axes": {
+      "x": {
+        "status": "uncertain",
+        "candidates": []
+      },
+      "y": {
+        "status": "uncertain",
+        "candidates": [
+          {
+            "start": [
+              353,
+              0
+            ],
+            "end": [
+              353,
+              419
+            ],
+            "support": 0.638095238095238,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              374,
+              0
+            ],
+            "end": [
+              374,
+              419
+            ],
+            "support": 0.7880952380952381,
+            "width_pixel": 1
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          187.89928909952607,
+          452.1461730966257
+        ]
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          0.951841359773371,
+          215.09432832121612
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "status": "needs_review",
+  "warnings": [
+    {
+      "code": "ambiguous_axes",
+      "message": "A unique upright dark axis pair was not detected. Confirm the coordinate frame."
+    },
+    {
+      "code": "uncertain_grid",
+      "message": "Regular graph-paper spacing was not recovered on both axes."
+    },
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    },
+    {
+      "code": "ink_junction",
+      "message": "Touching or branching ink has multiple possible paths; no branch pairing was guessed."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "axes",
+      "reason": "ambiguous_axes"
+    },
+    {
+      "target": "grid",
+      "reason": "uncertain_grid"
+    },
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    },
+    {
+      "target": "strokes",
+      "reason": "ink_junction"
+    },
+    {
+      "target": "stroke-1",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-2",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-3",
+      "reason": "clipped_ink"
+    }
+  ]
+}

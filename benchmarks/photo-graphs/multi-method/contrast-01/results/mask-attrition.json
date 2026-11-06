@@ -1,0 +1,278 @@
+{
+  "method": "post-opening/color-union count = final ink count + disjoint rejected component pixel counts from unchanged recognizer",
+  "caveat": "Color union is not necessarily a subset of the dark mask. Raw masks cover approximate reference centerlines, not a dense human ink segmentation.",
+  "rows": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "original",
+      "dark_pixels": 5908,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 536,
+      "rejected_small_component_pixels": 536,
+      "rejected_small_components": 14,
+      "final_ink_pixels": 0,
+      "dark_reference_coverage_3px": [
+        0.8742138364779874,
+        1
+      ],
+      "final_reference_coverage_3px": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "grayscale",
+      "dark_pixels": 5899,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 536,
+      "rejected_small_component_pixels": 536,
+      "rejected_small_components": 14,
+      "final_ink_pixels": 0,
+      "dark_reference_coverage_3px": [
+        0.8729559748427673,
+        1
+      ],
+      "final_reference_coverage_3px": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "percentile",
+      "dark_pixels": 9356,
+      "color_pixels": 5550,
+      "post_opening_or_color_union_pixels": 6913,
+      "rejected_small_component_pixels": 3854,
+      "rejected_small_components": 516,
+      "final_ink_pixels": 3059,
+      "dark_reference_coverage_3px": [
+        0.8930817610062893,
+        1
+      ],
+      "final_reference_coverage_3px": [
+        0.03773584905660377,
+        0.039301310043668124
+      ]
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "background",
+      "dark_pixels": 420,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 64,
+      "rejected_small_component_pixels": 64,
+      "rejected_small_components": 2,
+      "final_ink_pixels": 0,
+      "dark_reference_coverage_3px": [
+        0.06415094339622641,
+        0.06695778748180495
+      ],
+      "final_reference_coverage_3px": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "clahe",
+      "dark_pixels": 9086,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 1544,
+      "rejected_small_component_pixels": 823,
+      "rejected_small_components": 30,
+      "final_ink_pixels": 721,
+      "dark_reference_coverage_3px": [
+        0.89937106918239,
+        1
+      ],
+      "final_reference_coverage_3px": [
+        0.03647798742138365,
+        0.03202328966521106
+      ]
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "red",
+      "dark_pixels": 15362,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 3288,
+      "rejected_small_component_pixels": 2199,
+      "rejected_small_components": 86,
+      "final_ink_pixels": 1089,
+      "dark_reference_coverage_3px": [
+        0.9006289308176101,
+        1
+      ],
+      "final_reference_coverage_3px": [
+        0.03773584905660377,
+        0.10480349344978165
+      ]
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "green",
+      "dark_pixels": 9868,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 1523,
+      "rejected_small_component_pixels": 857,
+      "rejected_small_components": 28,
+      "final_ink_pixels": 666,
+      "dark_reference_coverage_3px": [
+        0.8930817610062893,
+        1
+      ],
+      "final_reference_coverage_3px": [
+        0.0389937106918239,
+        0.001455604075691412
+      ]
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "blue",
+      "dark_pixels": 12765,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 2020,
+      "rejected_small_component_pixels": 1381,
+      "rejected_small_components": 46,
+      "final_ink_pixels": 639,
+      "dark_reference_coverage_3px": [
+        0.8930817610062893,
+        1
+      ],
+      "final_reference_coverage_3px": [
+        0.03647798742138365,
+        0.01601164483260553
+      ]
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "original",
+      "dark_pixels": 3747,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 304,
+      "rejected_small_component_pixels": 81,
+      "rejected_small_components": 2,
+      "final_ink_pixels": 223,
+      "dark_reference_coverage_3px": [
+        0.6161616161616161
+      ],
+      "final_reference_coverage_3px": [
+        0.020202020202020204
+      ]
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "grayscale",
+      "dark_pixels": 3703,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 298,
+      "rejected_small_component_pixels": 154,
+      "rejected_small_components": 3,
+      "final_ink_pixels": 144,
+      "dark_reference_coverage_3px": [
+        0.6161616161616161
+      ],
+      "final_reference_coverage_3px": [
+        0
+      ]
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "percentile",
+      "dark_pixels": 16059,
+      "color_pixels": 438,
+      "post_opening_or_color_union_pixels": 2146,
+      "rejected_small_component_pixels": 1242,
+      "rejected_small_components": 99,
+      "final_ink_pixels": 904,
+      "dark_reference_coverage_3px": [
+        0.8518518518518519
+      ],
+      "final_reference_coverage_3px": [
+        0.18855218855218855
+      ]
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "background",
+      "dark_pixels": 992,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 171,
+      "rejected_small_component_pixels": 39,
+      "rejected_small_components": 2,
+      "final_ink_pixels": 132,
+      "dark_reference_coverage_3px": [
+        0.30808080808080807
+      ],
+      "final_reference_coverage_3px": [
+        0
+      ]
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "clahe",
+      "dark_pixels": 15575,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 1580,
+      "rejected_small_component_pixels": 630,
+      "rejected_small_components": 32,
+      "final_ink_pixels": 950,
+      "dark_reference_coverage_3px": [
+        0.8282828282828283
+      ],
+      "final_reference_coverage_3px": [
+        0.24915824915824916
+      ]
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "red",
+      "dark_pixels": 16450,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 1791,
+      "rejected_small_component_pixels": 957,
+      "rejected_small_components": 44,
+      "final_ink_pixels": 834,
+      "dark_reference_coverage_3px": [
+        0.8552188552188552
+      ],
+      "final_reference_coverage_3px": [
+        0.20033670033670034
+      ]
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "green",
+      "dark_pixels": 16662,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 1740,
+      "rejected_small_component_pixels": 850,
+      "rejected_small_components": 39,
+      "final_ink_pixels": 890,
+      "dark_reference_coverage_3px": [
+        0.8518518518518519
+      ],
+      "final_reference_coverage_3px": [
+        0.2222222222222222
+      ]
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "blue",
+      "dark_pixels": 16316,
+      "color_pixels": 0,
+      "post_opening_or_color_union_pixels": 1725,
+      "rejected_small_component_pixels": 747,
+      "rejected_small_components": 32,
+      "final_ink_pixels": 978,
+      "dark_reference_coverage_3px": [
+        0.8535353535353535
+      ],
+      "final_reference_coverage_3px": [
+        0.24915824915824916
+      ]
+    }
+  ]
+}

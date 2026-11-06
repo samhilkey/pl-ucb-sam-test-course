@@ -1,0 +1,11 @@
+test_all_conditions_preserve_storage_frame_and_source_pixels (test_preprocess.PreprocessingTests.test_all_conditions_preserve_storage_frame_and_source_pixels) ... ok
+test_flat_percentiles_do_not_divide_by_zero_or_invent_contrast (test_preprocess.PreprocessingTests.test_flat_percentiles_do_not_divide_by_zero_or_invent_contrast) ... ok
+test_full_preparation_never_reads_evaluator_inputs_and_never_overwrites (test_preprocess.PreprocessingTests.test_full_preparation_never_reads_evaluator_inputs_and_never_overwrites) ... ok
+test_single_channels_remove_chroma_without_reordering_pixels (test_preprocess.PreprocessingTests.test_single_channels_remove_chroma_without_reordering_pixels) ... ok
+test_tone_mapping_preserves_dark_ink_at_axis_and_grid_intersections (test_preprocess.PreprocessingTests.test_tone_mapping_preserves_dark_ink_at_axis_and_grid_intersections) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.619s
+
+OK
+Prepared 16 fixed-condition inputs; no references or inference.

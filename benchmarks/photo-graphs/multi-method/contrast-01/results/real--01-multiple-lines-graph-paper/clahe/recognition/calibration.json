@@ -1,0 +1,289 @@
+{
+  "coordinate_frame": {
+    "status": "uncertain",
+    "origin_pixel": null,
+    "axes": {
+      "x": {
+        "status": "uncertain",
+        "candidates": [
+          {
+            "start": [
+              0,
+              3
+            ],
+            "end": [
+              800,
+              3
+            ],
+            "support": 0.6217228464419475,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              0,
+              7.494249096286559
+            ],
+            "end": [
+              800,
+              7.494249096286559
+            ],
+            "support": 0.6416978776529338,
+            "width_pixel": 6
+          },
+          {
+            "start": [
+              0,
+              13
+            ],
+            "end": [
+              800,
+              13
+            ],
+            "support": 0.6317103620474407,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              0,
+              21.497522299306244
+            ],
+            "end": [
+              800,
+              21.497522299306244
+            ],
+            "support": 0.6329588014981273,
+            "width_pixel": 2
+          },
+          {
+            "start": [
+              0,
+              384.50295857988164
+            ],
+            "end": [
+              800,
+              384.50295857988164
+            ],
+            "support": 0.6367041198501873,
+            "width_pixel": 2
+          },
+          {
+            "start": [
+              0,
+              410.44823336072307
+            ],
+            "end": [
+              800,
+              410.44823336072307
+            ],
+            "support": 0.8164794007490637,
+            "width_pixel": 4
+          },
+          {
+            "start": [
+              0,
+              435.9912137975919
+            ],
+            "end": [
+              800,
+              435.9912137975919
+            ],
+            "support": 0.8089887640449438,
+            "width_pixel": 5
+          }
+        ]
+      },
+      "y": {
+        "status": "uncertain",
+        "candidates": [
+          {
+            "start": [
+              0,
+              0
+            ],
+            "end": [
+              0,
+              528
+            ],
+            "support": 0.6994328922495274,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              2,
+              0
+            ],
+            "end": [
+              2,
+              528
+            ],
+            "support": 0.722117202268431,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              498,
+              0
+            ],
+            "end": [
+              498,
+              528
+            ],
+            "support": 0.6219281663516069,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              536.9912942542078,
+              0
+            ],
+            "end": [
+              536.9912942542078,
+              528
+            ],
+            "support": 0.6748582230623819,
+            "width_pixel": 5
+          },
+          {
+            "start": [
+              543.0118309859155,
+              0
+            ],
+            "end": [
+              543.0118309859155,
+              528
+            ],
+            "support": 0.6994328922495274,
+            "width_pixel": 5
+          },
+          {
+            "start": [
+              549.5014792899408,
+              0
+            ],
+            "end": [
+              549.5014792899408,
+              528
+            ],
+            "support": 0.6408317580340265,
+            "width_pixel": 2
+          },
+          {
+            "start": [
+              581,
+              0
+            ],
+            "end": [
+              581,
+              528
+            ],
+            "support": 0.6502835538752363,
+            "width_pixel": 3
+          },
+          {
+            "start": [
+              589,
+              0
+            ],
+            "end": [
+              589,
+              528
+            ],
+            "support": 0.6521739130434783,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              613.010989010989,
+              0
+            ],
+            "end": [
+              613.010989010989,
+              528
+            ],
+            "support": 0.6710775047258979,
+            "width_pixel": 5
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          400.24481514878266
+        ]
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          263.7428381304157
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "status": "needs_review",
+  "warnings": [
+    {
+      "code": "ambiguous_axes",
+      "message": "A unique upright dark axis pair was not detected. Confirm the coordinate frame."
+    },
+    {
+      "code": "uncertain_grid",
+      "message": "Regular graph-paper spacing was not recovered on both axes."
+    },
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    },
+    {
+      "code": "ink_junction",
+      "message": "Touching or branching ink has multiple possible paths; no branch pairing was guessed."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "axes",
+      "reason": "ambiguous_axes"
+    },
+    {
+      "target": "grid",
+      "reason": "uncertain_grid"
+    },
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    },
+    {
+      "target": "strokes",
+      "reason": "ink_junction"
+    }
+  ]
+}

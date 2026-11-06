@@ -1,0 +1,17 @@
+case,condition,status,paths,components,junctions,coverage3_per_branch,best_path_coverage3_per_branch,false_path_fraction5,spurious_paths,false_connections,ref_to_pred_p95,pred_to_ref_p95,axis_x_match,axis_y_match,calibration
+real--01-multiple-lines-graph-paper,original,abstained,0,0,0,0;0,0;0,,0,0,,,false,false,uncertain
+real--01-multiple-lines-graph-paper,grayscale,abstained,0,0,0,0;0,0;0,,0,0,,,false,false,uncertain
+real--01-multiple-lines-graph-paper,percentile,needs_review,90,29,34,0.03773584905660377;0.039301310043668124,0.01761006289308176;0.024745269286754003,0.9202081526452732,79,0,201.2229985689042,250.39431403288694,false,false,uncertain
+real--01-multiple-lines-graph-paper,background,abstained,0,0,0,0;0,0;0,,0,0,,,false,false,uncertain
+real--01-multiple-lines-graph-paper,clahe,needs_review,9,5,3,0.03647798742138365;0.03202328966521106,0.018867924528301886;0.03056768558951965,0.2878787878787879,0,0,167.0360532456997,7.280109889280519,false,false,uncertain
+real--01-multiple-lines-graph-paper,red,needs_review,13,8,3,0.03773584905660377;0.10480349344978165,0.016352201257861635;0.03056768558951965,0.2786885245901639,1,0,153.34495503751356,9.219544457292889,false,false,uncertain
+real--01-multiple-lines-graph-paper,green,needs_review,11,4,5,0.0389937106918239;0.001455604075691412,0.02012578616352201;0.001455604075691412,0.4765625,2,0,235.10388967730597,8.673074554171754,false,false,uncertain
+real--01-multiple-lines-graph-paper,blue,needs_review,6,4,1,0.03647798742138365;0.01601164483260553,0.02012578616352201;0.01601164483260553,0.4672897196261682,1,0,234.17050940027795,8.6940656116402,false,false,uncertain
+real--06-piecewise-graph-paper,original,needs_review,4,2,1,0.020202020202020204,0.020202020202020204,0.7560975609756098,3,0,303.68718671093245,250.96279796816557,false,false,uncertain
+real--06-piecewise-graph-paper,grayscale,needs_review,3,1,1,0,0,1,3,0,476.8127935060262,250.96279796816557,false,false,uncertain
+real--06-piecewise-graph-paper,percentile,needs_review,17,6,6,0.18855218855218855,0.05555555555555555,0.5378151260504201,13,0,79.27897735213288,248.7497541407629,false,false,uncertain
+real--06-piecewise-graph-paper,background,needs_review,3,1,1,0,0,1,3,0,477.40759470246365,250.96279796816557,false,false,uncertain
+real--06-piecewise-graph-paper,clahe,needs_review,8,6,1,0.24915824915824916,0.0707070707070707,0.2578947368421053,3,0,78.35441316543697,249.239526135352,false,false,uncertain
+real--06-piecewise-graph-paper,red,needs_review,7,5,1,0.20033670033670034,0.06397306397306397,0.2865853658536585,3,0,77.82609679905067,249.3120849493652,false,false,uncertain
+real--06-piecewise-graph-paper,green,needs_review,8,6,1,0.2222222222222222,0.058922558922558925,0.28160919540229884,3,0,78.36723520527572,249.3120849493652,false,false,uncertain
+real--06-piecewise-graph-paper,blue,needs_review,9,6,2,0.24915824915824916,0.0707070707070707,0.24875621890547264,3,0,79.0771964340401,249.239526135352,false,false,uncertain

@@ -1,0 +1,1043 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 529,
+    "height": 420,
+    "processing": {
+      "width": 529,
+      "height": 420,
+      "source_to_processing": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "coordinate_frame": {
+    "status": "uncertain",
+    "origin_pixel": null,
+    "axes": {
+      "x": {
+        "status": "uncertain",
+        "candidates": []
+      },
+      "y": {
+        "status": "uncertain",
+        "candidates": [
+          {
+            "start": [
+              353,
+              0
+            ],
+            "end": [
+              353,
+              419
+            ],
+            "support": 0.6404761904761904,
+            "width_pixel": 1
+          },
+          {
+            "start": [
+              374,
+              0
+            ],
+            "end": [
+              374,
+              419
+            ],
+            "support": 0.7642857142857142,
+            "width_pixel": 1
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          186.9117625530669,
+          451.6388378462712
+        ]
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          0.44339622641509435,
+          13.57840616966581,
+          219.21066596194504
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "strokes": [
+    {
+      "id": "stroke-1",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            4,
+            0
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            4,
+            5
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            0,
+            6
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-2",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            0,
+            6
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            0,
+            2
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-3",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            0,
+            6
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            0,
+            22
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-4",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            266,
+            131
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            280,
+            156
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-5",
+      "component_id": "component-3",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            292,
+            173
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            294,
+            179
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            297,
+            181
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            304,
+            193
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-6",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            139,
+            245
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            122,
+            273
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-7",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            373,
+            298
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            384,
+            313
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            395,
+            324
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            396,
+            328
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    }
+  ],
+  "topology": {
+    "stroke_count": 7,
+    "component_count": 5,
+    "components": [
+      {
+        "id": "component-1",
+        "stroke_ids": [
+          "stroke-1",
+          "stroke-2",
+          "stroke-3"
+        ]
+      },
+      {
+        "id": "component-2",
+        "stroke_ids": [
+          "stroke-4"
+        ]
+      },
+      {
+        "id": "component-3",
+        "stroke_ids": [
+          "stroke-5"
+        ]
+      },
+      {
+        "id": "component-4",
+        "stroke_ids": [
+          "stroke-6"
+        ]
+      },
+      {
+        "id": "component-5",
+        "stroke_ids": [
+          "stroke-7"
+        ]
+      }
+    ],
+    "junctions": [
+      {
+        "pixel": [
+          0,
+          6
+        ],
+        "stroke_ids": [
+          "stroke-1",
+          "stroke-2",
+          "stroke-3"
+        ]
+      }
+    ]
+  },
+  "status": "needs_review",
+  "warnings": [
+    {
+      "code": "ambiguous_axes",
+      "message": "A unique upright dark axis pair was not detected. Confirm the coordinate frame."
+    },
+    {
+      "code": "uncertain_grid",
+      "message": "Regular graph-paper spacing was not recovered on both axes."
+    },
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    },
+    {
+      "code": "ink_junction",
+      "message": "Touching or branching ink has multiple possible paths; no branch pairing was guessed."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "axes",
+      "reason": "ambiguous_axes"
+    },
+    {
+      "target": "grid",
+      "reason": "uncertain_grid"
+    },
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    },
+    {
+      "target": "strokes",
+      "reason": "ink_junction"
+    },
+    {
+      "target": "stroke-1",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-2",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-3",
+      "reason": "clipped_ink"
+    }
+  ],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [
+      {
+        "pixel": [
+          0,
+          6
+        ],
+        "reason": "ink_junction"
+      }
+    ],
+    "rejected_small_components": [
+      {
+        "bounds_pixel": [
+          [
+            238,
+            90
+          ],
+          [
+            244,
+            97
+          ]
+        ],
+        "pixels_processing": 39
+      },
+      {
+        "bounds_pixel": [
+          [
+            243,
+            98
+          ],
+          [
+            252,
+            110
+          ]
+        ],
+        "pixels_processing": 53
+      },
+      {
+        "bounds_pixel": [
+          [
+            29,
+            176
+          ],
+          [
+            38,
+            185
+          ]
+        ],
+        "pixels_processing": 43
+      },
+      {
+        "bounds_pixel": [
+          [
+            310,
+            206
+          ],
+          [
+            315,
+            211
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            149,
+            226
+          ],
+          [
+            153,
+            230
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            143,
+            235
+          ],
+          [
+            147,
+            239
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            37,
+            238
+          ],
+          [
+            42,
+            243
+          ]
+        ],
+        "pixels_processing": 21
+      },
+      {
+        "bounds_pixel": [
+          [
+            332,
+            239
+          ],
+          [
+            336,
+            243
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            57,
+            280
+          ],
+          [
+            61,
+            284
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            102,
+            290
+          ],
+          [
+            112,
+            298
+          ]
+        ],
+        "pixels_processing": 61
+      },
+      {
+        "bounds_pixel": [
+          [
+            367,
+            291
+          ],
+          [
+            372,
+            296
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            51,
+            318
+          ],
+          [
+            55,
+            323
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            134,
+            321
+          ],
+          [
+            139,
+            326
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            242,
+            322
+          ],
+          [
+            246,
+            326
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            220,
+            325
+          ],
+          [
+            224,
+            329
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            263,
+            325
+          ],
+          [
+            267,
+            330
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            284,
+            325
+          ],
+          [
+            289,
+            329
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            307,
+            325
+          ],
+          [
+            311,
+            330
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            328,
+            325
+          ],
+          [
+            332,
+            329
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            439,
+            328
+          ],
+          [
+            445,
+            334
+          ]
+        ],
+        "pixels_processing": 25
+      },
+      {
+        "bounds_pixel": [
+          [
+            508,
+            328
+          ],
+          [
+            517,
+            336
+          ]
+        ],
+        "pixels_processing": 49
+      },
+      {
+        "bounds_pixel": [
+          [
+            486,
+            329
+          ],
+          [
+            490,
+            333
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            90,
+            330
+          ],
+          [
+            95,
+            335
+          ]
+        ],
+        "pixels_processing": 21
+      },
+      {
+        "bounds_pixel": [
+          [
+            133,
+            330
+          ],
+          [
+            138,
+            335
+          ]
+        ],
+        "pixels_processing": 21
+      },
+      {
+        "bounds_pixel": [
+          [
+            351,
+            332
+          ],
+          [
+            356,
+            337
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            220,
+            336
+          ],
+          [
+            224,
+            346
+          ]
+        ],
+        "pixels_processing": 31
+      },
+      {
+        "bounds_pixel": [
+          [
+            442,
+            336
+          ],
+          [
+            447,
+            343
+          ]
+        ],
+        "pixels_processing": 28
+      },
+      {
+        "bounds_pixel": [
+          [
+            397,
+            340
+          ],
+          [
+            401,
+            344
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            130,
+            341
+          ],
+          [
+            136,
+            347
+          ]
+        ],
+        "pixels_processing": 25
+      },
+      {
+        "bounds_pixel": [
+          [
+            91,
+            342
+          ],
+          [
+            95,
+            346
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            303,
+            346
+          ],
+          [
+            310,
+            351
+          ]
+        ],
+        "pixels_processing": 28
+      },
+      {
+        "bounds_pixel": [
+          [
+            394,
+            348
+          ],
+          [
+            399,
+            353
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            487,
+            350
+          ],
+          [
+            492,
+            355
+          ]
+        ],
+        "pixels_processing": 21
+      },
+      {
+        "bounds_pixel": [
+          [
+            304,
+            368
+          ],
+          [
+            309,
+            376
+          ]
+        ],
+        "pixels_processing": 33
+      },
+      {
+        "bounds_pixel": [
+          [
+            349,
+            370
+          ],
+          [
+            354,
+            375
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            512,
+            373
+          ],
+          [
+            516,
+            377
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            236,
+            375
+          ],
+          [
+            240,
+            380
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            255,
+            376
+          ],
+          [
+            259,
+            380
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            325,
+            376
+          ],
+          [
+            330,
+            383
+          ]
+        ],
+        "pixels_processing": 29
+      },
+      {
+        "bounds_pixel": [
+          [
+            376,
+            378
+          ],
+          [
+            380,
+            382
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            392,
+            378
+          ],
+          [
+            396,
+            383
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            436,
+            381
+          ],
+          [
+            441,
+            386
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            370,
+            393
+          ],
+          [
+            374,
+            397
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            441,
+            395
+          ],
+          [
+            445,
+            399
+          ]
+        ],
+        "pixels_processing": 13
+      }
+    ],
+    "assumptions": [
+      "Upright, approximately straight-on graph paper.",
+      "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+      "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+    ]
+  }
+}

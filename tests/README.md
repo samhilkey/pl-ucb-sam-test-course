@@ -104,3 +104,18 @@ reference separation and an offline-only preflight. No credentials or model
 requests are needed. The preflight has no live mode. See the
 [Step 4A report](../benchmarks/photo-graphs/multi-method/step-4a/REPORT.md) for
 the actual local OCR probe, provider constraints, evidence and later approval gates.
+
+## Focused contrast experiment
+
+```bash
+node --test tests/star-contrast.test.cjs tests/star-method-feasibility.test.cjs tests/star-recognition.test.cjs tests/star-geometry.test.cjs tests/star-native.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs
+/private/tmp/star-contrast-01-venv/bin/python -B -m unittest discover -s benchmarks/photo-graphs/multi-method/contrast-01 -p test_preprocess.py -v
+```
+
+See the [contrast report](../benchmarks/photo-graphs/multi-method/contrast-01/REPORT.md)
+for the pinned Python environment and full reproduction commands. The new checks
+replay all 16 frozen photo/condition inputs with network/reference reads blocked,
+verify both baseline failures, distinguish fragmented coverage from one complete
+branch, assess displaced axis candidates and preserve source pixel coordinates.
+Python checks cover fixed photometric transforms and intersection safeguards.
+Neither the tests nor the experiment run VLM inference.

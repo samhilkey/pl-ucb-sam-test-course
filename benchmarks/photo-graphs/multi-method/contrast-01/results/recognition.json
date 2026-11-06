@@ -1,0 +1,300 @@
+{
+  "experiment": "contrast-01",
+  "stage": "image_only_recognition",
+  "inference_code_sha256": "8e209f6a476719351938b339fedd54ff100aca284ac88d58d90ebfa358630f6f",
+  "recognizer_sha256": "444e7b3b4c730cabb33e12d0f4144aca1d205241cbbfea1c01324da2cd030628",
+  "geometry_validator_sha256": "88f0b7ec617aee8bd1dd5ebf08c2553d86e6e5034cb0b0687afe261e58279089",
+  "options": {},
+  "reference_reads": 0,
+  "network_requests": 0,
+  "outcomes": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "original",
+      "geometry": "real--01-multiple-lines-graph-paper/original/recognition/geometry.json",
+      "duration_ms": 157.386834,
+      "status": "abstained",
+      "geometry_sha256": "563cd45d8f6490b119f29a511dec65a31f00750096f8800ad70cf0f6833aae12",
+      "masks": {
+        "neutral": 280168,
+        "grid": 418152,
+        "dark": 5908,
+        "color": 0,
+        "ink": 0,
+        "skeleton": 0
+      },
+      "image_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "grayscale",
+      "geometry": "real--01-multiple-lines-graph-paper/grayscale/recognition/geometry.json",
+      "duration_ms": 120.25945900000005,
+      "status": "abstained",
+      "geometry_sha256": "91baf65ca4ef25361f3fb070ecec1cfc6a88fe2966410d214c2b58bfe1126a5c",
+      "masks": {
+        "neutral": 268411,
+        "grid": 418075,
+        "dark": 5899,
+        "color": 0,
+        "ink": 0,
+        "skeleton": 0
+      },
+      "image_sha256": "abcaefcb67d0398a13d3ea537236aaeec6a544431f49061956a5823f818bf12b",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "percentile",
+      "geometry": "real--01-multiple-lines-graph-paper/percentile/recognition/geometry.json",
+      "duration_ms": 146.92266599999994,
+      "status": "needs_review",
+      "geometry_sha256": "9995a6175e3ef19dee5f4b1d7f7785b35fa2b9395d934efbe7d73c9f2a1b5093",
+      "masks": {
+        "neutral": 23854,
+        "grid": 392210,
+        "dark": 9356,
+        "color": 5550,
+        "ink": 3059,
+        "skeleton": 1037
+      },
+      "image_sha256": "44862532ab698ceda41fa450b99deb142d8b46a1105d568e23eedbaab45fd364",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "background",
+      "geometry": "real--01-multiple-lines-graph-paper/background/recognition/geometry.json",
+      "duration_ms": 156.48683300000016,
+      "status": "abstained",
+      "geometry_sha256": "f3c486733ad949056adfa43bf1531989cb7167dc1ba4ad02e7b9603f717363f7",
+      "masks": {
+        "neutral": 1940,
+        "grid": 381239,
+        "dark": 420,
+        "color": 0,
+        "ink": 0,
+        "skeleton": 0
+      },
+      "image_sha256": "3ca974b5237fef08247082ed6360f16b2009b0c6775ec2fe68264554726dc9a4",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "clahe",
+      "geometry": "real--01-multiple-lines-graph-paper/clahe/recognition/geometry.json",
+      "duration_ms": 101.54266600000005,
+      "status": "needs_review",
+      "geometry_sha256": "65c7a6730c032cf1685377ac7ef5c6cb72f43306090420a3378a1e589726a72c",
+      "masks": {
+        "neutral": 216731,
+        "grid": 414766,
+        "dark": 9086,
+        "color": 0,
+        "ink": 721,
+        "skeleton": 120
+      },
+      "image_sha256": "d2d0e79d28b6e148ffb4560047d43a330938135607497b97cb7631825641dfdb",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "red",
+      "geometry": "real--01-multiple-lines-graph-paper/red/recognition/geometry.json",
+      "duration_ms": 118.8617499999998,
+      "status": "needs_review",
+      "geometry_sha256": "5f9a87585e94a9a684ee4768deb314a349cdccc13525f819926168f4f9b4e49b",
+      "masks": {
+        "neutral": 105277,
+        "grid": 369121,
+        "dark": 15362,
+        "color": 0,
+        "ink": 1089,
+        "skeleton": 164
+      },
+      "image_sha256": "7ad143a8f1824ab475a7051e486f49ab92c8a02a8bcb3eb1e2a257534dbfd672",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "green",
+      "geometry": "real--01-multiple-lines-graph-paper/green/recognition/geometry.json",
+      "duration_ms": 126.4372500000004,
+      "status": "needs_review",
+      "geometry_sha256": "a5c3bb79de029f1ffaa11221134e249441166901727631efbc6691ac27dfedf7",
+      "masks": {
+        "neutral": 29626,
+        "grid": 394412,
+        "dark": 9868,
+        "color": 0,
+        "ink": 666,
+        "skeleton": 112
+      },
+      "image_sha256": "b64531047af34ddb6f68c502386501b06ab175c3a46f2756d42a7c83230e66e1",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "condition": "blue",
+      "geometry": "real--01-multiple-lines-graph-paper/blue/recognition/geometry.json",
+      "duration_ms": 118.53695799999969,
+      "status": "needs_review",
+      "geometry_sha256": "51098fb6610224b45899a06191b545c70770d1db871527aad796551207e3a7a6",
+      "masks": {
+        "neutral": 70175,
+        "grid": 380645,
+        "dark": 12765,
+        "color": 0,
+        "ink": 639,
+        "skeleton": 98
+      },
+      "image_sha256": "8ebfb0da2d2ac0fbba6e742dcdc86baab99734d7f545938df5bc1c8a3e459b6d",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "original",
+      "geometry": "real--06-piecewise-graph-paper/original/recognition/geometry.json",
+      "duration_ms": 65.1700420000002,
+      "status": "needs_review",
+      "geometry_sha256": "4fa0a01ce808decca9fcb4506768f71f94d4f0a3e1778b0947c14f89efbc2b00",
+      "masks": {
+        "neutral": 11053,
+        "grid": 218995,
+        "dark": 3747,
+        "color": 0,
+        "ink": 223,
+        "skeleton": 38
+      },
+      "image_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "grayscale",
+      "geometry": "real--06-piecewise-graph-paper/grayscale/recognition/geometry.json",
+      "duration_ms": 49.617499999999836,
+      "status": "needs_review",
+      "geometry_sha256": "ef1df3037d56faddfeda531393709200eebe88013bda5d65d31111e089b7b114",
+      "masks": {
+        "neutral": 10767,
+        "grid": 218962,
+        "dark": 3703,
+        "color": 0,
+        "ink": 144,
+        "skeleton": 29
+      },
+      "image_sha256": "9b1bfbac7e9a9a135ed5242cf1d410ac683ff8e0499c22352d859766ca664a57",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "percentile",
+      "geometry": "real--06-piecewise-graph-paper/percentile/recognition/geometry.json",
+      "duration_ms": 51.58016699999962,
+      "status": "needs_review",
+      "geometry_sha256": "a11c70b94e2a931688f0d9ca93585de5b9ce76bcb687e35d727d8ef7140b8727",
+      "masks": {
+        "neutral": 33399,
+        "grid": 196070,
+        "dark": 16059,
+        "color": 438,
+        "ink": 904,
+        "skeleton": 224
+      },
+      "image_sha256": "8afa34aacda9847717aa280e77a93a5f3f7918fee7c161ea096b4cba44b1d52b",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "background",
+      "geometry": "real--06-piecewise-graph-paper/background/recognition/geometry.json",
+      "duration_ms": 48.57875000000013,
+      "status": "needs_review",
+      "geometry_sha256": "7af26238fa8eafabeed9df368a8a464794126a08c5f99005b1b3aa5b6774060d",
+      "masks": {
+        "neutral": 3016,
+        "grid": 126569,
+        "dark": 992,
+        "color": 0,
+        "ink": 132,
+        "skeleton": 27
+      },
+      "image_sha256": "2c33f654842c22595f385a1b436f3cf8eb074defc27422badffcb0eadad61666",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "clahe",
+      "geometry": "real--06-piecewise-graph-paper/clahe/recognition/geometry.json",
+      "duration_ms": 52.422165999999834,
+      "status": "needs_review",
+      "geometry_sha256": "5ac8d7e03defce1bc4edfe98724487c09f41d7bfec3968e2555174cf83c06867",
+      "masks": {
+        "neutral": 34979,
+        "grid": 209302,
+        "dark": 15575,
+        "color": 0,
+        "ink": 950,
+        "skeleton": 185
+      },
+      "image_sha256": "771943ac77be5135a59ed64ebbecf95fcc6c991da0b4d6da4665a69e99bc571a",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "red",
+      "geometry": "real--06-piecewise-graph-paper/red/recognition/geometry.json",
+      "duration_ms": 53.193207999999686,
+      "status": "needs_review",
+      "geometry_sha256": "2c3b56381325ac098b44a7b4b15b15897d27e1cdbac303da81f6cf552d6ded87",
+      "masks": {
+        "neutral": 37429,
+        "grid": 194517,
+        "dark": 16450,
+        "color": 0,
+        "ink": 834,
+        "skeleton": 160
+      },
+      "image_sha256": "5359ae8eece7b8547037e88c0cff6391a49aac9cf95fe8e3293f850dd9cc5eb1",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "green",
+      "geometry": "real--06-piecewise-graph-paper/green/recognition/geometry.json",
+      "duration_ms": 50.98341700000037,
+      "status": "needs_review",
+      "geometry_sha256": "f2e290e523b8bacb5deb402e47cb93d8e979cc25f4612e7b4aa5dfb3825e4344",
+      "masks": {
+        "neutral": 34617,
+        "grid": 196456,
+        "dark": 16662,
+        "color": 0,
+        "ink": 890,
+        "skeleton": 171
+      },
+      "image_sha256": "9c1bcf3ec9276236b7928754edd3228836fda8b31fd64b2854f3a0d30743bd09",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "condition": "blue",
+      "geometry": "real--06-piecewise-graph-paper/blue/recognition/geometry.json",
+      "duration_ms": 51.20625000000018,
+      "status": "needs_review",
+      "geometry_sha256": "ee015f58a0590d02a6c8ed80d755173a7972b8d5703dff673ec2c22a8fa3b2b3",
+      "masks": {
+        "neutral": 45025,
+        "grid": 196433,
+        "dark": 16316,
+        "color": 0,
+        "ink": 978,
+        "skeleton": 194
+      },
+      "image_sha256": "833b2c2c20d089ff2ebbf5dddae270ab868f149536433b60dec01834e445b232",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    }
+  ]
+}

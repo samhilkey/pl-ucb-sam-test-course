@@ -1,0 +1,190 @@
+{
+  "id": "real--06-piecewise-graph-paper",
+  "condition": "percentile",
+  "geometry": "real--06-piecewise-graph-paper/percentile/recognition/geometry.json",
+  "duration_ms": 51.58016699999962,
+  "status": "needs_review",
+  "geometry_sha256": "a11c70b94e2a931688f0d9ca93585de5b9ce76bcb687e35d727d8ef7140b8727",
+  "masks": {
+    "neutral": 33399,
+    "grid": 196070,
+    "dark": 16059,
+    "color": 438,
+    "ink": 904,
+    "skeleton": 224
+  },
+  "image_sha256": "8afa34aacda9847717aa280e77a93a5f3f7918fee7c161ea096b4cba44b1d52b",
+  "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+  "baseline_exact_reproduction": null,
+  "transform_duration_ms": 6.095415912568569,
+  "metrics": {
+    "inherited": {
+      "expected_strokes": 1,
+      "extracted_paths": 17,
+      "extracted_components": 6,
+      "branch_count_correct": false,
+      "missing_strokes": 0,
+      "partially_missing_strokes": 1,
+      "false_connections": 0,
+      "spurious_paths": 13,
+      "reference_to_geometry_p95_pixel": 79.27897735213288,
+      "geometry_to_reference_p95_pixel": 248.7497541407629,
+      "reference_centerline_coverage_within_3px": [
+        0.18855218855218855
+      ],
+      "endpoint_max_error_pixel": 88.60022573334675,
+      "corner_error_pixel": 253.51331325987596,
+      "axis_origin_error_pixel": null,
+      "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+    },
+    "reference_coverage": {
+      "within_3px_per_branch": [
+        0.18855218855218855
+      ],
+      "within_5px_per_branch": [
+        0.22895622895622897
+      ],
+      "within_10px_per_branch": [
+        0.3181818181818182
+      ]
+    },
+    "best_single_path_coverage_within_3px_per_branch": [
+      0.05555555555555555
+    ],
+    "matched_path_fragments_per_branch": [
+      4
+    ],
+    "output_length_farther_than_5px_fraction": 0.5378151260504201,
+    "output_arclength_samples": 238,
+    "junction_count": 6,
+    "component_count": 6,
+    "mask_reference_coverage_within_3px_per_branch": {
+      "dark": [
+        0.8518518518518519
+      ],
+      "ink": [
+        0.2474747474747475
+      ],
+      "skeleton": [
+        0.1936026936026936
+      ]
+    },
+    "overlap_regions": [
+      {
+        "id": "left-axis-endpoint",
+        "kind": "axis_endpoint",
+        "pixel": [
+          53,
+          324
+        ],
+        "radius_pixel": 12,
+        "reference_samples": 13,
+        "geometry_coverage_within_3px": 0,
+        "best_single_path_coverage_within_3px": 0,
+        "mask_coverage_within_3px": {
+          "dark": 1,
+          "ink": 0,
+          "skeleton": 0
+        }
+      },
+      {
+        "id": "right-axis-endpoint",
+        "kind": "axis_endpoint",
+        "pixel": [
+          398,
+          329
+        ],
+        "radius_pixel": 12,
+        "reference_samples": 13,
+        "geometry_coverage_within_3px": 1,
+        "best_single_path_coverage_within_3px": 1,
+        "mask_coverage_within_3px": {
+          "dark": 1,
+          "ink": 1,
+          "skeleton": 1
+        }
+      },
+      {
+        "id": "peak-on-grid",
+        "kind": "grid_overlap_and_corner",
+        "pixel": [
+          241,
+          95
+        ],
+        "radius_pixel": 12,
+        "reference_samples": 25,
+        "geometry_coverage_within_3px": 0,
+        "best_single_path_coverage_within_3px": 0,
+        "mask_coverage_within_3px": {
+          "dark": 1,
+          "ink": 0,
+          "skeleton": 0
+        }
+      }
+    ],
+    "scale_calibration": {
+      "status": "uncertain",
+      "x_status": "unknown",
+      "y_status": "unknown",
+      "x_labels": [],
+      "y_labels": [],
+      "independently_measured_scale_accuracy": null,
+      "note": "No independent numeric tick/scale annotation; unknown is not zero error. Raw label evidence retained for inspection."
+    }
+  },
+  "axes": {
+    "x": {
+      "reported_status": "uncertain",
+      "candidates": [],
+      "matches_visible_axis_diagnostic": false
+    },
+    "y": {
+      "reported_status": "uncertain",
+      "candidates": [
+        {
+          "start": [
+            353,
+            0
+          ],
+          "end": [
+            353,
+            419
+          ],
+          "support": 0.6357142857142857,
+          "width_pixel": 1,
+          "angle_error_degrees": 10.272208603020772,
+          "reference_line_p95_distance_pixel": 300.15555555555557,
+          "matches_approximate_axis": false
+        },
+        {
+          "start": [
+            374,
+            0
+          ],
+          "end": [
+            374,
+            419
+          ],
+          "support": 0.7738095238095238,
+          "width_pixel": 1,
+          "angle_error_degrees": 10.272208603020772,
+          "reference_line_p95_distance_pixel": 321.15555555555557,
+          "matches_approximate_axis": false
+        }
+      ],
+      "matches_visible_axis_diagnostic": false
+    }
+  },
+  "independent_accuracy_claim": false,
+  "automatic_success": false,
+  "warnings": [
+    "ambiguous_axes",
+    "uncertain_grid",
+    "unknown_x_scale",
+    "unknown_y_scale",
+    "ink_junction",
+    "clipped_ink",
+    "clipped_ink",
+    "clipped_ink"
+  ]
+}

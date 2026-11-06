@@ -1,0 +1,10573 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 801,
+    "height": 529,
+    "processing": {
+      "width": 801,
+      "height": 529,
+      "source_to_processing": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "coordinate_frame": {
+    "status": "uncertain",
+    "origin_pixel": null,
+    "axes": {
+      "x": {
+        "status": "uncertain",
+        "candidates": []
+      },
+      "y": {
+        "status": "uncertain",
+        "candidates": []
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          406.05143418066854
+        ]
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          263.85068968154815
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "strokes": [
+    {
+      "id": "stroke-1",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            510,
+            2
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            484,
+            4
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-2",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            758,
+            10
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            702,
+            14
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-3",
+      "component_id": "component-3",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            682,
+            19
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            679,
+            14
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            663,
+            17
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-4",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            528,
+            19
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            528,
+            30
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-5",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            528,
+            30
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            516,
+            30
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-6",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            528,
+            30
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            529,
+            30
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-7",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            529,
+            30
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            536,
+            27
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            551,
+            26
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-8",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            529,
+            30
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            529,
+            34
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-9",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            224,
+            23
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            224,
+            26
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-10",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            224,
+            26
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            227,
+            27
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-11",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            224,
+            26
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            224,
+            29
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-12",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            227,
+            27
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            229,
+            27
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            228,
+            34
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-13",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            227,
+            27
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            228,
+            34
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-14",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            228,
+            34
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            228,
+            44
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-15",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            228,
+            44
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            225,
+            42
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            225,
+            32
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-16",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            228,
+            44
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            228,
+            45
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-17",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            228,
+            45
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            230,
+            45
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            230,
+            43
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-18",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            228,
+            45
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            228,
+            51
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-19",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            228,
+            51
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            226,
+            52
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            226,
+            55
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-20",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            228,
+            51
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            229,
+            55
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-21",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            226,
+            55
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            229,
+            55
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-22",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            226,
+            55
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            226,
+            58
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            229,
+            58
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-23",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            229,
+            55
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            229,
+            58
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-24",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            229,
+            58
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            231,
+            59
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            231,
+            72
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-25",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            229,
+            58
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            229,
+            69
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-26",
+      "component_id": "component-6",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            593,
+            23
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            572,
+            24
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-27",
+      "component_id": "component-7",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            512,
+            31
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            497,
+            33
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-28",
+      "component_id": "component-7",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            497,
+            33
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            493,
+            34
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-29",
+      "component_id": "component-7",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            497,
+            33
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            497,
+            38
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-30",
+      "component_id": "component-8",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            467,
+            36
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            467,
+            38
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            471,
+            35
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            482,
+            36
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-31",
+      "component_id": "component-9",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            760,
+            40
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            775,
+            41
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            777,
+            37
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            781,
+            39
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            800,
+            38
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-32",
+      "component_id": "component-10",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            752,
+            41
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            736,
+            43
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-33",
+      "component_id": "component-11",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            683,
+            43
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            684,
+            46
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-34",
+      "component_id": "component-11",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            684,
+            46
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            685,
+            46
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-35",
+      "component_id": "component-11",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            684,
+            46
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            682,
+            48
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            670,
+            47
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            660,
+            49
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            652,
+            47
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-36",
+      "component_id": "component-11",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            685,
+            46
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            686,
+            43
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-37",
+      "component_id": "component-11",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            685,
+            46
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            694,
+            47
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            703,
+            45
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            712,
+            46
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            714,
+            44
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            730,
+            44
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-38",
+      "component_id": "component-12",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            588,
+            55
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            566,
+            56
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            550,
+            59
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-39",
+      "component_id": "component-13",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            526,
+            60
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            522,
+            62
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            507,
+            63
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            504,
+            65
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            495,
+            64
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-40",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            784,
+            71
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            780,
+            71
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            780,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-41",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            779,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            775,
+            73
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            768,
+            74
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-42",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            779,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            780,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-43",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            779,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            779,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-44",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            780,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            780,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-45",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            779,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            776,
+            80
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-46",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            779,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            780,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-47",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            780,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            781,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-48",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            781,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            786,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-49",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            781,
+            76
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            781,
+            79
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            777,
+            83
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-50",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            768,
+            74
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            765,
+            73
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            765,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-51",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            768,
+            74
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            765,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-52",
+      "component_id": "component-14",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            765,
+            75
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            758,
+            77
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            755,
+            80
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-53",
+      "component_id": "component-15",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            509,
+            92
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            509,
+            94
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            531,
+            92
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            532,
+            98
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-54",
+      "component_id": "component-16",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            716,
+            239
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            720,
+            244
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            720,
+            247
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            716,
+            249
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-55",
+      "component_id": "component-16",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            716,
+            249
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            711,
+            249
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-56",
+      "component_id": "component-16",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            716,
+            249
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            715,
+            255
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-57",
+      "component_id": "component-16",
+      "kind": "polyline",
+      "closed": true,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            711,
+            249
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            709,
+            251
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            711,
+            249
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-58",
+      "component_id": "component-17",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            699,
+            254
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            689,
+            257
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-59",
+      "component_id": "component-18",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            228,
+            256
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            221,
+            258
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            214,
+            257
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-60",
+      "component_id": "component-19",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            37,
+            318
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            30,
+            320
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            25,
+            324
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            21,
+            324
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-61",
+      "component_id": "component-20",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            783,
+            337
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            784,
+            334
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            789,
+            333
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            800,
+            334
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-62",
+      "component_id": "component-21",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            779,
+            382
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            779,
+            391
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-63",
+      "component_id": "component-21",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            779,
+            391
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            797,
+            390
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-64",
+      "component_id": "component-21",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            779,
+            391
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            775,
+            392
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-65",
+      "component_id": "component-21",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            797,
+            390
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            800,
+            388
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-66",
+      "component_id": "component-21",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            797,
+            390
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            800,
+            392
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-67",
+      "component_id": "component-22",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            754,
+            420
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            740,
+            422
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-68",
+      "component_id": "component-23",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            663,
+            427
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            684,
+            426
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-69",
+      "component_id": "component-24",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            607,
+            479
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            607,
+            484
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-70",
+      "component_id": "component-24",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            607,
+            484
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            603,
+            485
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-71",
+      "component_id": "component-24",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            607,
+            484
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            624,
+            484
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-72",
+      "component_id": "component-25",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            800,
+            497
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            797,
+            496
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            789,
+            499
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            772,
+            500
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-73",
+      "component_id": "component-26",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            749,
+            501
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            750,
+            499
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            751,
+            501
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-74",
+      "component_id": "component-26",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            749,
+            501
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            751,
+            501
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-75",
+      "component_id": "component-26",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            749,
+            501
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            742,
+            503
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-76",
+      "component_id": "component-26",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            751,
+            501
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            760,
+            502
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            766,
+            500
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-77",
+      "component_id": "component-27",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            722,
+            505
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            727,
+            503
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            736,
+            503
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-78",
+      "component_id": "component-27",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            722,
+            505
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            688,
+            506
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-79",
+      "component_id": "component-27",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            722,
+            505
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            721,
+            508
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-80",
+      "component_id": "component-28",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            638,
+            505
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            637,
+            510
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-81",
+      "component_id": "component-28",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            637,
+            510
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            627,
+            509
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-82",
+      "component_id": "component-28",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            637,
+            510
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            637,
+            514
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-83",
+      "component_id": "component-28",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            627,
+            509
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            622,
+            510
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-84",
+      "component_id": "component-28",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            627,
+            509
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            627,
+            512
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-85",
+      "component_id": "component-28",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            622,
+            510
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            614,
+            510
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-86",
+      "component_id": "component-28",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            622,
+            510
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            622,
+            513
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-87",
+      "component_id": "component-29",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            663,
+            508
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            662,
+            507
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            661,
+            509
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-88",
+      "component_id": "component-29",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            663,
+            508
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            671,
+            507
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-89",
+      "component_id": "component-29",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            663,
+            508
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            661,
+            509
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-90",
+      "component_id": "component-29",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 1.25,
+      "vertices": [
+        {
+          "pixel": [
+            661,
+            509
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            653,
+            508
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    }
+  ],
+  "topology": {
+    "stroke_count": 90,
+    "component_count": 29,
+    "components": [
+      {
+        "id": "component-1",
+        "stroke_ids": [
+          "stroke-1"
+        ]
+      },
+      {
+        "id": "component-2",
+        "stroke_ids": [
+          "stroke-2"
+        ]
+      },
+      {
+        "id": "component-3",
+        "stroke_ids": [
+          "stroke-3"
+        ]
+      },
+      {
+        "id": "component-4",
+        "stroke_ids": [
+          "stroke-4",
+          "stroke-5",
+          "stroke-6",
+          "stroke-7",
+          "stroke-8"
+        ]
+      },
+      {
+        "id": "component-5",
+        "stroke_ids": [
+          "stroke-9",
+          "stroke-10",
+          "stroke-11",
+          "stroke-12",
+          "stroke-13",
+          "stroke-14",
+          "stroke-15",
+          "stroke-16",
+          "stroke-17",
+          "stroke-18",
+          "stroke-19",
+          "stroke-20",
+          "stroke-21",
+          "stroke-22",
+          "stroke-23",
+          "stroke-24",
+          "stroke-25"
+        ]
+      },
+      {
+        "id": "component-6",
+        "stroke_ids": [
+          "stroke-26"
+        ]
+      },
+      {
+        "id": "component-7",
+        "stroke_ids": [
+          "stroke-27",
+          "stroke-28",
+          "stroke-29"
+        ]
+      },
+      {
+        "id": "component-8",
+        "stroke_ids": [
+          "stroke-30"
+        ]
+      },
+      {
+        "id": "component-9",
+        "stroke_ids": [
+          "stroke-31"
+        ]
+      },
+      {
+        "id": "component-10",
+        "stroke_ids": [
+          "stroke-32"
+        ]
+      },
+      {
+        "id": "component-11",
+        "stroke_ids": [
+          "stroke-33",
+          "stroke-34",
+          "stroke-35",
+          "stroke-36",
+          "stroke-37"
+        ]
+      },
+      {
+        "id": "component-12",
+        "stroke_ids": [
+          "stroke-38"
+        ]
+      },
+      {
+        "id": "component-13",
+        "stroke_ids": [
+          "stroke-39"
+        ]
+      },
+      {
+        "id": "component-14",
+        "stroke_ids": [
+          "stroke-40",
+          "stroke-41",
+          "stroke-42",
+          "stroke-43",
+          "stroke-44",
+          "stroke-45",
+          "stroke-46",
+          "stroke-47",
+          "stroke-48",
+          "stroke-49",
+          "stroke-50",
+          "stroke-51",
+          "stroke-52"
+        ]
+      },
+      {
+        "id": "component-15",
+        "stroke_ids": [
+          "stroke-53"
+        ]
+      },
+      {
+        "id": "component-16",
+        "stroke_ids": [
+          "stroke-54",
+          "stroke-55",
+          "stroke-56",
+          "stroke-57"
+        ]
+      },
+      {
+        "id": "component-17",
+        "stroke_ids": [
+          "stroke-58"
+        ]
+      },
+      {
+        "id": "component-18",
+        "stroke_ids": [
+          "stroke-59"
+        ]
+      },
+      {
+        "id": "component-19",
+        "stroke_ids": [
+          "stroke-60"
+        ]
+      },
+      {
+        "id": "component-20",
+        "stroke_ids": [
+          "stroke-61"
+        ]
+      },
+      {
+        "id": "component-21",
+        "stroke_ids": [
+          "stroke-62",
+          "stroke-63",
+          "stroke-64",
+          "stroke-65",
+          "stroke-66"
+        ]
+      },
+      {
+        "id": "component-22",
+        "stroke_ids": [
+          "stroke-67"
+        ]
+      },
+      {
+        "id": "component-23",
+        "stroke_ids": [
+          "stroke-68"
+        ]
+      },
+      {
+        "id": "component-24",
+        "stroke_ids": [
+          "stroke-69",
+          "stroke-70",
+          "stroke-71"
+        ]
+      },
+      {
+        "id": "component-25",
+        "stroke_ids": [
+          "stroke-72"
+        ]
+      },
+      {
+        "id": "component-26",
+        "stroke_ids": [
+          "stroke-73",
+          "stroke-74",
+          "stroke-75",
+          "stroke-76"
+        ]
+      },
+      {
+        "id": "component-27",
+        "stroke_ids": [
+          "stroke-77",
+          "stroke-78",
+          "stroke-79"
+        ]
+      },
+      {
+        "id": "component-28",
+        "stroke_ids": [
+          "stroke-80",
+          "stroke-81",
+          "stroke-82",
+          "stroke-83",
+          "stroke-84",
+          "stroke-85",
+          "stroke-86"
+        ]
+      },
+      {
+        "id": "component-29",
+        "stroke_ids": [
+          "stroke-87",
+          "stroke-88",
+          "stroke-89",
+          "stroke-90"
+        ]
+      }
+    ],
+    "junctions": [
+      {
+        "pixel": [
+          528,
+          30
+        ],
+        "stroke_ids": [
+          "stroke-4",
+          "stroke-5",
+          "stroke-6"
+        ]
+      },
+      {
+        "pixel": [
+          529,
+          30
+        ],
+        "stroke_ids": [
+          "stroke-6",
+          "stroke-7",
+          "stroke-8"
+        ]
+      },
+      {
+        "pixel": [
+          224,
+          26
+        ],
+        "stroke_ids": [
+          "stroke-9",
+          "stroke-10",
+          "stroke-11"
+        ]
+      },
+      {
+        "pixel": [
+          227,
+          27
+        ],
+        "stroke_ids": [
+          "stroke-10",
+          "stroke-12",
+          "stroke-13"
+        ]
+      },
+      {
+        "pixel": [
+          228,
+          34
+        ],
+        "stroke_ids": [
+          "stroke-12",
+          "stroke-13",
+          "stroke-14"
+        ]
+      },
+      {
+        "pixel": [
+          228,
+          44
+        ],
+        "stroke_ids": [
+          "stroke-14",
+          "stroke-15",
+          "stroke-16"
+        ]
+      },
+      {
+        "pixel": [
+          228,
+          45
+        ],
+        "stroke_ids": [
+          "stroke-16",
+          "stroke-17",
+          "stroke-18"
+        ]
+      },
+      {
+        "pixel": [
+          228,
+          51
+        ],
+        "stroke_ids": [
+          "stroke-18",
+          "stroke-19",
+          "stroke-20"
+        ]
+      },
+      {
+        "pixel": [
+          226,
+          55
+        ],
+        "stroke_ids": [
+          "stroke-19",
+          "stroke-21",
+          "stroke-22"
+        ]
+      },
+      {
+        "pixel": [
+          229,
+          55
+        ],
+        "stroke_ids": [
+          "stroke-20",
+          "stroke-21",
+          "stroke-23"
+        ]
+      },
+      {
+        "pixel": [
+          229,
+          58
+        ],
+        "stroke_ids": [
+          "stroke-22",
+          "stroke-23",
+          "stroke-24",
+          "stroke-25"
+        ]
+      },
+      {
+        "pixel": [
+          497,
+          33
+        ],
+        "stroke_ids": [
+          "stroke-27",
+          "stroke-28",
+          "stroke-29"
+        ]
+      },
+      {
+        "pixel": [
+          684,
+          46
+        ],
+        "stroke_ids": [
+          "stroke-33",
+          "stroke-34",
+          "stroke-35"
+        ]
+      },
+      {
+        "pixel": [
+          685,
+          46
+        ],
+        "stroke_ids": [
+          "stroke-34",
+          "stroke-36",
+          "stroke-37"
+        ]
+      },
+      {
+        "pixel": [
+          779,
+          75
+        ],
+        "stroke_ids": [
+          "stroke-41",
+          "stroke-42",
+          "stroke-43"
+        ]
+      },
+      {
+        "pixel": [
+          780,
+          75
+        ],
+        "stroke_ids": [
+          "stroke-40",
+          "stroke-42",
+          "stroke-44"
+        ]
+      },
+      {
+        "pixel": [
+          779,
+          76
+        ],
+        "stroke_ids": [
+          "stroke-43",
+          "stroke-45",
+          "stroke-46"
+        ]
+      },
+      {
+        "pixel": [
+          780,
+          76
+        ],
+        "stroke_ids": [
+          "stroke-44",
+          "stroke-46",
+          "stroke-47"
+        ]
+      },
+      {
+        "pixel": [
+          781,
+          76
+        ],
+        "stroke_ids": [
+          "stroke-47",
+          "stroke-48",
+          "stroke-49"
+        ]
+      },
+      {
+        "pixel": [
+          768,
+          74
+        ],
+        "stroke_ids": [
+          "stroke-41",
+          "stroke-50",
+          "stroke-51"
+        ]
+      },
+      {
+        "pixel": [
+          765,
+          75
+        ],
+        "stroke_ids": [
+          "stroke-50",
+          "stroke-51",
+          "stroke-52"
+        ]
+      },
+      {
+        "pixel": [
+          716,
+          249
+        ],
+        "stroke_ids": [
+          "stroke-54",
+          "stroke-55",
+          "stroke-56"
+        ]
+      },
+      {
+        "pixel": [
+          711,
+          249
+        ],
+        "stroke_ids": [
+          "stroke-55",
+          "stroke-57"
+        ]
+      },
+      {
+        "pixel": [
+          779,
+          391
+        ],
+        "stroke_ids": [
+          "stroke-62",
+          "stroke-63",
+          "stroke-64"
+        ]
+      },
+      {
+        "pixel": [
+          797,
+          390
+        ],
+        "stroke_ids": [
+          "stroke-63",
+          "stroke-65",
+          "stroke-66"
+        ]
+      },
+      {
+        "pixel": [
+          607,
+          484
+        ],
+        "stroke_ids": [
+          "stroke-69",
+          "stroke-70",
+          "stroke-71"
+        ]
+      },
+      {
+        "pixel": [
+          749,
+          501
+        ],
+        "stroke_ids": [
+          "stroke-73",
+          "stroke-74",
+          "stroke-75"
+        ]
+      },
+      {
+        "pixel": [
+          751,
+          501
+        ],
+        "stroke_ids": [
+          "stroke-73",
+          "stroke-74",
+          "stroke-76"
+        ]
+      },
+      {
+        "pixel": [
+          722,
+          505
+        ],
+        "stroke_ids": [
+          "stroke-77",
+          "stroke-78",
+          "stroke-79"
+        ]
+      },
+      {
+        "pixel": [
+          637,
+          510
+        ],
+        "stroke_ids": [
+          "stroke-80",
+          "stroke-81",
+          "stroke-82"
+        ]
+      },
+      {
+        "pixel": [
+          627,
+          509
+        ],
+        "stroke_ids": [
+          "stroke-81",
+          "stroke-83",
+          "stroke-84"
+        ]
+      },
+      {
+        "pixel": [
+          622,
+          510
+        ],
+        "stroke_ids": [
+          "stroke-83",
+          "stroke-85",
+          "stroke-86"
+        ]
+      },
+      {
+        "pixel": [
+          663,
+          508
+        ],
+        "stroke_ids": [
+          "stroke-87",
+          "stroke-88",
+          "stroke-89"
+        ]
+      },
+      {
+        "pixel": [
+          661,
+          509
+        ],
+        "stroke_ids": [
+          "stroke-87",
+          "stroke-89",
+          "stroke-90"
+        ]
+      }
+    ]
+  },
+  "status": "needs_review",
+  "warnings": [
+    {
+      "code": "ambiguous_axes",
+      "message": "A unique upright dark axis pair was not detected. Confirm the coordinate frame."
+    },
+    {
+      "code": "uncertain_grid",
+      "message": "Regular graph-paper spacing was not recovered on both axes."
+    },
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    },
+    {
+      "code": "ink_junction",
+      "message": "Touching or branching ink has multiple possible paths; no branch pairing was guessed."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    },
+    {
+      "code": "clipped_ink",
+      "message": "Ink reaches the image boundary; its visible extent may be clipped."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "axes",
+      "reason": "ambiguous_axes"
+    },
+    {
+      "target": "grid",
+      "reason": "uncertain_grid"
+    },
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    },
+    {
+      "target": "strokes",
+      "reason": "ink_junction"
+    },
+    {
+      "target": "stroke-1",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-31",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-61",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-65",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-66",
+      "reason": "clipped_ink"
+    },
+    {
+      "target": "stroke-72",
+      "reason": "clipped_ink"
+    }
+  ],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [
+      {
+        "pixel": [
+          528,
+          30
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          529,
+          30
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          224,
+          26
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          227,
+          27
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          228,
+          34
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          228,
+          44
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          228,
+          45
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          228,
+          51
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          226,
+          55
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          229,
+          55
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          229,
+          58
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          497,
+          33
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          684,
+          46
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          685,
+          46
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          779,
+          75
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          780,
+          75
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          779,
+          76
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          780,
+          76
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          781,
+          76
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          768,
+          74
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          765,
+          75
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          716,
+          249
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          711,
+          249
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          779,
+          391
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          797,
+          390
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          607,
+          484
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          749,
+          501
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          751,
+          501
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          722,
+          505
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          637,
+          510
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          627,
+          509
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          622,
+          510
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          663,
+          508
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          661,
+          509
+        ],
+        "reason": "ink_junction"
+      }
+    ],
+    "rejected_small_components": [
+      {
+        "bounds_pixel": [
+          [
+            101,
+            1
+          ],
+          [
+            101,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            679,
+            1
+          ],
+          [
+            679,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            678,
+            1
+          ],
+          [
+            683,
+            5
+          ]
+        ],
+        "pixels_processing": 14
+      },
+      {
+        "bounds_pixel": [
+          [
+            707,
+            1
+          ],
+          [
+            707,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            709,
+            1
+          ],
+          [
+            713,
+            7
+          ]
+        ],
+        "pixels_processing": 17
+      },
+      {
+        "bounds_pixel": [
+          [
+            723,
+            1
+          ],
+          [
+            723,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            738,
+            1
+          ],
+          [
+            740,
+            1
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            744,
+            1
+          ],
+          [
+            744,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            749,
+            1
+          ],
+          [
+            749,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            759,
+            1
+          ],
+          [
+            759,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            761,
+            1
+          ],
+          [
+            761,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            763,
+            1
+          ],
+          [
+            763,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            767,
+            1
+          ],
+          [
+            768,
+            1
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            781,
+            1
+          ],
+          [
+            781,
+            1
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            793,
+            1
+          ],
+          [
+            800,
+            3
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            173,
+            2
+          ],
+          [
+            174,
+            4
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            197,
+            2
+          ],
+          [
+            197,
+            4
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            512,
+            2
+          ],
+          [
+            512,
+            2
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            592,
+            2
+          ],
+          [
+            594,
+            3
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            620,
+            2
+          ],
+          [
+            623,
+            9
+          ]
+        ],
+        "pixels_processing": 10
+      },
+      {
+        "bounds_pixel": [
+          [
+            650,
+            2
+          ],
+          [
+            652,
+            3
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            123,
+            3
+          ],
+          [
+            125,
+            8
+          ]
+        ],
+        "pixels_processing": 11
+      },
+      {
+        "bounds_pixel": [
+          [
+            147,
+            3
+          ],
+          [
+            149,
+            5
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            526,
+            3
+          ],
+          [
+            526,
+            3
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            557,
+            3
+          ],
+          [
+            557,
+            3
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            588,
+            3
+          ],
+          [
+            589,
+            6
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            662,
+            3
+          ],
+          [
+            662,
+            3
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            742,
+            3
+          ],
+          [
+            746,
+            7
+          ]
+        ],
+        "pixels_processing": 11
+      },
+      {
+        "bounds_pixel": [
+          [
+            766,
+            3
+          ],
+          [
+            767,
+            3
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            800,
+            3
+          ],
+          [
+            800,
+            3
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            142,
+            4
+          ],
+          [
+            142,
+            5
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            154,
+            4
+          ],
+          [
+            156,
+            5
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            634,
+            4
+          ],
+          [
+            636,
+            4
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            638,
+            4
+          ],
+          [
+            638,
+            4
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            749,
+            4
+          ],
+          [
+            749,
+            5
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            76,
+            5
+          ],
+          [
+            77,
+            7
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            642,
+            5
+          ],
+          [
+            653,
+            19
+          ]
+        ],
+        "pixels_processing": 56
+      },
+      {
+        "bounds_pixel": [
+          [
+            791,
+            5
+          ],
+          [
+            800,
+            10
+          ]
+        ],
+        "pixels_processing": 38
+      },
+      {
+        "bounds_pixel": [
+          [
+            100,
+            6
+          ],
+          [
+            101,
+            7
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            469,
+            6
+          ],
+          [
+            469,
+            7
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            471,
+            6
+          ],
+          [
+            472,
+            7
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            475,
+            6
+          ],
+          [
+            475,
+            7
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            527,
+            6
+          ],
+          [
+            529,
+            13
+          ]
+        ],
+        "pixels_processing": 15
+      },
+      {
+        "bounds_pixel": [
+          [
+            558,
+            6
+          ],
+          [
+            559,
+            8
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            698,
+            6
+          ],
+          [
+            698,
+            6
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            738,
+            6
+          ],
+          [
+            741,
+            7
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            109,
+            7
+          ],
+          [
+            109,
+            7
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            461,
+            7
+          ],
+          [
+            463,
+            7
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            465,
+            7
+          ],
+          [
+            465,
+            7
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            614,
+            7
+          ],
+          [
+            614,
+            9
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            761,
+            7
+          ],
+          [
+            763,
+            11
+          ]
+        ],
+        "pixels_processing": 11
+      },
+      {
+        "bounds_pixel": [
+          [
+            783,
+            7
+          ],
+          [
+            789,
+            9
+          ]
+        ],
+        "pixels_processing": 15
+      },
+      {
+        "bounds_pixel": [
+          [
+            765,
+            8
+          ],
+          [
+            775,
+            13
+          ]
+        ],
+        "pixels_processing": 33
+      },
+      {
+        "bounds_pixel": [
+          [
+            446,
+            11
+          ],
+          [
+            446,
+            11
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            448,
+            11
+          ],
+          [
+            451,
+            12
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            463,
+            12
+          ],
+          [
+            463,
+            12
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            557,
+            12
+          ],
+          [
+            561,
+            19
+          ]
+        ],
+        "pixels_processing": 20
+      },
+      {
+        "bounds_pixel": [
+          [
+            76,
+            13
+          ],
+          [
+            76,
+            13
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            300,
+            13
+          ],
+          [
+            301,
+            15
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            442,
+            13
+          ],
+          [
+            444,
+            13
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            645,
+            13
+          ],
+          [
+            645,
+            14
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            688,
+            13
+          ],
+          [
+            693,
+            16
+          ]
+        ],
+        "pixels_processing": 15
+      },
+      {
+        "bounds_pixel": [
+          [
+            695,
+            13
+          ],
+          [
+            697,
+            14
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            438,
+            14
+          ],
+          [
+            439,
+            14
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            496,
+            14
+          ],
+          [
+            497,
+            17
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            550,
+            14
+          ],
+          [
+            550,
+            14
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            590,
+            14
+          ],
+          [
+            592,
+            17
+          ]
+        ],
+        "pixels_processing": 10
+      },
+      {
+        "bounds_pixel": [
+          [
+            150,
+            15
+          ],
+          [
+            150,
+            16
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            739,
+            16
+          ],
+          [
+            741,
+            21
+          ]
+        ],
+        "pixels_processing": 17
+      },
+      {
+        "bounds_pixel": [
+          [
+            613,
+            17
+          ],
+          [
+            625,
+            23
+          ]
+        ],
+        "pixels_processing": 40
+      },
+      {
+        "bounds_pixel": [
+          [
+            714,
+            18
+          ],
+          [
+            714,
+            18
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            176,
+            19
+          ],
+          [
+            176,
+            19
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            606,
+            19
+          ],
+          [
+            609,
+            23
+          ]
+        ],
+        "pixels_processing": 14
+      },
+      {
+        "bounds_pixel": [
+          [
+            628,
+            19
+          ],
+          [
+            632,
+            20
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            533,
+            20
+          ],
+          [
+            533,
+            20
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            705,
+            20
+          ],
+          [
+            705,
+            20
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            712,
+            20
+          ],
+          [
+            713,
+            20
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            233,
+            22
+          ],
+          [
+            233,
+            22
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            559,
+            22
+          ],
+          [
+            562,
+            27
+          ]
+        ],
+        "pixels_processing": 20
+      },
+      {
+        "bounds_pixel": [
+          [
+            794,
+            22
+          ],
+          [
+            800,
+            30
+          ]
+        ],
+        "pixels_processing": 33
+      },
+      {
+        "bounds_pixel": [
+          [
+            150,
+            25
+          ],
+          [
+            150,
+            26
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            174,
+            25
+          ],
+          [
+            177,
+            30
+          ]
+        ],
+        "pixels_processing": 17
+      },
+      {
+        "bounds_pixel": [
+          [
+            710,
+            25
+          ],
+          [
+            710,
+            25
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            566,
+            27
+          ],
+          [
+            566,
+            27
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            622,
+            27
+          ],
+          [
+            623,
+            28
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            102,
+            28
+          ],
+          [
+            102,
+            30
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            149,
+            28
+          ],
+          [
+            153,
+            32
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            165,
+            28
+          ],
+          [
+            166,
+            28
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            183,
+            28
+          ],
+          [
+            184,
+            28
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            683,
+            28
+          ],
+          [
+            684,
+            30
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            735,
+            28
+          ],
+          [
+            735,
+            28
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            769,
+            28
+          ],
+          [
+            770,
+            28
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            766,
+            30
+          ],
+          [
+            766,
+            30
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            124,
+            31
+          ],
+          [
+            126,
+            35
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            139,
+            31
+          ],
+          [
+            143,
+            33
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            739,
+            31
+          ],
+          [
+            741,
+            32
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            622,
+            32
+          ],
+          [
+            623,
+            33
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            784,
+            33
+          ],
+          [
+            785,
+            35
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            709,
+            34
+          ],
+          [
+            713,
+            38
+          ]
+        ],
+        "pixels_processing": 15
+      },
+      {
+        "bounds_pixel": [
+          [
+            769,
+            34
+          ],
+          [
+            771,
+            35
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            133,
+            35
+          ],
+          [
+            133,
+            35
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            102,
+            36
+          ],
+          [
+            102,
+            36
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            486,
+            36
+          ],
+          [
+            486,
+            36
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            526,
+            36
+          ],
+          [
+            526,
+            36
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            533,
+            36
+          ],
+          [
+            533,
+            36
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            590,
+            36
+          ],
+          [
+            592,
+            37
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            529,
+            37
+          ],
+          [
+            530,
+            43
+          ]
+        ],
+        "pixels_processing": 14
+      },
+      {
+        "bounds_pixel": [
+          [
+            652,
+            37
+          ],
+          [
+            653,
+            39
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            462,
+            38
+          ],
+          [
+            462,
+            39
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            454,
+            39
+          ],
+          [
+            454,
+            39
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            621,
+            39
+          ],
+          [
+            621,
+            40
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            725,
+            39
+          ],
+          [
+            725,
+            39
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            741,
+            39
+          ],
+          [
+            741,
+            39
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            646,
+            40
+          ],
+          [
+            646,
+            40
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            697,
+            41
+          ],
+          [
+            701,
+            42
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            275,
+            43
+          ],
+          [
+            281,
+            45
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            302,
+            43
+          ],
+          [
+            302,
+            43
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            494,
+            43
+          ],
+          [
+            494,
+            43
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            497,
+            43
+          ],
+          [
+            497,
+            43
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            592,
+            43
+          ],
+          [
+            593,
+            43
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            789,
+            43
+          ],
+          [
+            789,
+            43
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            124,
+            44
+          ],
+          [
+            125,
+            44
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            127,
+            44
+          ],
+          [
+            127,
+            44
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            560,
+            44
+          ],
+          [
+            564,
+            47
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            621,
+            44
+          ],
+          [
+            623,
+            45
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            798,
+            44
+          ],
+          [
+            799,
+            44
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            426,
+            45
+          ],
+          [
+            427,
+            45
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            250,
+            46
+          ],
+          [
+            252,
+            48
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            422,
+            46
+          ],
+          [
+            423,
+            46
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            466,
+            47
+          ],
+          [
+            467,
+            53
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            498,
+            47
+          ],
+          [
+            499,
+            48
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            126,
+            48
+          ],
+          [
+            127,
+            49
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            797,
+            48
+          ],
+          [
+            800,
+            50
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            561,
+            50
+          ],
+          [
+            562,
+            51
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            607,
+            50
+          ],
+          [
+            630,
+            54
+          ]
+        ],
+        "pixels_processing": 39
+      },
+      {
+        "bounds_pixel": [
+          [
+            176,
+            51
+          ],
+          [
+            177,
+            52
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            635,
+            51
+          ],
+          [
+            637,
+            51
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            202,
+            52
+          ],
+          [
+            204,
+            52
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            498,
+            52
+          ],
+          [
+            499,
+            52
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            510,
+            52
+          ],
+          [
+            510,
+            52
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            176,
+            54
+          ],
+          [
+            178,
+            55
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            516,
+            54
+          ],
+          [
+            517,
+            55
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            525,
+            54
+          ],
+          [
+            525,
+            54
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            558,
+            54
+          ],
+          [
+            561,
+            54
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            150,
+            55
+          ],
+          [
+            153,
+            59
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            687,
+            56
+          ],
+          [
+            687,
+            56
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            126,
+            57
+          ],
+          [
+            129,
+            59
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            154,
+            57
+          ],
+          [
+            154,
+            57
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            521,
+            57
+          ],
+          [
+            522,
+            57
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            620,
+            58
+          ],
+          [
+            621,
+            59
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            133,
+            59
+          ],
+          [
+            133,
+            59
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            466,
+            59
+          ],
+          [
+            467,
+            59
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            498,
+            59
+          ],
+          [
+            499,
+            59
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            712,
+            59
+          ],
+          [
+            714,
+            60
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            797,
+            59
+          ],
+          [
+            797,
+            59
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            109,
+            60
+          ],
+          [
+            109,
+            60
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            116,
+            60
+          ],
+          [
+            117,
+            60
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            100,
+            62
+          ],
+          [
+            102,
+            62
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            561,
+            62
+          ],
+          [
+            561,
+            62
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            524,
+            65
+          ],
+          [
+            525,
+            66
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            593,
+            66
+          ],
+          [
+            595,
+            72
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            478,
+            67
+          ],
+          [
+            480,
+            67
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            562,
+            67
+          ],
+          [
+            562,
+            67
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            685,
+            67
+          ],
+          [
+            685,
+            68
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            769,
+            67
+          ],
+          [
+            771,
+            68
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            624,
+            68
+          ],
+          [
+            624,
+            68
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            774,
+            68
+          ],
+          [
+            774,
+            68
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            795,
+            68
+          ],
+          [
+            800,
+            72
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            458,
+            69
+          ],
+          [
+            461,
+            69
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            788,
+            69
+          ],
+          [
+            789,
+            70
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            452,
+            70
+          ],
+          [
+            453,
+            71
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            456,
+            70
+          ],
+          [
+            457,
+            71
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            498,
+            70
+          ],
+          [
+            499,
+            73
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            652,
+            70
+          ],
+          [
+            653,
+            71
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            767,
+            70
+          ],
+          [
+            768,
+            70
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            460,
+            71
+          ],
+          [
+            461,
+            71
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            740,
+            71
+          ],
+          [
+            742,
+            73
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            760,
+            71
+          ],
+          [
+            763,
+            72
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            251,
+            73
+          ],
+          [
+            253,
+            74
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            560,
+            73
+          ],
+          [
+            563,
+            77
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            750,
+            73
+          ],
+          [
+            750,
+            73
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            755,
+            73
+          ],
+          [
+            755,
+            74
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            232,
+            74
+          ],
+          [
+            232,
+            74
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            236,
+            74
+          ],
+          [
+            236,
+            74
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            728,
+            75
+          ],
+          [
+            730,
+            75
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            736,
+            75
+          ],
+          [
+            738,
+            75
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            758,
+            75
+          ],
+          [
+            758,
+            75
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            798,
+            75
+          ],
+          [
+            800,
+            76
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            222,
+            76
+          ],
+          [
+            222,
+            76
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            466,
+            76
+          ],
+          [
+            469,
+            87
+          ]
+        ],
+        "pixels_processing": 19
+      },
+      {
+        "bounds_pixel": [
+          [
+            499,
+            76
+          ],
+          [
+            500,
+            78
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            637,
+            76
+          ],
+          [
+            637,
+            76
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            691,
+            77
+          ],
+          [
+            695,
+            79
+          ]
+        ],
+        "pixels_processing": 9
+      },
+      {
+        "bounds_pixel": [
+          [
+            786,
+            77
+          ],
+          [
+            788,
+            79
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            769,
+            79
+          ],
+          [
+            772,
+            80
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            561,
+            81
+          ],
+          [
+            562,
+            83
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            644,
+            81
+          ],
+          [
+            645,
+            81
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            751,
+            81
+          ],
+          [
+            752,
+            81
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            757,
+            81
+          ],
+          [
+            759,
+            82
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            766,
+            81
+          ],
+          [
+            767,
+            81
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            771,
+            81
+          ],
+          [
+            774,
+            84
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            637,
+            82
+          ],
+          [
+            639,
+            83
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            739,
+            82
+          ],
+          [
+            744,
+            85
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            746,
+            82
+          ],
+          [
+            749,
+            83
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            623,
+            83
+          ],
+          [
+            626,
+            83
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            632,
+            83
+          ],
+          [
+            633,
+            83
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            749,
+            83
+          ],
+          [
+            753,
+            84
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            761,
+            83
+          ],
+          [
+            762,
+            83
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            576,
+            84
+          ],
+          [
+            585,
+            87
+          ]
+        ],
+        "pixels_processing": 20
+      },
+      {
+        "bounds_pixel": [
+          [
+            766,
+            84
+          ],
+          [
+            766,
+            84
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            499,
+            85
+          ],
+          [
+            501,
+            88
+          ]
+        ],
+        "pixels_processing": 10
+      },
+      {
+        "bounds_pixel": [
+          [
+            745,
+            85
+          ],
+          [
+            747,
+            86
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            770,
+            85
+          ],
+          [
+            774,
+            90
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            589,
+            86
+          ],
+          [
+            589,
+            86
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            736,
+            86
+          ],
+          [
+            737,
+            86
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            533,
+            87
+          ],
+          [
+            533,
+            88
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            741,
+            87
+          ],
+          [
+            743,
+            87
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            768,
+            87
+          ],
+          [
+            768,
+            87
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            739,
+            88
+          ],
+          [
+            739,
+            88
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            766,
+            88
+          ],
+          [
+            768,
+            91
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            736,
+            89
+          ],
+          [
+            737,
+            89
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            551,
+            90
+          ],
+          [
+            552,
+            90
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            734,
+            90
+          ],
+          [
+            734,
+            90
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            742,
+            91
+          ],
+          [
+            742,
+            91
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            539,
+            92
+          ],
+          [
+            540,
+            92
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            592,
+            92
+          ],
+          [
+            594,
+            95
+          ]
+        ],
+        "pixels_processing": 10
+      },
+      {
+        "bounds_pixel": [
+          [
+            734,
+            92
+          ],
+          [
+            734,
+            92
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            771,
+            92
+          ],
+          [
+            771,
+            92
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            798,
+            92
+          ],
+          [
+            799,
+            92
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            496,
+            93
+          ],
+          [
+            505,
+            99
+          ]
+        ],
+        "pixels_processing": 35
+      },
+      {
+        "bounds_pixel": [
+          [
+            488,
+            95
+          ],
+          [
+            492,
+            97
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            786,
+            97
+          ],
+          [
+            800,
+            101
+          ]
+        ],
+        "pixels_processing": 33
+      },
+      {
+        "bounds_pixel": [
+          [
+            768,
+            100
+          ],
+          [
+            782,
+            109
+          ]
+        ],
+        "pixels_processing": 52
+      },
+      {
+        "bounds_pixel": [
+          [
+            744,
+            102
+          ],
+          [
+            749,
+            105
+          ]
+        ],
+        "pixels_processing": 11
+      },
+      {
+        "bounds_pixel": [
+          [
+            752,
+            102
+          ],
+          [
+            753,
+            104
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            757,
+            103
+          ],
+          [
+            758,
+            103
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            693,
+            104
+          ],
+          [
+            693,
+            104
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            679,
+            105
+          ],
+          [
+            683,
+            109
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            690,
+            105
+          ],
+          [
+            690,
+            105
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            688,
+            106
+          ],
+          [
+            688,
+            106
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            693,
+            106
+          ],
+          [
+            695,
+            107
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            691,
+            107
+          ],
+          [
+            691,
+            107
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            697,
+            107
+          ],
+          [
+            697,
+            107
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            699,
+            107
+          ],
+          [
+            699,
+            107
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            533,
+            109
+          ],
+          [
+            533,
+            110
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            800,
+            109
+          ],
+          [
+            800,
+            110
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            655,
+            110
+          ],
+          [
+            657,
+            111
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            657,
+            113
+          ],
+          [
+            657,
+            113
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            800,
+            113
+          ],
+          [
+            800,
+            114
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            655,
+            114
+          ],
+          [
+            655,
+            114
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            655,
+            117
+          ],
+          [
+            655,
+            117
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            231,
+            120
+          ],
+          [
+            231,
+            122
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            233,
+            120
+          ],
+          [
+            233,
+            121
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            634,
+            121
+          ],
+          [
+            634,
+            121
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            522,
+            122
+          ],
+          [
+            524,
+            123
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            632,
+            122
+          ],
+          [
+            632,
+            122
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            628,
+            123
+          ],
+          [
+            629,
+            123
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            622,
+            124
+          ],
+          [
+            625,
+            125
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            624,
+            124
+          ],
+          [
+            634,
+            127
+          ]
+        ],
+        "pixels_processing": 11
+      },
+      {
+        "bounds_pixel": [
+          [
+            622,
+            128
+          ],
+          [
+            622,
+            128
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            798,
+            128
+          ],
+          [
+            800,
+            132
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            625,
+            130
+          ],
+          [
+            625,
+            131
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            788,
+            138
+          ],
+          [
+            791,
+            142
+          ]
+        ],
+        "pixels_processing": 10
+      },
+      {
+        "bounds_pixel": [
+          [
+            799,
+            143
+          ],
+          [
+            800,
+            145
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            782,
+            145
+          ],
+          [
+            784,
+            146
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            793,
+            146
+          ],
+          [
+            795,
+            147
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            774,
+            149
+          ],
+          [
+            778,
+            150
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            784,
+            154
+          ],
+          [
+            786,
+            157
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            789,
+            157
+          ],
+          [
+            789,
+            157
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            797,
+            157
+          ],
+          [
+            797,
+            157
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            789,
+            158
+          ],
+          [
+            793,
+            159
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            785,
+            159
+          ],
+          [
+            786,
+            159
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            440,
+            185
+          ],
+          [
+            447,
+            195
+          ]
+        ],
+        "pixels_processing": 55
+      },
+      {
+        "bounds_pixel": [
+          [
+            789,
+            212
+          ],
+          [
+            789,
+            212
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            333,
+            220
+          ],
+          [
+            342,
+            226
+          ]
+        ],
+        "pixels_processing": 46
+      },
+      {
+        "bounds_pixel": [
+          [
+            235,
+            250
+          ],
+          [
+            251,
+            258
+          ]
+        ],
+        "pixels_processing": 89
+      },
+      {
+        "bounds_pixel": [
+          [
+            674,
+            257
+          ],
+          [
+            685,
+            263
+          ]
+        ],
+        "pixels_processing": 43
+      },
+      {
+        "bounds_pixel": [
+          [
+            659,
+            263
+          ],
+          [
+            663,
+            267
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            654,
+            265
+          ],
+          [
+            658,
+            269
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            648,
+            267
+          ],
+          [
+            652,
+            271
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            640,
+            270
+          ],
+          [
+            644,
+            274
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            628,
+            273
+          ],
+          [
+            634,
+            278
+          ]
+        ],
+        "pixels_processing": 26
+      },
+      {
+        "bounds_pixel": [
+          [
+            576,
+            288
+          ],
+          [
+            586,
+            294
+          ]
+        ],
+        "pixels_processing": 38
+      },
+      {
+        "bounds_pixel": [
+          [
+            719,
+            310
+          ],
+          [
+            723,
+            313
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            48,
+            312
+          ],
+          [
+            52,
+            316
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            19,
+            314
+          ],
+          [
+            23,
+            318
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            9,
+            316
+          ],
+          [
+            13,
+            316
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            7,
+            317
+          ],
+          [
+            7,
+            317
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            8,
+            318
+          ],
+          [
+            9,
+            319
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            11,
+            318
+          ],
+          [
+            17,
+            324
+          ]
+        ],
+        "pixels_processing": 23
+      },
+      {
+        "bounds_pixel": [
+          [
+            8,
+            324
+          ],
+          [
+            8,
+            324
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            446,
+            324
+          ],
+          [
+            458,
+            334
+          ]
+        ],
+        "pixels_processing": 89
+      },
+      {
+        "bounds_pixel": [
+          [
+            436,
+            330
+          ],
+          [
+            440,
+            334
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            781,
+            335
+          ],
+          [
+            781,
+            335
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            717,
+            339
+          ],
+          [
+            723,
+            341
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            789,
+            339
+          ],
+          [
+            789,
+            339
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            798,
+            339
+          ],
+          [
+            798,
+            339
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            780,
+            340
+          ],
+          [
+            782,
+            343
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            720,
+            349
+          ],
+          [
+            722,
+            353
+          ]
+        ],
+        "pixels_processing": 11
+      },
+      {
+        "bounds_pixel": [
+          [
+            339,
+            351
+          ],
+          [
+            351,
+            361
+          ]
+        ],
+        "pixels_processing": 82
+      },
+      {
+        "bounds_pixel": [
+          [
+            454,
+            356
+          ],
+          [
+            455,
+            358
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            778,
+            361
+          ],
+          [
+            781,
+            366
+          ]
+        ],
+        "pixels_processing": 20
+      },
+      {
+        "bounds_pixel": [
+          [
+            785,
+            361
+          ],
+          [
+            791,
+            365
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            797,
+            362
+          ],
+          [
+            799,
+            363
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            12,
+            363
+          ],
+          [
+            12,
+            363
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            762,
+            364
+          ],
+          [
+            764,
+            366
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            766,
+            365
+          ],
+          [
+            769,
+            366
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            237,
+            379
+          ],
+          [
+            247,
+            389
+          ]
+        ],
+        "pixels_processing": 65
+      },
+      {
+        "bounds_pixel": [
+          [
+            779,
+            380
+          ],
+          [
+            780,
+            380
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            694,
+            381
+          ],
+          [
+            695,
+            383
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            41,
+            388
+          ],
+          [
+            43,
+            388
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            773,
+            388
+          ],
+          [
+            773,
+            388
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            750,
+            390
+          ],
+          [
+            765,
+            399
+          ]
+        ],
+        "pixels_processing": 58
+      },
+      {
+        "bounds_pixel": [
+          [
+            731,
+            393
+          ],
+          [
+            747,
+            397
+          ]
+        ],
+        "pixels_processing": 34
+      },
+      {
+        "bounds_pixel": [
+          [
+            771,
+            394
+          ],
+          [
+            771,
+            395
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            719,
+            396
+          ],
+          [
+            725,
+            397
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            727,
+            396
+          ],
+          [
+            727,
+            396
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            779,
+            404
+          ],
+          [
+            781,
+            405
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            750,
+            406
+          ],
+          [
+            751,
+            407
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            80,
+            409
+          ],
+          [
+            83,
+            411
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            777,
+            409
+          ],
+          [
+            779,
+            412
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            12,
+            411
+          ],
+          [
+            17,
+            413
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            723,
+            412
+          ],
+          [
+            723,
+            412
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            432,
+            413
+          ],
+          [
+            432,
+            413
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            432,
+            415
+          ],
+          [
+            432,
+            415
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            664,
+            415
+          ],
+          [
+            666,
+            418
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            779,
+            415
+          ],
+          [
+            781,
+            419
+          ]
+        ],
+        "pixels_processing": 10
+      },
+      {
+        "bounds_pixel": [
+          [
+            797,
+            416
+          ],
+          [
+            800,
+            418
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            719,
+            419
+          ],
+          [
+            733,
+            424
+          ]
+        ],
+        "pixels_processing": 44
+      },
+      {
+        "bounds_pixel": [
+          [
+            770,
+            419
+          ],
+          [
+            773,
+            420
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            17,
+            420
+          ],
+          [
+            19,
+            420
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            635,
+            420
+          ],
+          [
+            636,
+            423
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            664,
+            420
+          ],
+          [
+            665,
+            421
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            761,
+            420
+          ],
+          [
+            764,
+            422
+          ]
+        ],
+        "pixels_processing": 11
+      },
+      {
+        "bounds_pixel": [
+          [
+            780,
+            421
+          ],
+          [
+            781,
+            423
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            635,
+            426
+          ],
+          [
+            636,
+            427
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            659,
+            426
+          ],
+          [
+            660,
+            427
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            655,
+            427
+          ],
+          [
+            655,
+            427
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            798,
+            427
+          ],
+          [
+            798,
+            427
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            752,
+            428
+          ],
+          [
+            753,
+            428
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            766,
+            428
+          ],
+          [
+            766,
+            428
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            62,
+            429
+          ],
+          [
+            62,
+            429
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            725,
+            430
+          ],
+          [
+            725,
+            432
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            54,
+            431
+          ],
+          [
+            59,
+            437
+          ]
+        ],
+        "pixels_processing": 27
+      },
+      {
+        "bounds_pixel": [
+          [
+            62,
+            431
+          ],
+          [
+            65,
+            432
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            781,
+            431
+          ],
+          [
+            781,
+            432
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            13,
+            432
+          ],
+          [
+            16,
+            435
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            18,
+            432
+          ],
+          [
+            20,
+            434
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            67,
+            433
+          ],
+          [
+            67,
+            433
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            62,
+            434
+          ],
+          [
+            65,
+            434
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            62,
+            436
+          ],
+          [
+            66,
+            443
+          ]
+        ],
+        "pixels_processing": 24
+      },
+      {
+        "bounds_pixel": [
+          [
+            724,
+            436
+          ],
+          [
+            725,
+            438
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            721,
+            438
+          ],
+          [
+            721,
+            438
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            776,
+            438
+          ],
+          [
+            783,
+            449
+          ]
+        ],
+        "pixels_processing": 46
+      },
+      {
+        "bounds_pixel": [
+          [
+            751,
+            443
+          ],
+          [
+            752,
+            443
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            758,
+            443
+          ],
+          [
+            758,
+            443
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            797,
+            443
+          ],
+          [
+            800,
+            446
+          ]
+        ],
+        "pixels_processing": 9
+      },
+      {
+        "bounds_pixel": [
+          [
+            786,
+            446
+          ],
+          [
+            789,
+            448
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            20,
+            447
+          ],
+          [
+            21,
+            448
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            745,
+            447
+          ],
+          [
+            756,
+            452
+          ]
+        ],
+        "pixels_processing": 36
+      },
+      {
+        "bounds_pixel": [
+          [
+            758,
+            448
+          ],
+          [
+            764,
+            449
+          ]
+        ],
+        "pixels_processing": 14
+      },
+      {
+        "bounds_pixel": [
+          [
+            772,
+            448
+          ],
+          [
+            774,
+            450
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            712,
+            450
+          ],
+          [
+            716,
+            452
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            734,
+            450
+          ],
+          [
+            738,
+            452
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            700,
+            452
+          ],
+          [
+            703,
+            453
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            777,
+            452
+          ],
+          [
+            785,
+            454
+          ]
+        ],
+        "pixels_processing": 19
+      },
+      {
+        "bounds_pixel": [
+          [
+            692,
+            453
+          ],
+          [
+            697,
+            459
+          ]
+        ],
+        "pixels_processing": 23
+      },
+      {
+        "bounds_pixel": [
+          [
+            774,
+            453
+          ],
+          [
+            774,
+            453
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            3,
+            455
+          ],
+          [
+            4,
+            457
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            6,
+            456
+          ],
+          [
+            7,
+            457
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            22,
+            456
+          ],
+          [
+            25,
+            460
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            718,
+            456
+          ],
+          [
+            718,
+            456
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            723,
+            456
+          ],
+          [
+            723,
+            456
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            66,
+            457
+          ],
+          [
+            66,
+            458
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            779,
+            457
+          ],
+          [
+            781,
+            459
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            607,
+            460
+          ],
+          [
+            609,
+            461
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            721,
+            460
+          ],
+          [
+            725,
+            461
+          ]
+        ],
+        "pixels_processing": 9
+      },
+      {
+        "bounds_pixel": [
+          [
+            45,
+            463
+          ],
+          [
+            45,
+            463
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            57,
+            463
+          ],
+          [
+            58,
+            464
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            742,
+            463
+          ],
+          [
+            743,
+            464
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            745,
+            463
+          ],
+          [
+            749,
+            464
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            772,
+            466
+          ],
+          [
+            784,
+            478
+          ]
+        ],
+        "pixels_processing": 62
+      },
+      {
+        "bounds_pixel": [
+          [
+            37,
+            468
+          ],
+          [
+            38,
+            468
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            665,
+            468
+          ],
+          [
+            668,
+            470
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            789,
+            470
+          ],
+          [
+            794,
+            472
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            245,
+            473
+          ],
+          [
+            249,
+            477
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            658,
+            474
+          ],
+          [
+            659,
+            474
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            761,
+            474
+          ],
+          [
+            764,
+            476
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            766,
+            474
+          ],
+          [
+            767,
+            475
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            666,
+            476
+          ],
+          [
+            668,
+            478
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            721,
+            476
+          ],
+          [
+            724,
+            479
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            740,
+            476
+          ],
+          [
+            742,
+            477
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            746,
+            476
+          ],
+          [
+            747,
+            477
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            2,
+            478
+          ],
+          [
+            2,
+            478
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            10,
+            478
+          ],
+          [
+            13,
+            481
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            710,
+            478
+          ],
+          [
+            717,
+            479
+          ]
+        ],
+        "pixels_processing": 16
+      },
+      {
+        "bounds_pixel": [
+          [
+            726,
+            478
+          ],
+          [
+            729,
+            478
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            782,
+            478
+          ],
+          [
+            782,
+            478
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            5,
+            479
+          ],
+          [
+            5,
+            480
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            24,
+            479
+          ],
+          [
+            24,
+            479
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            29,
+            479
+          ],
+          [
+            37,
+            481
+          ]
+        ],
+        "pixels_processing": 16
+      },
+      {
+        "bounds_pixel": [
+          [
+            19,
+            480
+          ],
+          [
+            19,
+            480
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            655,
+            481
+          ],
+          [
+            660,
+            483
+          ]
+        ],
+        "pixels_processing": 14
+      },
+      {
+        "bounds_pixel": [
+          [
+            662,
+            481
+          ],
+          [
+            669,
+            485
+          ]
+        ],
+        "pixels_processing": 19
+      },
+      {
+        "bounds_pixel": [
+          [
+            752,
+            481
+          ],
+          [
+            753,
+            481
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            95,
+            482
+          ],
+          [
+            95,
+            483
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            101,
+            482
+          ],
+          [
+            101,
+            483
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            104,
+            483
+          ],
+          [
+            107,
+            483
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            780,
+            483
+          ],
+          [
+            782,
+            484
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            110,
+            484
+          ],
+          [
+            114,
+            484
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            122,
+            484
+          ],
+          [
+            125,
+            484
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            632,
+            484
+          ],
+          [
+            632,
+            484
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            636,
+            484
+          ],
+          [
+            637,
+            484
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            722,
+            484
+          ],
+          [
+            723,
+            485
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            773,
+            484
+          ],
+          [
+            773,
+            484
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            750,
+            485
+          ],
+          [
+            753,
+            487
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            520,
+            486
+          ],
+          [
+            524,
+            490
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            723,
+            488
+          ],
+          [
+            724,
+            489
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            785,
+            488
+          ],
+          [
+            786,
+            490
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            639,
+            489
+          ],
+          [
+            639,
+            489
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            637,
+            490
+          ],
+          [
+            637,
+            491
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            665,
+            490
+          ],
+          [
+            665,
+            491
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            778,
+            491
+          ],
+          [
+            781,
+            492
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            797,
+            491
+          ],
+          [
+            797,
+            491
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            383,
+            492
+          ],
+          [
+            383,
+            492
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            387,
+            492
+          ],
+          [
+            389,
+            492
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            607,
+            492
+          ],
+          [
+            609,
+            495
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            750,
+            492
+          ],
+          [
+            751,
+            492
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            785,
+            492
+          ],
+          [
+            785,
+            493
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            789,
+            492
+          ],
+          [
+            790,
+            493
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            250,
+            493
+          ],
+          [
+            250,
+            494
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            522,
+            493
+          ],
+          [
+            523,
+            494
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            112,
+            494
+          ],
+          [
+            112,
+            495
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            746,
+            494
+          ],
+          [
+            749,
+            496
+          ]
+        ],
+        "pixels_processing": 8
+      },
+      {
+        "bounds_pixel": [
+          [
+            157,
+            495
+          ],
+          [
+            157,
+            497
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            721,
+            495
+          ],
+          [
+            721,
+            495
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            521,
+            497
+          ],
+          [
+            523,
+            499
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            637,
+            498
+          ],
+          [
+            638,
+            502
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            158,
+            499
+          ],
+          [
+            158,
+            501
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            253,
+            499
+          ],
+          [
+            253,
+            499
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            48,
+            500
+          ],
+          [
+            50,
+            503
+          ]
+        ],
+        "pixels_processing": 10
+      },
+      {
+        "bounds_pixel": [
+          [
+            661,
+            500
+          ],
+          [
+            661,
+            501
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            665,
+            500
+          ],
+          [
+            667,
+            501
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            16,
+            501
+          ],
+          [
+            17,
+            502
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            253,
+            501
+          ],
+          [
+            253,
+            502
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            53,
+            503
+          ],
+          [
+            65,
+            504
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            251,
+            503
+          ],
+          [
+            251,
+            504
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            68,
+            504
+          ],
+          [
+            70,
+            504
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            76,
+            504
+          ],
+          [
+            77,
+            506
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            253,
+            504
+          ],
+          [
+            253,
+            504
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            158,
+            506
+          ],
+          [
+            159,
+            507
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            676,
+            506
+          ],
+          [
+            683,
+            508
+          ]
+        ],
+        "pixels_processing": 14
+      },
+      {
+        "bounds_pixel": [
+          [
+            778,
+            506
+          ],
+          [
+            778,
+            506
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            166,
+            507
+          ],
+          [
+            166,
+            507
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            738,
+            507
+          ],
+          [
+            739,
+            508
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            749,
+            507
+          ],
+          [
+            749,
+            507
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            181,
+            509
+          ],
+          [
+            183,
+            513
+          ]
+        ],
+        "pixels_processing": 10
+      },
+      {
+        "bounds_pixel": [
+          [
+            248,
+            509
+          ],
+          [
+            252,
+            513
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            643,
+            509
+          ],
+          [
+            645,
+            511
+          ]
+        ],
+        "pixels_processing": 6
+      },
+      {
+        "bounds_pixel": [
+          [
+            723,
+            510
+          ],
+          [
+            725,
+            511
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            745,
+            510
+          ],
+          [
+            745,
+            510
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            770,
+            510
+          ],
+          [
+            771,
+            511
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            777,
+            510
+          ],
+          [
+            780,
+            512
+          ]
+        ],
+        "pixels_processing": 9
+      },
+      {
+        "bounds_pixel": [
+          [
+            77,
+            511
+          ],
+          [
+            77,
+            511
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            520,
+            511
+          ],
+          [
+            525,
+            516
+          ]
+        ],
+        "pixels_processing": 21
+      },
+      {
+        "bounds_pixel": [
+          [
+            464,
+            513
+          ],
+          [
+            468,
+            517
+          ]
+        ],
+        "pixels_processing": 13
+      },
+      {
+        "bounds_pixel": [
+          [
+            380,
+            514
+          ],
+          [
+            381,
+            514
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            722,
+            514
+          ],
+          [
+            723,
+            516
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            70,
+            515
+          ],
+          [
+            72,
+            516
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            78,
+            515
+          ],
+          [
+            78,
+            515
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            666,
+            515
+          ],
+          [
+            666,
+            515
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            729,
+            515
+          ],
+          [
+            730,
+            515
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            29,
+            516
+          ],
+          [
+            29,
+            516
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            380,
+            516
+          ],
+          [
+            381,
+            518
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            635,
+            516
+          ],
+          [
+            643,
+            528
+          ]
+        ],
+        "pixels_processing": 41
+      },
+      {
+        "bounds_pixel": [
+          [
+            681,
+            516
+          ],
+          [
+            681,
+            516
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            182,
+            517
+          ],
+          [
+            185,
+            523
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            778,
+            517
+          ],
+          [
+            779,
+            520
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            692,
+            518
+          ],
+          [
+            693,
+            520
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            69,
+            519
+          ],
+          [
+            69,
+            519
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            719,
+            519
+          ],
+          [
+            726,
+            528
+          ]
+        ],
+        "pixels_processing": 27
+      },
+      {
+        "bounds_pixel": [
+          [
+            72,
+            520
+          ],
+          [
+            73,
+            523
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            28,
+            521
+          ],
+          [
+            33,
+            528
+          ]
+        ],
+        "pixels_processing": 35
+      },
+      {
+        "bounds_pixel": [
+          [
+            662,
+            521
+          ],
+          [
+            669,
+            528
+          ]
+        ],
+        "pixels_processing": 35
+      },
+      {
+        "bounds_pixel": [
+          [
+            774,
+            522
+          ],
+          [
+            780,
+            528
+          ]
+        ],
+        "pixels_processing": 35
+      },
+      {
+        "bounds_pixel": [
+          [
+            4,
+            523
+          ],
+          [
+            5,
+            524
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            8,
+            523
+          ],
+          [
+            17,
+            528
+          ]
+        ],
+        "pixels_processing": 33
+      },
+      {
+        "bounds_pixel": [
+          [
+            43,
+            523
+          ],
+          [
+            43,
+            523
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            249,
+            523
+          ],
+          [
+            254,
+            528
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            546,
+            523
+          ],
+          [
+            557,
+            528
+          ]
+        ],
+        "pixels_processing": 36
+      },
+      {
+        "bounds_pixel": [
+          [
+            748,
+            523
+          ],
+          [
+            753,
+            528
+          ]
+        ],
+        "pixels_processing": 26
+      },
+      {
+        "bounds_pixel": [
+          [
+            798,
+            523
+          ],
+          [
+            800,
+            523
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            21,
+            524
+          ],
+          [
+            21,
+            524
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            36,
+            524
+          ],
+          [
+            37,
+            527
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            62,
+            524
+          ],
+          [
+            68,
+            528
+          ]
+        ],
+        "pixels_processing": 25
+      },
+      {
+        "bounds_pixel": [
+          [
+            78,
+            524
+          ],
+          [
+            79,
+            525
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            382,
+            524
+          ],
+          [
+            385,
+            528
+          ]
+        ],
+        "pixels_processing": 18
+      },
+      {
+        "bounds_pixel": [
+          [
+            464,
+            524
+          ],
+          [
+            469,
+            528
+          ]
+        ],
+        "pixels_processing": 21
+      },
+      {
+        "bounds_pixel": [
+          [
+            522,
+            524
+          ],
+          [
+            525,
+            528
+          ]
+        ],
+        "pixels_processing": 16
+      },
+      {
+        "bounds_pixel": [
+          [
+            607,
+            524
+          ],
+          [
+            610,
+            528
+          ]
+        ],
+        "pixels_processing": 16
+      },
+      {
+        "bounds_pixel": [
+          [
+            631,
+            524
+          ],
+          [
+            633,
+            524
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            696,
+            524
+          ],
+          [
+            697,
+            526
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            771,
+            524
+          ],
+          [
+            772,
+            526
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            782,
+            524
+          ],
+          [
+            784,
+            526
+          ]
+        ],
+        "pixels_processing": 7
+      },
+      {
+        "bounds_pixel": [
+          [
+            2,
+            525
+          ],
+          [
+            2,
+            525
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            758,
+            525
+          ],
+          [
+            762,
+            527
+          ]
+        ],
+        "pixels_processing": 12
+      },
+      {
+        "bounds_pixel": [
+          [
+            788,
+            526
+          ],
+          [
+            789,
+            528
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            796,
+            526
+          ],
+          [
+            797,
+            527
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            103,
+            527
+          ],
+          [
+            103,
+            528
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            375,
+            527
+          ],
+          [
+            376,
+            528
+          ]
+        ],
+        "pixels_processing": 4
+      },
+      {
+        "bounds_pixel": [
+          [
+            560,
+            527
+          ],
+          [
+            560,
+            528
+          ]
+        ],
+        "pixels_processing": 2
+      },
+      {
+        "bounds_pixel": [
+          [
+            603,
+            527
+          ],
+          [
+            603,
+            527
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            729,
+            527
+          ],
+          [
+            730,
+            528
+          ]
+        ],
+        "pixels_processing": 3
+      },
+      {
+        "bounds_pixel": [
+          [
+            733,
+            527
+          ],
+          [
+            735,
+            528
+          ]
+        ],
+        "pixels_processing": 5
+      },
+      {
+        "bounds_pixel": [
+          [
+            703,
+            528
+          ],
+          [
+            703,
+            528
+          ]
+        ],
+        "pixels_processing": 1
+      },
+      {
+        "bounds_pixel": [
+          [
+            738,
+            528
+          ],
+          [
+            739,
+            528
+          ]
+        ],
+        "pixels_processing": 2
+      }
+    ],
+    "assumptions": [
+      "Upright, approximately straight-on graph paper.",
+      "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+      "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+    ]
+  }
+}

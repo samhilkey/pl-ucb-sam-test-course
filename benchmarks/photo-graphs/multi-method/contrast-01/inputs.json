@@ -1,0 +1,23 @@
+{
+  "version": "contrast-01",
+  "cases": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "image": "../../automatic-cv/experiment-01/inputs/real--01-multiple-lines-graph-paper.png",
+      "image_size": [
+        801,
+        529
+      ],
+      "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "image": "../../automatic-cv/experiment-01/inputs/real--06-piecewise-graph-paper.png",
+      "image_size": [
+        529,
+        420
+      ],
+      "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    }
+  ]
+}
