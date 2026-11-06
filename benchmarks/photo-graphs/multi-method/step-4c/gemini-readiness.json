@@ -1,0 +1,26 @@
+{
+  "step": "4C",
+  "credential_presence": {
+    "gemini_api_key_configured": false,
+    "inference_enabled": false,
+    "check_scope": "environment_presence_only"
+  },
+  "account_model_access": "unknown",
+  "account_free_tier_eligibility": "unknown",
+  "remaining_quota": "unknown",
+  "billing_disabled": "unknown",
+  "prospective_zero_billing_exposure_verified": false,
+  "image_clearance": {
+    "real--01": "Google unpaid-service clearance unverified; local testing approved",
+    "real--06": "Google unpaid-service clearance unverified; local testing approved"
+  },
+  "inference_requests": 0,
+  "authenticated_provider_requests": 0,
+  "photograph_uploads": 0,
+  "billing_changes": 0,
+  "incurred_inference_cost_usd": 0,
+  "provider_reported_cost_usd": null,
+  "guide_ready": true,
+  "live_transport_implemented": false,
+  "inference_ready": false
+}

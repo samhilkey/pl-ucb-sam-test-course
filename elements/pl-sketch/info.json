@@ -13,6 +13,7 @@
       "star-geometry.js",
       "star-recognition.js",
       "star-native.js",
+      "star-assisted.js",
       "star-automatic.js",
       "pl-sketch.js"
     ],

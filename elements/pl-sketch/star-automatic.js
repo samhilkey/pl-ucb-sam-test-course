@@ -8,6 +8,10 @@ window.StarAutomatic = (function () {
     const button = document.createElement('button')
     button.type = 'button'; button.id = id + '-automatic-button'; button.className = 'btn btn-primary star-automatic-button'
     button.textContent = 'Recognize a graph photo'
+    if (config.assistedPhotoGeometry) {
+      button.className = 'btn btn-light border star-automatic-button'
+      button.textContent = 'Try automatic recognition (experimental)'
+    }
     container.append(button)
     const dialog = document.createElement('dialog')
     dialog.id = id + '-automatic-dialog'; dialog.className = 'star-automatic-dialog'

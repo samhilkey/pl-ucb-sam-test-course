@@ -1,0 +1,204 @@
+{
+  "classification": "fully_manually_traced_not_automatic_or_targeted_automatic",
+  "interaction_source": "Coordinates selected by visual inspection of original photographs for browser mouse replay; no evaluator/reference file is read by this test runner. This is scripted operator interaction, not an independent student usability study.",
+  "authorization": "User explicitly approved use of these existing separately drawn public DrawEduMath images for local Step4C tests; no external provider upload. CC BY-NC4.0 attribution retained in experiment-01/source-attribution.json.",
+  "independence": "Two distinct physical-paper source images; prior development cases, not held-out validation.",
+  "cases": [
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "canvas": "paper-v",
+      "image": "../../automatic-cv/experiment-01/inputs/real--06-piecewise-graph-paper.png",
+      "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "calibration": {
+        "origin": [
+          50,
+          323
+        ],
+        "x_marker": [
+          441,
+          334
+        ],
+        "y_marker": [
+          77,
+          170
+        ],
+        "x_value": 9,
+        "y_value": 160,
+        "evidence": "Operator-selected visible labeled tick references; approximate affine calibration."
+      },
+      "pointer_strokes": [
+        [
+          [
+            50,
+            321
+          ],
+          [
+            74,
+            312
+          ],
+          [
+            95,
+            301
+          ],
+          [
+            108,
+            294
+          ],
+          [
+            126,
+            267
+          ],
+          [
+            151,
+            230
+          ],
+          [
+            178,
+            188
+          ],
+          [
+            207,
+            140
+          ],
+          [
+            240,
+            94
+          ],
+          [
+            269,
+            138
+          ],
+          [
+            300,
+            183
+          ],
+          [
+            331,
+            229
+          ],
+          [
+            365,
+            281
+          ],
+          [
+            397,
+            328
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "canvas": "paper-lines",
+      "image": "../../automatic-cv/experiment-01/inputs/real--01-multiple-lines-graph-paper.png",
+      "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "calibration": {
+        "origin": [
+          238,
+          255
+        ],
+        "x_marker": [
+          450,
+          245
+        ],
+        "y_marker": [
+          230,
+          50
+        ],
+        "x_value": 5,
+        "y_value": 5,
+        "evidence": "No numeric labels in source. Explicit demo-operator scale assignment, NOT inferred/recovered student units."
+      },
+      "pointer_strokes": [
+        [
+          [
+            14,
+            321
+          ],
+          [
+            51,
+            310
+          ],
+          [
+            104,
+            294
+          ],
+          [
+            176,
+            273
+          ],
+          [
+            236,
+            256
+          ],
+          [
+            333,
+            225
+          ],
+          [
+            440,
+            189
+          ],
+          [
+            551,
+            150
+          ],
+          [
+            669,
+            112
+          ],
+          [
+            781,
+            74
+          ]
+        ],
+        [
+          [
+            57,
+            434
+          ],
+          [
+            111,
+            419
+          ],
+          [
+            175,
+            402
+          ],
+          [
+            240,
+            385
+          ],
+          [
+            344,
+            357
+          ],
+          [
+            453,
+            329
+          ],
+          [
+            557,
+            296
+          ],
+          [
+            662,
+            266
+          ],
+          [
+            722,
+            246
+          ]
+        ]
+      ]
+    }
+  ]
+}

@@ -38,9 +38,13 @@
     if (controls.length < 4 || (controls.length - 1) % 3) throw new Error('Invalid cubic controls.')
     return 'M' + controls[0].x + ',' + controls[0].y + 'C' + controls.slice(1).map(p => p.x + ',' + p.y).join(' ')
   }
-  function prepare (geometry, config, toolId, state) {
+  function prepare (geometry, config, toolId, state, options = {}) {
     Geometry.validate(geometry)
-    if (geometry.status !== 'automatic' || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
+    const assisted = options.assisted === true && config.assistedPhotoGeometry === true &&
+      geometry.status === 'needs_review' && geometry.provenance?.method === 'manual_trace' && geometry.provenance.automatically_recognized === false &&
+      ['x', 'y'].every(axis => geometry.calibration.axes[axis].source === 'student_corrected') &&
+      !geometry.warnings.length && !geometry.assistance.length && !geometry.uncertainty.regions.length && !geometry.topology.junctions.length
+    if ((!assisted && geometry.status !== 'automatic') || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
     const tool = receivingTool(config, toolId)
     if (!state || !state.data || Array.isArray(state.data) || !Array.isArray(state.data[tool.id])) throw new Error('Invalid existing native tool state.')
     const drawings = geometry.strokes.map(s => {
@@ -55,18 +59,19 @@
     })
     const existing = state.data[tool.id]
     if (tool.limit > 0 && existing.length + drawings.length > tool.limit) throw new Error('Import would exceed this tool’s drawing limit.')
-    // Mirror the existing native function-input overlap restriction, without
-    // changing its grader. Never delete earlier drawings to make an import fit.
+    // Keep the default function-input overlap restriction. The separately
+    // opted-in manual question saves overlapping attempts as mathematical
+    // mistakes. Never delete earlier drawings to make an import fit.
     const ranges = existing.concat(drawings).filter(p => p.length).map(ps => {
       if (!Array.isArray(ps) || ps.some(p => !p || !Number.isFinite(p.x) || !Number.isFinite(p.y))) throw new Error('Existing curve contains invalid coordinates.')
       return [Math.min(...ps.map(p => p.x)), Math.max(...ps.map(p => p.x))]
     }).sort((a, b) => a[0] - b[0])
     for (let i = 0; i < ranges.length; i++) for (let j = i + 1; j < ranges.length; j++) {
-      if (Math.min(ranges[i][1], ranges[j][1]) - Math.max(ranges[i][0], ranges[j][0]) > 5) throw new Error('Graphs overlap in x. Move or delete the conflicting native drawing, or correct the proposal, before importing.')
+      if (!assisted && Math.min(ranges[i][1], ranges[j][1]) - Math.max(ranges[i][0], ranges[j][0]) > 5) throw new Error('Graphs overlap in x. Move or delete the conflicting native drawing, or correct the proposal, before importing.')
     }
     return { toolId: tool.id, kind: 'freeform', drawings, strokeIds: geometry.strokes.map(s => s.id) }
   }
-  function createSession (si, config, toolId) {
+  function createSession (si, config, toolId, options = {}) {
     let revision = 0; let serial = 0; let active = null
     function invalidate (nextRevision = revision) {
       if (!Number.isSafeInteger(nextRevision) || nextRevision < revision) throw new Error('Input revisions must be monotonic.')
@@ -76,7 +81,7 @@
       active = null
       if (geometry.input_revision !== revision) throw new Error('Recognition belongs to an older input revision.')
       const base = JSON.parse(si.getState())
-      const prepared = prepare(clone(geometry), config, toolId, base)
+      const prepared = prepare(clone(geometry), config, toolId, base, options)
       active = { ...prepared, token: ++serial, revision, base: clone(base.data) }
       return clone({ ...prepared, token: active.token, revision })
     }

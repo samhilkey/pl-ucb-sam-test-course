@@ -1,0 +1,22 @@
+<pl-question-panel>
+  <h4>Use a photo of your paper graph</h4>
+  <p>Choose <strong>Trace a paper graph (manual)</strong> to place the axes, enter their reference values and trace each branch on the photograph. Review the orange trace before adding it.</p>
+  <p>Keep your original corners, endpoints, gaps and mistakes. After import, use <strong>Select</strong> to move a whole branch. If a trace needs a local correction, retrace it on the photo before importing.</p>
+  <p>This is a transcription sandbox with an <em>x-squared</em> target. The example paper graphs may correctly receive 0% while their original shapes are preserved. Automatic recognition is optional; use the manual route for this demonstration.</p>
+</pl-question-panel>
+<pl-card>
+  <pl-question-panel><h5>Paper graph with a sharp peak</h5><p>Use the labeled photo. Set the origin and axis references from its visible numbers.</p></pl-question-panel>
+  <pl-sketch answers-name="paper-v" x-range="-1,11" y-range="-40,320" width="800" height="600" allow-hand-drawn="true" preserve-photo-geometry="true" automatic-photo="true" allow-blank="true">
+    <pl-sketch-tool id="paper-ink" type="free-draw" label="Graph strokes"></pl-sketch-tool>
+    <pl-sketch-tool id="paper-notes" type="point" label="Other marks"></pl-sketch-tool>
+    <pl-sketch-grade type="match-function" tool-id="paper-ink" function="x**2" x-range="0,8"></pl-sketch-grade>
+  </pl-sketch>
+</pl-card>
+<pl-card>
+  <pl-question-panel><h5>Paper graph with separate branches</h5><p>The unlabeled example has no recoverable numeric scale. For this demo, explicitly supply a scale using the axis markers; do not report it as photo-detected calibration.</p></pl-question-panel>
+  <pl-sketch answers-name="paper-lines" x-range="-6,14" y-range="-6,8" width="800" height="600" allow-hand-drawn="true" preserve-photo-geometry="true" automatic-photo="true" allow-blank="true">
+    <pl-sketch-tool id="paper-ink" type="free-draw" label="Graph strokes"></pl-sketch-tool>
+    <pl-sketch-tool id="paper-notes" type="point" label="Other marks"></pl-sketch-tool>
+    <pl-sketch-grade type="match-function" tool-id="paper-ink" function="x**2" x-range="-2.2,2.2"></pl-sketch-grade>
+  </pl-sketch>
+</pl-card>

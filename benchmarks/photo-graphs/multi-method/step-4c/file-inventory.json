@@ -1,0 +1,300 @@
+{
+  "scope": "single Step4C commit; repository-relative paths",
+  "files": [
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/GEMINI-SETUP.md",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/REPORT.md",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/acceptance-policy.json",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/check-gemini-env.cjs",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/evaluate.cjs",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/evidence-manifest.json",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/file-inventory.json",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/gemini-public-sources.json",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/gemini-readiness.json",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/operator-actions.json",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/assisted-browser.log",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/browser-regressions.json",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/browser-regressions.log",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/evaluation.json",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/fidelity.log",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/legacy-real--06--fitted-review.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/mobile-real--06--review.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/node-tests.log",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--edited-restored.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--edited.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--graded.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--manual-overlay.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--native-overlay.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--native.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--original.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--reference-overlay.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--restored.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--review.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--trace.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--edited-restored.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--edited.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--graded.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--legacy-overlay.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--manual-overlay.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--native-overlay.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--native.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--original.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--reference-overlay.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--restored.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--review.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--trace.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/results.json",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/server-tests.log",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/stale-assisted--blocked.png",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/static-checks.log",
+      "status": "added",
+      "kind": "evidence"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/verification.json",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "docs/automatic-photo-recognition/assisted-photo-geometry.md",
+      "status": "added",
+      "kind": "documentation_or_protocol"
+    },
+    {
+      "path": "elements/pl-sketch/info.json",
+      "status": "modified",
+      "kind": "implementation"
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.js",
+      "status": "modified",
+      "kind": "implementation"
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.py",
+      "status": "modified",
+      "kind": "implementation"
+    },
+    {
+      "path": "elements/pl-sketch/star-assisted.js",
+      "status": "added",
+      "kind": "implementation"
+    },
+    {
+      "path": "elements/pl-sketch/star-automatic.js",
+      "status": "modified",
+      "kind": "implementation"
+    },
+    {
+      "path": "elements/pl-sketch/star-native.js",
+      "status": "modified",
+      "kind": "implementation"
+    },
+    {
+      "path": "elements/pl-sketch/star-photo.js",
+      "status": "modified",
+      "kind": "implementation"
+    },
+    {
+      "path": "questions/star-assisted-photo-demo/info.json",
+      "status": "added",
+      "kind": "question"
+    },
+    {
+      "path": "questions/star-assisted-photo-demo/question.html",
+      "status": "added",
+      "kind": "question"
+    },
+    {
+      "path": "tests/star-assisted-browser.cjs",
+      "status": "added",
+      "kind": "test"
+    },
+    {
+      "path": "tests/star-assisted-server.py",
+      "status": "added",
+      "kind": "test"
+    },
+    {
+      "path": "tests/star-assisted.test.cjs",
+      "status": "added",
+      "kind": "test"
+    }
+  ]
+}

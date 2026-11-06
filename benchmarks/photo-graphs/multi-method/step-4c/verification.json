@@ -1,0 +1,74 @@
+{
+  "step": "4C",
+  "date_local": "2026-11-05",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "parent_commit": "ddc897aa1299f7dcad65eccab0abdd3ba0d30bcd",
+  "verification_scope": "precommit; final commit SHA and clean tree are verified and reported after committing",
+  "environment": {
+    "node": "v20.19.6",
+    "python_container": "3.13.17",
+    "container": "star-automatic-cv-baseline-arm64",
+    "image": "sha256:be0af7a6abc47c2ce95acc6e26457fc831e3e169da8cd053bb8f7af60b83e207",
+    "local_course_mount": "/course read-only",
+    "local_preview": "http://localhost:3000/pl/course/1/question/255/preview",
+    "desktop_viewport": [
+      1440,
+      1100
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ]
+  },
+  "checks": {
+    "real_photo_acceptance_cases": 2,
+    "manual_classification_explicit": true,
+    "held_out_validation": false,
+    "node_tests_passed": 79,
+    "python_tests_passed": 5,
+    "new_real_photo_browser_assertions_passed": 61,
+    "existing_assisted_browser_assertions_passed": 218,
+    "native_browser_assertions_passed": 163,
+    "four_real_submission_posts_and_four_explicit_refreshes": true,
+    "native_original_and_edited_states_restored": true,
+    "geometry_and_reference_hashes_verified_by_evaluator": true,
+    "existing_benchmarks_unchanged": true,
+    "legacy_3px_limit_and_endpoint_mismatch_reported": true,
+    "new_feature_opt_in_only": true,
+    "native_and_photo_fidelity_reported_separately": true,
+    "manual_trace_uses_no_equation_fitting": true,
+    "automatic_unsafe_proposals_still_blocked": true,
+    "stale_native_edit_rejected_without_mutation_and_preview_cleared": true,
+    "final_pointerup_endpoint_regression_passed": true,
+    "public_docs_only_network_outside_localhost": true,
+    "gemini_inference_requests": 0,
+    "photograph_uploads": 0,
+    "billing_changes": 0,
+    "gemini_ready": false,
+    "metadata_and_js_syntax_checks_passed": true,
+    "final_test_failures": 0
+  },
+  "reviewed_limitations": [
+    "prior development photos; approximate single-observer references",
+    "V coverage at 3px is only75.25%; screen at5px passes",
+    "real01 endpoint mismatch11.18px retained; arrow decorations not encoded",
+    "real01 scale operator-assigned, not recovered student units",
+    "no independent student timing/usability or held-out new photo test",
+    "native whole-branch editing only; local correction requires delete/retrace",
+    "loops, x-backtracking and isolated points unsupported",
+    "known existing font decode warnings",
+    "local database/runtime required; no production deployment"
+  ],
+  "network_and_credentials": {
+    "browser_requests_restricted_to_localhost": true,
+    "blocked_external_hosts": [],
+    "public_google_docs_retrieved_without_account": true,
+    "api_key_logged": false,
+    "credential_files_opened": false,
+    "presence_only_check": {
+      "gemini_api_key_configured": false,
+      "inference_enabled": false,
+      "check_scope": "environment_presence_only"
+    }
+  }
+}

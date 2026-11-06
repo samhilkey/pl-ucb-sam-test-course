@@ -174,9 +174,32 @@ function starAddHandDrawnButton (id, si, config) {
     // The capture UI builds itself into that mount point. On confirm it hands
     // back every fitted branch, which we sample and place on this canvas.
     try {
+      const assistedSession = config.assistedPhotoGeometry ? window.StarNative.createSession(si, config, undefined, { assisted: true }) : null
+      let assistedProposal = null
+      if (assistedSession) {
+        photoButton.title = photoButton.ariaLabel = 'Trace a paper graph (manual assistance)'
+        wrapper.className = 'mt-2'
+        photoButton.className = 'btn btn-primary w-100'
+        photoButton.textContent = 'Trace a paper graph (manual)'
+      }
       photoUI = window.StarPhoto.create({
         root: document.getElementById(id + '-star-ui'),
         config,
+        preserveGeometry: !!assistedSession,
+        onInvalidate: function (revision) { assistedProposal = null; assistedSession.invalidate(revision) },
+        onGeometryPreview: function (geometry) { assistedProposal = assistedSession.propose(geometry) },
+        onGeometryConfirm: function () {
+          try {
+            if (!assistedProposal) throw new Error('Read and review the current trace before importing.')
+            assistedSession.commit(assistedProposal.token, true)
+            assistedProposal = null
+            closePanel()
+            return { ok: true, message: 'Your manually traced branches were added without equation fitting.' }
+          } catch (error) {
+            assistedProposal = null
+            return { ok: false, message: error.message + ' Read and review the trace again.' }
+          }
+        },
         onConfirm: function (models) {
           const toolId = window.StarFit.curveToolId(config)
           if (!toolId) {

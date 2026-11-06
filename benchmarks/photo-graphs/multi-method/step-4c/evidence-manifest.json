@@ -1,0 +1,297 @@
+{
+  "step": "4C",
+  "algorithm": "SHA-256",
+  "scope": "all changed implementation, tests, question, documents and evidence; excludes this manifest itself",
+  "files": [
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/GEMINI-SETUP.md",
+      "bytes": 6849,
+      "sha256": "03401221245f0ae3b11be55d208703e67db9051c694b3b9b657068f934f1a062"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/REPORT.md",
+      "bytes": 18394,
+      "sha256": "8b2799d7b9f59f4a40e4f4c65bc25355544e1bba3b7bac2c83db62e19a678379"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/acceptance-policy.json",
+      "bytes": 1547,
+      "sha256": "1d4aaf9db26fb22f106145a55cd45a0ac4546fb8ce5f02c15bcf6c084679fa8a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/check-gemini-env.cjs",
+      "bytes": 451,
+      "sha256": "4f28d51a75afe659d2f9b2d3506e609b46301e24673a92da816465697eecdbd1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/evaluate.cjs",
+      "bytes": 8133,
+      "sha256": "589b791292f27f145e98853c50a7723ed85706a6c7b207490bfa7705bc2b96be"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/file-inventory.json",
+      "bytes": 9480,
+      "sha256": "4aa1394cdada7e1e57689e21d18bee97adb9acf0e5f430fb72cc674331385ad8"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/gemini-public-sources.json",
+      "bytes": 1543,
+      "sha256": "91df81a8d83902fe823e1cf3274c5b39fd65f6cf3037e665933a05ada1470fb9"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/gemini-readiness.json",
+      "bytes": 854,
+      "sha256": "d3a727101a655e88fb1ce0ec7194575ab51434806ed44d35bca59e1c9e3601ea"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/operator-actions.json",
+      "bytes": 4154,
+      "sha256": "2e315ad8768dfe533d78b26ce6a6663d3781f5e00855117c9ebbcd93cfa99f4a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/assisted-browser.log",
+      "bytes": 50,
+      "sha256": "0f18fbf1307f0503dc6144ecc59c4c010680eb9ef1e659c973bd2bd2fac2d760"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/browser-regressions.json",
+      "bytes": 23179,
+      "sha256": "d655474825b3ec9950e0225018146cfc42c0ac54f223c2c88fc24d7f3e20b096"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/browser-regressions.log",
+      "bytes": 18726,
+      "sha256": "88f45d57c6810bbc3559d77790aa9cf8df1e92790fa27cd65be41f2aa98e9097"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/evaluation.json",
+      "bytes": 12816,
+      "sha256": "e20169644010f9613192ce084ab798632b8ed38c990605f2631a1bb77bed888f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/fidelity.log",
+      "bytes": 3996,
+      "sha256": "0e19a32d26212672f1c1699d7a4030c4acad6eecaf5cd16155c3ea43284cc1ef"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/legacy-real--06--fitted-review.png",
+      "bytes": 394871,
+      "sha256": "16bb73f5e523654afe33985682caaddf8ae6c1c3da70d39bf9c9e410a7ea3e3f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/mobile-real--06--review.png",
+      "bytes": 173013,
+      "sha256": "172f3fb5c637b8f49fbee435d329b5142b9c353aa3863fe01b9594fc255e8c9e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/node-tests.log",
+      "bytes": 14588,
+      "sha256": "7db63666ecdcb420a34251811b2ec715c1c0ac8ff58da2ec204b606216b14f10"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--edited-restored.png",
+      "bytes": 47168,
+      "sha256": "f6528606c33190cc54ce3f71a899866c1d6c348f40c74289af4c583275c505a7"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--edited.png",
+      "bytes": 47532,
+      "sha256": "662afd9f646a4dee4034023df8148a1551bab4eaead172e3c8565ee7034db1c1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--graded.png",
+      "bytes": 188674,
+      "sha256": "7f5f20f9abc69f94cc6fa802779c7be6191e5920820a6be98f70cbfdb5d7eea9"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--manual-overlay.png",
+      "bytes": 366815,
+      "sha256": "c79df556d733356d45650971bc5fa7e91374fe421e3b6cd7b4722fe52daf06df"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--native-overlay.png",
+      "bytes": 366482,
+      "sha256": "8ee8b3a603b64b562f0661d221c560cff74f29d0900e88a95d55994423827c5e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--native.png",
+      "bytes": 46889,
+      "sha256": "86fcce6aefb581cf186dbd745cb53241ef93802c1a872340e2828b7e2131863a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--original.png",
+      "bytes": 267346,
+      "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--reference-overlay.png",
+      "bytes": 366910,
+      "sha256": "21cf476f316fc048f0fc04638471ac3b0cb34890306d17b25604ccdce8eb53c2"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--restored.png",
+      "bytes": 47241,
+      "sha256": "3fe92f8ef62e7911841840ea18b16fcad61970e2c7595d206800d3a9885da24c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--review.png",
+      "bytes": 367390,
+      "sha256": "87868cfc1fa633b627a2da9f4cc7fa40ed8920bc9458fdedc9002ff1a1e94823"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--01-multiple-lines-graph-paper--trace.png",
+      "bytes": 348875,
+      "sha256": "1579997107da16e14fab4e7a937729f34dfea7f82b0645971cb62a6e883ad49a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--edited-restored.png",
+      "bytes": 36872,
+      "sha256": "bc8f3ece2df9ef5b94314b34ee5866d241fbb2438c4086380e9cfa3ee2c46fa4"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--edited.png",
+      "bytes": 37027,
+      "sha256": "9fed2ef4707712487ae2ac991db53918dfc70c0f3dc7d86d588e510c5a88e883"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--graded.png",
+      "bytes": 193759,
+      "sha256": "8d30dd38d4322b7489f0bc411e5174e81861ff40075e37a66b3e33332fded8e9"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--legacy-overlay.png",
+      "bytes": 381384,
+      "sha256": "91986f41a6f0bfa8f79722a941fde9592623dd39aa7a7ea7996bdbd280331e1c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--manual-overlay.png",
+      "bytes": 380803,
+      "sha256": "b21192e165278c7fb0af1b593df81a25d816d0d84c7db25b266b0985f9c98570"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--native-overlay.png",
+      "bytes": 380654,
+      "sha256": "5cd0dc69a4b8981e6618cbe2f8bd76d8cfde598f97252255553e906e406a6d1c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--native.png",
+      "bytes": 36633,
+      "sha256": "257a92edd7f5457062ea226e9e8e908363c238974ce0753c81b8a5e97c0f9996"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--original.png",
+      "bytes": 264857,
+      "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--reference-overlay.png",
+      "bytes": 381351,
+      "sha256": "80516db47b8eeb2461b16da37aaf654349e2f17a684f2da5dc93ebf1824a76a1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--restored.png",
+      "bytes": 36832,
+      "sha256": "b7bce0a70b0f9a15819d29cfc66973186c510b23c23aec16cfb8f210db8ff384"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--review.png",
+      "bytes": 399918,
+      "sha256": "99fcbad83fb87e94224b0b71d25115eb618605a4b40b3d249df5225ca2e5a57d"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/real--06-piecewise-graph-paper--trace.png",
+      "bytes": 384312,
+      "sha256": "33afc571f6ffa776a22315d9ba29e0a4990e190ce761e36e83709e9c896dad77"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/results.json",
+      "bytes": 2139877,
+      "sha256": "b4a5731212e7f70b18c2aff8904ce827fc1c2d9297682cc40c9621f21813c418"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/server-tests.log",
+      "bytes": 740,
+      "sha256": "3c21d88f2857bfcc800c22c90f40feaba7cddd035b8232e084bfdbd5ba1de6fd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/stale-assisted--blocked.png",
+      "bytes": 394802,
+      "sha256": "d0e85603651eb85674876178be762abbfd098facb361e5c6d0b6adc1be08c35f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/results/static-checks.log",
+      "bytes": 784,
+      "sha256": "5ee9d046a0f91656493c1a7cc1a6caf657545c9767c790db909d760d3f523b74"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4c/verification.json",
+      "bytes": 3005,
+      "sha256": "a323e61d892cd9ca0341605f5c83d417fbadb869bfb8fa394374f39e14683713"
+    },
+    {
+      "path": "docs/automatic-photo-recognition/assisted-photo-geometry.md",
+      "bytes": 3060,
+      "sha256": "911def5afd1c8c912a1b675dafa47333a5c1d2fd31da1af47c7d26720a1c4d48"
+    },
+    {
+      "path": "elements/pl-sketch/info.json",
+      "bytes": 537,
+      "sha256": "57a641ef7548ead7dbf42ce8f128dc8a56f5df7c64f94144c596a50e3711207d"
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.js",
+      "bytes": 10022,
+      "sha256": "d7b8f524a9a177aa3586fa950294bc3603ea27bc75e7c974c2659d8280552bc7"
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.py",
+      "bytes": 57119,
+      "sha256": "e7c10bd734dd51849f050d6ee214f5595435a7915046f7bb6784d06cf585813f"
+    },
+    {
+      "path": "elements/pl-sketch/star-assisted.js",
+      "bytes": 4481,
+      "sha256": "3b1185ce0ed264605100d65057c9b33e395303dd549490e8e5a3f3cf3adf6316"
+    },
+    {
+      "path": "elements/pl-sketch/star-automatic.js",
+      "bytes": 10001,
+      "sha256": "1ca1bc256b244441a7db94df4086ebd9ad4ede54142ac70ee80eb7de14565967"
+    },
+    {
+      "path": "elements/pl-sketch/star-native.js",
+      "bytes": 8488,
+      "sha256": "8d2073b511d09b6999faf802155699280394f197f1693f3261b6cacb19679c3b"
+    },
+    {
+      "path": "elements/pl-sketch/star-photo.js",
+      "bytes": 43442,
+      "sha256": "f2957f5014d4fe354918352e6689bf32c2b7a3d239297972146134fbb2099076"
+    },
+    {
+      "path": "questions/star-assisted-photo-demo/info.json",
+      "bytes": 217,
+      "sha256": "11f2dd243cc5c513003b4c125bd01218cc56ab437447ff451c14b21d7b2b5c3c"
+    },
+    {
+      "path": "questions/star-assisted-photo-demo/question.html",
+      "bytes": 2216,
+      "sha256": "6e14b1e7d7cc5451e86f99bd8ea65f2d648f61ebcc75a862f75f084242652996"
+    },
+    {
+      "path": "tests/star-assisted-browser.cjs",
+      "bytes": 18383,
+      "sha256": "ff377a2232042e8b713f572de30e323c2177201f8449ba74c704f5880d101195"
+    },
+    {
+      "path": "tests/star-assisted-server.py",
+      "bytes": 3320,
+      "sha256": "f5a41efdbef7e71614252915ea572fcb7b21b236130ce7359a500e2629e7d4d4"
+    },
+    {
+      "path": "tests/star-assisted.test.cjs",
+      "bytes": 5518,
+      "sha256": "03ba89cdef08c124f9750a049a612a564be18626ecd907409ebde8b143880f55"
+    }
+  ]
+}

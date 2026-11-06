@@ -1,0 +1,307 @@
+{
+  "step": "4C",
+  "source": "Actual local PrairieLearn browser interactions, saved native controls and sampled SVG paths",
+  "acceptance_policy": {
+    "method": "fully_manually_traced",
+    "source_photos": "two user-approved existing physical-paper DrawEduMath development cases, not independent held-out annotation",
+    "spatial_fidelity": {
+      "bidirectional_p95_max_source_pixel": 5,
+      "coverage_within_5px_minimum_per_branch": 0.9,
+      "reference_caveat": "Prior approximate visual centerlines have about4px uncertainty; independent human geometry ground truth not acquired. Endpoint deviations from those annotations are reported, never repaired to improve a score."
+    },
+    "native_fidelity": {
+      "gradeable_vertex_max_source_pixel": 0.000001,
+      "separate_branch_count_exact": true,
+      "must_save_original_and_edited_states": true,
+      "must_refresh_restore_each_submission": true,
+      "must_preserve_existing_unrelated_tools": true
+    },
+    "safety": [
+      "no StarFit.fit/sampleCurve call in manual path",
+      "no network requests outside localhost during test",
+      "no import before explicit review acknowledgment",
+      "invalid axis values and nearly collinear axes rejected",
+      "calibration/trace/photo edits invalidate the proposal",
+      "native edits after preview cannot be overwritten by stale confirmation",
+      "automatic ambiguous proposal still rejected",
+      "legacy assisted and automatic/browser regressions retained"
+    ],
+    "endpoint_policy": "Preserve exact operator trace endpoints and corners through native encoding; preserve visible arrow-shaft tips. Arrowhead decorations and open/closed endpoint symbols are not separately encoded by this freeform contract."
+  },
+  "all_photo_acceptance_passed": true,
+  "browser_assertions_passed": 61,
+  "blocked_external_hosts": [],
+  "application_console_errors": [],
+  "outcomes": [
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "source_image_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "reference_sha256": "ced79fa250ac884a5a0aa97d0f0b4d870fbe388dcb4553c6d35f74719bb59fc1",
+      "classification": "fully_manually_traced",
+      "acceptance_passed": true,
+      "manually_traced": {
+        "inherited_3px_metrics": {
+          "expected_strokes": 1,
+          "extracted_paths": 1,
+          "extracted_components": 1,
+          "branch_count_correct": true,
+          "missing_strokes": 0,
+          "partially_missing_strokes": 1,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": 4.2096910354812875,
+          "geometry_to_reference_p95_pixel": 4.204793668149852,
+          "reference_centerline_coverage_within_3px": [
+            0.7525252525252525
+          ],
+          "endpoint_max_error_pixel": 4.242626975558779,
+          "corner_error_pixel": 1.4142035777938453,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "reference_coverage_within_5px_per_branch": [
+          1
+        ],
+        "output_length_farther_than_5px_fraction": 0,
+        "distance_of_reference_peak_to_path_pixel": 0.27326030740005636
+      },
+      "native_rendered": {
+        "inherited_3px_metrics": {
+          "expected_strokes": 1,
+          "extracted_paths": 1,
+          "extracted_components": 1,
+          "branch_count_correct": true,
+          "missing_strokes": 0,
+          "partially_missing_strokes": 1,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": 4.2096841591423235,
+          "geometry_to_reference_p95_pixel": 4.216536575160029,
+          "reference_centerline_coverage_within_3px": [
+            0.7525252525252525
+          ],
+          "endpoint_max_error_pixel": 4.242620328309915,
+          "corner_error_pixel": null,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "reference_coverage_within_5px_per_branch": [
+          1
+        ],
+        "output_length_farther_than_5px_fraction": 0,
+        "distance_of_reference_peak_to_path_pixel": 0.27325684585157534
+      },
+      "native_encoding": {
+        "max_anchor_error_source_pixel": 1.7053025658242404e-13,
+        "max_endpoint_error_source_pixel": 1.7053025658242404e-13,
+        "max_rendered_path_drift_source_pixel": 0.0000354210139900089
+      },
+      "calibration": {
+        "evidence": "Operator-selected visible labeled tick references; approximate affine calibration.",
+        "origin_pixel": [
+          50.00001159935398,
+          323.0000103889628
+        ],
+        "x_unit_vector_pixel": [
+          43.44444088730923,
+          1.2222207793107285
+        ],
+        "y_unit_vector_pixel": [
+          0.16874995392478837,
+          -0.956250048698263
+        ],
+        "automatic_axis_detection": "not attempted in assisted route",
+        "numeric_scale_accuracy_independently_verified": false
+      },
+      "original_and_edited_submission_and_restoration": "passed browser equality assertions",
+      "interaction_counts": {
+        "upload": 1,
+        "axis_handle_drags": 3,
+        "axis_numeric_entries": 2,
+        "tracing_strokes": 1,
+        "read_trace": 1,
+        "review_acknowledgments": 1,
+        "imports": 1,
+        "native_branch_drags": 1,
+        "save_and_grade": 2,
+        "explicit_refresh": 2
+      },
+      "existing_cv_baseline": {
+        "status": "needs_review",
+        "calibration": "uncertain",
+        "metrics": {
+          "expected_strokes": 1,
+          "extracted_paths": 4,
+          "extracted_components": 2,
+          "branch_count_correct": false,
+          "missing_strokes": 1,
+          "partially_missing_strokes": 0,
+          "false_connections": 0,
+          "spurious_paths": 3,
+          "reference_to_geometry_p95_pixel": 303.68718671093245,
+          "geometry_to_reference_p95_pixel": 250.96279796816557,
+          "reference_centerline_coverage_within_3px": [
+            0.020202020202020204
+          ],
+          "endpoint_max_error_pixel": 308.58548248418947,
+          "corner_error_pixel": 253.51331325987596,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "source": "../../automatic-cv/experiment-01/results/summary.json; reused, no recognition rerun"
+      },
+      "legacy_fitted_preview": {
+        "family": "polynomial",
+        "expression": "y = -0.2714x^5 + 6.576x^4 - 56.31x^3 + 187.5x^2 - 155.1x + 32.86",
+        "supplied_frame": "same operator affine references as manual route; no reference geometry used",
+        "inherited_3px_metrics": {
+          "expected_strokes": 1,
+          "extracted_paths": 1,
+          "extracted_components": 1,
+          "branch_count_correct": true,
+          "missing_strokes": 0,
+          "partially_missing_strokes": 1,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": 13.12687126218508,
+          "geometry_to_reference_p95_pixel": 10.840333045241403,
+          "reference_centerline_coverage_within_3px": [
+            0.26936026936026936
+          ],
+          "endpoint_max_error_pixel": 28.265529778923195,
+          "corner_error_pixel": null,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "reference_coverage_within_5px_per_branch": [
+          0.4983164983164983
+        ],
+        "output_length_farther_than_5px_fraction": 0.5128205128205128,
+        "distance_of_reference_peak_to_path_pixel": 24.457420553173776
+      }
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "source_image_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "reference_sha256": "dbdaefb9d17106876f0584c816dbeaa0e7896f9e5eeff79f152373609ad64794",
+      "classification": "fully_manually_traced",
+      "acceptance_passed": true,
+      "manually_traced": {
+        "inherited_3px_metrics": {
+          "expected_strokes": 2,
+          "extracted_paths": 2,
+          "extracted_components": 2,
+          "branch_count_correct": true,
+          "missing_strokes": 0,
+          "partially_missing_strokes": 0,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": 1.8632116165848167,
+          "geometry_to_reference_p95_pixel": 2.0580069511243626,
+          "reference_centerline_coverage_within_3px": [
+            1,
+            1
+          ],
+          "endpoint_max_error_pixel": 11.180370333893139,
+          "corner_error_pixel": null,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "reference_coverage_within_5px_per_branch": [
+          1,
+          1
+        ],
+        "output_length_farther_than_5px_fraction": 0.006644518272425249,
+        "distance_of_reference_peak_to_path_pixel": null
+      },
+      "native_rendered": {
+        "inherited_3px_metrics": {
+          "expected_strokes": 2,
+          "extracted_paths": 2,
+          "extracted_components": 2,
+          "branch_count_correct": true,
+          "missing_strokes": 0,
+          "partially_missing_strokes": 0,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": 1.8632028077108957,
+          "geometry_to_reference_p95_pixel": 2.0677773964350727,
+          "reference_centerline_coverage_within_3px": [
+            1,
+            1
+          ],
+          "endpoint_max_error_pixel": 11.1803566111083,
+          "corner_error_pixel": null,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "reference_coverage_within_5px_per_branch": [
+          1,
+          1
+        ],
+        "output_length_farther_than_5px_fraction": 0.005784526391901663,
+        "distance_of_reference_peak_to_path_pixel": null
+      },
+      "native_encoding": {
+        "max_anchor_error_source_pixel": 1.7112135109858136e-13,
+        "max_endpoint_error_source_pixel": 1.7112135109858136e-13,
+        "max_rendered_path_drift_source_pixel": 0.00005398721118010268
+      },
+      "calibration": {
+        "evidence": "No numeric labels in source. Explicit demo-operator scale assignment, NOT inferred/recovered student units.",
+        "origin_pixel": [
+          238.00001415121525,
+          255.0000270113032
+        ],
+        "x_unit_vector_pixel": [
+          42.399997787264525,
+          -2.0000037140541904
+        ],
+        "y_unit_vector_pixel": [
+          -1.600004193905613,
+          -41.00000744109458
+        ],
+        "automatic_axis_detection": "not attempted in assisted route",
+        "numeric_scale_accuracy_independently_verified": false
+      },
+      "original_and_edited_submission_and_restoration": "passed browser equality assertions",
+      "interaction_counts": {
+        "upload": 1,
+        "axis_handle_drags": 3,
+        "axis_numeric_entries": 2,
+        "tracing_strokes": 2,
+        "read_trace": 1,
+        "review_acknowledgments": 1,
+        "imports": 1,
+        "native_branch_drags": 1,
+        "save_and_grade": 2,
+        "explicit_refresh": 2
+      },
+      "existing_cv_baseline": {
+        "status": "abstained",
+        "calibration": "uncertain",
+        "metrics": {
+          "expected_strokes": 2,
+          "extracted_paths": 0,
+          "extracted_components": 0,
+          "branch_count_correct": false,
+          "missing_strokes": 2,
+          "partially_missing_strokes": 0,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": null,
+          "geometry_to_reference_p95_pixel": null,
+          "reference_centerline_coverage_within_3px": [
+            0,
+            0
+          ],
+          "endpoint_max_error_pixel": null,
+          "corner_error_pixel": null,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "source": "../../automatic-cv/experiment-01/results/summary.json; reused, no recognition rerun"
+      }
+    }
+  ]
+}

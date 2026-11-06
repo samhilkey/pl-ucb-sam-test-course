@@ -1,0 +1,27 @@
+{
+  "method": "fully_manually_traced",
+  "source_photos": "two user-approved existing physical-paper DrawEduMath development cases, not independent held-out annotation",
+  "spatial_fidelity": {
+    "bidirectional_p95_max_source_pixel": 5,
+    "coverage_within_5px_minimum_per_branch": 0.9,
+    "reference_caveat": "Prior approximate visual centerlines have about4px uncertainty; independent human geometry ground truth not acquired. Endpoint deviations from those annotations are reported, never repaired to improve a score."
+  },
+  "native_fidelity": {
+    "gradeable_vertex_max_source_pixel": 1e-06,
+    "separate_branch_count_exact": true,
+    "must_save_original_and_edited_states": true,
+    "must_refresh_restore_each_submission": true,
+    "must_preserve_existing_unrelated_tools": true
+  },
+  "safety": [
+    "no StarFit.fit/sampleCurve call in manual path",
+    "no network requests outside localhost during test",
+    "no import before explicit review acknowledgment",
+    "invalid axis values and nearly collinear axes rejected",
+    "calibration/trace/photo edits invalidate the proposal",
+    "native edits after preview cannot be overwritten by stale confirmation",
+    "automatic ambiguous proposal still rejected",
+    "legacy assisted and automatic/browser regressions retained"
+  ],
+  "endpoint_policy": "Preserve exact operator trace endpoints and corners through native encoding; preserve visible arrow-shaft tips. Arrowhead decorations and open/closed endpoint symbols are not separately encoded by this freeform contract."
+}

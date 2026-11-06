@@ -20,6 +20,7 @@ window.StarPhoto = (function () {
   function create (options) {
     const root = options.root // container element for the UI
     const onConfirm = options.onConfirm || function () { return { ok: false, message: '' } }
+    const preserveGeometry = options.preserveGeometry === true
 
     // ---- per-instance state (was module-global in the prototype) ----
     let photoBmp = null
@@ -33,6 +34,8 @@ window.StarPhoto = (function () {
     let lastHandle = 'X'
     let tracedCurves = null
     let currentModels = null
+    let currentGeometry = null
+    let inputRevision = 0
     let branchSpecs = []
     let activeBranch = 0
     let photoLoading = false
@@ -122,6 +125,8 @@ window.StarPhoto = (function () {
               <h6 class="star-review-title">Check your preview</h6>
               <p>The <strong>orange line</strong> is the graph that will go on the canvas. Check its branches, endpoints, and important coordinates against your paper.</p>
               <button type="button" class="btn btn-light border star-edit-trace">Edit my trace</button>
+              <label class="star-manual-review" ${preserveGeometry ? '' : 'hidden'}><input type="checkbox" class="star-manual-ack"> I checked the axis values, branches, corners and endpoints against my photo.</label>
+              <p class="star-small" ${preserveGeometry ? '' : 'hidden'}>This is a manual trace. Check it carefully before adding it to the graph.</p>
               <div class="star-fit-box" hidden>
                 <label class="star-branch-wrap" hidden>Edit branch <select class="star-branch"></select></label>
                 <p class="star-fit-meta"></p>
@@ -162,6 +167,7 @@ window.StarPhoto = (function () {
     const q = (sel) => root.querySelector(sel)
     const canvas = q('.star-canvas')
     const statusEl = q('.star-status')
+    if (preserveGeometry) q('.star-trace-options').hidden = true
 
     const setStatus = (text) => {
       if (statusEl.textContent !== (text || '')) statusEl.textContent = text || ''
@@ -169,6 +175,8 @@ window.StarPhoto = (function () {
 
     function clearFit () {
       currentModels = null
+      currentGeometry = null
+      q('.star-manual-ack').checked = false
       q('.star-confirm').disabled = true
       q('.star-fit-eq').textContent = ''
       q('.star-fit-meta').textContent = ''
@@ -179,6 +187,8 @@ window.StarPhoto = (function () {
     // A fit belongs to the photo, calibration and trace it was calculated from.
     // Keep extracted points only when changing fit settings, not those inputs.
     function invalidateTrace () {
+      inputRevision++
+      if (preserveGeometry && options.onInvalidate) options.onInvalidate(inputRevision)
       tracedCurves = null
       branchSpecs = []
       activeBranch = 0
@@ -259,22 +269,23 @@ window.StarPhoto = (function () {
       q('.star-use').hidden = step !== 'curve'
       q('.star-use').disabled = !ready
       q('.star-confirm').hidden = step !== 'review'
-      q('.star-confirm').disabled = !ready || !currentModels || !!error
+      q('.star-confirm').disabled = !ready || !(currentModels || currentGeometry) || !!error || (preserveGeometry && !q('.star-manual-ack').checked)
       q('.star-undo').disabled = !count
       q('.star-clear').disabled = !count
       q('.star-axis-error').hidden = !error
       q('.star-axis-error').textContent = error
       const branchLabel = count ? `${count} branch${count === 1 ? '' : 'es'} traced` : 'No branches traced'
       if (q('.star-branch-count').textContent !== branchLabel) q('.star-branch-count').textContent = branchLabel
-      q('.star-review-title').textContent = currentModels
-        ? `Review ${currentModels.length} branch${currentModels.length === 1 ? '' : 'es'}`
+      const reviewedCount = currentGeometry ? currentGeometry.strokes.length : currentModels ? currentModels.length : 0
+      q('.star-review-title').textContent = reviewedCount
+        ? `Review ${reviewedCount} branch${reviewedCount === 1 ? '' : 'es'}`
         : 'Update your preview'
       q('.star-empty').hidden = !!photoBmp
       q('.star-trace-toggle').hidden = step !== 'review'
       const showTrace = step !== 'review' || q('.star-show-trace').checked
       q('.star-legend-trace').hidden = !showTrace
       q('.star-legend-ink').hidden = !refined || !showTrace
-      q('.star-legend-preview').hidden = !currentModels
+      q('.star-legend-preview').hidden = !(currentModels || currentGeometry)
       q('.star-zoom-in').disabled = !ready || zoom >= 4
       q('.star-zoom-out').disabled = !ready || zoom <= 1
       q('.star-fit-view').disabled = !ready
@@ -431,6 +442,20 @@ window.StarPhoto = (function () {
           x.stroke()
         })
       }
+      if (currentGeometry) {
+        const [sx, , , sy, tx, ty] = currentGeometry.image.processing.source_to_processing
+        x.strokeStyle = '#d87900'
+        x.lineWidth = 2.5
+        currentGeometry.strokes.forEach(stroke => {
+          x.beginPath()
+          stroke.vertices.forEach((v, i) => {
+            const p = [v.pixel[0] * sx + tx, v.pixel[1] * sy + ty]
+            if (i) x.lineTo(...p)
+            else x.moveTo(...p)
+          })
+          x.stroke()
+        })
+      }
 
       const dot = (p, r, fill, txt) => {
         const displayScale = canvas.getBoundingClientRect().width / MW || 1
@@ -538,9 +563,13 @@ window.StarPhoto = (function () {
       drawPhoto()
     })
 
-    const endDrag = () => {
+    const endDrag = (event) => {
       if (drag && drag.kind === 'stroke') {
         const st = markup.strokes[markup.strokes.length - 1]
+        if (preserveGeometry && event.type === 'pointerup') {
+          const p = canvasPt(event)
+          if (Math.hypot(p[0] - st.at(-1)[0], p[1] - st.at(-1)[1]) > 1e-8) st.push(p)
+        }
         if (st.length < 3) markup.strokes.pop()
       }
       drag = null
@@ -889,6 +918,7 @@ window.StarPhoto = (function () {
     }
 
     function runFit (spec) {
+      if (preserveGeometry) return
       if (spec !== undefined) branchSpecs[activeBranch] = spec
       clearFit()
       if (!tracedCurves || photoLoading) return
@@ -929,6 +959,13 @@ window.StarPhoto = (function () {
     // The student confirms the curve is a fair transcription of what they drew.
     // Only at that point does anything reach the canvas.
     q('.star-confirm').addEventListener('click', () => {
+      if (preserveGeometry) {
+        if (!currentGeometry || photoLoading || q('.star-confirm').disabled || !q('.star-manual-ack').checked) return
+        const res = options.onGeometryConfirm(currentGeometry)
+        if (!res || !res.ok) { clearFit(); drawPhoto() }
+        setStatus(res && res.message ? res.message : '')
+        return
+      }
       if (!currentModels || photoLoading || q('.star-confirm').disabled) return
       const res = onConfirm(currentModels)
       setStatus(res && res.message ? res.message : '')
@@ -938,6 +975,20 @@ window.StarPhoto = (function () {
       if (!markup || photoLoading || q('.star-use').disabled) return
       invalidateTrace()
       try {
+        if (preserveGeometry) {
+          const error = calibrationError()
+          if (error) throw new Error(error)
+          const geometry = window.StarAssisted.fromTrace({ width: photoBmp.width, height: photoBmp.height,
+            processingWidth: MW, processingHeight: MH, origin: markup.O, xMarker: markup.X, yMarker: markup.Y,
+            xValue: Number(q('.star-xval').value), yValue: Number(q('.star-yval').value), strokes: markup.strokes, inputRevision })
+          options.onGeometryPreview(geometry)
+          currentGeometry = geometry
+          tracedCurves = geometry.strokes.map(s => s.vertices.map(v => v.graph))
+          setMode('review')
+          drawPhoto()
+          setStatus('Manual trace ready. Check the scale, separate branches, corners and endpoints, then acknowledge the preview.')
+          return
+        }
         const result = markupToGraph()
         tracedCurves = result.curves.map((curve) => curve.points)
         branchSpecs = tracedCurves.map(() => null)
@@ -959,6 +1010,7 @@ window.StarPhoto = (function () {
         setStatus(err.message || 'Could not read the markup.')
       }
     })
+    q('.star-manual-ack').addEventListener('change', updateWorkflow)
 
     // Structured correction: the student overrides the family rather than
     // describing the problem in words. Same constraint objects the prototype

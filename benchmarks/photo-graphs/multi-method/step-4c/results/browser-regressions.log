@@ -1,0 +1,392 @@
+PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node tests/star-photo-confirmation.cjs
+exit_code=0; passed=71; application_console_errors=0
+Correct question loaded
+Meaningful question content
+Fresh reading enables confirmation
+Clear trace: confirmation disabled
+Clear trace: old equation cleared
+Clear trace: old model cannot reach canvas
+Empty trace shows an actionable error
+Failed empty-trace reading: confirmation disabled
+Failed empty-trace reading: old equation cleared
+Failed empty-trace reading: old model cannot reach canvas
+Fresh reading enables confirmation
+Replace photo: confirmation disabled
+Replace photo: old equation cleared
+Replace photo: old model cannot reach canvas
+Fresh reading enables confirmation
+Change x units: confirmation disabled
+Change x units: old equation cleared
+Change x units: old model cannot reach canvas
+Fresh reading enables confirmation
+Change y units: confirmation disabled
+Change y units: old equation cleared
+Change y units: old model cannot reach canvas
+Fresh reading enables confirmation
+Change equal-axis scale: confirmation disabled
+Change equal-axis scale: old equation cleared
+Change equal-axis scale: old model cannot reach canvas
+Fresh reading enables confirmation
+Change search width: confirmation disabled
+Change search width: old equation cleared
+Change search width: old model cannot reach canvas
+Fresh reading enables confirmation
+Move origin: confirmation disabled
+Move origin: old equation cleared
+Move origin: old model cannot reach canvas
+Fresh reading enables confirmation
+Add stroke: confirmation disabled
+Add stroke: old equation cleared
+Add stroke: old model cannot reach canvas
+Fresh reading enables confirmation
+Undo stroke: confirmation disabled
+Undo stroke: old equation cleared
+Undo stroke: old model cannot reach canvas
+Fresh reading enables confirmation
+Change polynomial degree: confirmation disabled
+Change polynomial degree: old equation cleared
+Change polynomial degree: old model cannot reach canvas
+Refit re-enables confirmation
+Changing curve family generates a fresh fit
+Display-only controls preserve a valid fit
+Failed refit (null): confirmation disabled
+Failed refit (null): old equation cleared
+Failed refit (null): old model cannot reach canvas
+Successful refit recovers from null
+Failed refit (throw): confirmation disabled
+Failed refit (throw): old equation cleared
+Failed refit (throw): old model cannot reach canvas
+Successful refit recovers from throw
+Photo loading: confirmation disabled
+Photo loading: old equation cleared
+Photo loading: old model cannot reach canvas
+Reading is disabled while a photo loads
+Fresh reading enables confirmation
+Late older upload cannot replace the newest photo or preview
+Failed photo load: confirmation disabled
+Failed photo load: old equation cleared
+Failed photo load: old model cannot reach canvas
+Failed photo load cannot reread the previous photo
+Fresh reading enables confirmation
+Fresh confirmation closes photo panel
+Exactly one fresh model reached native canvas
+No application console errors
+
+PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node tests/star-photo-branches.cjs
+exit_code=0; passed=80; application_console_errors=0
+single-line: correct page
+single-line: meaningful page
+single-line: every traced branch reaches the fitter
+single-line: models cover every traced point and the complete sampled domain
+single-line: complete proposal is confirmable
+single-line: preview lists every branch
+single-line: branch selector matches proposal
+single-line: native state retains every branch
+single-line: submission data retains every branch
+single-line: successful confirmation closes panel
+two-lines: correct page
+two-lines: meaningful page
+two-lines: every traced branch reaches the fitter
+two-lines: models cover every traced point and the complete sampled domain
+two-lines: complete proposal is confirmable
+two-lines: preview lists every branch
+two-lines: branch selector matches proposal
+Selecting a branch preserves the proposal without refitting
+Changing branch degree invalidates the complete proposal
+Invalidated multi-branch equations disappear
+Invalidated multi-branch proposal cannot transfer
+Editing branch 2 preserves branch 1 model
+Degree override applies to the selected branch
+Failure of a later branch blocks the whole proposal
+Failure identifies the affected branch
+A partially fitted proposal cannot transfer
+two-lines: native state retains every branch
+two-lines: submission data retains every branch
+two-lines: successful confirmation closes panel
+Undoing a branch invalidates the complete proposal
+Undoing the second branch restores single-branch controls
+Fresh single-branch confirmation removes the previous second branch
+An unusable extra stroke blocks confirmation instead of disappearing
+Unusable stroke identifies the branch to retrace or undo
+Unusable later stroke cannot replace the native drawing
+Undoing an unusable stroke restores a complete proposal
+reciprocal: correct page
+reciprocal: meaningful page
+reciprocal: every traced branch reaches the fitter
+reciprocal: models cover every traced point and the complete sampled domain
+reciprocal: complete proposal is confirmable
+reciprocal: preview lists every branch
+reciprocal: branch selector matches proposal
+reciprocal: native state retains every branch
+reciprocal: submission data retains every branch
+reciprocal: successful confirmation closes panel
+Reciprocal branches remain disconnected across the asymptote
+overlapping-x: correct page
+overlapping-x: meaningful page
+overlapping-x: every traced branch reaches the fitter
+overlapping-x: models cover every traced point and the complete sampled domain
+overlapping-x: complete proposal is confirmable
+overlapping-x: preview lists every branch
+overlapping-x: branch selector matches proposal
+overlapping-x: native state retains every branch
+overlapping-x: submission data retains every branch
+overlapping-x: successful confirmation closes panel
+three-branches: correct page
+three-branches: meaningful page
+three-branches: every traced branch reaches the fitter
+three-branches: models cover every traced point and the complete sampled domain
+three-branches: complete proposal is confirmable
+three-branches: preview lists every branch
+three-branches: branch selector matches proposal
+three-branches: native state retains every branch
+three-branches: submission data retains every branch
+three-branches: successful confirmation closes panel
+mobile-two-lines: correct page
+mobile-two-lines: meaningful page
+Mobile photo is visible for tracing without layout changes
+Mobile photo is visible for tracing without layout changes
+mobile-two-lines: every traced branch reaches the fitter
+mobile-two-lines: models cover every traced point and the complete sampled domain
+mobile-two-lines: complete proposal is confirmable
+mobile-two-lines: preview lists every branch
+mobile-two-lines: branch selector matches proposal
+mobile-two-lines: native state retains every branch
+mobile-two-lines: submission data retains every branch
+mobile-two-lines: successful confirmation closes panel
+No application console errors
+
+PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node tests/star-photo-workflow.cjs
+exit_code=0; passed=67; application_console_errors=0
+desktop: correct question
+desktop: meaningful page
+desktop: instructor switch-off control stays unchanged
+desktop: native modal opens
+desktop: later steps wait for a photo
+desktop: keyboard focus stays in the dialog
+desktop: upload advances to calibration
+desktop: entire portrait photo fits without scrolling
+desktop: calibration action stays on screen
+desktop: dialog has no horizontal overflow
+desktop: zero reference cannot proceed silently as one
+desktop: invalid calibration has a visible explanation
+desktop: Enter in a coordinate field does not submit the question
+desktop: keyboard moves an axis marker
+desktop: keyboard can restore the original calibration
+desktop: tracing step exposes its primary action
+desktop: zoom controls magnify the photo
+desktop: move-photo gesture pans the magnified image
+desktop: panning creates no accidental stroke
+desktop: three separate gestures give three branches
+desktop: reading advances to review
+desktop: confirmation is enabled and on screen
+desktop: review represents every branch
+desktop: view gestures did not add fitting inputs
+desktop: tracing while zoomed preserves graph coordinates
+desktop: zoom, pan and trace visibility preserve the current proposal
+desktop: view changes do not refit
+desktop: keyboard calibration invalidates the proposal
+desktop: Escape closes and restores focus
+desktop: reopening preserves the reviewed proposal
+desktop: all three branches reach the native canvas
+desktop: all three branches reach submission data
+desktop: confirmation closes dialog and restores focus
+mobile: correct question
+mobile: meaningful page
+mobile: instructor switch-off control stays unchanged
+mobile: native modal opens
+mobile: later steps wait for a photo
+mobile: keyboard focus stays in the dialog
+mobile: upload advances to calibration
+mobile: entire portrait photo fits without scrolling
+mobile: calibration action stays on screen
+mobile: dialog has no horizontal overflow
+mobile: zero reference cannot proceed silently as one
+mobile: invalid calibration has a visible explanation
+mobile: Enter in a coordinate field does not submit the question
+mobile: keyboard moves an axis marker
+mobile: keyboard can restore the original calibration
+mobile: tracing step exposes its primary action
+mobile: zoom controls magnify the photo
+mobile: move-photo gesture pans the magnified image
+mobile: panning creates no accidental stroke
+mobile: three separate gestures give three branches
+mobile: reading advances to review
+mobile: confirmation is enabled and on screen
+mobile: review represents every branch
+mobile: view gestures did not add fitting inputs
+mobile: tracing while zoomed preserves graph coordinates
+mobile: zoom, pan and trace visibility preserve the current proposal
+mobile: view changes do not refit
+mobile: keyboard calibration invalidates the proposal
+mobile: Escape closes and restores focus
+mobile: reopening preserves the reviewed proposal
+mobile: all three branches reach the native canvas
+mobile: all three branches reach submission data
+mobile: confirmation closes dialog and restores focus
+No application console errors
+
+PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node tests/star-native-browser.cjs
+exit_code=0; passed=163; application_console_errors=0
+Correct native sandbox loaded
+line: actual pixel recognition provides expected controlled geometry
+line: review does not mutate native state
+line: confirmation requires acknowledgment
+line: disabled confirm cannot transfer
+line: proposed native-coordinate preview has every branch
+line: confirmation closes modal
+line: all branches appended
+line: prior receiving-tool drawing retained
+line: unrelated tool retained
+line: actual native SVG exactly matches reviewed control path
+line: no StarFit or sampleCurve use
+line: actual SVG preserves CV polyline
+line: gradeable controls preserve all vertices and corners
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+line: submission stores exact native controls
+line: submission retains separate branch objects
+line: refresh restores exact native controls
+line: refresh restores unrelated objects
+line: restored rendering unchanged
+line: restored gradeable geometry retains every vertex
+line: native Select drag edits imported branch
+line: native edit translates all controls without deforming the branch
+line: native edit leaves unrelated objects stable
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+line: edited graph survives Save & Grade and refresh
+Correct native sandbox loaded
+sharp-v: actual pixel recognition provides expected controlled geometry
+sharp-v: review does not mutate native state
+sharp-v: confirmation requires acknowledgment
+sharp-v: disabled confirm cannot transfer
+sharp-v: proposed native-coordinate preview has every branch
+sharp-v: confirmation closes modal
+sharp-v: all branches appended
+sharp-v: prior receiving-tool drawing retained
+sharp-v: unrelated tool retained
+sharp-v: actual native SVG exactly matches reviewed control path
+sharp-v: no StarFit or sampleCurve use
+sharp-v: actual SVG preserves CV polyline
+sharp-v: gradeable controls preserve all vertices and corners
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+sharp-v: submission stores exact native controls
+sharp-v: submission retains separate branch objects
+sharp-v: refresh restores exact native controls
+sharp-v: refresh restores unrelated objects
+sharp-v: restored rendering unchanged
+sharp-v: restored gradeable geometry retains every vertex
+sharp-v: native Select drag edits imported branch
+sharp-v: native edit translates all controls without deforming the branch
+sharp-v: native edit leaves unrelated objects stable
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+sharp-v: edited graph survives Save & Grade and refresh
+Correct native sandbox loaded
+smooth-curve: actual pixel recognition provides expected controlled geometry
+smooth-curve: review does not mutate native state
+smooth-curve: confirmation requires acknowledgment
+smooth-curve: disabled confirm cannot transfer
+smooth-curve: proposed native-coordinate preview has every branch
+smooth-curve: confirmation closes modal
+smooth-curve: all branches appended
+smooth-curve: prior receiving-tool drawing retained
+smooth-curve: unrelated tool retained
+smooth-curve: actual native SVG exactly matches reviewed control path
+smooth-curve: no StarFit or sampleCurve use
+smooth-curve: actual SVG preserves CV polyline
+smooth-curve: gradeable controls preserve all vertices and corners
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+smooth-curve: submission stores exact native controls
+smooth-curve: submission retains separate branch objects
+smooth-curve: refresh restores exact native controls
+smooth-curve: refresh restores unrelated objects
+smooth-curve: restored rendering unchanged
+smooth-curve: restored gradeable geometry retains every vertex
+smooth-curve: native Select drag edits imported branch
+smooth-curve: native edit translates all controls without deforming the branch
+smooth-curve: native edit leaves unrelated objects stable
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+smooth-curve: edited graph survives Save & Grade and refresh
+Correct native sandbox loaded
+two-branches: actual pixel recognition provides expected controlled geometry
+two-branches: review does not mutate native state
+two-branches: confirmation requires acknowledgment
+two-branches: disabled confirm cannot transfer
+two-branches: proposed native-coordinate preview has every branch
+two-branches: confirmation closes modal
+two-branches: all branches appended
+two-branches: prior receiving-tool drawing retained
+two-branches: unrelated tool retained
+two-branches: actual native SVG exactly matches reviewed control path
+two-branches: no StarFit or sampleCurve use
+two-branches: actual SVG preserves CV polyline
+two-branches: gradeable controls preserve all vertices and corners
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+two-branches: submission stores exact native controls
+two-branches: submission retains separate branch objects
+two-branches: refresh restores exact native controls
+two-branches: refresh restores unrelated objects
+two-branches: restored rendering unchanged
+two-branches: restored gradeable geometry retains every vertex
+two-branches: native Select drag edits imported branch
+two-branches: native edit translates all controls without deforming the branch
+two-branches: native edit leaves unrelated objects stable
+Editing branch one leaves disconnected branch two unchanged
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+two-branches: edited graph survives Save & Grade and refresh
+Correct native sandbox loaded
+Negative case really contains five candidate paths
+Ambiguous axes block acknowledgment and native import
+Unsafe five-path result cannot mutate native state
+Rejected proposal cannot be committed
+Native canvas changes invalidate reviewed proposal
+Stale confirmation preserves newer canvas edits
+Photo replacement immediately invalidates prior approval
+Late older recognition cannot overwrite the newer two-branch proposal
+New photo requires fresh explicit confirmation
+Closing/reopening cannot commit a stale proposal
+polyline: actual runtime render/state/gradeable representation verified
+spline: actual runtime render/state/gradeable representation verified
+freeform: actual runtime render/state/gradeable representation verified
+Freeform grading uses the exact geometric segments
+Correct native sandbox loaded
+Stock freeform drawing works without photo import
+Stock native drawing remains independent of equation fitting
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+Manual native drawing survives Save & Grade and refresh
+Assisted photo fitting transfers 17 samples as 49 valid freeform controls
+Assisted freeform rendering state and gradeable controls agree
+Actual Save & Grade POST sent
+POST contains native base64 submission
+Native server accepted submission format
+Existing x-squared grader marks the preserved non-solution sample incorrect
+Assisted photo freeform import survives Save & Grade and refresh
+Correct native sandbox loaded
+Automatic review has no mobile page overflow
+Automatic dialog has no mobile horizontal overflow
+No application console errors

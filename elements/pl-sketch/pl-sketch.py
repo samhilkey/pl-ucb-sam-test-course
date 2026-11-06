@@ -76,6 +76,7 @@ class SketchClientConfig(TypedDict):
     plugins: list[ToolbarPlugin]
     initialstate: dict[str, DrawingData]
     readonly: NotRequired[bool]
+    assistedPhotoGeometry: NotRequired[bool]
 
 
 class SketchAnswerParams(TypedDict):
@@ -119,6 +120,7 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "allow-blank",
         "allow-hand-drawn",  # STAR
         "automatic-photo",  # STAR: independent experimental CV import switch
+        "preserve-photo-geometry",  # opt-in reviewed manual traces, no equation fit
     ]
     pl.check_attribs(element, required_attribs, optional_attribs)
 
@@ -126,6 +128,9 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
     # rather than silently doing nothing when the question renders.
     pl.get_boolean_attrib(element, "allow-hand-drawn", ALLOW_HAND_DRAWN_DEFAULT)
     pl.get_boolean_attrib(element, "automatic-photo", False)
+    preserve_photo_geometry = pl.get_boolean_attrib(element, "preserve-photo-geometry", False)
+    if preserve_photo_geometry and not pl.get_boolean_attrib(element, "allow-hand-drawn", False):
+        raise ValueError('preserve-photo-geometry requires allow-hand-drawn="true".')
 
     name = pl.get_string_attrib(element, "answers-name")
     pl.check_answers_names(data, name)
@@ -295,6 +300,10 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "plugins": toolbar,
         "initialstate": initial_state,
     }
+    if preserve_photo_geometry:
+        if not any(t["name"] == "freeform" and not t["readonly"] and not t["helper"] for t in tool_data.values()):
+            raise ValueError("Photo geometry needs an editable free-draw tool.")
+        client_config["assistedPhotoGeometry"] = True
 
     # Saving all processed data into a dictionary
     params: SketchAnswerParams = {
@@ -1127,6 +1136,7 @@ def parse(element_html: str, data: pl.QuestionData) -> None:
         elif (
             tool_data[toolid]["name"] in spline_based_tool_names
             and tool_data[toolid]["id"] not in no_overlap_check
+            and not pl.get_boolean_attrib(element, "preserve-photo-geometry", False)
         ):
             if len(gradeable[toolid]) == 1:
                 continue
@@ -1164,6 +1174,23 @@ def grade(element_html: str, data: pl.QuestionData) -> None:
 
     if read_only:
         return
+
+    # Only the opted-in manual-photo question accepts an overlapping attempt
+    # as a mathematical mistake instead of an invalid/unsavable submission.
+    # Keep the native strokes; do not discard a branch or fit a single function.
+    if pl.get_boolean_attrib(element, "preserve-photo-geometry", False):
+        params = data["params"][name]
+        excluded = {tool["id"] for grader in params["graders"] if grader.get("xyflip") for tool in grader["toolid"]}
+        submission = data["submitted_answers"][name + "-sketchresponse-submission"]
+        drawings = json.loads(base64.b64decode(submission).decode("utf-8"))["gradeable"]
+        for toolid, items in drawings.items():
+            if toolid in excluded or params["tool_data"][toolid]["name"] not in ["freeform", "spline", "polyline"]:
+                continue
+            ranges = [(min(p[0] for p in item["spline"]), max(p[0] for p in item["spline"])) for item in items if item.get("spline")]
+            if any(min(a[1], b[1]) - max(a[0], b[0]) > 5 for i, a in enumerate(ranges) for b in ranges[i + 1:]):
+                data["partial_scores"][name] = {"score": 0, "weight": weight, "feedback": [{"correct": False,
+                    "feedback_text": "Your separate strokes were preserved. Multiple y-values for the same x do not form the requested function."}]}
+                return
 
     data["partial_scores"][name] = _grade_with_staging(name, data, weight)
 

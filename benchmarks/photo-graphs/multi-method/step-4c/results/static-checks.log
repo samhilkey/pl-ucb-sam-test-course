@@ -1,0 +1,33 @@
+$ python3 validation_workflow/info_json_check.py --inputs questions/star-assisted-photo-demo/info.json
+[92mAll checks passed![0m
+exit_code=0
+
+$ git diff --check
+exit_code=0
+
+$ node --check elements/pl-sketch/star-assisted.js
+exit_code=0
+
+$ node --check elements/pl-sketch/star-photo.js
+exit_code=0
+
+$ node --check elements/pl-sketch/star-native.js
+exit_code=0
+
+$ node --check elements/pl-sketch/pl-sketch.js
+exit_code=0
+
+$ node --check elements/pl-sketch/star-automatic.js
+exit_code=0
+
+$ node --check tests/star-assisted.test.cjs
+exit_code=0
+
+$ node --check tests/star-assisted-browser.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4c/evaluate.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4c/check-gemini-env.cjs
+exit_code=0
