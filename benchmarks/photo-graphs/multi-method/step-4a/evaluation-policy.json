@@ -1,0 +1,26 @@
+{
+  "version": "4a.1",
+  "reference_quality": "approximate_prior_visual_annotations_not_independent_ground_truth",
+  "cases": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "reference": "../../automatic-cv/experiment-01/references/real--01-multiple-lines-graph-paper.json",
+      "reference_sha256": "dbdaefb9d17106876f0584c816dbeaa0e7896f9e5eeff79f152373609ad64794",
+      "baseline_geometry": "../../automatic-cv/experiment-01/results/real--01-multiple-lines-graph-paper.geometry.json",
+      "baseline_geometry_sha256": "563cd45d8f6490b119f29a511dec65a31f00750096f8800ad70cf0f6833aae12"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "reference": "../../automatic-cv/experiment-01/references/real--06-piecewise-graph-paper.json",
+      "reference_sha256": "ced79fa250ac884a5a0aa97d0f0b4d870fbe388dcb4553c6d35f74719bb59fc1",
+      "baseline_geometry": "../../automatic-cv/experiment-01/results/real--06-piecewise-graph-paper.geometry.json",
+      "baseline_geometry_sha256": "4fa0a01ce808decca9fcb4506768f71f94d4f0a3e1778b0947c14f89efbc2b00"
+    }
+  ],
+  "pending_independent_drawings": {
+    "development": 2,
+    "held_out": 1,
+    "status": "not_acquired_not_scored"
+  },
+  "quantitative_claims": "exploratory_diagnostics_only"
+}

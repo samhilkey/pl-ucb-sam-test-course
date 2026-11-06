@@ -1,0 +1,50 @@
+{
+  "recorded_at_utc": "2026-11-06T03:52:38.812414+00:00",
+  "client_date": "2026-11-05",
+  "client_timezone": "America/Los_Angeles",
+  "architecture": "arm64",
+  "hardware_model_verified": "Mac14,2",
+  "memory_bytes_verified": 17179869184,
+  "hardware_verification": "sysctl -n hw.memsize hw.model outside sandbox; initial sandbox read denied",
+  "node_version": "v20.19.6",
+  "swift_version": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+  "executables": {
+    "tesseract": null,
+    "ollama": null,
+    "stripe": null,
+    "swift": "/usr/bin/swift"
+  },
+  "active_python_modules": {
+    "PIL": false,
+    "cv2": false,
+    "pytesseract": false,
+    "jsonschema": false,
+    "torch": false,
+    "transformers": false,
+    "mlx_vlm": false
+  },
+  "environment_credentials_present_only": {
+    "GEMINI_API_KEY": false,
+    "GOOGLE_API_KEY": false,
+    "OPENROUTER_API_KEY": false
+  },
+  "credentials_loaded_from_files": false,
+  "authenticated_provider_requests": 0,
+  "ocr_probe": {
+    "engine": "Apple Vision",
+    "mode": "accurate",
+    "revision": 3,
+    "network_transport": "none; on-device framework",
+    "sandbox_attempts": {
+      "real--01": "failed: nilError",
+      "real--06": "failed: nilError"
+    },
+    "outside_sandbox_attempts": {
+      "real--01": "completed",
+      "real--06": "completed"
+    },
+    "cold_start_warning": "First successful probe took about 46.3s; second about 0.253s. Not a latency benchmark."
+  },
+  "local_vlm_status": "no inspected runtime or weights loaded; no inference, install or weight download performed",
+  "directory_lookup_status": "Stripe CLI absent; official setup documentation read; no installation/provisioning performed; provider facts verified directly from official documentation and public catalog"
+}

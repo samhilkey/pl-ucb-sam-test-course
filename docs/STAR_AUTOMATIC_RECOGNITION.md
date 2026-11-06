@@ -267,3 +267,23 @@ Evidence gallery: `http://127.0.0.1:8766/`.
 
 **Review boundary:** stop after the step-3 commit. The next approved step should
 improve real-photo recognition before expanding the correction interface.
+
+## Step 4A: multi-method feasibility
+
+Step 4A compares public free-tier VLM capabilities, local OCR feasibility and
+reusable components. It adds an executable offline design under
+[`multi-method/step-4a`](../benchmarks/photo-graphs/multi-method/step-4a/REPORT.md),
+with frozen image/reference hashes and a request preflight that cannot execute
+live inference. Apple Vision returned raw OCR on the labeled photo; calibration
+improvement was not evaluated. Tesseract is not installed. Both VLM candidates
+remain untested, and real-photo automatic recognition remains 0/2.
+
+Validation: 71 Node checks passed, including seven feasibility checks. No
+production element or question changed. External image release, credentials,
+actual account tier/quota and $0 request approval remain pending. The November 9
+demo takes priority over unnecessary provider comparisons.
+
+**Review boundary:** commit Step 4A locally and stop. Step 4B is a separately
+approved, at-most-two-request VLM-only experiment; 4C OCR/CV, 4D hybrid, 4E
+selection/integration and 4F independent demo acceptance each retain an explicit
+approval checkpoint.

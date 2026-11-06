@@ -1,0 +1,5 @@
+# Future credentials and runtime payloads must never become research evidence.
+.env
+.env.*
+runtime/
+packets/

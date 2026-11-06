@@ -1,0 +1,20 @@
+{
+  "coordinate_frame" : "top_left_xy_pixel_edges",
+  "duration_ms" : 253.42905521392822,
+  "engine" : "Apple Vision VNRecognizeTextRequest",
+  "image" : {
+    "height" : 529,
+    "width" : 801
+  },
+  "interpretation" : "Raw OCR only; confidence is not calibrated accuracy. No labels accepted for calibration.",
+  "language_correction" : false,
+  "languages" : [
+    "en-US"
+  ],
+  "observations" : [
+
+  ],
+  "recognition_level" : "accurate",
+  "request_revision" : 3,
+  "status" : "completed_feasibility_probe"
+}

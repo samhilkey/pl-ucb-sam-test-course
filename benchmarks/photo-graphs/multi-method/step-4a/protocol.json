@@ -1,0 +1,106 @@
+{
+  "version": "4a.1",
+  "approved_scope": "Step 4A feasibility and offline design only",
+  "next_step_approval_required": true,
+  "demo_date": "2026-11-09",
+  "method_decision_target": "2026-11-06",
+  "timezone": "America/Los_Angeles",
+  "shortlist": {
+    "primary": {
+      "provider": "Google Gemini Developer API",
+      "model": "gemini-3.5-flash-lite",
+      "tier_required": "Free, billing not enabled",
+      "credential_env": "GEMINI_API_KEY"
+    },
+    "reserve": {
+      "provider": "OpenRouter",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "tier_required": "exact zero-priced :free endpoint",
+      "activation": "separate approval required; never automatic fallback"
+    }
+  },
+  "initial_step4b": {
+    "case_manifest": "inputs.json",
+    "case_count": 2,
+    "requests_per_case": 1,
+    "max_total_inference_requests": 2,
+    "max_output_tokens": 8192,
+    "timeout_seconds": 120,
+    "max_concurrency": 1,
+    "automatic_retries": 0,
+    "automatic_continuations": 0,
+    "tool_calls": 0,
+    "paid_fallbacks": 0,
+    "approved_spend_usd": 0,
+    "approval_status": "pending",
+    "image_release_status": "pending",
+    "credential_status": "not_verified",
+    "billing_tier_status": "not_verified",
+    "quota_status": "unknown",
+    "extra_case_activation": "requires new explicit case-list and request-budget approval"
+  },
+  "pre_upload_gate": [
+    "approve exact provider, model, two image hashes, terms and $0 budget",
+    "verify operator age 18+, eligible client audience (not directed toward or likely accessed by under-18s), region and actual unbilled project tier; free clients in EEA/Switzerland/UK are not eligible under current terms",
+    "verify active model quota in AI Studio; no assumption from advertised free tier",
+    "confirm each crop has no identifying/personal/confidential material and approve external reuse of public research images",
+    "load credential from environment only; do not read .env, print or commit keys",
+    "audit exact image-only payload and metadata stripping; never include references, expected geometry or grader answers"
+  ],
+  "method_order": [
+    "4B VLM-only observations -> strict semantic validation -> Photo Geometry v1; no native integration",
+    "4C local OCR-assisted CV on exact same image bytes; no VLM outputs fed into CV-only arm",
+    "4D separately approved VLM guidance + shape-preserving CV, same bytes and independent evaluation",
+    "4E choose and integrate observed winner with existing StarNative adapter",
+    "4F independent real-paper end-to-end demo acceptance"
+  ],
+  "representation": {
+    "provider_draft": "observation.schema.json",
+    "required_comparison_and_import_contract": "docs/automatic-photo-recognition/geometry-v1.md",
+    "converter_status": "not_implemented_until_4B",
+    "graph_coordinates": "computed locally only after two consistent numeric tick anchors per axis and known intersection values; otherwise null",
+    "provenance": "sidecar method/provider/model/request/image/code hashes; calibration source photo_detected or explicit student_corrected",
+    "unresolved_topology": "needs_review; never invent branch joins",
+    "isolated_points": "cannot be imported by v1 stroke-only adapter; retain in observation sidecar, flag unsupported and needs_review/abstained; never drop silently or connect"
+  },
+  "evaluation": {
+    "reference_policy": "evaluation-policy.json, evaluator-only; immutable hashes",
+    "existing_cases": "two prior failures; exploratory approximate visual references, not independent accuracy",
+    "same_input_requirement": "identical original crop hashes, dimensions and source pixel frame for all arms; all preprocessing transforms recorded and inverted",
+    "pending_independent_cases": {
+      "development": 2,
+      "held_out": 1,
+      "status": "not_acquired",
+      "reference_creation": "human draws then annotates visible ink without equations, prompts or AI proposals; freeze before inference"
+    },
+    "metrics": [
+      "correct independent branch count and qualitative connectivity",
+      "per-branch reference coverage at <=3 native pixels; <10% missing, 10%-90% partial",
+      "reference-to-prediction and prediction-to-reference p95 point-to-segment distance",
+      "endpoint and marked-corner distances; gaps and extrema reviewed on overlay",
+      "axis origin, per-axis sign/unit scale, numeric tick false labels and abstentions",
+      "student corrections with count/type/time, measured in later UI integration",
+      "status automatic/needs_review/abstained and invalid/failed/quota/privacy blocked",
+      "raw request latency, usage and actual cost when returned; unknown stays null",
+      "native import not_run_until_4E; end-to-end acceptance in 4F"
+    ],
+    "decision_gate": {
+      "engineering_fidelity_screen": "all branches present, no invented joins/gaps, >=90% coverage per branch and <=5px p95 in both directions, <=5px endpoint/corner errors where annotated",
+      "calibration_screen": "both unit vectors and origin independently supported; <=5% unit-length and <=3px origin error only when independent reference exists; otherwise qualitative/unknown",
+      "tolerance_caveat": "new exploratory screen, not validated grading threshold; also report existing <=3px coverage unchanged; approximate references can make numeric pass/fail uncertain",
+      "primary_selection": "real-photo fidelity, then correction burden, reliability/privacy and latency; JSON validity alone cannot select",
+      "approval_reviewer": "human reviews original/reference/prediction overlays and uncertainty; no automatic accuracy claim"
+    }
+  },
+  "required_step4b_artifacts": [
+    "per-case raw provider response and failure record",
+    "schema and semantic validation report; no code-fence repair/coercion",
+    "validated Photo Geometry v1 or explicit unscorable/abstained status",
+    "original/reference/prediction triptych overlays after inference",
+    "metrics.json and qualitative-review table",
+    "request/response hashes, provider/model identifiers, usage/latency/cost records",
+    "self-review, local commit, clean-tree verification and explicit Step4C approval request"
+  ],
+  "failure_policy": "stop on missing permission/credential/tier confirmation, charge risk, quota, timeout, invalid JSON or geometry; record failure and commit useful work; no retry, switch or fabricated prediction",
+  "deadline_policy": "By Nov 6 choose based on actual evidence. Recommend skipping reserve-provider/local-model comparison and, if VLM-only suffices, skipping or combining 4C/4D only after explicit approval to change checkpoints. Preserve 4E/4F time; if access blocked, document assisted/manual fallback as fallback, not automatic recognition success."
+}

@@ -1,0 +1,107 @@
+{
+  "checked_client_date": "2026-11-05",
+  "timezone": "America/Los_Angeles",
+  "method": "official documentation and unauthenticated public catalog only; no provider generation or credentialed account call",
+  "sources": [
+    {
+      "id": "google-pricing",
+      "url": "https://aistudio.google.com/docs/pricing#gemini-3.5-flash-lite",
+      "supports": "Gemini 3.5 Flash-Lite standard free input/output; paid tier distinct. Gemini 3.6 Flash also lists free standard input/output."
+    },
+    {
+      "id": "google-model",
+      "url": "https://aistudio.google.com/docs/models/gemini-3.5-flash-lite",
+      "supports": "Exact stable ID, image input, text output, structured outputs, 1048576 input and 65536 output token limits."
+    },
+    {
+      "id": "google-limits",
+      "url": "https://aistudio.google.com/docs/rate-limits",
+      "supports": "Project/model-specific RPM, TPM and RPD; active quotas require AI Studio. No account quota verified."
+    },
+    {
+      "id": "google-terms",
+      "url": "https://aistudio.google.com/docs/terms",
+      "supports": "Unpaid content used for product improvement and may receive human review; personal/sensitive/confidential input prohibited. Age/region/application restrictions apply."
+    },
+    {
+      "id": "google-images",
+      "url": "https://aistudio.google.com/docs/image-understanding",
+      "supports": "Base64 inline PNG supported; total inline request under 20MB."
+    },
+    {
+      "id": "google-structured",
+      "url": "https://aistudio.google.com/docs/structured-output",
+      "supports": "JSON schema subset and semantic validation requirements; provider acceptance of this specific schema untested."
+    },
+    {
+      "id": "google-interactions",
+      "url": "https://aistudio.google.com/docs/interactions-overview",
+      "supports": "Interactions supports chosen model; store=false avoids stored interaction state but does not override unpaid data-use terms."
+    },
+    {
+      "id": "google-api",
+      "url": "https://ai.google.dev/api/interactions-api",
+      "supports": "GenerationConfig max_output_tokens and REST request fields; offline request preview only."
+    },
+    {
+      "id": "openrouter-model",
+      "url": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free",
+      "supports": "Exact vision model ID; free endpoint notice disallows personal/confidential data and describes NVIDIA logging/improvement."
+    },
+    {
+      "id": "openrouter-catalog",
+      "url": "https://openrouter.ai/api/v1/models",
+      "supports": "Public GET snapshot in evidence/openrouter-catalog.json: image input, zero prompt/completion price, response_format and structured_outputs advertised."
+    },
+    {
+      "id": "openrouter-limits",
+      "url": "https://openrouter.ai/docs/api_reference/limits.md",
+      "supports": "Official markdown table: 20 requests/min; 50/day below 10 lifetime credits purchased; 1000/day at higher tier. Account quota unknown."
+    },
+    {
+      "id": "openrouter-privacy",
+      "url": "https://openrouter.ai/docs/guides/privacy/data-collection",
+      "supports": "OpenRouter retention controls/exceptions are distinct from upstream provider rules."
+    },
+    {
+      "id": "openrouter-logging",
+      "url": "https://openrouter.ai/docs/guides/privacy/provider-logging",
+      "supports": "Free and paid provider training settings differ; opting out can remove routes."
+    },
+    {
+      "id": "openrouter-routing",
+      "url": "https://openrouter.ai/docs/guides/routing/provider-selection",
+      "supports": "Provider pinning, data policy restrictions and allow_fallbacks=false; reserve route must be approved, not auto-selected."
+    },
+    {
+      "id": "apple-vision",
+      "url": "https://developer.apple.com/documentation/vision/recognizing-text-in-images.md",
+      "supports": "Official on-device text recognition, accurate/fast levels, optional language correction; actual local probe completed."
+    },
+    {
+      "id": "tesseract-install",
+      "url": "https://tesseract-ocr.github.io/tessdoc/Installation.html",
+      "supports": "Local engine and language traineddata required; Tesseract absent from inspected environment."
+    },
+    {
+      "id": "tesseract-quality",
+      "url": "https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html",
+      "supports": "Preprocessing, deskew and segmentation matter for OCR; no demonstrated calibration gain here."
+    },
+    {
+      "id": "qwen-local",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct",
+      "supports": "Official image-text open-weight model card, Apache 2.0. Screened local option only, no weights downloaded."
+    },
+    {
+      "id": "mlx-local",
+      "url": "https://github.com/Neywa-Labs/mlx-vlm",
+      "supports": "Maintainer Apple Silicon VLM runtime; not installed or benchmarked."
+    },
+    {
+      "id": "directory-setup",
+      "url": "https://docs.stripe.com/directory",
+      "supports": "Stripe Directory CLI/plugin setup; unavailable locally, no setup performed."
+    }
+  ]
+}

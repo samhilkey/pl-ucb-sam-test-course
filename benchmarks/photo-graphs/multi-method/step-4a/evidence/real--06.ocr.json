@@ -1,0 +1,117 @@
+{
+  "coordinate_frame" : "top_left_xy_pixel_edges",
+  "duration_ms" : 46296.033024787903,
+  "engine" : "Apple Vision VNRecognizeTextRequest",
+  "image" : {
+    "height" : 420,
+    "width" : 529
+  },
+  "interpretation" : "Raw OCR only; confidence is not calibrated accuracy. No labels accepted for calibration.",
+  "language_correction" : false,
+  "languages" : [
+    "en-US"
+  ],
+  "observations" : [
+    {
+      "bounds_pixel_edges" : [
+        26.689429037774765,
+        64.462426760992074,
+        62.286882396263039,
+        135.09826813062097
+      ],
+      "candidates" : [
+        {
+          "engine_confidence" : 1,
+          "text" : "Vistors"
+        }
+      ]
+    },
+    {
+      "bounds_pixel_edges" : [
+        50.800521081331759,
+        95.172413734104595,
+        95.474692068442977,
+        119.4482754742169
+      ],
+      "candidates" : [
+        {
+          "engine_confidence" : 1,
+          "text" : "2 40"
+        }
+      ]
+    },
+    {
+      "bounds_pixel_edges" : [
+        7.7349416039223815,
+        128.84799521712523,
+        51.067121238448472,
+        233.5783342674182
+      ],
+      "candidates" : [
+        {
+          "engine_confidence" : 1,
+          "text" : "Number of"
+        }
+      ]
+    },
+    {
+      "bounds_pixel_edges" : [
+        49.905660420134772,
+        161.99999982857145,
+        83.841509476738537,
+        185.99999982857142
+      ],
+      "candidates" : [
+        {
+          "engine_confidence" : 1,
+          "text" : "160"
+        }
+      ]
+    },
+    {
+      "bounds_pixel_edges" : [
+        33.935848956792455,
+        233.99999991666667,
+        61.88301876811321,
+        253.9999999166667
+      ],
+      "candidates" : [
+        {
+          "engine_confidence" : 1,
+          "text" : "80"
+        }
+      ]
+    },
+    {
+      "bounds_pixel_edges" : [
+        39.755873547666127,
+        324.90799273204198,
+        361.47525353412323,
+        354.44577254008641
+      ],
+      "candidates" : [
+        {
+          "engine_confidence" : 0.5,
+          "text" : "0 1 23 4 567"
+        }
+      ]
+    },
+    {
+      "bounds_pixel_edges" : [
+        187.74561514808576,
+        344.0576172021664,
+        451.22292072232295,
+        413.44784165895351
+      ],
+      "candidates" : [
+        {
+          "engine_confidence" : 1,
+          "text" : "Hours after opewiwg"
+        }
+      ]
+    }
+  ],
+  "recognition_level" : "accurate",
+  "request_revision" : 3,
+  "status" : "completed_feasibility_probe"
+}

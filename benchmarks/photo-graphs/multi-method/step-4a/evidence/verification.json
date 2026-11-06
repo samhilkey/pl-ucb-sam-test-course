@@ -1,0 +1,35 @@
+{
+  "step": "4A",
+  "parent_commit": "1c76c1f66645d7d86c41c228bf57d1681ccd1d95",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "node_tests": {
+    "command": "node --test tests/star-method-feasibility.test.cjs tests/star-recognition.test.cjs tests/star-geometry.test.cjs tests/star-native.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs",
+    "tests": 71,
+    "passed": 71,
+    "failed": 0
+  },
+  "other_checks": {
+    "json_files_parsed": 14,
+    "broken_report_links": [],
+    "credential_pattern_findings": [],
+    "historical_benchmarks_elements_questions_unchanged": true,
+    "ocr_overlays_visually_reviewed": true,
+    "new_browser_replay": "not_applicable_no_UI_changes",
+    "new_model_predictions": "none_not_executed"
+  },
+  "self_review": {
+    "findings_fixed": [
+      "bounded numeric label boxes to two pixel points and image dimensions to supported bounds",
+      "regenerated final preflight hash after schema edit",
+      "documented unsupported isolated points instead of silently dropping or joining them",
+      "required string case IDs and documented Gemini audience/region constraints"
+    ],
+    "remaining_limitations": [
+      "account access, billing tier, quota and image release unverified",
+      "specific remote schema acceptance and VLM fidelity untested",
+      "macOS OCR is not Linux deployment OCR; merged labels are not calibration",
+      "independent drawings and human annotations pending",
+      "reference distances are exploratory approximate diagnostics"
+    ]
+  }
+}

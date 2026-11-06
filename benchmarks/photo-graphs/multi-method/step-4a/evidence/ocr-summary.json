@@ -1,0 +1,51 @@
+{
+  "step": "4A",
+  "engine": "Apple Vision, accurate, revision 3",
+  "probe_code_sha256": "07388b79a2de011eaab80de73c3fa644bc9d33996bd7f02d4d8cf8a6a1f95540",
+  "cases": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "ocr_file": "real--01.ocr.json",
+      "overlay_file": "real--01.ocr-overlay.png",
+      "observation_count": 0,
+      "top_candidate_texts": [],
+      "duration_ms": 253.42905521392822,
+      "accepted_calibration_labels": 0,
+      "calibration_accuracy": null,
+      "curve_recognition_accuracy": null,
+      "note": "Feasibility only; raw text/boxes are not matched numeric ticks or reliable calibration."
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "ocr_file": "real--06.ocr.json",
+      "overlay_file": "real--06.ocr-overlay.png",
+      "observation_count": 7,
+      "top_candidate_texts": [
+        "Vistors",
+        "2 40",
+        "Number of",
+        "160",
+        "80",
+        "0 1 23 4 567",
+        "Hours after opewiwg"
+      ],
+      "duration_ms": 46296.0330247879,
+      "accepted_calibration_labels": 0,
+      "calibration_accuracy": null,
+      "curve_recognition_accuracy": null,
+      "note": "Feasibility only; raw text/boxes are not matched numeric ticks or reliable calibration."
+    }
+  ],
+  "quality_assessment": "real-01 contains no visible numeric ticks; no OCR returned. real-06 recognizes some numbers but merges x ticks, omits 300, and misspells labels. High engine confidence does not establish accuracy. No accepted calibration or CV changes.",
+  "timing_limitation": "one cold and one subsequent observation, not a performance benchmark"
+}

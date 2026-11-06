@@ -91,3 +91,16 @@ assisted photo route's freeform encoding, submission, and restoration. Local que
 may differ; find `star-automatic-photo-test` under the course's Questions page.
 Use `PL_PHOTO_TEST_OUTPUT` to save the raw result and screenshots. Read the
 step-3 report under `benchmarks/photo-graphs/automatic-cv/experiment-02-native/`.
+
+## Multi-method feasibility (step 4A)
+
+```bash
+node --test tests/star-method-feasibility.test.cjs tests/star-recognition.test.cjs tests/star-geometry.test.cjs tests/star-native.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs
+node benchmarks/photo-graphs/multi-method/step-4a/preflight.cjs
+```
+
+The new checks enforce image identity, image-only payloads, metadata removal,
+reference separation and an offline-only preflight. No credentials or model
+requests are needed. The preflight has no live mode. See the
+[Step 4A report](../benchmarks/photo-graphs/multi-method/step-4a/REPORT.md) for
+the actual local OCR probe, provider constraints, evidence and later approval gates.

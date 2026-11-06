@@ -1,0 +1,59 @@
+{
+  "checked_client_date": "2026-11-05",
+  "status": "public_feasibility_verified_account_execution_not_verified",
+  "inference_requests": 0,
+  "shortlist": [
+    {
+      "rank": "primary",
+      "provider": "Google Gemini Developer API",
+      "model": "gemini-3.5-flash-lite",
+      "tier": "Free standard input/output as advertised",
+      "image_input": true,
+      "json_schema_output_advertised": true,
+      "input_token_limit": 1048576,
+      "output_token_limit": 65536,
+      "account_credential": "not_present_in_active_environment",
+      "account_tier": "unknown",
+      "remaining_quota": null,
+      "numeric_quota": "not publicly assumed; view active model/project limits in AI Studio",
+      "image_release_permission": "pending",
+      "privacy": "unpaid product improvement/human review; no personal/sensitive/confidential input; store=false does not opt out",
+      "status": "conditional_candidate_not_executed",
+      "application_eligibility": "operator 18+; clients directed toward or likely accessed by under-18s prohibited; clients in EEA/Switzerland/UK require Paid Services; eligibility unverified"
+    },
+    {
+      "rank": "reserve_only",
+      "provider": "OpenRouter",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "tier": "exact :free variant; public prompt/completion prices both 0",
+      "image_input": true,
+      "json_schema_output_advertised": true,
+      "endpoint_schema_acceptance": "unknown",
+      "context_length": 1000000,
+      "documented_free_limits": {
+        "rpm": 20,
+        "rpd_under_10_lifetime_credits": 50,
+        "rpd_higher_purchase_tier": 1000
+      },
+      "remaining_quota": null,
+      "account_credential": "not_present_in_active_environment",
+      "image_release_permission": "pending",
+      "privacy": "free endpoint notice permits logging/improvement and disallows confidential/personal data; restrictive privacy settings may leave no eligible route",
+      "status": "reserve_requires_separate_approval_not_executed"
+    }
+  ],
+  "screened_not_shortlisted": [
+    {
+      "model": "gemini-3.6-flash",
+      "result": "current official Flash model with advertised standard free input/output; no second Gemini comparison proposed before demo"
+    },
+    {
+      "model": "Qwen/Qwen3-VL-4B-Instruct",
+      "result": "open-weight image model; Apple Silicon/16GiB makes a quantized small model plausible, but memory headroom, JSON behavior and latency unverified; no runtime/weights loaded, defer setup"
+    }
+  ],
+  "provider_acceptance": "unknown; no remote schema/capability test performed",
+  "recognition_fidelity": "unknown for both shortlisted VLMs; no predictions obtained",
+  "paid_requests_authorized": false,
+  "recorded_remote_model_cost_usd": null
+}

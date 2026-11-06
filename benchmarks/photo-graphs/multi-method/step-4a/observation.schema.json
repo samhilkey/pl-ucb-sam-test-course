@@ -1,0 +1,364 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "star-observation-v1"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "abstained"
+      ]
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20000
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20000
+        }
+      },
+      "required": [
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "axes": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "start_pixel": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "end_pixel": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "label": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "numeric_ticks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "anchor_pixel": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "bounds_pixel": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "required": [
+                  "text",
+                  "value",
+                  "anchor_pixel",
+                  "bounds_pixel"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "start_pixel",
+            "end_pixel",
+            "label",
+            "numeric_ticks"
+          ],
+          "additionalProperties": false
+        },
+        "y": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "start_pixel": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "end_pixel": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "label": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "numeric_ticks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "anchor_pixel": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "bounds_pixel": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "required": [
+                  "text",
+                  "value",
+                  "anchor_pixel",
+                  "bounds_pixel"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "start_pixel",
+            "end_pixel",
+            "label",
+            "numeric_ticks"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "additionalProperties": false
+    },
+    "strokes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "component_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "closed": {
+            "type": "boolean"
+          },
+          "vertices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "pixel": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "endpoint": {
+                  "type": "boolean"
+                },
+                "corner": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "pixel",
+                "endpoint",
+                "corner"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "component_id",
+          "closed",
+          "vertices"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "junctions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pixel": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "stroke_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "pixel",
+          "stroke_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "isolated_points": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "uncertainty": {
+      "type": "object",
+      "properties": {
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pixel": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "reason": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "pixel",
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "reasons",
+        "regions"
+      ],
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "image",
+    "axes",
+    "strokes",
+    "junctions",
+    "isolated_points",
+    "uncertainty",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "description": "Provider-facing image observations only. Step 4B must validate semantics and convert to existing Photo Geometry v1 before evaluation/import. No recognition claim follows from schema validity."
+}
