@@ -1,0 +1,10 @@
+{
+  "frozen_image_and_payload_match": true,
+  "original_image_or_prompt_schema_modified": false,
+  "production_source_diff": "",
+  "syntax_passed": 9,
+  "real_attempt_count": 1,
+  "remaining_authorized_requests": 0,
+  "full_size_vertices_match_provider_exactly": true,
+  "report": "REPORT-v3.md"
+}

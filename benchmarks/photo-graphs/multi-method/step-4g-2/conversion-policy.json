@@ -1,0 +1,20 @@
+{
+  "version": "4g2.3",
+  "frozen_before_request": true,
+  "request_sha256": "0cd99ad83965bfb96f8b8254e25fe99ea132c5b22eb39a3f944f1a5d6b75ac2c",
+  "strict_json_schema": "../step-4a/observation.schema.json",
+  "repairs_or_code_fence_stripping": false,
+  "stroke_coordinate_policy": "Keep all returned vertices in traversal order, without fitting, smoothing, interpolation, x sorting, joins or reference guidance",
+  "topology_policy": "Preserve provided component and junction memberships; unresolved or inconsistent relationships require review or invalid conversion, never invented links",
+  "isolated_points": "Retain separately and mark unsupported by the stroke-only native adapter; no connecting or silent dropping",
+  "axes_policy": "Retain observed axes and tick evidence; derive origin from visible axis-line intersection only",
+  "scale_policy": "Use at least two consistent numeric tick anchors per axis; otherwise null graph coordinates. Any derived affine calibration must preserve raw tick evidence separately and disclose residuals. No question ranges or manual calibration",
+  "calibration_screen": {
+    "max_anchor_residual_pixel": 3,
+    "max_relative_unit_residual": 0.05,
+    "source": "Existing Step 4A engineering calibration screen; not independent ground truth"
+  },
+  "native_policy": "Run unchanged v1 validator and native guards. No import for unresolved marks/uncertainty, invalid geometry or failed fidelity screen; no production modification",
+  "evaluation_policy": "evaluation-policy.json",
+  "reference_access": "Only after the real response is saved; never from request runner"
+}

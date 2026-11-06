@@ -1,0 +1,322 @@
+{
+  "schema_version": "star-observation-v1",
+  "status": "proposed",
+  "image": {
+    "width": 1688,
+    "height": 1473
+  },
+  "axes": {
+    "x": {
+      "start_pixel": [
+        130,
+        558
+      ],
+      "end_pixel": [
+        833,
+        558
+      ],
+      "label": null,
+      "numeric_ticks": [
+        {
+          "text": "-3",
+          "value": -3,
+          "anchor_pixel": [
+            267,
+            558
+          ],
+          "bounds_pixel": [
+            [
+              597,
+              243
+            ],
+            [
+              647,
+              290
+            ]
+          ]
+        },
+        {
+          "text": "-2",
+          "value": -2,
+          "anchor_pixel": [
+            383,
+            558
+          ],
+          "bounds_pixel": [
+            [
+              595,
+              363
+            ],
+            [
+              643,
+              411
+            ]
+          ]
+        },
+        {
+          "text": "-1",
+          "value": -1,
+          "anchor_pixel": [
+            487,
+            558
+          ],
+          "bounds_pixel": [
+            [
+              594,
+              480
+            ],
+            [
+              642,
+              497
+            ]
+          ]
+        },
+        {
+          "text": "1",
+          "value": 1,
+          "anchor_pixel": [
+            693,
+            558
+          ],
+          "bounds_pixel": [
+            [
+              593,
+              686
+            ],
+            [
+              633,
+              696
+            ]
+          ]
+        },
+        {
+          "text": "2",
+          "value": 2,
+          "anchor_pixel": [
+            790,
+            558
+          ],
+          "bounds_pixel": [
+            [
+              593,
+              773
+            ],
+            [
+              640,
+              803
+            ]
+          ]
+        },
+        {
+          "text": "3",
+          "value": 3,
+          "anchor_pixel": [
+            887,
+            558
+          ],
+          "bounds_pixel": [
+            [
+              592,
+              868
+            ],
+            [
+              639,
+              915
+            ]
+          ]
+        }
+      ]
+    },
+    "y": {
+      "start_pixel": [
+        488,
+        936
+      ],
+      "end_pixel": [
+        488,
+        58
+      ],
+      "label": null,
+      "numeric_ticks": [
+        {
+          "text": "1",
+          "value": 1,
+          "anchor_pixel": [
+            488,
+            484
+          ],
+          "bounds_pixel": [
+            [
+              467,
+              447
+            ],
+            [
+              512,
+              461
+            ]
+          ]
+        },
+        {
+          "text": "2",
+          "value": 2,
+          "anchor_pixel": [
+            488,
+            241
+          ],
+          "bounds_pixel": [
+            [
+              226,
+              447
+            ],
+            [
+              270,
+              461
+            ]
+          ]
+        },
+        {
+          "text": "3",
+          "value": 3,
+          "anchor_pixel": [
+            488,
+            117
+          ],
+          "bounds_pixel": [
+            [
+              102,
+              442
+            ],
+            [
+              153,
+              460
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "strokes": [
+    {
+      "id": "stroke_axis_y",
+      "component_id": null,
+      "closed": false,
+      "vertices": [
+        {
+          "pixel": [
+            488,
+            936
+          ],
+          "endpoint": true,
+          "corner": false
+        },
+        {
+          "pixel": [
+            488,
+            58
+          ],
+          "endpoint": true,
+          "corner": false
+        }
+      ]
+    },
+    {
+      "id": "stroke_axis_x",
+      "component_id": null,
+      "closed": false,
+      "vertices": [
+        {
+          "pixel": [
+            130,
+            558
+          ],
+          "endpoint": true,
+          "corner": false
+        },
+        {
+          "pixel": [
+            833,
+            558
+          ],
+          "endpoint": true,
+          "corner": false
+        }
+      ]
+    },
+    {
+      "id": "stroke_curve_left",
+      "component_id": null,
+      "closed": false,
+      "vertices": [
+        {
+          "pixel": [
+            108,
+            482
+          ],
+          "endpoint": true,
+          "corner": false
+        },
+        {
+          "pixel": [
+            267,
+            243
+          ],
+          "endpoint": false,
+          "corner": true
+        },
+        {
+          "pixel": [
+            448,
+            485
+          ],
+          "endpoint": true,
+          "corner": false
+        }
+      ]
+    },
+    {
+      "id": "stroke_curve_right",
+      "component_id": null,
+      "closed": false,
+      "vertices": [
+        {
+          "pixel": [
+            504,
+            485
+          ],
+          "endpoint": true,
+          "corner": false
+        },
+        {
+          "pixel": [
+            693,
+            161
+          ],
+          "endpoint": false,
+          "corner": true
+        },
+        {
+          "pixel": [
+            906,
+            439
+          ],
+          "endpoint": true,
+          "corner": false
+        }
+      ]
+    }
+  ],
+  "junctions": [],
+  "isolated_points": [
+    [
+      544,
+      167
+    ]
+  ],
+  "uncertainty": {
+    "reasons": [],
+    "regions": []
+  },
+  "notes": [
+    "Isolated point located near (544, 167) in the first quadrant above the axis."
+  ]
+}

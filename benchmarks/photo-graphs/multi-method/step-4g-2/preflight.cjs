@@ -27,7 +27,8 @@ function prepare (manifest = load('inputs.json'), permissions = load('permission
     decoded_rgba_sha256: image.rgba_sha256, prompt_sha256: previous.hash(prompt), schema_sha256: previous.hash(schema),
     request_sha256: previous.hash(bytes), request_bytes: bytes.length, input_fields: body.input.map(p => Object.keys(p)),
     max_total_inference_requests: 1, model_inference_requests: 0, ready_for_inference: false,
-    blockers: ['Current remaining quota is not established by historical peak statistics', 'Live transport deliberately absent while quota is unknown'],
+    blockers: ['Offline construction only. The separate executor requires explicit authorization and an unused one-shot journal; UNKNOWN instantaneous quota is accepted by the latest user authorization.'],
+    request_count_scope: 'This preparation command only; cumulative actual requests are recorded in results/attempt.json.',
     prediction: null, latency_ms: null, provider_usage: null, provider_cost_usd: null, confirmed_incurred_cost_usd: 0 } }
 }
 if (require.main === module) {

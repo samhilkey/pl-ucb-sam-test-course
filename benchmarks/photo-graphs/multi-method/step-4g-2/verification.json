@@ -1,67 +1,187 @@
 {
   "step": "4G-2",
-  "version": "4g2.2",
+  "version": "4g2.3",
   "date_local": "2026-11-06",
+  "state": "completed_one_real_request_recognition_fidelity_failed",
   "branch": "feat/automatic-photo-recognition-cv",
-  "parent_commit": "8eefbf996816ad1074a6f443835e05bf0b1c0c0d",
-  "state": "blocked_before_inference_pending_current_remaining_quota",
-  "scope": "Offline image clearance, frozen request construction and prerequisite checkpoint only; not completed model experiment",
+  "parent_commit": "96e7c1da87327c933fcd45623bd0b900c720e0f2",
   "node": "v20.19.6",
-  "tests": {
-    "passed": 91,
-    "failed": 0,
-    "command": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs tests/star-gemini-pilot.test.cjs",
-    "log": "offline-tests.log",
-    "focused_new_tests": 3,
-    "network_blocked_during_preparation": true,
-    "evaluator_reads_blocked_during_preparation": true,
-    "clearance_hash_mismatch_or_extra_image_rejected": true,
-    "live_cli_execution_rejected": true
-  },
-  "syntax": "node --check benchmarks/photo-graphs/multi-method/step-4g-2/preflight.cjs passed",
-  "self_review": {
-    "production_files_modified": false,
-    "step4f_assets_modified": false,
-    "existing_benchmarks_modified": false,
-    "model_inference_requests": 0,
-    "authenticated_provider_requests": 0,
-    "other_images_authorized": false,
-    "live_transport_implemented": false,
-    "prompt_schema_unchanged": true,
-    "prepared_png_hash_equals_authorized_hash": true,
-    "independent_reference_claim": false,
-    "credentials_retained_or_logged": false
-  },
-  "git_scope": "Only step-4g-2 preparation/evidence and its new offline regression test; final SHA/clean status verified after commit",
-  "latest_user_ui_evidence": "user-ui-evidence.json",
-  "image_clearance_still_valid": true,
-  "operator_client_region_eligibility": "verified user attestation",
-  "earlier_other_project_quotas_excluded": true,
-  "current_remaining_quota": "UNKNOWN; not inferred from Last hour or Last 1 day peak usage",
-  "focused_final_check": {
-    "command": "node --test tests/star-gemini-pilot.test.cjs",
-    "passed": 3,
-    "failed": 0,
-    "log": "focused-tests.log"
-  },
-  "evidence_update_parent_commit": "c1aad6c3c4b930c43fd0ea8441ab4c0a52f536d8",
-  "latest_user_ui_evidence_checked_at": "2026-11-06 approximately 10:38 AM PST (America/Los_Angeles)",
-  "documentation_update": {
-    "scope": "Record user-reported quota preflight observations only",
-    "reporting_periods": [
-      "Last hour",
-      "Last 1 day"
+  "authorization": "execution-authorization.json",
+  "quota_remaining": null,
+  "quota_balance_no_longer_mandatory_by_explicit_user_instruction": true,
+  "model": "gemini-3.5-flash-lite",
+  "image_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+  "request_sha256": "0cd99ad83965bfb96f8b8254e25fe99ea132c5b22eb39a3f944f1a5d6b75ac2c",
+  "actual_inference_requests": 1,
+  "authenticated_provider_requests": 1,
+  "retries": 0,
+  "remaining_authorized_requests": 0,
+  "provider_http_status": 200,
+  "provider_response_status": "completed",
+  "request_latency_ms": 5379.663875,
+  "provider_usage": {
+    "total_tokens": 3076,
+    "total_input_tokens": 1503,
+    "input_tokens_by_modality": [
+      {
+        "modality": "image",
+        "tokens": 1085
+      },
+      {
+        "modality": "text",
+        "tokens": 418
+      }
     ],
-    "usage_page_checked": false,
-    "inference_requests": 0,
-    "authenticated_provider_requests": 0,
-    "additional_broad_account_review_requested": false,
-    "frozen_payload_or_permissions_modified": false
+    "total_cached_tokens": 0,
+    "total_output_tokens": 1573,
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 0,
+    "initial_input_tokens": 3368
   },
-  "quota_evidence_update": {
-    "evidence": "quota-evidence-check.json",
-    "focused_regressions_passed": 3,
-    "focused_regressions_failed": 0,
-    "frozen_payload_and_permission_hashes_unchanged": true
+  "cost": "results/cost-and-usage.json",
+  "validation": {
+    "schema_valid": true,
+    "photo_geometry_v1_valid": true,
+    "source_pixels_preserved_exactly": true,
+    "fidelity_screen_passed": false,
+    "manual_correction_required": true,
+    "native_imported": false,
+    "native_state_mutation_calls": 0
+  },
+  "tests": {
+    "offline": {
+      "passed": 105,
+      "failed": 0,
+      "command": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs tests/star-gemini-pilot.test.cjs tests/star-gemini-once.test.cjs tests/star-gemini-observation.test.cjs",
+      "log": "results/offline-regressions.log"
+    },
+    "pre_request": {
+      "passed": 10,
+      "failed": 0,
+      "log": "results/pre-request-transport-tests.log"
+    },
+    "isolated_browser": {
+      "passed": 10,
+      "failed": 0,
+      "command": "node benchmarks/photo-graphs/multi-method/step-4g-2/check-isolated-ui.cjs",
+      "log": "results/isolated-ui.log",
+      "viewports": [
+        [
+          1440,
+          1100
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "browser_plugin": "not available; existing Playwright CLI used",
+      "external_requests": [],
+      "page_and_console_errors": [],
+      "submitted": false,
+      "reset_to_cv_after_reload": true
+    },
+    "syntax": {
+      "files": 9,
+      "failed": 0
+    }
+  },
+  "frozen_demo_bundle_integrity": [
+    {
+      "path": "presentation.html",
+      "sha256": "b401eb5c2c896e570338c71498dd0ca0691d0a1778cc4f7c903fcf6f6c901e56",
+      "matches": true
+    },
+    {
+      "path": "presentation.pdf",
+      "sha256": "c0c23c9a58b0cb5462c43fabc93a1739c79e65508e1f4b36fac7d5e630c6bd64",
+      "matches": true
+    },
+    {
+      "path": "offline-backup.html",
+      "sha256": "e5a4c7a4c033eacea8881e4be3a1cf885dd250605027f1a06231828598a3dcbe",
+      "matches": true
+    },
+    {
+      "path": "serve-package.cjs",
+      "sha256": "0b9fde69a19d2650c6cdb4ac767a1b8dffafce5c8baa7673f1ce792615b93337",
+      "matches": true
+    },
+    {
+      "path": "local-runtime.cjs",
+      "sha256": "89c6304469074d8034939d05f03e5becfc9ff34fad16658917d67c0bfe5aa8b8",
+      "matches": true
+    },
+    {
+      "path": "PRESENTER.md",
+      "sha256": "efabf520c280703ee7b98a2dfb7a751ecbe702ea949314a25f248a77850a1060",
+      "matches": true
+    },
+    {
+      "path": "MANUAL-CHECKLIST.md",
+      "sha256": "7793c8cc8198fb00868c4d1a2b7e3c7345e5a5652c72b06be0b10efad11fa6ae",
+      "matches": true
+    },
+    {
+      "path": "presentation-notes.json",
+      "sha256": "77b39d18dbeaef4b20b35bc97511897519f8b05185fcc74b5e61b2bcd9560462",
+      "matches": true
+    },
+    {
+      "path": "urls.json",
+      "sha256": "4cf217b99bf12097ffa4ad330ea2442e81a3cd80430d981233d9563ffe19231f",
+      "matches": true
+    },
+    {
+      "path": "operator-actions.json",
+      "sha256": "667cd2b82bcebcb81eca7b856e84445c1702464fea0f25ba086460f873e2dabf",
+      "matches": true
+    },
+    {
+      "path": "input-manifest.json",
+      "sha256": "eea5859e21ca69ae770d636df8a4cd1d03d4abb543efaccf5ae658930e827169",
+      "matches": true
+    },
+    {
+      "path": "inputs/new-paper-01.png",
+      "sha256": "c2fcc867ba84ef678f428942cec065cf69866fe20216cbbe74686566b4ca47a6",
+      "matches": true
+    },
+    {
+      "path": "BUNDLE-README.txt",
+      "sha256": "95537829a3654f57f9e68cea6865c7f8cd57c5b4a5fd35898c5a2d3ef9e03360",
+      "matches": true
+    }
+  ],
+  "production_code_modified": false,
+  "prior_benchmarks_outside_step4g2_modified": false,
+  "security": {
+    "key_in_browser": false,
+    "key_value_or_fragment_or_hash_logged": false,
+    "private_env_ignored": true,
+    "credential_loaded_matches_private_env_file": true,
+    "credential_file_match_check_performed": "Local post-request check; no provider request",
+    "actual_key_scan": "credential-check.json",
+    "key_transmission": "Only the authorized server-side x-goog-api-key header to Google; no browser/artifact disclosure"
+  },
+  "self_review": {
+    "request_payload_hash_unchanged": true,
+    "only_cleared_image_transmitted": true,
+    "case_or_model_substitution": false,
+    "reference_access_only_after_saved_response": true,
+    "all_returned_strokes_retained_for_primary_metrics": true,
+    "model_uncertainty_not_treated_as_accuracy": true,
+    "v1_preview_frame_not_claimed_as_provider_preprocessing": true,
+    "isolated_point_retained_and_blocks_import": true,
+    "fixture_results_excluded_from_real_evaluation": true,
+    "physical_mobile_safari_projector_not_tested": true
+  },
+  "recommendation": "Constrained assisted workflow for November 9; no VLM-only or hybrid integration justified. Further research needs separate approval.",
+  "git_scope": "Precommit verification; final local SHA and clean tree reported after committing",
+  "figure": {
+    "helper": "build-comparison.py",
+    "renderer": "Pillow 13.0.0",
+    "font": "Local Arial, with documented fallback",
+    "recognition_or_network": false
   }
 }

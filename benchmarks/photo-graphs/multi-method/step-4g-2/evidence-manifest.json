@@ -1,20 +1,50 @@
 {
-  "scope": "Frozen local preparation and redacted evidence; not a model execution record",
+  "scope": "Step 4G-2 preparation, one real request/response, validation and evaluation; excludes this manifest itself",
   "files": [
     {
-      "path": "REPORT.md",
+      "path": "PREREQUISITES-v2.md",
       "bytes": 8430,
       "sha256": "3a4deecf128d95b8ebc4121d398f724656943243c864357a9bc8f7bfc3ad0886"
     },
     {
+      "path": "REPORT-v3.md",
+      "bytes": 10666,
+      "sha256": "810defeb1a4c60d6830f8ea44060526441281f55e161f8fd20cb01d19c8fee8f"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 466,
+      "sha256": "158153f9c0170c1e9bc436eadee88ebdac85e12f105801f4641714bd6333afb9"
+    },
+    {
+      "path": "build-comparison.py",
+      "bytes": 1942,
+      "sha256": "2a97457cbc7c2ae6af4ac77db87e00c0d3460ebca155b6825d768946c5439adb"
+    },
+    {
+      "path": "check-isolated-ui.cjs",
+      "bytes": 6805,
+      "sha256": "0c84a5b9a9ee84dbe8b7f885371e33e6ee5a502be9a408f266a323081091f8b0"
+    },
+    {
       "path": "comparison.json",
-      "bytes": 2871,
-      "sha256": "7d4d59fe266893b49e97bed789770447e350d170eabc052644264362f21fbc68"
+      "bytes": 4117,
+      "sha256": "ba6ccc40e3b3520d0fae3b624b9e6c7a072e74a83bd8ae0c568f3163a655169e"
+    },
+    {
+      "path": "conversion-policy.json",
+      "bytes": 1614,
+      "sha256": "e9167e49a1ed6d8615f0e3ed8d3b0a6b0f79300557837dc313df18923193b14a"
     },
     {
       "path": "credential-check.json",
-      "bytes": 357,
-      "sha256": "6a1fd4230eefb430cf487d265ba99102fdfd424c23eddf616d892c06e2f545ae"
+      "bytes": 646,
+      "sha256": "54152fe6d720ecfe54670dc7cd7e1552eb2a6ffaa382e1d16c92c631beaefcb2"
+    },
+    {
+      "path": "evaluate-response.cjs",
+      "bytes": 10674,
+      "sha256": "a52e0ec77bc2f488c8fa03dee2da4acd6b29a031a3e1364e8a9a01b1b454412d"
     },
     {
       "path": "evaluation-policy.json",
@@ -22,9 +52,19 @@
       "sha256": "b0846a2271aee7195756ab89504f76e73f1d3ab2f9e9a4b408a9b04f32458931"
     },
     {
+      "path": "execution-authorization.json",
+      "bytes": 1133,
+      "sha256": "6c934ae509dbc3d1ecd44d9e019fe167bc90d4d1c15b84d610a6d984e5ff9bce"
+    },
+    {
+      "path": "execution-preflight.json",
+      "bytes": 902,
+      "sha256": "17bde61022fc1ce375da2928e3a501a9232e4c9ed17757568b46419ed98bb93d"
+    },
+    {
       "path": "file-inventory.json",
-      "bytes": 1542,
-      "sha256": "3cacf2ced8f5130db9702706e0b7a9d3191965ccfeb753945cbf7b89cae59a28"
+      "bytes": 4381,
+      "sha256": "4364735489860811c26a87ebdbe0553d4034a6118f87131492eb3e4807bd59e2"
     },
     {
       "path": "focused-tests.log",
@@ -35,6 +75,11 @@
       "path": "inputs.json",
       "bytes": 279,
       "sha256": "ea4055d0c985387c22ded83ad8464e1f1e3fc66d08066aebc328b64eeb2df5ba"
+    },
+    {
+      "path": "observations.cjs",
+      "bytes": 12618,
+      "sha256": "5504ff291a60754897506a4d3e847d1750a5b2175981c7cdb8b5da4c3e493ffe"
     },
     {
       "path": "offline-preflight.json",
@@ -53,13 +98,13 @@
     },
     {
       "path": "preflight.cjs",
-      "bytes": 3256,
-      "sha256": "1e1437a39852c1638cec4b053e4804bb55b8a718aeacb14ef81f040b00d422c1"
+      "bytes": 3433,
+      "sha256": "ef986f6c8555b25d425744fdfe5d45e8413f14e7d1317c9606bf9771d6f34ac6"
     },
     {
       "path": "prerequisites.json",
-      "bytes": 1973,
-      "sha256": "e2b59c052b537d7efe65a41282cb169002cf1832699479c066e910db29a77ea3"
+      "bytes": 2567,
+      "sha256": "78fd83bebf45b2ad27ded586aad3e29de15632858be2fd752b47cd648b03de6c"
     },
     {
       "path": "protocol.json",
@@ -82,14 +127,139 @@
       "sha256": "e02de93251c03545edf8c263a8feed6f2e106c2e97c280e32b9c359b59cb7add"
     },
     {
+      "path": "results/adapter-preview-only.png",
+      "bytes": 710947,
+      "sha256": "10076acb035971bfbd8d5fa7b0596706dcb72d6a32b8c493d6d3378a1e1f1189"
+    },
+    {
+      "path": "results/attempt.json",
+      "bytes": 1697,
+      "sha256": "ba6028407f55cec0c974d6fdf3dd1df9dd26a7e5e65f2c203d819533a85bfeac"
+    },
+    {
+      "path": "results/conversion.json",
+      "bytes": 14431,
+      "sha256": "a3bee547e43f46e05607eb744fccd97de961d67419b3a9d819b26f105bb947b9"
+    },
+    {
+      "path": "results/cost-and-usage.json",
+      "bytes": 1019,
+      "sha256": "d098a91f246c35e89d3d5a9e5f560eac6f664b2c81a2e35c2dd2d47e31314c20"
+    },
+    {
+      "path": "results/evaluation.json",
+      "bytes": 10888,
+      "sha256": "2131a38c69df2b30cc85ce171114f2649f6269adc102b5031d8461e653db3056"
+    },
+    {
+      "path": "results/execution-console.log",
+      "bytes": 102,
+      "sha256": "840fb8b2b10084e962c9055504795ad170e1f1086db677730a0ce84c32203beb"
+    },
+    {
+      "path": "results/gemini-raw-overlay.png",
+      "bytes": 2093538,
+      "sha256": "4cd66e611309f8b4a1197a6a9aa555ae838b2a3c0ec12c061631b5d6d03346b0"
+    },
+    {
+      "path": "results/geometry.json",
+      "bytes": 11004,
+      "sha256": "1d5ccf86e2be5f86095ea80c5773fb07c28f2c03db960875313a9a229f7e6265"
+    },
+    {
+      "path": "results/isolated-gemini-mobile.png",
+      "bytes": 160595,
+      "sha256": "80a83caae2d22a5338f5ef4cb394118a75616efec84cff4720d2cb2e841962ed"
+    },
+    {
+      "path": "results/isolated-gemini-review.png",
+      "bytes": 426093,
+      "sha256": "e88b9ea9ec619fa88c694fd2647acd18c4f3b3cbb97a93cba4b9250d2a298124"
+    },
+    {
+      "path": "results/isolated-ui.json",
+      "bytes": 1062,
+      "sha256": "e6fdb7e91c0caf7390617f5d9bd953eced7b9672a40dd3bf0a40a39c008e348d"
+    },
+    {
+      "path": "results/isolated-ui.log",
+      "bytes": 42,
+      "sha256": "015fe8b13bb6e8009f2e2884ebb938df97bf30a3af4fbd0e309adaa17d762568"
+    },
+    {
+      "path": "results/method-comparison.png",
+      "bytes": 1334956,
+      "sha256": "0ca7595d5339476c3a6459ef8611dcc4e974946a7ccc614752d8e79f33532441"
+    },
+    {
+      "path": "results/native-check.json",
+      "bytes": 337,
+      "sha256": "e7ebe072e1f9be468ffdad83f06331eb9eb44a08d9962124ab9353d1b16f2194"
+    },
+    {
+      "path": "results/observation.json",
+      "bytes": 5481,
+      "sha256": "ee241fb0a167b157d7113848cf7b4cc08d2c646b3a8458d10424532b3c25e0dd"
+    },
+    {
+      "path": "results/offline-regressions.log",
+      "bytes": 20348,
+      "sha256": "34280a5dbae79a706e99c7da9fc42f6bc1841b9f5f72227246024989281cf557"
+    },
+    {
+      "path": "results/payload-reproduction.json",
+      "bytes": 1422,
+      "sha256": "d5b153b2eecb711f4fd76a22f35a460d871f93d2e29ebb8417d15a0aed2ddf71"
+    },
+    {
+      "path": "results/pre-request-transport-tests.log",
+      "bytes": 2356,
+      "sha256": "68e6e43827435361f039023c54d7dd753b983fa7c6fb24c57c15adc087a4fa32"
+    },
+    {
+      "path": "results/prediction.raw.json",
+      "bytes": 3788,
+      "sha256": "a976527959b8c50f40e6128426c347436a0b9d42edc562fdd35b0a49a4f6c8f2"
+    },
+    {
+      "path": "results/reference-overlay.png",
+      "bytes": 2082943,
+      "sha256": "fbe96e5bf30203d5faec739672333a436668df3adf792e8402d051dd5e96baa2"
+    },
+    {
+      "path": "results/response.raw.txt",
+      "bytes": 4888,
+      "sha256": "d7f79e0b9d2c1850fd9bb68da9cbdbd07a7b8f62b8c6abf0b6a60d240feaab58"
+    },
+    {
+      "path": "results/validation.json",
+      "bytes": 1777,
+      "sha256": "88aa8e004bce80fdf270110e2f276e36359841df90c8f66e43adb7980575fe20"
+    },
+    {
+      "path": "run-once.cjs",
+      "bytes": 8283,
+      "sha256": "ef2f86d179323eae9deca0e9dc947a182085963cae17404567000e46894031e2"
+    },
+    {
+      "path": "source-checks.json",
+      "bytes": 298,
+      "sha256": "5ad650f35055b00f9bce484a151ca31efb2a5992a85319e47ed33049ae5cd450"
+    },
+    {
       "path": "user-ui-evidence.json",
       "bytes": 3342,
       "sha256": "75f33f6fda3c81340a19bc77dbcea16cb233dc3c9508ae9ed05642fba09cc0c0"
     },
     {
+      "path": "validate-response.cjs",
+      "bytes": 1972,
+      "sha256": "804e5f815474c7caee010ce54fdded03c8d28cd413298ca7fd8e4b8f180b3ae1"
+    },
+    {
       "path": "verification.json",
-      "bytes": 3057,
-      "sha256": "36e215612e08f990e30c52dd0dc7043c622514e3e77430eadef3533ed1d500d1"
+      "bytes": 6502,
+      "sha256": "44e98c1888b85de79177732f5cc438c675051c921bb9381f38f1ea53a7a36604"
     }
   ]
 }

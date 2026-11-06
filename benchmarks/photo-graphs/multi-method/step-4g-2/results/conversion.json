@@ -1,0 +1,641 @@
+{
+  "geometry": {
+    "schema_version": 1,
+    "input_revision": 0,
+    "image": {
+      "width": 1688,
+      "height": 1473,
+      "processing": {
+        "width": 900,
+        "height": 785,
+        "source_to_processing": [
+          0.533175355450237,
+          0,
+          0,
+          0.5329260013577732,
+          -0.2334123222748815,
+          -0.23353699932111338
+        ]
+      }
+    },
+    "coordinate_frame": {
+      "status": "detected",
+      "origin_pixel": [
+        488,
+        558
+      ],
+      "axes": {
+        "x": {
+          "status": "detected",
+          "candidates": [
+            {
+              "start": [
+                130,
+                558
+              ],
+              "end": [
+                833,
+                558
+              ],
+              "support": 0,
+              "width_pixel": 0
+            }
+          ]
+        },
+        "y": {
+          "status": "detected",
+          "candidates": [
+            {
+              "start": [
+                488,
+                936
+              ],
+              "end": [
+                488,
+                58
+              ],
+              "support": 0,
+              "width_pixel": 0
+            }
+          ]
+        }
+      },
+      "grid": {
+        "x": {
+          "status": "unknown",
+          "spacing_pixel": null,
+          "lines_pixel": []
+        },
+        "y": {
+          "status": "unknown",
+          "spacing_pixel": null,
+          "lines_pixel": []
+        }
+      }
+    },
+    "calibration": {
+      "status": "uncertain",
+      "axes": {
+        "x": {
+          "status": "unknown",
+          "source": "unknown",
+          "labels": [
+            {
+              "value": -3,
+              "anchor_pixel": [
+                267,
+                558
+              ],
+              "bounds_pixel": [
+                [
+                  597,
+                  243
+                ],
+                [
+                  647,
+                  290
+                ]
+              ],
+              "match_error": 0
+            },
+            {
+              "value": -2,
+              "anchor_pixel": [
+                383,
+                558
+              ],
+              "bounds_pixel": [
+                [
+                  595,
+                  363
+                ],
+                [
+                  643,
+                  411
+                ]
+              ],
+              "match_error": 0
+            },
+            {
+              "value": -1,
+              "anchor_pixel": [
+                487,
+                558
+              ],
+              "bounds_pixel": [
+                [
+                  594,
+                  480
+                ],
+                [
+                  642,
+                  497
+                ]
+              ],
+              "match_error": 0
+            },
+            {
+              "value": 1,
+              "anchor_pixel": [
+                693,
+                558
+              ],
+              "bounds_pixel": [
+                [
+                  593,
+                  686
+                ],
+                [
+                  633,
+                  696
+                ]
+              ],
+              "match_error": 0
+            },
+            {
+              "value": 2,
+              "anchor_pixel": [
+                790,
+                558
+              ],
+              "bounds_pixel": [
+                [
+                  593,
+                  773
+                ],
+                [
+                  640,
+                  803
+                ]
+              ],
+              "match_error": 0
+            },
+            {
+              "value": 3,
+              "anchor_pixel": [
+                887,
+                558
+              ],
+              "bounds_pixel": [
+                [
+                  592,
+                  868
+                ],
+                [
+                  639,
+                  915
+                ]
+              ],
+              "match_error": 0
+            }
+          ]
+        },
+        "y": {
+          "status": "unknown",
+          "source": "unknown",
+          "labels": [
+            {
+              "value": 1,
+              "anchor_pixel": [
+                488,
+                484
+              ],
+              "bounds_pixel": [
+                [
+                  467,
+                  447
+                ],
+                [
+                  512,
+                  461
+                ]
+              ],
+              "match_error": 0
+            },
+            {
+              "value": 2,
+              "anchor_pixel": [
+                488,
+                241
+              ],
+              "bounds_pixel": [
+                [
+                  226,
+                  447
+                ],
+                [
+                  270,
+                  461
+                ]
+              ],
+              "match_error": 0
+            },
+            {
+              "value": 3,
+              "anchor_pixel": [
+                488,
+                117
+              ],
+              "bounds_pixel": [
+                [
+                  102,
+                  442
+                ],
+                [
+                  153,
+                  460
+                ]
+              ],
+              "match_error": 0
+            }
+          ]
+        }
+      },
+      "origin_graph": null,
+      "x_unit_vector_pixel": null,
+      "y_unit_vector_pixel": null
+    },
+    "strokes": [
+      {
+        "id": "stroke_axis_y",
+        "component_id": "unresolved-stroke_axis_y",
+        "kind": "polyline",
+        "closed": false,
+        "simplification_tolerance_pixel": 0,
+        "vertices": [
+          {
+            "pixel": [
+              488,
+              936
+            ],
+            "endpoint": true,
+            "corner": false,
+            "graph": null
+          },
+          {
+            "pixel": [
+              488,
+              58
+            ],
+            "endpoint": true,
+            "corner": false,
+            "graph": null
+          }
+        ]
+      },
+      {
+        "id": "stroke_axis_x",
+        "component_id": "unresolved-stroke_axis_x",
+        "kind": "polyline",
+        "closed": false,
+        "simplification_tolerance_pixel": 0,
+        "vertices": [
+          {
+            "pixel": [
+              130,
+              558
+            ],
+            "endpoint": true,
+            "corner": false,
+            "graph": null
+          },
+          {
+            "pixel": [
+              833,
+              558
+            ],
+            "endpoint": true,
+            "corner": false,
+            "graph": null
+          }
+        ]
+      },
+      {
+        "id": "stroke_curve_left",
+        "component_id": "unresolved-stroke_curve_left",
+        "kind": "polyline",
+        "closed": false,
+        "simplification_tolerance_pixel": 0,
+        "vertices": [
+          {
+            "pixel": [
+              108,
+              482
+            ],
+            "endpoint": true,
+            "corner": false,
+            "graph": null
+          },
+          {
+            "pixel": [
+              267,
+              243
+            ],
+            "endpoint": false,
+            "corner": true,
+            "graph": null
+          },
+          {
+            "pixel": [
+              448,
+              485
+            ],
+            "endpoint": true,
+            "corner": false,
+            "graph": null
+          }
+        ]
+      },
+      {
+        "id": "stroke_curve_right",
+        "component_id": "unresolved-stroke_curve_right",
+        "kind": "polyline",
+        "closed": false,
+        "simplification_tolerance_pixel": 0,
+        "vertices": [
+          {
+            "pixel": [
+              504,
+              485
+            ],
+            "endpoint": true,
+            "corner": false,
+            "graph": null
+          },
+          {
+            "pixel": [
+              693,
+              161
+            ],
+            "endpoint": false,
+            "corner": true,
+            "graph": null
+          },
+          {
+            "pixel": [
+              906,
+              439
+            ],
+            "endpoint": true,
+            "corner": false,
+            "graph": null
+          }
+        ]
+      }
+    ],
+    "topology": {
+      "stroke_count": 4,
+      "component_count": 4,
+      "components": [
+        {
+          "id": "unresolved-stroke_axis_y",
+          "stroke_ids": [
+            "stroke_axis_y"
+          ]
+        },
+        {
+          "id": "unresolved-stroke_axis_x",
+          "stroke_ids": [
+            "stroke_axis_x"
+          ]
+        },
+        {
+          "id": "unresolved-stroke_curve_left",
+          "stroke_ids": [
+            "stroke_curve_left"
+          ]
+        },
+        {
+          "id": "unresolved-stroke_curve_right",
+          "stroke_ids": [
+            "stroke_curve_right"
+          ]
+        }
+      ],
+      "junctions": []
+    },
+    "status": "needs_review",
+    "warnings": [
+      {
+        "code": "inconsistent_tick_spacing",
+        "message": "Numeric tick positions fail the frozen affine consistency screen; scale stays unknown."
+      },
+      {
+        "code": "inconsistent_tick_spacing",
+        "message": "Numeric tick positions fail the frozen affine consistency screen; scale stays unknown."
+      },
+      {
+        "code": "unresolved_component",
+        "message": "Provider left physical component membership unknown; no join is inferred."
+      },
+      {
+        "code": "axis_as_answer_stroke",
+        "message": "An observed axis is also returned as an answer stroke; it is retained and blocks import."
+      },
+      {
+        "code": "unresolved_component",
+        "message": "Provider left physical component membership unknown; no join is inferred."
+      },
+      {
+        "code": "axis_as_answer_stroke",
+        "message": "An observed axis is also returned as an answer stroke; it is retained and blocks import."
+      },
+      {
+        "code": "unresolved_component",
+        "message": "Provider left physical component membership unknown; no join is inferred."
+      },
+      {
+        "code": "unresolved_component",
+        "message": "Provider left physical component membership unknown; no join is inferred."
+      },
+      {
+        "code": "unsupported_isolated_points",
+        "message": "Isolated points are retained in the observation sidecar; the stroke-only adapter cannot import them."
+      }
+    ],
+    "assistance": [
+      {
+        "target": "x",
+        "reason": "inconsistent_tick_spacing"
+      },
+      {
+        "target": "y",
+        "reason": "inconsistent_tick_spacing"
+      },
+      {
+        "target": "stroke_axis_y",
+        "reason": "unresolved_component"
+      },
+      {
+        "target": "stroke_axis_y",
+        "reason": "axis_as_answer_stroke"
+      },
+      {
+        "target": "stroke_axis_x",
+        "reason": "unresolved_component"
+      },
+      {
+        "target": "stroke_axis_x",
+        "reason": "axis_as_answer_stroke"
+      },
+      {
+        "target": "stroke_curve_left",
+        "reason": "unresolved_component"
+      },
+      {
+        "target": "stroke_curve_right",
+        "reason": "unresolved_component"
+      },
+      {
+        "target": "points",
+        "reason": "unsupported_isolated_points"
+      }
+    ],
+    "uncertainty": {
+      "confidence_kind": "heuristic_not_probability",
+      "regions": [],
+      "assumptions": [
+        "Provider observations require pixel-level evaluation; JSON validity does not establish faithful recognition."
+      ]
+    },
+    "provenance": {
+      "method": "gemini_vlm",
+      "automatically_recognized": true,
+      "geometry_modified": false,
+      "axis_support_value": "Zero is a compatibility placeholder; local pixel support was not measured.",
+      "processing_frame_role": "Local adapter preview only; not Gemini internal preprocessing. Original full-size PNG was transmitted.",
+      "component_ids_for_null_membership": "Bookkeeping only, unresolved and import-blocking; not a physical component-count claim."
+    }
+  },
+  "calibration_diagnostics": {
+    "x": {
+      "raw_anchors": [
+        [
+          267,
+          558
+        ],
+        [
+          383,
+          558
+        ],
+        [
+          487,
+          558
+        ],
+        [
+          693,
+          558
+        ],
+        [
+          790,
+          558
+        ],
+        [
+          887,
+          558
+        ]
+      ],
+      "affine_anchors": [
+        [
+          275.72552083333335,
+          558
+        ],
+        [
+          378.6503472222222,
+          558
+        ],
+        [
+          481.5751736111111,
+          558
+        ],
+        [
+          687.4248263888888,
+          558
+        ],
+        [
+          790.3496527777777,
+          558
+        ],
+        [
+          893.2744791666667,
+          558
+        ]
+      ],
+      "residuals_pixel": [
+        8.725520833333348,
+        4.349652777777806,
+        5.424826388888903,
+        5.575173611111154,
+        0.3496527777776919,
+        6.2744791666666515
+      ],
+      "maximum_residual_pixel": 8.725520833333348,
+      "maximum_relative_unit_residual": 0.08477566724635545,
+      "consistent": false,
+      "method": "Numeric tick calibration only; no curve fitting, reference or configured ranges"
+    },
+    "y": {
+      "raw_anchors": [
+        [
+          488,
+          484
+        ],
+        [
+          488,
+          241
+        ],
+        [
+          488,
+          117
+        ]
+      ],
+      "affine_anchors": [
+        [
+          488,
+          470.5976385104451
+        ],
+        [
+          488,
+          280.6666666666667
+        ],
+        [
+          488,
+          90.73569482288832
+        ]
+      ],
+      "residuals_pixel": [
+        13.402361489554892,
+        39.666666666666686,
+        26.26430517711168
+      ],
+      "maximum_residual_pixel": 39.666666666666686,
+      "maximum_relative_unit_residual": 0.20884780550321844,
+      "consistent": false,
+      "method": "Numeric tick calibration only; no curve fitting, reference or configured ranges"
+    }
+  },
+  "isolated_points": [
+    [
+      544,
+      167
+    ]
+  ],
+  "raw_component_ids": [
+    {
+      "id": "stroke_axis_y",
+      "component_id": null
+    },
+    {
+      "id": "stroke_axis_x",
+      "component_id": null
+    },
+    {
+      "id": "stroke_curve_left",
+      "component_id": null
+    },
+    {
+      "id": "stroke_curve_right",
+      "component_id": null
+    }
+  ]
+}

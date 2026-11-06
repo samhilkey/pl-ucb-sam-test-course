@@ -1,0 +1,23 @@
+{
+  "version": "4g2.3",
+  "performed_before_request": true,
+  "model": "gemini-3.5-flash-lite",
+  "source_image_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+  "request_sha256": "0cd99ad83965bfb96f8b8254e25fe99ea132c5b22eb39a3f944f1a5d6b75ac2c",
+  "request_bytes": 3417740,
+  "project_alias": "STAR Sketch2Graph",
+  "billing_tier": "Free",
+  "paid_exposure": false,
+  "project_verification_kind": "User-confirmed current key binding and Free/no-paid-exposure configuration; no extra authenticated metadata request",
+  "instantaneous_remaining_quota": null,
+  "instantaneous_balance_not_required_by_latest_user_authorization": true,
+  "max_requests": 1,
+  "retries": 0,
+  "redirects": 0,
+  "continuations": 0,
+  "tools": 0,
+  "credential_presence_check_passed": true,
+  "private_env_ignored": true,
+  "focused_transport_tests_passed": 10,
+  "production_demo_changes": 0
+}

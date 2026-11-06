@@ -1,0 +1,23 @@
+{
+  "passed": 10,
+  "checks": [
+    "Correct local automatic sandbox loaded",
+    "Exactly one saved-response replay; no model request",
+    "Real candidate is labelled VLM automatic, separate from CV and manual tracing",
+    "All raw paths, including mistaken axes, remain visible without correction",
+    "Uncertain calibration/topology and unsupported point block confirmation",
+    "Attempted disabled confirmation preserves existing objects exactly",
+    "Saved-response review has no mobile horizontal overflow",
+    "Blocked confirmation remains fully visible on the mobile-sized viewport",
+    "Reload removes the page-only injection; normal CV implementation is restored",
+    "No application page or console errors"
+  ],
+  "page_errors": [],
+  "blocked_external_origins": [],
+  "api_calls": 0,
+  "imported": false,
+  "submitted": false,
+  "production_source_modified": false,
+  "scope": "Isolated replay of saved real model output, not a deployed Gemini engine or recognition rerun",
+  "browser_plugin": "not available; existing Playwright CLI used"
+}

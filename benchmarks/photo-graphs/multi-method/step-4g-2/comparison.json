@@ -1,16 +1,17 @@
 {
-  "version": "4g2.1",
-  "status": "blocked_before_inference",
-  "aggregate_cv_context": {
-    "successes": 0,
-    "cases": 3,
-    "evidence": "../step-4g-1/results/evaluation.json"
+  "version": "4g2.3",
+  "status": "completed_one_real_request_fidelity_failed",
+  "aggregate_context": {
+    "cv_successes": 0,
+    "cv_cases": 3,
+    "gemini_successes": 0,
+    "gemini_cases": 1,
+    "paired_cases": 1,
+    "general_accuracy_claim": false
   },
-  "paired_case": {
-    "id": "IMG_1670",
-    "cv": {
-      "status": "needs_review",
-      "native_imported": false,
+  "case_id": "IMG_1670",
+  "paired_comparison": {
+    "cv_automatic": {
       "metrics": {
         "expected_strokes": 1,
         "extracted_paths": 44,
@@ -41,52 +42,67 @@
           10.300453405291357
         ]
       },
-      "separate_dot": {
-        "reference_pixel": [
-          821,
-          294
+      "status": "needs_review",
+      "imported": false
+    },
+    "gemini_automatic": {
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 4,
+        "extracted_components": null,
+        "branch_count_correct": false,
+        "missing_strokes": 1,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 2,
+        "reference_to_geometry_p95_pixel": 503.3514086848272,
+        "geometry_to_reference_p95_pixel": 346.43976255932847,
+        "reference_centerline_coverage_within_3px": [
+          0.013312034078807242
         ],
-        "lies_in_unclassified_component_box": true,
-        "recognized_as_point": false,
-        "native_imported": false
+        "endpoint_max_error_pixel": 594.1960955778824,
+        "corner_error_pixel": 233.90810161257775,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+        "adapter_bookkeeping_component_count": 4
       },
-      "calibration": {
-        "status": "uncertain",
-        "axes": {
-          "x": {
-            "status": "unknown",
-            "source": "unknown",
-            "labels": []
-          },
-          "y": {
-            "status": "unknown",
-            "source": "unknown",
-            "labels": []
-          }
-        },
-        "origin_graph": null,
-        "x_unit_vector_pixel": null,
-        "y_unit_vector_pixel": null
-      }
+      "status": "needs_review",
+      "imported": false
     },
-    "gemini": {
-      "inference_requests": 0,
-      "prediction": null,
-      "schema_validation": null,
-      "semantic_validation": null,
-      "photo_geometry_v1_validation": null,
-      "metrics": null,
-      "isolated_points": null,
-      "latency_ms": null,
-      "usage": null,
-      "provider_reported_cost_usd": null,
-      "native_adapter_test": "not_run_no_prediction",
-      "isolated_ui_test": "not_run_no_prediction"
-    },
-    "manual_assisted": {
-      "classification": "manually traced curve, manually placed point; not an automatic success",
-      "evidence": "../step-4f/results/evaluation.json"
+    "manually_assisted": {
+      "classification": "fully manually traced; any source point separately placed manually",
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 3.4951056567696734,
+        "geometry_to_reference_p95_pixel": 3.493940899018997,
+        "reference_centerline_coverage_within_3px": [
+          0.9126730564430245
+        ],
+        "endpoint_max_error_pixel": 1.414148371719365,
+        "corner_error_pixel": 1.0000511605403233,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "dot": "Manually placed with native point tool; not recognition"
     }
   },
-  "finding": "No observed Gemini recognition result. No geometry/structure superiority or integration recommendation is supported."
+  "isolated_point": {
+    "expected": 1,
+    "predicted": 1,
+    "errors_pixel": [
+      304.7261065284693
+    ],
+    "retained_in_sidecar": true,
+    "native_import_unsupported": true
+  },
+  "calibration_status": "uncertain",
+  "finding": "Two peak flags and a separate-dot count are semantic clues, but coordinates, curvature, connectivity and calibration are unfaithful. JSON validity does not establish recognition success.",
+  "recommendation": "Keep the constrained assisted workflow for November 9. Do not integrate VLM-only recognition. Any VLM-guided CV or coordinate-grounding research requires a separate subsequent approval."
 }

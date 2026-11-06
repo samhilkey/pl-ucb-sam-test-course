@@ -1,0 +1,11 @@
+{
+  "provider_method": "VLM automatic",
+  "geometry_valid": true,
+  "propose_succeeded": false,
+  "commit_called": false,
+  "imported": false,
+  "rejection": "Recognition needs correction before native import. Pixel geometry has been retained.",
+  "set_state_calls": 0,
+  "existing_objects_unchanged": true,
+  "import_eligible": false
+}

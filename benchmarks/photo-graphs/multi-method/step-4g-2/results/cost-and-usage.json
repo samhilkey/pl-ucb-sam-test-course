@@ -1,0 +1,33 @@
+{
+  "version": "4g2.3",
+  "real_request_count": 1,
+  "retries": 0,
+  "service_tier": "standard",
+  "service_tier_is_not_proof_of_billing_tier": true,
+  "reported_usage": {
+    "total_tokens": 3076,
+    "total_input_tokens": 1503,
+    "input_tokens_by_modality": [
+      {
+        "modality": "image",
+        "tokens": 1085
+      },
+      {
+        "modality": "text",
+        "tokens": 418
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 1573,
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 0,
+    "initial_input_tokens": 3368
+  },
+  "provider_reported_cost_usd": null,
+  "paid_exposure_usd_under_user_confirmed_unbilled_free_configuration": 0,
+  "independent_currency_charge_verification": false,
+  "basis": "User-confirmed unbilled Free project; no billing change, provider switch or paid fallback. Monetary charge is not independently reported by this API response.",
+  "no_billing_changes": true,
+  "no_paid_fallback": true,
+  "no_token_based_paid_price_estimate_made": true
+}

@@ -1,0 +1,50 @@
+{
+  "version": "4g2.3",
+  "source_kind": "real_provider_request",
+  "json_repaired": false,
+  "coordinate_rescaling_or_reference_correction": false,
+  "provider_envelope_valid": true,
+  "schema_valid": true,
+  "photo_geometry_v1_valid": true,
+  "recognition_fidelity_passed": false,
+  "geometry_status": "needs_review",
+  "manual_correction_required": true,
+  "warnings": [
+    {
+      "code": "inconsistent_tick_spacing",
+      "message": "Numeric tick positions fail the frozen affine consistency screen; scale stays unknown."
+    },
+    {
+      "code": "inconsistent_tick_spacing",
+      "message": "Numeric tick positions fail the frozen affine consistency screen; scale stays unknown."
+    },
+    {
+      "code": "unresolved_component",
+      "message": "Provider left physical component membership unknown; no join is inferred."
+    },
+    {
+      "code": "axis_as_answer_stroke",
+      "message": "An observed axis is also returned as an answer stroke; it is retained and blocks import."
+    },
+    {
+      "code": "unresolved_component",
+      "message": "Provider left physical component membership unknown; no join is inferred."
+    },
+    {
+      "code": "axis_as_answer_stroke",
+      "message": "An observed axis is also returned as an answer stroke; it is retained and blocks import."
+    },
+    {
+      "code": "unresolved_component",
+      "message": "Provider left physical component membership unknown; no join is inferred."
+    },
+    {
+      "code": "unresolved_component",
+      "message": "Provider left physical component membership unknown; no join is inferred."
+    },
+    {
+      "code": "unsupported_isolated_points",
+      "message": "Isolated points are retained in the observation sidecar; the stroke-only adapter cannot import them."
+    }
+  ]
+}

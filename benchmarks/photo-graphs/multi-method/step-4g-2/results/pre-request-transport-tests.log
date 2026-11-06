@@ -1,0 +1,60 @@
+TAP version 13
+# Subtest: live plan preserves exact approved model/image/payload and accepts UNKNOWN quota
+ok 1 - live plan preserves exact approved model/image/payload and accepts UNKNOWN quota
+  ---
+  duration_ms: 960.025667
+  ...
+# Subtest: HTTP 200 consumes the one-use journal without retry or credential leakage (fixture only)
+ok 2 - HTTP 200 consumes the one-use journal without retry or credential leakage (fixture only)
+  ---
+  duration_ms: 321.748875
+  ...
+# Subtest: HTTP 403 consumes the one-use journal without retry or credential leakage (fixture only)
+ok 3 - HTTP 403 consumes the one-use journal without retry or credential leakage (fixture only)
+  ---
+  duration_ms: 304.977375
+  ...
+# Subtest: HTTP 429 consumes the one-use journal without retry or credential leakage (fixture only)
+ok 4 - HTTP 429 consumes the one-use journal without retry or credential leakage (fixture only)
+  ---
+  duration_ms: 295.914583
+  ...
+# Subtest: HTTP 500 consumes the one-use journal without retry or credential leakage (fixture only)
+ok 5 - HTTP 500 consumes the one-use journal without retry or credential leakage (fixture only)
+  ---
+  duration_ms: 299.218917
+  ...
+# Subtest: transport failure also consumes the attempt; interruption journal is never resumed
+ok 6 - transport failure also consumes the attempt; interruption journal is never resumed
+  ---
+  duration_ms: 291.150166
+  ...
+# Subtest: low-level transport makes one HTTP request for errors/redirects, never following them
+ok 7 - low-level transport makes one HTTP request for errors/redirects, never following them
+  ---
+  duration_ms: 1.615041
+  ...
+# Subtest: exact cleared PNG prepares offline without network, credentials or evaluator reads
+ok 8 - exact cleared PNG prepares offline without network, credentials or evaluator reads
+  ---
+  duration_ms: 231.505
+  ...
+# Subtest: uncleared, substituted or additional images cannot enter the prepared pilot
+ok 9 - uncleared, substituted or additional images cannot enter the prepared pilot
+  ---
+  duration_ms: 0.65725
+  ...
+# Subtest: CLI remains dry-run only and never displays a supplied sentinel credential
+ok 10 - CLI remains dry-run only and never displays a supplied sentinel credential
+  ---
+  duration_ms: 218.150625
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2530.847125

@@ -1,0 +1,23 @@
+{
+  "version": "4g2.3",
+  "date_local": "2026-11-06",
+  "source": "User Step 4G-2 Quota preflight resolution in this conversation",
+  "explicitly_authorized": true,
+  "maximum_requests": 1,
+  "automatic_retries": 0,
+  "model": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+  "image_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+  "request_sha256": "0cd99ad83965bfb96f8b8254e25fe99ea132c5b22eb39a3f944f1a5d6b75ac2c",
+  "project_alias": "STAR Sketch2Graph",
+  "billing_tier": "Free",
+  "paid_billing_exposure": false,
+  "configuration_basis": "User reconfirms the cleared credential, Free-tier project, model and no paid fallback in latest authorization",
+  "instantaneous_remaining_quota": null,
+  "instantaneous_remaining_quota_required": false,
+  "quota_policy": "Unknown balance accepted by explicit user instruction; any quota/access error consumes the sole attempt and stops the pilot",
+  "stop_on_any_http_error": true,
+  "paid_fallback": false,
+  "other_images_or_models_authorized": false,
+  "production_integration_authorized": false
+}
