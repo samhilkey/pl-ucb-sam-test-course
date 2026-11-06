@@ -308,3 +308,23 @@ approximate visual references. Validation: 80 Node and five Python checks passed
 **Review boundary:** commit this focused experiment locally and stop. No VLM
 inference occurred. A Gemini pilot or any CV/OCR/hybrid refinement requires the
 next explicit approval; this experiment does not complete those later steps.
+
+## Step 4B: approved pilot, blocked prerequisites
+
+The user approved at most two `gemini-3.5-flash-lite` requests using the frozen
+Step 4A inputs and protocol, contingent on verified account/free-tier/quota/$0
+billing exposure and image clearance. The public model/free pricing were
+rechecked, but environment credentials were absent, account eligibility/quota
+remained unknown, and clearance for both exact images under Google's unpaid
+terms was unverified. No authenticated provider call, image upload or inference
+occurred. The user-required stop rule was honored.
+
+Read the [Step 4B blocker report](../benchmarks/photo-graphs/multi-method/step-4b/REPORT.md)
+for the recorded approval, image hashes, public sources, null unexecuted results
+and requirements to resume. Validation: 71 existing offline tests passed. No
+production workflow, prior benchmark or frozen Step 4A protocol changed.
+
+**Review boundary:** commit the blocked prerequisite audit locally and stop.
+Recommend a constrained assisted workflow as the November 9 demo contingency;
+Gemini remains untested, so neither VLM-only nor hybrid integration is justified
+by observed recognition evidence yet. Do not begin that next phase without approval.

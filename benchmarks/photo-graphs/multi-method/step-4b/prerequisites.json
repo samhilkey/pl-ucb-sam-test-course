@@ -1,0 +1,142 @@
+{
+  "step": "4B",
+  "status": "blocked_before_inference",
+  "parent_commit": "b12b9989de6c46155bc75b82fb3305e2cc359b58",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "user_execution_approval": {
+    "status": "approved",
+    "scope": "at most two image-only requests to gemini-3.5-flash-lite using frozen Step 4A protocol, contingent on verified prerequisites",
+    "stop_rule": "If any prerequisite cannot be verified, do not make an API call; document the blocker and stop"
+  },
+  "frozen_protocol": {
+    "path": "benchmarks/photo-graphs/multi-method/step-4a/protocol.json",
+    "sha256": "36fe4daf216c850a6f5f751864aac661754d12ec7aa150f199e2286f014073c0",
+    "prompt_sha256": "d642a044ff43d1d43ce83de0e8b8998a83dd51fe34875207f75e989eb1153213",
+    "schema_sha256": "6348f0024d481bfe0a5d1906c1b8984820e061d7e791db1fc5e88e4c38bfbb82",
+    "input_manifest_sha256": "ec93a2727d91bc42215ffc782c938cf71c44436624d8f854398ff59d7614dd61",
+    "max_requests": 2,
+    "requests_attempted": 0,
+    "authorized_spend_usd": 0
+  },
+  "provider": {
+    "model": "gemini-3.5-flash-lite",
+    "public_model_listing": "verified",
+    "public_standard_free_input_output": "verified",
+    "account_model_access": "unknown",
+    "account_free_tier_eligibility": "unknown",
+    "billing_disabled": "unknown",
+    "remaining_quota": {
+      "rpm": null,
+      "input_tpm": null,
+      "rpd": null
+    },
+    "prospective_zero_billing_exposure_verified": false,
+    "operator_client_region_eligibility": "unverified"
+  },
+  "local_account_access_checks": {
+    "credential_presence_only": {
+      "GEMINI_API_KEY": false,
+      "GOOGLE_API_KEY": false
+    },
+    "credential_values_read_or_logged": false,
+    "credential_files_read": false,
+    "gcloud_cli_present": false,
+    "connected_browser_sessions_in_inventory": 0,
+    "account_dashboard_verified": false,
+    "note": "Browser inventory returned no connected browser session. Native Chrome was running; this does not establish that the user is signed out. No login, credential creation, account changes or dashboard verification was performed."
+  },
+  "blockers": [
+    {
+      "code": "credential_unavailable",
+      "detail": "Neither GEMINI_API_KEY nor GOOGLE_API_KEY is set in the active process environment. No .env, other repository, browser password store or credential file was opened."
+    },
+    {
+      "code": "account_tier_billing_quota_unverified",
+      "detail": "No evidence binds an environment credential to an eligible unbilled Free-tier project with sufficient active quota. Public free pricing cannot establish these account facts."
+    },
+    {
+      "code": "image_clearance_unverified",
+      "detail": "Neither exact selected image has a supplied image-specific authorization/clearance record for Google unpaid processing and product-improvement terms. General experiment approval, public availability and dataset PII removal are not recorded as this clearance."
+    }
+  ],
+  "cases": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_size": [
+        801,
+        529
+      ],
+      "local_screening": "No obvious names, faces, contact details or other direct identifiers visible in this exact graph crop. This is not formal clearance or a guarantee of deidentification.",
+      "dataset_license": "CC BY-NC 4.0",
+      "google_unpaid_service_clearance": "unverified",
+      "clearance_evidence": null,
+      "request_status": "blocked_before_request",
+      "request_attempts": 0,
+      "image_uploaded": false,
+      "prediction": null,
+      "validation": {
+        "status": "not_run_no_response",
+        "passed": null
+      },
+      "geometry": null,
+      "latency_ms": null,
+      "usage": null,
+      "provider_reported_cost_usd": null,
+      "geometry_metrics": null,
+      "structural_recognition_assessment": "not_evaluated",
+      "overlays": []
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_size": [
+        529,
+        420
+      ],
+      "local_screening": "No obvious names, faces, contact details or other direct identifiers visible in this exact graph crop. This is not formal clearance or a guarantee of deidentification.",
+      "dataset_license": "CC BY-NC 4.0",
+      "google_unpaid_service_clearance": "unverified",
+      "clearance_evidence": null,
+      "request_status": "blocked_before_request",
+      "request_attempts": 0,
+      "image_uploaded": false,
+      "prediction": null,
+      "validation": {
+        "status": "not_run_no_response",
+        "passed": null
+      },
+      "geometry": null,
+      "latency_ms": null,
+      "usage": null,
+      "provider_reported_cost_usd": null,
+      "geometry_metrics": null,
+      "structural_recognition_assessment": "not_evaluated",
+      "overlays": []
+    }
+  ],
+  "cost_accounting": {
+    "inference_requests_attempted": 0,
+    "authenticated_provider_api_requests": 0,
+    "image_uploads": 0,
+    "inference_cost_incurred_this_step_usd": 0,
+    "provider_reported_usage": null,
+    "provider_reported_cost_usd": null,
+    "prospective_request_cost_usd": null,
+    "note": "Zero incurred inference cost follows from zero requests. It does not verify future requests would be unbilled."
+  },
+  "deferred_work": [
+    "live request transport and bounded execution",
+    "provider response validation and Photo Geometry v1 conversion",
+    "Gemini branch/axis/corner/endpoint/scale evaluation",
+    "prediction overlays and matched Gemini-versus-CV comparison"
+  ],
+  "no_substitution": true,
+  "no_more_contrast_experiments": true,
+  "production_workflow_modified": false,
+  "next_direction_recommendation": {
+    "direction": "constrained_assisted_workflow",
+    "basis": "Existing automatic CV remains unsuccessful on both photos; contrast-only comparison did not resolve either; Gemini is untested and blocked. No observed evidence supports VLM-only or hybrid integration.",
+    "limitation": "This is a demo contingency recommendation, not evidence that Gemini failed recognition; independent real-paper end-to-end acceptance is still required."
+  }
+}

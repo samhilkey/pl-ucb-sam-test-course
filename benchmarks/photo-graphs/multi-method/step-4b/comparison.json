@@ -1,0 +1,70 @@
+{
+  "step": "4B",
+  "cv_source_sha256": "84cbdfd172a26c3d156b56a7ccd8e3f888fd228dca2fd4b72266faee3e98929a",
+  "new_recognition_requests": 0,
+  "rows": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "cv_baseline": {
+        "source": "../contrast-01/results/evaluation.json",
+        "status": "abstained",
+        "paths": 0,
+        "reference_coverage_within_3px_per_branch": [
+          0,
+          0
+        ],
+        "reference_to_prediction_p95_pixel": null,
+        "prediction_to_reference_p95_pixel": null,
+        "calibration": "uncertain",
+        "reference_quality": "approximate prior visual annotations, not independent human ground truth"
+      },
+      "gemini": {
+        "execution_status": "blocked_before_request",
+        "prediction": null,
+        "paths": null,
+        "coverage": null,
+        "bidirectional_distances": null,
+        "calibration": null,
+        "structural_improvement": null,
+        "precise_geometry_improvement": null,
+        "latency_ms": null,
+        "usage": null,
+        "provider_reported_cost_usd": null,
+        "overlays": []
+      },
+      "comparison_status": "not_possible_no_Gemini_output"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "cv_baseline": {
+        "source": "../contrast-01/results/evaluation.json",
+        "status": "needs_review",
+        "paths": 4,
+        "reference_coverage_within_3px_per_branch": [
+          0.020202020202020204
+        ],
+        "reference_to_prediction_p95_pixel": 303.68718671093245,
+        "prediction_to_reference_p95_pixel": 250.96279796816557,
+        "calibration": "uncertain",
+        "reference_quality": "approximate prior visual annotations, not independent human ground truth"
+      },
+      "gemini": {
+        "execution_status": "blocked_before_request",
+        "prediction": null,
+        "paths": null,
+        "coverage": null,
+        "bidirectional_distances": null,
+        "calibration": null,
+        "structural_improvement": null,
+        "precise_geometry_improvement": null,
+        "latency_ms": null,
+        "usage": null,
+        "provider_reported_cost_usd": null,
+        "overlays": []
+      },
+      "comparison_status": "not_possible_no_Gemini_output"
+    }
+  ],
+  "recommendation": "constrained_assisted_workflow",
+  "recommendation_basis": "Only prior CV failures and the blocked VLM prerequisites are observed; Gemini ability remains unknown."
+}

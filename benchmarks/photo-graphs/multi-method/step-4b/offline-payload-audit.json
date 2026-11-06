@@ -1,0 +1,88 @@
+{
+  "step": "4B",
+  "mode": "offline_payload_identity_check",
+  "user_step4b_approval": "approved_subject_to_prerequisites",
+  "ready_for_live_inference": false,
+  "model_inference_requests": 0,
+  "prompt_sha256": "d642a044ff43d1d43ce83de0e8b8998a83dd51fe34875207f75e989eb1153213",
+  "schema_sha256": "6348f0024d481bfe0a5d1906c1b8984820e061d7e791db1fc5e88e4c38bfbb82",
+  "manifest_sha256": "ec93a2727d91bc42215ffc782c938cf71c44436624d8f854398ff59d7614dd61",
+  "frozen_request_hashes_match_step4a": true,
+  "cases": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "status": "dry_run_no_inference",
+      "image_size": [
+        801,
+        529
+      ],
+      "source_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "decoded_rgba_sha256": "9eac7df2bdae123d53e6295231b916a90f1bab86bd0e91293bd4124636f323b3",
+      "request_sha256": "59665d6a531541b00cee9c34d4640fa5811f4f0ae852c0c16f8451c2696e3143",
+      "request_bytes": 362514,
+      "payload_fields": [
+        "model",
+        "store",
+        "input",
+        "response_format",
+        "generation_config"
+      ],
+      "input_fields": [
+        [
+          "type",
+          "text"
+        ],
+        [
+          "type",
+          "mime_type",
+          "data"
+        ]
+      ],
+      "graph_prediction": null,
+      "model_latency_ms": null,
+      "model_usage": null,
+      "model_cost_usd": null,
+      "prepared_png_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "image_transmitted": false,
+      "request_status": "blocked_before_request"
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "status": "dry_run_no_inference",
+      "image_size": [
+        529,
+        420
+      ],
+      "source_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "decoded_rgba_sha256": "4ef623c715c7dc0e450d75c00520cd41712ccf1edc5abd51c6ba273f98b21908",
+      "request_sha256": "b70afe04a05ab0aa104aee7c33146ba1f394f331daf2b3bacd04507f11f5fc7b",
+      "request_bytes": 359194,
+      "payload_fields": [
+        "model",
+        "store",
+        "input",
+        "response_format",
+        "generation_config"
+      ],
+      "input_fields": [
+        [
+          "type",
+          "text"
+        ],
+        [
+          "type",
+          "mime_type",
+          "data"
+        ]
+      ],
+      "graph_prediction": null,
+      "model_latency_ms": null,
+      "model_usage": null,
+      "model_cost_usd": null,
+      "prepared_png_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "image_transmitted": false,
+      "request_status": "blocked_before_request"
+    }
+  ],
+  "note": "Generic frozen request construction only; no transport, credential lookup, references or provider response. Prepared PNG hash does not indicate transmission. Historical Step 4A approval-pending text is not a current blocker."
+}

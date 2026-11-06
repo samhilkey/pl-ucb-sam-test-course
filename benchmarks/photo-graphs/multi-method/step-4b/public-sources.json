@@ -1,0 +1,56 @@
+{
+  "retrieved_at_utc": "2026-11-06T04:40:52.138792+00:00",
+  "access": "public documentation only; no authenticated account/model API call, image upload or inference",
+  "records": [
+    {
+      "id": "model",
+      "requested_url": "https://aistudio.google.com/docs/models/gemini-3.5-flash-lite",
+      "resolved_url": "https://aistudio.google.com/docs/models/gemini-3.5-flash-lite",
+      "status": "retrieved",
+      "content_type": "text/markdown; charset=utf-8",
+      "sha256": "426ebe6a654ee771a0785587e98769cb7338134450af3a5b70e89c1398175e89",
+      "bytes": 4024,
+      "finding": "Public stable model page lists the exact requested ID, image input, text output and structured outputs. Account-level access was not checked."
+    },
+    {
+      "id": "pricing",
+      "requested_url": "https://aistudio.google.com/docs/pricing",
+      "resolved_url": "https://aistudio.google.com/docs/pricing",
+      "status": "retrieved",
+      "content_type": "text/markdown; charset=utf-8",
+      "sha256": "ad2140dd935ccca0a66bb70f7c1b59b5e4c74d6180b599a8c32e0dcf4a422a2e",
+      "bytes": 103583,
+      "finding": "Current Standard table lists free input/output for this model. A paid tier also exists. No project tier or prospective $0 exposure verified."
+    },
+    {
+      "id": "quota",
+      "requested_url": "https://aistudio.google.com/docs/rate-limits",
+      "resolved_url": "https://aistudio.google.com/docs/rate-limits",
+      "status": "retrieved",
+      "content_type": "text/markdown; charset=utf-8",
+      "sha256": "dc71367af41c8a1add0e9466d552dab4d284f2ee4dd93308fb5b9656164c5cc9",
+      "bytes": 10767,
+      "finding": "Active limits depend on project/model and tier. No account/project remaining RPM, TPM or RPD established."
+    },
+    {
+      "id": "terms",
+      "requested_url": "https://aistudio.google.com/docs/terms",
+      "resolved_url": "https://aistudio.google.com/docs/terms",
+      "status": "retrieved",
+      "content_type": "text/markdown; charset=utf-8",
+      "sha256": "3541ca84c8be4c6de243a33165b495ab73b8de3280ce7c22a3858dca41872875",
+      "bytes": 22529,
+      "finding": "Unpaid inputs/outputs may support product improvement and human review; sensitive/confidential/personal submissions prohibited. Operator/client/region eligibility also applies."
+    },
+    {
+      "id": "dataset",
+      "requested_url": "https://huggingface.co/datasets/allenai/DrawEduMath/raw/main/README.md",
+      "resolved_url": "https://huggingface.co/datasets/allenai/DrawEduMath/raw/main/README.md",
+      "status": "retrieved",
+      "content_type": "text/plain; charset=utf-8",
+      "sha256": "102a0fbcdf9447665f83bca3336f84e78ff16fee62e44fd08d0689af006e81fd",
+      "bytes": 4636,
+      "finding": "Official dataset mirror lists CC BY-NC 4.0 and describes repeated PII-removal review. This is not an image-specific Google unpaid-service clearance record."
+    }
+  ]
+}
