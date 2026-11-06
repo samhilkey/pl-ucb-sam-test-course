@@ -1,5 +1,5 @@
 {
-  "scope": "Step 4G-2 offline prerequisite checkpoint only",
+  "scope": "Step 4G-2 offline prerequisite checkpoint and user-provided quota evidence update",
   "files": [
     "benchmarks/photo-graphs/multi-method/step-4g-2/REPORT.md",
     "benchmarks/photo-graphs/multi-method/step-4g-2/comparison.json",
@@ -14,6 +14,8 @@
     "benchmarks/photo-graphs/multi-method/step-4g-2/prerequisites.json",
     "benchmarks/photo-graphs/multi-method/step-4g-2/protocol.json",
     "benchmarks/photo-graphs/multi-method/step-4g-2/public-sources.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/quota-evidence-check.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/quota-evidence-tests.log",
     "benchmarks/photo-graphs/multi-method/step-4g-2/user-ui-evidence.json",
     "benchmarks/photo-graphs/multi-method/step-4g-2/verification.json",
     "benchmarks/photo-graphs/multi-method/step-4g-2/file-inventory.json",

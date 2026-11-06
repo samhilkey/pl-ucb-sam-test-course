@@ -1,4 +1,4 @@
-# Step 4G-2 v1 — Cleared image frozen; inference blocked at account prerequisites
+# Step 4G-2 v2 — Quota observations recorded; inference remains blocked
 
 **No Gemini request or image upload occurred.** This is a prerequisite
 checkpoint, not a completed recognition experiment. The user has approved the
@@ -14,17 +14,17 @@ and eligibility are now recorded. **Current remaining quota is still unknown.**
 | Key/project binding, Free tier and no paid exposure | USER-CONFIRMED | User explicitly confirms the configured key belongs to STAR Sketch2Graph Free-tier project without paid billing exposure. No authenticated independent audit. |
 | Exact image identity and transmission permission | VERIFIED | [Manifest](inputs.json), [permission record](permissions.json), and byte-identical prepared-image hash in [offline preflight](offline-preflight.json). |
 | Public model capabilities | VERIFIED | Official model page lists `gemini-3.5-flash-lite`, image input and structured outputs. This is not account access verification. |
-| Current project-specific model display row | VERIFIED user observation | STAR project shows Gemini 3.5 Flash Lite in Free tier, checked November 6 around 10:29 AM PST. The official model-name mapping gives the requested API code; direct API acceptance remains untested. |
-| Current remaining RPM/input TPM/RPD | UNKNOWN | UI reports **peak usage / limit over Last 28 days**: `0/15`, `0/250000`, `0/500`. Usage page was not checked; these are not live remaining balances. Earlier nonzero figures belonged to another project and are excluded. |
+| Current project-specific model display row | VERIFIED user observation | STAR project shows Gemini 3.5 Flash Lite in Free tier, checked November 6 around 10:38 AM PST. The official model-name mapping gives the requested API code; direct API acceptance remains untested. |
+| Current remaining RPM/input TPM/RPD | UNKNOWN | Both **Last hour** and **Last 1 day** report peak usage / limit of `0/15`, `0/250000`, `0/500`. Usage page was not checked; no instantaneous remaining balance or future request success is inferred. The earlier 28-day observation is retained as history; figures from the other project remain excluded. |
 | Operator/client/region eligibility | VERIFIED user attestation | User answered yes to the adult operator, private professional/research client and supported-region question. |
 
-The remaining account information requested is current-day request usage and
-current request/token quota status, period and check time from the same
-project's [Usage page](https://aistudio.google.com/usage). The latest
-[user-provided UI observations](user-ui-evidence.json) preserve the peak window
-and the display-name/API-code distinction. If the UI cannot establish available
-quota, retain UNKNOWN. Do not run a test prompt, upload
-an image, enable billing or share a key/account identifier to obtain it.
+The latest [user-provided UI observations](user-ui-evidence.json) preserve both
+reporting periods, their peak-statistic meaning, the approximate check time and
+the display-name/API-code distinction. They are recorded as verified human UI
+observations, not an independent API audit. The user explicitly reports current
+remaining quota as UNKNOWN. No further broad account review is requested. No
+test prompt, API call or upload was used to discover quota. The original
+prerequisite remains unsatisfied; this evidence update does not waive it.
 
 The existing [Step 4A protocol](../step-4a/protocol.json) says to verify the adult
 operator, eligible client audience and region before upload. The requested
@@ -117,10 +117,10 @@ geometry, native, assisted, fitting, provider-boundary, credential and backup
 regressions are preserved. The PrairieLearn implementation and Step 4F package
 remain unchanged from `8eefbf996816ad1074a6f443835e05bf0b1c0c0d`.
 
-**Recommendation: finish the outstanding account checks, then resume this same
-one-image pilot.** Image clearance and experiment approval are already granted;
-do not ask for them again or substitute another image. Do not run a diagnostic
-inference to discover quota. If the gates cannot be established, keep inference
-blocked and use the tested assisted route for November 9. Current evidence does
-not justify VLM integration or a hybrid implementation. No next phase begins
-from this checkpoint.
+**Recommendation: retain the recorded UNKNOWN quota status and keep inference
+blocked under the existing prerequisite.** Image clearance, eligibility and
+experiment approval remain granted; no repeat permission or broad account
+review is requested. This update does not authorize a diagnostic inference,
+another image or a change to the prerequisite. Keep the tested assisted route
+for November 9. Gemini geometry and structure remain untested; no integration,
+hybrid implementation or next phase is justified by these quota observations.

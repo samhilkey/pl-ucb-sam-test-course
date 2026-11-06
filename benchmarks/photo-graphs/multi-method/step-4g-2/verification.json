@@ -1,6 +1,6 @@
 {
   "step": "4G-2",
-  "version": "4g2.1",
+  "version": "4g2.2",
   "date_local": "2026-11-06",
   "branch": "feat/automatic-photo-recognition-cv",
   "parent_commit": "8eefbf996816ad1074a6f443835e05bf0b1c0c0d",
@@ -37,11 +37,31 @@
   "image_clearance_still_valid": true,
   "operator_client_region_eligibility": "verified user attestation",
   "earlier_other_project_quotas_excluded": true,
-  "current_remaining_quota": "unknown; not inferred from last-28-day peak usage",
+  "current_remaining_quota": "UNKNOWN; not inferred from Last hour or Last 1 day peak usage",
   "focused_final_check": {
     "command": "node --test tests/star-gemini-pilot.test.cjs",
     "passed": 3,
     "failed": 0,
     "log": "focused-tests.log"
+  },
+  "evidence_update_parent_commit": "c1aad6c3c4b930c43fd0ea8441ab4c0a52f536d8",
+  "latest_user_ui_evidence_checked_at": "2026-11-06 approximately 10:38 AM PST (America/Los_Angeles)",
+  "documentation_update": {
+    "scope": "Record user-reported quota preflight observations only",
+    "reporting_periods": [
+      "Last hour",
+      "Last 1 day"
+    ],
+    "usage_page_checked": false,
+    "inference_requests": 0,
+    "authenticated_provider_requests": 0,
+    "additional_broad_account_review_requested": false,
+    "frozen_payload_or_permissions_modified": false
+  },
+  "quota_evidence_update": {
+    "evidence": "quota-evidence-check.json",
+    "focused_regressions_passed": 3,
+    "focused_regressions_failed": 0,
+    "frozen_payload_and_permission_hashes_unchanged": true
   }
 }

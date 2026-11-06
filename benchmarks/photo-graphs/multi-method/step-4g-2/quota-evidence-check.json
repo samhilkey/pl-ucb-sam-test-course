@@ -1,0 +1,24 @@
+{
+  "version": "4g2.2",
+  "date_local": "2026-11-06",
+  "user_reported_check_time": "approximately 10:38 AM PST",
+  "reporting_periods": [
+    "Last hour",
+    "Last 1 day"
+  ],
+  "normalized_values_verified": true,
+  "peak_usage_not_interpreted_as_remaining": true,
+  "current_remaining_quota": null,
+  "usage_page_checked": false,
+  "frozen_inputs_permissions_protocol_and_code_unchanged": true,
+  "payload_hash_unchanged": true,
+  "inference_requests": 0,
+  "authenticated_provider_requests": 0,
+  "focused_regressions": {
+    "command": "node --test tests/star-gemini-pilot.test.cjs",
+    "passed": 3,
+    "failed": 0,
+    "log": "quota-evidence-tests.log"
+  },
+  "production_files_modified": false
+}
