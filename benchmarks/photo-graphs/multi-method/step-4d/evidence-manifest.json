@@ -1,0 +1,292 @@
+{
+  "step": "4D",
+  "algorithm": "SHA-256",
+  "scope": "All changed code, documents, blank config template and evidence; excludes this manifest; private env files not read or hashed",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 16,
+      "sha256": "d8a5307154d6e4906e900eb03ef3e8fb071b7ad5dd6272f11586544e459dfcf2"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 175,
+      "sha256": "0051fcd5bbb988be6ab101754d92e8d1afb2999246c9f32573f97920221b6ffb"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/PRESENTER.md",
+      "bytes": 7897,
+      "sha256": "a11143950b77192788f8bedfa33c130dca535d97650cfa828a160a2ad82e0d46"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/REPORT.md",
+      "bytes": 12511,
+      "sha256": "d5abf5e8cbefd0040aef634163e38f19882fa55868efdd2e727392ca9cd686fd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/build-backup.cjs",
+      "bytes": 5576,
+      "sha256": "459566966ec8a252ba3db5fbd7e76370466f3f17d2871f982d2f5c3c97b4541e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/evaluate.cjs",
+      "bytes": 5483,
+      "sha256": "070beea9142a4c9bcb385cc23d9f9206a6fe53571fbf34e7b7b70d7f99e699df"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/file-inventory.json",
+      "bytes": 7680,
+      "sha256": "fb31bf9b8bf380781a531ca45d1ab4e8b4313267cb6c1e729ae40ef02134eeef"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/offline-backup.html",
+      "bytes": 2768840,
+      "sha256": "cf21b5f1b86eb541267797394484b82eaf32e9600a2fd637dba116ad1d9c9aee"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/ambiguous-calibration--blocked.png",
+      "bytes": 391536,
+      "sha256": "3bd6494891551b92d7956ae606e910328946da4a5c399b432c2ded056d6f9cf8"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/backup-browser.log",
+      "bytes": 37,
+      "sha256": "bc1301748bd9c268869d906897337cb9d5fcfe622245a0674f935761379e0324"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/credential-audit.json",
+      "bytes": 380,
+      "sha256": "57c7a4633ba1d44a433a292c537028846150d8e111c784c5333e587beb1517d5"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/credential-status.json",
+      "bytes": 624,
+      "sha256": "b3351c3efdc1c55c51781482548cee53168e61817c7a8fbd6b98375ab48e1ffe"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/evaluation.json",
+      "bytes": 4124,
+      "sha256": "ce268ed17ae8fc457829b12bc2427b6b287e1cf14026ddf0b1a8cd4a700927f1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/fidelity.log",
+      "bytes": 4124,
+      "sha256": "ce268ed17ae8fc457829b12bc2427b6b287e1cf14026ddf0b1a8cd4a700927f1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/invalid-photo--rejected.png",
+      "bytes": 52272,
+      "sha256": "1165b9ddd61a17226894966389f0ba32f1c35a675ea8b46e21acf5c57dd910b8"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/mobile-real--06--review.png",
+      "bytes": 173013,
+      "sha256": "172f3fb5c637b8f49fbee435d329b5142b9c353aa3863fe01b9594fc255e8c9e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/node-tests.log",
+      "bytes": 15624,
+      "sha256": "dc0c04035fb827400453bc888b837ad057d1f8568c89b67b22cf20bec83ce103"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/offline-backup--desktop.png",
+      "bytes": 1816586,
+      "sha256": "47861b969c60eeee257759c55f1d0c4332638ac262867f0e794157d13ed1a826"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/offline-backup--mobile.png",
+      "bytes": 57141,
+      "sha256": "68647890791976a031fc49ff8ecd600a22d9c6a353a5816234087287ee8170d7"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/offline-backup-check.json",
+      "bytes": 1059,
+      "sha256": "82ec248f2f02e4c14c0f55371e8b845b69d050714e8683968f03c2efb161c78d"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--edited-restored.png",
+      "bytes": 47450,
+      "sha256": "0930cd1c7a87b60208347777461348c7d147f1219e0a719f2396ec051e055540"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--edited.png",
+      "bytes": 47809,
+      "sha256": "63d745c512eea141d98194f72fd333afce6e52e48c0d744aa0e6ee39ac16ff48"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--graded.png",
+      "bytes": 189155,
+      "sha256": "868294517e8eff8da8140d6bd9d90ac13d1807b4636cf85709558a1fa32c805f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--manual-overlay.png",
+      "bytes": 366915,
+      "sha256": "88a1702d1ea7250e92cc06e165cc77b0b28c4642d627c8d9f474c2002684e10d"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--native-overlay.png",
+      "bytes": 366576,
+      "sha256": "09926e61f2258f99f1d293fded727bc6d7aef2289402392250a5f816c6f3f135"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--native.png",
+      "bytes": 47350,
+      "sha256": "77dc92d360ec607ae8c8f48db89a4fd93f7f5485f38da391da99e74fec36d5e5"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--original.png",
+      "bytes": 267346,
+      "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--restored.png",
+      "bytes": 47693,
+      "sha256": "4904b24c1f2a5b3be36224f145f64ae0843b371570c85ea644c97fb64329622f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--review.png",
+      "bytes": 367390,
+      "sha256": "87868cfc1fa633b627a2da9f4cc7fa40ed8920bc9458fdedc9002ff1a1e94823"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--trace.png",
+      "bytes": 348875,
+      "sha256": "1579997107da16e14fab4e7a937729f34dfea7f82b0645971cb62a6e883ad49a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--edited-restored.png",
+      "bytes": 37198,
+      "sha256": "82bcf6ca3d501dd90267aa12aac4c6294967fddf9501030b57bcad4a2d049272"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--edited.png",
+      "bytes": 37354,
+      "sha256": "5872c416c61196fc5d94c9cee8be43284c400ad4ecd36c007589b077562856f7"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--graded.png",
+      "bytes": 194181,
+      "sha256": "993886388f193ce635473872d7f04684ffd6f9680375316972f69534ef7eb908"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--manual-overlay.png",
+      "bytes": 380852,
+      "sha256": "ff444dcaa868e24ed75711e10951d0bb7248c34d0a90a3e545e8bc3490530280"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--native-overlay.png",
+      "bytes": 380704,
+      "sha256": "f3eee46c82e1a10754fa47c9fa9b1f81348f56b04adff7737bf049e8a06e2763"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--native.png",
+      "bytes": 37137,
+      "sha256": "38afe1751897768c320c06b9370b7f2a9f4ddd91fbce256d4035d1274d178e90"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--original.png",
+      "bytes": 264857,
+      "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--restored.png",
+      "bytes": 37334,
+      "sha256": "97320694725630da481192a9349dcaf8f19483f04848874cec3cd8adf0e58194"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--review.png",
+      "bytes": 399918,
+      "sha256": "99fcbad83fb87e94224b0b71d25115eb618605a4b40b3d249df5225ca2e5a57d"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--trace.png",
+      "bytes": 194830,
+      "sha256": "651f6681dbe0ed715db9cba73307fa1013cad85cc0ce36f3f19b05661d3a3593"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/recovery-native--restored.png",
+      "bytes": 37347,
+      "sha256": "4c9cadc3af521f6936a2a83d4d823ede5f6d7fcc48b96be2afa753b752b75dae"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/refresh-review--cleared.png",
+      "bytes": 49643,
+      "sha256": "64cf93474754d0e0791f54a25eb056078f42b8e97e28434e225ce9b3cb43e140"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/rehearsal.json",
+      "bytes": 2307554,
+      "sha256": "70f2c8e423c1a73712db56817ec08be1dd4b48c7a8c5cbbf17a3808adcebdc91"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/rehearsal.log",
+      "bytes": 39,
+      "sha256": "c49fa77091763a059e382776d05e07c90341c986adbe93d090bb59dead0d7ac4"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/replaced-photo--reset.png",
+      "bytes": 312223,
+      "sha256": "29942e02b9f52d31634a94663896b109e7fce8ddec1c11263428492c2b3f9f49"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/server-tests.log",
+      "bytes": 740,
+      "sha256": "3c21d88f2857bfcc800c22c90f40feaba7cddd035b8232e084bfdbd5ba1de6fd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/setup-backup-tests.log",
+      "bytes": 1149,
+      "sha256": "51e2cb3d257d33cdd673c4b2456be03372948dbf133b8c1b9e602800c7a65c98"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/stale-assisted--blocked.png",
+      "bytes": 394802,
+      "sha256": "d0e85603651eb85674876178be762abbfd098facb361e5c6d0b6adc1be08c35f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/static-checks.log",
+      "bytes": 535,
+      "sha256": "37a15761cef80eb9a14b25b8e6c78aeb1903448a90c525494027f70ee01306d7"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/serve-backup.cjs",
+      "bytes": 1090,
+      "sha256": "2091e67372d6b5b522e98328c437d9456eabc6c933dd91c22ea6dbbf288cab40"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/tested-inputs.json",
+      "bytes": 2155,
+      "sha256": "f41c5d45912200b8f4f87ce0cd2bbff38f5cac2bb628a9e8320850399c129ab1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/verification.json",
+      "bytes": 2716,
+      "sha256": "ba7fc67fc48f0b76979c57b644ef4917effea3d26d9ad29f6ecd989cad0ede3f"
+    },
+    {
+      "path": "docs/automatic-photo-recognition/gemini-configuration.md",
+      "bytes": 4467,
+      "sha256": "01292a21128b048f42ae5ab60a236ce96d380f18ceb28ba11913f1d2d8d7169a"
+    },
+    {
+      "path": "tests/star-assisted-browser.cjs",
+      "bytes": 19419,
+      "sha256": "a7fb16acd329475c811c94e16d42caaee82a036926d07eb9079a9fe942de9592"
+    },
+    {
+      "path": "tests/star-demo-backup.test.cjs",
+      "bytes": 1105,
+      "sha256": "d81999f14d839678539f105c2be25d464c7ddd6f5d3df46e395d12c6c327de87"
+    },
+    {
+      "path": "tests/star-demo-browser.cjs",
+      "bytes": 14493,
+      "sha256": "2ace7f9481f337a44756ad36ec86ddd3704cc4a6af5855465e1cf9af609d5482"
+    },
+    {
+      "path": "tests/star-gemini-config.test.cjs",
+      "bytes": 3130,
+      "sha256": "5d93436d9acb094587eff0ec93a0caa5f25d1a88dcf2bebb622272b1a5699b60"
+    }
+  ]
+}

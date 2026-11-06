@@ -1,0 +1,237 @@
+{
+  "scope": "single Step4D commit; user-created private .env.local excluded",
+  "files": [
+    {
+      "path": ".env.example",
+      "status": "added"
+    },
+    {
+      "path": ".gitignore",
+      "status": "modified"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/PRESENTER.md",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/REPORT.md",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/build-backup.cjs",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/evaluate.cjs",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/evidence-manifest.json",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/file-inventory.json",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/offline-backup.html",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/ambiguous-calibration--blocked.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/backup-browser.log",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/credential-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/credential-status.json",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/evaluation.json",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/fidelity.log",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/invalid-photo--rejected.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/mobile-real--06--review.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/node-tests.log",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/offline-backup--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/offline-backup--mobile.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/offline-backup-check.json",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--edited-restored.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--edited.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--graded.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--manual-overlay.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--native-overlay.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--native.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--original.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--restored.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--review.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--01-multiple-lines-graph-paper--trace.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--edited-restored.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--edited.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--graded.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--manual-overlay.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--native-overlay.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--native.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--original.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--restored.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--review.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/real--06-piecewise-graph-paper--trace.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/recovery-native--restored.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/refresh-review--cleared.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/rehearsal.json",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/rehearsal.log",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/replaced-photo--reset.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/server-tests.log",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/setup-backup-tests.log",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/stale-assisted--blocked.png",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/results/static-checks.log",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/serve-backup.cjs",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/tested-inputs.json",
+      "status": "added"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4d/verification.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/automatic-photo-recognition/gemini-configuration.md",
+      "status": "added"
+    },
+    {
+      "path": "tests/star-assisted-browser.cjs",
+      "status": "modified"
+    },
+    {
+      "path": "tests/star-demo-backup.test.cjs",
+      "status": "added"
+    },
+    {
+      "path": "tests/star-demo-browser.cjs",
+      "status": "added"
+    },
+    {
+      "path": "tests/star-gemini-config.test.cjs",
+      "status": "added"
+    }
+  ]
+}

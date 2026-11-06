@@ -1,0 +1,89 @@
+{
+  "step": "4D",
+  "all_photo_acceptance_passed": true,
+  "browser_assertions": 86,
+  "mode": "Scripted fully manual tracing of two prior development photos; not general automatic recognition validation",
+  "independent_ground_truth": false,
+  "reference_quality": "Approximate prior single-observer centerlines with about4px uncertainty",
+  "legacy_fitting_or_cv_experiment_run": false,
+  "application_console_errors": [],
+  "blocked_external_hosts": [],
+  "outcomes": [
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "method": "fully_manually_traced",
+      "acceptance_passed": true,
+      "input_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "reference_sha256": "ced79fa250ac884a5a0aa97d0f0b4d870fbe388dcb4553c6d35f74719bb59fc1",
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 1,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 4.2096910354812875,
+        "geometry_to_reference_p95_pixel": 4.204793668149852,
+        "reference_centerline_coverage_within_3px": [
+          0.7525252525252525
+        ],
+        "endpoint_max_error_pixel": 4.242626975558779,
+        "corner_error_pixel": 1.4142035777938453,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "reference_coverage_within_5px_per_branch": [
+        1
+      ],
+      "max_native_anchor_endpoint_error_source_pixel": 1.7053025658242404e-13,
+      "max_rendered_drift_source_pixel": 0.0000354210139900089,
+      "pre_existing_native_point_preserved": true,
+      "manual_pixel_paths_identical_to_step4c": true,
+      "calibration_evidence": "Operator-selected visible labeled tick references; approximate affine calibration.",
+      "scale_accuracy_independently_verified": false,
+      "originalSubmissionUrl": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=152",
+      "editedSubmissionUrl": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=152"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "method": "fully_manually_traced",
+      "acceptance_passed": true,
+      "input_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "reference_sha256": "dbdaefb9d17106876f0584c816dbeaa0e7896f9e5eeff79f152373609ad64794",
+      "metrics": {
+        "expected_strokes": 2,
+        "extracted_paths": 2,
+        "extracted_components": 2,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 1.8632116165848167,
+        "geometry_to_reference_p95_pixel": 2.0580069511243626,
+        "reference_centerline_coverage_within_3px": [
+          1,
+          1
+        ],
+        "endpoint_max_error_pixel": 11.180370333893139,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "reference_coverage_within_5px_per_branch": [
+        1,
+        1
+      ],
+      "max_native_anchor_endpoint_error_source_pixel": 1.7112135109858136e-13,
+      "max_rendered_drift_source_pixel": 0.00005398721118010268,
+      "pre_existing_native_point_preserved": true,
+      "manual_pixel_paths_identical_to_step4c": true,
+      "calibration_evidence": "No numeric labels in source. Explicit demo-operator scale assignment, NOT inferred/recovered student units.",
+      "scale_accuracy_independently_verified": false,
+      "originalSubmissionUrl": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=153",
+      "editedSubmissionUrl": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=153"
+    }
+  ]
+}

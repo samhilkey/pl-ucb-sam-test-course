@@ -1,0 +1,21 @@
+{
+  "passed": 10,
+  "checks": [
+    "Standalone recorded backup loads through the isolated local viewer, then browser goes offline",
+    "Backup is explicitly labeled as recorded evidence",
+    "Backup contains no JavaScript or live PrairieLearn dependency",
+    "Every embedded original/review/native/graded/restored image loads offline",
+    "Both native original/edited evidence records are available offline",
+    "Offline native JSON download validates for real--06-piecewise-graph-paper",
+    "Offline native JSON download validates for real--01-multiple-lines-graph-paper",
+    "Offline presenter navigation works",
+    "Standalone backup has no mobile horizontal overflow",
+    "Offline interactions make no additional HTTP requests and have no JavaScript errors"
+  ],
+  "consoleErrors": [],
+  "http_requests": [
+    "http://127.0.0.1:3019/offline-backup.html"
+  ],
+  "mode": "Isolated localhost document load, then browser offline; static recorded walkthrough; no live grade",
+  "direct_file_navigation": "blocked by automation policy; not tested"
+}

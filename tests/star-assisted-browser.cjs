@@ -82,6 +82,13 @@ async function acceptance (page, options) {
   }
   for (const c of options.cases) {
     await fresh()
+    if (options.seedExistingObjects) {
+      const container = page.locator('#' + c.canvas + '-si-container')
+      await container.getByText('Other marks', { exact: true }).click()
+      const svg = page.locator('#' + c.canvas + '-si-canvas'); await svg.scrollIntoViewIfNeeded(); const box = await svg.boundingBox()
+      await page.mouse.click(box.x + box.width * 0.8, box.y + box.height * 0.15)
+      check((await state(c.canvas)).data['paper-notes'].length === 1, c.canvas + ': actual existing native point drawn before photo upload')
+    }
     const id = c.canvas; const before = await state(id)
     const { panel } = await tracePhoto(c)
     check(await panel.locator('.star-confirm').isDisabled(), id + ': import is blocked before manual review acknowledgment')
@@ -112,6 +119,7 @@ async function acceptance (page, options) {
     await page.reload({ waitUntil: 'networkidle' }); await ready()
     const restored = await collect(id)
     check(JSON.stringify(restored.state.data['paper-ink']) === JSON.stringify(submitted.data['paper-ink']), id + ': refresh restores exact original branches')
+    check(JSON.stringify(restored.state.data['paper-notes']) === JSON.stringify(before.data['paper-notes']), id + ': original submission and refresh preserve existing native objects')
     await page.locator('#' + id + '-si-container').screenshot({ path: options.output + '/' + c.id + '--restored.png' })
     const container = page.locator('#' + id + '-si-container')
     await container.getByText('Select', { exact: true }).click()
@@ -129,6 +137,7 @@ async function acceptance (page, options) {
     await page.reload({ waitUntil: 'networkidle' }); await ready()
     const editedRestored = await collect(id)
     check(JSON.stringify(editedRestored.state.data['paper-ink']) === JSON.stringify(editedSubmission.data['paper-ink']), id + ': refresh restores the actual edited submission')
+    check(JSON.stringify(editedRestored.state.data['paper-notes']) === JSON.stringify(before.data['paper-notes']), id + ': native editing, second submission and refresh preserve existing native objects')
     await page.locator('#' + id + '-si-container').screenshot({ path: options.output + '/' + c.id + '--edited-restored.png' })
     outcomes.push({ id: c.id, canvas: id, classification: 'fully_manually_traced', originalSubmissionUrl, editedSubmissionUrl, geometry, imported, submitted, restored, edited, editedSubmission, editedRestored,
       interaction_counts: { upload: 1, axis_handle_drags: 3, axis_numeric_entries: 2, tracing_strokes: c.pointer_strokes.length, read_trace: 1, review_acknowledgments: 1, imports: 1, native_branch_drags: 1, save_and_grade: 2, explicit_refresh: 2 },
@@ -172,28 +181,31 @@ async function acceptance (page, options) {
   await mobile.panel.locator('.star-confirm').click()
   check((await state(options.cases[0].canvas)).data['paper-ink'].length === 1, 'Mobile-sized real-paper manual import succeeds')
   await page.setViewportSize({ width: 1440, height: 1100 })
-  // Same real photograph through the legacy fitted route: inspect distortion,
-  // with identical visible operator actions; never import reference coordinates.
-  await page.goto(options.url + '/', { waitUntil: 'networkidle' }); await ready()
-  // Reopen a fresh page with a pre-load hook on the public camera factory,
-  // selecting its unchanged legacy fitting mode for this comparison only.
-  await page.addInitScript(() => {
-    Object.defineProperty(window, 'StarPhoto', { configurable: true, set(api) {
-      const create = api.create
-      api.create = opts => create({ ...opts, preserveGeometry: false })
-      Object.defineProperty(window, 'StarPhoto', { value: api, writable: true, configurable: true })
-    } })
-  })
-  await page.goto(options.url + '/', { waitUntil: 'networkidle' }); await ready()
-  await page.evaluate(() => {
-    window.__legacyFits = []
-    const fit = window.StarFit.fit
-    window.StarFit.fit = function (points, spec) { const model = fit(points, spec); window.__legacyFits.push({ points, family: model.family, expression: model.expr, samples: window.StarFit.sampleCurve(model, 400) }); return model }
-  })
-  const legacyUI = await tracePhoto(options.cases[0])
-  const legacyFits = await page.evaluate(() => window.__legacyFits)
-  check(legacyFits.length === 1, 'Real-photo legacy comparison runs the existing global fitting path')
-  await legacyUI.panel.screenshot({ path: options.output + '/legacy-real--06--fitted-review.png' })
+  let legacyFits = []
+  if (!options.skipLegacyComparison) {
+    // Same real photograph through the legacy fitted route: inspect distortion,
+    // with identical visible operator actions; never import reference coordinates.
+    await page.goto(options.url + '/', { waitUntil: 'networkidle' }); await ready()
+    // Reopen a fresh page with a pre-load hook on the public camera factory,
+    // selecting its unchanged legacy fitting mode for this comparison only.
+    await page.addInitScript(() => {
+      Object.defineProperty(window, 'StarPhoto', { configurable: true, set(api) {
+        const create = api.create
+        api.create = opts => create({ ...opts, preserveGeometry: false })
+        Object.defineProperty(window, 'StarPhoto', { value: api, writable: true, configurable: true })
+      } })
+    })
+    await page.goto(options.url + '/', { waitUntil: 'networkidle' }); await ready()
+    await page.evaluate(() => {
+      window.__legacyFits = []
+      const fit = window.StarFit.fit
+      window.StarFit.fit = function (points, spec) { const model = fit(points, spec); window.__legacyFits.push({ points, family: model.family, expression: model.expr, samples: window.StarFit.sampleCurve(model, 400) }); return model }
+    })
+    const legacyUI = await tracePhoto(options.cases[0])
+    legacyFits = await page.evaluate(() => window.__legacyFits)
+    check(legacyFits.length === 1, 'Real-photo legacy comparison runs the existing global fitting path')
+    await legacyUI.panel.screenshot({ path: options.output + '/legacy-real--06--fitted-review.png' })
+  }
   check(errors.length === 0, 'No application JavaScript errors during the assisted acceptance route')
   return { passed: checks.length, checks, consoleErrors: errors, blockedExternalHosts: blockedHosts, outcomes, legacyFits,
     viewport: [1440, 1100], method: 'Scripted manual photo tracing with operator-supplied calibration; no VLM or automatic recognition claim.' }

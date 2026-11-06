@@ -1,0 +1,54 @@
+{
+  "step": "4D",
+  "date_local": "2026-11-05",
+  "parent_commit": "d9eb1abfe8ce311cd4888e3465c7418e6f7588d6",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "scope": "Precommit; final commit SHA and clean tree are verified separately after commit",
+  "tests": {
+    "node": 84,
+    "server_python": 5,
+    "live_browser": 86,
+    "offline_backup_browser": 10,
+    "final_failures": 0
+  },
+  "demo_readiness": "Passed bounded manual-assisted local rehearsal on two approved existing real-paper development cases; not general recognition accuracy",
+  "checks": {
+    "both_real_photo_routes_passed": true,
+    "pre_existing_native_points_retained": true,
+    "original_and_edited_save_grade_and_refresh_passed": true,
+    "disconnected_second_branch_unchanged_by_first_branch_edit": true,
+    "replaced_invalid_and_ambiguous_photo_recovery_passed": true,
+    "unsaved_review_refresh_policy_verified": true,
+    "manual_geometry_matches_step4c": true,
+    "five_real_submissions_six_explicit_refreshes": true,
+    "no_new_cv_or_fitting_comparison": true,
+    "production_elements_and_questions_unchanged": true,
+    "old_benchmarks_unchanged": true,
+    "standalone_backup_all_images_and_two_downloads_passed": true,
+    "backup_loaded_via_isolated_local_viewer_then_browser_offline": true,
+    "direct_file_navigation_blocked_by_automation_policy": true,
+    "git_ignore_template_and_node_env_loading_passed": true,
+    "local_key_configured_presence_only": true,
+    "gemini_inference_or_authenticated_provider_requests": 0,
+    "photograph_uploads": 0,
+    "billing_changes": 0,
+    "account_quota_cost_and_image_clearance_still_unverified": true,
+    "configured_key_absent_from_current_index": true,
+    "blank_example_only_tracked_env_file": true
+  },
+  "limits": [
+    "two prior development cases; approximate references, not independent ground truth",
+    "V 3px coverage75.25%; real01 annotated endpoint mismatch11.18px retained",
+    "real01 numeric scale assigned manually; independent calibration accuracy unknown",
+    "whole-branch native editing only; no loops, x-backtracking, isolated points or endpoint glyph encoding",
+    "unsaved photo markup cleared by refresh",
+    "no presenter/projector/timing/uncoached-student/new-machine acceptance",
+    "live PrairieLearn needs existing Docker/database; backup viewer needs local Node/artifact",
+    "direct file navigation not tested; use tested localhost3019 viewer"
+  ],
+  "initial_failure": {
+    "cause": "Automation blocks file protocol",
+    "resolution": "Viewer serves only the prepared HTML; localhost initial load, then browser offline; no unrestricted filesystem flag used"
+  },
+  "credential_audit": "results/credential-audit.json"
+}

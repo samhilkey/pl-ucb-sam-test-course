@@ -1,0 +1,23 @@
+$ node --check tests/star-assisted-browser.cjs
+exit_code=0
+
+$ node --check tests/star-demo-browser.cjs
+exit_code=0
+
+$ node --check tests/star-gemini-config.test.cjs
+exit_code=0
+
+$ node --check tests/star-demo-backup.test.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4d/build-backup.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4d/serve-backup.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4d/evaluate.cjs
+exit_code=0
+
+$ git diff --check
+exit_code=0
