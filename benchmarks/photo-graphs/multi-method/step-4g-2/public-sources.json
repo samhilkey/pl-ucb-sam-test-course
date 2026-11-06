@@ -1,0 +1,28 @@
+{
+  "date_local": "2026-11-06",
+  "method": "Public documentation search/read only; no credentials or images transmitted",
+  "sources": [
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+      "finding": "Official stable model listing supports image input and structured outputs; not proof of this project access"
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "finding": "Project/model quotas and active usage must be checked in AI Studio; public limits do not verify remaining account quota"
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/terms",
+      "finding": "Operator and client age/region restrictions apply; unpaid-service content may be used for product improvement and human review"
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+      "finding": "Schema-guided JSON supports required properties, bounded arrays and numeric bounds; semantic verification still required"
+    },
+    {
+      "url": "https://ai.google.dev/api/interactions-api",
+      "finding": "v1beta interactions request supports model, image input, response_format, store and generation_config"
+    }
+  ],
+  "fetch_limitations": "Direct web open rejected text/markdown; official search returned page contents",
+  "project_specific_access_quota_not_inferred": true
+}

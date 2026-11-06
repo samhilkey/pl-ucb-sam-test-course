@@ -1,0 +1,20 @@
+{
+  "version": "4g2.1",
+  "date_local": "2026-11-06",
+  "provider": "Google unpaid Gemini API service",
+  "purpose": "Bounded Step 4G-2 photo recognition pilot",
+  "cases": [
+    {
+      "id": "IMG_1670",
+      "image": "../step-4g-1/results/IMG_1670--source.png",
+      "sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+      "external_transmission_permission": "explicitly_authorized",
+      "provenance": "User owns drawing and photograph; PNG is the unchanged metadata-free browser decode evaluated in Step 4G-1",
+      "authority": "User confirms ownership of both drawing and photograph",
+      "no_identifying_confidential_or_uncleared_material": true,
+      "evidence": "User reply to exact-image clearance question in this conversation",
+      "authorization_scope": "Only this exact file; no other images, paid billing or requests beyond approved limits"
+    }
+  ],
+  "other_images_authorized": false
+}

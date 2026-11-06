@@ -1,0 +1,48 @@
+{
+  "version": "4g2.1",
+  "source": "User-reported Google AI Studio Rate Limits page; verified as user-provided observations, not an independent API audit",
+  "project_alias": "STAR Sketch2Graph",
+  "correct_project_explicitly_confirmed": true,
+  "configured_key_bound_to_this_project": true,
+  "displayed_billing_tier": "Free",
+  "no_paid_billing_exposure_confirmed": true,
+  "checked_at_local": "2026-11-06 approximately 10:29 AM PST (America/Los_Angeles)",
+  "checked_at_precision": "approximate minute",
+  "displayed_model": "Gemini 3.5 Flash Lite",
+  "displayed_exact_api_identifier": false,
+  "documented_model_name_mapping": {
+    "api_id": "gemini-3.5-flash-lite",
+    "source": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+    "kind": "Mapping inferred from official model name; not authenticated model metadata"
+  },
+  "time_range": "Last 28 days",
+  "statistic": "peak usage / limit",
+  "reported": {
+    "rpm": {
+      "peak_used": 0,
+      "limit": 15
+    },
+    "input_tpm": {
+      "peak_used": 0,
+      "limit": 250000
+    },
+    "rpd": {
+      "peak_used": 0,
+      "limit": 500
+    }
+  },
+  "other_model_specific_limits_shown": false,
+  "usage_page_checked": false,
+  "current_remaining_quota": null,
+  "current_quota_period_usage": null,
+  "earlier_3_15_3750_250000_8_500_values_excluded": true,
+  "earlier_values_reason": "User clarifies that they belonged to another project; not valid evidence for STAR Sketch2Graph",
+  "eligibility": {
+    "operator_18_plus": true,
+    "private_professional_research_client_unavailable_to_under_18": true,
+    "supported_region": true,
+    "evidence": "User answered yes to the bundled eligibility question"
+  },
+  "prompts_or_api_requests_run_for_check": false,
+  "credentials_or_account_identifiers_retained": false
+}

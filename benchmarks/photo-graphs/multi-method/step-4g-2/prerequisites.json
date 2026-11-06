@@ -1,0 +1,30 @@
+{
+  "version": "4g2.1",
+  "state": "pending_current_account_checks",
+  "project_alias": "STAR Sketch2Graph",
+  "credential_configuration": "verified presence-only via Node --env-file=.env.local; file remains ignored",
+  "key_project_free_tier_zero_paid_exposure": {
+    "status": "user_confirmed",
+    "evidence": "Step 4G-2 request and prior Step 4G-1 confirmation; no authenticated independent audit"
+  },
+  "exact_image_transmission_permission": "verified: permissions.json",
+  "public_model_listing": "verified: image input and structured outputs listed in official model documentation",
+  "current_project_model_access": "verified user-provided display-name row; mapped to documented gemini-3.5-flash-lite; exact API acceptance untested",
+  "current_remaining_quota": "unknown: last-28-day peak usage is not a current remaining-quota balance",
+  "current_quota_checked_at": null,
+  "operator_client_region_eligibility": "verified user attestation: yes",
+  "account_browser_access": "No browser available through cua.getBrowser for AI Studio; no desktop or credential UI captured",
+  "required_user_evidence": [
+    "Current-day Usage page request usage and any current request/token quota status, with displayed period and check time; UNKNOWN if not establishable"
+  ],
+  "inference_requests": 0,
+  "authenticated_provider_requests": 0,
+  "photograph_uploads": 0,
+  "provider_usage": null,
+  "provider_cost_usd": null,
+  "confirmed_incurred_inference_cost_usd": 0,
+  "confirmed_cost_basis": "No requests have occurred; this is not evidence of successful future billing or quota access",
+  "current_model_observed_at": "2026-11-06 approximately 10:29 AM PST",
+  "latest_ui_evidence": "user-ui-evidence.json",
+  "previous_other_project_quotas_excluded": true
+}

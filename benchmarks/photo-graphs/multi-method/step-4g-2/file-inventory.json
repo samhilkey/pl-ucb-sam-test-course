@@ -1,0 +1,23 @@
+{
+  "scope": "Step 4G-2 offline prerequisite checkpoint only",
+  "files": [
+    "benchmarks/photo-graphs/multi-method/step-4g-2/REPORT.md",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/comparison.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/credential-check.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/evaluation-policy.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/focused-tests.log",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/inputs.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/offline-preflight.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/offline-tests.log",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/permissions.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/preflight.cjs",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/prerequisites.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/protocol.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/public-sources.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/user-ui-evidence.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/verification.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/file-inventory.json",
+    "benchmarks/photo-graphs/multi-method/step-4g-2/evidence-manifest.json",
+    "tests/star-gemini-pilot.test.cjs"
+  ]
+}

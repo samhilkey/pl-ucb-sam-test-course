@@ -1,0 +1,47 @@
+{
+  "step": "4G-2",
+  "version": "4g2.1",
+  "date_local": "2026-11-06",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "parent_commit": "8eefbf996816ad1074a6f443835e05bf0b1c0c0d",
+  "state": "blocked_before_inference_pending_current_remaining_quota",
+  "scope": "Offline image clearance, frozen request construction and prerequisite checkpoint only; not completed model experiment",
+  "node": "v20.19.6",
+  "tests": {
+    "passed": 91,
+    "failed": 0,
+    "command": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs tests/star-gemini-pilot.test.cjs",
+    "log": "offline-tests.log",
+    "focused_new_tests": 3,
+    "network_blocked_during_preparation": true,
+    "evaluator_reads_blocked_during_preparation": true,
+    "clearance_hash_mismatch_or_extra_image_rejected": true,
+    "live_cli_execution_rejected": true
+  },
+  "syntax": "node --check benchmarks/photo-graphs/multi-method/step-4g-2/preflight.cjs passed",
+  "self_review": {
+    "production_files_modified": false,
+    "step4f_assets_modified": false,
+    "existing_benchmarks_modified": false,
+    "model_inference_requests": 0,
+    "authenticated_provider_requests": 0,
+    "other_images_authorized": false,
+    "live_transport_implemented": false,
+    "prompt_schema_unchanged": true,
+    "prepared_png_hash_equals_authorized_hash": true,
+    "independent_reference_claim": false,
+    "credentials_retained_or_logged": false
+  },
+  "git_scope": "Only step-4g-2 preparation/evidence and its new offline regression test; final SHA/clean status verified after commit",
+  "latest_user_ui_evidence": "user-ui-evidence.json",
+  "image_clearance_still_valid": true,
+  "operator_client_region_eligibility": "verified user attestation",
+  "earlier_other_project_quotas_excluded": true,
+  "current_remaining_quota": "unknown; not inferred from last-28-day peak usage",
+  "focused_final_check": {
+    "command": "node --test tests/star-gemini-pilot.test.cjs",
+    "passed": 3,
+    "failed": 0,
+    "log": "focused-tests.log"
+  }
+}

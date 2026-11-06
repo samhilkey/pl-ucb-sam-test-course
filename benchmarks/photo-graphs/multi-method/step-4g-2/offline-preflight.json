@@ -1,0 +1,40 @@
+{
+  "version": "4g2.1",
+  "mode": "offline_preflight",
+  "model": "gemini-3.5-flash-lite",
+  "case_id": "IMG_1670",
+  "image_size": [
+    1688,
+    1473
+  ],
+  "source_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+  "prepared_image_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+  "decoded_rgba_sha256": "c6c82a30acfb6ca3e30678a03827c5ed0dc059e66da1869de79de3dd9edfaae0",
+  "prompt_sha256": "d642a044ff43d1d43ce83de0e8b8998a83dd51fe34875207f75e989eb1153213",
+  "schema_sha256": "6348f0024d481bfe0a5d1906c1b8984820e061d7e791db1fc5e88e4c38bfbb82",
+  "request_sha256": "0cd99ad83965bfb96f8b8254e25fe99ea132c5b22eb39a3f944f1a5d6b75ac2c",
+  "request_bytes": 3417740,
+  "input_fields": [
+    [
+      "type",
+      "text"
+    ],
+    [
+      "type",
+      "mime_type",
+      "data"
+    ]
+  ],
+  "max_total_inference_requests": 1,
+  "model_inference_requests": 0,
+  "ready_for_inference": false,
+  "blockers": [
+    "Current remaining quota is not established by historical peak statistics",
+    "Live transport deliberately absent while quota is unknown"
+  ],
+  "prediction": null,
+  "latency_ms": null,
+  "provider_usage": null,
+  "provider_cost_usd": null,
+  "confirmed_incurred_cost_usd": 0
+}

@@ -1,0 +1,30 @@
+{
+  "version": "4g2.1",
+  "parent_policy": "../step-4a/evaluation-policy.json",
+  "reference_quality": "Existing approximate single-agent visual centerline, not independent human ground truth",
+  "cases": [
+    {
+      "id": "IMG_1670",
+      "reference": "../step-4f/reference.json",
+      "reference_sha256": "af71f7a609f02b28a5142dc2cbcc5386ac14f6651a923ee3a137fb0bf791f094",
+      "cv_prediction": "../step-4g-1/results/IMG_1670--prediction.json",
+      "cv_prediction_sha256": "35202e43207506ca6aa7285690b64029a93f8f1eb748205fade753cca6370b93",
+      "cv_evaluation": "../step-4g-1/results/evaluation.json",
+      "cv_evaluation_sha256": "9a13c5bc59c5673af278a416dce51a6eeeaf9041bac50a0667b96fd676240370",
+      "manual_comparison": "../step-4f/results/evaluation.json",
+      "manual_comparison_sha256": "277f4704c16407f2afc5f065fcdcf29b488d0495494d0d61b5d11668b51451ab"
+    }
+  ],
+  "aggregate_cv_context": "0/3 automatic successes; the only eligible paired comparison here is IMG_1670 (0/1)",
+  "engineering_screen": {
+    "all_branches_present": true,
+    "no_invented_joins_or_gaps": true,
+    "minimum_coverage_per_branch": 0.9,
+    "bidirectional_p95_max_source_pixel": 5,
+    "endpoint_corner_max_error_source_pixel": 5,
+    "report_original_3px_coverage": true
+  },
+  "calibration_screen": "Independent numeric frame reference unavailable; report consistency and uncertainty, not a numeric calibration-accuracy pass",
+  "isolated_points": "Evaluate separately; retain in observation sidecar and block native curve-only import if unsupported",
+  "inference_reference_reads_permitted": false
+}

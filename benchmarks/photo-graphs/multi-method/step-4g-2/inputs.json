@@ -1,0 +1,14 @@
+{
+  "version": "4a.1",
+  "cases": [
+    {
+      "id": "IMG_1670",
+      "image": "../step-4g-1/results/IMG_1670--source.png",
+      "image_size": [
+        1688,
+        1473
+      ],
+      "sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231"
+    }
+  ]
+}
