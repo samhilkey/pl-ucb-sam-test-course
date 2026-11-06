@@ -1,0 +1,10 @@
+{
+  "container": "star-automatic-cv-baseline-arm64",
+  "scope": "Local test container only; no deployed course changes",
+  "before_running": true,
+  "during_running": false,
+  "package_check_exit": 0,
+  "restart_command_exit": 0,
+  "after_running": true,
+  "primary_http_restored": false
+}

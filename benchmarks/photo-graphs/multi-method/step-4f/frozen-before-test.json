@@ -1,0 +1,12 @@
+{
+  "phase": "before first browser replay",
+  "code_commit": "c3ebb1944eca95bd1c3244d811e08109cff62eef",
+  "frozen_demo_commit": "1d9be84f67d1f699249cedbbbf5fcbf26fc1ad0c",
+  "sha256": {
+    "input-manifest.json": "eea5859e21ca69ae770d636df8a4cd1d03d4abb543efaccf5ae658930e827169",
+    "operator-actions.json": "667cd2b82bcebcb81eca7b856e84445c1702464fea0f25ba086460f873e2dabf",
+    "reference.json": "af71f7a609f02b28a5142dc2cbcc5386ac14f6651a923ee3a137fb0bf791f094",
+    "acceptance-policy.json": "dd09e18eddf3531bba3eea67ddfeef9f3790e2c00e8eab1e40694da493b12667",
+    "inputs/new-paper-01.png": "c2fcc867ba84ef678f428942cec065cf69866fe20216cbbe74686566b4ca47a6"
+  }
+}

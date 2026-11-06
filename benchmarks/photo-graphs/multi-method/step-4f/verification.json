@@ -1,0 +1,60 @@
+{
+  "step": "4F",
+  "date_local": "2026-11-06",
+  "assessment": "CONDITIONAL PASS",
+  "parent_commit": "c3ebb1944eca95bd1c3244d811e08109cff62eef",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "scope": "Precommit; final SHA and clean Git status verified after commit",
+  "tests": {
+    "offline_node": 84,
+    "python_server": 5,
+    "actual_photo_browser": 84,
+    "primary_down_package_browser": 23,
+    "post_restart_variants": 3,
+    "extracted_bundle_routes": 5,
+    "unresolved_functional_failures_on_tested_chrome_path": 0
+  },
+  "checks": {
+    "git_clean_at_start": true,
+    "step4d_implementation_unchanged": true,
+    "presenter_mac_explicitly_confirmed": true,
+    "one_new_real_paper_photo_not_prior_development": true,
+    "ai_labelled_attachment_excluded_from_real_count_and_traces": true,
+    "pixel_identity_and_metadata_strip_verified": true,
+    "operator_reference_and_policy_frozen_before_first_replay": true,
+    "frozen_new_case_source_screen_passed": true,
+    "manual_source_dot_separate_from_import_disclosed": true,
+    "native_original_edited_and_returned_geometry_saved_restored": true,
+    "old_disconnected_branch_regression_passed": true,
+    "backup_tested_with_primary_actually_stopped": true,
+    "backup_images_navigation_and_downloads_tested_offline": true,
+    "primary_recovered_healthy_and_all_variants_exact": true,
+    "initial_stale_socket_failure_and_safe_runtime_recovery_disclosed": true,
+    "single_slide_scaling_and_keyboard_navigation_passed": true,
+    "six_pdf_pages": true,
+    "input_code_and_assets_available_locally": true,
+    "zip_allowlist_no_env_or_original_jpeg": true,
+    "no_vlm_cv_inference_or_provider_photo_upload": true,
+    "no_push_merge_or_deployed_course_update": true,
+    "staged_and_archive_actual_credential_absence_verified": true
+  },
+  "pending_manual_acceptance": [
+    "physical projector/back-row readability",
+    "human 3\u20135 minute timing",
+    "Safari if chosen; use tested Chrome otherwise"
+  ],
+  "not_claimed": [
+    "general automatic real-photo recognition accuracy",
+    "independent expert reference ground truth",
+    "independent numeric calibration accuracy",
+    "ink texture/width/color/endpoint glyph semantics",
+    "Safari or PowerPoint QA",
+    "other-computer/remote deployment readiness"
+  ],
+  "credential_scan": "results/credential-check.json",
+  "initial_failures": [
+    "container direct stop left stale PostgreSQL socket entries; safely moved aside with no live PostgreSQL process, no DB data deletion",
+    "1920 screenshot exposed adjacent slide; viewport scaling/navigation fixed and retested"
+  ],
+  "source_method": "Scripted operator visual trace and manual native point placement; not independent student usability measurement"
+}

@@ -1,0 +1,21 @@
+{
+  "frozen_before_first_browser_replay": true,
+  "code_frozen_at_step4d": true,
+  "new_photo_minimum": 1,
+  "input_provenance": "user-supplied new actual paper photo; prior AI-labelled PNG excluded",
+  "source_photo_fidelity_screen": {
+    "bidirectional_p95_max_source_pixel": 8,
+    "coverage_within_8px_minimum": 0.9,
+    "marked_corner_max_error_pixel": 8,
+    "endpoint_max_error_pixel": 8,
+    "isolated_point_max_error_pixel": 8,
+    "caveat": "Exploratory 6px-uncertain visual annotations and thick ink. Also report 3px/5px coverage unchanged; no general accuracy claim."
+  },
+  "native_encoding_screen": {
+    "max_anchor_error_source_pixel": 1e-06,
+    "branch_count_exact": true,
+    "preserve_existing_objects": true,
+    "original_and_edited_save_grade_refresh": true
+  },
+  "scope": "Curve import and native editing use frozen code. Isolated dot requires separate manual native point. No automatic, CV or VLM recognition request."
+}

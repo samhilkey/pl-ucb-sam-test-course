@@ -1,0 +1,254 @@
+{
+  "passed": 23,
+  "checks": [
+    "Primary PrairieLearn service is actually unavailable during backup acceptance",
+    "Independent recorded backup loads with primary service stopped",
+    "Recorded backup has explicit method/grade disclosure",
+    "All twelve original/review/native/edit/restoration images load without primary service",
+    "Recorded native JSON download validates offline for case 1",
+    "Recorded native JSON download validates offline for case 2",
+    "Recorded backup navigation works with browser offline",
+    "Backup interactions and downloads require no additional HTTP request",
+    "Six-slide presentation loads independently of primary service",
+    "Slide 1: images loaded and text remains within the presentation frame",
+    "Slide 2: images loaded and text remains within the presentation frame",
+    "Slide 3: images loaded and text remains within the presentation frame",
+    "Slide 4: images loaded and text remains within the presentation frame",
+    "Slide 5: images loaded and text remains within the presentation frame",
+    "Slide 6: images loaded and text remains within the presentation frame",
+    "Browser exports the local presentation as a printable PDF",
+    "Presentation scales to one complete slide at 1920x1080",
+    "Presentation keyboard advances exactly one slide at full-screen size",
+    "Viewer refuses private/repository path /.env.local",
+    "Viewer refuses private/repository path /.env.example",
+    "Viewer refuses private/repository path /serve-package.cjs",
+    "Viewer refuses private/repository path /../.env.local",
+    "Package uses no primary/external service and has no application exceptions"
+  ],
+  "primary_service_unavailable": true,
+  "layouts": [
+    {
+      "width": 1280,
+      "height": 720,
+      "text": [
+        {
+          "text": "Student ink in digital assessment",
+          "font": 52,
+          "fits": true
+        },
+        {
+          "text": "A photograph can preserve the work a student actually drew.",
+          "font": 32,
+          "fits": true
+        },
+        {
+          "text": "Re-entering it as an ideal equation can erase corners, gaps and mathematical mistakes.",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "STAR photo-to-PrairieLearn demonstrationNovember 9, 2026",
+          "font": 24,
+          "fits": true
+        },
+        {
+          "text": "New user-drawn paper photograph. Detail view; the package includes the full original pixel image.",
+          "font": 24,
+          "fits": true
+        }
+      ],
+      "imagesLoaded": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "text": [
+        {
+          "text": "The assisted workflow",
+          "font": 52,
+          "fits": true
+        },
+        {
+          "text": "Upload the photograph",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Place axes and enter reference values",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Trace the actual curve",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Review, acknowledge and import",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Edit, Save & Grade, then refresh",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Manual review on the new photograph. No equation fitting.",
+          "font": 24,
+          "fits": true
+        }
+      ],
+      "imagesLoaded": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "text": [
+        {
+          "text": "A real-photo assisted demonstration",
+          "font": 52,
+          "fits": true
+        },
+        {
+          "text": "Both peaks and the off-origin minimum remain visible.",
+          "font": 32,
+          "fits": true
+        },
+        {
+          "text": "The separate dot is placed manually with Other marks.",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Prepared native variantFresh live attempt",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "The 0% sandbox grade preserves an incorrect answer.",
+          "font": 24,
+          "fits": true
+        },
+        {
+          "text": "Native canvas detail. Full canvas and existing test object are in the backup.",
+          "font": 24,
+          "fits": true
+        }
+      ],
+      "imagesLoaded": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "text": [
+        {
+          "text": "Measured geometry preservation",
+          "font": 52,
+          "fits": true
+        },
+        {
+          "text": "3.50 px",
+          "font": 66,
+          "fits": true
+        },
+        {
+          "text": "Bidirectional p95 distance to an approximate visual centerline on this new photo.",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Both marked peaks within 2.85 px.Added rendering drift below 0.001 source px.",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "One new paper drawing. Single-observer reference, about 6 px uncertainty. These are geometry diagnostics, not general recognition accuracy.",
+          "font": 24,
+          "fits": true
+        },
+        {
+          "text": "Green reconstruction on the source photo; cross marks the separately placed dot.",
+          "font": 24,
+          "fits": true
+        }
+      ],
+      "imagesLoaded": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "text": [
+        {
+          "text": "Automatic and manual responsibilities",
+          "font": 52,
+          "fits": true
+        },
+        {
+          "text": "Person",
+          "font": 32,
+          "fits": true
+        },
+        {
+          "text": "System",
+          "font": 32,
+          "fits": true
+        },
+        {
+          "text": "Axis placement and valuesCurve tracingDot placementFinal review",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Coordinate mappingGuarded native importEditable native objectsSubmission and restoration",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "This demonstration uses no automatic recognition, equation fitting or VLM inference.",
+          "font": 24,
+          "fits": true
+        }
+      ],
+      "imagesLoaded": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "text": [
+        {
+          "text": "Reliability and future research",
+          "font": 52,
+          "fits": true
+        },
+        {
+          "text": "Recorded offline backup works independently of PrairieLearn.",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Gemini recognition remains separate research, with permission, quota and $0-cost gates.",
+          "font": 28,
+          "fits": true
+        },
+        {
+          "text": "Current acceptance is conditional on the rehearsed Mac/Chrome route. Safari automation and physical projector readability need the manual checklist.",
+          "font": 24,
+          "fits": true
+        },
+        {
+          "text": "Existing two-branch case: separate native objects survived editing and restoration.",
+          "font": 24,
+          "fits": true
+        }
+      ],
+      "imagesLoaded": true
+    }
+  ],
+  "errors": [],
+  "http_requests": [
+    "http://127.0.0.1:3020/backup",
+    "http://127.0.0.1:3020/presentation"
+  ],
+  "physical_projector_readability": "not tested; viewport/layout checks only"
+}

@@ -1,0 +1,165 @@
+{
+  "id": "new-paper-01",
+  "canvas": "paper-lines",
+  "image_size": [
+    1688,
+    1473
+  ],
+  "processing_size": [
+    900,
+    785
+  ],
+  "calibration": {
+    "origin": [
+      782,
+      786
+    ],
+    "x_marker": [
+      1229,
+      775
+    ],
+    "x_value": 3,
+    "y_marker": [
+      751,
+      300
+    ],
+    "y_value": 3,
+    "evidence": "Manual placement on visible labeled ticks. Approximate affine calibration; no independently calibrated mathematical ground truth."
+  },
+  "pointer_strokes": [
+    [
+      [
+        110,
+        714
+      ],
+      [
+        194,
+        637
+      ],
+      [
+        276,
+        550
+      ],
+      [
+        373,
+        451
+      ],
+      [
+        392,
+        500
+      ],
+      [
+        421,
+        542
+      ],
+      [
+        467,
+        582
+      ],
+      [
+        522,
+        618
+      ],
+      [
+        581,
+        648
+      ],
+      [
+        633,
+        670
+      ],
+      [
+        682,
+        676
+      ],
+      [
+        727,
+        668
+      ],
+      [
+        772,
+        650
+      ],
+      [
+        814,
+        627
+      ],
+      [
+        851,
+        603
+      ],
+      [
+        889,
+        568
+      ],
+      [
+        924,
+        521
+      ],
+      [
+        950,
+        462
+      ],
+      [
+        972,
+        393
+      ],
+      [
+        992,
+        338
+      ],
+      [
+        1008,
+        309
+      ],
+      [
+        1043,
+        339
+      ],
+      [
+        1094,
+        375
+      ],
+      [
+        1142,
+        411
+      ],
+      [
+        1199,
+        450
+      ],
+      [
+        1253,
+        487
+      ],
+      [
+        1306,
+        520
+      ],
+      [
+        1354,
+        555
+      ],
+      [
+        1402,
+        591
+      ],
+      [
+        1469,
+        629
+      ]
+    ]
+  ],
+  "source_points": [
+    {
+      "pixel": [
+        821,
+        294
+      ],
+      "role": "uncertain separate ink dot; retain with existing native Other marks tool, not via stroke import",
+      "manual_native_placement_required": true
+    }
+  ],
+  "classification": "fully manually traced curve plus manually placed native point; not automatic recognition",
+  "interaction_source": "Source-only visual inspection before browser replay; no equation, generated comparison image or evaluator reference used."
+}

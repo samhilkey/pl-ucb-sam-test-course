@@ -1,0 +1,387 @@
+{
+  "step": "4F",
+  "algorithm": "SHA-256",
+  "scope": "All acceptance code, metadata-free input, presentation/PDF/zip and redacted evidence; excludes this manifest. No credential file/value/fragment/hash included.",
+  "files": [
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/BUNDLE-README.txt",
+      "bytes": 779,
+      "sha256": "95537829a3654f57f9e68cea6865c7f8cd57c5b4a5fd35898c5a2d3ef9e03360"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/MANUAL-CHECKLIST.md",
+      "bytes": 3509,
+      "sha256": "7793c8cc8198fb00868c4d1a2b7e3c7345e5a5652c72b06be0b10efad11fa6ae"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/PRESENTER.md",
+      "bytes": 7341,
+      "sha256": "efabf520c280703ee7b98a2dfb7a751ecbe702ea949314a25f248a77850a1060"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/REPORT.md",
+      "bytes": 12496,
+      "sha256": "b8c918b38fdcbf7a951a7e72e8f2d1d61bdba599b55e567d91b6d7c1bba8d06b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/STAR-Nov09-demo.zip",
+      "bytes": 12557285,
+      "sha256": "af173318826d7709b04825533c23018fa556aeac130bd9fd270a4d64fdb5b8d5"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/acceptance-policy.json",
+      "bytes": 948,
+      "sha256": "dd09e18eddf3531bba3eea67ddfeef9f3790e2c00e8eab1e40694da493b12667"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/build-package.cjs",
+      "bytes": 12177,
+      "sha256": "6308bf78d534afbba05062c9f192c53e1f2aa9e1571a8871a63d0e7e335d5439"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/bundle-manifest.json",
+      "bytes": 2114,
+      "sha256": "8933732794952fabb2500ccabc2fb86e8c1a71344d775028527a3e44144fb052"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/check-package.cjs",
+      "bytes": 8375,
+      "sha256": "f41499cda25cafb1bc934c05becc55ffa0276f0aa9f194fdbb619f86b4c5c0e0"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/core-availability.json",
+      "bytes": 3423,
+      "sha256": "06b022126c01bc6321ffaadb9222b2a42cd7ed4b3c6a6a0039f63c244d24f036"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/environment.json",
+      "bytes": 1447,
+      "sha256": "e17e302503b6175331ed3d60281f279e6ab93904ff482417f65d085bd2f7dc39"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/evaluate.cjs",
+      "bytes": 6001,
+      "sha256": "85bc894404eacdee7f5ffac31fcb8d280808ea500208f45ba8c9a936debcfb92"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/frozen-before-test.json",
+      "bytes": 671,
+      "sha256": "3128dfc47b89756fd5774a798ecc5f6e47c142d60166b02c602a239e49761ec4"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/input-manifest.json",
+      "bytes": 1267,
+      "sha256": "eea5859e21ca69ae770d636df8a4cd1d03d4abb543efaccf5ae658930e827169"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/inputs/new-paper-01.png",
+      "bytes": 1414462,
+      "sha256": "c2fcc867ba84ef678f428942cec065cf69866fe20216cbbe74686566b4ca47a6"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/local-runtime.cjs",
+      "bytes": 2217,
+      "sha256": "89c6304469074d8034939d05f03e5becfc9ff34fad16658917d67c0bfe5aa8b8"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/offline-backup.html",
+      "bytes": 4355770,
+      "sha256": "e5a4c7a4c033eacea8881e4be3a1cf885dd250605027f1a06231828598a3dcbe"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/operator-actions.json",
+      "bytes": 2305,
+      "sha256": "667cd2b82bcebcb81eca7b856e84445c1702464fea0f25ba086460f873e2dabf"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/presentation-notes.json",
+      "bytes": 1809,
+      "sha256": "77b39d18dbeaef4b20b35bc97511897519f8b05185fcc74b5e61b2bcd9560462"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/presentation.html",
+      "bytes": 5250358,
+      "sha256": "b401eb5c2c896e570338c71498dd0ca0691d0a1778cc4f7c903fcf6f6c901e56"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/presentation.pdf",
+      "bytes": 4265494,
+      "sha256": "c0c23c9a58b0cb5462c43fabc93a1739c79e65508e1f4b36fac7d5e630c6bd64"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/reference.json",
+      "bytes": 1928,
+      "sha256": "af71f7a609f02b28a5142dc2cbcc5386ac14f6651a923ee3a137fb0bf791f094"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/acceptance.json",
+      "bytes": 4320412,
+      "sha256": "a98d52b3018be89538bd2002f77f5cc375e46b1a822f489405bda0800c62ce24"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/acceptance.log",
+      "bytes": 39,
+      "sha256": "433f0cee1b72a46d2330ae278e4a5bca9ab72c41eececf8147af48727b452a3a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/backup-primary-stopped.png",
+      "bytes": 1095800,
+      "sha256": "b86a69ede4ade3f73911c411106523c1be2f12fb2b3781b626c811eae55392bd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/bundle-check.json",
+      "bytes": 342,
+      "sha256": "71d774654d73cb24ba109937d015103cc3933dbabed2703d398ca4592153739e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/credential-check.json",
+      "bytes": 386,
+      "sha256": "f84e6e739c5d4fbbcbd3101258cde989f6470bc424c40e2c5e95b9aca4871e6e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/evaluation.json",
+      "bytes": 6670,
+      "sha256": "277f4704c16407f2afc5f065fcdcf29b488d0495494d0d61b5d11668b51451ab"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/evaluation.log",
+      "bytes": 6670,
+      "sha256": "277f4704c16407f2afc5f065fcdcf29b488d0495494d0d61b5d11668b51451ab"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/final-runtime-status.json",
+      "bytes": 141,
+      "sha256": "bf1515a6a50e0e340f07e8644975a08a22f697fd0319990d8d7953cd79353a1b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/graceful-outage-test.json",
+      "bytes": 946,
+      "sha256": "625ba0cab43725e7821c187681c97255c92b515f8d5797f9d9929a9d7a0c6b84"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--after-service-restart.png",
+      "bytes": 42374,
+      "sha256": "68d71387999b0d5746ac40c795a5723b6d31b39552402c4fd8868165ac7d415b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--edited-restored.png",
+      "bytes": 31933,
+      "sha256": "4b908a6fad2f9328940b0a2824ff490bdf4f792c4e2a6ebc5a9625ef974cfa5b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--final-restored.png",
+      "bytes": 31973,
+      "sha256": "1b0cecb65a45fb96b6be60248a78d93ffaa1aa07de35dcab41f56c3932ca3451"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--graded-restored.png",
+      "bytes": 32238,
+      "sha256": "b29ff5ff7711cafa09aa6392f7d69a7fc98f22bf91ceeb7851f0bd74e6204bb9"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--manual-overlay.png",
+      "bytes": 2095559,
+      "sha256": "a87e7691f77d777b2a694d4866e24850a1d21d1b8f91ad32e57e6bb15ea63453"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--native-overlay.png",
+      "bytes": 2095639,
+      "sha256": "31eb3312dbb756f5780732d2a8d388da3247cff7b316c5fea3150936b8ec8733"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--native.png",
+      "bytes": 32475,
+      "sha256": "b6958240265f90e08c39d3f41e5518c158d68f655823b4a66491407a1e3baa97"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--review.png",
+      "bytes": 355292,
+      "sha256": "cb13b5879cd361129faa68cf0b409ec54d7f326fd3666b3200b82783a9bcee6d"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--desktop--trace.png",
+      "bytes": 340012,
+      "sha256": "ec9aba44f68163e7f28fdfc5b2a7d55106dc97637e89e9eaf222ffe0a6e71f6f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--after-service-restart.png",
+      "bytes": 42371,
+      "sha256": "82ed5adf64468458f17ce1a4bc6cc150b4838a9c4b6f1720751d0534c4e4f661"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--edited-restored.png",
+      "bytes": 42356,
+      "sha256": "1dc3a1421fa33420409e5b12c7d490e50981230a912f261291b3fc75f834b370"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--final-restored.png",
+      "bytes": 42371,
+      "sha256": "82ed5adf64468458f17ce1a4bc6cc150b4838a9c4b6f1720751d0534c4e4f661"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--graded-restored.png",
+      "bytes": 42544,
+      "sha256": "d93c14e0bc7e9c9bb8b28e2ce874da051b0be09d3a7f5204279f915cec6cf501"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--manual-overlay.png",
+      "bytes": 2095565,
+      "sha256": "e2f5c02bbea9b189db4c905db87cca145f9a42a18374b0a071493fb189e02e9a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--native-overlay.png",
+      "bytes": 2095641,
+      "sha256": "d152f5d879dc7ba1041a8a012393793eac29b3ef5bb69c81158cbb0d8a32e4c6"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--native.png",
+      "bytes": 43222,
+      "sha256": "7ef6af49173874404f890b5047994df93eb173a70da217c233850d2495b474b1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--review.png",
+      "bytes": 234798,
+      "sha256": "885cb5273f1893bd9771e15db059d4cc0fc0315a89f1bfb4a8c2edad577a801e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/new-paper-01--presentation--trace.png",
+      "bytes": 216430,
+      "sha256": "170f19f5d3d669ae2729466f085f133b88c54f6daa82261ec0f21267189ab2bb"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/node-tests.log",
+      "bytes": 15616,
+      "sha256": "bf75e074fcf97b2aeb2b3dc1fc4e1498b6dab878e58b47e6b735a6a41a2c4532"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/package-check-final.log",
+      "bytes": 43,
+      "sha256": "a093595fbc0c9a0a4d9aab8168751cc5ad29c7b92058e63cd416fc222f3fa8ca"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/package-check.json",
+      "bytes": 7615,
+      "sha256": "d622ee45c8e47c924c87fbe0c6233bc22b19560b7120796ca24fbb87e131f005"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/presentation-1920.png",
+      "bytes": 677232,
+      "sha256": "a2de4f0cb4568e3ab0d76b28d7628074f3933738e17fa5a8e5a972735607abc3"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/primary-outage-test.json",
+      "bytes": 290,
+      "sha256": "84232b99fc68ac299cfee67ac86f097140872777167f062d3889aafaa8d99225"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/primary-restoration.json",
+      "bytes": 416,
+      "sha256": "21cd25cc8d75872469398d0763666fba1ad2eabd1bfbe5bdc67bf3b6d065481e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/primary-restoration.log",
+      "bytes": 46,
+      "sha256": "3bcfec99f5dbeb17881b62360952debb7fcc6b28c0f94850f059ebb53b9c60bd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/real--01-multiple-lines-graph-paper--branches--after-service-restart.png",
+      "bytes": 44268,
+      "sha256": "0f9153507527bc574a953df69a631faf967273604967a0b8b39a349331b735f1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/real--01-multiple-lines-graph-paper--branches--edited-restored.png",
+      "bytes": 33401,
+      "sha256": "cddb506c4cdf1f68786aed06f99dc2563907b8665fa3e8d74ff08aa3a79c8144"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/real--01-multiple-lines-graph-paper--branches--final-restored.png",
+      "bytes": 33373,
+      "sha256": "60d3021e3cafbeb6283a29cd033cc6bb0461790d1aaebb8878f8aab57a713405"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/real--01-multiple-lines-graph-paper--branches--graded-restored.png",
+      "bytes": 33639,
+      "sha256": "c7e2d3e5adf1ac735ee3aff297620a2d30f5daebc6ff6036d8e09112eaf88bb5"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/real--01-multiple-lines-graph-paper--branches--native.png",
+      "bytes": 33853,
+      "sha256": "fc8852658f17b02ce14ee0bda362e9acfc92ebbda373ed78e8e4cdb0dd755bd4"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/real--01-multiple-lines-graph-paper--branches--review.png",
+      "bytes": 367374,
+      "sha256": "ad2b2de18e1763dcef9009bf73a2eae0214ec30f4d3fbe5e0c2810a978fcb731"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/real--01-multiple-lines-graph-paper--branches--trace.png",
+      "bytes": 348852,
+      "sha256": "530c9b04dd2d1431b37824b3153374fbfaa773cb74c75a35c85a880af2644831"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/safari-status.json",
+      "bytes": 228,
+      "sha256": "5ced7d08bc14f38c91a54ce37bf1d87fe5c8d0a2fa7b3d900402b0ce1b6ce8f7"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/server-tests.log",
+      "bytes": 740,
+      "sha256": "3c21d88f2857bfcc800c22c90f40feaba7cddd035b8232e084bfdbd5ba1de6fd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/slide-1.png",
+      "bytes": 366220,
+      "sha256": "8cf4cfc4c05584fb188a5659786690ef7a47867b0eb3704b6bad8094e8d998ed"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/slide-2.png",
+      "bytes": 188651,
+      "sha256": "f26c7d463b03ef63169968265796b66309e48be54b575a617f1c23e410472db0"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/slide-3.png",
+      "bytes": 97856,
+      "sha256": "a095126f7c0a81fefa1f122d5dd49f5cb5a604c4ca97fa3c3b772a93387ad935"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/slide-4.png",
+      "bytes": 388723,
+      "sha256": "4a702ffdb2159d029c7dbc9d89201817f9aab511b5cc3acc046a5d33b04c5706"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/slide-5.png",
+      "bytes": 69126,
+      "sha256": "77ce5fa8c961057183201f908a333f3f35d11d4e134282e5aad9271b39742b07"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/slide-6.png",
+      "bytes": 141840,
+      "sha256": "89b7077d2866df3d6a3d9aa35f486f6729be14fa9d2d9ebff25476f6120926cd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/results/static-checks.log",
+      "bytes": 570,
+      "sha256": "f35a39502b0e68aadbce6bc1e8bfd13df87c56f33ffbd2fb17359dc7bd23175c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/run-browser.cjs",
+      "bytes": 14159,
+      "sha256": "d2f3aa440d11b4db8ddb809ae5d2777750aaeaa5e647234f1695e60cdeaa3b6e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/serve-package.cjs",
+      "bytes": 1509,
+      "sha256": "0b9fde69a19d2650c6cdb4ac767a1b8dffafce5c8baa7673f1ce792615b93337"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/urls.json",
+      "bytes": 1269,
+      "sha256": "4cf217b99bf12097ffa4ad330ea2442e81a3cd80430d981233d9563ffe19231f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4f/verification.json",
+      "bytes": 2758,
+      "sha256": "27fd65e748f0d401c157d4081329e224ae10e58133684067afeca9e140992b0e"
+    }
+  ]
+}

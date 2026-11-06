@@ -1,0 +1,27 @@
+{
+  "fresh_live": "http://localhost:3000/pl/course/1/question/255/preview/#paper-lines-si-container",
+  "presentation": "http://127.0.0.1:3020/presentation",
+  "pdf": "http://127.0.0.1:3020/presentation.pdf",
+  "recorded_backup": "http://127.0.0.1:3020/backup",
+  "input_download": "http://127.0.0.1:3020/inputs/new-paper-01.png",
+  "prepared_variants": [
+    {
+      "id": "new-paper-01",
+      "trial": "desktop",
+      "url": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=162",
+      "state": "returned to original position, saved/refreshed; source dot manually placed where applicable; existing test point retained"
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "trial": "branches",
+      "url": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=163",
+      "state": "returned to original position, saved/refreshed; source dot manually placed where applicable; existing test point retained"
+    },
+    {
+      "id": "new-paper-01",
+      "trial": "presentation",
+      "url": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=164",
+      "state": "returned to original position, saved/refreshed; source dot manually placed where applicable; existing test point retained"
+    }
+  ]
+}

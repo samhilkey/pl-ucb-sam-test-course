@@ -1,0 +1,25 @@
+{
+  "scope": "Repeat with graceful PostgreSQL shutdown; local test container only",
+  "initial_direct_stop_recovery_failed": true,
+  "initial_root_cause": "Stale PostgreSQL Unix socket lock after container stop; no postgres process; stale socket entries moved aside; database not deleted",
+  "database_files_deleted": false,
+  "graceful_stop_exit": 0,
+  "stop": {
+    "container": "star-automatic-cv-baseline-arm64",
+    "running": false,
+    "graceful_postgres_stop_used": true,
+    "database_files_deleted": false
+  },
+  "package_check_exit": 0,
+  "restart_exit": 0,
+  "restart": {
+    "primary_http_restored": null,
+    "note": "Immediate helper stdout was not parseable in the orchestration capture; not evidence of failed restart."
+  },
+  "restart_report_parseable_initially": false,
+  "subsequent_independent_verification": {
+    "docker_healthy": true,
+    "primary_http_status": 200,
+    "post_restart_variants_exactly_restored": 3
+  }
+}

@@ -1,0 +1,20 @@
+$ node --check benchmarks/photo-graphs/multi-method/step-4f/local-runtime.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4f/build-package.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4f/serve-package.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4f/run-browser.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4f/check-package.cjs
+exit_code=0
+
+$ node --check benchmarks/photo-graphs/multi-method/step-4f/evaluate.cjs
+exit_code=0
+
+$ git diff --check
+exit_code=0

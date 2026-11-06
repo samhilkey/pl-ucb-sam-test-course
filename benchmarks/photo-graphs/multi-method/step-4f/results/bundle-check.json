@@ -1,0 +1,10 @@
+{
+  "passed": 5,
+  "checks": [
+    "/presentation served byte-identically from extracted bundle",
+    "/backup served byte-identically from extracted bundle",
+    "/inputs/new-paper-01.png served byte-identically from extracted bundle",
+    "/presentation.pdf served byte-identically from extracted bundle",
+    "private path rejected"
+  ]
+}

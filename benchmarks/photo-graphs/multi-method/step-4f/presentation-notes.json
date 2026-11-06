@@ -1,0 +1,32 @@
+[
+  {
+    "slide": 1,
+    "title": "Student ink in digital assessment",
+    "notes": "0:00–0:30. Explain the educational goal. This is a real user-supplied physical-paper photo new to the local acceptance benchmark. No general recognition-accuracy claim."
+  },
+  {
+    "slide": 2,
+    "title": "The assisted workflow",
+    "notes": "0:30–0:55. The person supplies calibration and the trace. The system maps and stores geometry. The separate dot uses the existing native point tool after import."
+  },
+  {
+    "slide": 3,
+    "title": "A real-photo assisted demonstration",
+    "notes": "0:55–2:45. Follow PRESENTER.md. Show the photo review and import, manually retain the dot, Save & Grade, native whole-branch edit and refresh. A prepared variant or recorded backup is available if the live interaction takes too long."
+  },
+  {
+    "slide": 4,
+    "title": "Measured geometry preservation",
+    "notes": "2:45–3:15. Values come from results/evaluation.json. Native controls preserve traced vertices to numerical precision. Manual source tracing is approximate and has a 0.75px simplification tolerance. Do not equate encoding fidelity with automatic extraction."
+  },
+  {
+    "slide": 5,
+    "title": "Automatic and manual responsibilities",
+    "notes": "3:15–3:45. Corrections use whole-branch movement or delete/retrace. Unsaved photo markup does not survive refresh. Numeric calibration has no independent survey ground truth."
+  },
+  {
+    "slide": 6,
+    "title": "Reliability and future research",
+    "notes": "3:45–4:15, with up to45seconds spare. Future VLM research must preserve actual ink and uncertainty, then compare against source geometry before integration. Do not imply Gemini has been tested. Timing is a planned presenter allocation, not measured human performance."
+  }
+]

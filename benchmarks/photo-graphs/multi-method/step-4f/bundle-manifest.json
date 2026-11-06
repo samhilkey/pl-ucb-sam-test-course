@@ -1,0 +1,70 @@
+{
+  "scope": "Portable recorded presentation/demo asset bundle, not full PrairieLearn installation",
+  "files": [
+    {
+      "path": "presentation.html",
+      "bytes": 5250358,
+      "sha256": "b401eb5c2c896e570338c71498dd0ca0691d0a1778cc4f7c903fcf6f6c901e56"
+    },
+    {
+      "path": "presentation.pdf",
+      "bytes": 4265494,
+      "sha256": "c0c23c9a58b0cb5462c43fabc93a1739c79e65508e1f4b36fac7d5e630c6bd64"
+    },
+    {
+      "path": "offline-backup.html",
+      "bytes": 4355770,
+      "sha256": "e5a4c7a4c033eacea8881e4be3a1cf885dd250605027f1a06231828598a3dcbe"
+    },
+    {
+      "path": "serve-package.cjs",
+      "bytes": 1509,
+      "sha256": "0b9fde69a19d2650c6cdb4ac767a1b8dffafce5c8baa7673f1ce792615b93337"
+    },
+    {
+      "path": "local-runtime.cjs",
+      "bytes": 2217,
+      "sha256": "89c6304469074d8034939d05f03e5becfc9ff34fad16658917d67c0bfe5aa8b8"
+    },
+    {
+      "path": "PRESENTER.md",
+      "bytes": 7341,
+      "sha256": "efabf520c280703ee7b98a2dfb7a751ecbe702ea949314a25f248a77850a1060"
+    },
+    {
+      "path": "MANUAL-CHECKLIST.md",
+      "bytes": 3509,
+      "sha256": "7793c8cc8198fb00868c4d1a2b7e3c7345e5a5652c72b06be0b10efad11fa6ae"
+    },
+    {
+      "path": "presentation-notes.json",
+      "bytes": 1809,
+      "sha256": "77b39d18dbeaef4b20b35bc97511897519f8b05185fcc74b5e61b2bcd9560462"
+    },
+    {
+      "path": "urls.json",
+      "bytes": 1269,
+      "sha256": "4cf217b99bf12097ffa4ad330ea2442e81a3cd80430d981233d9563ffe19231f"
+    },
+    {
+      "path": "operator-actions.json",
+      "bytes": 2305,
+      "sha256": "667cd2b82bcebcb81eca7b856e84445c1702464fea0f25ba086460f873e2dabf"
+    },
+    {
+      "path": "input-manifest.json",
+      "bytes": 1267,
+      "sha256": "eea5859e21ca69ae770d636df8a4cd1d03d4abb543efaccf5ae658930e827169"
+    },
+    {
+      "path": "inputs/new-paper-01.png",
+      "bytes": 1414462,
+      "sha256": "c2fcc867ba84ef678f428942cec065cf69866fe20216cbbe74686566b4ca47a6"
+    },
+    {
+      "path": "BUNDLE-README.txt",
+      "bytes": 779,
+      "sha256": "95537829a3654f57f9e68cea6865c7f8cd57c5b4a5fd35898c5a2d3ef9e03360"
+    }
+  ]
+}

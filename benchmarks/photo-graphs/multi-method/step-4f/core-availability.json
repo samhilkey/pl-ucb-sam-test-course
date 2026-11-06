@@ -1,0 +1,97 @@
+{
+  "presenter_mac_confirmed_by_user": true,
+  "files": [
+    {
+      "path": "elements/pl-sketch/info.json",
+      "exists_on_presenter_mac": true,
+      "sha256": "57a641ef7548ead7dbf42ce8f128dc8a56f5df7c64f94144c596a50e3711207d",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.css",
+      "exists_on_presenter_mac": true,
+      "sha256": "350b222581ad0bded1ca27c9caff6d334ffa854a94206f6a891d087e6862cb85",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.js",
+      "exists_on_presenter_mac": true,
+      "sha256": "d7b8f524a9a177aa3586fa950294bc3603ea27bc75e7c974c2659d8280552bc7",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.mustache",
+      "exists_on_presenter_mac": true,
+      "sha256": "1d4f9859313007e68fbc7ca54036509a835ddeab0f043449c4d8064b2ab071c7",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.py",
+      "exists_on_presenter_mac": true,
+      "sha256": "e7c10bd734dd51849f050d6ee214f5595435a7915046f7bb6784d06cf585813f",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/pl_sketch_grading.py",
+      "exists_on_presenter_mac": true,
+      "sha256": "5072e6aa03d72660b48f514db0f14a3fb0bdc6d996599b4c0b16c413b2c4a55f",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/star-assisted.js",
+      "exists_on_presenter_mac": true,
+      "sha256": "3b1185ce0ed264605100d65057c9b33e395303dd549490e8e5a3f3cf3adf6316",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/star-automatic.js",
+      "exists_on_presenter_mac": true,
+      "sha256": "1ca1bc256b244441a7db94df4086ebd9ad4ede54142ac70ee80eb7de14565967",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/star-fit.js",
+      "exists_on_presenter_mac": true,
+      "sha256": "5c656b5068c7f11a847a3dd7038cc0b88dfe7169928a9731f26850ef70d21406",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/star-geometry.js",
+      "exists_on_presenter_mac": true,
+      "sha256": "88f0b7ec617aee8bd1dd5ebf08c2553d86e6e5034cb0b0687afe261e58279089",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/star-native.js",
+      "exists_on_presenter_mac": true,
+      "sha256": "8d2073b511d09b6999faf802155699280394f197f1693f3261b6cacb19679c3b",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/star-photo.js",
+      "exists_on_presenter_mac": true,
+      "sha256": "f2957f5014d4fe354918352e6689bf32c2b7a3d239297972146134fbb2099076",
+      "matches_step4d": true
+    },
+    {
+      "path": "elements/pl-sketch/star-recognition.js",
+      "exists_on_presenter_mac": true,
+      "sha256": "444e7b3b4c730cabb33e12d0f4144aca1d205241cbbfea1c01324da2cd030628",
+      "matches_step4d": true
+    },
+    {
+      "path": "questions/star-assisted-photo-demo/info.json",
+      "exists_on_presenter_mac": true,
+      "sha256": "11f2dd243cc5c513003b4c125bd01218cc56ab437447ff451c14b21d7b2b5c3c",
+      "matches_step4d": true
+    },
+    {
+      "path": "questions/star-assisted-photo-demo/question.html",
+      "exists_on_presenter_mac": true,
+      "sha256": "6e14b1e7d7cc5451e86f99bd8ea65f2d648f61ebcc75a862f75f084242652996",
+      "matches_step4d": true
+    }
+  ],
+  "remote_or_deployed_copy_verified": false,
+  "new_assets_local_only_no_push": true
+}

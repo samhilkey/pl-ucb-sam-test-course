@@ -1,0 +1,22 @@
+{
+  "id": "new-paper-01",
+  "source_attachment": "IMG_1670.jpg",
+  "source_jpeg_sha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b",
+  "input": "inputs/new-paper-01.png",
+  "input_sha256": "c2fcc867ba84ef678f428942cec065cf69866fe20216cbbe74686566b4ca47a6",
+  "image_size": [
+    1688,
+    1473
+  ],
+  "source_kind": "user_reported_actual_physical_paper_photograph",
+  "local_testing_authorization": "User supplied the photograph for Step4F and states they drew a graph themselves.",
+  "novelty": "New to recorded development/tuning benchmarks; no matching filename or hash found in current benchmark/docs/tests; no independence claim for annotations.",
+  "preprocessing": "EXIF orientation=1; lossless RGB PNG from decoded JPEG pixels; EXIF/XMP/ICC metadata omitted. No contrast, fitting or shape change.",
+  "decoded_pixel_identity_verified": true,
+  "external_provider_permission": "not granted; no inference/upload",
+  "other_attachment": {
+    "name": "ChatGPT Image Oct 15, 2026, 09_49_31 PM-9.png",
+    "sha256": "0bed84bc5d69a737e9ba45b20599be477609debdf8a4f44feb4aa2be921e92e6",
+    "disposition": "AI-labelled filename and unverified physical provenance; excluded from real-paper count, tracing inputs and evaluator reference."
+  }
+}

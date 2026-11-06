@@ -1,0 +1,9 @@
+{
+  "passed": 3,
+  "checks": [
+    "new-paper-01--desktop: exact submitted geometry and points survive local service/database restart",
+    "real--01-multiple-lines-graph-paper--branches: exact submitted geometry and points survive local service/database restart",
+    "new-paper-01--presentation: exact submitted geometry and points survive local service/database restart"
+  ],
+  "primary_service_restored": true
+}
