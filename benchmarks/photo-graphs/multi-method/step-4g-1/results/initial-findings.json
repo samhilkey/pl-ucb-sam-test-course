@@ -1,0 +1,26 @@
+{
+  "intermediate_only": true,
+  "final_results_recorded_separately": true,
+  "observations": [
+    {
+      "issue": "Mobile automatic footer clipped after adding fallback button",
+      "fix": "Flex-column open dialog with non-shrinking header/footer and scrollable body",
+      "regression": "step-4g-1/run-browser.cjs asserts full confirmation bounds at 390x844"
+    },
+    {
+      "issue": "Method label was initially inserted as a fourth root grid child, disturbing assisted layout; legacy keyboard restore assertion failed",
+      "fix": "Moved label into existing controls pane",
+      "regression": "tests/star-photo-workflow.cjs: 67 desktop/mobile/touch assertions passed after fix"
+    },
+    {
+      "issue": "Native browser test checked a fitting spy lost during page refresh",
+      "fix": "Install and reset the spy on the current page before the sandbox manual fallback test",
+      "regression": "tests/star-native-browser.cjs: actual fallback throws if equation fitting occurs"
+    },
+    {
+      "issue": "Initial frozen demo strict inverse-drag assertion failed; measured max return residual 0.000015258789076710855 native pixels",
+      "diagnostic": "Before assisted layout correction, a diagnostic replay with 0.0001 native-pixel drag-return tolerance passed 84 functional assertions plus 3 residual measurements; exact import/submission/restore checks unchanged",
+      "final_replay": "Original unmodified Step 4F replay passed all 84 assertions after layout correction, including the original 1e-6 inverse-drag tolerance. Temporary adapted replay is not the final acceptance test."
+    }
+  ]
+}

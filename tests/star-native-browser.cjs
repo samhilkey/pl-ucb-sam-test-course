@@ -169,6 +169,19 @@ async function checkNative (page, options) {
   await upload('two-branches'); await page.waitForTimeout(1200)
   check(await page.evaluate(() => window.__nativeCV.strokes.length) === 2 && await panel().locator('.star-auto-preview path').count() === 2, 'Late older recognition cannot overwrite the newer two-branch proposal')
   check(!await panel().locator('.star-auto-ack').isChecked() && await confirm().isDisabled(), 'New photo requires fresh explicit confirmation')
+  await page.evaluate(() => {
+    const recognize = window.StarProviders.recognize
+    window.__delayProvider = true
+    window.StarProviders.recognize = async (...args) => {
+      const result = recognize(...args)
+      if (window.__delayProvider) { window.__delayProvider = false; await new Promise(resolve => setTimeout(resolve, 1500)) }
+      return result
+    }
+  })
+  await panel().locator('input[type=file]').setInputFiles(options.fixtures + '/line.png')
+  await page.waitForFunction(() => window.__delayProvider === false)
+  await upload('two-branches'); await page.waitForTimeout(1700)
+  check(await panel().locator('.star-auto-preview path').count() === 2 && await confirm().isDisabled(), 'Late asynchronous provider result cannot replace the newer reviewed photo or its approval')
   await panel().locator('.star-auto-close').click(); await open(); await confirm().dispatchEvent('click')
   check((await getState()).data['auto-ink'].length === 0 && await confirm().isDisabled(), 'Closing/reopening cannot commit a stale proposal')
   await panel().locator('.star-auto-close').click()
@@ -225,6 +238,10 @@ async function checkNative (page, options) {
   check(JSON.stringify(manualRestored.state.data['auto-ink']) === JSON.stringify(manualSubmission.data['auto-ink']), 'Manual native drawing survives Save & Grade and refresh')
   // Verify the existing guided camera route also works with this freeform tool.
   await page.goto(options.url + '/', { waitUntil: 'networkidle' }); await ready()
+  await page.evaluate(() => {
+    window.__fitCalls = 0
+    window.StarFit.fit = window.StarFit.sampleCurve = function () { window.__fitCalls++; throw new Error('Equation fitting must not be used') }
+  })
   await page.locator('#automatic-photo-star-photo-btn').click()
   const assistedPanel = page.locator('#automatic-photo-star-panel')
   await assistedPanel.locator('input[type=file]').setInputFiles(options.fixtures + '/line.png')
@@ -236,10 +253,11 @@ async function checkNative (page, options) {
     await page.mouse.move(traceBox.x + (100 + 418 * i / 35) * traceBox.width / 640, traceBox.y + (238 - 132 * i / 35) * traceBox.height / 480)
     if (i === 0) await page.mouse.down()
   }
-  await page.mouse.up(); await assistedPanel.locator('.star-use').click(); await assistedPanel.locator('.star-confirm').click()
+  await page.mouse.up(); await assistedPanel.locator('.star-use').click(); await assistedPanel.locator('.star-manual-ack').check(); await assistedPanel.locator('.star-confirm').click()
   await page.waitForFunction(() => document.querySelectorAll('#automatic-photo-si-canvas path.plugin-id-auto-ink').length === 1)
   const assistedNative = await collect()
-  check(assistedNative.state.data['auto-ink'][0].length === 49, 'Assisted photo fitting transfers 17 samples as 49 valid freeform controls')
+  check(assistedNative.state.data['auto-ink'][0].length >= 4, 'Geometry-preserving assisted photo transfers valid freeform controls')
+  check(await page.evaluate(() => window.__fitCalls) === 0, 'Automatic sandbox fallback also avoids equation fitting')
   check(JSON.stringify(assistedNative.gradeable.data['auto-ink'][0].spline) === JSON.stringify(assistedNative.state.data['auto-ink'][0].map(p => [p.x, p.y])), 'Assisted freeform rendering state and gradeable controls agree')
   const assistedSubmission = await save(); await page.reload({ waitUntil: 'networkidle' }); await ready()
   const assistedRestored = await collect()

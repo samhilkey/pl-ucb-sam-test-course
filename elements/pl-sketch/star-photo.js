@@ -83,6 +83,7 @@ window.StarPhoto = (function () {
             </div>
           </div>
           <div class="star-controls">
+            <p class="star-assisted-method">Method: manually assisted · place axes and trace the actual ink</p>
             <section class="star-step-panel" data-panel="photo">
               <h6>Start with your paper graph</h6>
               <p>Take a photo or choose one from your device. Keep the axes and numbers readable.</p>
@@ -792,9 +793,8 @@ window.StarPhoto = (function () {
     }
 
     // ---- wiring ------------------------------------------------------------
-    q('.star-file-btn input').addEventListener('change', async (e) => {
-      const f = e.target.files && e.target.files[0]
-      if (!f) return
+    async function loadPhoto (f) {
+      if (!f) return false
       const request = ++photoRequest
       photoLoading = true
       photoReady = false
@@ -811,6 +811,7 @@ window.StarPhoto = (function () {
         updateWorkflow()
         resizeView()
         setStatus('Place the axes, then trace your curve.')
+        return true
       } catch (err) {
         if (request !== photoRequest) return
         photoLoading = false
@@ -821,8 +822,10 @@ window.StarPhoto = (function () {
         q('.star-photo-name').textContent = ''
         setMode('photo')
         setStatus('Could not read that image.')
+        return false
       }
-    })
+    }
+    q('.star-file-btn input').addEventListener('change', e => loadPhoto(e.target.files && e.target.files[0]))
 
     q('.star-file-btn').addEventListener('click', (e) => {
       const input = q('.star-file-btn input')
@@ -1033,7 +1036,7 @@ window.StarPhoto = (function () {
 
     if (window.ResizeObserver) new window.ResizeObserver(resizeView).observe(q('.star-canvas-wrap'))
     setMode('photo')
-    return { drawPhoto, resizeView }
+    return { drawPhoto, resizeView, loadPhoto }
   }
 
   return { create }

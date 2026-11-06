@@ -1,0 +1,198 @@
+{
+  "step": "4G-1",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "parent_commit": "bf45ad0c89725858107a7e3e3c6b2ad13bbee095",
+  "scope": "Precommit evidence; final commit and clean tree verified after committing",
+  "date_local": "2026-11-06",
+  "environment": {
+    "container": "star-automatic-cv-baseline-arm64",
+    "url": "http://localhost:3000/pl/course/1/question/254/preview/",
+    "assisted_url": "http://localhost:3000/pl/course/1/question/255/preview/",
+    "node": "v20.19.6",
+    "browser": {
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "device_pixel_ratio": 1,
+      "screen": [
+        1280,
+        720
+      ]
+    },
+    "desktop": [
+      1440,
+      1100
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "assisted_demo_viewports": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1280,
+        720
+      ]
+    ],
+    "browser_plugin": "not available; existing Playwright CLI used"
+  },
+  "tests": {
+    "node": {
+      "passed": 88,
+      "failed": 0,
+      "command": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs",
+      "log": "results/unit-tests.log"
+    },
+    "server": {
+      "passed": 5,
+      "failed": 0,
+      "command": "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-assisted-server.py -v'",
+      "log": "results/server-tests.log"
+    },
+    "browser": {
+      "native": 165,
+      "assisted": 65,
+      "legacy_desktop_mobile": 67,
+      "automatic_real_photo": 63,
+      "separate_manual_recovery": 8,
+      "frozen_demo": 84,
+      "total": 452,
+      "final_failures": 0,
+      "commands": [
+        "PL_PHOTO_TEST_CLI=<existing wrapper> node tests/star-native-browser.cjs",
+        "PL_PHOTO_TEST_CLI=<existing wrapper> node tests/star-assisted-browser.cjs",
+        "PL_PHOTO_TEST_CLI=<existing wrapper> node tests/star-photo-workflow.cjs",
+        "PL_PHOTO_TEST_CLI=<existing wrapper> node benchmarks/photo-graphs/multi-method/step-4g-1/run-browser.cjs",
+        "node benchmarks/photo-graphs/multi-method/step-4f/run-browser.cjs"
+      ],
+      "details": "results/regressions.json"
+    },
+    "evaluations": {
+      "automatic_and_manual": "node benchmarks/photo-graphs/multi-method/step-4g-1/evaluate.cjs",
+      "frozen_demo": "node benchmarks/photo-graphs/multi-method/step-4f/evaluate.cjs /private/tmp/star-step4f/acceptance",
+      "frozen_photo_acceptance_passed": true
+    },
+    "intermediate_failures": "results/initial-findings.json",
+    "syntax": {
+      "passed_files": 8,
+      "failed": 0,
+      "command": "node --check <each changed JavaScript/browser runner>"
+    },
+    "metadata": {
+      "result": "No files need to be checked!",
+      "command": "bash validation_workflow/validate_changed_files"
+    }
+  },
+  "frozen_backup_file_integrity": [
+    {
+      "path": "presentation.html",
+      "sha256": "b401eb5c2c896e570338c71498dd0ca0691d0a1778cc4f7c903fcf6f6c901e56",
+      "matches": true
+    },
+    {
+      "path": "presentation.pdf",
+      "sha256": "c0c23c9a58b0cb5462c43fabc93a1739c79e65508e1f4b36fac7d5e630c6bd64",
+      "matches": true
+    },
+    {
+      "path": "offline-backup.html",
+      "sha256": "e5a4c7a4c033eacea8881e4be3a1cf885dd250605027f1a06231828598a3dcbe",
+      "matches": true
+    },
+    {
+      "path": "serve-package.cjs",
+      "sha256": "0b9fde69a19d2650c6cdb4ac767a1b8dffafce5c8baa7673f1ce792615b93337",
+      "matches": true
+    },
+    {
+      "path": "local-runtime.cjs",
+      "sha256": "89c6304469074d8034939d05f03e5becfc9ff34fad16658917d67c0bfe5aa8b8",
+      "matches": true
+    },
+    {
+      "path": "PRESENTER.md",
+      "sha256": "efabf520c280703ee7b98a2dfb7a751ecbe702ea949314a25f248a77850a1060",
+      "matches": true
+    },
+    {
+      "path": "MANUAL-CHECKLIST.md",
+      "sha256": "7793c8cc8198fb00868c4d1a2b7e3c7345e5a5652c72b06be0b10efad11fa6ae",
+      "matches": true
+    },
+    {
+      "path": "presentation-notes.json",
+      "sha256": "77b39d18dbeaef4b20b35bc97511897519f8b05185fcc74b5e61b2bcd9560462",
+      "matches": true
+    },
+    {
+      "path": "urls.json",
+      "sha256": "4cf217b99bf12097ffa4ad330ea2442e81a3cd80430d981233d9563ffe19231f",
+      "matches": true
+    },
+    {
+      "path": "operator-actions.json",
+      "sha256": "667cd2b82bcebcb81eca7b856e84445c1702464fea0f25ba086460f873e2dabf",
+      "matches": true
+    },
+    {
+      "path": "input-manifest.json",
+      "sha256": "eea5859e21ca69ae770d636df8a4cd1d03d4abb543efaccf5ae658930e827169",
+      "matches": true
+    },
+    {
+      "path": "inputs/new-paper-01.png",
+      "sha256": "c2fcc867ba84ef678f428942cec065cf69866fe20216cbbe74686566b4ca47a6",
+      "matches": true
+    },
+    {
+      "path": "BUNDLE-README.txt",
+      "sha256": "95537829a3654f57f9e68cea6865c7f8cd57c5b4a5fd35898c5a2d3ef9e03360",
+      "matches": true
+    }
+  ],
+  "step4f_tracked_files_modified": false,
+  "automatic_photo_successes": 0,
+  "automatic_photo_cases": 3,
+  "recognition_architecture_unchanged": true,
+  "gemini": {
+    "project_attestation": "User confirms configured key owns STAR Sketch2Graph Free-tier project without paid billing exposure",
+    "authenticated_checks": 0,
+    "inference_requests": 0,
+    "external_photo_uploads": 0,
+    "transport_enabled": false,
+    "image_specific_transmission_permission": "uncleared",
+    "separate_inference_approval": false
+  },
+  "qa": {
+    "page_identity": true,
+    "meaningful_page": true,
+    "framework_error_overlay": false,
+    "console_health": "No app errors in native/assisted/legacy/F tests; G1 real-photo test collects page exceptions and blocks external origins",
+    "screenshots": true,
+    "interaction_proof": true,
+    "physical_mobile_safari_projector": "not tested"
+  },
+  "assessment": "PASS for automatic-first guarded UI and manual recovery; FAIL for precise automatic recognition on these real photos. Assisted demo remains the dependable route.",
+  "security": {
+    "actual_configured_key_checked": true,
+    "configured_key_absent_from_index_zip_and_decoded_native_json": true,
+    "only_blank_env_example_tracked": true,
+    "private_env_file_ignored": true,
+    "credential_value_fragment_or_hash_saved": false,
+    "external_credential_transmission": false,
+    "scope": "Current staged index and portable recorded assets; not a historical secret audit"
+  },
+  "self_review": {
+    "unchanged_recognizer_native_adapter_geometry_schema": true,
+    "frozen_step4f_assets_and_test_unchanged": true,
+    "scope": "Automatic review/policy boundary and same-photo optional recovery; no recognition algorithm expansion",
+    "git_diff_check": "passed",
+    "remaining_limits": [
+      "CV succeeds on supported controlled rasters, not on these three real photos",
+      "Coincident point/axis residue remains a student-review limitation",
+      "Physical phones, Safari and projector untested",
+      "No external-transmission clearance or separate Gemini inference approval"
+    ]
+  }
+}

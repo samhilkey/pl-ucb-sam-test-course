@@ -1,0 +1,10 @@
+test_corrupted_submission_is_still_invalid (__main__.AssistedServerTests.test_corrupted_submission_is_still_invalid) ... ok
+test_legacy_overlap_remains_invalid (__main__.AssistedServerTests.test_legacy_overlap_remains_invalid) ... ok
+test_normal_submission_still_uses_existing_grader (__main__.AssistedServerTests.test_normal_submission_still_uses_existing_grader) ... ok
+test_opt_in_requires_camera_and_freeform (__main__.AssistedServerTests.test_opt_in_requires_camera_and_freeform) ... ok
+test_opted_in_overlap_is_preserved_and_graded_incorrect (__main__.AssistedServerTests.test_opted_in_overlap_is_preserved_and_graded_incorrect) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK

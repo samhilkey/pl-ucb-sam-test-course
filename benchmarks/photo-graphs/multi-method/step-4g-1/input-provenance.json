@@ -1,0 +1,35 @@
+{
+  "cases": [
+    {
+      "id": "IMG_1670",
+      "original": "/Users/alaiasun/Library/Mobile Documents/com~apple~CloudDocs/D. UC Berkeley/Courses/CS294 STAR FA2026/Experiment/examples/IMG_1670.jpg",
+      "provenance": "User supplied actual paper drawing; locally authorized; already a development case after Step 4F",
+      "external_transmission_permission": "uncleared",
+      "original_sha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b",
+      "browser_decoded_image": "results/IMG_1670--source.png",
+      "browser_decoded_image_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231"
+    },
+    {
+      "id": "real--01",
+      "original": "benchmarks/photo-graphs/automatic-cv/experiment-01/inputs/real--01-multiple-lines-graph-paper.png",
+      "provenance": "Previously approved local DrawEduMath photo; source attribution retained in automatic-cv/experiment-01/source-attribution.json; development case",
+      "external_transmission_permission": "uncleared",
+      "original_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "browser_decoded_image": "results/real--01--source.png",
+      "browser_decoded_image_sha256": "aa67eed484987dc074617099b76c9288c6a2dcf8988f047396f330fcff8f6b1b"
+    },
+    {
+      "id": "real--06",
+      "original": "benchmarks/photo-graphs/automatic-cv/experiment-01/inputs/real--06-piecewise-graph-paper.png",
+      "provenance": "Previously approved local DrawEduMath photo; source attribution retained in automatic-cv/experiment-01/source-attribution.json; development case",
+      "external_transmission_permission": "uncleared",
+      "original_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "browser_decoded_image": "results/real--06--source.png",
+      "browser_decoded_image_sha256": "5d3d850775de086cc060fe68dbfe0a1a63843de3d3b5110cb337b5ccb6805d39"
+    }
+  ],
+  "local_pixels_only": true,
+  "metadata_copied_to_evidence": false,
+  "ai_labelled_comparison_image_used": false,
+  "original_vs_browser_decode_not_assumed_identical": true
+}

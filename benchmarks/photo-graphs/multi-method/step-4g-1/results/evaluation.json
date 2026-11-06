@@ -1,0 +1,736 @@
+{
+  "step": "4G-1",
+  "automatic_successes": 0,
+  "real_photo_cases": 3,
+  "photo_geometry_reference_quality": "Existing approximate single-agent visual annotations, not independent blinded human ground truth. No reference/calibration/trace was passed to the automatic UI/provider.",
+  "pixel_distances_are_not_mathematical_calibration_accuracy": true,
+  "null_distance_means_no_output_not_zero_error": true,
+  "outcomes": [
+    {
+      "id": "real--01",
+      "method": "CV automatic",
+      "status": "abstained",
+      "native_imported": false,
+      "latency_ms": 322.5,
+      "source_decoded_png_sha256": "aa67eed484987dc074617099b76c9288c6a2dcf8988f047396f330fcff8f6b1b",
+      "reference_sha256": "dbdaefb9d17106876f0584c816dbeaa0e7896f9e5eeff79f152373609ad64794",
+      "metrics": {
+        "expected_strokes": 2,
+        "extracted_paths": 0,
+        "extracted_components": 0,
+        "branch_count_correct": false,
+        "missing_strokes": 2,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": null,
+        "geometry_to_reference_p95_pixel": null,
+        "reference_centerline_coverage_within_3px": [
+          0,
+          0
+        ],
+        "endpoint_max_error_pixel": null,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+        "coverage_5px_per_branch": [
+          0,
+          0
+        ],
+        "coverage_8px_per_branch": [
+          0,
+          0
+        ],
+        "predicted_length_farther_than_5px_fraction": null,
+        "marked_corner_errors_pixel": []
+      },
+      "detected_endpoint_count": 0,
+      "detected_corner_count": 0,
+      "axes": {
+        "status": "uncertain",
+        "origin_pixel": null,
+        "axes": {
+          "x": {
+            "status": "uncertain",
+            "candidates": [
+              {
+                "start": [
+                  0,
+                  122
+                ],
+                "end": [
+                  800,
+                  122
+                ],
+                "support": 0.6292134831460674,
+                "width_pixel": 1
+              },
+              {
+                "start": [
+                  0,
+                  126
+                ],
+                "end": [
+                  800,
+                  126
+                ],
+                "support": 0.6267166042446941,
+                "width_pixel": 1
+              },
+              {
+                "start": [
+                  0,
+                  129.5009765625
+                ],
+                "end": [
+                  800,
+                  129.5009765625
+                ],
+                "support": 0.6404494382022472,
+                "width_pixel": 2
+              },
+              {
+                "start": [
+                  0,
+                  133.00714285714287
+                ],
+                "end": [
+                  800,
+                  133.00714285714287
+                ],
+                "support": 0.6504369538077404,
+                "width_pixel": 3
+              },
+              {
+                "start": [
+                  0,
+                  139
+                ],
+                "end": [
+                  800,
+                  139
+                ],
+                "support": 0.6267166042446941,
+                "width_pixel": 3
+              },
+              {
+                "start": [
+                  0,
+                  356.99934167215275
+                ],
+                "end": [
+                  800,
+                  356.99934167215275
+                ],
+                "support": 0.6354556803995006,
+                "width_pixel": 3
+              },
+              {
+                "start": [
+                  0,
+                  362
+                ],
+                "end": [
+                  800,
+                  362
+                ],
+                "support": 0.6217228464419475,
+                "width_pixel": 1
+              },
+              {
+                "start": [
+                  0,
+                  384.9876376279699
+                ],
+                "end": [
+                  800,
+                  384.9876376279699
+                ],
+                "support": 0.8064918851435705,
+                "width_pixel": 9
+              },
+              {
+                "start": [
+                  0,
+                  395
+                ],
+                "end": [
+                  800,
+                  395
+                ],
+                "support": 0.6217228464419475,
+                "width_pixel": 1
+              }
+            ]
+          },
+          "y": {
+            "status": "uncertain",
+            "candidates": [
+              {
+                "start": [
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  528
+                ],
+                "support": 0.8506616257088847,
+                "width_pixel": 1
+              },
+              {
+                "start": [
+                  2,
+                  0
+                ],
+                "end": [
+                  2,
+                  528
+                ],
+                "support": 0.8185255198487713,
+                "width_pixel": 1
+              },
+              {
+                "start": [
+                  4,
+                  0
+                ],
+                "end": [
+                  4,
+                  528
+                ],
+                "support": 0.6937618147448015,
+                "width_pixel": 1
+              },
+              {
+                "start": [
+                  6.478571428571429,
+                  0
+                ],
+                "end": [
+                  6.478571428571429,
+                  528
+                ],
+                "support": 0.6899810964083176,
+                "width_pixel": 2
+              },
+              {
+                "start": [
+                  12.503681885125184,
+                  0
+                ],
+                "end": [
+                  12.503681885125184,
+                  528
+                ],
+                "support": 0.6465028355387523,
+                "width_pixel": 2
+              },
+              {
+                "start": [
+                  36.5030303030303,
+                  0
+                ],
+                "end": [
+                  36.5030303030303,
+                  528
+                ],
+                "support": 0.6275992438563327,
+                "width_pixel": 2
+              },
+              {
+                "start": [
+                  44.019029495718364,
+                  0
+                ],
+                "end": [
+                  44.019029495718364,
+                  528
+                ],
+                "support": 0.6937618147448015,
+                "width_pixel": 3
+              },
+              {
+                "start": [
+                  63.49556868537666,
+                  0
+                ],
+                "end": [
+                  63.49556868537666,
+                  528
+                ],
+                "support": 0.6521739130434783,
+                "width_pixel": 4
+              },
+              {
+                "start": [
+                  454,
+                  0
+                ],
+                "end": [
+                  454,
+                  528
+                ],
+                "support": 0.667296786389414,
+                "width_pixel": 1
+              },
+              {
+                "start": [
+                  459,
+                  0
+                ],
+                "end": [
+                  459,
+                  528
+                ],
+                "support": 0.6200378071833649,
+                "width_pixel": 1
+              }
+            ]
+          }
+        },
+        "grid": {
+          "x": {
+            "status": "unknown",
+            "spacing_pixel": null,
+            "lines_pixel": [
+              400.7795131913754
+            ]
+          },
+          "y": {
+            "status": "unknown",
+            "spacing_pixel": null,
+            "lines_pixel": [
+              263.8844821978611
+            ]
+          }
+        }
+      },
+      "calibration": {
+        "status": "uncertain",
+        "axes": {
+          "x": {
+            "status": "unknown",
+            "source": "unknown",
+            "labels": []
+          },
+          "y": {
+            "status": "unknown",
+            "source": "unknown",
+            "labels": []
+          }
+        },
+        "origin_graph": null,
+        "x_unit_vector_pixel": null,
+        "y_unit_vector_pixel": null
+      },
+      "small_components": 14,
+      "unclassified_small_components": 14,
+      "separate_dot": {
+        "reference_annotation_available": false,
+        "detection_accuracy": null
+      },
+      "old_cv_baseline": {
+        "status": "abstained",
+        "metrics": {
+          "expected_strokes": 2,
+          "extracted_paths": 0,
+          "extracted_components": 0,
+          "branch_count_correct": false,
+          "missing_strokes": 2,
+          "partially_missing_strokes": 0,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": null,
+          "geometry_to_reference_p95_pixel": null,
+          "reference_centerline_coverage_within_3px": [
+            0,
+            0
+          ],
+          "endpoint_max_error_pixel": null,
+          "corner_error_pixel": null,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "note": "Prior run, unchanged inputs and recognizer; not rerun inference results."
+      },
+      "prior_assisted": {
+        "evidence": "../step-4c/results/evaluation.json",
+        "method": "manually assisted",
+        "metrics": {
+          "expected_strokes": 2,
+          "extracted_paths": 2,
+          "extracted_components": 2,
+          "branch_count_correct": true,
+          "missing_strokes": 0,
+          "partially_missing_strokes": 0,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": 1.8632116165848167,
+          "geometry_to_reference_p95_pixel": 2.0580069511243626,
+          "reference_centerline_coverage_within_3px": [
+            1,
+            1
+          ],
+          "endpoint_max_error_pixel": 11.180370333893139,
+          "corner_error_pixel": null,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "calibration": "student-corrected; not an automatic calibration success",
+        "dot": "not independently annotated"
+      },
+      "interpretation": "Abstention: both drawn branches are missing."
+    },
+    {
+      "id": "real--06",
+      "method": "CV automatic",
+      "status": "needs_review",
+      "native_imported": false,
+      "latency_ms": 157.10000014305115,
+      "source_decoded_png_sha256": "5d3d850775de086cc060fe68dbfe0a1a63843de3d3b5110cb337b5ccb6805d39",
+      "reference_sha256": "ced79fa250ac884a5a0aa97d0f0b4d870fbe388dcb4553c6d35f74719bb59fc1",
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 4,
+        "extracted_components": 2,
+        "branch_count_correct": false,
+        "missing_strokes": 1,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 3,
+        "reference_to_geometry_p95_pixel": 303.68718671093245,
+        "geometry_to_reference_p95_pixel": 250.96279796816557,
+        "reference_centerline_coverage_within_3px": [
+          0.020202020202020204
+        ],
+        "endpoint_max_error_pixel": 308.58548248418947,
+        "corner_error_pixel": 253.51331325987596,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+        "coverage_5px_per_branch": [
+          0.02356902356902357
+        ],
+        "coverage_8px_per_branch": [
+          0.02861952861952862
+        ],
+        "predicted_length_farther_than_5px_fraction": 0.7560975609756098,
+        "marked_corner_errors_pixel": [
+          253.51331325987596
+        ]
+      },
+      "detected_endpoint_count": 5,
+      "detected_corner_count": 1,
+      "axes": {
+        "status": "uncertain",
+        "origin_pixel": null,
+        "axes": {
+          "x": {
+            "status": "uncertain",
+            "candidates": []
+          },
+          "y": {
+            "status": "uncertain",
+            "candidates": []
+          }
+        },
+        "grid": {
+          "x": {
+            "status": "unknown",
+            "spacing_pixel": null,
+            "lines_pixel": [
+              264.5282860339277
+            ]
+          },
+          "y": {
+            "status": "unknown",
+            "spacing_pixel": null,
+            "lines_pixel": [
+              208.43292312609876
+            ]
+          }
+        }
+      },
+      "calibration": {
+        "status": "uncertain",
+        "axes": {
+          "x": {
+            "status": "unknown",
+            "source": "unknown",
+            "labels": []
+          },
+          "y": {
+            "status": "unknown",
+            "source": "unknown",
+            "labels": []
+          }
+        },
+        "origin_graph": null,
+        "x_unit_vector_pixel": null,
+        "y_unit_vector_pixel": null
+      },
+      "small_components": 2,
+      "unclassified_small_components": 2,
+      "separate_dot": {
+        "reference_annotation_available": false,
+        "detection_accuracy": null
+      },
+      "old_cv_baseline": {
+        "status": "needs_review",
+        "metrics": {
+          "expected_strokes": 1,
+          "extracted_paths": 4,
+          "extracted_components": 2,
+          "branch_count_correct": false,
+          "missing_strokes": 1,
+          "partially_missing_strokes": 0,
+          "false_connections": 0,
+          "spurious_paths": 3,
+          "reference_to_geometry_p95_pixel": 303.68718671093245,
+          "geometry_to_reference_p95_pixel": 250.96279796816557,
+          "reference_centerline_coverage_within_3px": [
+            0.020202020202020204
+          ],
+          "endpoint_max_error_pixel": 308.58548248418947,
+          "corner_error_pixel": 253.51331325987596,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "note": "Prior run, unchanged inputs and recognizer; not rerun inference results."
+      },
+      "prior_assisted": {
+        "evidence": "../step-4c/results/evaluation.json",
+        "method": "manually assisted",
+        "metrics": {
+          "expected_strokes": 1,
+          "extracted_paths": 1,
+          "extracted_components": 1,
+          "branch_count_correct": true,
+          "missing_strokes": 0,
+          "partially_missing_strokes": 1,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": 4.2096910354812875,
+          "geometry_to_reference_p95_pixel": 4.204793668149852,
+          "reference_centerline_coverage_within_3px": [
+            0.7525252525252525
+          ],
+          "endpoint_max_error_pixel": 4.242626975558779,
+          "corner_error_pixel": 1.4142035777938453,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "calibration": "student-corrected; not an automatic calibration success",
+        "dot": "not independently annotated"
+      },
+      "interpretation": "Four short/spurious paths do not recover the single sharp peak; scale and axes are unresolved."
+    },
+    {
+      "id": "IMG_1670",
+      "method": "CV automatic",
+      "status": "needs_review",
+      "native_imported": false,
+      "latency_ms": 469.7999999523163,
+      "source_decoded_png_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+      "reference_sha256": "af71f7a609f02b28a5142dc2cbcc5386ac14f6651a923ee3a137fb0bf791f094",
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 44,
+        "extracted_components": 12,
+        "branch_count_correct": false,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 1,
+        "false_connections": 0,
+        "spurious_paths": 40,
+        "reference_to_geometry_p95_pixel": 11.68839736660122,
+        "geometry_to_reference_p95_pixel": 382.50966351790123,
+        "reference_centerline_coverage_within_3px": [
+          0.5394036208732694
+        ],
+        "endpoint_max_error_pixel": 4.155739368188691,
+        "corner_error_pixel": 5.842408391887308,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+        "coverage_5px_per_branch": [
+          0.6474973375931843
+        ],
+        "coverage_8px_per_branch": [
+          0.7928647497337593
+        ],
+        "predicted_length_farther_than_5px_fraction": 0.7702295822356041,
+        "marked_corner_errors_pixel": [
+          5.842408391887308,
+          10.300453405291357
+        ]
+      },
+      "detected_endpoint_count": 39,
+      "detected_corner_count": 20,
+      "axes": {
+        "status": "uncertain",
+        "origin_pixel": null,
+        "axes": {
+          "x": {
+            "status": "uncertain",
+            "candidates": [
+              {
+                "start": [
+                  0.4377777777777777,
+                  512.7044585987261
+                ],
+                "end": [
+                  1686.562222222222,
+                  512.7044585987261
+                ],
+                "support": 0.6222222222222222,
+                "width_pixel": 1.8764331210191083
+              },
+              {
+                "start": [
+                  0.4377777777777777,
+                  782.8913382411855
+                ],
+                "end": [
+                  1686.562222222222,
+                  782.8913382411855
+                ],
+                "support": 0.6522222222222223,
+                "width_pixel": 5.629299363057325
+              }
+            ]
+          },
+          "y": {
+            "status": "detected",
+            "candidates": [
+              {
+                "start": [
+                  1500.9040246698312,
+                  0.43821656050955415
+                ],
+                "end": [
+                  1500.9040246698312,
+                  1471.5617834394905
+                ],
+                "support": 0.6331210191082802,
+                "width_pixel": 13.12888888888889
+              }
+            ]
+          }
+        },
+        "grid": {
+          "x": {
+            "status": "unknown",
+            "spacing_pixel": null,
+            "lines_pixel": [
+              797.3739394411931
+            ]
+          },
+          "y": {
+            "status": "unknown",
+            "spacing_pixel": null,
+            "lines_pixel": [
+              105.51847133757963,
+              463.68666028344313,
+              1133.4824463666641
+            ]
+          }
+        }
+      },
+      "calibration": {
+        "status": "uncertain",
+        "axes": {
+          "x": {
+            "status": "unknown",
+            "source": "unknown",
+            "labels": []
+          },
+          "y": {
+            "status": "unknown",
+            "source": "unknown",
+            "labels": []
+          }
+        },
+        "origin_graph": null,
+        "x_unit_vector_pixel": null,
+        "y_unit_vector_pixel": null
+      },
+      "small_components": 4,
+      "unclassified_small_components": 4,
+      "separate_dot": {
+        "reference_pixel": [
+          821,
+          294
+        ],
+        "lies_in_unclassified_component_box": true,
+        "recognized_as_point": false,
+        "native_imported": false
+      },
+      "old_cv_baseline": null,
+      "prior_assisted": {
+        "evidence": "../step-4f/results/evaluation.json",
+        "method": "manually assisted",
+        "metrics": {
+          "expected_strokes": 1,
+          "extracted_paths": 1,
+          "extracted_components": 1,
+          "branch_count_correct": true,
+          "missing_strokes": 0,
+          "partially_missing_strokes": 0,
+          "false_connections": 0,
+          "spurious_paths": 0,
+          "reference_to_geometry_p95_pixel": 3.4951056567696734,
+          "geometry_to_reference_p95_pixel": 3.493940899018997,
+          "reference_centerline_coverage_within_3px": [
+            0.9126730564430245
+          ],
+          "endpoint_max_error_pixel": 1.414148371719365,
+          "corner_error_pixel": 1.0000511605403233,
+          "axis_origin_error_pixel": null,
+          "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+        },
+        "calibration": "student-corrected; not an automatic calibration success",
+        "dot": "manually placed with native point tool"
+      },
+      "interpretation": "Some curve geometry is recovered, but axes, ticks and labels become spurious geometry, the axis crossing fragments connectivity, and the separate dot is only an unclassified component. Not a faithful automatic graph."
+    }
+  ],
+  "current_manual_recovery": {
+    "id": "IMG_1670",
+    "classification": "manually assisted, not automatic recognition",
+    "metrics": {
+      "expected_strokes": 1,
+      "extracted_paths": 1,
+      "extracted_components": 1,
+      "branch_count_correct": true,
+      "missing_strokes": 0,
+      "partially_missing_strokes": 0,
+      "false_connections": 0,
+      "spurious_paths": 0,
+      "reference_to_geometry_p95_pixel": 3.4950648957343518,
+      "geometry_to_reference_p95_pixel": 3.493900046689322,
+      "reference_centerline_coverage_within_3px": [
+        0.9126730564430245
+      ],
+      "endpoint_max_error_pixel": 1.414148371719365,
+      "corner_error_pixel": 0.9999555617368785,
+      "axis_origin_error_pixel": null,
+      "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+      "coverage_5px_per_branch": [
+        1
+      ],
+      "coverage_8px_per_branch": [
+        1
+      ],
+      "predicted_length_farther_than_5px_fraction": 0,
+      "marked_corner_errors_pixel": [
+        0.9999555617368785,
+        2.845739693628074
+      ]
+    },
+    "native_anchor_max_error_source_pixel": 2.8421709430404007e-13,
+    "manually_placed_dot_error_source_pixel": 0.00004009985257618493,
+    "save_grade_refresh": "passed exact native state equality, existing incorrect graph still grades 0%",
+    "url": "http://localhost:3000/pl/course/1/question/254/preview/?variant_id=260"
+  },
+  "inference_requests": 0,
+  "recommendation": "Separately approved, bounded Gemini experiment on individually cleared photos; evaluate precise geometry and topology through the same interface. Keep manual assistance as the dependable demo path."
+}

@@ -518,6 +518,16 @@
   background: rgb(20 30 40 / 50%);
 }
 
+.star-automatic-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.star-automatic-dialog header,
+.star-automatic-dialog footer {
+  flex-shrink: 0;
+}
+
 .star-automatic-dialog [hidden] {
   display: none !important;
 }
@@ -542,6 +552,7 @@
 }
 
 .star-auto-body {
+  min-height: 0;
   padding: 16px 20px;
   overflow: auto;
   max-height: calc(100dvh - 230px);

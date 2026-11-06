@@ -23,10 +23,14 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
 
     // STAR: the photo route, when the instructor turned it on for this question.
     if (handDrawn) {
-      starAddHandDrawnButton(id, si, config)
+      starAddHandDrawnButton(id, si, config, automaticPhoto)
     }
     if (automaticPhoto) {
-      si.messageBus.on('ready', function () { window.StarAutomatic.mount({ id, si, config }) })
+      si.messageBus.on('ready', function () {
+        const container = document.getElementById(id + '-si-container')
+        window.StarAutomatic.mount({ id, si, config, onAssist: handDrawn
+          ? file => container.dispatchEvent(new CustomEvent('star-assist-photo', { detail: { file } })) : null })
+      })
     }
 
     // Inject overlay toggle button into si-container if it is enabled
@@ -101,7 +105,7 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
 
 // `config` has to be passed in: it is a local inside window.SketchInput and is
 // not visible from out here.
-function starAddHandDrawnButton (id, si, config) {
+function starAddHandDrawnButton (id, si, config, automaticPhoto) {
   const mount = function () {
     const container = document.getElementById(id + '-si-container')
     if (!container || document.getElementById(id + '-star-photo-btn')) return
@@ -179,7 +183,7 @@ function starAddHandDrawnButton (id, si, config) {
       if (assistedSession) {
         photoButton.title = photoButton.ariaLabel = 'Trace a paper graph (manual assistance)'
         wrapper.className = 'mt-2'
-        photoButton.className = 'btn btn-primary w-100'
+        photoButton.className = automaticPhoto ? 'btn btn-light border w-100' : 'btn btn-primary w-100'
         photoButton.textContent = 'Trace a paper graph (manual)'
       }
       photoUI = window.StarPhoto.create({
@@ -216,6 +220,12 @@ function starAddHandDrawnButton (id, si, config) {
           closePanel()
           return { ok: true, message: models.length === 1 ? 'Curve placed on the canvas.' : 'All branches placed on the canvas.' }
         }
+      })
+      container.addEventListener('star-assist-photo', function (event) {
+        photoButton.click()
+        // The original File stays local and is decoded by the existing assisted
+        // loader, with the same replacement/revision guards as its file picker.
+        photoUI.loadPhoto(event.detail.file)
       })
     } catch (err) {
       console.error('[STAR] could not build the capture UI', err)
