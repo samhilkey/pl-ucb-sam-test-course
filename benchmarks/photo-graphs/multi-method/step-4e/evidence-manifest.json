@@ -1,0 +1,52 @@
+{
+  "step": "4E",
+  "algorithm": "SHA-256",
+  "scope": "New audit files only; excludes this manifest. No private credential file read or hashed for this manifest.",
+  "files": [
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/REPORT.md",
+      "bytes": 7174,
+      "sha256": "ab934d329567e30db99ff90b9e29140d79be598ef1d43def66c9102ece7ff84e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/USER-CHECKS.md",
+      "bytes": 5192,
+      "sha256": "34b3af41d7a33b83b501027a80ed078e43a993d271c825186fc2e149ec2952d6"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/audit.json",
+      "bytes": 6075,
+      "sha256": "d2d4cd79d865edfe7902f3bc77144dc1ccc59f7f1ded0fb0255f3576cd915ede"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/local-checks.json",
+      "bytes": 2821,
+      "sha256": "4352296af3236773b69d4d56cb46ac499ac6f99380ee2dcd12ab09dde22d389b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/offline-tests.log",
+      "bytes": 2289,
+      "sha256": "5ce7a0ecb299082457a60592450ea09f19e1113a46304356ee5e5cf132a026bb"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/public-sources.json",
+      "bytes": 3564,
+      "sha256": "6df03da0e3eeb904e051b21e893f002df21bd35116c7d989d0f2284e3c9c283e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/static-checks.log",
+      "bytes": 121,
+      "sha256": "8e5611c549180886ad9fe6913bc8520a5179c9f588be9a66d9fa23f789a16475"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/verification.json",
+      "bytes": 1189,
+      "sha256": "cbcc126ac2c3795458f37be60f3fcf8a7849f34d6f7bc325f209e355670bd2da"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4e/verify-local.cjs",
+      "bytes": 4665,
+      "sha256": "9f9fabe1cd197ffa4652e3a1b980723147ee51654d9339801d48d9f6c245a75f"
+    }
+  ]
+}

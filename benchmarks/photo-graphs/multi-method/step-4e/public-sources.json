@@ -1,0 +1,68 @@
+[
+  {
+    "id": "api-key",
+    "url": "https://aistudio.google.com/docs/api-key",
+    "scope": "public documentation only; no key, auth header, cookies or photographs",
+    "date_local": "2026-11-05",
+    "status": "retrieved",
+    "resolved_url": "https://aistudio.google.com/docs/api-key",
+    "sha256": "e95e51e605ad6360deb5588657c6e794d5e89a05c6435dec82a983747af5f619",
+    "content_type": "text/markdown; charset=utf-8",
+    "finding": "Keys are associated with projects; some projects need verification. No configured-key project binding was obtained."
+  },
+  {
+    "id": "billing",
+    "url": "https://aistudio.google.com/docs/billing",
+    "scope": "public documentation only; no key, auth header, cookies or photographs",
+    "date_local": "2026-11-05",
+    "status": "retrieved",
+    "resolved_url": "https://aistudio.google.com/docs/billing",
+    "sha256": "8500c149cec177f6c2712cf966470b4c6e68a3d07038105b5e29b19361bc3f16",
+    "content_type": "text/markdown; charset=utf-8",
+    "finding": "Free and paid project tiers differ; linking active billing can change tier. No actual project billing verified."
+  },
+  {
+    "id": "quota",
+    "url": "https://aistudio.google.com/docs/rate-limits",
+    "scope": "public documentation only; no key, auth header, cookies or photographs",
+    "date_local": "2026-11-05",
+    "status": "retrieved",
+    "resolved_url": "https://aistudio.google.com/docs/rate-limits",
+    "sha256": "dc71367af41c8a1add0e9466d552dab4d284f2ee4dd93308fb5b9656164c5cc9",
+    "content_type": "text/markdown; charset=utf-8",
+    "finding": "Limits are per project/model; RPM, input TPM and RPD are separate; RPD resets at midnight Pacific. No account values verified."
+  },
+  {
+    "id": "terms",
+    "url": "https://aistudio.google.com/docs/terms",
+    "scope": "public documentation only; no key, auth header, cookies or photographs",
+    "date_local": "2026-11-05",
+    "status": "retrieved",
+    "resolved_url": "https://aistudio.google.com/docs/terms",
+    "sha256": "3541ca84c8be4c6de243a33165b495ab73b8de3280ce7c22a3858dca41872875",
+    "content_type": "text/markdown; charset=utf-8",
+    "finding": "Applicable unpaid terms describe product improvement/human review, prohibit sensitive/confidential/personal input, and impose operator/client/region requirements. No image clearance supplied."
+  },
+  {
+    "id": "model",
+    "url": "https://aistudio.google.com/docs/models/gemini-3.5-flash-lite",
+    "scope": "public documentation only; no key, auth header, cookies or photographs",
+    "date_local": "2026-11-05",
+    "status": "retrieved",
+    "resolved_url": "https://aistudio.google.com/docs/models/gemini-3.5-flash-lite",
+    "sha256": "426ebe6a654ee771a0785587e98769cb7338134450af3a5b70e89c1398175e89",
+    "content_type": "text/markdown; charset=utf-8",
+    "finding": "Public page for exact model lists image input and structured output support. This is not project-specific access evidence."
+  },
+  {
+    "id": "dataset-card",
+    "url": "https://huggingface.co/datasets/allenai/DrawEduMath/raw/main/README.md",
+    "scope": "public documentation only; no key, auth header, cookies or photographs",
+    "date_local": "2026-11-05",
+    "status": "retrieved",
+    "resolved_url": "https://huggingface.co/datasets/allenai/DrawEduMath/raw/main/README.md",
+    "sha256": "102a0fbcdf9447665f83bca3336f84e78ff16fee62e44fd08d0689af006e81fd",
+    "content_type": "text/plain; charset=utf-8",
+    "finding": "Official mirror lists CC BY-NC4.0 and PII-removal procedures; not an image-specific Google submission clearance."
+  }
+]

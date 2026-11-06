@@ -1,0 +1,174 @@
+{
+  "step": "4E",
+  "date_local": "2026-11-05",
+  "recommendation": "BLOCKED",
+  "ready_for_separate_inference_approval": false,
+  "inference_authorized": false,
+  "approved_scope": "Readiness audit only; no inference, authenticated API request, photograph upload or demo modification",
+  "checklist": [
+    {
+      "prerequisite": "credential_configuration",
+      "status": "VERIFIED",
+      "evidence_or_gap": "Local file loads, ignored/untracked, blank template only, no browser credential reference or key in current index."
+    },
+    {
+      "prerequisite": "key_project_binding",
+      "status": "UNKNOWN",
+      "evidence_or_gap": "No local metadata, accessible authenticated UI or user-supplied redacted project binding."
+    },
+    {
+      "prerequisite": "project_free_tier_and_billing",
+      "status": "UNKNOWN",
+      "evidence_or_gap": "No project dashboard evidence."
+    },
+    {
+      "prerequisite": "model_access_and_quota",
+      "status": "UNKNOWN",
+      "evidence_or_gap": "No selected-project exact-model availability/limits/usage evidence."
+    },
+    {
+      "prerequisite": "exact_image_identity_and_provenance",
+      "status": "VERIFIED",
+      "evidence_or_gap": "Both hashes/dimensions/source crop records match; local use approved."
+    },
+    {
+      "prerequisite": "real--01_external_permission",
+      "status": "BLOCKED",
+      "evidence_or_gap": "No image-specific Google unpaid-service clearance."
+    },
+    {
+      "prerequisite": "real--06_external_permission",
+      "status": "BLOCKED",
+      "evidence_or_gap": "No image-specific Google unpaid-service clearance."
+    },
+    {
+      "prerequisite": "operator_client_region_eligibility",
+      "status": "UNKNOWN",
+      "evidence_or_gap": "No current attestation."
+    },
+    {
+      "prerequisite": "prospective_zero_cost",
+      "status": "UNKNOWN",
+      "evidence_or_gap": "Unbilled eligible Free project and sufficient quota not established."
+    }
+  ],
+  "account": {
+    "project_alias": null,
+    "project_id": null,
+    "configured_key_bound_to_project": null,
+    "billing_tier": null,
+    "billing_enabled": null,
+    "active_billing_account_linked": null,
+    "exact_model": "gemini-3.5-flash-lite",
+    "project_model_access": null,
+    "rpm_limit": null,
+    "input_tpm_limit": null,
+    "rpd_limit": null,
+    "remaining_quota": null,
+    "verified_at": null,
+    "evidence": "No accessible authenticated account UI; not inferred from public documentation."
+  },
+  "access_checks": {
+    "playwright_inventory_empty": true,
+    "ai_studio_tab_available": false,
+    "cloud_console_tab_available": false,
+    "cua_browser_available": false,
+    "gcloud_installed": false,
+    "local_project_metadata_present": {
+      "GOOGLE_CLOUD_PROJECT": false,
+      "GOOGLE_CLOUD_PROJECT_ID": false,
+      "GCLOUD_PROJECT": false,
+      "GEMINI_PROJECT_ID": false,
+      "GEMINI_PROJECT_NUMBER": false,
+      "GEMINI_KEY_NAME": false
+    },
+    "user_redacted_evidence_received": false,
+    "user_sign_in_status": "unknown; not inferred from tool inventory"
+  },
+  "images": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "original_png_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "hash_verified": true,
+      "dimensions_verified": true,
+      "image_size": [
+        801,
+        529
+      ],
+      "crop_provenance_verified": true,
+      "source_jpeg_sha256": "e1db0b337c6edd75fe4b5dc52e1c6c8d1fadafa5798d6c9c901cd6150eab92a4",
+      "crop_xyxy": [
+        1058,
+        100,
+        1859,
+        629
+      ],
+      "local_use_permission": "VERIFIED: explicit user approval for local testing",
+      "google_unpaid_service_permission": "BLOCKED: image-specific clearance not supplied",
+      "privacy_note": "Pinned bytes match prior locally screened crops. No new visual-screening or deidentification guarantee is claimed; images were not transmitted."
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "original_png_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "hash_verified": true,
+      "dimensions_verified": true,
+      "image_size": [
+        529,
+        420
+      ],
+      "crop_provenance_verified": true,
+      "source_jpeg_sha256": "c17a18691682f482dfde15add70974c45566d9b8e3003a53a301cb6b55c03d3e",
+      "crop_xyxy": [
+        1220,
+        100,
+        1749,
+        520
+      ],
+      "local_use_permission": "VERIFIED: explicit user approval for local testing",
+      "google_unpaid_service_permission": "BLOCKED: image-specific clearance not supplied",
+      "privacy_note": "Pinned bytes match prior locally screened crops. No new visual-screening or deidentification guarantee is claimed; images were not transmitted."
+    }
+  ],
+  "privacy": {
+    "key_value_fragment_or_hash_saved": false,
+    "key_transmitted": false,
+    "private_file_modified": false,
+    "raw_account_screenshot_or_export_saved": false,
+    "public_docs_only_external_access": true
+  },
+  "cost_accounting": {
+    "model_inference_requests": 0,
+    "authenticated_provider_api_requests": 0,
+    "image_uploads": 0,
+    "billing_changes": 0,
+    "tier_upgrades": 0,
+    "provider_switches": 0,
+    "incurred_inference_cost_usd": 0,
+    "prospective_inference_cost_usd": null,
+    "provider_reported_usage": null,
+    "provider_reported_cost": null,
+    "note": "Zero incurred cost follows from zero calls; future $0 exposure is unverified."
+  },
+  "frozen_protocol": {
+    "path": "../step-4a/protocol.json",
+    "model": "gemini-3.5-flash-lite",
+    "case_count": 2,
+    "max_total_requests": 2,
+    "requests_per_image": 1,
+    "max_output_tokens": 8192,
+    "timeout_seconds": 120,
+    "max_concurrency": 1,
+    "retries": 0,
+    "continuations": 0,
+    "tool_calls": 0,
+    "paid_fallbacks": 0,
+    "authorized_spend_usd": 0,
+    "resumption_requires_separate_explicit_approval": true
+  },
+  "demo": {
+    "frozen_commit": "1d9be84f67d1f699249cedbbbf5fcbf26fc1ad0c",
+    "unchanged": true,
+    "deadline": "2026-11-09",
+    "independent_of_this_audit": true
+  }
+}

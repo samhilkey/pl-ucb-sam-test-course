@@ -1,0 +1,5 @@
+$ node --check benchmarks/photo-graphs/multi-method/step-4e/verify-local.cjs
+exit_code=0
+
+$ git diff --check
+exit_code=0

@@ -1,0 +1,77 @@
+{
+  "step": "4E",
+  "date_local": "2026-11-05",
+  "offline_only": true,
+  "node": "v20.19.6",
+  "credentials": {
+    "private_env_file_exists": true,
+    "gemini_api_key_configured": true,
+    "private_file_ignored": true,
+    "ignore_evidence": ".gitignore:17:.env.*\t.env.local",
+    "only_blank_example_tracked": true,
+    "configured_key_absent_from_current_index": true,
+    "browser_code_has_no_credential_variable": true,
+    "key_value_logged": false,
+    "key_hash_or_fragment_saved": false,
+    "credential_validity": "UNKNOWN: no authenticated request permitted"
+  },
+  "local_project_metadata_presence": {
+    "GOOGLE_CLOUD_PROJECT": false,
+    "GOOGLE_CLOUD_PROJECT_ID": false,
+    "GCLOUD_PROJECT": false,
+    "GEMINI_PROJECT_ID": false,
+    "GEMINI_PROJECT_NUMBER": false,
+    "GEMINI_KEY_NAME": false
+  },
+  "key_to_project_binding": "UNKNOWN: no binding evidence",
+  "cases": [
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "original_png_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "hash_verified": true,
+      "dimensions_verified": true,
+      "image_size": [
+        801,
+        529
+      ],
+      "crop_provenance_verified": true,
+      "source_jpeg_sha256": "e1db0b337c6edd75fe4b5dc52e1c6c8d1fadafa5798d6c9c901cd6150eab92a4",
+      "crop_xyxy": [
+        1058,
+        100,
+        1859,
+        629
+      ],
+      "local_use_permission": "VERIFIED: explicit user approval for local testing",
+      "google_unpaid_service_permission": "BLOCKED: image-specific clearance not supplied",
+      "privacy_note": "Pinned bytes match prior locally screened crops. No new visual-screening or deidentification guarantee is claimed; images were not transmitted."
+    },
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "original_png_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "hash_verified": true,
+      "dimensions_verified": true,
+      "image_size": [
+        529,
+        420
+      ],
+      "crop_provenance_verified": true,
+      "source_jpeg_sha256": "c17a18691682f482dfde15add70974c45566d9b8e3003a53a301cb6b55c03d3e",
+      "crop_xyxy": [
+        1220,
+        100,
+        1749,
+        520
+      ],
+      "local_use_permission": "VERIFIED: explicit user approval for local testing",
+      "google_unpaid_service_permission": "BLOCKED: image-specific clearance not supplied",
+      "privacy_note": "Pinned bytes match prior locally screened crops. No new visual-screening or deidentification guarantee is claimed; images were not transmitted."
+    }
+  ],
+  "frozen_demo_commit": "1d9be84f67d1f699249cedbbbf5fcbf26fc1ad0c",
+  "frozen_demo_and_existing_repository_unchanged": true,
+  "inference_requests": 0,
+  "authenticated_provider_requests": 0,
+  "image_uploads": 0,
+  "billing_changes": 0
+}

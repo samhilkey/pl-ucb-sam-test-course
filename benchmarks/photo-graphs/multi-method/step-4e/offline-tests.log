@@ -1,0 +1,65 @@
+TAP version 13
+# Subtest: credential ignore rules exclude local files and allow only the blank example
+ok 1 - credential ignore rules exclude local files and allow only the blank example
+  ---
+  duration_ms: 58.577125
+  ...
+# Subtest: the current Node loads a server-only env file without exposing its value
+ok 2 - the current Node loads a server-only env file without exposing its value
+  ---
+  duration_ms: 55.015583
+  ...
+# Subtest: the empty example can be loaded offline without a key or enabled inference
+ok 3 - the empty example can be loaded offline without a key or enabled inference
+  ---
+  duration_ms: 24.087625
+  ...
+# Subtest: browser application files do not reference the server credential
+ok 4 - browser application files do not reference the server credential
+  ---
+  duration_ms: 3.089
+  ...
+# Subtest: preflight runs with all network entry points blocked and reference reads forbidden
+ok 5 - preflight runs with all network entry points blocked and reference reads forbidden
+  ---
+  duration_ms: 50.942666
+  ...
+# Subtest: manifest rejects extra reference fields and duplicate identities
+ok 6 - manifest rejects extra reference fields and duplicate identities
+  ---
+  duration_ms: 1.873791
+  ...
+# Subtest: image identity and original coordinate dimensions fail closed
+ok 7 - image identity and original coordinate dimensions fail closed
+  ---
+  duration_ms: 23.499
+  ...
+# Subtest: metadata is excluded while source pixels and dimensions remain unchanged
+ok 8 - metadata is excluded while source pixels and dimensions remain unchanged
+  ---
+  duration_ms: 49.294417
+  ...
+# Subtest: provider preview contains no local case identity or evaluator information
+ok 9 - provider preview contains no local case identity or evaluator information
+  ---
+  duration_ms: 17.230083
+  ...
+# Subtest: pinned baseline geometry remains valid; references are evaluator-only
+ok 10 - pinned baseline geometry remains valid; references are evaluator-only
+  ---
+  duration_ms: 2.297416
+  ...
+# Subtest: CLI rejects --execute and protects existing evidence from overwrite
+ok 11 - CLI rejects --execute and protects existing evidence from overwrite
+  ---
+  duration_ms: 94.60625
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 293.173917
