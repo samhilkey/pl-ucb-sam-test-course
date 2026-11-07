@@ -1,0 +1,48 @@
+{
+  "version": "4g3.1",
+  "case_id": "IMG_1670",
+  "source": {
+    "path": "../step-4g-1/results/IMG_1670--source.png",
+    "sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+    "size": [
+      1688,
+      1473
+    ],
+    "provenance": "Existing user-owned photograph of their actual paper drawing, metadata-free PNG from Step4G-1",
+    "local_test_permission": "User approved existing case for this local step",
+    "external_transmission_this_step": false,
+    "held_out": false
+  },
+  "excluded": "AI-labelled comparison PNG; no inference or reference equation input",
+  "cv_assisted_actions": {
+    "origin": [
+      782,
+      786
+    ],
+    "x_marker": [
+      1229,
+      775
+    ],
+    "x_value": 3,
+    "y_marker": [
+      751,
+      300
+    ],
+    "y_value": 3,
+    "keep_strokes": [
+      "stroke-10",
+      "stroke-11",
+      "stroke-12"
+    ],
+    "all_other_lines": "explicit bulk exclusion",
+    "filled_dot": "mark-1",
+    "other_marks": "explicit exclusion",
+    "human_calibration_and_classification": true,
+    "manual_retracing": false
+  },
+  "additional_regressions": {
+    "controlled": "Existing line, sharp-v, smooth-curve, two-branches, unknown-scale, touching-junction and ambiguous-axes fixtures",
+    "manual": "Unmodified Step4F user-paper and DrawEduMath real--01 local replay; provenance remains in their original manifests"
+  },
+  "network": "CV and correction are local; no external provider request"
+}

@@ -1,0 +1,18 @@
+{
+  "initial_failures": [
+    {
+      "kind": "test setup",
+      "detail": "First CLI invocation lacked PL_PHOTO_TEST_CLI; no browser actions completed. Corrected installed wrapper path."
+    },
+    {
+      "kind": "test helper",
+      "detail": "Second-cycle line-list toggle closed an already-open details panel; selectOption timed out. Helper now opens it only when closed. No geometry/native safety check relaxed."
+    },
+    {
+      "kind": "browser policy",
+      "detail": "Direct file protocol navigation blocked by installed browser policy. Used unchanged independent local package viewer, then browser networking off; primary service was not stopped."
+    }
+  ],
+  "final_product_failures": [],
+  "known_accuracy_failure": "Selected CV pixels fail frozen Step4F photo-fidelity screen; retained unchanged, with manual fallback recommended."
+}

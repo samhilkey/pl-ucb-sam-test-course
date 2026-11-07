@@ -23,7 +23,7 @@
       return { bounds_pixel: b, at_axis_intersection: !!origin && origin.every((v, i) => v >= b[0][i] && v <= b[1][i]) }
     })
     if (marks.some(m => !m.at_axis_intersection)) {
-      geometry.warnings.push({ code: 'unclassified_small_marks', message: 'Small ink components remain unclassified. They may be dots, labels or fragments; they cannot be imported automatically. Use manual tracing and add any separate marks with the native point tool.' })
+      geometry.warnings.push({ code: 'unclassified_small_marks', message: 'Small ink components remain unclassified. They may be dots, labels or fragments; they cannot be imported automatically. Continue with detected strokes to review these marks, or use manual tracing and the native point tool.' })
       geometry.assistance.push({ target: 'marks', reason: 'unclassified_small_marks' })
       if (geometry.status === 'automatic') geometry.status = 'needs_review'
     }

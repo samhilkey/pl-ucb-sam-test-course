@@ -2,6 +2,7 @@
 ;(function (root) {
   'use strict'
   const Geometry = typeof module !== 'undefined' && module.exports ? require('./star-geometry.js') : root.StarGeometry
+  const CVAssisted = typeof module !== 'undefined' && module.exports ? require('./star-cv-assisted.js') : root.StarCVAssisted
   const clone = value => JSON.parse(JSON.stringify(value))
   const same = (a, b) => JSON.stringify(a) === JSON.stringify(b)
   function tools (config) {
@@ -44,7 +45,11 @@
       geometry.status === 'needs_review' && geometry.provenance?.method === 'manual_trace' && geometry.provenance.automatically_recognized === false &&
       ['x', 'y'].every(axis => geometry.calibration.axes[axis].source === 'student_corrected') &&
       !geometry.warnings.length && !geometry.assistance.length && !geometry.uncertainty.regions.length && !geometry.topology.junctions.length
-    if ((!assisted && geometry.status !== 'automatic') || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
+    const cvAssisted = options.cvAssisted === true && config.assistedPhotoGeometry === true && geometry.status === 'needs_review' &&
+      geometry.provenance?.method === 'cv_assisted' && ['x', 'y'].every(axis => geometry.calibration.axes[axis].source === 'student_corrected') &&
+      !geometry.warnings.length && !geometry.assistance.length && !geometry.uncertainty.regions.length && !geometry.topology.junctions.length && !!CVAssisted.validate(geometry)
+    if ((!assisted && !cvAssisted && geometry.status !== 'automatic') || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
+    if (geometry.points?.length && !cvAssisted) throw new Error('Isolated dots require a reviewed CV-assisted proposal; they cannot be silently dropped.')
     const tool = receivingTool(config, toolId)
     if (!state || !state.data || Array.isArray(state.data) || !Array.isArray(state.data[tool.id])) throw new Error('Invalid existing native tool state.')
     const drawings = geometry.strokes.map(s => {
@@ -67,9 +72,22 @@
       return [Math.min(...ps.map(p => p.x)), Math.max(...ps.map(p => p.x))]
     }).sort((a, b) => a[0] - b[0])
     for (let i = 0; i < ranges.length; i++) for (let j = i + 1; j < ranges.length; j++) {
-      if (!assisted && Math.min(ranges[i][1], ranges[j][1]) - Math.max(ranges[i][0], ranges[j][0]) > 5) throw new Error('Graphs overlap in x. Move or delete the conflicting native drawing, or correct the proposal, before importing.')
+      if (!assisted && !cvAssisted && Math.min(ranges[i][1], ranges[j][1]) - Math.max(ranges[i][0], ranges[j][0]) > 5) throw new Error('Graphs overlap in x. Move or delete the conflicting native drawing, or correct the proposal, before importing.')
     }
-    return { toolId: tool.id, kind: 'freeform', drawings, strokeIds: geometry.strokes.map(s => s.id) }
+    let pointToolId = null; const points = []
+    if (geometry.points?.length) {
+      const eligible = tools(config).filter(t => t.name === 'point' && !t.readonly && !t.helper && !t.overlay && t.hollow !== true)
+      const pointTool = options.pointToolId ? eligible.find(t => t.id === options.pointToolId) : eligible.length === 1 ? eligible[0] : null
+      if (!pointTool || !Array.isArray(state.data[pointTool.id])) throw new Error('This question needs one editable filled-point tool to preserve the selected dots.')
+      if (pointTool.limit > 0 && state.data[pointTool.id].length + geometry.points.length > pointTool.limit) throw new Error('Import would exceed the point tool limit.')
+      pointToolId = pointTool.id
+      for (const point of geometry.points) {
+        const p = graphToNative(config, point.graph); const buffer = config.enforceBounds ? (config.safetyBuffer || 0) : 0
+        if (p.x < buffer || p.y < buffer || p.x > config.width - buffer || p.y > config.height - buffer) throw new Error('A selected dot exceeds the native canvas range. It was not clipped or moved.')
+        points.push(p)
+      }
+    }
+    return { toolId: tool.id, kind: 'freeform', drawings, strokeIds: geometry.strokes.map(s => s.id), pointToolId, points }
   }
   function createSession (si, config, toolId, options = {}) {
     let revision = 0; let serial = 0; let active = null
@@ -91,12 +109,14 @@
       const before = JSON.parse(si.getState())
       if (!same(before.data, proposal.base)) throw new Error('The native canvas changed after review. Analyze and review again.')
       const prior = clone(before.data[proposal.toolId]); const next = prior.concat(clone(proposal.drawings))
+      const patch = { [proposal.toolId]: next }
+      if (proposal.points.length) patch[proposal.pointToolId] = clone(before.data[proposal.pointToolId]).concat(clone(proposal.points))
       try {
         // setState accepts partial data: other tools, toolbar, and history are
         // not rewritten. Existing objects under the receiving tool are appended.
-        si.setState(JSON.stringify({ data: { [proposal.toolId]: next } }))
+        si.setState(JSON.stringify({ data: patch }))
         const after = JSON.parse(si.getState())
-        if (!same(after.data, { ...before.data, [proposal.toolId]: next })) throw new Error('Native state did not retain the proposed geometry or unrelated objects.')
+        if (!same(after.data, { ...before.data, ...patch })) throw new Error('Native state did not retain the proposed geometry or unrelated objects.')
       } catch (error) {
         try {
           si.setState(JSON.stringify(before))
@@ -105,7 +125,7 @@
         throw new Error('Import failed; the previous drawing was restored. ' + error.message)
       }
       return { toolId: proposal.toolId, kind: proposal.kind, inputRevision: revision, strokeCount: proposal.drawings.length,
-        firstObjectIndex: prior.length, strokeIds: proposal.strokeIds }
+        firstObjectIndex: prior.length, strokeIds: proposal.strokeIds, pointCount: proposal.points.length }
     }
     return { invalidate, propose, commit }
   }

@@ -105,7 +105,8 @@
     for (const c of components(ink, w, h)) {
       const [x0, y0, x1, y1] = c.bounds
       if (c.pixels.length < 45 || Math.hypot(x1 - x0, y1 - y0) < 18) {
-        c.pixels.forEach(p => { ink[p] = 0 }); rejected.push({ bounds: c.bounds, pixels: c.pixels.length })
+        const center = c.pixels.reduce((sum, p) => [sum[0] + p % w, sum[1] + Math.floor(p / w)], [0, 0]).map(v => v / c.pixels.length)
+        c.pixels.forEach(p => { ink[p] = 0 }); rejected.push({ bounds: c.bounds, pixels: c.pixels.length, center })
       }
     }
     return { gray, neutral, grid, dark, color, ink, rejected }
@@ -360,7 +361,7 @@
       topology: { stroke_count: strokes.length, component_count: traced.components.length, components: traced.components, junctions },
       status: !strokes.length ? 'abstained' : warnings.length ? 'needs_review' : 'automatic', warnings, assistance,
       uncertainty: { confidence_kind: 'heuristic_not_probability', regions,
-        rejected_small_components: masks.rejected.map(c => ({ bounds_pixel: [toSource(c.bounds.slice(0, 2)), toSource(c.bounds.slice(2))], pixels_processing: c.pixels })),
+        rejected_small_components: masks.rejected.map(c => ({ bounds_pixel: [toSource(c.bounds.slice(0, 2)), toSource(c.bounds.slice(2))], pixels_processing: c.pixels, centroid_pixel: toSource(c.center) })),
         assumptions: ['Upright, approximately straight-on graph paper.', 'Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.', 'Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required.'] }
     }
     Geometry.validate(geometry)

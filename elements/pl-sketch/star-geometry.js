@@ -133,6 +133,17 @@
       if (s.closed && distance(s.vertices[0].pixel, s.vertices.at(-1).pixel) > 1e-8) fail('loop closure')
     }
     if (membership.size !== ids.size || [...membership.keys()].some(id => !ids.has(id)) || g.topology.stroke_count !== ids.size || g.topology.component_count !== componentIds.size) fail('topology counts')
+    if (g.points !== undefined) {
+      if (!Array.isArray(g.points) || g.points.length > 1000) fail('isolated points')
+      const pointIds = new Set()
+      for (const p of g.points) {
+        if (!p || typeof p.id !== 'string' || !p.id || ids.has(p.id) || pointIds.has(p.id) || p.kind !== 'point' || !inside(p.pixel)) fail('isolated point structure')
+        pointIds.add(p.id)
+        const expected = pixelToGraph(p.pixel, f, c)
+        if (expected ? (!pair(p.graph) || distance(p.graph, expected) > 1e-7) : p.graph !== null) fail('isolated point coordinate')
+      }
+      if (g.points.length && g.status === 'automatic') fail('unreviewed automatic points')
+    }
     for (const comp of g.topology.components) {
       const connected = new Set([comp.stroke_ids[0]])
       let changed = true

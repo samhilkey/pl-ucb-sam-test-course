@@ -555,7 +555,7 @@
   min-height: 0;
   padding: 16px 20px;
   overflow: auto;
-  max-height: calc(100dvh - 230px);
+  flex: 1 1 auto;
 }
 
 .star-auto-upload {
@@ -569,7 +569,12 @@
 }
 
 .star-auto-status {
-  margin-top: 12px;
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-left: 4px solid #1665a5;
+  background: #eef5fb;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .star-auto-comparison {
@@ -620,7 +625,11 @@
 }
 
 .star-automatic-dialog button:focus-visible,
-.star-automatic-dialog input:focus-visible {
+.star-automatic-dialog input:focus-visible,
+.star-automatic-dialog select:focus-visible,
+.star-automatic-dialog summary:focus-visible,
+.star-automatic-dialog canvas:focus-visible,
+.star-automatic-dialog svg [tabindex]:focus-visible {
   outline: 3px solid #1665c1;
   outline-offset: 2px;
 }
@@ -631,7 +640,6 @@
   }
 
   .star-auto-body {
-    max-height: calc(100dvh - 290px);
     padding: 12px;
   }
 
@@ -639,4 +647,49 @@
   .star-automatic-dialog footer {
     padding: 12px;
   }
+}
+
+
+/* Review controls are confined to the automatic dialog; the traced-photo
+   workspace and its established presentation layout are unchanged. */
+.star-auto-progress, .star-auto-method { color: #4c5966; font-size: 13px; }
+.star-auto-progress span { padding: 0 8px; }
+.star-auto-method { margin: 6px 0 0; }
+.star-auto-figure-title, .star-auto-preview-title { font-weight: 600; margin: 0 0 6px; }
+.star-auto-figure-title { color: #273440; }
+.star-auto-preview-title { color: #075aaa; }
+.star-auto-comparison figcaption { font-size: 13px; color: #4c5966; }
+.star-auto-photo-name { overflow-wrap: anywhere; }
+.star-auto-calibration, .star-auto-selection { padding: 12px; border: 1px solid #c8d4df; border-radius: 6px; margin: 12px 0; }
+.star-auto-calibration p, .star-auto-selection p { margin-bottom: 10px; }
+.star-auto-axis-controls, .star-auto-marker-buttons, .star-auto-selection-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+.star-auto-axis-controls label { margin: 0; }
+.star-auto-axis-controls input { width: 86px; padding: 6px; border: 1px solid #8e9ba8; border-radius: 4px; }
+.star-auto-marker-buttons [aria-pressed=true] { border: 2px solid #075aaa !important; background: #e5f1fc; }
+.star-auto-marker-help { font-size: 13px; }
+.star-auto-lines { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 8px; padding: 10px 0; }
+.star-auto-lines label { margin: 0; }
+.star-auto-lines select, .star-auto-mark select { font: inherit; min-height: 42px; color: #202a34; }
+.star-auto-marks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 14px; }
+.star-auto-marks h6 { grid-column: 1 / -1; margin: 0; }
+.star-auto-mark { display: flex; align-items: center; gap: 10px; margin: 0; }
+.star-auto-mark canvas { width: 64px; height: 64px; flex-shrink: 0; border: 1px solid #aebbc7; }
+.star-auto-mark span { flex: 1; min-width: 0; }
+.star-auto-geometry-review { display: block; margin: 16px 0 8px; }
+.star-auto-technical { border-top: 1px solid #dce2e8; padding-top: 10px; margin-top: 16px; color: #4c5966; }
+.star-auto-technical summary, .star-auto-line-details summary { cursor: pointer; padding: 6px 0; }
+.star-auto-technical p { margin: 10px 0; }
+.star-auto-disabled-help { margin: 0; font-size: 13px; color: #4c5966; }
+.star-auto-ack-label { display: block; margin: 0 0 8px; }
+.star-auto-secondary { display: flex; flex-wrap: wrap; gap: 6px; margin-right: auto; }
+.star-auto-actions { align-items: center; }
+.star-auto-preview [role=button] { cursor: pointer; }
+.star-auto-preview [role=button]:focus-visible { stroke: #075aaa; stroke-opacity: .35; outline: none; }
+@media (max-width: 700px) {
+  .star-automatic-dialog { font-size: 14px; }
+  .star-auto-actions { gap: 8px; }
+  .star-auto-next, .star-auto-confirm { width: 100%; }
+  .star-auto-secondary { width: 100%; }
+  .star-auto-secondary .btn { flex: 1; font-size: 12px; padding: 6px; }
+  .star-auto-marks { grid-template-columns: 1fr; }
 }

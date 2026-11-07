@@ -1,0 +1,40 @@
+{
+  "metrics": {
+    "expected_strokes": 1,
+    "extracted_paths": 1,
+    "extracted_components": 1,
+    "branch_count_correct": true,
+    "missing_strokes": 0,
+    "partially_missing_strokes": 1,
+    "false_connections": 0,
+    "spurious_paths": 0,
+    "reference_to_geometry_p95_pixel": 11.68839736660122,
+    "geometry_to_reference_p95_pixel": 11.900150018140804,
+    "reference_centerline_coverage_within_3px": [
+      0.5394036208732694
+    ],
+    "endpoint_max_error_pixel": 4.155739368188691,
+    "corner_error_pixel": 5.842408391887308,
+    "axis_origin_error_pixel": null,
+    "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+    "coverage_5px_per_branch": [
+      0.6474973375931843
+    ],
+    "coverage_8px_per_branch": [
+      0.7928647497337593
+    ],
+    "predicted_length_farther_than_5px_fraction": 0.35319148936170214,
+    "marked_corner_errors_pixel": [
+      5.842408391887308,
+      10.300453405291357
+    ]
+  },
+  "adapter": {
+    "anchor_max_source_pixel_error": 4.547473508864641e-13,
+    "rendered_to_selected_cv_max_source_pixel": 0.00008038315991880547,
+    "source_dot_error_pixel": 2.726721177993315,
+    "exact_state_after_save_grade_refresh": true,
+    "manual_edit_saved_and_restored": true
+  },
+  "photo_screen": false
+}

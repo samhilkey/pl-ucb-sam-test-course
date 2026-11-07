@@ -12,6 +12,7 @@
       "star-photo.js",
       "star-geometry.js",
       "star-recognition.js",
+      "star-cv-assisted.js",
       "star-native.js",
       "star-assisted.js",
       "star-providers.js",

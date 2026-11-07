@@ -1,0 +1,102 @@
+{
+  "step": "4G-3",
+  "version": "4g3.1",
+  "checked_at": "2026-11-07T02:11:36.806024+00:00",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "parent_commit": "1e937a75a260d39572e3cc743a1d9d353631e5b2",
+  "initial_working_tree": "clean",
+  "readiness": "CONDITIONAL PASS: functional reviewed import passes; CV pixel fidelity fails frozen Step4F screen; manual-assisted demo remains preferred",
+  "tests": [
+    {
+      "command": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs tests/star-gemini-pilot.test.cjs tests/star-gemini-once.test.cjs tests/star-gemini-observation.test.cjs tests/star-cv-assisted.test.cjs",
+      "passed": 116,
+      "failed": 0,
+      "evidence": "results/node-tests.log",
+      "external_requests": "None; Gemini transport tests are offline mocks"
+    },
+    {
+      "command": "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-assisted-server.py -v'",
+      "passed": 5,
+      "failed": 0,
+      "evidence": "results/server-tests.log"
+    },
+    {
+      "command": "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh PL_PHOTO_TEST_OUTPUT=/private/tmp/star-step4g3/native-regression node tests/star-native-browser.cjs",
+      "passed": 165,
+      "failed": 0,
+      "evidence": "results/native-regression.json"
+    },
+    {
+      "command": "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node tests/star-cv-assisted-browser.cjs",
+      "passed": 69,
+      "failed": 0,
+      "evidence": "results/results.json"
+    },
+    {
+      "command": "node benchmarks/photo-graphs/multi-method/step-4g-3/evaluate.cjs /private/tmp/star-step4g3/acceptance",
+      "functional_result": "PASS",
+      "photo_fidelity_result": "FAIL, retained unchanged and disclosed",
+      "evidence": "results/evaluation.json"
+    },
+    {
+      "command": "node benchmarks/photo-graphs/multi-method/step-4f/run-browser.cjs",
+      "passed": 84,
+      "failed": 0,
+      "evidence": "results/frozen-demo-acceptance.json"
+    },
+    {
+      "command": "node benchmarks/photo-graphs/multi-method/step-4f/evaluate.cjs /private/tmp/star-step4f/acceptance",
+      "result": "All three original acceptance screens pass",
+      "evidence": "results/frozen-demo-evaluation.json"
+    },
+    {
+      "command": "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node benchmarks/photo-graphs/multi-method/step-4g-3/check-offline-backup.cjs",
+      "passed": 7,
+      "failed": 0,
+      "evidence": "results/offline-backup.json"
+    },
+    {
+      "command": "node --check elements/pl-sketch/star-automatic.js; node --check tests/star-cv-assisted-browser.cjs; git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "reproduction": "Run browser scripts from /private/tmp using absolute script paths, with the installed PL_PHOTO_TEST_CLI. Browser plugin unavailable; Playwright CLI used. Set PL_PHOTO_TEST_OUTPUT to a new temporary folder for independent replay. Start unchanged Step4F package viewer on 127.0.0.1:3020 before backup replay.",
+  "pixel_extraction_unchanged_from_step4g1": true,
+  "old_manual_workspace_and_frozen_benchmark_assets_changed": false,
+  "new_gemini_inference_requests": 0,
+  "g2_one_request_journal_preserved": true,
+  "provider_requests_seen": [],
+  "application_console_errors": [],
+  "viewports": [
+    "Chrome desktop 1440x1100",
+    "Chrome presentation viewport 1280x720",
+    "Chrome mobile 390x844"
+  ],
+  "environment": {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "device_pixel_ratio": 1,
+    "screen": [
+      1280,
+      720
+    ]
+  },
+  "physical_projector": "NOT TESTED; exact human checklist in PRESENTER.md",
+  "safari": "NOT TESTED this step; use tested Chrome-engine route",
+  "self_review": {
+    "branching_and_uncertain_inputs": "Blocked until valid explicit review; unsupported cases retain manual fallback",
+    "native_object_preservation": "Curves and points append atomically with rollback and snapshot guards",
+    "geometry_claim": "CV-assisted native fidelity passes; source-photo fidelity is not upgraded by importing it",
+    "unnecessary_changes": "No preprocessing/model changes, no manual workspace/server/question edits, no frozen benchmark replacement",
+    "deployment": "Local only; no push/merge/course modification"
+  },
+  "initial_failures": "results/initial-findings.json",
+  "recommendation": "Freeze the manual-assisted demonstration and recorded backup. Only a human presenter/projector rehearsal is needed before November 9; any next implementation or inference phase needs separate approval.",
+  "artifact_json_and_js_syntax": "PASS",
+  "g2_request_count_still": 1,
+  "credential_safety_check": {
+    "result": "PASS",
+    "evidence": "results/credential-check.json",
+    "value_or_fragment_or_credential_hash_saved": false,
+    "authenticated_provider_requests": 0
+  }
+}
