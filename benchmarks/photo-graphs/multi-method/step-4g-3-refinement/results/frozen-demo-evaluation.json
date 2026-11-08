@@ -1,0 +1,175 @@
+{
+  "step": "4F",
+  "local_functional_acceptance_passed": true,
+  "browser_assertions": 84,
+  "new_independent_paper_drawings": 1,
+  "new_case_tuned_recognition_code": false,
+  "reference_quality": "Frozen single-agent visual annotations; not independent expert ground truth",
+  "outcomes": [
+    {
+      "id": "new-paper-01",
+      "trial": "desktop",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "acceptance_passed": true,
+      "classification": "fully manually traced; any source point separately placed manually",
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 3.4951056567696734,
+        "geometry_to_reference_p95_pixel": 3.493940899018997,
+        "reference_centerline_coverage_within_3px": [
+          0.9126730564430245
+        ],
+        "endpoint_max_error_pixel": 1.414148371719365,
+        "corner_error_pixel": 1.0000511605403233,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "reference_coverage_5px": [
+        1
+      ],
+      "reference_coverage_8px": [
+        1
+      ],
+      "marked_corner_errors_pixel": [
+        1.0000511605403233,
+        2.845739693628074
+      ],
+      "native_max_anchor_endpoint_error_source_pixel": 2.5421149729252077e-13,
+      "native_max_rendered_drift_source_pixel": 0.00012387559108364063,
+      "source_points": [
+        {
+          "source": [
+            821,
+            294
+          ],
+          "reconstructed": [
+            821.0000043667568,
+            293.9999641699424
+          ],
+          "error_pixel": 0.000036095174073629506,
+          "method": "separate manual native Other marks placement; not stroke import or automatic recognition"
+        }
+      ],
+      "independently_calibrated_numeric_accuracy": false,
+      "annotation_quality": "Approximate evaluator-only visual centerline, single agent observer; not independent blinded human ground truth",
+      "prepared_original_variant_url": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=342",
+      "point_rendering_note": "Point center preserved with manual native placement. Ink width/color/arrow decorations are not reconstructed."
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "trial": "branches",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "acceptance_passed": true,
+      "classification": "fully manually traced; any source point separately placed manually",
+      "metrics": {
+        "expected_strokes": 2,
+        "extracted_paths": 2,
+        "extracted_components": 2,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 1.863217390165441,
+        "geometry_to_reference_p95_pixel": 2.0580133242972893,
+        "reference_centerline_coverage_within_3px": [
+          1,
+          1
+        ],
+        "endpoint_max_error_pixel": 11.180370333893139,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "reference_coverage_5px": [
+        1,
+        1
+      ],
+      "reference_coverage_8px": [
+        1,
+        1
+      ],
+      "marked_corner_errors_pixel": [],
+      "native_max_anchor_endpoint_error_source_pixel": 1.2710574864626038e-13,
+      "native_max_rendered_drift_source_pixel": 0.000053555510675522185,
+      "source_points": [],
+      "independently_calibrated_numeric_accuracy": false,
+      "annotation_quality": "approximate visual centerlines, not independent expert annotations",
+      "prepared_original_variant_url": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=343",
+      "point_rendering_note": "Point center preserved with manual native placement. Ink width/color/arrow decorations are not reconstructed."
+    },
+    {
+      "id": "new-paper-01",
+      "trial": "presentation",
+      "viewport": [
+        1280,
+        720
+      ],
+      "acceptance_passed": true,
+      "classification": "fully manually traced; any source point separately placed manually",
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 3.4950996101697633,
+        "geometry_to_reference_p95_pixel": 3.4939351047263636,
+        "reference_centerline_coverage_within_3px": [
+          0.9126730564430245
+        ],
+        "endpoint_max_error_pixel": 1.4142533709545981,
+        "corner_error_pixel": 1.000059910911616,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "reference_coverage_5px": [
+        1
+      ],
+      "reference_coverage_8px": [
+        1
+      ],
+      "marked_corner_errors_pixel": [
+        1.000059910911616,
+        2.845795354527263
+      ],
+      "native_max_anchor_endpoint_error_source_pixel": 3.2155493553843715e-13,
+      "native_max_rendered_drift_source_pixel": 0.00010565261461738089,
+      "source_points": [
+        {
+          "source": [
+            821,
+            294
+          ],
+          "reconstructed": [
+            820.9918960264839,
+            294.0001735446204
+          ],
+          "error_pixel": 0.00810583151099792,
+          "method": "separate manual native Other marks placement; not stroke import or automatic recognition"
+        }
+      ],
+      "independently_calibrated_numeric_accuracy": false,
+      "annotation_quality": "Approximate evaluator-only visual centerline, single agent observer; not independent blinded human ground truth",
+      "prepared_original_variant_url": "http://localhost:3000/pl/course/1/question/255/preview/?variant_id=344",
+      "point_rendering_note": "Point center preserved with manual native placement. Ink width/color/arrow decorations are not reconstructed."
+    }
+  ],
+  "source_photo_accuracy_not_general_recognition_accuracy": true
+}

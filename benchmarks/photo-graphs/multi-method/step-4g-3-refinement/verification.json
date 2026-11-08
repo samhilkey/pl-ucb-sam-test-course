@@ -1,0 +1,245 @@
+{
+  "step": "4G-3 final UI refinement",
+  "version": "4g3-refinement.1",
+  "client_date": "2026-11-08",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "parent_commit": "d1cb0fc4e8d3637535b2d6c3a70c6b60404f9faa",
+  "initial_working_tree": "clean",
+  "functional_acceptance": "PASS",
+  "demo_readiness": "CONDITIONAL PASS: use unchanged manual-assisted route; physical presenter/projector checks pending",
+  "browser_path": {
+    "classification": "Browser plugin not available",
+    "method": "Existing Playwright CLI / local Chrome engine",
+    "no_new_browser_dependencies": true
+  },
+  "qa": {
+    "page_identity": "PASS: native-browser regression verifies local question title; correct 254/255 routes and meaningful canvases exercised",
+    "not_blank": "PASS: real photo and native geometry/control interactions completed",
+    "framework_overlay": "PASS: inspected browser screenshots show meaningful PrairieLearn UI without error overlays",
+    "console_health": "PASS: no collected application console/page errors",
+    "screenshot_evidence": "PASS: centered, calibration, visual selection, contextual points, responsive and native results",
+    "interaction_proof": "PASS: original JPEG review to native import, editing, Save & Grade and exact restoration"
+  },
+  "tests": [
+    {
+      "command": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs tests/star-gemini-pilot.test.cjs tests/star-gemini-once.test.cjs tests/star-gemini-observation.test.cjs tests/star-cv-assisted.test.cjs",
+      "passed": 123,
+      "failed": 0,
+      "evidence": "results/node-tests.log",
+      "provider_tests": "offline fixtures/mocks only"
+    },
+    {
+      "command": "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-assisted-server.py -v'",
+      "passed": 5,
+      "failed": 0,
+      "evidence": "results/server-tests.log"
+    },
+    {
+      "command": "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh PL_PHOTO_TEST_OUTPUT=/private/tmp/star-step4g3-refinement/native-regression node tests/star-native-browser.cjs",
+      "passed": 165,
+      "failed": 0,
+      "evidence": "results/native-regression.json"
+    },
+    {
+      "command": "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node tests/star-cv-assisted-browser.cjs",
+      "passed": 139,
+      "failed": 0,
+      "evidence": "results/results.json"
+    },
+    {
+      "command": "node benchmarks/photo-graphs/multi-method/step-4g-3-refinement/evaluate.cjs",
+      "result": "PASS unchanged selected geometry/native encoding; FAIL unchanged source-photo fidelity screen",
+      "evidence": "results/evaluation.json"
+    },
+    {
+      "command": "node benchmarks/photo-graphs/multi-method/step-4f/run-browser.cjs",
+      "passed": 84,
+      "failed": 0,
+      "evidence": "results/frozen-demo-acceptance.json"
+    },
+    {
+      "command": "node benchmarks/photo-graphs/multi-method/step-4f/evaluate.cjs /private/tmp/star-step4f/acceptance",
+      "result": "All three original manual acceptance screens pass",
+      "evidence": "results/frozen-demo-evaluation.json"
+    },
+    {
+      "command": "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node benchmarks/photo-graphs/multi-method/step-4g-3-refinement/capture-before.cjs",
+      "result": "Read-only parent UI capture; no branch/assets changed",
+      "evidence": "results/before-layout.json"
+    }
+  ],
+  "reproduction": "Run browser scripts from /private/tmp with absolute script paths and installed PL_PHOTO_TEST_CLI. Outputs default to /private/tmp/star-step4g3-refinement; set PL_PHOTO_TEST_OUTPUT to another temporary directory for separate replay. STAR_CV_REVIEW_PHOTO can explicitly select the equivalent tracked PNG when the original JPEG path is unavailable; the committed acceptance used the JPEG.",
+  "layouts": [
+    {
+      "label": "Desktop detection",
+      "x": 170,
+      "y": 75.75,
+      "width": 1100,
+      "height": 948.484375,
+      "vw": 1440,
+      "vh": 1100,
+      "zoom": 1,
+      "position": "fixed",
+      "inset": "0px",
+      "margin": "75.75px 170px 75.7656px",
+      "maxHeight": "990px",
+      "bodyScrolls": false,
+      "footerVisible": true
+    },
+    {
+      "label": "Presentation detection",
+      "x": 90,
+      "y": 36,
+      "width": 1100,
+      "height": 648,
+      "vw": 1280,
+      "vh": 720,
+      "zoom": 1,
+      "position": "fixed",
+      "inset": "0px",
+      "margin": "36px 90px",
+      "maxHeight": "648px",
+      "bodyScrolls": true,
+      "footerVisible": true
+    },
+    {
+      "label": "Mobile detection",
+      "x": 12,
+      "y": 42.203125,
+      "width": 366,
+      "height": 759.59375,
+      "vw": 390,
+      "vh": 844,
+      "zoom": 1,
+      "position": "fixed",
+      "inset": "0px",
+      "margin": "42.2031px 12px",
+      "maxHeight": "759.6px",
+      "bodyScrolls": true,
+      "footerVisible": true
+    },
+    {
+      "label": "Desktop calibration",
+      "x": 170,
+      "y": 55,
+      "width": 1100,
+      "height": 990,
+      "vw": 1440,
+      "vh": 1100,
+      "zoom": 1,
+      "position": "fixed",
+      "inset": "0px",
+      "margin": "55px 170px",
+      "maxHeight": "990px",
+      "bodyScrolls": true,
+      "footerVisible": true
+    },
+    {
+      "label": "Presentation calibration",
+      "x": 90,
+      "y": 36,
+      "width": 1100,
+      "height": 648,
+      "vw": 1280,
+      "vh": 720,
+      "zoom": 1,
+      "position": "fixed",
+      "inset": "0px",
+      "margin": "36px 90px",
+      "maxHeight": "648px",
+      "bodyScrolls": true,
+      "footerVisible": true
+    },
+    {
+      "label": "Mobile calibration",
+      "x": 12,
+      "y": 42.203125,
+      "width": 366,
+      "height": 759.59375,
+      "vw": 390,
+      "vh": 844,
+      "zoom": 1,
+      "position": "fixed",
+      "inset": "0px",
+      "margin": "42.2031px 12px",
+      "maxHeight": "759.6px",
+      "bodyScrolls": true,
+      "footerVisible": true
+    },
+    {
+      "label": "Mobile point review",
+      "x": 12,
+      "y": 42.203125,
+      "width": 366,
+      "height": 759.59375,
+      "vw": 390,
+      "vh": 844,
+      "zoom": 1,
+      "position": "fixed",
+      "inset": "0px",
+      "margin": "42.2031px 12px",
+      "maxHeight": "759.6px",
+      "bodyScrolls": true,
+      "footerVisible": true
+    },
+    {
+      "label": "Mobile visual selection",
+      "x": 12,
+      "y": 42.203125,
+      "width": 366,
+      "height": 759.59375,
+      "vw": 390,
+      "vh": 844,
+      "zoom": 1,
+      "position": "fixed",
+      "inset": "0px",
+      "margin": "42.2031px 12px",
+      "maxHeight": "759.6px",
+      "bodyScrolls": true,
+      "footerVisible": true
+    }
+  ],
+  "environment": {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "device_pixel_ratio": 1,
+    "screen": [
+      1280,
+      720
+    ]
+  },
+  "physical_projector": "NOT TESTED; human checklist in REVIEW-WALKTHROUGH.md",
+  "safari_voiceover": "NOT TESTED; keyboard and linked accessibility labels only",
+  "original_jpeg": {
+    "name": "IMG_1670.jpg",
+    "sha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b"
+  },
+  "decoded_source_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+  "unchanged_pixels": true,
+  "inference_requests": 0,
+  "external_provider_requests": [],
+  "g2_request_journal_unchanged": true,
+  "preserved": {
+    "native_adapter": true,
+    "geometry_schema_validator": true,
+    "recognizer": true,
+    "manual_photo_workspace_and_builder": true,
+    "server_and_question_config": true,
+    "prior_demo_package_and_benchmark_outputs": true
+  },
+  "scope": "No push/merge/deploy or new recognizer; no Step4G-4 started",
+  "remaining_risks": [
+    "Existing CV geometry errors and missing ink",
+    "Small crossing connector can still need zoom/keyboard/manual correction",
+    "Open endpoint/arrow semantics and individual-vertex editing unsupported",
+    "Unsubmitted photo drafts not restored after refresh",
+    "Actual presenter/projector timing/readability and VoiceOver/Safari pending"
+  ],
+  "credential_safety": {
+    "result": "PASS",
+    "configured_key_checked": true,
+    "evidence": "results/credential-check.json",
+    "key_value_fragment_or_hash_saved": false,
+    "provider_requests": 0
+  },
+  "static_validation": "JS syntax, artifact JSON and git diff whitespace checks pass"
+}

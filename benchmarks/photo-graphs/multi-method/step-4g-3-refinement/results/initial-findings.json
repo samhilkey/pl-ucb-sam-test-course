@@ -1,0 +1,29 @@
+{
+  "fixed": [
+    {
+      "finding": "SVG preview stayed visible above the point crop",
+      "cause": "SVGElement.hidden assignment did not reflect an HTML hidden attribute",
+      "fix": "Toggle the actual hidden attribute; assert pixel preview is hidden during contextual point review"
+    },
+    {
+      "finding": "Before-capture evidence helper encountered Invalid URL",
+      "cause": "Inline scripts have empty src values",
+      "fix": "Filter empty entries before looking up read-only parent asset routes"
+    }
+  ],
+  "centering_before": {
+    "marginRules": [],
+    "x": 0,
+    "y": 0,
+    "width": 1180,
+    "height": 983.390625,
+    "vw": 1440,
+    "vh": 1100,
+    "position": "fixed",
+    "inset": "0px",
+    "margin": "0px",
+    "maxHeight": "1076px"
+  },
+  "final_functional_failures": 0,
+  "known_fidelity_failure": "Unchanged selected CV pixels still fail the frozen Step4F photo-fidelity screen; manual fallback retained"
+}

@@ -1,0 +1,212 @@
+{
+  "step": "4G-3 final UI refinement",
+  "unchanged_extracted_and_selected_pixels_from_parent": true,
+  "source_file": {
+    "name": "IMG_1670.jpg",
+    "sha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b"
+  },
+  "source_photo": {
+    "path": "results/decoded-source.png",
+    "sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+    "original_jpeg_sha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b",
+    "same_photo_during_correction": true
+  },
+  "reference": {
+    "path": "../step-4f/reference.json",
+    "sha256": "af71f7a609f02b28a5142dc2cbcc5386ac14f6651a923ee3a137fb0bf791f094",
+    "status": "Approximate evaluator-only visual centerline, single agent observer; not independent blinded human ground truth",
+    "uncertainty_pixel": 6,
+    "used_for_inference_or_correction": false
+  },
+  "cv_assisted": {
+    "classification": "CV extraction plus human axes/scale, keep/exclude classification, dot review and final confirmation; no retracing",
+    "selected_stroke_ids": [
+      "stroke-10",
+      "stroke-11",
+      "stroke-12"
+    ],
+    "excluded_strokes": 41,
+    "original_vertex_observations": 45,
+    "final_vertices": 43,
+    "joined_shared_endpoints": 2,
+    "invented_vertices": 0,
+    "smoothing_or_fit_calls": 0,
+    "branches": 1,
+    "isolated_dots": 1,
+    "calibration": {
+      "origin": [
+        780.5780346820809,
+        784.5497326203208
+      ],
+      "xMarker": [
+        1226.1579961464354,
+        774.7924098671726
+      ],
+      "yMarker": [
+        748.0539499036609,
+        299.9360358806279
+      ],
+      "xValue": 3,
+      "yValue": 3
+    },
+    "mathematical_axis_accuracy": "Not independently measured; source axes are hand drawn and user calibration is an explicit assisted action, not recognition.",
+    "metrics": {
+      "expected_strokes": 1,
+      "extracted_paths": 1,
+      "extracted_components": 1,
+      "branch_count_correct": true,
+      "missing_strokes": 0,
+      "partially_missing_strokes": 1,
+      "false_connections": 0,
+      "spurious_paths": 0,
+      "reference_to_geometry_p95_pixel": 11.68839736660122,
+      "geometry_to_reference_p95_pixel": 11.900150018140804,
+      "reference_centerline_coverage_within_3px": [
+        0.5394036208732694
+      ],
+      "endpoint_max_error_pixel": 4.155739368188691,
+      "corner_error_pixel": 5.842408391887308,
+      "axis_origin_error_pixel": null,
+      "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+      "coverage_5px_per_branch": [
+        0.6474973375931843
+      ],
+      "coverage_8px_per_branch": [
+        0.7928647497337593
+      ],
+      "predicted_length_farther_than_5px_fraction": 0.35319148936170214,
+      "marked_corner_errors_pixel": [
+        5.842408391887308,
+        10.300453405291357
+      ]
+    },
+    "step4f_photo_fidelity_screen": {
+      "passed": false,
+      "thresholds": "Frozen Step4F screen: p95 <= 8px both directions, >=90% coverage at 8px, corners/endpoints/dot <=8px; 6px approximate annotation uncertainty",
+      "implication": "Successful reviewed import is not a claim of high-fidelity automatic reconstruction."
+    },
+    "native_adapter_fidelity": {
+      "anchor_max_source_pixel_error": 4.687428401686771e-13,
+      "rendered_to_selected_cv_max_source_pixel": 0.00008766670794498681,
+      "source_dot_error_pixel": 2.726721177993385,
+      "exact_state_after_save_grade_refresh": true,
+      "manual_edit_saved_and_restored": true
+    },
+    "automatic_recognition_success": false,
+    "native_import_passed": true
+  },
+  "comparisons": {
+    "cv_automatic": {
+      "result": "0/3 existing real-photo baseline; no automatic native import",
+      "same_image_metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 44,
+        "extracted_components": 12,
+        "branch_count_correct": false,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 1,
+        "false_connections": 0,
+        "spurious_paths": 40,
+        "reference_to_geometry_p95_pixel": 11.68839736660122,
+        "geometry_to_reference_p95_pixel": 382.50966351790123,
+        "reference_centerline_coverage_within_3px": [
+          0.5394036208732694
+        ],
+        "endpoint_max_error_pixel": 4.155739368188691,
+        "corner_error_pixel": 5.842408391887308,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+        "coverage_5px_per_branch": [
+          0.6474973375931843
+        ],
+        "coverage_8px_per_branch": [
+          0.7928647497337593
+        ],
+        "predicted_length_farther_than_5px_fraction": 0.7702295822356041,
+        "marked_corner_errors_pixel": [
+          5.842408391887308,
+          10.300453405291357
+        ]
+      }
+    },
+    "gemini_automatic": {
+      "result": "0/1 prior bounded pilot; no new requests",
+      "same_image_metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 4,
+        "extracted_components": null,
+        "branch_count_correct": false,
+        "missing_strokes": 1,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 2,
+        "reference_to_geometry_p95_pixel": 503.3514086848272,
+        "geometry_to_reference_p95_pixel": 346.43976255932847,
+        "reference_centerline_coverage_within_3px": [
+          0.013312034078807242
+        ],
+        "endpoint_max_error_pixel": 594.1960955778824,
+        "corner_error_pixel": 233.90810161257775,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+        "adapter_bookkeeping_component_count": 4,
+        "reference_coverage_5px": [
+          0.022364217252396165
+        ],
+        "reference_coverage_8px": [
+          0.03514376996805112
+        ],
+        "marked_corner_errors_pixel": [
+          233.90810161257775,
+          348.4623365587736
+        ],
+        "predicted_length_farther_than_5px_fraction": 0.9855322080606269,
+        "isolated_point": {
+          "expected": 1,
+          "predicted": 1,
+          "errors_pixel": [
+            304.7261065284693
+          ],
+          "retained_in_sidecar": true,
+          "native_import_unsupported": true
+        }
+      }
+    },
+    "manually_traced": {
+      "result": "Prior Step4F manually assisted evidence, separate from recognition",
+      "metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 3.4950648957343518,
+        "geometry_to_reference_p95_pixel": 3.493900046689322,
+        "reference_centerline_coverage_within_3px": [
+          0.9126730564430245
+        ],
+        "endpoint_max_error_pixel": 1.414148371719365,
+        "corner_error_pixel": 0.9999555617368785,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error.",
+        "coverage_5px_per_branch": [
+          1
+        ],
+        "coverage_8px_per_branch": [
+          1
+        ],
+        "predicted_length_farther_than_5px_fraction": 0,
+        "marked_corner_errors_pixel": [
+          0.9999555617368785,
+          2.845739693628074
+        ]
+      }
+    }
+  },
+  "browser_acceptance_assertions_passed": 139,
+  "inference_requests_this_step": 0,
+  "conclusion": "Student selection removes spurious axes/labels and recovers a single connected branch plus its dot. It preserves selected CV pixels exactly, including their geometric errors; the frozen Step4F photo-fidelity screen still fails. Prefer the unchanged fully traced route for the November 9 demo, with CV-assisted reuse an explicitly reviewed option."
+}

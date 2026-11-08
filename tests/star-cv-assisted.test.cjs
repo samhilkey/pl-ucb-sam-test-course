@@ -104,3 +104,52 @@ test('isolated-point schema rejects inconsistent coordinates, duplicate IDs and 
   const duplicate = structuredClone(g); duplicate.points[0].id = duplicate.strokes[0].id; assert.throws(() => Geometry.validate(duplicate), /isolated point structure/)
   const automatic = structuredClone(g); automatic.status = 'automatic'; assert.throws(() => Geometry.validate(automatic), /unreviewed automatic points/)
 })
+// New review UI replaces redundant acknowledgments with complete explicit choices.
+function explicitArgs (id) {
+  const a = args(id); delete a.reviewed; delete a.axisValues.confirmed
+  return { ...a, reviewBasis: 'explicit_decisions' }
+}
+test('explicit decisions validate calibration and native proposals without acknowledgment flags', () => {
+  const a = explicitArgs(); const g = Assisted.fromSelection(a)
+  assert.equal(g.provenance.review.reviewBasis, 'explicit_decisions')
+  assert.equal(Object.hasOwn(g.provenance.review, 'reviewed'), false)
+  assert.equal(Object.hasOwn(g.provenance.review.axisValues, 'confirmed'), false)
+  assert.equal(Assisted.validate(g), g)
+  assert.equal(Native.prepare(g, config, 'ink', { data: canvas().value() }, { cvAssisted: true }).drawings.length, 1)
+})
+test('explicit review still blocks missing line/point choices, uncertain points and fabricated flags', () => {
+  const a = explicitArgs()
+  for (const change of [{ strokeDecisions: {} }, { markDecisions: {} }, { reviewed: true }, { axisValues: { ...a.axisValues, confirmed: true } }, { markDecisions: { ...a.markDecisions, 'mark-1': 'unsure' } }]) assert.throws(() => Assisted.fromSelection({ ...a, ...change }))
+  assert.throws(() => Assisted.fromSelection({ ...a, reviewBasis: 'guessed' }))
+})
+test('checkbox-free calibration rejects incomplete, zero, off-photo, collinear and unstable transforms', () => {
+  const a = explicitArgs(); const image = a.source.image; const c = a.axisValues
+  for (const change of [{ origin: undefined }, { xMarker: [image.width, 100] }, { yMarker: c.origin }, { xValue: 0 }, { yValue: NaN }, { xValue: Infinity }, { xValue: 1e-320 }, { yMarker: [310, 300] }]) assert.throws(() => Assisted.calibration(image, { ...c, ...change }))
+  assert.deepEqual(Assisted.calibration(image, { ...c, xValue: 4 }).scale.x_unit_vector_pixel, [20, 0])
+})
+function splitSource () {
+  const a = explicitArgs('sharp-v'); const source = a.source; const original = source.strokes[0]; const k = Math.floor(original.vertices.length / 2)
+  const make = (id, vs) => ({ ...structuredClone(original), id, vertices: vs.map((v, i) => ({ ...structuredClone(v), endpoint: i === 0 || i === vs.length - 1 })) })
+  source.strokes = [make('part-a', original.vertices.slice(0, k + 1)), make('part-b', original.vertices.slice(k))]
+  source.topology.stroke_count = 2; source.topology.components[0].stroke_ids = ['part-a', 'part-b']
+  Geometry.validate(source); return source
+}
+test('visual grouping combines only a unique exact degree-two continuation and never edits source pixels', () => {
+  const source = splitSource(); const before = structuredClone(source); const groups = Assisted.candidates(source)
+  assert.deepEqual(groups.map(g => g.stroke_ids), [['part-a', 'part-b']]); assert.deepEqual(source, before)
+})
+test('visual grouping never pairs through an uncertain crossing or joins disconnected branches', () => {
+  const source = explicitArgs('touching-junction').source
+  for (const j of source.topology.junctions) for (const group of Assisted.candidates(source)) assert.ok(j.stroke_ids.filter(id => group.stroke_ids.includes(id)).length <= 1)
+  assert.equal(Assisted.candidates(explicitArgs('two-branches').source).length, 2)
+})
+test('all real-photo source paths remain available when safe grouping is ambiguous', () => {
+  const source = require('../benchmarks/photo-graphs/multi-method/step-4g-1/results/IMG_1670--prediction.json')
+  const groups = Assisted.candidates(source)
+  assert.equal(groups.length, 44); assert.deepEqual(groups.flatMap(g => g.stroke_ids).sort(), source.strokes.map(s => s.id).sort())
+  assert.ok(groups.every(g => g.stroke_ids.length === 1))
+})
+test('previously recorded Step4G-3 assisted geometry still validates without rewriting evidence', () => {
+  const old = require('../benchmarks/photo-graphs/multi-method/step-4g-3/results/cv-assisted-geometry.json')
+  assert.equal(Assisted.validate(old), old)
+})

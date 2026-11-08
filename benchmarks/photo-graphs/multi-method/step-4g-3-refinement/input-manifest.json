@@ -1,0 +1,92 @@
+{
+  "version": "4g3-refinement.1",
+  "parent_commit": "d1cb0fc4e8d3637535b2d6c3a70c6b60404f9faa",
+  "case": "IMG_1670",
+  "source_file": {
+    "name": "IMG_1670.jpg",
+    "path": "/Users/alaiasun/Library/Mobile Documents/com~apple~CloudDocs/D. UC Berkeley/Courses/CS294 STAR FA2026/Experiment/examples/IMG_1670.jpg",
+    "sha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b",
+    "provenance": "Existing user-owned physical-paper graph photograph; user authorized local testing",
+    "external_transmission_this_step": false,
+    "new_held_out_image": false
+  },
+  "decoded_source": {
+    "path": "results/decoded-source.png",
+    "sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+    "prior_canonical_pixels_identical": true
+  },
+  "test_kind": "Actual local JPEG upload plus human pointer/keyboard classification replay; CV-assisted, not automatic success",
+  "human_choices": {
+    "axisValues": {
+      "origin": [
+        780.5780346820809,
+        784.5497326203208
+      ],
+      "xMarker": [
+        1226.1579961464354,
+        774.7924098671726
+      ],
+      "yMarker": [
+        748.0539499036609,
+        299.9360358806279
+      ],
+      "xValue": 3,
+      "yValue": 3
+    },
+    "strokeDecisions": {
+      "stroke-10": "keep",
+      "stroke-11": "keep",
+      "stroke-12": "keep",
+      "stroke-1": "exclude",
+      "stroke-2": "exclude",
+      "stroke-3": "exclude",
+      "stroke-4": "exclude",
+      "stroke-5": "exclude",
+      "stroke-6": "exclude",
+      "stroke-7": "exclude",
+      "stroke-8": "exclude",
+      "stroke-9": "exclude",
+      "stroke-13": "exclude",
+      "stroke-14": "exclude",
+      "stroke-15": "exclude",
+      "stroke-16": "exclude",
+      "stroke-17": "exclude",
+      "stroke-18": "exclude",
+      "stroke-19": "exclude",
+      "stroke-20": "exclude",
+      "stroke-21": "exclude",
+      "stroke-22": "exclude",
+      "stroke-23": "exclude",
+      "stroke-24": "exclude",
+      "stroke-25": "exclude",
+      "stroke-26": "exclude",
+      "stroke-27": "exclude",
+      "stroke-28": "exclude",
+      "stroke-29": "exclude",
+      "stroke-30": "exclude",
+      "stroke-31": "exclude",
+      "stroke-32": "exclude",
+      "stroke-33": "exclude",
+      "stroke-34": "exclude",
+      "stroke-35": "exclude",
+      "stroke-36": "exclude",
+      "stroke-37": "exclude",
+      "stroke-38": "exclude",
+      "stroke-39": "exclude",
+      "stroke-40": "exclude",
+      "stroke-41": "exclude",
+      "stroke-42": "exclude",
+      "stroke-43": "exclude",
+      "stroke-44": "exclude"
+    },
+    "markDecisions": {
+      "mark-1": "point",
+      "mark-2": "exclude",
+      "mark-3": "exclude",
+      "mark-4": "exclude"
+    },
+    "reviewBasis": "explicit_decisions"
+  },
+  "inference_requests": 0,
+  "references": "Prior frozen Step4F approximate visual centerlines; evaluator only"
+}

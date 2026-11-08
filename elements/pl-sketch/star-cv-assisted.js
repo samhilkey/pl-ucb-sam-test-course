@@ -7,10 +7,13 @@
   const key = p => p.join(',')
   function calibration (image, values) {
     const inside = p => pair(p) && p[0] >= 0 && p[1] >= 0 && p[0] < image.width && p[1] < image.height
-    const { origin, xMarker, yMarker, xValue, yValue, confirmed } = values || {}
-    if (!confirmed || ![origin, xMarker, yMarker].every(inside) || !Number.isFinite(xValue) || !Number.isFinite(yValue) || !xValue || !yValue) throw new Error('Place O, X and Y on the photo, enter both nonzero axis values, and confirm the calibration.')
+    const { origin, xMarker, yMarker, xValue, yValue } = values || {}
+    for (const [name, p] of [['O', origin], ['X', xMarker], ['Y', yMarker]]) if (!inside(p)) throw new Error(`Place ${name} on its reference position inside the photo.`)
+    for (const [name, value] of [['X', xValue], ['Y', yValue]]) if (!Number.isFinite(value) || !value) throw new Error(`Enter a finite, nonzero value for ${name}.`)
     const x = xMarker.map((v, i) => (v - origin[i]) / xValue); const y = yMarker.map((v, i) => (v - origin[i]) / yValue)
     const det = x[0] * y[1] - x[1] * y[0]
+    if (![...x, ...y, det].every(Number.isFinite)) throw new Error('Use axis values that give a stable scale.')
+    if (!Math.hypot(...x) || !Math.hypot(...y)) throw new Error('Move X and Y away from O, onto their own axes.')
     if (Math.abs(det) < 1e-6 || Math.abs(det) / (Math.hypot(...x) * Math.hypot(...y)) < 0.05) throw new Error('Move the axis markers apart; they cannot lie on one straight line.')
     const frame = { status: 'detected', origin_pixel: origin.slice(), axes: {}, grid: {} }
     const scale = { status: 'calibrated', origin_graph: [0, 0], x_unit_vector_pixel: x, y_unit_vector_pixel: y, axes: {} }
@@ -19,7 +22,38 @@
       frame.grid[axis] = { status: 'unknown', spacing_pixel: null, lines_pixel: [] }
       scale.axes[axis] = { status: 'known', source: 'student_corrected', intersection_value: 0, labels: [] }
     }
+    for (const [p, expected] of [[origin, [0, 0]], [xMarker, [xValue, 0]], [yMarker, [0, yValue]]]) {
+      const actual = Geometry.pixelToGraph(p, frame, scale)
+      if (!pair(actual) || actual.some((v, i) => Math.abs(v - expected[i]) > 1e-7 * Math.max(1, Math.abs(expected[i])))) throw new Error('Move the axis references apart and check their values.')
+    }
     return { frame, scale }
+  }
+  // Presentation groups only: never pair branches through a crossing or snap
+  // nearby ends. The original paths/vertices remain the import authority.
+  function candidates (source) {
+    Geometry.validate(source)
+    const nodes = new Map(); const blocked = new Set(source.topology.junctions.map(j => key(j.pixel)))
+    for (const [i, s] of source.strokes.entries()) for (const p of [s.vertices[0].pixel, s.vertices.at(-1).pixel]) {
+      const k = key(p); if (!nodes.has(k)) nodes.set(k, []); nodes.get(k).push(i)
+    }
+    const used = new Set(); const result = []
+    for (let start = 0; start < source.strokes.length; start++) {
+      if (used.has(start)) continue
+      const indices = [start]; used.add(start)
+      for (let q = 0; q < indices.length; q++) {
+        const s = source.strokes[indices[q]]; if (s.closed) continue
+        for (const v of [s.vertices[0], s.vertices.at(-1)]) {
+          const k = key(v.pixel); const edges = nodes.get(k)
+          if (edges.length !== 2 || blocked.has(k)) continue
+          for (const i of edges) if (!used.has(i) && !source.strokes[i].closed) { used.add(i); indices.push(i) }
+        }
+      }
+      const ends = indices.flatMap(i => [source.strokes[i].vertices[0].pixel, source.strokes[i].vertices.at(-1).pixel]).filter(p => nodes.get(key(p)).length !== 2 || blocked.has(key(p)))
+      // A cycle is not presented as a safely recognized branch.
+      const groups = indices.length > 1 && ends.length === 0 ? indices.map(i => [i]) : [indices]
+      for (const group of groups) result.push({ id: 'candidate-' + (result.length + 1), stroke_ids: group.sort((a, b) => a - b).map(i => source.strokes[i].id) })
+    }
+    return result
   }
   function marks (source) {
     const list = source.uncertainty.rejected_small_components || []
@@ -64,10 +98,16 @@
     }
     return result
   }
-  function fromSelection ({ source, photoSha256, axisValues, strokeDecisions, markDecisions, reviewed, inputRevision }) {
+  function fromSelection ({ source, photoSha256, axisValues, strokeDecisions, markDecisions, reviewed, reviewBasis, inputRevision }) {
     Geometry.validate(source)
     if (source.provenance || source.points?.length || !/^[a-f0-9]{64}$/.test(photoSha256 || '')) throw new Error('Only the original CV pixel proposal and its photo identity can be continued.')
-    if (!reviewed) throw new Error('Check the selected branches, gaps, endpoints and dots before previewing.')
+    if (reviewBasis === 'explicit_decisions') {
+      if (reviewed !== undefined || axisValues?.confirmed !== undefined) throw new Error('Explicit line and point decisions do not use acknowledgment flags.')
+    } else if (reviewBasis !== undefined || reviewed !== true || axisValues?.confirmed !== true) {
+      // Preserve validation of already-recorded Step4G-3 proposals. New UI
+      // records omit both flags and rely on complete explicit decisions below.
+      throw new Error('The recorded legacy proposal has not completed its review.')
+    }
     const known = ['ambiguous_axes', 'uncertain_grid', 'unknown_x_scale', 'unknown_y_scale', 'ink_junction', 'axis_ink_overlap', 'clipped_ink', 'no_supported_ink', 'unclassified_small_marks']
     if (source.warnings.some(w => !known.includes(w.code)) || source.uncertainty.regions.some(r => !['ink_junction', 'axis_ink_overlap'].includes(r.reason))) throw new Error('This proposal has unsupported uncertainty. Use manual tracing.')
     const { frame, scale } = calibration(source.image, axisValues); const paths = branches(source, strokeDecisions)
@@ -80,7 +120,7 @@
       strokes, points, topology: { stroke_count: strokes.length, component_count: strokes.length, components: strokes.map(s => ({ id: s.id, stroke_ids: [s.id] })), junctions: [] },
       warnings: [], assistance: [], uncertainty: { confidence_kind: 'heuristic_not_probability', regions: [], assumptions: ['CV-assisted: human calibration and explicit keep/exclude review.', 'Only exact shared endpoints are joined, with no inserted coordinates, smoothing or retracing.', 'Small-mark positions come from CV component pixels and require student review.'] },
       provenance: { method: 'cv_assisted', automatically_recognized: false, curve_source: 'cv_pixels_no_retrace', photo_sha256: photoSha256,
-        source_geometry: clone(source), review: { axisValues: clone(axisValues), strokeDecisions: clone(strokeDecisions), markDecisions: clone(markDecisions), reviewed: true },
+        source_geometry: clone(source), review: { axisValues: clone(axisValues), strokeDecisions: clone(strokeDecisions), markDecisions: clone(markDecisions), ...(reviewBasis ? { reviewBasis } : { reviewed: true }) },
         resolved_source_warning_codes: source.warnings.map(w => w.code) } })
   }
   function validate (geometry) {
@@ -90,7 +130,7 @@
     if (JSON.stringify(geometry) !== JSON.stringify(expected)) throw new Error('The CV-assisted geometry changed after review. Review the original detected lines again.')
     return geometry
   }
-  const api = { calibration, marks, branches, fromSelection, validate }
+  const api = { calibration, candidates, marks, branches, fromSelection, validate }
   if (typeof module !== 'undefined' && module.exports) module.exports = api
   else root.StarCVAssisted = api
 })(typeof window !== 'undefined' ? window : globalThis)

@@ -22,23 +22,19 @@ window.StarAutomatic = (function () {
         <section class="star-auto-calibration" aria-label="Confirm axes and scale" hidden>
           <h6>Confirm axes and scale</h6><p>On your photo, place O at (0, 0), X at a known value on the x-axis, and Y at a known value on the y-axis. Set each axis independently.</p>
           <div class="star-auto-axis-controls"><div class="star-auto-marker-buttons"><button type="button" class="btn btn-light border" data-marker="origin">Place O</button><button type="button" class="btn btn-light border" data-marker="xMarker">Place X</button><button type="button" class="btn btn-light border" data-marker="yMarker">Place Y</button></div><label>X value <input class="star-auto-x-value" type="number" step="any" placeholder="e.g. 3"></label><label>Y value <input class="star-auto-y-value" type="number" step="any" placeholder="e.g. 3"></label></div>
-          <p class="star-auto-marker-help">Choose a marker, then click its position on the photo. Arrow keys move a placed marker by one photo pixel; Shift moves ten.</p>
-          <label><input class="star-auto-calibration-ack" type="checkbox"> O and both axis values match my photo.</label>
+          <p class="star-auto-marker-help">Choose a marker, then click its position on the photo. On the photo, Enter places a new marker at the center for you to adjust. Arrow keys move it; Shift moves ten pixels.</p>
         </section>
+        <section class="star-auto-selection" aria-label="Review your detected graph" hidden>
+          <h6>Review your detected graph</h6><p>Click or tap a highlighted line on your photo to keep it. Click again to remove it. Keep separate lines and gaps as drawn.</p>
+          <div class="star-auto-selection-actions"><button type="button" class="btn btn-light border star-auto-undo" disabled>Undo last change</button><span class="star-auto-selection-count" aria-live="polite">Some lines need your review.</span></div>
+        </section>
+        <section class="star-auto-remaining" aria-label="Review other detected lines" hidden><h6>Do any of these other lines belong to your graph?</h6><p>The orange lines still need a decision. Check their locations on your photo. Nothing is removed until you choose.</p><div><button type="button" class="btn btn-light border star-auto-dismiss-remaining">Not part of my graph</button><button type="button" class="btn btn-link star-auto-keep-editing">Keep editing lines</button></div></section>
         <div class="star-auto-comparison" hidden>
-          <figure><div class="star-auto-figure-title">Original photograph</div><canvas class="star-auto-photo" tabindex="0" aria-label="Original photograph. During calibration, click to place the selected axis marker; arrow keys adjust it."></canvas><figcaption><span class="star-auto-photo-name"></span><label><input class="star-auto-overlay" type="checkbox"> Show detected lines on photo</label></figcaption></figure>
-          <figure class="star-auto-proposal" hidden><div class="star-auto-preview-title">Pixel-space preview · scale unconfirmed</div><svg class="star-auto-preview" role="group" aria-label="Detected geometry"></svg><figcaption class="star-auto-preview-caption"></figcaption></figure>
+          <figure><div class="star-auto-figure-title">Original photograph</div><div class="star-auto-photo-viewport"><div class="star-auto-photo-stage"><canvas class="star-auto-photo" tabindex="0" aria-label="Original photograph. During calibration, click to place the selected axis marker; arrow keys adjust it."></canvas><svg class="star-auto-photo-overlay" role="group" aria-label="Select graph lines on your photograph"></svg></div></div><figcaption><span class="star-auto-photo-name"></span><label><input class="star-auto-overlay" type="checkbox"> Show detected lines on photo</label><button type="button" class="btn btn-light border star-auto-zoom" hidden>Zoom photo</button></figcaption></figure>
+          <figure class="star-auto-proposal" hidden><div class="star-auto-preview-title">Pixel-space preview · scale unconfirmed</div><svg class="star-auto-preview" role="group" aria-label="Detected geometry"></svg><section class="star-auto-point-review" aria-label="Check separate points" hidden><p id="${id}-point-question" class="star-auto-point-question" tabindex="-1" aria-describedby="${id}-point-progress">Is this a point on your graph?</p><p id="${id}-point-progress" class="star-auto-point-progress" aria-live="polite"></p><canvas class="star-auto-point-context" aria-label="Zoomed photo region around the highlighted possible point"></canvas><div class="star-auto-point-actions" role="group" aria-labelledby="${id}-point-question"><button type="button" class="btn btn-light border" data-point-decision="point">Keep as point</button><button type="button" class="btn btn-light border" data-point-decision="exclude">Not part of graph</button><button type="button" class="btn btn-link star-auto-point-manual">Not sure / Correct manually</button></div></section><figcaption class="star-auto-preview-caption"></figcaption></figure>
         </div>
-        <section class="star-auto-selection" aria-label="Review branches and small marks" hidden>
-          <h6>Choose the graph ink</h6><p>Click a line in the pixel preview to keep it. Click again to exclude it. Keep connecting graph segments; exclude axes, labels and grid lines. Only exact shared endpoints join.</p>
-          <div class="star-auto-selection-actions"><button type="button" class="btn btn-light border star-auto-exclude-rest">Exclude remaining lines</button><span class="star-auto-selection-count" aria-live="polite"></span></div>
-          <details class="star-auto-line-details"><summary>Review lines individually</summary><div class="star-auto-lines"></div></details>
-          <div class="star-auto-marks"></div>
-          <label class="star-auto-geometry-review"><input class="star-auto-reviewed" type="checkbox"> My selected branches, gaps, corners, endpoints and filled dots match the entire photo.</label>
-          <p>Missing ink, open circles and arrow semantics need manual correction. Selection does not improve the detected line positions.</p>
-        </section>
         <p class="star-auto-edit-help" hidden>After import, use Select to move or delete a branch or dot. Existing drawings will be kept. Individual vertex editing is not available.</p>
-        <details class="star-auto-technical" hidden><summary>Technical details & recognition uncertainty</summary><p class="star-auto-diagnostics"></p><ul class="star-auto-warnings" aria-label="Recognition issues"></ul></details>
+        <details class="star-auto-technical" hidden><summary>Advanced details</summary><p class="star-auto-diagnostics"></p><ul class="star-auto-warnings" aria-label="Recognition issues"></ul><details class="star-auto-line-details" hidden><summary>Advanced line editing</summary><div class="star-auto-lines"></div></details></details>
       </div>
       <footer><label class="star-auto-ack-label" hidden><input class="star-auto-ack" type="checkbox" disabled> This matches the marks on my paper, including any mistakes.</label>
         <p class="star-auto-disabled-help" role="status">A photo and reviewed geometry are required before import.</p>
@@ -50,47 +46,65 @@ window.StarAutomatic = (function () {
     const session = StarNative.createSession(si, config)
     const cvSession = StarNative.createSession(si, config, undefined, { cvAssisted: true })
     let revision = 0; let proposal = null; let geometry = null; let photo = null; let file = null; let busy = false
-    let phase = 'empty'; let method = 'CV automatic'; let hash = ''; let marker = 'origin'; let axes = {}; let decisions = {}; let markDecisions = {}; let smallMarks = []
+    let phase = 'empty'; let method = 'CV automatic'; let hash = ''; let marker = 'origin'; let axes = {}; let decisions = {}; let markDecisions = {}; let smallMarks = []; let groups = []; let history = []; let activePoint = 0; let activeCandidate = 0
     const cvEnabled = () => config.assistedPhotoGeometry === true && method === 'CV automatic' && geometry?.strokes.length > 0
-    const axisValues = () => ({ ...axes, xValue: q('.star-auto-x-value').value === '' ? NaN : Number(q('.star-auto-x-value').value), yValue: q('.star-auto-y-value').value === '' ? NaN : Number(q('.star-auto-y-value').value), confirmed: q('.star-auto-calibration-ack').checked })
-    const build = () => StarCVAssisted.fromSelection({ source: geometry, photoSha256: hash, axisValues: axisValues(), strokeDecisions: decisions, markDecisions, reviewed: q('.star-auto-reviewed').checked, inputRevision: revision })
+    const axisValues = () => ({ ...axes, xValue: q('.star-auto-x-value').value === '' ? NaN : Number(q('.star-auto-x-value').value), yValue: q('.star-auto-y-value').value === '' ? NaN : Number(q('.star-auto-y-value').value) })
+    const build = () => StarCVAssisted.fromSelection({ source: geometry, photoSha256: hash, axisValues: axisValues(), strokeDecisions: decisions, markDecisions, reviewBasis: 'explicit_decisions', inputRevision: revision })
     function invalidate () {
       session.invalidate(++revision); cvSession.invalidate(revision); proposal = null
       q('.star-auto-ack').checked = false; q('.star-auto-ack').disabled = true; q('.star-auto-confirm').disabled = true
     }
     function clear () {
-      invalidate(); geometry = null; smallMarks = []; phase = 'empty'; hash = ''; axes = {}; decisions = {}; markDecisions = {}
+      invalidate(); geometry = null; smallMarks = []; phase = 'empty'; hash = ''; axes = {}; decisions = {}; markDecisions = {}; groups = []; history = []; activePoint = 0; activeCandidate = 0
       q('.star-auto-comparison').hidden = true; q('.star-auto-proposal').hidden = true; q('.star-auto-edit-help').hidden = true
       q('.star-auto-warnings').replaceChildren(); q('.star-auto-preview').replaceChildren(); q('.star-auto-technical').hidden = true
-      q('.star-auto-calibration-ack').checked = false; q('.star-auto-reviewed').checked = false
       q('.star-auto-x-value').value = ''; q('.star-auto-y-value').value = ''; q('.star-auto-reject').disabled = true
-      q('.star-auto-technical').open = false; q('.star-auto-line-details').open = false
+      q('.star-auto-technical').open = false; q('.star-auto-line-details').open = false; setZoom(false)
       update()
     }
+    const reviewing = () => ['selection', 'remainder', 'points'].includes(phase)
+    const unreviewed = () => geometry.strokes.filter(s => !decisions[s.id])
+    const kept = () => Object.values(decisions).some(d => d === 'keep')
     function update (error) {
       q('.star-auto-calibration').hidden = phase !== 'calibration'
-      q('.star-auto-selection').hidden = phase !== 'selection'
-      q('.star-auto-back').hidden = !['selection', 'preview'].includes(phase) || method !== 'CV-assisted'
+      q('.star-auto-selection').hidden = !reviewing()
+      q('.star-auto-selection h6').textContent = phase === 'points' ? 'Check separate points' : 'Review your detected graph'
+      q('.star-auto-selection p').textContent = phase === 'points' ? 'Choose a highlighted mark to see it in context. Keep it, leave it out, or correct manually.' : 'Click or tap a highlighted line on your photo to keep it. Click again to remove it. Keep separate lines and gaps as drawn.'
+      q('.star-auto-remaining').hidden = phase !== 'remainder'
+      q('.star-auto-line-details').hidden = !reviewing()
+      q('.star-auto-back').hidden = !['selection', 'remainder', 'points', 'preview'].includes(phase) || method !== 'CV-assisted'
+      q('.star-auto-back').textContent = phase === 'selection' ? 'Edit axes' : phase === 'preview' && smallMarks.length ? 'Edit points' : 'Edit lines'
+      q('.star-auto-undo').disabled = !history.length
+      q('.star-auto-zoom').hidden = !['selection', 'remainder'].includes(phase)
       q('.star-auto-ack-label').hidden = phase !== 'preview'
       q('.star-auto-correct').hidden = typeof onAssist !== 'function'; q('.star-auto-correct').disabled = !file || busy
-      const next = q('.star-auto-next'); next.hidden = !(['calibration', 'selection'].includes(phase) || phase === 'detected' && cvEnabled()); next.disabled = busy
+      const next = q('.star-auto-next'); next.hidden = !(['calibration', 'selection', 'remainder', 'points'].includes(phase) || phase === 'detected' && cvEnabled()); next.disabled = busy
       q('.star-auto-confirm').hidden = phase !== 'preview'
       const manualPrimary = phase === 'detected' && !cvEnabled() && !proposal && !busy
       q('.star-auto-correct').classList.toggle('btn-primary', manualPrimary); q('.star-auto-correct').classList.toggle('btn-light', !manualPrimary)
-      let help = 'A photo and reviewed geometry are required before import.'
-      if (phase === 'detected') help = cvEnabled() ? 'Continue to confirm axes and review the detected ink. Nothing is ready to import yet.' : 'This result needs manual tracing or a clearer photo before import.'
-      if (phase === 'detected') next.textContent = 'Continue with detected strokes'
+      let help = 'Choose a photo to start. Nothing will be added without your confirmation.'
+      if (phase === 'detected') { next.textContent = 'Continue with detected strokes'; help = cvEnabled() ? 'Set the axes, then review which lines and points belong to your graph.' : 'Use manual tracing or choose a clearer photo.' }
       if (phase === 'calibration') {
         next.textContent = 'Review detected lines'
-        try { StarCVAssisted.calibration(geometry.image, axisValues()); help = 'Axes confirmed. Continue to choose the graph ink.' } catch (e) { help = e.message; next.disabled = true }
+        try { StarCVAssisted.calibration(geometry.image, axisValues()); help = 'Axes and scale are valid. Continue to review your graph.' } catch (e) { help = e.message; next.disabled = true }
         for (const b of dialog.querySelectorAll('[data-marker]')) { b.setAttribute('aria-pressed', String(b.dataset.marker === marker)); b.textContent = (axes[b.dataset.marker] ? 'Move ' : 'Place ') + ({ origin: 'O', xMarker: 'X', yMarker: 'Y' })[b.dataset.marker] }
       }
-      if (phase === 'selection') {
-        next.textContent = 'Preview graph'
-        try { build(); help = 'Review complete. Preview the calibrated graph before importing.' } catch (e) { help = e.message; next.disabled = true }
-        q('.star-auto-selection-count').textContent = `${Object.values(decisions).filter(v => v === 'keep').length} kept · ${geometry.strokes.length - Object.keys(decisions).length} not reviewed`
+      if (reviewing()) {
+        const pending = unreviewed().length
+        q('.star-auto-selection-count').textContent = phase === 'points' ? (smallMarks.some(m => !markDecisions[m.id]) ? 'Each possible point needs a decision.' : 'Your point choices are saved.') : pending ? 'Some lines need your review.' : 'Your line choices are saved.'
+        if (phase === 'points') {
+          next.textContent = 'Preview graph'
+          try { build(); help = 'Point choices complete. Preview the graph before adding it.' } catch (_) { help = 'Check each highlighted possible point, or choose Correct manually.'; next.disabled = true }
+        } else if (!kept()) { next.textContent = 'Review other lines'; help = 'Choose the lines that belong to your graph on the photo.'; next.disabled = true } else if (pending) {
+          next.textContent = phase === 'remainder' ? 'Check separate points' : 'Review other lines'
+          help = phase === 'remainder' ? 'Decide whether the orange lines belong to your graph, or keep editing.' : 'Review the other lines before continuing. No unchosen line is silently removed.'
+          next.disabled = phase === 'remainder'
+        } else {
+          next.textContent = smallMarks.length ? 'Check separate points' : 'Preview graph'
+          try { StarCVAssisted.branches(geometry, decisions); help = smallMarks.length ? 'Line choices complete. Check the separate points next.' : 'Line choices complete. Preview your graph.' } catch (e) { help = e.message; next.disabled = true }
+        }
       }
-      if (phase === 'preview') help = q('.star-auto-ack').checked ? 'Ready to add the reviewed graph. Existing drawings will be kept.' : 'Compare both views, then check the confirmation box to enable import.'
+      if (phase === 'preview') help = q('.star-auto-ack').checked ? 'Ready to add your reviewed graph. Existing drawings will be kept.' : 'Compare both views, then check the confirmation box to enable import.'
       q('.star-auto-disabled-help').textContent = error || help
       q('.star-auto-confirm').disabled = busy || !proposal || !q('.star-auto-ack').checked
       q('.star-auto-method').textContent = method + ' · experimental · processed on this device'
@@ -99,12 +113,12 @@ window.StarAutomatic = (function () {
       if (!photo) return
       canvas.width = photo.width; canvas.height = photo.height
       const ctx = canvas.getContext('2d'); ctx.putImageData(photo, 0, 0)
-      if (geometry && q('.star-auto-overlay').checked) for (const s of geometry.strokes) {
+      if (geometry && !reviewing() && q('.star-auto-overlay').checked) for (const s of geometry.strokes) {
         if (decisions[s.id] === 'exclude') continue
         ctx.strokeStyle = decisions[s.id] === 'keep' ? '#075aaa' : '#b45b00'; ctx.lineWidth = Math.max(2, photo.width / 400)
         ctx.beginPath(); s.vertices.forEach((v, i) => i ? ctx.lineTo(...v.pixel) : ctx.moveTo(...v.pixel)); ctx.stroke()
       }
-      if (method === 'CV-assisted') {
+      if (method === 'CV-assisted' && ['calibration', 'preview'].includes(phase)) {
         const colors = { origin: '#111827', xMarker: '#a43116', yMarker: '#075aaa' }
         for (const [name, p] of Object.entries(axes)) {
           ctx.strokeStyle = colors[name]; ctx.fillStyle = colors[name]; ctx.lineWidth = photo.width / 300
@@ -113,12 +127,13 @@ window.StarAutomatic = (function () {
         }
       }
     }
-    function svgElement (tag, attrs) {
+    function svgElement (tag, attrs, target = q('.star-auto-preview')) {
       const el = document.createElementNS('http://www.w3.org/2000/svg', tag)
       for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v)
-      q('.star-auto-preview').append(el); return el
+      target.append(el); return el
     }
     function preview (prepared) {
+      q('.star-auto-photo-overlay').replaceChildren(); q('.star-auto-point-review').hidden = true; q('.star-auto-preview').removeAttribute('hidden')
       const svg = q('.star-auto-preview'); svg.replaceChildren(); svg.setAttribute('viewBox', `0 0 ${config.width} ${config.height}`)
       svgElement('rect', { width: config.width, height: config.height, fill: '#fff' })
       const o = StarNative.graphToNative(config, [0, 0])
@@ -138,57 +153,103 @@ window.StarAutomatic = (function () {
       q('.star-auto-preview-title').textContent = 'Calibrated native-graph preview'
       q('.star-auto-preview-caption').textContent = method === 'CV-assisted' ? 'Your axes and selected CV pixels, mapped to the native canvas. Check positions and missing ink; no line was retraced or fitted.' : 'Validated geometry in native canvas coordinates. Compare every branch with your photo.'
     }
-    function chooseLine (id, value) {
-      invalidate(); if (value) decisions[id] = value; else delete decisions[id]
-      q('.star-auto-reviewed').checked = false
-      const select = [...dialog.querySelectorAll('.star-auto-lines select')].find(s => s.dataset.stroke === id); if (select) select.value = value
-      pixelPreview(); drawPhoto(); update()
+    function remember () {
+      history.push(JSON.parse(JSON.stringify({ decisions, markDecisions, activePoint, phase })))
+      if (history.length > 60) history.shift()
+      invalidate()
     }
+    function chooseLine (id, value) {
+      remember(); if (value) decisions[id] = value; else delete decisions[id]
+      renderReview()
+    }
+    function chooseCandidate (group) {
+      remember(); const value = group.stroke_ids.every(id => decisions[id] === 'keep') ? 'exclude' : 'keep'
+      for (const id of group.stroke_ids) decisions[id] = value
+      renderReview()
+    }
+    function setZoom (zoomed) {
+      q('.star-auto-photo-stage').style.width = zoomed ? '200%' : '100%'
+      q('.star-auto-zoom').setAttribute('aria-pressed', String(zoomed)); q('.star-auto-zoom').textContent = zoomed ? 'Show whole photo' : 'Zoom photo'
+    }
+    function renderReview () { selectionControls(); drawPhoto(); pixelPreview(); update() }
     function pixelPreview () {
-      const svg = q('.star-auto-preview'); svg.replaceChildren(); svg.setAttribute('viewBox', `0 0 ${photo.width} ${photo.height}`)
+      const svg = q('.star-auto-preview'); const overlay = q('.star-auto-photo-overlay')
+      svg.replaceChildren(); overlay.replaceChildren()
+      for (const target of [svg, overlay]) target.setAttribute('viewBox', `0 0 ${photo.width} ${photo.height}`)
       svgElement('rect', { width: photo.width, height: photo.height, fill: '#fff' })
-      for (const [i, s] of geometry.strokes.entries()) {
-        const d = s.vertices.map((v, j) => (j ? 'L' : 'M') + v.pixel.join(' ')).join(' ')
-        const selected = decisions[s.id]; const attrs = { d, stroke: selected === 'keep' ? '#075aaa' : selected === 'exclude' ? '#c4cbd2' : '#80521d', 'stroke-width': Math.max(3, photo.width / 330), fill: 'none', 'pointer-events': 'none' }
-        if (selected === 'exclude') attrs['stroke-dasharray'] = '8 8'
-        svgElement('path', { ...attrs, 'data-pixel-stroke': s.id })
-        if (phase === 'selection') {
-          const hit = svgElement('path', { d, stroke: 'transparent', 'stroke-width': Math.max(18, photo.width / 70), fill: 'none', tabindex: 0, role: 'button', 'aria-label': `Detected line ${i + 1}: ${selected || 'not reviewed'}`, 'aria-pressed': String(selected === 'keep'), 'data-stroke': s.id })
-          const title = document.createElementNS('http://www.w3.org/2000/svg', 'title'); title.textContent = `Line ${i + 1}: ${selected || 'not reviewed'}. Click or press Space to keep/exclude.`; hit.append(title)
-          const act = () => chooseLine(s.id, selected === 'keep' ? 'exclude' : 'keep')
-          hit.addEventListener('click', act); hit.addEventListener('keydown', e => { if (['Enter', ' '].includes(e.key)) { e.preventDefault(); act(); const replacement = [...svg.querySelectorAll('[data-stroke]')].find(p => p.dataset.stroke === s.id); replacement?.focus() } })
+      for (const group of groups) {
+        const states = group.stroke_ids.map(id => decisions[id]); const state = states.every(s => s === 'keep') ? 'keep' : states.every(s => s === 'exclude') ? 'exclude' : 'unreviewed'
+        const paths = geometry.strokes.filter(s => group.stroke_ids.includes(s.id))
+        for (const path of paths) {
+          const choice = decisions[path.id]
+          const d = path.vertices.map((v, j) => (j ? 'L' : 'M') + v.pixel.join(' ')).join(' ')
+          const attrs = { d, stroke: choice === 'keep' ? '#075aaa' : choice === 'exclude' ? '#718293' : '#a45a08', 'stroke-width': Math.max(3, photo.width / 280), fill: 'none', 'pointer-events': 'none', 'stroke-opacity': choice === 'exclude' ? 0.3 : 1 }
+          if (choice === 'exclude') attrs['stroke-dasharray'] = '10 8'
+          for (const target of [svg, overlay]) if (target === svg || reviewing() && q('.star-auto-overlay').checked) svgElement('path', { ...attrs, 'data-pixel-stroke': path.id }, target)
+        }
+        if (!['selection', 'remainder'].includes(phase)) continue
+        const d = paths.map(s => s.vertices.map((v, i) => (i ? 'L' : 'M') + v.pixel.join(' ')).join(' ')).join(' ')
+        for (const target of [overlay, svg]) {
+          const i = groups.indexOf(group)
+          const hit = svgElement('path', { d, stroke: 'transparent', 'stroke-width': photo.width / 65, fill: 'none', 'pointer-events': 'stroke', tabindex: target === overlay && i === activeCandidate ? 0 : -1, role: 'button', 'aria-label': `Detected line ${i + 1}: ${state}. Press Space to keep or remove. Arrow keys move between lines.`, 'aria-pressed': String(state === 'keep'), 'data-candidate': group.id }, target)
+          hit.addEventListener('focus', () => { activeCandidate = i })
+          const act = () => { chooseCandidate(group); const replacement = q('.star-auto-photo-overlay').querySelector(`[data-candidate="${group.id}"]`); replacement?.focus({ preventScroll: true }) }
+          hit.addEventListener('click', act)
+          hit.addEventListener('keydown', e => {
+            if (['Enter', ' '].includes(e.key)) { e.preventDefault(); act() } else if (['ArrowRight', 'ArrowDown', 'ArrowLeft', 'ArrowUp', 'Home', 'End'].includes(e.key)) {
+              e.preventDefault(); activeCandidate = e.key === 'Home' ? 0 : e.key === 'End' ? groups.length - 1 : (i + (['ArrowRight', 'ArrowDown'].includes(e.key) ? 1 : -1) + groups.length) % groups.length
+              for (const p of overlay.querySelectorAll('[data-candidate]')) p.setAttribute('tabindex', p.dataset.candidate === groups[activeCandidate].id ? 0 : -1)
+              overlay.querySelector(`[data-candidate="${groups[activeCandidate].id}"]`).focus()
+            }
+          })
         }
       }
-      if (phase === 'selection') for (const m of smallMarks) svgElement('circle', { cx: m.pixel[0], cy: m.pixel[1], r: photo.width / 110, fill: markDecisions[m.id] === 'point' ? '#075aaa' : '#fff', stroke: '#80521d', 'stroke-width': photo.width / 500 })
-      q('.star-auto-proposal').hidden = false
-      q('.star-auto-preview-title').textContent = 'Pixel-space preview · ' + (method === 'CV-assisted' ? 'detected ink selection' : 'scale unconfirmed')
-      q('.star-auto-preview-caption').textContent = phase === 'selection' ? 'Blue: keep. Brown: not reviewed. Dashed gray: excluded. This view uses photo pixels; preview the calibrated graph before import.' : 'Detected photo pixels only. Axes, scale, branches and small marks may still need confirmation; this is not an import preview.'
+      if (phase === 'points') {
+        for (const [i, m] of smallMarks.entries()) {
+          const selected = i === activePoint
+          const circle = svgElement('circle', { cx: m.pixel[0], cy: m.pixel[1], r: photo.width / (selected ? 38 : 65), fill: 'none', stroke: selected ? '#ae3812' : '#075aaa', 'stroke-width': photo.width / (selected ? 250 : 450), tabindex: i === activePoint ? 0 : -1, role: 'button', 'aria-label': `Possible point ${i + 1}: ${markDecisions[m.id] === 'point' ? 'kept' : markDecisions[m.id] === 'exclude' ? 'not part of graph' : 'needs review'}`, 'data-possible-point': m.id, 'pointer-events': 'all' }, overlay)
+          const select = () => { activePoint = i; pixelPreview() }; circle.addEventListener('click', select); circle.addEventListener('keydown', e => {
+            if (['Enter', ' '].includes(e.key)) { e.preventDefault(); select(); q('.star-auto-point-question').focus({ preventScroll: true }) } else if (['ArrowRight', 'ArrowDown', 'ArrowLeft', 'ArrowUp'].includes(e.key)) {
+              e.preventDefault(); activePoint = (i + (['ArrowRight', 'ArrowDown'].includes(e.key) ? 1 : -1) + smallMarks.length) % smallMarks.length; pixelPreview()
+              overlay.querySelector(`[data-possible-point="${smallMarks[activePoint].id}"]`).focus({ preventScroll: true })
+            }
+          })
+        }
+        pointContext()
+      }
+      q('.star-auto-proposal').hidden = false; q('.star-auto-preview').toggleAttribute('hidden', phase === 'points'); q('.star-auto-point-review').hidden = phase !== 'points'
+      q('.star-auto-preview-title').textContent = phase === 'points' ? 'Check separate points' : 'Pixel-space preview · ' + (reviewing() ? 'your line choices' : 'scale unconfirmed')
+      q('.star-auto-preview-caption').textContent = phase === 'points' ? 'The ring shows the exact possible point on your original photo. Its position will not be moved.' : reviewing() ? 'Blue: kept. Orange: needs review. Faded dashed lines: removed. Selection keeps the detected positions; missing ink needs manual correction.' : 'Detected photo pixels only. Axes, scale, lines and points may need review; this is not a calibrated import preview.'
+    }
+    function pointContext () {
+      const m = smallMarks[activePoint]; if (!m) return
+      q('.star-auto-point-progress').textContent = `Possible point ${activePoint + 1} of ${smallMarks.length} · ${markDecisions[m.id] === 'point' ? 'kept as a point' : markDecisions[m.id] === 'exclude' ? 'not part of graph' : 'needs your review'}`
+      const crop = q('.star-auto-point-context'); crop.width = 480; crop.height = 280
+      const w = Math.min(photo.width, Math.max(300, photo.width * 0.35)); const h = Math.min(photo.height, w * crop.height / crop.width)
+      const x = Math.max(0, Math.min(photo.width - w, m.pixel[0] - w / 2)); const y = Math.max(0, Math.min(photo.height - h, m.pixel[1] - h / 2))
+      const ctx = crop.getContext('2d'); ctx.drawImage(canvas, x, y, w, h, 0, 0, crop.width, crop.height)
+      ctx.strokeStyle = '#ae3812'; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc((m.pixel[0] - x) * crop.width / w, (m.pixel[1] - y) * crop.height / h, 15, 0, Math.PI * 2); ctx.stroke()
+      for (const b of dialog.querySelectorAll('[data-point-decision]')) b.setAttribute('aria-pressed', String(markDecisions[m.id] === b.dataset.pointDecision))
     }
     function selectionControls () {
       const lines = q('.star-auto-lines'); lines.replaceChildren()
       for (const [i, s] of geometry.strokes.entries()) {
         const label = document.createElement('label'); label.textContent = 'Line ' + (i + 1)
         const select = document.createElement('select'); select.className = 'form-control'; select.dataset.stroke = s.id
-        for (const [value, text] of [['', 'Not reviewed'], ['keep', 'Keep graph ink'], ['exclude', 'Exclude']]) select.add(new Option(text, value))
+        for (const [value, text] of [['', 'Needs review'], ['keep', 'Keep'], ['exclude', 'Not part of graph']]) select.add(new Option(text, value))
         select.value = decisions[s.id] || ''; select.addEventListener('change', () => chooseLine(s.id, select.value))
-        const highlight = on => { const path = [...q('.star-auto-preview').querySelectorAll('[data-pixel-stroke]')].find(p => p.dataset.pixelStroke === s.id); if (path) { path.style.stroke = on ? '#b44110' : ''; path.style.strokeWidth = on ? String(photo.width / 120) : '' } }
+        const highlight = on => { for (const path of dialog.querySelectorAll('[data-pixel-stroke]')) if (path.dataset.pixelStroke === s.id) { path.style.stroke = on ? '#ae3812' : ''; path.style.strokeWidth = on ? String(photo.width / 110) : '' } }
         label.addEventListener('mouseenter', () => highlight(true)); label.addEventListener('mouseleave', () => highlight(false)); select.addEventListener('focus', () => highlight(true)); select.addEventListener('blur', () => highlight(false))
         label.append(select); lines.append(label)
       }
-      const target = q('.star-auto-marks'); target.replaceChildren()
-      if (smallMarks.length) { const h = document.createElement('h6'); h.textContent = 'Review each small mark'; target.append(h) }
-      for (const [i, m] of smallMarks.entries()) {
-        const label = document.createElement('label'); label.className = 'star-auto-mark'
-        const crop = document.createElement('canvas'); crop.width = crop.height = 100; crop.setAttribute('aria-label', 'Photo crop for small mark ' + (i + 1))
-        const source = document.createElement('canvas'); source.width = photo.width; source.height = photo.height; source.getContext('2d').putImageData(photo, 0, 0)
-        const size = Math.max(70, m.bounds_pixel[1][0] - m.bounds_pixel[0][0] + 32, m.bounds_pixel[1][1] - m.bounds_pixel[0][1] + 32)
-        crop.getContext('2d').drawImage(source, m.pixel[0] - size / 2, m.pixel[1] - size / 2, size, size, 0, 0, 100, 100)
-        const span = document.createElement('span'); span.textContent = 'Small mark ' + (i + 1)
-        const select = document.createElement('select'); select.className = 'form-control'; select.dataset.mark = m.id
-        for (const [v, t] of [['', 'Not reviewed'], ['point', 'Keep as filled dot'], ['exclude', 'Exclude text / axis / fragment']]) select.add(new Option(t, v))
-        select.value = markDecisions[m.id] || ''; select.addEventListener('change', () => { invalidate(); if (select.value) markDecisions[m.id] = select.value; else delete markDecisions[m.id]; q('.star-auto-reviewed').checked = false; pixelPreview(); update() })
-        span.append(select); label.append(crop, span); target.append(label)
-      }
+    }
+    function showPointsOrPreview () {
+      StarCVAssisted.branches(geometry, decisions)
+      if (smallMarks.length) { phase = 'points'; activePoint = Math.max(0, smallMarks.findIndex(m => !markDecisions[m.id])); setZoom(false); drawPhoto(); pixelPreview(); status.textContent = 'Check each possible point in the photo. Nothing is classified for you.' } else showPreview()
+    }
+    function showPreview () {
+      const corrected = build(); proposal = cvSession.propose(corrected); phase = 'preview'; setZoom(false); drawPhoto(); preview(proposal); q('.star-auto-ack').disabled = false; q('.star-auto-edit-help').hidden = false
+      status.textContent = 'CV-assisted graph ready for your final comparison. Nothing has been added yet.'
     }
     async function analyze () {
       clear(); const request = revision
@@ -208,7 +269,7 @@ window.StarAutomatic = (function () {
         // Only RGBA pixels and a revision enter recognition. No answer/config.
         const result = await StarProviders.recognize(photo, { inputRevision: request })
         if (request !== revision) return
-        geometry = result.geometry; method = result.method; smallMarks = StarCVAssisted.marks(geometry); phase = 'detected'
+        geometry = result.geometry; method = result.method; smallMarks = StarCVAssisted.marks(geometry); groups = StarCVAssisted.candidates(geometry); phase = 'detected'
         q('.star-auto-photo-name').textContent = file.name
         drawPhoto(); q('.star-auto-comparison').hidden = false; q('.star-auto-reject').disabled = false
         q('.star-auto-warnings').replaceChildren(...geometry.warnings.map(w => { const li = document.createElement('li'); li.textContent = w.message; return li }))
@@ -236,31 +297,50 @@ window.StarAutomatic = (function () {
     q('input[type=file]').addEventListener('change', e => { file = e.target.files[0] || null; photo = null; analyze() })
     q('.star-auto-retry').addEventListener('click', analyze)
     q('.star-auto-correct').addEventListener('click', () => { if (!file || typeof onAssist !== 'function') return; const selected = file; close(); onAssist(selected) })
-    q('.star-auto-overlay').addEventListener('change', drawPhoto)
+    q('.star-auto-overlay').addEventListener('change', () => { drawPhoto(); if (reviewing()) pixelPreview() })
     q('.star-auto-ack').addEventListener('change', () => update())
     q('.star-auto-reject').addEventListener('click', () => { clear(); busy = false; q('.star-auto-retry').disabled = !file; status.textContent = 'Proposal rejected. No native drawing was added.' })
     q('.star-auto-next').addEventListener('click', () => {
       if (busy || q('.star-auto-next').disabled) return
       try {
-        if (phase === 'detected' && cvEnabled()) { invalidate(); method = 'CV-assisted'; phase = 'calibration'; marker = 'origin'; status.textContent = 'Keep your detected strokes. Confirm axes and scale on this same photo.'; pixelPreview(); drawPhoto() } else if (phase === 'calibration') {
-          StarCVAssisted.calibration(geometry.image, axisValues()); phase = 'selection'; selectionControls(); pixelPreview(); status.textContent = 'Keep graph ink; exclude axes, labels and fragments. Review every small mark.'
-        } else if (phase === 'selection') {
-          const corrected = build(); proposal = cvSession.propose(corrected); phase = 'preview'; preview(proposal); q('.star-auto-ack').disabled = false; q('.star-auto-edit-help').hidden = false
-          status.textContent = 'CV-assisted graph ready for your final review. Nothing has been added yet.'
-        }
+        if (phase === 'detected' && cvEnabled()) { invalidate(); method = 'CV-assisted'; phase = 'calibration'; marker = 'origin'; status.textContent = 'Set the axes and scale on this same photo.'; pixelPreview(); drawPhoto() } else if (phase === 'calibration') {
+          StarCVAssisted.calibration(geometry.image, axisValues()); phase = 'selection'; q('.star-auto-overlay').checked = true; renderReview(); status.textContent = 'Review your detected graph. Choose its lines directly on the photo.'
+        } else if (phase === 'selection' || phase === 'remainder') {
+          if (unreviewed().length) { phase = 'remainder'; renderReview(); status.textContent = 'Check the other highlighted lines before leaving them out.' } else showPointsOrPreview()
+        } else if (phase === 'points') showPreview()
         update()
       } catch (e) { proposal = null; update(e.message) }
     })
-    q('.star-auto-back').addEventListener('click', () => { invalidate(); phase = phase === 'preview' ? 'selection' : 'calibration'; q('.star-auto-edit-help').hidden = true; if (phase === 'selection') selectionControls(); pixelPreview(); drawPhoto(); update() })
+    q('.star-auto-back').addEventListener('click', () => {
+      invalidate(); phase = phase === 'preview' ? (smallMarks.length ? 'points' : 'selection') : phase === 'selection' ? 'calibration' : 'selection'
+      setZoom(false); q('.star-auto-edit-help').hidden = true; renderReview()
+    })
     for (const b of dialog.querySelectorAll('[data-marker]')) b.addEventListener('click', () => { marker = b.dataset.marker; q('.star-auto-marker-help').textContent = `Place ${b.textContent.split(' ').at(-1)} on the photo. Arrow keys adjust a placed marker; Shift moves ten pixels.`; update(); canvas.focus() })
     function place (p) {
       invalidate(); axes[marker] = p.map((v, i) => Math.max(0, Math.min(v, [photo.width - 1, photo.height - 1][i])))
-      q('.star-auto-calibration-ack').checked = false; q('.star-auto-reviewed').checked = false; drawPhoto(); update()
+      drawPhoto(); update()
     }
     canvas.addEventListener('click', e => { if (phase !== 'calibration') return; const b = canvas.getBoundingClientRect(); place([(e.clientX - b.left) * photo.width / b.width, (e.clientY - b.top) * photo.height / b.height]) })
-    canvas.addEventListener('keydown', e => { if (phase !== 'calibration' || !axes[marker] || !['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return; e.preventDefault(); const d = e.shiftKey ? 10 : 1; const p = axes[marker].slice(); p[0] += e.key === 'ArrowLeft' ? -d : e.key === 'ArrowRight' ? d : 0; p[1] += e.key === 'ArrowUp' ? -d : e.key === 'ArrowDown' ? d : 0; place(p) })
-    for (const selector of ['.star-auto-x-value', '.star-auto-y-value', '.star-auto-calibration-ack', '.star-auto-reviewed']) q(selector).addEventListener(selector.includes('value') ? 'input' : 'change', () => { invalidate(); if (selector.includes('value')) { q('.star-auto-calibration-ack').checked = false; q('.star-auto-reviewed').checked = false } update() })
-    q('.star-auto-exclude-rest').addEventListener('click', () => { invalidate(); for (const s of geometry.strokes) decisions[s.id] ||= 'exclude'; q('.star-auto-reviewed').checked = false; selectionControls(); pixelPreview(); drawPhoto(); update() })
+    canvas.addEventListener('keydown', e => { if (phase !== 'calibration') return; if (e.key === 'Enter' && !axes[marker]) { e.preventDefault(); place([photo.width / 2, photo.height / 2]); return } if (!axes[marker] || !['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return; e.preventDefault(); const d = e.shiftKey ? 10 : 1; const p = axes[marker].slice(); p[0] += e.key === 'ArrowLeft' ? -d : e.key === 'ArrowRight' ? d : 0; p[1] += e.key === 'ArrowUp' ? -d : e.key === 'ArrowDown' ? d : 0; place(p) })
+    for (const selector of ['.star-auto-x-value', '.star-auto-y-value']) q(selector).addEventListener('input', () => { invalidate(); update() })
+    q('.star-auto-dismiss-remaining').addEventListener('click', () => {
+      if (phase !== 'remainder') return
+      remember(); for (const s of unreviewed()) decisions[s.id] = 'exclude'
+      try { showPointsOrPreview(); update() } catch (e) { renderReview(); update(e.message) }
+    })
+    q('.star-auto-keep-editing').addEventListener('click', () => { phase = 'selection'; renderReview() })
+    q('.star-auto-undo').addEventListener('click', () => {
+      if (!history.length) return
+      invalidate(); const prior = history.pop(); decisions = prior.decisions; markDecisions = prior.markDecisions; activePoint = prior.activePoint; phase = prior.phase; renderReview()
+    })
+    q('.star-auto-zoom').addEventListener('click', () => setZoom(q('.star-auto-zoom').getAttribute('aria-pressed') !== 'true'))
+    for (const b of dialog.querySelectorAll('[data-point-decision]')) b.addEventListener('click', () => {
+      if (phase !== 'points' || !smallMarks[activePoint]) return
+      remember(); markDecisions[smallMarks[activePoint].id] = b.dataset.pointDecision
+      const pending = smallMarks.findIndex(m => !markDecisions[m.id]); if (pending >= 0) activePoint = pending
+      drawPhoto(); pixelPreview(); update(); q('.star-auto-point-question').focus({ preventScroll: true })
+    })
+    q('.star-auto-point-manual').addEventListener('click', () => q('.star-auto-correct').click())
     q('.star-auto-confirm').addEventListener('click', () => {
       if (busy || !proposal || q('.star-auto-confirm').disabled || !q('.star-auto-ack').checked) return
       try { (method === 'CV-assisted' ? cvSession : session).commit(proposal.token, true); close(); status.textContent = 'Graph added. Use Select to move or delete a branch or dot.' } catch (e) { invalidate(); update(e.message); status.textContent = e.message; q('.star-auto-back').hidden = method !== 'CV-assisted'; q('.star-auto-retry').disabled = false }

@@ -1,0 +1,20 @@
+{
+  "parent_commit": "d1cb0fc4e8d3637535b2d6c3a70c6b60404f9faa",
+  "historical_assets_loaded_read_only": true,
+  "all_three_baseline_assets_observed": true,
+  "centering": {
+    "marginRules": [],
+    "x": 0,
+    "y": 0,
+    "width": 1180,
+    "height": 983.390625,
+    "vw": 1440,
+    "vh": 1100,
+    "position": "fixed",
+    "inset": "0px",
+    "margin": "0px",
+    "maxHeight": "1076px"
+  },
+  "errors": [],
+  "includes_original_redundant_checkboxes": true
+}
