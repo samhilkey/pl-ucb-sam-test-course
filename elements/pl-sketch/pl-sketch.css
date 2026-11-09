@@ -741,3 +741,11 @@
 .star-correction-help { margin: 8px 0; }
 .star-correction-warning { font-size: 13px; }
 .star-canvas-correction-layer, .star-canvas-correction-layer * { pointer-events: none !important; }
+/* Opted-in, vertex-editable photo draft. Native polyline hit targets stay native. */
+.star-editable-draft-panel { border-top: 1px solid #ccd6df; margin-top: 12px; padding-top: 12px; }
+.star-draft-markers, .star-draft-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.star-draft-markers label { display: inline-flex; align-items: center; gap: 4px; margin: 0; }
+.star-draft-markers input { width: 76px; }
+.star-draft-highlights { pointer-events: none; }
+.star-draft-native-tool circle { opacity: .85 !important; fill: #5b43d6 !important; stroke: white; stroke-width: 1px; r: 5px; }
+.star-draft-start:focus-visible, .star-editable-draft-panel button:focus-visible, .star-editable-draft-panel input:focus-visible { outline: 3px solid #075bc7; outline-offset: 2px; }

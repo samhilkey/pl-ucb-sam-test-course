@@ -1,0 +1,39 @@
+{
+  "passed": 21,
+  "checks": [
+    "Photo-only abstention has no native geometry",
+    "Saving a photo alone submits zero curves/points and no image data",
+    "Photo alone is rejected as invalid, not gradable (empty native answer)",
+    "Browser-only photo restoration stays in the same submitted attempt",
+    "A fresh attempt cannot inherit a different attempt photo",
+    "A CV exception leaves the decoded photo visible, editable and ungraded",
+    "A rejected replacement keeps the previous photograph and does not claim the broken file opened",
+    "Late older CV output cannot replace the newer photograph or add provisional ink",
+    "Remove clears only this scoped reference and pending persistence",
+    "A calibrated CV result offers a native draft but adds nothing automatically",
+    "Student can add an independent native point after background CV, before draft review",
+    "The recognized native draft still requires final confirmation",
+    "The existing adapter adds the explicitly confirmed calibrated draft while keeping its reference and the newer native point",
+    "Confirmed calibrated native geometry saves independently of reference persistence",
+    "Storage failure leaves the new reference visible and existing native geometry untouched",
+    "Failed replacement persistence removes the stale old record",
+    "Native drawings restore when the unavailable photo must be reuploaded",
+    "Edit on canvas focuses the native drawing surface, not the reference pixels",
+    "Narrow canvas-first view has no page horizontal overflow",
+    "Photo controls fit the narrow viewport",
+    "No page exceptions in failure/recovery flows"
+  ],
+  "errors": [],
+  "emptyFeedback": {
+    "invalid_labels": 2,
+    "not_gradable": true
+  },
+  "native_saved_after_storage_failure": true,
+  "image_only_graded_as_geometry": false,
+  "injected_cases": [
+    "CV exception",
+    "late CV result",
+    "storage quota denial"
+  ],
+  "actual_abstention": true
+}

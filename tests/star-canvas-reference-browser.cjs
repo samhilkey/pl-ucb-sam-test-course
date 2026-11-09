@@ -71,6 +71,7 @@ async function acceptance (page, o) {
       await snap('demo-02-hidden'); await photo().locator('.star-canvas-visible').click()
     }
     const fit = ref.fit
+    const options = photo().locator('.star-canvas-photo-options'); if (!await options.evaluate(e => e.open)) await options.locator('summary').click()
     await photo().locator('.star-canvas-edit').click()
     for (const stroke of c.strokes) await draw(stroke, fit)
     await page.waitForFunction(n => JSON.parse(window.SketchInput.instances['automatic-photo'].getState()).data['auto-ink'].length === n, 1 + c.strokes.length)

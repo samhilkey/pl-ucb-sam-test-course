@@ -23,7 +23,7 @@ async function acceptance (page, o) {
   check(initial.geometry.calibration.status === 'uncertain' && initial.geometry.status === 'needs_review', 'Untuned initial automatic result is explicitly blocked by missing calibration')
   check(JSON.stringify(initial.recognizer_options) === JSON.stringify(['inputRevision']), 'Recognizer receives only photo pixels and revision, no target, references or calibration')
   check(!(await native()).curves.length, 'No uncalibrated candidate becomes native geometry')
-  await snap('01-automatic-blocked'); await container().locator('.star-canvas-correct').click()
+  await snap('01-automatic-blocked'); await container().locator('.star-canvas-photo-options summary').click(); await container().locator('.star-canvas-correct').click()
   for (const p of [o.actions.origin, o.actions.xMarker, o.actions.yMarker]) await clickPhoto(p)
   await panel().locator('.star-correction-x').fill(String(o.actions.xValue)); await panel().locator('.star-correction-y').fill(String(o.actions.yValue))
   for (const p of o.actions.endpoints) await clickPhoto(p)

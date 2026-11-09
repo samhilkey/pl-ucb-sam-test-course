@@ -1,5 +1,16 @@
 # Server semantic provider — dormant, not deployed
 
+Step 4H-4 update: one separately approved request for the exact metadata-free
+IMG_1678 PNG was executed and consumed. Google returned HTTP 400 for excessive
+schema constraint complexity; no semantic prediction was produced or used. The
+module also supports a separately bound `4H-4-semantic` grant with its fixed
+`step-4h-4/results/provider` journal. Neither journal may be deleted or reused to
+retry. A changed schema/payload requires fresh approval. The local student UI
+remains CV-assisted and makes no Gemini requests. See
+`benchmarks/photo-graphs/multi-method/step-4h-4/REPORT.md` for actual evidence.
+
+The original Step 4H-3 design notes follow; they describe the pre-execution state.
+
 `star-gemini-semantic.cjs` is a server-side module, not a public HTTP proxy or a
 browser dependency. The normal PrairieLearn upload still runs **CV only**. No
 automatic Gemini call has been added to it. `info.json` does not load this module

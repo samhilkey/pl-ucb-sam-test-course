@@ -11,6 +11,7 @@ async function acceptance (page, o) {
   const drawings = s => ({ curves: s.data['auto-ink'], points: s.data['auto-notes'] })
   const ref = () => page.evaluate(() => window.StarCanvasReference.instances['automatic-photo'].status())
   const snapshot = name => container().screenshot({ path: o.output + '/' + name + '.png' })
+  const correct = async () => { const options = container().locator('.star-canvas-photo-options'); if (!await options.evaluate(e => e.open)) await options.locator('summary').click(); await container().locator('.star-canvas-correct').click() }
   const fresh = async () => { await page.goto(o.url, { waitUntil: 'networkidle' }); await ready(); await page.evaluate(() => {
     window.StarFit.fit = window.StarFit.sampleCurve = () => { throw Error('No equation fitting') }
     const original = window.StarProviders.recognize
@@ -26,7 +27,7 @@ async function acceptance (page, o) {
   check((await ref()).photoVisible && (await ref()).sourceSha256 === o.hash, 'Exact original IMG_1678.jpg is visible on the actual canvas')
   check(automatic.method === 'CV automatic' && automatic.geometry.calibration.status === 'uncertain' && automatic.geometry.status === 'needs_review', 'Real-photo automatic recognition reports uncertain calibration, not hybrid/Gemini success')
   check(JSON.stringify((await state()).data) === JSON.stringify(before.data), 'Recognition creates no native object and preserves the initial state')
-  await snapshot('01-real-photo-not-native'); await container().locator('.star-canvas-correct').click()
+  await snapshot('01-real-photo-not-native'); await correct()
   for (const p of [[842, 1147], [1490, 1130], [826, 517]]) await clickPhoto(p)
   await panel().locator('.star-correction-x').fill('4'); await panel().locator('.star-correction-y').fill('4')
   for (const p of [[483, 310], [1193, 275]]) await clickPhoto(p)
@@ -46,7 +47,7 @@ async function acceptance (page, o) {
   await page.reload({ waitUntil: 'networkidle' }); await ready(); await page.waitForFunction(() => window.StarCanvasReference.instances['automatic-photo'].status().photoVisible)
   check(JSON.stringify(drawings(await state())) === JSON.stringify(drawings(before)) && (await ref()).aligned, 'Refresh restores the reference and empty native drawing without pretending to restore a recognized curve')
   const real = { automatic, after_recognition: before.data, after_assisted_preview: correctedState.data, after_alignment: invalid.state.data, blocker, invalid, automatic_native_success: false, cv_assisted_native_success: false, manually_traced: false, gemini_requests: 0 }
-  await fresh(); await page.evaluate(() => window.SketchInput.instances['automatic-photo'].setState(JSON.stringify({ data: { 'auto-notes': [{ x: 735, y: 520 }] } }))); await upload(o.control); await container().locator('.star-canvas-correct').click()
+  await fresh(); await page.evaluate(() => window.SketchInput.instances['automatic-photo'].setState(JSON.stringify({ data: { 'auto-notes': [{ x: 735, y: 520 }] } }))); await upload(o.control); await correct()
   check(await panel().locator('.star-correction-accept').isVisible(), 'Separate controlled raster automatically provides a valid calibrated native proposal')
   check((await state()).data['auto-ink'].length === 0, 'Controlled automatic preview stays outside native state until acceptance')
   await panel().locator('.star-correction-accept').click(); const imported = await state(); const accepted = await page.evaluate(() => window.__accepted)

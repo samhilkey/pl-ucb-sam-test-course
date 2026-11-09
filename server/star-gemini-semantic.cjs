@@ -33,7 +33,7 @@ function prepare (manifest) {
 }
 
 function authorize (audit, grant, now) {
-  if (!grant || grant.phase !== '4H-3-semantic' || grant.explicit_inference_approval !== true || grant.exact_image_external_permission !== true ||
+  if (!grant || !['4H-3-semantic', '4H-4-semantic'].includes(grant.phase) || grant.explicit_inference_approval !== true || grant.exact_image_external_permission !== true ||
     grant.owner_or_authorized !== true || grant.no_identifying_confidential_or_uncleared_material !== true || grant.unpaid_data_terms_accepted !== true ||
     grant.operator_eligibility_confirmed !== true || grant.project_alias !== 'STAR Sketch2Graph' || grant.billing_tier !== 'Free' || grant.paid_billing_exposure !== false ||
     grant.model_access_confirmed !== true || grant.quota_unknown_accepted !== true || grant.maximum_requests !== 1 || grant.retries !== 0 ||
@@ -64,7 +64,8 @@ function decode (response) {
 }
 
 async function recognizeOnce ({ manifest, grant, directory, transport = post, key = process.env.GEMINI_API_KEY, now = Date.now() }) {
-  if (transport === post && directory !== path.join(root, 'benchmarks/photo-graphs/multi-method/step-4h-3/results/provider')) throw Error('Live transport requires its fixed one-shot journal directory.')
+  const step = grant?.phase === '4H-4-semantic' ? 'step-4h-4' : 'step-4h-3'
+  if (transport === post && directory !== path.join(root, 'benchmarks/photo-graphs/multi-method', step, 'results/provider')) throw Error('Live transport requires its fixed one-shot journal directory.')
   const prepared = prepare(manifest); authorize(prepared.audit, grant, now)
   if (typeof key !== 'string' || !key.trim() || /[\r\n]/.test(key)) throw Error('Server credential missing or malformed.')
   key = key.trim()

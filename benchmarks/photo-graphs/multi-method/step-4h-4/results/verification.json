@@ -1,0 +1,165 @@
+{
+  "step": "4H-4",
+  "recorded_at_utc": "2026-11-09T08:16:32.350Z",
+  "verdict": "CONDITIONAL PASS: CV-assisted editable native draft works on IMG_1678; automatic calibration and Gemini/hybrid recognition remain incomplete.",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "baseline_commit": "dd59f18d73b419cbc6a1a4107c1c6d78475ef1c4",
+  "environment": {
+    "host_node": "v20.19.6",
+    "platform": "darwin",
+    "presenter_computer": "Current Mac, as confirmed by user",
+    "browser": "Chrome through Playwright CLI",
+    "browser_plugin": "Not available; documented CLI fallback",
+    "viewports": [
+      [
+        1440,
+        1100
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "physical_projector_tested": false,
+    "new_draft_touch_editing_tested": false,
+    "url": "http://localhost:3000/pl/course/1/question/254/preview/"
+  },
+  "commands": {
+    "node": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs tests/star-gemini-pilot.test.cjs tests/star-gemini-once.test.cjs tests/star-gemini-observation.test.cjs tests/star-cv-assisted.test.cjs tests/star-canvas-reference.test.cjs tests/star-hybrid.test.cjs tests/star-targeted.test.cjs tests/star-semantic-provider.test.cjs tests/star-native-backtrack.test.cjs tests/star-editable-draft.test.cjs",
+    "python_server": [
+      "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-assisted-server.py -v'",
+      "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-editable-draft-server.py -v'"
+    ],
+    "browser": [
+      "node tests/star-editable-draft-browser.cjs",
+      "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh PL_PHOTO_TEST_OUTPUT=/private/tmp/star-h4/native-browser node tests/star-native-browser.cjs",
+      "node benchmarks/photo-graphs/multi-method/step-4g-4/run-manual-regression.cjs",
+      "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh node tests/star-canvas-reference-recovery.cjs",
+      "node tests/star-targeted-browser.cjs"
+    ],
+    "evaluation": "node benchmarks/photo-graphs/multi-method/step-4h-4/evaluate.cjs",
+    "one_authorized_request_already_consumed": "node --env-file=.env.local benchmarks/photo-graphs/multi-method/step-4h-4/run-semantic-once.cjs --execute",
+    "credential_presence_only": "node --env-file=.env.local benchmarks/photo-graphs/multi-method/step-4c/check-gemini-env.cjs"
+  },
+  "tests": {
+    "node": {
+      "passed": 152,
+      "failed": 0
+    },
+    "python": {
+      "legacy_passed": 5,
+      "draft_passed": 5,
+      "failed": 0
+    },
+    "browser": {
+      "new_draft": 43,
+      "native": 165,
+      "frozen_manual": 84,
+      "recovery": 21,
+      "legacy_optional_cv_assisted": 47,
+      "total": 360,
+      "failed": 0
+    },
+    "syntax_and_git_diff_checks": true,
+    "initial_failures": [
+      "The approved Gemini request failed HTTP 400: structured-output schema too complex. No retry.",
+      "An initial endpoint drag hit a neighboring overlapping handle; the replay uses an exposed native hit area.",
+      "Stock native polyline grading rounded stored vertices; fixed with exact-state preservation and independent server reconstruction.",
+      "An exact-anchor regression caught arithmetic endpoint roundoff; endpoints now retain their original values directly.",
+      "First recovery command lacked PL_PHOTO_TEST_CLI and could not find playwright-cli; rerun with the installed wrapper."
+    ]
+  },
+  "real_photo": {
+    "image": "IMG_1678.jpg",
+    "original_sha256": "f86a0acd1dc1fcad32884c202e4fffe44adc5d88c1062a0f8a2cbd60dbc74d49",
+    "classification": "CV-assisted: manual axis frame, measured path suggestion, explicit acceptance, native endpoint edit",
+    "source_kind": "user_owned_real_paper_reused_development_case",
+    "automatic_calibration": false,
+    "manual_trace": false,
+    "manual_curve_endpoint_selection": false,
+    "photo_visible": true,
+    "native_editable": true,
+    "native_vertices": 43,
+    "uncorrected_hook_retained": true,
+    "uncorrected_grade": "0%",
+    "student_vertex_corrected_grade": "100%",
+    "saved_grade_restored": true,
+    "undo_redo_passed": true,
+    "maximum_native_anchor_error_pixel": 0,
+    "saved_local_variant": "http://localhost:3000/pl/course/1/question/254/preview/?variant_id=591",
+    "independent_recognition_accuracy": null
+  },
+  "controlled_raster": {
+    "source_kind": "controlled_fixture_not_real_photo",
+    "correct": "100%",
+    "deliberately_wrong_vertex": "0%"
+  },
+  "gemini": {
+    "requests_this_step": 1,
+    "remaining_approved_requests": 0,
+    "retries": 0,
+    "image_sha256": "bc1a75a4f46e0ebc43d43cfb26942d15306a69cc25530ae57309bd3f1a8dd9d9",
+    "request_sha256": "e33a94b89c0bc41217f1e26193140416884dfe68e52622e052bdfda01a6c6416",
+    "model": "gemini-3.5-flash-lite",
+    "http_status": 400,
+    "state": "failed_stop",
+    "latency_ms": 2553.552959,
+    "prediction": null,
+    "usage_reported": null,
+    "cost_reported": null,
+    "paid_exposure_user_confirmed_usd": 0,
+    "current_model_execution_availability": "UNKNOWN; schema rejection is not successful model execution",
+    "student_ui_requests": 0,
+    "original_jpeg_transmitted": false,
+    "only_exact_cleared_png_transmitted": true
+  },
+  "frozen_sources": [
+    {
+      "file": "elements/pl-sketch/star-assisted.js",
+      "sha256": "3b1185ce0ed264605100d65057c9b33e395303dd549490e8e5a3f3cf3adf6316",
+      "matches_baseline": true
+    },
+    {
+      "file": "elements/pl-sketch/star-photo.js",
+      "sha256": "75fab1d209dfdaf6f14085be195578b28aee6852aaf92827be7a06694244889e",
+      "matches_baseline": true
+    },
+    {
+      "file": "elements/pl-sketch/star-recognition.js",
+      "sha256": "34dfc4b9b08d25fd8ca4d2241dbbcc0a1fab7e816415c73bd8d6e06332711207",
+      "matches_baseline": true
+    }
+  ],
+  "step4f_assets_unchanged": true,
+  "source_hashes": {
+    "elements/pl-sketch/info.json": "c158870e8a634dc59d060fca857158e92e1b40cc5b2c257e37aab53882ad4a6e",
+    "elements/pl-sketch/pl-sketch.css": "69e1f2f7c3d1e01b50b61a1abb47dc340276d691568e940c1c39c14e9b889de0",
+    "elements/pl-sketch/pl-sketch.js": "5c424481a75f7d4caee537c19382cd3db91829794a327bfea6524645a6534417",
+    "elements/pl-sketch/pl-sketch.py": "064c46804721bdc3f375fc89f0ee63429a8ab56f86374e66111097224e7bfd03",
+    "elements/pl-sketch/star-native.js": "f87218f27cd0da8657a20866cc0f6bf6b5caf8b05aef918ee0dad563600976f1",
+    "elements/pl-sketch/star-editable-draft.js": "7ac4101d811abeb9f97277e362f5c1a6f195ab7f87d3b4bf192144fe9fdc26e5",
+    "elements/pl-sketch/star-editable-draft-ui.js": "6d27e950c903996aeb3bc067bdb95638883abc5f98ef9f122d79866bc3a0a0c0",
+    "questions/star-automatic-photo-test/question.html": "17d5a91d85199af50674e6f18065a4d49edf07c015979e8ae2ed3154e875034d",
+    "server/star-gemini-semantic.cjs": "031bcc98441bbe4291a3fc66d32d936f9956df76f0da670b855410b12fd0afe0"
+  },
+  "limitations": [
+    "No automatic real-photo calibration or actual Gemini semantics.",
+    "One development photo is not general recognition validation.",
+    "Short/axis-adjacent branches and isolated-dot semantics can be missing.",
+    "Handwritten tick spacing may not fit one affine frame.",
+    "Closely spaced vertex handles are difficult on touch screens.",
+    "Physical projector not tested."
+  ],
+  "delivery": {
+    "local_mac": true,
+    "unpushed_local_feature_branch": true,
+    "pushed": false,
+    "merged": false,
+    "deployed": false
+  },
+  "recommendation": "Freeze the tested CV-assisted editable-draft route for the November 9 demo, retain the frozen manual/offline fallback, and defer Gemini schema compatibility to a separately approved step."
+}

@@ -10,6 +10,7 @@ async function acceptance (page, o) {
   const native = async () => { const s = (await state()).data; return { curves: s['auto-ink'], points: s['auto-notes'] } }
   const ref = () => page.evaluate(() => window.StarCanvasReference.instances['automatic-photo'].status())
   const snap = name => container().screenshot({ path: o.output + '/' + name + '.png' })
+  const correct = async () => { const options = container().locator('.star-canvas-photo-options'); if (!await options.evaluate(e => e.open)) await options.locator('summary').click(); await container().locator('.star-canvas-correct').click() }
   const fresh = async () => {
     await page.goto(o.url, { waitUntil: 'networkidle' }); await ready()
     check((await page.title()).includes('star-automatic-photo-test'), 'Actual local PrairieLearn sandbox loaded')
@@ -42,7 +43,7 @@ async function acceptance (page, o) {
   const prior = await native(); await upload(o.photo)
   check((await ref()).photoVisible && (await ref()).recognitionStatus === 'needs_review', 'Actual original IMG_1670.jpg is visible; automatic recognition still needs review')
   check(JSON.stringify(await native()) === JSON.stringify(prior), 'Upload/recognition preserve existing curve and point')
-  await snap('01-uploaded'); await container().locator('.star-canvas-correct').click()
+  await snap('01-uploaded'); await correct()
   check(await page.locator('#automatic-photo-automatic-dialog').isHidden() && await page.locator('#automatic-photo-star-panel').isHidden(), 'Short correction stays directly on the real canvas; no advanced/manual wizard')
   check(await panel().locator('.star-correction-accept').isHidden(), 'Uncalibrated/unselected geometry cannot be accepted')
   await calibrate(); await selectCurve()
@@ -72,7 +73,7 @@ async function acceptance (page, o) {
   check(JSON.stringify(edited.curves[1]) !== JSON.stringify(imported.curves[1]) && JSON.stringify(edited.curves[0]) === JSON.stringify(imported.curves[0]) && JSON.stringify(edited.points) === JSON.stringify(imported.points), 'Native Select edits the imported branch while preserving prior curve and both points')
   const editedSaved = await save('0%'); await snap('06-edited-restored')
   // Stale review is rejected, cancellation and replacement leave native drawings intact.
-  await container().locator('.star-canvas-correct').click(); await calibrate(); await selectCurve(); await panel().locator('.star-correction-preview').click()
+  await correct(); await calibrate(); await selectCurve(); await panel().locator('.star-correction-preview').click()
   await page.evaluate(() => { const si = window.SketchInput.instances['automatic-photo']; const data = JSON.parse(si.getState()).data; si.setState(JSON.stringify({ data: { 'auto-notes': data['auto-notes'].concat([{ x: 650, y: 500 }]) } })) })
   const staleState = await native(); await panel().locator('.star-correction-accept').click()
   check(await panel().locator('.star-correction-accept').isDisabled() && JSON.stringify(await native()) === JSON.stringify(staleState), 'Canvas changes after preview block stale acceptance and retain the new native object')
@@ -81,13 +82,13 @@ async function acceptance (page, o) {
   check((await ref()).photoVisible && JSON.stringify(await native()) === JSON.stringify(staleState), 'Rejected photo preserves previous image and every native object')
   // Positive CONTROL uses normal automatic UI; it is never called a handwritten photo.
   await fresh(); await upload(o.control)
-  await container().locator('.star-canvas-correct').click()
+  await correct()
   check(await panel().locator('.star-correction-accept').isVisible(), 'Calibrated controlled candidate opens directly in on-canvas review')
   check((await native()).curves.length === 0, 'Automatic controlled preview is not gradeable until explicitly accepted')
   await panel().locator('.star-correction-accept').click(); const controlled = await page.evaluate(() => window.__accepted); imports.push(controlled)
   const positive = await save('100%'); await page.screenshot({ path: o.output + '/controlled--100-percent.png', fullPage: true })
   // No-strokes real photo supports short alignment plus ordinary native drawing.
-  await fresh(); await upload(o.abstained); await container().locator('.star-canvas-correct').click()
+  await fresh(); await upload(o.abstained); await correct()
   check(await panel().isVisible() && !(await native()).curves.length, 'Abstained input offers visible on-canvas alignment without fabricating a candidate')
   // Mobile controls and Escape recovery use the actual UI.
   await page.setViewportSize({ width: 390, height: 844 }); await snap('mobile-correction')

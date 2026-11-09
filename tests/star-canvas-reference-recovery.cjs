@@ -58,6 +58,7 @@ async function recovery (page, o) {
   await page.reload({ waitUntil: 'networkidle' }); await ready(); check(!(await ref()).photoVisible && JSON.stringify((await state())['auto-ink']) === JSON.stringify(savedNative), 'Native drawings restore when the unavailable photo must be reuploaded')
   // Mobile view and keyboard focus remain on the actual native canvas.
   await page.setViewportSize({ width: 390, height: 844 }); await upload('real--06-piecewise-graph-paper')
+  await options()
   await panel().locator('.star-canvas-edit').click()
   check(await page.evaluate(() => document.activeElement.id === 'automatic-photo-si-canvas'), 'Edit on canvas focuses the native drawing surface, not the reference pixels')
   check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Narrow canvas-first view has no page horizontal overflow')

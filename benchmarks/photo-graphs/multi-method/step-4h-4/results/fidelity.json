@@ -1,0 +1,55 @@
+{
+  "method": "CV-assisted editable draft; manual axes, algorithmic reuse of measured CV paths, explicit acceptance, native vertex correction",
+  "automatic_calibration_success": false,
+  "gemini_semantics_used": false,
+  "manual_tracing_used": false,
+  "manual_curve_endpoint_selection_used": false,
+  "native_branches": 1,
+  "native_vertices": [
+    43
+  ],
+  "maximum_native_anchor_error_pixel": 0,
+  "maximum_source_anchor_round_trip_error_pixel": 5.362597410144533e-13,
+  "measured_hook_retained_before_student_edit": true,
+  "measured_hook_reverse_graph_x_units": 0.04175068682106087,
+  "simplification_tolerance_source_pixel": [
+    2.8441176470588236
+  ],
+  "before_edit": {
+    "dark_ink_support_fraction": 1,
+    "samples": 2032,
+    "threshold_gray": 125,
+    "radius_source_pixel": 3,
+    "interpretation": "Ink-support diagnostic only. Axes and labels also count as dark ink; this is not reference coverage, graph accuracy or a topology score. Canonical metadata-free PNG is the evaluator raster; browser recognition used the original JPEG."
+  },
+  "after_student_edit": {
+    "dark_ink_support_fraction": 0.9951171875,
+    "samples": 2048,
+    "threshold_gray": 125,
+    "radius_source_pixel": 3,
+    "interpretation": "Ink-support diagnostic only. Axes and labels also count as dark ink; this is not reference coverage, graph accuracy or a topology score. Canonical metadata-free PNG is the evaluator raster; browser recognition used the original JPEG."
+  },
+  "changed_vertices": [
+    {
+      "curve": 0,
+      "vertex": 0,
+      "native_delta": [
+        12,
+        0
+      ],
+      "source_pixel_delta": [
+        29.907693876474013,
+        -0.7846200132496506
+      ]
+    }
+  ],
+  "original_native_grade": "0%",
+  "student_corrected_native_grade": "100%",
+  "geometry_accuracy_against_independent_reference": null,
+  "reason": "No independent blinded real-photo centerline/topology annotation. Native preservation and dark-ink support do not establish recognition accuracy.",
+  "isolated_dot_recognition": "Not resolved by this draft suggestion. Embedded dark marks stay in measured path geometry and the original photo; no spurious isolated point objects are created.",
+  "controlled_raster_grades_not_real_photo_metrics": {
+    "original": "100%",
+    "deliberately_changed_vertex": "0%"
+  }
+}

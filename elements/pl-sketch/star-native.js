@@ -15,6 +15,12 @@
     if (!tool) throw new Error('Automatic import needs an editable free-draw tool to preserve corners in rendering and grading.')
     return tool
   }
+  function receivingDraftTool (config) {
+    const id = config?.editablePhotoDraftTool
+    const tool = tools(config || {}).find(p => p.id === id && p.name === 'polyline' && !p.closed && !p.readonly && !p.helper && !p.overlay)
+    if (!config?.assistedPhotoGeometry || config.readonly || !id || !tool) throw new Error('Editable drafts require an explicitly configured, graded open-polyline tool.')
+    return tool
+  }
   function graphToNative (config, point) {
     const { width, height, xrange: x, yrange: y } = config
     if (!Number.isFinite(width) || width <= 0 || !Number.isFinite(height) || height <= 0 ||
@@ -68,23 +74,28 @@
     const targeted = options.targeted === true && config.assistedPhotoGeometry === true && geometry.status === 'needs_review' &&
       geometry.provenance?.method === 'targeted_cv' && !geometry.warnings.length && !geometry.assistance.length &&
       !geometry.uncertainty.regions.length && !geometry.topology.junctions.length && !!Targeted?.validate(geometry)
+    const Draft = options.editableDraft === true && (typeof module !== 'undefined' && module.exports ? require('./star-editable-draft.js') : root.StarEditableDraft)
+    const cvDraft = options.editableDraft === true && config.assistedPhotoGeometry === true && geometry.status === 'needs_review' &&
+      geometry.provenance?.method === 'cv_editable_draft' && !geometry.warnings.length && !geometry.assistance.length && !geometry.uncertainty.regions.length && !geometry.topology.junctions.length && !!Draft?.validate(geometry)
     if (geometry.provenance?.method === 'targeted_cv' && !targeted) throw new Error('Endpoint-guided CV requires a current reviewed proposal; it is not automatic recognition.')
     if (['hybrid_development', 'hybrid_semantic'].includes(geometry.provenance?.method) && !hybrid) throw new Error('Hybrid geometry requires its experimental gate and reviewed provenance; it is not automatic recognition.')
-    if ((!assisted && !cvAssisted && !hybrid && !targeted && geometry.status !== 'automatic') || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
+    if (geometry.provenance?.method === 'cv_editable_draft' && !cvDraft) throw new Error('The CV-assisted draft requires its explicit editable-draft gate and current measured provenance.')
+    if ((!assisted && !cvAssisted && !hybrid && !targeted && !cvDraft && geometry.status !== 'automatic') || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
     if (geometry.points?.length && !cvAssisted && !hybrid && !targeted) throw new Error('Isolated dots require a reviewed CV-assisted proposal; they cannot be silently dropped.')
-    const tool = receivingTool(config, toolId)
+    const editableDraft = options.editableDraft === true
+    const tool = editableDraft ? receivingDraftTool(config) : receivingTool(config, toolId)
     if (!state || !state.data || Array.isArray(state.data) || !Array.isArray(state.data[tool.id])) throw new Error('Invalid existing native tool state.')
     const drawings = geometry.strokes.map(s => {
       if (s.closed) throw new Error('Closed strokes require a different question input contract.')
       const points = s.vertices.map(v => graphToNative(config, v.graph))
       const violations = functionViolations(s, config)
-      if (violations.length) {
+      if (violations.length && !editableDraft) {
         const error = new Error('A stroke doubles back in x. This function-input question requires correction. No curve was imported.')
         error.code = 'function_x_backtrack'; error.segments = clone(violations); throw error
       }
       const buffer = config.enforceBounds ? (config.safetyBuffer || 0) : 0
       if (points.some(p => p.x < buffer || p.y < buffer || p.x > config.width - buffer || p.y > config.height - buffer)) throw new Error('The photographed geometry exceeds this canvas range. It was not clipped or rescaled.')
-      return encode(points, 'freeform')
+      return encode(points, tool.name)
     })
     const existing = state.data[tool.id]
     if (tool.limit > 0 && existing.length + drawings.length > tool.limit) throw new Error('Import would exceed this tool’s drawing limit.')
@@ -96,7 +107,7 @@
       return [Math.min(...ps.map(p => p.x)), Math.max(...ps.map(p => p.x))]
     }).sort((a, b) => a[0] - b[0])
     for (let i = 0; i < ranges.length; i++) for (let j = i + 1; j < ranges.length; j++) {
-      if (!assisted && !cvAssisted && !hybrid && !targeted && Math.min(ranges[i][1], ranges[j][1]) - Math.max(ranges[i][0], ranges[j][0]) > 5) throw new Error('Graphs overlap in x. Move or delete the conflicting native drawing, or correct the proposal, before importing.')
+      if (!assisted && !cvAssisted && !hybrid && !targeted && !editableDraft && Math.min(ranges[i][1], ranges[j][1]) - Math.max(ranges[i][0], ranges[j][0]) > 5) throw new Error('Graphs overlap in x. Move or delete the conflicting native drawing, or correct the proposal, before importing.')
     }
     let pointToolId = null; const points = []
     if (geometry.points?.length) {
@@ -111,7 +122,8 @@
         points.push(p)
       }
     }
-    return { toolId: tool.id, kind: 'freeform', drawings, strokeIds: geometry.strokes.map(s => s.id), pointToolId, points }
+    return { toolId: tool.id, kind: tool.name, drawings, strokeIds: geometry.strokes.map(s => s.id), pointToolId, points,
+      ...(editableDraft ? { reviewIssues: geometry.strokes.flatMap(s => functionViolations(s, config)) } : {}) }
   }
   function createSession (si, config, toolId, options = {}) {
     let revision = 0; let serial = 0; let active = null
@@ -153,7 +165,7 @@
     }
     return { invalidate, propose, commit }
   }
-  const api = { receivingTool, graphToNative, encode, pathData, functionViolations, prepare, createSession }
+  const api = { receivingTool, receivingDraftTool, graphToNative, encode, pathData, functionViolations, prepare, createSession }
   if (typeof module !== 'undefined' && module.exports) module.exports = api
   else root.StarNative = api
 })(typeof window !== 'undefined' ? window : globalThis)

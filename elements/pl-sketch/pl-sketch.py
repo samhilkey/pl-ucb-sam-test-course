@@ -1,6 +1,7 @@
 import base64
 import copy
 import json
+import math
 import random
 import re
 import string
@@ -77,6 +78,7 @@ class SketchClientConfig(TypedDict):
     initialstate: dict[str, DrawingData]
     readonly: NotRequired[bool]
     assistedPhotoGeometry: NotRequired[bool]
+    editablePhotoDraftTool: NotRequired[str]
 
 
 class SketchAnswerParams(TypedDict):
@@ -121,6 +123,7 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "allow-hand-drawn",  # STAR
         "automatic-photo",  # STAR: independent experimental CV import switch
         "preserve-photo-geometry",  # opt-in reviewed manual traces, no equation fit
+        "editable-photo-draft-tool",  # local opt-in: accepted, vertex-editable polyline
     ]
     pl.check_attribs(element, required_attribs, optional_attribs)
 
@@ -304,6 +307,14 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         if not any(t["name"] == "freeform" and not t["readonly"] and not t["helper"] for t in tool_data.values()):
             raise ValueError("Photo geometry needs an editable free-draw tool.")
         client_config["assistedPhotoGeometry"] = True
+    draft_tool_id = pl.get_string_attrib(element, "editable-photo-draft-tool", None)
+    if draft_tool_id is not None:
+        draft_tool = tool_data.get(draft_tool_id)
+        if (not preserve_photo_geometry or not draft_tool or draft_tool["name"] != "polyline"
+                or draft_tool.get("closed") or draft_tool["readonly"] or draft_tool["helper"]
+                or not any(any(t["id"] == draft_tool_id for t in g["toolid"]) for g in graders)):
+            raise ValueError("Editable photo drafts need preserve-photo-geometry and an editable open-polyline tool included in grading.")
+        client_config["editablePhotoDraftTool"] = draft_tool_id
 
     # Saving all processed data into a dictionary
     params: SketchAnswerParams = {
@@ -1025,6 +1036,30 @@ def render(element_html: str, data: pl.QuestionData) -> str:
         return chevron.render(f, html_params).strip()
 
 
+def _editable_draft_gradeable(paths: Any) -> list[dict[str, Any]]:
+    """Grade the same straight segments the native open-polyline tool renders."""
+    if not isinstance(paths, list) or len(paths) > 100:
+        raise ValueError("Invalid editable draft state.")
+    result = []
+    for points in paths:
+        if not isinstance(points, list):
+            raise ValueError("Invalid editable draft path.")
+        if not points:  # Native finalized-shape placeholder, not a new branch.
+            continue
+        if len(points) < 2 or len(points) > 10000 or any(
+            not isinstance(p, dict) or set(p) - {"x", "y", "tag"}
+            or any(isinstance(p.get(a), bool) or not isinstance(p.get(a), (int, float))
+                   or not math.isfinite(p[a]) for a in ("x", "y")) for p in points
+        ):
+            raise ValueError("Invalid editable draft coordinates.")
+        controls = [[points[0]["x"], points[0]["y"]]]
+        for a, b in zip(points, points[1:]):
+            for k in (1, 2, 3):
+                controls.append([b[v] if k == 3 else a[v] + (b[v] - a[v]) * k / 3 for v in ("x", "y")])
+        result.append({"spline": controls})
+    return result
+
+
 def parse(element_html: str, data: pl.QuestionData) -> None:
     element = lxml.html.fragment_fromstring(element_html)
     name = pl.get_string_attrib(element, "answers-name")
@@ -1046,6 +1081,15 @@ def parse(element_html: str, data: pl.QuestionData) -> None:
             # Validate the submission data format here to avoid type or key errors later on
             if not isinstance(gradeable, dict):
                 raise TypeError("gradeable must be a dictionary")
+            draft_id = data["params"][name]["config"].get("editablePhotoDraftTool")
+            if draft_id:
+                # Recompute independently from actual native vertices. Do not
+                # grade a fitted path different from the rendered polyline or
+                # trust a client-provided ideal gradeable answer.
+                gradeable[draft_id] = _editable_draft_gradeable(submission_parsed["data"][draft_id])
+                data["submitted_answers"][name + "-sketchresponse-submission"] = base64.b64encode(
+                    json.dumps(submission_parsed).encode("utf-8")
+                ).decode("utf-8")
             for tool_id, items in gradeable.items():
                 if not isinstance(items, list):
                     raise TypeError(f"gradeable[{tool_id}] must be a list")
@@ -1174,6 +1218,21 @@ def grade(element_html: str, data: pl.QuestionData) -> None:
 
     if read_only:
         return
+
+    draft_id = data["params"][name]["config"].get("editablePhotoDraftTool")
+    draft_requires_function = draft_id and any(
+        g["type"] == "match-function" and not g.get("xyflip")
+        and any(t["id"] == draft_id for t in g["toolid"])
+        for g in data["params"][name]["graders"]
+    )
+    if draft_requires_function:
+        submission = json.loads(base64.b64decode(data["submitted_answers"][name + "-sketchresponse-submission"]).decode("utf-8"))
+        for points in submission["data"][draft_id]:
+            directions = [b["x"] - a["x"] for a, b in zip(points, points[1:])]
+            if any(d > 1e-7 for d in directions) and any(d < -1e-7 for d in directions):
+                data["partial_scores"][name] = {"score": 0, "weight": weight, "feedback": [{"correct": False,
+                    "feedback_text": "Your editable drawing was saved, including the turn back in x. Adjust its vertices if needed; multiple y-values do not form the requested function."}]}
+                return
 
     # Only the opted-in manual-photo question accepts an overlapping attempt
     # as a mathematical mistake instead of an invalid/unsavable submission.

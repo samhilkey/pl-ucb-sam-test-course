@@ -14,12 +14,14 @@
       "star-recognition.js",
       "star-cv-assisted.js",
       "star-targeted.js",
+      "star-editable-draft.js",
       "star-native.js",
       "star-assisted.js",
       "star-providers.js",
       "star-canvas-reference.js",
       "star-automatic.js",
       "star-canvas-review.js",
+      "star-editable-draft-ui.js",
       "pl-sketch.js"
     ],
     "elementStyles": [
