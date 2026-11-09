@@ -17,11 +17,11 @@ window.StarCanvasReview = (function () {
     const session = StarNative.createSession(si, config, undefined, { targeted: true }); const autoSession = StarNative.createSession(si, config); const manualSession = StarNative.createSession(si, config, undefined, { assisted: true })
     let source = null; let file = null; let hash = ''; let revision = 0; let active = false; let phase = 'select'; let mode = 'origin'; let axes = {}; let selections = []; let dots = []; let pending = null; let proposal = null; let candidate = null; let priorFrame = null; let automatic = false
     let cursor = [config.width / 2, config.height / 2]; let keyboard = false
-    let traces = []; let currentTrace = null; let manuallyTraced = false
+    let traces = []; let currentTrace = null; let manuallyTraced = false; let blockedSegments = []
     const values = () => ({ ...axes, xValue: q('.star-correction-x').value === '' ? NaN : Number(q('.star-correction-x').value), yValue: q('.star-correction-y').value === '' ? NaN : Number(q('.star-correction-y').value) })
     const frame = g => ({ origin_pixel: g.coordinate_frame.origin_pixel, origin_graph: g.calibration.origin_graph, x_unit_vector_pixel: g.calibration.x_unit_vector_pixel, y_unit_vector_pixel: g.calibration.y_unit_vector_pixel })
     const axisFrame = () => { const c = StarCVAssisted.calibration(source.image, values()); return { origin_pixel: c.frame.origin_pixel, origin_graph: c.scale.origin_graph, x_unit_vector_pixel: c.scale.x_unit_vector_pixel, y_unit_vector_pixel: c.scale.y_unit_vector_pixel } }
-    function invalidate () { proposal = candidate = null; session.invalidate(revision); autoSession.invalidate(revision); manualSession.invalidate(revision) }
+    function invalidate () { proposal = candidate = null; blockedSegments = []; session.invalidate(revision); autoSession.invalidate(revision); manualSession.invalidate(revision) }
     function draw () {
       if (layer.parentNode !== svg) svg.append(layer)
       const ctx = paint.getContext('2d'); ctx.clearRect(0, 0, paint.width, paint.height); layer.style.display = active ? '' : 'none'
@@ -40,6 +40,10 @@ window.StarCanvasReview = (function () {
       ctx.strokeStyle = '#087e41'; ctx.lineWidth = 3
       for (const ps of traces.concat(currentTrace ? [currentTrace] : [])) { ctx.beginPath(); ps.forEach((v, i) => { const p = reference.toCanvas(v); if (i) ctx.lineTo(...p); else ctx.moveTo(...p) }); ctx.stroke() }
       if (pending) dot(pending, '#0068c7', 'start')
+      for (const segment of blockedSegments) {
+        const a = reference.toCanvas(segment.pixels[0]); const b = reference.toCanvas(segment.pixels[1]); ctx.strokeStyle = '#b91c1c'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.stroke()
+        ctx.beginPath(); ctx.arc(a[0], a[1], 12, 0, Math.PI * 2); ctx.stroke()
+      }
       if (keyboard && phase === 'select') { ctx.strokeStyle = '#0068c7'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cursor[0] - 9, cursor[1]); ctx.lineTo(cursor[0] + 9, cursor[1]); ctx.moveTo(cursor[0], cursor[1] - 9); ctx.lineTo(cursor[0], cursor[1] + 9); ctx.stroke() }
     }
     function controls (message) {
@@ -109,7 +113,7 @@ window.StarCanvasReview = (function () {
           const im = source.image; const sx = im.processing.width / im.width; const sy = im.processing.height / im.height; const toProcessing = p => [(p[0] + 0.5) * sx - 0.5, (p[1] + 0.5) * sy - 0.5]; const v = values()
           preview(StarAssisted.fromTrace({ width: im.width, height: im.height, processingWidth: im.processing.width, processingHeight: im.processing.height, origin: toProcessing(v.origin || []), xMarker: toProcessing(v.xMarker || []), yMarker: toProcessing(v.yMarker || []), xValue: v.xValue, yValue: v.yValue, strokes: traces.map(ps => ps.map(toProcessing)), inputRevision: revision }), false, true)
         } else preview(StarTargeted.fromSelection({ source, photoSha256: hash, axisValues: values(), selections, pointSelections: dots, inputRevision: revision }))
-      } catch (e) { invalidate(); controls(e.message + (manuallyTraced ? ' Nothing was added; check your trace against the photo.' : ' Nothing was added. Choose Trace instead to follow the original ink if the detected route is wrong.')) }
+      } catch (e) { invalidate(); blockedSegments = e.segments || []; controls(e.message + (e.code === 'function_x_backtrack' ? ' The red segment marks the measured turn. The photo remains a reference only. Check this turn against your paper; importing it unchanged is blocked for this function question.' : manuallyTraced ? ' Nothing was added; check your trace against the photo.' : ' Nothing was added. Choose Trace instead to follow the original ink if the detected route is wrong.')) }
     })
     q('.star-correction-back').addEventListener('click', edit)
     q('.star-correction-accept').addEventListener('click', () => {
@@ -122,7 +126,7 @@ window.StarCanvasReview = (function () {
       } catch (e) { invalidate(); controls(e.message + ' Preview the current drawing again before accepting.'); q('.star-correction-back').hidden = false }
     })
     q('.star-correction-align').addEventListener('click', () => {
-      try { reference.setFrame(axisFrame(), true); close(false); reference.message('Photo aligned using your axis values. Draw the actual ink with native tools; no CV geometry was imported.'); panel.querySelector('.star-canvas-edit').click() } catch (e) { controls(e.message) }
+      try { reference.setFrame(axisFrame(), true); close(false); panel.querySelector('.star-canvas-edit').click(); reference.message('Reference photo aligned only; no photo curves were imported. Draw with native tools before Save & Grade. An empty native answer is Invalid.') } catch (e) { controls(e.message) }
     })
     q('.star-correction-cancel').addEventListener('click', () => close())
     q('.star-correction-manual').addEventListener('click', () => { if (file) { close(); container.dispatchEvent(new CustomEvent('star-assist-photo', { detail: { file } })) } })

@@ -1,4 +1,4 @@
-/* Offline semantic-region + measured-CV proof. Not loaded by the student UI. */
+/* Coarse semantic regions + measured CV. Not enabled in the student UI. */
 ;(function (root) {
   'use strict'
   const Geometry = typeof module !== 'undefined' && module.exports ? require('./star-geometry.js') : root.StarGeometry
@@ -37,8 +37,12 @@
   function inspect (source, envelope) {
     Geometry.validate(source)
     if (source.provenance || source.points?.length) throw new Error('Use the original measured CV observation.')
-    if (!envelope || envelope.kind !== 'development_fixture' || envelope.model !== null || !/^[a-f0-9]{64}$/.test(envelope.photo_sha256 || '') ||
-      envelope.width !== source.image.width || envelope.height !== source.image.height) throw new Error('Only a matching, labeled offline semantic fixture is enabled. No Gemini transport is implemented.')
+    const fixture = envelope?.kind === 'development_fixture' && envelope.model === null
+    const provider = envelope?.kind === 'gemini_semantic_response' && envelope.model === 'gemini-3.5-flash-lite' &&
+      ['real_provider_request', 'test_fixture'].includes(envelope.source_kind) && envelope.input_revision === source.input_revision &&
+      /^[a-f0-9]{64}$/.test(envelope.request_sha256 || '') && /^[a-f0-9]{64}$/.test(envelope.response_sha256 || '')
+    if ((!fixture && !provider) || !/^[a-f0-9]{64}$/.test(envelope.photo_sha256 || '') ||
+      envelope.width !== source.image.width || envelope.height !== source.image.height) throw new Error('Only a matching, labeled semantic envelope is accepted; provider outputs require revision and request/response evidence.')
     const s = validateSemantics(envelope.semantics); const w = source.image.width; const h = source.image.height
     const inBox = (p, r) => r && p[0] * 1000 / w >= r[0] && p[0] * 1000 / w <= r[2] && p[1] * 1000 / h >= r[1] && p[1] * 1000 / h <= r[3]
     const blockers = []; const decisions = {}; const markDecisions = {}; const assigned = {}; const measuredPoints = []
@@ -99,7 +103,7 @@
         if (axis.positive_direction !== direction) block('direction_grounding', a + ': positive axis direction disagrees with pixels.')
       }
     }
-    return { source_kind: 'development_fixture', automatically_recognized: false, importable_after_explicit_review: blockers.length === 0, blockers, strokeDecisions: decisions, markDecisions, measured_points: measuredPoints, measured_branch_count: paths.length, inserted_vertices: 0, pixel_source: 'unchanged_local_CV_centerlines' }
+    return { source_kind: fixture ? 'development_fixture' : envelope.source_kind, automatically_recognized: false, importable_after_explicit_review: blockers.length === 0, blockers, strokeDecisions: decisions, markDecisions, measured_points: measuredPoints, measured_branch_count: paths.length, inserted_vertices: 0, pixel_source: 'unchanged_local_CV_centerlines' }
   }
   function reviewed (source, envelope, review, inputRevision = source.input_revision) {
     if (inputRevision !== source.input_revision) throw new Error('Cannot relabel stale CV pixels as a new photo revision.')
@@ -110,14 +114,15 @@
     if (c.origin_graph.some(v => v !== 0)) throw new Error('This small proof does not yet handle nonzero axis-intersection values.')
     const geometry = Assisted.fromSelection({ source, photoSha256: envelope.photo_sha256, strokeDecisions: result.strokeDecisions, markDecisions: result.markDecisions, reviewBasis: 'explicit_decisions', inputRevision,
       axisValues: { origin: o, xMarker: o.map((v, i) => v + c.x_unit_vector_pixel[i]), yMarker: o.map((v, i) => v + c.y_unit_vector_pixel[i]), xValue: 1, yValue: 1 } })
-    geometry.provenance = { method: 'hybrid_development', automatically_recognized: false, semantic_source_kind: 'development_fixture', photo_sha256: envelope.photo_sha256,
+    const fixture = envelope.kind === 'development_fixture'
+    geometry.provenance = { method: fixture ? 'hybrid_development' : 'hybrid_semantic', automatically_recognized: false, semantic_source_kind: fixture ? 'development_fixture' : envelope.source_kind, photo_sha256: envelope.photo_sha256,
       calibration_basis: 'existing_CV_numeric_image_evidence_explicitly_confirmed', source_geometry: clone(source), semantic_envelope: clone(envelope), review: clone(review) }
-    geometry.uncertainty.assumptions = ['OFFLINE DEVELOPMENT PROOF: human-authored coarse semantic regions, not Gemini recognition.', 'Vertices/dots are measured CV pixels; no fitting, clipping, snapping or inferred joins.', 'Existing CV numeric calibration was explicitly confirmed; compatibility axis fields are student-confirmed.']
+    geometry.uncertainty.assumptions = [fixture ? 'OFFLINE DEVELOPMENT PROOF: human-authored coarse semantic regions, not Gemini recognition.' : envelope.source_kind === 'test_fixture' ? 'OFFLINE TRANSPORT FIXTURE: not Gemini recognition.' : 'Gemini coarse semantics grounded in measured CV; explicitly reviewed, not an automatic import.', 'Vertices/dots are measured CV pixels; no fitting, clipping, snapping or inferred joins.', 'Existing CV numeric calibration was explicitly confirmed; compatibility axis fields are student-confirmed.']
     return Geometry.validate(geometry)
   }
   function validate (geometry) {
     const p = geometry.provenance
-    if (p?.method !== 'hybrid_development' || p.automatically_recognized !== false || p.semantic_source_kind !== 'development_fixture') throw new Error('A labeled, reviewed offline hybrid provenance is required.')
+    if (!['hybrid_development', 'hybrid_semantic'].includes(p?.method) || p.automatically_recognized !== false || !['development_fixture', 'real_provider_request', 'test_fixture'].includes(p.semantic_source_kind)) throw new Error('A labeled, reviewed hybrid provenance is required.')
     const expected = reviewed(p.source_geometry, p.semantic_envelope, p.review, geometry.input_revision)
     if (JSON.stringify(geometry) !== JSON.stringify(expected)) throw new Error('Hybrid measured geometry changed after review.')
     return geometry

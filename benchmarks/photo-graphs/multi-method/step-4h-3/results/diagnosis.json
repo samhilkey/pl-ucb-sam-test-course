@@ -1,0 +1,47 @@
+{
+  "evaluator_only": true,
+  "original_jpeg_sha256": "f86a0acd1dc1fcad32884c202e4fffe44adc5d88c1062a0f8a2cbd60dbc74d49",
+  "metadata_free_png_sha256": "bc1a75a4f46e0ebc43d43cfb26942d15306a69cc25530ae57309bd3f1a8dd9d9",
+  "calibration": "Prior explicitly manual 3-anchor frame; not automatic calibration or recognizer input.",
+  "measured_backtracking_segments": [
+    {
+      "stroke_id": "cv-assisted-1",
+      "vertex_indices": [
+        0,
+        1
+      ],
+      "pixels": [
+        [
+          1181.515294117647,
+          269.02166666666665
+        ],
+        [
+          1188.3411764705884,
+          271.29611111111114
+        ]
+      ],
+      "graph": [
+        [
+          2.2319282355365933,
+          5.514238775795291
+        ],
+        [
+          2.273678922357654,
+          5.498671245988305
+        ]
+      ],
+      "native_dx": 2.713794643368999,
+      "source_stroke_ids": [
+        "stroke-16"
+      ],
+      "duplicate_positions": false,
+      "nearest_junction_source_pixel": 303.0439810486705,
+      "nearest_attached_mark_source_pixel": 241.53591726864448
+    }
+  ],
+  "visual_diagnosis": "Top-right terminal hook visibly present in original ink. Not axis/label contamination, duplicate vertices, attached dot or skeleton junction. Skeleton follows the hook; orientation reversal is invariant under path reversal.",
+  "largest_reverse_graph_x": 0.04175068682106087,
+  "inference_calls": 0,
+  "automatic_native_import": false,
+  "decision": "Retain original measured hook and reject unchanged function-input import. Do not sort x, trim endpoint or replace with expected parabola."
+}

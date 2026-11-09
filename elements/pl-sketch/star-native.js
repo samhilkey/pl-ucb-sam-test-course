@@ -39,6 +39,18 @@
     if (controls.length < 4 || (controls.length - 1) % 3) throw new Error('Invalid cubic controls.')
     return 'M' + controls[0].x + ',' + controls[0].y + 'C' + controls.slice(1).map(p => p.x + ',' + p.y).join(' ')
   }
+  // Diagnose in traversal order; never sort, trim, smooth or move ink to make
+  // it satisfy a function-input contract. Keep the guard's original epsilon.
+  function functionViolations (stroke, config) {
+    const ps = stroke.vertices.map(v => graphToNative(config, v.graph))
+    const dx = ps.slice(1).map((p, i) => p.x - ps[i].x)
+    if (!dx.some(v => v > 1e-7) || !dx.some(v => v < -1e-7)) return []
+    const net = ps.at(-1).x - ps[0].x
+    const direction = Math.sign(net) || Math.sign(dx.find(v => Math.abs(v) > 1e-7))
+    return dx.flatMap((v, i) => v * direction < -1e-7 ? [{ stroke_id: stroke.id, vertex_indices: [i, i + 1],
+      pixels: [stroke.vertices[i].pixel, stroke.vertices[i + 1].pixel],
+      graph: [stroke.vertices[i].graph, stroke.vertices[i + 1].graph], native_dx: v }] : [])
+  }
   function prepare (geometry, config, toolId, state, options = {}) {
     Geometry.validate(geometry)
     const assisted = options.assisted === true && config.assistedPhotoGeometry === true &&
@@ -50,14 +62,14 @@
       !geometry.warnings.length && !geometry.assistance.length && !geometry.uncertainty.regions.length && !geometry.topology.junctions.length && !!CVAssisted.validate(geometry)
     const Hybrid = options.hybrid === true && (typeof module !== 'undefined' && module.exports ? require('./star-hybrid.js') : root.StarHybrid)
     const hybrid = options.hybrid === true && config.experimentalHybridGeometry === true && config.assistedPhotoGeometry === true && geometry.status === 'needs_review' &&
-      geometry.provenance?.method === 'hybrid_development' && !geometry.warnings.length && !geometry.assistance.length &&
+      ['hybrid_development', 'hybrid_semantic'].includes(geometry.provenance?.method) && !geometry.warnings.length && !geometry.assistance.length &&
       !geometry.uncertainty.regions.length && !geometry.topology.junctions.length && !!Hybrid?.validate(geometry)
     const Targeted = options.targeted === true && (typeof module !== 'undefined' && module.exports ? require('./star-targeted.js') : root.StarTargeted)
     const targeted = options.targeted === true && config.assistedPhotoGeometry === true && geometry.status === 'needs_review' &&
       geometry.provenance?.method === 'targeted_cv' && !geometry.warnings.length && !geometry.assistance.length &&
       !geometry.uncertainty.regions.length && !geometry.topology.junctions.length && !!Targeted?.validate(geometry)
     if (geometry.provenance?.method === 'targeted_cv' && !targeted) throw new Error('Endpoint-guided CV requires a current reviewed proposal; it is not automatic recognition.')
-    if (geometry.provenance?.method === 'hybrid_development' && !hybrid) throw new Error('Offline hybrid geometry requires its experimental gate and reviewed provenance; it is not automatic recognition.')
+    if (['hybrid_development', 'hybrid_semantic'].includes(geometry.provenance?.method) && !hybrid) throw new Error('Hybrid geometry requires its experimental gate and reviewed provenance; it is not automatic recognition.')
     if ((!assisted && !cvAssisted && !hybrid && !targeted && geometry.status !== 'automatic') || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
     if (geometry.points?.length && !cvAssisted && !hybrid && !targeted) throw new Error('Isolated dots require a reviewed CV-assisted proposal; they cannot be silently dropped.')
     const tool = receivingTool(config, toolId)
@@ -65,9 +77,11 @@
     const drawings = geometry.strokes.map(s => {
       if (s.closed) throw new Error('Closed strokes require a different question input contract.')
       const points = s.vertices.map(v => graphToNative(config, v.graph))
-      const epsilon = 1e-7
-      const directions = points.slice(1).map((p, i) => p.x - points[i].x).filter(v => Math.abs(v) > epsilon)
-      if (directions.some(v => v > 0) && directions.some(v => v < 0)) throw new Error('A stroke doubles back in x. This function-input question requires correction.')
+      const violations = functionViolations(s, config)
+      if (violations.length) {
+        const error = new Error('A stroke doubles back in x. This function-input question requires correction. No curve was imported.')
+        error.code = 'function_x_backtrack'; error.segments = clone(violations); throw error
+      }
       const buffer = config.enforceBounds ? (config.safetyBuffer || 0) : 0
       if (points.some(p => p.x < buffer || p.y < buffer || p.x > config.width - buffer || p.y > config.height - buffer)) throw new Error('The photographed geometry exceeds this canvas range. It was not clipped or rescaled.')
       return encode(points, 'freeform')
@@ -139,7 +153,7 @@
     }
     return { invalidate, propose, commit }
   }
-  const api = { receivingTool, graphToNative, encode, pathData, prepare, createSession }
+  const api = { receivingTool, graphToNative, encode, pathData, functionViolations, prepare, createSession }
   if (typeof module !== 'undefined' && module.exports) module.exports = api
   else root.StarNative = api
 })(typeof window !== 'undefined' ? window : globalThis)

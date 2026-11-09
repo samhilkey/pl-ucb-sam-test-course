@@ -1,0 +1,144 @@
+{
+  "step": "4H-3",
+  "verdict": "FAIL for automatic real-photo/hybrid native recognition",
+  "recorded_at": "2026-11-09T06:16:49.741Z",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "baseline_commit": "5eb86b376cdeb497c10e67c3daacea7a9647600e",
+  "environment": {
+    "node": "v20.19.6",
+    "browser": "Chrome via Playwright CLI",
+    "browser_plugin": "Not available; CLI skill fallback",
+    "desktop": [
+      1440,
+      1100
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "frozen_presentation": [
+      1280,
+      720
+    ],
+    "physical_projector_tested": false,
+    "url": "http://localhost:3000/pl/course/1/question/254/preview/"
+  },
+  "tests": {
+    "node": {
+      "passed": 146,
+      "failed": 0,
+      "command": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs tests/star-gemini-pilot.test.cjs tests/star-gemini-once.test.cjs tests/star-gemini-observation.test.cjs tests/star-cv-assisted.test.cjs tests/star-canvas-reference.test.cjs tests/star-hybrid.test.cjs tests/star-targeted.test.cjs tests/star-semantic-provider.test.cjs tests/star-native-backtrack.test.cjs"
+    },
+    "server": {
+      "passed": 5,
+      "failed": 0,
+      "command": "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-assisted-server.py -v'"
+    },
+    "browser": {
+      "new_assertions": 28,
+      "native_regression_assertions": 165,
+      "frozen_manual_assertions": 84,
+      "total": 277,
+      "final_failures": 0,
+      "commands": [
+        "node tests/star-native-photo-blocker-browser.cjs",
+        "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh PL_PHOTO_TEST_OUTPUT=/private/tmp/star-h3/native-browser node tests/star-native-browser.cjs",
+        "node benchmarks/photo-graphs/multi-method/step-4g-4/run-manual-regression.cjs"
+      ],
+      "initial_harness_issues": [
+        "Sandbox npm cache write blocked; ran authorized local Chrome command.",
+        "Compared toolbar activation as geometry; corrected object-only check.",
+        "Nonempty prior point prevented a truly empty answer; separated trials.",
+        "Raw mask arrays exceeded CLI result buffer; restricted observer to geometry/method/marks.",
+        "Native regression initially omitted PL_PHOTO_TEST_CLI wrapper; corrected command."
+      ],
+      "console": "No page exceptions. Existing local SketchResponse font-decode warnings.",
+      "external_requests": 0
+    },
+    "syntax_checks_passed": true,
+    "diff_check_passed": true
+  },
+  "real_photo": {
+    "input": "IMG_1678.jpg",
+    "hash": "f86a0acd1dc1fcad32884c202e4fffe44adc5d88c1062a0f8a2cbd60dbc74d49",
+    "photo_visible": true,
+    "candidate_strokes_available": true,
+    "automatic_calibration": false,
+    "manual_three_anchor_alignment": true,
+    "automatic_native_import": false,
+    "cv_assisted_unchanged_native_import": false,
+    "manually_traced_in_new_test": false,
+    "native_curves_after_alignment": 0,
+    "save_grade": "Invalid, fully empty native answer",
+    "restoration": "Reference only; no recognized curve exists",
+    "url": "http://localhost:3000/pl/course/1/question/254/preview/?variant_id=551"
+  },
+  "controlled_raster": {
+    "not_a_real_photo": true,
+    "editable_native_objects": 1,
+    "initial_grade": [
+      "100%",
+      "100%",
+      "100%"
+    ],
+    "edited_grade": [
+      "100%",
+      "100%",
+      "100%",
+      "100%"
+    ],
+    "maximum_native_anchor_error_pixel": 1.4210854715202004e-14,
+    "editing_save_grade_restoration": true,
+    "unrelated_point_preserved": true,
+    "url": "http://localhost:3000/pl/course/1/question/254/preview/?variant_id=552"
+  },
+  "gemini": {
+    "live_requests": 0,
+    "live_tokens": 0,
+    "incurred_cost_this_step_usd": 0,
+    "exact_image_external_permission": false,
+    "fresh_inference_approval": false,
+    "student_ui_connected": false,
+    "server_module_tests": "Mock responses only; not recognition evidence"
+  },
+  "source_hashes": {
+    "elements/pl-sketch/star-native.js": "5f3b7d9f3d1888dcaffd9f1edd7859b962a10d5d681da1bb3998051fb1f5d9fe",
+    "elements/pl-sketch/star-canvas-review.js": "ecf9d229b463d26624ae21cea80a1fcbd83b828708e9f9b28d0a8ab9479a75a0",
+    "elements/pl-sketch/star-hybrid.js": "de8cd81b8acabc349f92704d069ad018672a98cfd80f277303b90403e8370b52",
+    "server/star-gemini-semantic.cjs": "afc9988ae5c083d531c386745d6d5cf2648f11ecdc64282d0ce4f3d65f0f468b"
+  },
+  "frozen_sources": [
+    {
+      "file": "elements/pl-sketch/star-assisted.js",
+      "sha256": "3b1185ce0ed264605100d65057c9b33e395303dd549490e8e5a3f3cf3adf6316",
+      "matches_step4h2_commit": true
+    },
+    {
+      "file": "elements/pl-sketch/star-photo.js",
+      "sha256": "75fab1d209dfdaf6f14085be195578b28aee6852aaf92827be7a06694244889e",
+      "matches_step4h2_commit": true
+    },
+    {
+      "file": "elements/pl-sketch/star-recognition.js",
+      "sha256": "34dfc4b9b08d25fd8ca4d2241dbbcc0a1fab7e816415c73bd8d6e06332711207",
+      "matches_step4h2_commit": true
+    },
+    {
+      "file": "elements/pl-sketch/pl-sketch.py",
+      "sha256": "e7c10bd734dd51849f050d6ee214f5595435a7915046f7bb6784d06cf585813f",
+      "matches_step4h2_commit": true
+    }
+  ],
+  "pushed": false,
+  "merged": false,
+  "deployed": false,
+  "credential_audit": "credential-check.json: configured key absent from staged index and frozen portable assets",
+  "review": {
+    "no_function_constraint_bypass": true,
+    "actual_terminal_ink_retained": true,
+    "no_reference_geometry_in_inference": true,
+    "no_new_recognition_algorithm": true,
+    "normal_ui_remains_cv_only": true,
+    "physical_projector_not_available": true
+  }
+}
