@@ -2,6 +2,22 @@
 ;(function (root) {
   'use strict'
   const prefix = 'star.canvas-photo.v1:'; const maxAge = 24 * 60 * 60 * 1000; const maxData = 4000000
+  function validateFrame (f) {
+    const pair = p => Array.isArray(p) && p.length === 2 && p.every(Number.isFinite)
+    if (!f || !['origin_pixel', 'origin_graph', 'x_unit_vector_pixel', 'y_unit_vector_pixel'].every(k => pair(f[k]))) throw new Error('Invalid photo alignment.')
+    const a = f.x_unit_vector_pixel; const b = f.y_unit_vector_pixel; const det = a[0] * b[1] - a[1] * b[0]
+    if (!Number.isFinite(det) || Math.abs(det) < 1e-6 || Math.abs(det) / (Math.hypot(...a) * Math.hypot(...b)) < 0.05) throw new Error('Photo alignment axes must be independent.')
+    return f
+  }
+  function matrix (f, c) {
+    validateFrame(f)
+    const a = f.x_unit_vector_pixel; const b = f.y_unit_vector_pixel; const o = f.origin_pixel; const det = a[0] * b[1] - a[1] * b[0]
+    const sx = c.width / (c.xrange[1] - c.xrange[0]); const sy = -c.height / (c.yrange[1] - c.yrange[0])
+    const m = [sx * b[1] / det, -sy * a[1] / det, -sx * b[0] / det, sy * a[0] / det]
+    const out = [...m, (f.origin_graph[0] - c.xrange[0]) * sx - m[0] * o[0] - m[2] * o[1], (f.origin_graph[1] - c.yrange[1]) * sy - m[1] * o[0] - m[3] * o[1]]
+    if (!out.every(Number.isFinite)) throw new Error('Photo alignment exceeds the finite native frame.')
+    return out
+  }
   function fit (image, canvas, inset = 10) {
     if (![image.width, image.height, canvas.width, canvas.height].every(n => Number.isFinite(n) && n > 0) || !Number.isFinite(inset) || inset < 0 || canvas.width <= inset * 2 || canvas.height <= inset * 2) throw new Error('Invalid reference frame.')
     const scale = Math.min((canvas.width - inset * 2) / image.width, (canvas.height - inset * 2) / image.height)
@@ -18,6 +34,7 @@
         !/^[a-f0-9]{64}$/.test(r.sha256 || '') || typeof r.data !== 'string' || r.data.length > maxData ||
         !/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(r.data) || !r.data.startsWith('data:' + r.type + ';') ||
         typeof r.visible !== 'boolean' || typeof r.showCV !== 'boolean') throw new Error('Invalid saved photo reference.')
+    if (r.frame !== undefined && r.frame !== null) validateFrame(r.frame)
     return r
   }
   const instances = {}
@@ -43,6 +60,10 @@
     new MutationObserver(placeLayer).observe(svg, { childList: true })
     svg.setAttribute('tabindex', svg.getAttribute('tabindex') || '0')
     let controller = null; let revision = -1; let source = null; let original = null; let geometry = null; let sha256 = ''; let visible = true; let showCV = true; let stored = false; let record = null; let restoring = null; let sourceRevision = -1
+    let alignment = null; let storedFrame = null
+    const copy = v => v ? JSON.parse(JSON.stringify(v)) : null
+    const transform = () => alignment ? matrix(alignment, config) : source ? (() => { const r = fit(source.originalSize, config); return [r.scale, 0, 0, r.scale, r.x, r.y] })() : [1, 0, 0, 1, 0, 0]
+    const toCanvas = p => { const m = transform(); return [m[0] * p[0] + m[2] * p[1] + m[4], m[1] * p[0] + m[3] * p[1] + m[5]] }
     const signature = JSON.stringify([config.width, config.height, config.xrange, config.yrange])
     const variant = container.closest('form')?.querySelector('input[name="__variant_id"]')?.value
     const scope = storageKey(location.pathname, variant, id, signature)
@@ -50,7 +71,7 @@
     function storageNote (text) { q('.star-canvas-storage-note').hidden = false; q('.star-canvas-storage-note').textContent = text }
     function writeRecord () {
       if (!scope || !record) return
-      try { sessionStorage.setItem(scope, JSON.stringify({ ...record, visible, showCV })); stored = true; storageNote('Photo kept in this tab for this attempt (up to 24 hours), not submitted to PrairieLearn.') } catch (_) {
+      try { sessionStorage.setItem(scope, JSON.stringify({ ...record, visible, showCV, frame: storedFrame })); stored = true; storageNote('Photo kept in this tab for this attempt (up to 24 hours), not submitted to PrairieLearn.') } catch (_) {
         stored = false; forget(); storageNote('Photo is available now but could not be kept in this tab. Reupload it after refresh; your saved drawings are unaffected.')
       }
     }
@@ -70,18 +91,18 @@
       const ctx = paint.getContext('2d'); ctx.clearRect(0, 0, paint.width, paint.height)
       layer.style.display = source && visible ? '' : 'none'
       if (source) {
-        const rect = fit(source.originalSize, config); ctx.globalAlpha = Number(q('.star-canvas-opacity').value) / 100
-        ctx.drawImage(source.canvas, rect.x, rect.y, rect.width, rect.height); ctx.globalAlpha = 1
+        ctx.save(); ctx.setTransform(...transform()); ctx.globalAlpha = Number(q('.star-canvas-opacity').value) / 100
+        ctx.drawImage(source.canvas, 0, 0, source.originalSize.width, source.originalSize.height); ctx.restore()
         if (showCV && geometry) {
           ctx.strokeStyle = '#b95800'; ctx.lineWidth = 2; ctx.setLineDash([5, 4])
-          for (const s of geometry.strokes) { ctx.beginPath(); s.vertices.forEach((v, i) => { const p = [rect.x + v.pixel[0] * rect.scale, rect.y + v.pixel[1] * rect.scale]; if (i) ctx.lineTo(...p); else ctx.moveTo(...p) }); ctx.stroke() }
+          for (const s of geometry.strokes) { ctx.beginPath(); s.vertices.forEach((v, i) => { const p = toCanvas(v.pixel); if (i) ctx.lineTo(...p); else ctx.moveTo(...p) }); ctx.stroke() }
           ctx.setLineDash([])
         }
       }
       q('.star-canvas-visible').textContent = visible ? 'Hide photo' : 'Show photo'; q('.star-canvas-visible').setAttribute('aria-pressed', String(visible))
       for (const s of ['.star-canvas-edit', '.star-canvas-visible', '.star-canvas-remove']) q(s).disabled = !source || s === '.star-canvas-edit' && !!config.readonly
       q('.star-canvas-photo-note').hidden = !source
-      if (source) q('.star-canvas-photo-note').textContent = original.name + ' · Reference only; not aligned to canvas axes. Only native drawings are graded.' + (visible && showCV && geometry?.strokes.length ? ' Dashed orange lines: provisional CV, not graded.' : '')
+      if (source) q('.star-canvas-photo-note').textContent = original.name + (alignment ? ' · Photo aligned to the confirmed coordinate frame. Only native drawings are graded.' : ' · Reference only; not aligned to canvas axes. Only native drawings are graded.') + (visible && showCV && geometry?.strokes.length ? ' Dashed orange lines: provisional CV, not graded.' : '')
       placeLayer()
     }
     function update (event) {
@@ -92,7 +113,8 @@
       if (event.kind === 'photo') {
         const max = Math.min(1, 1200 / Math.max(event.bitmap.width, event.bitmap.height)); const buffer = document.createElement('canvas'); buffer.width = Math.max(1, Math.round(event.bitmap.width * max)); buffer.height = Math.max(1, Math.round(event.bitmap.height * max)); buffer.getContext('2d').drawImage(event.bitmap, 0, 0, buffer.width, buffer.height)
         sourceRevision = revision; source = { canvas: buffer, originalSize: { width: event.bitmap.width, height: event.bitmap.height } }; original = event.file; sha256 = event.sha256; geometry = null
-        visible = restoring ? restoring.visible : true; showCV = restoring ? restoring.showCV : true; q('.star-canvas-cv').checked = showCV; restoring = null
+        visible = restoring ? restoring.visible : true; showCV = restoring ? restoring.showCV : true; alignment = storedFrame = copy(restoring?.frame); q('.star-canvas-cv').checked = showCV; restoring = null
+        if (alignment) { try { matrix(alignment, config); if (alignment.origin_pixel.some((v, i) => v < 0 || v >= [source.originalSize.width, source.originalSize.height][i])) throw Error('Outside photo') } catch (_) { alignment = storedFrame = null } }
         q('.star-canvas-photo-status').textContent = 'Your photo is ready. Draw or correct directly on the canvas while CV checks it.'; render(); persist(original, revision); svg.scrollIntoView({ block: 'nearest' })
       } else if (event.kind === 'recognition') {
         geometry = event.geometry; q('.star-canvas-draft').hidden = !event.nativeDraftReady
@@ -122,22 +144,30 @@
     q('.star-canvas-visible').addEventListener('click', () => { visible = !visible; render(); writeRecord() })
     q('.star-canvas-cv').addEventListener('change', e => { showCV = e.target.checked; render(); writeRecord() })
     q('.star-canvas-opacity').addEventListener('input', render)
-    q('.star-canvas-remove').addEventListener('click', () => { revision++; source = original = geometry = record = restoring = null; sha256 = ''; stored = false; forget(); controller.clearPhoto(); q('input[type=file]').value = ''; q('.star-canvas-draft').hidden = true; q('.star-canvas-storage-note').hidden = true; q('.star-canvas-photo-status').textContent = 'Reference removed. Your native drawings are kept.'; render() })
+    q('.star-canvas-remove').addEventListener('click', () => { revision++; alignment = storedFrame = null; source = original = geometry = record = restoring = null; sha256 = ''; stored = false; forget(); controller.clearPhoto(); q('input[type=file]').value = ''; q('.star-canvas-draft').hidden = true; q('.star-canvas-storage-note').hidden = true; q('.star-canvas-photo-status').textContent = 'Reference removed. Your native drawings are kept.'; render() })
     q('.star-canvas-draft').addEventListener('click', () => { if (!q('.star-canvas-draft').hidden) controller.open() })
     panel.addEventListener('keydown', e => e.stopPropagation()); panel.addEventListener('keyup', e => e.stopPropagation())
     const api = {
       update,
+      toCanvas,
+      toPhoto: p => { const m = transform(); const d = m[0] * m[3] - m[1] * m[2]; const x = p[0] - m[4]; const y = p[1] - m[5]; return [(x * m[3] - y * m[2]) / d, (m[0] * y - m[1] * x) / d] },
+      setFrame: (value, persist = false) => {
+        if (value) { validateFrame(value); matrix(value, config); if (!source || value.origin_pixel.some((v, i) => v < 0 || v >= [source.originalSize.width, source.originalSize.height][i])) throw new Error('Alignment origin is outside this photograph.') }
+        alignment = copy(value); if (persist) { storedFrame = copy(value); writeRecord() } render()
+      },
+      getFrame: () => copy(alignment),
+      message: text => { q('.star-canvas-photo-status').textContent = text },
       connect: automatic => {
         controller = automatic
         const advanced = document.getElementById(id + '-automatic-button'); advanced.className = 'btn btn-light border'; advanced.textContent = 'Advanced photo review'; q('.star-canvas-advanced-actions').append(advanced)
         const manual = document.getElementById(id + '-star-photo-btn'); if (manual) q('.star-canvas-advanced-actions').append(manual.parentElement)
         restore()
       },
-      status: () => ({ photoVisible: !!source && visible, cvOverlayVisible: !!source && visible && showCV && !!geometry?.strokes.length, sourceName: original?.name || null, sourceSha256: sha256 || null, revision, recognitionStatus: geometry?.status || null, stored, scope, fit: source ? fit(source.originalSize, config) : null, ungraded: true })
+      status: () => ({ photoVisible: !!source && visible, cvOverlayVisible: !!source && visible && showCV && !!geometry?.strokes.length, sourceName: original?.name || null, sourceSha256: sha256 || null, revision, recognitionStatus: geometry?.status || null, stored, scope, fit: source ? fit(source.originalSize, config) : null, aligned: !!alignment, ungraded: true })
     }
     instances[id] = api; render(); return api
   }
-  const api = { fit, storageKey, savedRecord, mount, instances }
+  const api = { fit, storageKey, savedRecord, validateFrame, matrix, mount, instances }
   if (typeof module !== 'undefined' && module.exports) module.exports = api
   else root.StarCanvasReference = api
 })(typeof window !== 'undefined' ? window : globalThis)

@@ -1,0 +1,705 @@
+TAP version 13
+# Subtest: manual tracing keeps the original V corner and endpoints without equation fitting
+ok 1 - manual tracing keeps the original V corner and endpoints without equation fitting
+  ---
+  duration_ms: 11.7135
+  ...
+# Subtest: manual branches preserve ordering, vertical segments and independent gaps
+ok 2 - manual branches preserve ordering, vertical segments and independent gaps
+  ---
+  duration_ms: 2.161667
+  ...
+# Subtest: resized and skewed manual calibration round-trips to original pixel centers
+ok 3 - resized and skewed manual calibration round-trips to original pixel centers
+  ---
+  duration_ms: 3.463125
+  ...
+# Subtest: invalid, nearly collinear, out-of-photo and empty traces cannot produce a proposal
+ok 4 - invalid, nearly collinear, out-of-photo and empty traces cannot produce a proposal
+  ---
+  duration_ms: 0.288917
+  ...
+# Subtest: automatic sessions still reject a manually reviewed trace and unsafe proposals
+ok 5 - automatic sessions still reject a manually reviewed trace and unsafe proposals
+  ---
+  duration_ms: 2.034584
+  ...
+# Subtest: opted-in assisted import preserves overlapping branches as separate editable controls
+ok 6 - opted-in assisted import preserves overlapping branches as separate editable controls
+  ---
+  duration_ms: 2.32975
+  ...
+# Subtest: assisted native edits and calibration revisions invalidate old proposals
+ok 7 - assisted native edits and calibration revisions invalidate old proposals
+  ---
+  duration_ms: 2.534417
+  ...
+# Subtest: optional Gemini environment check never logs a supplied key and does not enable inference
+ok 8 - optional Gemini environment check never logs a supplied key and does not enable inference
+  ---
+  duration_ms: 173.282875
+  ...
+# Subtest: visual fit preserves aspect and never implies a mathematical calibration
+ok 9 - visual fit preserves aspect and never implies a mathematical calibration
+  ---
+  duration_ms: 1.245708
+  ...
+# Subtest: photo storage scope requires an exact attempt and separates canvases, questions and frames
+ok 10 - photo storage scope requires an exact attempt and separates canvases, questions and frames
+  ---
+  duration_ms: 0.19825
+  ...
+# Subtest: restoration accepts only a matching, unexpired raster record
+ok 11 - restoration accepts only a matching, unexpired raster record
+  ---
+  duration_ms: 25.62775
+  ...
+# Subtest: corrupt storage cannot be mistaken for a native graph
+ok 12 - corrupt storage cannot be mistaken for a native graph
+  ---
+  duration_ms: 0.920208
+  ...
+# Subtest: CV-assisted calibration reuses every source vertex without tracing or automatic status
+ok 13 - CV-assisted calibration reuses every source vertex without tracing or automatic status
+  ---
+  duration_ms: 381.512583
+  ...
+# Subtest: all calibration, line, mark and geometry review gates are required
+ok 14 - all calibration, line, mark and geometry review gates are required
+  ---
+  duration_ms: 286.267417
+  ...
+# Subtest: native import requires explicit CV-assisted opt-in and rejects modified pixel/provenance data
+ok 15 - native import requires explicit CV-assisted opt-in and rejects modified pixel/provenance data
+  ---
+  duration_ms: 178.589583
+  ...
+# Subtest: reviewed dots and curves append atomically, preserving all existing native objects
+ok 16 - reviewed dots and curves append atomically, preserving all existing native objects
+  ---
+  duration_ms: 210.341583
+  ...
+# Subtest: missing/readonly/ambiguous/limited point tools block instead of dropping dots
+ok 17 - missing/readonly/ambiguous/limited point tools block instead of dropping dots
+  ---
+  duration_ms: 167.697584
+  ...
+# Subtest: native change/revision invalidates CV-assisted proposals; partial failure rolls both tools back
+ok 18 - native change/revision invalidates CV-assisted proposals; partial failure rolls both tools back
+  ---
+  duration_ms: 139.936041
+  ...
+# Subtest: branch junction ambiguity and unknown warning types remain blocked
+ok 19 - branch junction ambiguity and unknown warning types remain blocked
+  ---
+  duration_ms: 348.007
+  ...
+# Subtest: disconnected detected branches stay separate and original corners/endpoints survive
+ok 20 - disconnected detected branches stay separate and original corners/endpoints survive
+  ---
+  duration_ms: 244.89875
+  ...
+# Subtest: real photo uses exactly selected CV segments, joins only their shared endpoints and preserves the dot
+ok 21 - real photo uses exactly selected CV segments, joins only their shared endpoints and preserves the dot
+  ---
+  duration_ms: 513.076417
+  ...
+# Subtest: x and y calibration are independent and invalid native ranges remain blocked
+ok 22 - x and y calibration are independent and invalid native ranges remain blocked
+  ---
+  duration_ms: 142.239875
+  ...
+# Subtest: isolated-point schema rejects inconsistent coordinates, duplicate IDs and automatic claims
+ok 23 - isolated-point schema rejects inconsistent coordinates, duplicate IDs and automatic claims
+  ---
+  duration_ms: 104.144791
+  ...
+# Subtest: explicit decisions validate calibration and native proposals without acknowledgment flags
+ok 24 - explicit decisions validate calibration and native proposals without acknowledgment flags
+  ---
+  duration_ms: 130.391209
+  ...
+# Subtest: explicit review still blocks missing line/point choices, uncertain points and fabricated flags
+ok 25 - explicit review still blocks missing line/point choices, uncertain points and fabricated flags
+  ---
+  duration_ms: 155.673667
+  ...
+# Subtest: checkbox-free calibration rejects incomplete, zero, off-photo, collinear and unstable transforms
+ok 26 - checkbox-free calibration rejects incomplete, zero, off-photo, collinear and unstable transforms
+  ---
+  duration_ms: 97.4075
+  ...
+# Subtest: visual grouping combines only a unique exact degree-two continuation and never edits source pixels
+ok 27 - visual grouping combines only a unique exact degree-two continuation and never edits source pixels
+  ---
+  duration_ms: 93.647958
+  ...
+# Subtest: visual grouping never pairs through an uncertain crossing or joins disconnected branches
+ok 28 - visual grouping never pairs through an uncertain crossing or joins disconnected branches
+  ---
+  duration_ms: 242.814166
+  ...
+# Subtest: all real-photo source paths remain available when safe grouping is ambiguous
+ok 29 - all real-photo source paths remain available when safe grouping is ambiguous
+  ---
+  duration_ms: 2.645958
+  ...
+# Subtest: previously recorded Step4G-3 assisted geometry still validates without rewriting evidence
+ok 30 - previously recorded Step4G-3 assisted geometry still validates without rewriting evidence
+  ---
+  duration_ms: 2.591458
+  ...
+# Subtest: backup viewer serves only the standalone artifact and cannot expose env/repository files
+ok 31 - backup viewer serves only the standalone artifact and cannot expose env/repository files
+  ---
+  duration_ms: 85.602417
+  ...
+# Subtest: transfer keeps disconnected branches separate and preserves other tools
+ok 32 - transfer keeps disconnected branches separate and preserves other tools
+  ---
+  duration_ms: 3.516958
+  ...
+# Subtest: an invalid later branch cannot partially overwrite the existing drawing
+ok 33 - an invalid later branch cannot partially overwrite the existing drawing
+  ---
+  duration_ms: 0.858375
+  ...
+# Subtest: single-curve callers retain their existing coordinate mapping
+ok 34 - single-curve callers retain their existing coordinate mapping
+  ---
+  duration_ms: 0.390208
+  ...
+# Subtest: the left steep branch cannot be replaced by a flat partial fit
+ok 35 - the left steep branch cannot be replaced by a flat partial fit
+  ---
+  duration_ms: 129.064041
+  ...
+# Subtest: the right steep branch cannot be replaced by a flat partial fit
+ok 36 - the right steep branch cannot be replaced by a flat partial fit
+  ---
+  duration_ms: 82.316875
+  ...
+# Subtest: a forced rational pole between trace points cannot bridge one continuous stroke
+ok 37 - a forced rational pole between trace points cannot bridge one continuous stroke
+  ---
+  duration_ms: 0.335959
+  ...
+# Subtest: a forced tangent cannot ignore trace points around its poles
+ok 38 - a forced tangent cannot ignore trace points around its poles
+  ---
+  duration_ms: 0.823709
+  ...
+# Subtest: line still admits a complete model
+ok 39 - line still admits a complete model
+  ---
+  duration_ms: 48.151916
+  ...
+# Subtest: parabola still admits a complete model
+ok 40 - parabola still admits a complete model
+  ---
+  duration_ms: 32.71875
+  ...
+# Subtest: square root still admits a complete model
+ok 41 - square root still admits a complete model
+  ---
+  duration_ms: 53.940375
+  ...
+# Subtest: logarithm still admits a complete model
+ok 42 - logarithm still admits a complete model
+  ---
+  duration_ms: 38.046
+  ...
+# Subtest: sine still admits a complete model
+ok 43 - sine still admits a complete model
+  ---
+  duration_ms: 37.891667
+  ...
+# Subtest: continuous tangent still admits a complete model
+ok 44 - continuous tangent still admits a complete model
+  ---
+  duration_ms: 54.472959
+  ...
+# Subtest: credential ignore rules exclude local files and allow only the blank example
+ok 45 - credential ignore rules exclude local files and allow only the blank example
+  ---
+  duration_ms: 221.523209
+  ...
+# Subtest: the current Node loads a server-only env file without exposing its value
+ok 46 - the current Node loads a server-only env file without exposing its value
+  ---
+  duration_ms: 74.111125
+  ...
+# Subtest: the empty example can be loaded offline without a key or enabled inference
+ok 47 - the empty example can be loaded offline without a key or enabled inference
+  ---
+  duration_ms: 40.410917
+  ...
+# Subtest: browser application files do not reference the server credential
+ok 48 - browser application files do not reference the server credential
+  ---
+  duration_ms: 1.7415
+  ...
+# Subtest: strict observation parser rejects extra fields, fences, mismatched frames and incomplete envelopes
+ok 49 - strict observation parser rejects extra fields, fences, mismatched frames and incomplete envelopes
+  ---
+  duration_ms: 5.053958
+  ...
+# Subtest: conversion preserves every supplied pixel/corner/endpoint without fitting or mutation
+ok 50 - conversion preserves every supplied pixel/corner/endpoint without fitting or mutation
+  ---
+  duration_ms: 4.469
+  ...
+# Subtest: unknown components and isolated points stay explicit and block automatic import
+ok 51 - unknown components and isolated points stay explicit and block automatic import
+  ---
+  duration_ms: 0.3965
+  ...
+# Subtest: inconsistent numeric ticks retain raw evidence and leave mathematical coordinates null
+ok 52 - inconsistent numeric ticks retain raw evidence and leave mathematical coordinates null
+  ---
+  duration_ms: 0.28675
+  ...
+# Subtest: axis duplicate strokes are retained with a blocking warning rather than silently removed
+ok 53 - axis duplicate strokes are retained with a blocking warning rather than silently removed
+  ---
+  duration_ms: 0.232333
+  ...
+# Subtest: out-of-frame points and impossible endpoint annotations fail without repair
+ok 54 - out-of-frame points and impossible endpoint annotations fail without repair
+  ---
+  duration_ms: 1.353792
+  ...
+# Subtest: live plan preserves exact approved model/image/payload and accepts UNKNOWN quota
+ok 55 - live plan preserves exact approved model/image/payload and accepts UNKNOWN quota
+  ---
+  duration_ms: 1967.970667
+  ...
+# Subtest: HTTP 200 consumes the one-use journal without retry or credential leakage (fixture only)
+ok 56 - HTTP 200 consumes the one-use journal without retry or credential leakage (fixture only)
+  ---
+  duration_ms: 551.212459
+  ...
+# Subtest: HTTP 403 consumes the one-use journal without retry or credential leakage (fixture only)
+ok 57 - HTTP 403 consumes the one-use journal without retry or credential leakage (fixture only)
+  ---
+  duration_ms: 474.57275
+  ...
+# Subtest: HTTP 429 consumes the one-use journal without retry or credential leakage (fixture only)
+ok 58 - HTTP 429 consumes the one-use journal without retry or credential leakage (fixture only)
+  ---
+  duration_ms: 400.29275
+  ...
+# Subtest: HTTP 500 consumes the one-use journal without retry or credential leakage (fixture only)
+ok 59 - HTTP 500 consumes the one-use journal without retry or credential leakage (fixture only)
+  ---
+  duration_ms: 423.561833
+  ...
+# Subtest: transport failure also consumes the attempt; interruption journal is never resumed
+ok 60 - transport failure also consumes the attempt; interruption journal is never resumed
+  ---
+  duration_ms: 402.496542
+  ...
+# Subtest: real transport cannot bypass the consumed journal by selecting another output directory
+ok 61 - real transport cannot bypass the consumed journal by selecting another output directory
+  ---
+  duration_ms: 0.605167
+  ...
+# Subtest: low-level transport makes one HTTP request for errors/redirects, never following them
+ok 62 - low-level transport makes one HTTP request for errors/redirects, never following them
+  ---
+  duration_ms: 1.482375
+  ...
+# Subtest: exact cleared PNG prepares offline without network, credentials or evaluator reads
+ok 63 - exact cleared PNG prepares offline without network, credentials or evaluator reads
+  ---
+  duration_ms: 499.157583
+  ...
+# Subtest: uncleared, substituted or additional images cannot enter the prepared pilot
+ok 64 - uncleared, substituted or additional images cannot enter the prepared pilot
+  ---
+  duration_ms: 0.850917
+  ...
+# Subtest: CLI remains dry-run only and never displays a supplied sentinel credential
+ok 65 - CLI remains dry-run only and never displays a supplied sentinel credential
+  ---
+  duration_ms: 510.612542
+  ...
+# Subtest: simplification preserves drawing order, vertical runs, backtracking and a sharp vertex
+ok 66 - simplification preserves drawing order, vertical runs, backtracking and a sharp vertex
+  ---
+  duration_ms: 1.333667
+  ...
+# Subtest: affine calibration handles rotated nonorthogonal axes and nonzero intersection values
+ok 67 - affine calibration handles rotated nonorthogonal axes and nonzero intersection values
+  ---
+  duration_ms: 0.108917
+  ...
+# Subtest: validation rejects nonfinite pixel
+ok 68 - validation rejects nonfinite pixel
+  ---
+  duration_ms: 0.303792
+  ...
+# Subtest: validation rejects outside image
+ok 69 - validation rejects outside image
+  ---
+  duration_ms: 0.136042
+  ...
+# Subtest: validation rejects inconsistent graph
+ok 70 - validation rejects inconsistent graph
+  ---
+  duration_ms: 0.195
+  ...
+# Subtest: validation rejects singular calibration
+ok 71 - validation rejects singular calibration
+  ---
+  duration_ms: 0.104375
+  ...
+# Subtest: validation rejects unknown evidence
+ok 72 - validation rejects unknown evidence
+  ---
+  duration_ms: 0.101083
+  ...
+# Subtest: validation rejects missing label evidence
+ok 73 - validation rejects missing label evidence
+  ---
+  duration_ms: 0.095375
+  ...
+# Subtest: validation rejects wrong label scale
+ok 74 - validation rejects wrong label scale
+  ---
+  duration_ms: 0.167
+  ...
+# Subtest: validation rejects wrong unit vector
+ok 75 - validation rejects wrong unit vector
+  ---
+  duration_ms: 0.172458
+  ...
+# Subtest: validation rejects wrong axis intersection
+ok 76 - validation rejects wrong axis intersection
+  ---
+  duration_ms: 0.105417
+  ...
+# Subtest: validation rejects nonfinite grid line
+ok 77 - validation rejects nonfinite grid line
+  ---
+  duration_ms: 0.089625
+  ...
+# Subtest: validation rejects duplicate ID
+ok 78 - validation rejects duplicate ID
+  ---
+  duration_ms: 0.113334
+  ...
+# Subtest: validation rejects wrong component
+ok 79 - validation rejects wrong component
+  ---
+  duration_ms: 0.157834
+  ...
+# Subtest: validation rejects disconnected membership
+ok 80 - validation rejects disconnected membership
+  ---
+  duration_ms: 0.163083
+  ...
+# Subtest: validation rejects wrong counts
+ok 81 - validation rejects wrong counts
+  ---
+  duration_ms: 0.163709
+  ...
+# Subtest: validation rejects false loop
+ok 82 - validation rejects false loop
+  ---
+  duration_ms: 0.1065
+  ...
+# Subtest: validation rejects false automatic confidence
+ok 83 - validation rejects false automatic confidence
+  ---
+  duration_ms: 0.240792
+  ...
+# Subtest: validation rejects unresolved automatic region
+ok 84 - validation rejects unresolved automatic region
+  ---
+  duration_ms: 0.129916
+  ...
+# Subtest: validation rejects wrong resize transform
+ok 85 - validation rejects wrong resize transform
+  ---
+  duration_ms: 0.149125
+  ...
+# Subtest: controlled measured centerlines become explicitly reviewed hybrid native data, never automatic
+ok 86 - controlled measured centerlines become explicitly reviewed hybrid native data, never automatic
+  ---
+  duration_ms: 814.569333
+  ...
+# Subtest: real photo remains blocked with coarse human semantics; measured dot does not cure missing calibration/topology
+ok 87 - real photo remains blocked with coarse human semantics; measured dot does not cure missing calibration/topology
+  ---
+  duration_ms: 519.410667
+  ...
+# Subtest: uncertain, extra, dense-curve or out-of-bounds semantic fields fail closed
+ok 88 - uncertain, extra, dense-curve or out-of-bounds semantic fields fail closed
+  ---
+  duration_ms: 107.293083
+  ...
+# Subtest: semantics cannot invent a branch, filled dot, endpoint, corner, numeric scale or positive direction
+ok 89 - semantics cannot invent a branch, filled dot, endpoint, corner, numeric scale or positive direction
+  ---
+  duration_ms: 164.284166
+  ...
+# Subtest: overlapping point/exclusion regions and unsupported CV warnings cannot be imported
+ok 90 - overlapping point/exclusion regions and unsupported CV warnings cannot be imported
+  ---
+  duration_ms: 97.543792
+  ...
+# Subtest: no model transport, fixture substitution, revision relabeling or unconfirmed import
+ok 91 - no model transport, fixture substitution, revision relabeling or unconfirmed import
+  ---
+  duration_ms: 96.7675
+  ...
+# Subtest: hybrid native import requires both opt-ins, exact reviewed provenance and the existing stale/one-use guards
+ok 92 - hybrid native import requires both opt-ins, exact reviewed provenance and the existing stale/one-use guards
+  ---
+  duration_ms: 117.021334
+  ...
+# Subtest: preflight runs with all network entry points blocked and reference reads forbidden
+ok 93 - preflight runs with all network entry points blocked and reference reads forbidden
+  ---
+  duration_ms: 126.649625
+  ...
+# Subtest: manifest rejects extra reference fields and duplicate identities
+ok 94 - manifest rejects extra reference fields and duplicate identities
+  ---
+  duration_ms: 2.2
+  ...
+# Subtest: image identity and original coordinate dimensions fail closed
+ok 95 - image identity and original coordinate dimensions fail closed
+  ---
+  duration_ms: 48.779083
+  ...
+# Subtest: metadata is excluded while source pixels and dimensions remain unchanged
+ok 96 - metadata is excluded while source pixels and dimensions remain unchanged
+  ---
+  duration_ms: 166.924834
+  ...
+# Subtest: provider preview contains no local case identity or evaluator information
+ok 97 - provider preview contains no local case identity or evaluator information
+  ---
+  duration_ms: 35.589333
+  ...
+# Subtest: pinned baseline geometry remains valid; references are evaluator-only
+ok 98 - pinned baseline geometry remains valid; references are evaluator-only
+  ---
+  duration_ms: 2.4355
+  ...
+# Subtest: CLI rejects --execute and protects existing evidence from overwrite
+ok 99 - CLI rejects --execute and protects existing evidence from overwrite
+  ---
+  duration_ms: 182.417
+  ...
+# Subtest: coordinate mapping uses padded ranges once, y inversion, and unequal scales
+ok 100 - coordinate mapping uses padded ranges once, y inversion, and unequal scales
+  ---
+  duration_ms: 2.193292
+  ...
+# Subtest: freeform uses exact straight cubic segments and retains every vertex
+ok 101 - freeform uses exact straight cubic segments and retains every vertex
+  ---
+  duration_ms: 1.10825
+  ...
+# Subtest: review is read-only and confirmation appends both branches without changing other state
+ok 102 - review is read-only and confirmation appends both branches without changing other state
+  ---
+  duration_ms: 1.69875
+  ...
+# Subtest: unrelated existing objects under the same receiving tool survive import
+ok 103 - unrelated existing objects under the same receiving tool survive import
+  ---
+  duration_ms: 0.545375
+  ...
+# Subtest: caller mutation cannot alter reviewed drawings before confirmation
+ok 104 - caller mutation cannot alter reviewed drawings before confirmation
+  ---
+  duration_ms: 0.364375
+  ...
+# Subtest: the five-path ambiguous result cannot be proposed or committed
+ok 105 - the five-path ambiguous result cannot be proposed or committed
+  ---
+  duration_ms: 0.386833
+  ...
+# Subtest: explicit confirmation is mandatory
+ok 106 - explicit confirmation is mandatory
+  ---
+  duration_ms: 0.781584
+  ...
+# Subtest: new input revision, rejection, or a newer proposal invalidates the old token
+ok 107 - new input revision, rejection, or a newer proposal invalidates the old token
+  ---
+  duration_ms: 2.673833
+  ...
+# Subtest: native edits after review invalidate confirmation without overwriting edits
+ok 108 - native edits after review invalidate confirmation without overwriting edits
+  ---
+  duration_ms: 0.603833
+  ...
+# Subtest: native setter failure rolls back all existing tool data and metadata
+ok 109 - native setter failure rolls back all existing tool data and metadata
+  ---
+  duration_ms: 0.476542
+  ...
+# Subtest: failure to verify rollback is reported explicitly
+ok 110 - failure to verify rollback is reported explicitly
+  ---
+  duration_ms: 0.372667
+  ...
+# Subtest: invalid later branch, bad calibration, and out-of-range geometry leave state untouched
+ok 111 - invalid later branch, bad calibration, and out-of-range geometry leave state untouched
+  ---
+  duration_ms: 0.5
+  ...
+# Subtest: overlapping native drawings, readonly/helper targets, and limits block import
+ok 112 - overlapping native drawings, readonly/helper targets, and limits block import
+  ---
+  duration_ms: 0.558833
+  ...
+# Subtest: spline-only questions fail clearly and grouped freeform tools are supported
+ok 113 - spline-only questions fail clearly and grouped freeform tools are supported
+  ---
+  duration_ms: 1.645375
+  ...
+# Subtest: the assisted fit bridge also encodes freeform controls without changing spline transfer
+ok 114 - the assisted fit bridge also encodes freeform controls without changing spline transfer
+  ---
+  duration_ms: 1.669583
+  ...
+# Subtest: CV boundary uses pixels/revision only and retains supported native candidates
+ok 115 - CV boundary uses pixels/revision only and retains supported native candidates
+  ---
+  duration_ms: 1512.010666
+  ...
+# Subtest: unclassified isolated ink is shown as a candidate and blocks automatic import
+ok 116 - unclassified isolated ink is shown as a candidate and blocks automatic import
+  ---
+  duration_ms: 156.3345
+  ...
+# Subtest: future providers stay disabled and cannot accept answer or calibration options
+ok 117 - future providers stay disabled and cannot accept answer or calibration options
+  ---
+  duration_ms: 18.689542
+  ...
+# Subtest: offline future candidate validation enforces revision, image dimensions and marks
+ok 118 - offline future candidate validation enforces revision, image dimensions and marks
+  ---
+  duration_ms: 243.746083
+  ...
+# Subtest: line: extraction and scale come from pixels without a trace, equation, or reference
+ok 119 - line: extraction and scale come from pixels without a trace, equation, or reference
+  ---
+  duration_ms: 443.241459
+  ...
+# Subtest: sharp-v: extraction and scale come from pixels without a trace, equation, or reference
+ok 120 - sharp-v: extraction and scale come from pixels without a trace, equation, or reference
+  ---
+  duration_ms: 342.086458
+  ...
+# Subtest: smooth-curve: extraction and scale come from pixels without a trace, equation, or reference
+ok 121 - smooth-curve: extraction and scale come from pixels without a trace, equation, or reference
+  ---
+  duration_ms: 228.873083
+  ...
+# Subtest: two-branches: extraction and scale come from pixels without a trace, equation, or reference
+ok 122 - two-branches: extraction and scale come from pixels without a trace, equation, or reference
+  ---
+  duration_ms: 151.945125
+  ...
+# Subtest: missing scale keeps ordered pixel paths and never assumes units from grid squares
+ok 123 - missing scale keeps ordered pixel paths and never assumes units from grid squares
+  ---
+  duration_ms: 105.274458
+  ...
+# Subtest: explicit configuration calibration has distinct provenance
+ok 124 - explicit configuration calibration has distinct provenance
+  ---
+  duration_ms: 484.241209
+  ...
+# Subtest: ambiguous axes cannot manufacture an origin or mathematical coordinates
+ok 125 - ambiguous axes cannot manufacture an origin or mathematical coordinates
+  ---
+  duration_ms: 101.128709
+  ...
+# Subtest: black ink crossing axes remains connected but ambiguous spurs require review
+ok 126 - black ink crossing axes remains connected but ambiguous spurs require review
+  ---
+  duration_ms: 121.693333
+  ...
+# Subtest: touching ink is represented as a junction, never paired into an invented function
+ok 127 - touching ink is represented as a junction, never paired into an invented function
+  ---
+  duration_ms: 157.781208
+  ...
+# Subtest: resizing exports source-image coordinates and an explicit pixel-center transform
+ok 128 - resizing exports source-image coordinates and an explicit pixel-center transform
+  ---
+  duration_ms: 320.8805
+  ...
+# Subtest: blank and transparent images abstain; no centered calibration is inserted
+ok 129 - blank and transparent images abstain; no centered calibration is inserted
+  ---
+  duration_ms: 24.174791
+  ...
+# Subtest: a broad dark background cannot be reported as a detected axis pair
+ok 130 - a broad dark background cannot be reported as a detected axis pair
+  ---
+  duration_ms: 9.765208
+  ...
+# Subtest: real-photo challenge failures are explicit and are not counted as automatic successes
+ok 131 - real-photo challenge failures are explicit and are not counted as automatic successes
+  ---
+  duration_ms: 221.692375
+  ...
+# Subtest: input contract rejects invalid image storage, limits, and solution-like options
+ok 132 - input contract rejects invalid image storage, limits, and solution-like options
+  ---
+  duration_ms: 34.027417
+  ...
+# Subtest: simplification stays within its declared tolerance of every extracted skeleton sample
+ok 133 - simplification stays within its declared tolerance of every extracted skeleton sample
+  ---
+  duration_ms: 477.477875
+  ...
+# Subtest: a closed ink loop remains a closed stroke instead of a sorted function
+ok 134 - a closed ink loop remains a closed stroke instead of a sorted function
+  ---
+  duration_ms: 35.085333
+  ...
+# Subtest: real-photo endpoint choices reuse three connected CV fragments and measured dot with no trace or fixture semantics
+ok 135 - real-photo endpoint choices reuse three connected CV fragments and measured dot with no trace or fixture semantics
+  ---
+  duration_ms: 14.229625
+  ...
+# Subtest: missing/disconnected/duplicate selections and stale pixels never create geometry
+ok 136 - missing/disconnected/duplicate selections and stale pixels never create geometry
+  ---
+  duration_ms: 3.322709
+  ...
+# Subtest: alternative actual ink routes are blocked rather than paired through a cycle
+ok 137 - alternative actual ink routes are blocked rather than paired through a cycle
+  ---
+  duration_ms: 2.544042
+  ...
+# Subtest: targeted native proposals need opt-in, exact provenance, final acceptance and unchanged canvas state
+ok 138 - targeted native proposals need opt-in, exact provenance, final acceptance and unchanged canvas state
+  ---
+  duration_ms: 15.437875
+  ...
+# Subtest: confirmed photo frame maps unequal/skewed axes into the native frame without visual fitting
+ok 139 - confirmed photo frame maps unequal/skewed axes into the native frame without visual fitting
+  ---
+  duration_ms: 1.748042
+  ...
+1..139
+# tests 139
+# suites 0
+# pass 139
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4464.855458

@@ -732,3 +732,12 @@
 .star-canvas-photo [hidden] { display: none !important; }
 .star-canvas-photo button:focus-visible, .star-canvas-photo input:focus-visible, .star-canvas-photo summary:focus-visible, .star-canvas-upload:focus-within { outline: 3px solid #1665c1; outline-offset: 2px; }
 @media (max-width: 700px) { .star-canvas-photo { width: 100%; } .star-canvas-photo-actions > * { flex: 1 1 auto; } }
+.star-canvas-correction { border-top: 1px solid #c8d4df; margin-top: 12px; padding-top: 10px; text-align: left; }
+.star-correction-picks, .star-correction-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.star-correction-picks label { display: flex; gap: 5px; align-items: center; margin: 0; }
+.star-correction-picks input { width: 75px; min-height: 40px; }
+.star-correction-picks [aria-pressed="true"] { border: 2px solid #0068c7 !important; background: #e9f3ff; }
+.star-correction-method { font-weight: 600; }
+.star-correction-help { margin: 8px 0; }
+.star-correction-warning { font-size: 13px; }
+.star-canvas-correction-layer, .star-canvas-correction-layer * { pointer-events: none !important; }

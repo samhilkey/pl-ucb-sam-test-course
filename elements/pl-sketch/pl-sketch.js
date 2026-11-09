@@ -29,7 +29,8 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
       si.messageBus.on('ready', function () {
         const container = document.getElementById(id + '-si-container')
         const reference = window.StarCanvasReference.mount({ id, config })
-        const automatic = window.StarAutomatic.mount({ id, si, config, onPhotoState: reference.update, onAssist: handDrawn
+        const review = window.StarCanvasReview.mount({ id, si, config, reference })
+        const automatic = window.StarAutomatic.mount({ id, si, config, onPhotoState: event => { reference.update(event); review.update(event) }, onAssist: handDrawn
           ? file => container.dispatchEvent(new CustomEvent('star-assist-photo', { detail: { file } })) : null })
         reference.connect(automatic)
       })

@@ -1,0 +1,38 @@
+{
+  "step": "4H-2",
+  "external_uploads": 0,
+  "Gemini_requests": 0,
+  "inputs": [
+    {
+      "filename": "IMG_1670.jpg",
+      "local_original": "/Users/alaiasun/Library/Mobile Documents/com~apple~CloudDocs/D. UC Berkeley/Courses/CS294 STAR FA2026/Experiment/examples/IMG_1670.jpg",
+      "sha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b",
+      "source_kind": "user_owned_actual_paper_photo_prior_development",
+      "canonical_png": "../step-4g-1/results/IMG_1670--source.png",
+      "canonical_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+      "external_step4h2_permission": false
+    },
+    {
+      "file": "/Users/alaiasun/Library/Mobile Documents/com~apple~CloudDocs/D. UC Berkeley/Courses/CS294 STAR FA2026/Experiment/examples/IMG_1678.jpg",
+      "bytes": 1436822,
+      "sha256": "f86a0acd1dc1fcad32884c202e4fffe44adc5d88c1062a0f8a2cbd60dbc74d49",
+      "source_kind": "user_owned_actual_paper_photo",
+      "role": "independent acceptance photo; no case-specific tuning before initial recognition",
+      "external_transmission_authorized": false,
+      "canonical_png": "benchmarks/photo-graphs/multi-method/step-4h-2/inputs/IMG_1678--source.png",
+      "canonical_sha256": "bc1a75a4f46e0ebc43d43cfb26942d15306a69cc25530ae57309bd3f1a8dd9d9",
+      "decoded_dimensions": [
+        1934,
+        2047
+      ],
+      "original_gps_tag_present": true,
+      "original_jpeg_committed": false,
+      "no_equation_or_reference_in_recognizer_input": true,
+      "recognizer_code_sha256": "34dfc4b9b08d25fd8ca4d2241dbbcc0a1fab7e816415c73bd8d6e06332711207",
+      "targeted_code_sha256_before_first_trial": "c4a089aeb35720fb7ac065056725577b8112c538a915835ac3cd8d0fc7437d66",
+      "external_step4h2_permission": false,
+      "local_use_authorized_by_user": true,
+      "assisted_workflow_was_refined_after_initial_automatic_failure": true
+    }
+  ]
+}

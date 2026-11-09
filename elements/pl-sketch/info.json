@@ -13,11 +13,13 @@
       "star-geometry.js",
       "star-recognition.js",
       "star-cv-assisted.js",
+      "star-targeted.js",
       "star-native.js",
       "star-assisted.js",
       "star-providers.js",
       "star-canvas-reference.js",
       "star-automatic.js",
+      "star-canvas-review.js",
       "pl-sketch.js"
     ],
     "elementStyles": [

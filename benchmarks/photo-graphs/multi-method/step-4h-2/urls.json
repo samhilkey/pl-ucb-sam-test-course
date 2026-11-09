@@ -1,0 +1,8 @@
+{
+  "fresh": "http://localhost:3000/pl/course/1/question/254/preview/",
+  "prepared_real_paper_original": "http://localhost:3000/pl/course/1/question/254/preview/?variant_id=517",
+  "prepared_current_grade": "100%",
+  "prepared_note": "Actual manually traced native snapshot returned after deliberate edit; assistance is not automatic recognition.",
+  "frozen_manual": "http://localhost:3000/pl/course/1/question/255/preview/#paper-lines-si-container",
+  "recorded_backup": "http://127.0.0.1:3020/backup"
+}

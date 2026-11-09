@@ -1,0 +1,134 @@
+{
+  "step": "4H-2",
+  "evaluator_only": true,
+  "recognition_calls": 0,
+  "IMG_1670": {
+    "classification": "CV-assisted: manual axes/values, endpoint selection and isolated-dot selection",
+    "actual_photo": "IMG_1670.jpg",
+    "automatic_success": false,
+    "photo_accuracy": {
+      "expected_strokes": 1,
+      "extracted_paths": 1,
+      "extracted_components": 1,
+      "branch_count_correct": true,
+      "missing_strokes": 0,
+      "partially_missing_strokes": 1,
+      "false_connections": 0,
+      "spurious_paths": 0,
+      "reference_to_geometry_p95_pixel": 11.68839736660122,
+      "geometry_to_reference_p95_pixel": 11.900150018140804,
+      "reference_centerline_coverage_within_3px": [
+        0.5394036208732694
+      ],
+      "endpoint_max_error_pixel": 4.155739368188691,
+      "corner_error_pixel": 5.842408391887308,
+      "axis_origin_error_pixel": null,
+      "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+    },
+    "native_preservation": {
+      "measured_branch_count": 1,
+      "native_object_count_added": 1,
+      "maximum_anchor_error_source_pixel": 2.5421149729252077e-13,
+      "maximum_rendered_drift_from_input_geometry_source_pixel": 4.687428401686771e-13
+    },
+    "selected_dot_native_error_source_pixel": 1.1368683772161603e-13,
+    "selected_dot_error_vs_approximate_prior_reference_pixel": 2.7267211779932947,
+    "grade": "0%",
+    "grade_target_matches_photo": false
+  },
+  "IMG_1678": {
+    "classification": "Manual on-canvas tracing through geometry-preserving adapter",
+    "actual_photo": "IMG_1678.jpg",
+    "automatic_success": false,
+    "cv_import_blocked": true,
+    "blocker": "A stroke doubles back in x. This function-input question requires correction. Nothing was added. Choose Trace instead to follow the original ink if the detected route is wrong.",
+    "rejected_candidate_x_backtrack_segments": 1,
+    "largest_backtrack_graph_x_units": 0.04175068682106087,
+    "native_preservation": {
+      "measured_branch_count": 1,
+      "native_object_count_added": 1,
+      "maximum_anchor_error_source_pixel": 2.5421149729252077e-13,
+      "maximum_rendered_drift_from_input_geometry_source_pixel": 7.031142602530156e-13
+    },
+    "endpoint_error_vs_captured_manual_pointer_source_pixel": [
+      0.00007069294480279796,
+      0.00007494697430448652
+    ],
+    "maximum_native_mark_center_error_vs_manual_photo_click_source_pixel": 0.0000818531893907578,
+    "photo_fidelity_ground_truth": "No independent blinded centerline annotation. Preservation metrics compare with the captured manual trace/point clicks, not a recognition accuracy claim.",
+    "additional_written_tick_diagnostics": [
+      {
+        "axis": "x",
+        "value": 2,
+        "pixel": [
+          1147,
+          1134
+        ],
+        "derived": [
+          1.8834985881524948,
+          0.03171489825879614
+        ],
+        "error_axis_units": -0.11650141184750518
+      },
+      {
+        "axis": "x",
+        "value": -2,
+        "pixel": [
+          557,
+          1160
+        ],
+        "derived": [
+          -1.760124910724523,
+          -0.03504388856797265
+        ],
+        "error_axis_units": 0.23987508927547707
+      },
+      {
+        "axis": "x",
+        "value": -4,
+        "pixel": [
+          238,
+          1179
+        ],
+        "derived": [
+          -3.730926163437435,
+          -0.10249814516202503
+        ],
+        "error_axis_units": 0.2690738365625651
+      },
+      {
+        "axis": "y",
+        "value": 2,
+        "pixel": [
+          831,
+          823
+        ],
+        "derived": [
+          -0.01709614256291829,
+          2.0576042933941134
+        ],
+        "error_axis_units": 0.05760429339411344
+      },
+      {
+        "axis": "y",
+        "value": -2,
+        "pixel": [
+          866,
+          1462
+        ],
+        "derived": [
+          0.09869872577715635,
+          -2.002663262582946
+        ],
+        "error_axis_units": -0.0026632625829461354
+      }
+    ],
+    "tick_reference_quality": "Approximate evaluator-only visual ticks, post hoc same observer, not used to fit the frame or sent to the recognizer.",
+    "calibration_scope": "Affine alignment at three explicitly selected anchors. Hand-drawn tick spacing/axes are nonuniform; global calibration is not established by those three anchors.",
+    "original_visible_grade": "100%",
+    "edited_visible_grade": "0%",
+    "grade_target_matches_user_intent": true,
+    "attached_dots_manually_placed": 4,
+    "point_tool_has_grading_criterion": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "starting_commit": "e980d7a4c9fb959c4cadf2fd66bdd67cfde143c8",
+  "paths": [
+    "elements/pl-sketch/star-photo.js",
+    "elements/pl-sketch/star-assisted.js",
+    "elements/pl-sketch/star-geometry.js",
+    "elements/pl-sketch/star-recognition.js",
+    "elements/pl-sketch/star-cv-assisted.js",
+    "elements/pl-sketch/star-providers.js",
+    "elements/pl-sketch/pl-sketch.py",
+    "elements/pl-sketch/pl_sketch_grading.py",
+    "benchmarks/photo-graphs/multi-method/step-4f",
+    "benchmarks/photo-graphs/multi-method/step-4g-2",
+    "benchmarks/photo-graphs/multi-method/step-4g-4",
+    "benchmarks/photo-graphs/multi-method/step-4h"
+  ],
+  "all_unchanged": true,
+  "backup_zip_sha256": "af173318826d7709b04825533c23018fa556aeac130bd9fd270a4d64fdb5b8d5"
+}
