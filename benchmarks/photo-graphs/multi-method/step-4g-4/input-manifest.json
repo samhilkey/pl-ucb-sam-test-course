@@ -1,0 +1,31 @@
+{
+  "step": "4G-4",
+  "inference_requests": 0,
+  "external_photo_uploads": 0,
+  "inputs": [
+    {
+      "id": "IMG_1670.jpg",
+      "path": "/Users/alaiasun/Library/Mobile Documents/com~apple~CloudDocs/D. UC Berkeley/Courses/CS294 STAR FA2026/Experiment/examples/IMG_1670.jpg",
+      "sha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b",
+      "provenance": "User-owned new-paper photograph; supplied for local testing. JPEG has GPS metadata and is deliberately not copied into Git."
+    },
+    {
+      "id": "IMG_1670--source.png",
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-1/results/IMG_1670--source.png",
+      "sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+      "provenance": "Existing metadata-free decoded copy of the same user photograph; default reproducible input."
+    },
+    {
+      "id": "real--01",
+      "path": "benchmarks/photo-graphs/automatic-cv/experiment-01/inputs/real--01-multiple-lines-graph-paper.png",
+      "sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "provenance": "Previously approved local DrawEduMath benchmark; disconnected strokes."
+    },
+    {
+      "id": "real--06",
+      "path": "benchmarks/photo-graphs/automatic-cv/experiment-01/inputs/real--06-piecewise-graph-paper.png",
+      "sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "provenance": "Previously approved local DrawEduMath benchmark; sharp peak."
+    }
+  ]
+}

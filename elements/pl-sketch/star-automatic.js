@@ -2,7 +2,7 @@
 // Recognition sees pixels only. Human calibration/review is separately labeled.
 window.StarAutomatic = (function () {
   'use strict'
-  function mount ({ id, si, config, onAssist }) {
+  function mount ({ id, si, config, onAssist, onPhotoState }) {
     const container = document.getElementById(id + '-si-container')
     if (!container || document.getElementById(id + '-automatic-button')) return
     const button = document.createElement('button')
@@ -47,6 +47,7 @@ window.StarAutomatic = (function () {
     const cvSession = StarNative.createSession(si, config, undefined, { cvAssisted: true })
     let revision = 0; let proposal = null; let geometry = null; let photo = null; let file = null; let busy = false
     let phase = 'empty'; let method = 'CV automatic'; let hash = ''; let marker = 'origin'; let axes = {}; let decisions = {}; let markDecisions = {}; let smallMarks = []; let groups = []; let history = []; let activePoint = 0; let activeCandidate = 0
+    let lastGoodFile = null
     const cvEnabled = () => config.assistedPhotoGeometry === true && method === 'CV automatic' && geometry?.strokes.length > 0
     const axisValues = () => ({ ...axes, xValue: q('.star-auto-x-value').value === '' ? NaN : Number(q('.star-auto-x-value').value), yValue: q('.star-auto-y-value').value === '' ? NaN : Number(q('.star-auto-y-value').value) })
     const build = () => StarCVAssisted.fromSelection({ source: geometry, photoSha256: hash, axisValues: axisValues(), strokeDecisions: decisions, markDecisions, reviewBasis: 'explicit_decisions', inputRevision: revision })
@@ -254,6 +255,7 @@ window.StarAutomatic = (function () {
     async function analyze () {
       clear(); const request = revision
       if (!file) { busy = false; q('.star-auto-retry').disabled = true; status.textContent = 'Choose a photo to detect its graph strokes.'; return }
+      if (onPhotoState) onPhotoState({ kind: 'loading', revision: request })
       busy = true; q('.star-auto-retry').disabled = true; method = 'CV automatic'; status.textContent = 'Detecting strokes on this device…'; update()
       let bitmap
       try {
@@ -261,6 +263,12 @@ window.StarAutomatic = (function () {
         if (request !== revision) return
         hash = Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('')
         try { bitmap = await window.createImageBitmap(file, { imageOrientation: 'from-image' }) } catch (_) { bitmap = await window.createImageBitmap(file) }
+        if (request !== revision) return
+        lastGoodFile = file
+        // Visibility is independent of CV eligibility, calibration and proposals.
+        if (onPhotoState) onPhotoState({ kind: 'photo', revision: request, bitmap, file, sha256: hash })
+        // Give the reference layer a paint before synchronous CV processing.
+        await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 0)))
         if (request !== revision) return
         if (bitmap.width * bitmap.height > 40000000) throw new Error('Choose an image smaller than 40 megapixels.')
         const source = document.createElement('canvas'); source.width = bitmap.width; source.height = bitmap.height
@@ -283,13 +291,26 @@ window.StarAutomatic = (function () {
         } catch (_) {
           proposal = null; status.textContent = geometry.strokes.length ? 'Curves detected; axes and ink need confirmation.' : 'No usable graph strokes detected. Trace manually or try a clearer photo.'
         }
-      } catch (e) { if (request === revision) { proposal = null; status.textContent = 'Could not recognize this photo: ' + e.message } } finally {
+        if (onPhotoState) onPhotoState({ kind: 'recognition', revision: request, geometry, nativeDraftReady: !!proposal })
+      } catch (e) { if (request === revision) { proposal = null; status.textContent = 'Could not recognize this photo: ' + e.message; if (onPhotoState) onPhotoState({ kind: 'error', revision: request }); if (!bitmap && lastGoodFile) file = lastGoodFile } } finally {
         if (bitmap) bitmap.close()
         if (request === revision) { busy = false; q('.star-auto-retry').disabled = false; update() }
       }
     }
-    function close () { clear(); busy = false; q('.star-auto-retry').disabled = !file; if (dialog.open) dialog.close(); button.focus({ preventScroll: true }) }
-    button.addEventListener('click', () => dialog.showModal())
+    function close () { clear(); busy = false; q('.star-auto-retry').disabled = !file; if (onPhotoState) onPhotoState({ kind: 'draft-cleared', revision }); if (dialog.open) dialog.close(); button.focus({ preventScroll: true }) }
+    function openReview () {
+      // Canvas editing may have continued since background recognition. A
+      // newly opened preview gets a fresh snapshot, never an automatic commit.
+      if (geometry?.status === 'automatic' && method === 'CV automatic') {
+        try { proposal = session.propose(geometry); phase = 'preview'; preview(proposal); q('.star-auto-ack').disabled = false; q('.star-auto-ack').checked = false } catch (error) {
+          proposal = null; phase = 'detected'; pixelPreview(); status.textContent = error.message
+          if (onPhotoState) onPhotoState({ kind: 'draft-cleared', revision })
+        }
+        update()
+      } else if (file && !geometry && !busy) analyze()
+      if (!dialog.open) dialog.showModal()
+    }
+    button.addEventListener('click', openReview)
     q('.star-auto-close').addEventListener('click', close)
     dialog.addEventListener('cancel', e => { e.preventDefault(); close() })
     dialog.addEventListener('keydown', e => { e.stopPropagation(); if (e.key === 'Enter' && e.target.matches('input')) e.preventDefault() })
@@ -299,7 +320,7 @@ window.StarAutomatic = (function () {
     q('.star-auto-correct').addEventListener('click', () => { if (!file || typeof onAssist !== 'function') return; const selected = file; close(); onAssist(selected) })
     q('.star-auto-overlay').addEventListener('change', () => { drawPhoto(); if (reviewing()) pixelPreview() })
     q('.star-auto-ack').addEventListener('change', () => update())
-    q('.star-auto-reject').addEventListener('click', () => { clear(); busy = false; q('.star-auto-retry').disabled = !file; status.textContent = 'Proposal rejected. No native drawing was added.' })
+    q('.star-auto-reject').addEventListener('click', () => { clear(); if (onPhotoState) onPhotoState({ kind: 'draft-cleared', revision }); busy = false; q('.star-auto-retry').disabled = !file; status.textContent = 'Proposal rejected. No native drawing was added.' })
     q('.star-auto-next').addEventListener('click', () => {
       if (busy || q('.star-auto-next').disabled) return
       try {
@@ -345,6 +366,11 @@ window.StarAutomatic = (function () {
       if (busy || !proposal || q('.star-auto-confirm').disabled || !q('.star-auto-ack').checked) return
       try { (method === 'CV-assisted' ? cvSession : session).commit(proposal.token, true); close(); status.textContent = 'Graph added. Use Select to move or delete a branch or dot.' } catch (e) { invalidate(); update(e.message); status.textContent = e.message; q('.star-auto-back').hidden = method !== 'CV-assisted'; q('.star-auto-retry').disabled = false }
     })
+    return {
+      loadPhoto: f => { file = f; photo = null; q('input[type=file]').value = ''; return analyze() },
+      clearPhoto: () => { file = lastGoodFile = null; photo = null; q('input[type=file]').value = ''; close() },
+      open: openReview
+    }
   }
   return { mount }
 })()

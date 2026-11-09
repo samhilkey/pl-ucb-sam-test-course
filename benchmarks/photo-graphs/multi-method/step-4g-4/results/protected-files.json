@@ -1,0 +1,14 @@
+{
+  "compared_to": "f215d450c335f7b996caebba073e48716ff5609b",
+  "protected_paths": [
+    "elements/pl-sketch/star-recognition.js",
+    "elements/pl-sketch/star-native.js",
+    "elements/pl-sketch/star-geometry.js",
+    "elements/pl-sketch/star-photo.js",
+    "questions/star-photo-test/question.html",
+    "benchmarks/photo-graphs/multi-method/step-4f",
+    "benchmarks/photo-graphs/multi-method/step-4g-2"
+  ],
+  "all_unchanged": true,
+  "frozen_backup_sha256": "af173318826d7709b04825533c23018fa556aeac130bd9fd270a4d64fdb5b8d5"
+}

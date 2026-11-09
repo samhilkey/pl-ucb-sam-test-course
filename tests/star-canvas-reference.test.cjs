@@ -1,0 +1,28 @@
+const { test } = require('node:test')
+const assert = require('node:assert/strict')
+const Ref = require('../elements/pl-sketch/star-canvas-reference.js')
+test('visual fit preserves aspect and never implies a mathematical calibration', () => {
+  const r = Ref.fit({ width: 1688, height: 1473 }, { width: 800, height: 600 })
+  assert.equal(r.height, 580); assert.equal(r.y, 10); assert.ok(Math.abs(r.width / r.height - 1688 / 1473) < 1e-12)
+  assert.equal(Object.hasOwn(r, 'graph'), false); assert.equal(Object.hasOwn(r, 'calibration'), false)
+  for (const image of [{ width: 0, height: 3 }, { width: Infinity, height: 3 }]) assert.throws(() => Ref.fit(image, { width: 800, height: 600 }))
+})
+test('photo storage scope requires an exact attempt and separates canvases, questions and frames', () => {
+  const key = Ref.storageKey('/pl/course/1/question/254/preview/', '12', 'ink', '800x600')
+  assert.ok(key)
+  assert.notEqual(key, Ref.storageKey('/pl/course/1/question/254/preview/', '13', 'ink', '800x600'))
+  assert.notEqual(key, Ref.storageKey('/pl/course/1/question/254/preview/', '12', 'other', '800x600'))
+  assert.notEqual(key, Ref.storageKey('/pl/course/1/question/255/preview/', '12', 'ink', '800x600'))
+  assert.notEqual(key, Ref.storageKey('/pl/course/1/question/254/preview/', '12', 'ink', '700x600'))
+  assert.equal(Ref.storageKey('/pl/q', null, 'ink', '800x600'), null)
+  assert.equal(Ref.storageKey('/pl/q', 'csrf-token', 'ink', '800x600'), null)
+})
+const saved = () => ({ version: 1, scope: 'attempt-12-ink', savedAt: 1000, name: 'paper.jpg', type: 'image/jpeg', sha256: 'a'.repeat(64), data: 'data:image/jpeg;base64,AAAA', visible: true, showCV: false })
+test('restoration accepts only a matching, unexpired raster record', () => {
+  const r = saved(); assert.deepEqual(Ref.savedRecord(JSON.stringify(r), r.scope, 2000), r)
+  for (const change of [{ scope: 'another-attempt' }, { savedAt: -100000000 }, { savedAt: 3000 }, { data: 'https://example.test/photo.jpg' }, { type: 'image/svg+xml', data: 'data:image/svg+xml;base64,AAAA' }, { type: 'image/png' }, { sha256: 'missing' }, { visible: 'yes' }, { showCV: null }, { data: 'data:image/jpeg;base64,' + 'A'.repeat(4000001) }]) assert.throws(() => Ref.savedRecord(JSON.stringify({ ...r, ...change }), r.scope, 2000))
+})
+test('corrupt storage cannot be mistaken for a native graph', () => {
+  assert.throws(() => Ref.savedRecord('not-json', 'attempt', 2000))
+  assert.throws(() => Ref.savedRecord(JSON.stringify({ data: { ink: [] }, gradeable: {} }), 'attempt', 2000))
+})

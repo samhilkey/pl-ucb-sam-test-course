@@ -1,0 +1,29 @@
+{
+  "kind": "sequence of actual browser screenshots, not continuous video",
+  "source_run": "acceptance/results.json",
+  "frames": [
+    {
+      "file": "acceptance/IMG_1670--photo-and-cv.png",
+      "caption": "1. Photo visible; dashed CV pixels are provisional, not graded"
+    },
+    {
+      "file": "acceptance/demo-02-hidden.png",
+      "caption": "2. Hide reference: existing native curve and dot stay intact"
+    },
+    {
+      "file": "acceptance/IMG_1670--native-drawn.png",
+      "caption": "3. Native freehand curve and separate dot added manually"
+    },
+    {
+      "file": "acceptance/demo-04-native-correction.png",
+      "caption": "4. Native Select/drag edits the new curve; other objects survive"
+    },
+    {
+      "file": "acceptance/IMG_1670--saved-restored.png",
+      "caption": "5. Save & Grade, then refresh: native state and photo restore"
+    }
+  ],
+  "manual_native_drawing": true,
+  "photo_mathematically_aligned": false,
+  "inference_requests": 0
+}

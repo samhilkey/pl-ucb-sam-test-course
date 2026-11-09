@@ -16,6 +16,7 @@
       "star-native.js",
       "star-assisted.js",
       "star-providers.js",
+      "star-canvas-reference.js",
       "star-automatic.js",
       "pl-sketch.js"
     ],

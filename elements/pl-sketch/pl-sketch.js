@@ -28,8 +28,10 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
     if (automaticPhoto) {
       si.messageBus.on('ready', function () {
         const container = document.getElementById(id + '-si-container')
-        window.StarAutomatic.mount({ id, si, config, onAssist: handDrawn
+        const reference = window.StarCanvasReference.mount({ id, config })
+        const automatic = window.StarAutomatic.mount({ id, si, config, onPhotoState: reference.update, onAssist: handDrawn
           ? file => container.dispatchEvent(new CustomEvent('star-assist-photo', { detail: { file } })) : null })
+        reference.connect(automatic)
       })
     }
 

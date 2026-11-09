@@ -23,7 +23,7 @@ async function checkNative (page, options) {
     })
   }
   const panel = () => page.locator('#automatic-photo-automatic-dialog')
-  const open = () => page.locator('#automatic-photo-automatic-button').click()
+  const open = async () => { const d = page.locator('#automatic-photo-si-container .star-canvas-photo-options'); if (await d.count() && !await d.evaluate(el => el.open)) await d.locator('summary').click(); await page.locator('#automatic-photo-automatic-button').click() }
   const upload = async id => {
     await panel().locator('input[type=file]').setInputFiles(options.fixtures + '/' + id + '.png')
     await page.waitForFunction(() => !document.querySelector('#automatic-photo-automatic-dialog .star-auto-retry').disabled)
@@ -242,7 +242,7 @@ async function checkNative (page, options) {
     window.__fitCalls = 0
     window.StarFit.fit = window.StarFit.sampleCurve = function () { window.__fitCalls++; throw new Error('Equation fitting must not be used') }
   })
-  await page.locator('#automatic-photo-star-photo-btn').click()
+  const photoOptions = page.locator('#automatic-photo-si-container .star-canvas-photo-options'); if (await photoOptions.count() && !await photoOptions.evaluate(el => el.open)) await photoOptions.locator('summary').click(); await page.locator('#automatic-photo-star-photo-btn').click()
   const assistedPanel = page.locator('#automatic-photo-star-panel')
   await assistedPanel.locator('input[type=file]').setInputFiles(options.fixtures + '/line.png')
   await assistedPanel.locator('.star-status').filter({ hasText: 'Place the axes, then trace your curve.' }).waitFor()

@@ -1,0 +1,2124 @@
+{
+  "passed": 69,
+  "checks": [
+    "Correct local PrairieLearn sandbox loaded",
+    "IMG_1670: no review wizard opens before drawing",
+    "IMG_1670: photo is visible before delayed CV result completes",
+    "IMG_1670: actual failed-CV photograph is visible on the native canvas",
+    "IMG_1670: provisional overlay availability is reported separately",
+    "IMG_1670: recognition never overwrites existing native objects",
+    "IMG_1670: image and provisional pixels do not change gradeable geometry",
+    "IMG_1670: pixel-only layer sits beneath native grid/objects without hit targets or SVG paths",
+    "IMG_1670: photo picker has no form field name and cannot upload image bytes with Save & Grade",
+    "Hide photo leaves native objects unchanged",
+    "IMG_1670: real native free-draw gestures create editable geometry over the photo",
+    "IMG_1670: manual drawing preserves prior curves and points",
+    "IMG_1670: source dot is an independent manually added native object",
+    "Native Select/Delete removes a temporary point without erasing the reference",
+    "Native erasing leaves the photo reference available",
+    "Native Select edits the traced curve while the reference is visible",
+    "Editing the traced branch preserves unrelated curves and both dots",
+    "Ordinary Save & Grade sends a native submission",
+    "Native server accepts the drawing format",
+    "Existing x-squared grader retains and marks the different native drawing incorrect",
+    "No photo, provisional layer or reference metadata enters the submitted native JSON",
+    "IMG_1670: Save & Grade restores exact native curves and points",
+    "IMG_1670: same-attempt photo restores from exact local bytes without entering the answer",
+    "IMG_1670: refresh restores native drawings independently of the photo",
+    "IMG_1670: remove reference retains every native object",
+    "IMG_1670: removed photo does not reappear after refresh",
+    "Correct local PrairieLearn sandbox loaded",
+    "real--01: no review wizard opens before drawing",
+    "real--01: photo is visible before delayed CV result completes",
+    "real--01: actual failed-CV photograph is visible on the native canvas",
+    "real--01: provisional overlay availability is reported separately",
+    "real--01: recognition never overwrites existing native objects",
+    "real--01: image and provisional pixels do not change gradeable geometry",
+    "real--01: pixel-only layer sits beneath native grid/objects without hit targets or SVG paths",
+    "real--01: photo picker has no form field name and cannot upload image bytes with Save & Grade",
+    "real--01: real native free-draw gestures create editable geometry over the photo",
+    "real--01: manual drawing preserves prior curves and points",
+    "real--01: source dot is an independent manually added native object",
+    "Ordinary Save & Grade sends a native submission",
+    "Native server accepts the drawing format",
+    "Existing x-squared grader retains and marks the different native drawing incorrect",
+    "No photo, provisional layer or reference metadata enters the submitted native JSON",
+    "real--01: Save & Grade restores exact native curves and points",
+    "real--01: same-attempt photo restores from exact local bytes without entering the answer",
+    "real--01: refresh restores native drawings independently of the photo",
+    "real--01: remove reference retains every native object",
+    "real--01: removed photo does not reappear after refresh",
+    "Correct local PrairieLearn sandbox loaded",
+    "real--06: no review wizard opens before drawing",
+    "real--06: photo is visible before delayed CV result completes",
+    "real--06: actual failed-CV photograph is visible on the native canvas",
+    "real--06: provisional overlay availability is reported separately",
+    "real--06: recognition never overwrites existing native objects",
+    "real--06: image and provisional pixels do not change gradeable geometry",
+    "real--06: pixel-only layer sits beneath native grid/objects without hit targets or SVG paths",
+    "real--06: photo picker has no form field name and cannot upload image bytes with Save & Grade",
+    "real--06: real native free-draw gestures create editable geometry over the photo",
+    "real--06: manual drawing preserves prior curves and points",
+    "real--06: source dot is an independent manually added native object",
+    "Ordinary Save & Grade sends a native submission",
+    "Native server accepts the drawing format",
+    "Existing x-squared grader retains and marks the different native drawing incorrect",
+    "No photo, provisional layer or reference metadata enters the submitted native JSON",
+    "real--06: Save & Grade restores exact native curves and points",
+    "real--06: same-attempt photo restores from exact local bytes without entering the answer",
+    "real--06: refresh restores native drawings independently of the photo",
+    "real--06: remove reference retains every native object",
+    "real--06: removed photo does not reappear after refresh",
+    "No application errors or external-provider requests"
+  ],
+  "outcomes": [
+    {
+      "id": "IMG_1670",
+      "photo_visible": true,
+      "cv_overlay_visible": true,
+      "cv_status": "needs_review",
+      "automatically_added_native_objects": 0,
+      "user_native_branches_added": 1,
+      "manually_added_source_dots": 1,
+      "native_editable": true,
+      "successfully_saved_graded": true,
+      "native_state": {
+        "ink": [
+          [
+            {
+              "x": 750,
+              "y": 540
+            },
+            {
+              "x": 756.6666666666666,
+              "y": 543.3333333333334
+            },
+            {
+              "x": 763.3333333333334,
+              "y": 546.6666666666666
+            },
+            {
+              "x": 770,
+              "y": 550
+            }
+          ],
+          [
+            {
+              "x": 122.98,
+              "y": 300.14
+            },
+            {
+              "x": 140.67,
+              "y": 283.93
+            },
+            {
+              "x": 157.77,
+              "y": 267.06
+            },
+            {
+              "x": 174.5,
+              "y": 249.86
+            },
+            {
+              "x": 185.65,
+              "y": 238.39
+            },
+            {
+              "x": 192.95,
+              "y": 220.89
+            },
+            {
+              "x": 208.02,
+              "y": 215.51
+            },
+            {
+              "x": 221.08,
+              "y": 210.86
+            },
+            {
+              "x": 233.42,
+              "y": 227.01
+            },
+            {
+              "x": 244.79,
+              "y": 234.92
+            },
+            {
+              "x": 276.16,
+              "y": 256.75
+            },
+            {
+              "x": 312.25,
+              "y": 283.39
+            },
+            {
+              "x": 350.29,
+              "y": 279.77
+            },
+            {
+              "x": 384.95,
+              "y": 276.47
+            },
+            {
+              "x": 420.46,
+              "y": 253.9
+            },
+            {
+              "x": 438.78,
+              "y": 224.3
+            },
+            {
+              "x": 447.19,
+              "y": 210.71
+            },
+            {
+              "x": 453.17,
+              "y": 195.72
+            },
+            {
+              "x": 459.02,
+              "y": 180.85
+            },
+            {
+              "x": 461.74,
+              "y": 173.94
+            },
+            {
+              "x": 464.37,
+              "y": 163.66
+            },
+            {
+              "x": 471.71,
+              "y": 162.53
+            },
+            {
+              "x": 493.11,
+              "y": 159.23
+            },
+            {
+              "x": 514.13,
+              "y": 173.8
+            },
+            {
+              "x": 532.66,
+              "y": 185
+            },
+            {
+              "x": 567.74,
+              "y": 206.19
+            },
+            {
+              "x": 600.47,
+              "y": 231.11
+            },
+            {
+              "x": 635.35,
+              "y": 252.64
+            }
+          ]
+        ],
+        "points": [
+          {
+            "x": 735,
+            "y": 520
+          },
+          {
+            "x": 390.94366455078125,
+            "y": 125.76373291015625
+          }
+        ]
+      },
+      "submitted": {
+        "apiVersion": "0.1",
+        "meta": {
+          "config": {
+            "width": 800,
+            "height": 600,
+            "xrange": [
+              -5.153846153846154,
+              7.153846153846154
+            ],
+            "yrange": [
+              -4.172413793103448,
+              6.172413793103448
+            ],
+            "xscale": "linear",
+            "yscale": "linear",
+            "coordinates": "cartesian",
+            "readonly": false,
+            "enforceBounds": false,
+            "safetyBuffer": 10,
+            "plugins": [
+              {
+                "name": "axes",
+                "colors": {
+                  "xaxisLabel": "blue",
+                  "yaxisLabel": "blue"
+                },
+                "fontSize": {
+                  "xaxisLabel": 14,
+                  "yaxisLabel": 14
+                },
+                "xaxisLabel": {
+                  "dx": 10,
+                  "dy": 10,
+                  "value": "x"
+                },
+                "yaxisLabel": {
+                  "dx": 10,
+                  "dy": 20,
+                  "value": "y"
+                }
+              },
+              {
+                "id": "auto-ink",
+                "name": "freeform",
+                "size": null,
+                "color": "blue",
+                "group": null,
+                "label": "Graph strokes",
+                "limit": null,
+                "closed": null,
+                "helper": false,
+                "hollow": null,
+                "opacity": null,
+                "readonly": false,
+                "arrowHead": null,
+                "dashStyle": null,
+                "fillColor": null,
+                "lengthConstraint": null,
+                "directionConstraint": null
+              },
+              {
+                "id": "auto-notes",
+                "name": "point",
+                "size": 15,
+                "color": "black",
+                "group": null,
+                "label": "Other marks",
+                "limit": null,
+                "closed": null,
+                "helper": false,
+                "hollow": false,
+                "opacity": null,
+                "readonly": false,
+                "arrowHead": null,
+                "dashStyle": null,
+                "fillColor": null,
+                "lengthConstraint": null,
+                "directionConstraint": null
+              }
+            ],
+            "assistedPhotoGeometry": true
+          },
+          "dataVersions": {
+            "$__history": "0.1",
+            "$__toolbar": "0.1",
+            "auto-ink": "0.1",
+            "auto-notes": "0.1"
+          }
+        },
+        "data": {
+          "$__history": {
+            "undoStack": [
+              {
+                "auto-ink": {
+                  "1": [
+                    [
+                      {
+                        "x": 110.98,
+                        "y": 291.14
+                      },
+                      {
+                        "x": 128.67,
+                        "y": 274.93
+                      },
+                      {
+                        "x": 145.77,
+                        "y": 258.06
+                      },
+                      {
+                        "x": 162.5,
+                        "y": 240.86
+                      },
+                      {
+                        "x": 173.65,
+                        "y": 229.39
+                      },
+                      {
+                        "x": 180.95,
+                        "y": 211.89
+                      },
+                      {
+                        "x": 196.02,
+                        "y": 206.51
+                      },
+                      {
+                        "x": 209.08,
+                        "y": 201.86
+                      },
+                      {
+                        "x": 221.42,
+                        "y": 218.01
+                      },
+                      {
+                        "x": 232.79,
+                        "y": 225.92
+                      },
+                      {
+                        "x": 264.16,
+                        "y": 247.75
+                      },
+                      {
+                        "x": 300.25,
+                        "y": 274.39
+                      },
+                      {
+                        "x": 338.29,
+                        "y": 270.77
+                      },
+                      {
+                        "x": 372.95,
+                        "y": 267.47
+                      },
+                      {
+                        "x": 408.46,
+                        "y": 244.9
+                      },
+                      {
+                        "x": 426.78,
+                        "y": 215.3
+                      },
+                      {
+                        "x": 435.19,
+                        "y": 201.71
+                      },
+                      {
+                        "x": 441.17,
+                        "y": 186.72
+                      },
+                      {
+                        "x": 447.02,
+                        "y": 171.85
+                      },
+                      {
+                        "x": 449.74,
+                        "y": 164.94
+                      },
+                      {
+                        "x": 452.37,
+                        "y": 154.66
+                      },
+                      {
+                        "x": 459.71,
+                        "y": 153.53
+                      },
+                      {
+                        "x": 481.11,
+                        "y": 150.23
+                      },
+                      {
+                        "x": 502.13,
+                        "y": 164.8
+                      },
+                      {
+                        "x": 520.66,
+                        "y": 176
+                      },
+                      {
+                        "x": 555.74,
+                        "y": 197.19
+                      },
+                      {
+                        "x": 588.47,
+                        "y": 222.11
+                      },
+                      {
+                        "x": 623.35,
+                        "y": 243.64
+                      }
+                    ]
+                  ],
+                  "_t": "a"
+                }
+              },
+              {
+                "auto-notes": {
+                  "1": [
+                    {
+                      "x": 390.94366455078125,
+                      "y": 125.76373291015625
+                    }
+                  ],
+                  "_t": "a"
+                }
+              },
+              {
+                "auto-notes": {
+                  "2": [
+                    {
+                      "x": 650,
+                      "y": 70
+                    }
+                  ],
+                  "_t": "a"
+                }
+              },
+              {
+                "auto-notes": {
+                  "_t": "a",
+                  "_2": [
+                    {
+                      "x": 650,
+                      "y": 70
+                    },
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "auto-ink": {
+                  "1": {
+                    "0": {
+                      "x": [
+                        110.98,
+                        122.98
+                      ],
+                      "y": [
+                        291.14,
+                        300.14
+                      ]
+                    },
+                    "1": {
+                      "x": [
+                        128.67,
+                        140.67
+                      ],
+                      "y": [
+                        274.93,
+                        283.93
+                      ]
+                    },
+                    "2": {
+                      "x": [
+                        145.77,
+                        157.77
+                      ],
+                      "y": [
+                        258.06,
+                        267.06
+                      ]
+                    },
+                    "3": {
+                      "x": [
+                        162.5,
+                        174.5
+                      ],
+                      "y": [
+                        240.86,
+                        249.86
+                      ]
+                    },
+                    "4": {
+                      "x": [
+                        173.65,
+                        185.65
+                      ],
+                      "y": [
+                        229.39,
+                        238.39
+                      ]
+                    },
+                    "5": {
+                      "x": [
+                        180.95,
+                        192.95
+                      ],
+                      "y": [
+                        211.89,
+                        220.89
+                      ]
+                    },
+                    "6": {
+                      "x": [
+                        196.02,
+                        208.02
+                      ],
+                      "y": [
+                        206.51,
+                        215.51
+                      ]
+                    },
+                    "7": {
+                      "x": [
+                        209.08,
+                        221.08
+                      ],
+                      "y": [
+                        201.86,
+                        210.86
+                      ]
+                    },
+                    "8": {
+                      "x": [
+                        221.42,
+                        233.42
+                      ],
+                      "y": [
+                        218.01,
+                        227.01
+                      ]
+                    },
+                    "9": {
+                      "x": [
+                        232.79,
+                        244.79
+                      ],
+                      "y": [
+                        225.92,
+                        234.92
+                      ]
+                    },
+                    "10": {
+                      "x": [
+                        264.16,
+                        276.16
+                      ],
+                      "y": [
+                        247.75,
+                        256.75
+                      ]
+                    },
+                    "11": {
+                      "x": [
+                        300.25,
+                        312.25
+                      ],
+                      "y": [
+                        274.39,
+                        283.39
+                      ]
+                    },
+                    "12": {
+                      "x": [
+                        338.29,
+                        350.29
+                      ],
+                      "y": [
+                        270.77,
+                        279.77
+                      ]
+                    },
+                    "13": {
+                      "x": [
+                        372.95,
+                        384.95
+                      ],
+                      "y": [
+                        267.47,
+                        276.47
+                      ]
+                    },
+                    "14": {
+                      "x": [
+                        408.46,
+                        420.46
+                      ],
+                      "y": [
+                        244.9,
+                        253.9
+                      ]
+                    },
+                    "15": {
+                      "x": [
+                        426.78,
+                        438.78
+                      ],
+                      "y": [
+                        215.3,
+                        224.3
+                      ]
+                    },
+                    "16": {
+                      "x": [
+                        435.19,
+                        447.19
+                      ],
+                      "y": [
+                        201.71,
+                        210.71
+                      ]
+                    },
+                    "17": {
+                      "x": [
+                        441.17,
+                        453.17
+                      ],
+                      "y": [
+                        186.72,
+                        195.72
+                      ]
+                    },
+                    "18": {
+                      "x": [
+                        447.02,
+                        459.02
+                      ],
+                      "y": [
+                        171.85,
+                        180.85
+                      ]
+                    },
+                    "19": {
+                      "x": [
+                        449.74,
+                        461.74
+                      ],
+                      "y": [
+                        164.94,
+                        173.94
+                      ]
+                    },
+                    "20": {
+                      "x": [
+                        452.37,
+                        464.37
+                      ],
+                      "y": [
+                        154.66,
+                        163.66
+                      ]
+                    },
+                    "21": {
+                      "x": [
+                        459.71,
+                        471.71
+                      ],
+                      "y": [
+                        153.53,
+                        162.53
+                      ]
+                    },
+                    "22": {
+                      "x": [
+                        481.11,
+                        493.11
+                      ],
+                      "y": [
+                        150.23,
+                        159.23
+                      ]
+                    },
+                    "23": {
+                      "x": [
+                        502.13,
+                        514.13
+                      ],
+                      "y": [
+                        164.8,
+                        173.8
+                      ]
+                    },
+                    "24": {
+                      "x": [
+                        520.66,
+                        532.66
+                      ],
+                      "y": [
+                        176,
+                        185
+                      ]
+                    },
+                    "25": {
+                      "x": [
+                        555.74,
+                        567.74
+                      ],
+                      "y": [
+                        197.19,
+                        206.19
+                      ]
+                    },
+                    "26": {
+                      "x": [
+                        588.47,
+                        600.47
+                      ],
+                      "y": [
+                        222.11,
+                        231.11
+                      ]
+                    },
+                    "27": {
+                      "x": [
+                        623.35,
+                        635.35
+                      ],
+                      "y": [
+                        243.64,
+                        252.64
+                      ]
+                    },
+                    "_t": "a"
+                  },
+                  "_t": "a"
+                }
+              }
+            ],
+            "redoStack": []
+          },
+          "$__toolbar": {
+            "activeItemID": "select",
+            "selectedDropdownItemMap": {}
+          },
+          "auto-ink": [
+            [
+              {
+                "x": 750,
+                "y": 540
+              },
+              {
+                "x": 756.6666666666666,
+                "y": 543.3333333333334
+              },
+              {
+                "x": 763.3333333333334,
+                "y": 546.6666666666666
+              },
+              {
+                "x": 770,
+                "y": 550
+              }
+            ],
+            [
+              {
+                "x": 122.98,
+                "y": 300.14
+              },
+              {
+                "x": 140.67,
+                "y": 283.93
+              },
+              {
+                "x": 157.77,
+                "y": 267.06
+              },
+              {
+                "x": 174.5,
+                "y": 249.86
+              },
+              {
+                "x": 185.65,
+                "y": 238.39
+              },
+              {
+                "x": 192.95,
+                "y": 220.89
+              },
+              {
+                "x": 208.02,
+                "y": 215.51
+              },
+              {
+                "x": 221.08,
+                "y": 210.86
+              },
+              {
+                "x": 233.42,
+                "y": 227.01
+              },
+              {
+                "x": 244.79,
+                "y": 234.92
+              },
+              {
+                "x": 276.16,
+                "y": 256.75
+              },
+              {
+                "x": 312.25,
+                "y": 283.39
+              },
+              {
+                "x": 350.29,
+                "y": 279.77
+              },
+              {
+                "x": 384.95,
+                "y": 276.47
+              },
+              {
+                "x": 420.46,
+                "y": 253.9
+              },
+              {
+                "x": 438.78,
+                "y": 224.3
+              },
+              {
+                "x": 447.19,
+                "y": 210.71
+              },
+              {
+                "x": 453.17,
+                "y": 195.72
+              },
+              {
+                "x": 459.02,
+                "y": 180.85
+              },
+              {
+                "x": 461.74,
+                "y": 173.94
+              },
+              {
+                "x": 464.37,
+                "y": 163.66
+              },
+              {
+                "x": 471.71,
+                "y": 162.53
+              },
+              {
+                "x": 493.11,
+                "y": 159.23
+              },
+              {
+                "x": 514.13,
+                "y": 173.8
+              },
+              {
+                "x": 532.66,
+                "y": 185
+              },
+              {
+                "x": 567.74,
+                "y": 206.19
+              },
+              {
+                "x": 600.47,
+                "y": 231.11
+              },
+              {
+                "x": 635.35,
+                "y": 252.64
+              }
+            ]
+          ],
+          "auto-notes": [
+            {
+              "x": 735,
+              "y": 520
+            },
+            {
+              "x": 390.94366455078125,
+              "y": 125.76373291015625
+            }
+          ]
+        },
+        "gradeable": {
+          "auto-ink": [
+            {
+              "spline": [
+                [
+                  750,
+                  540
+                ],
+                [
+                  756.6666666666666,
+                  543.3333333333334
+                ],
+                [
+                  763.3333333333334,
+                  546.6666666666666
+                ],
+                [
+                  770,
+                  550
+                ]
+              ]
+            },
+            {
+              "spline": [
+                [
+                  122.98,
+                  300.14
+                ],
+                [
+                  140.67,
+                  283.93
+                ],
+                [
+                  157.77,
+                  267.06
+                ],
+                [
+                  174.5,
+                  249.86
+                ],
+                [
+                  185.65,
+                  238.39
+                ],
+                [
+                  192.95,
+                  220.89
+                ],
+                [
+                  208.02,
+                  215.51
+                ],
+                [
+                  221.08,
+                  210.86
+                ],
+                [
+                  233.42,
+                  227.01
+                ],
+                [
+                  244.79,
+                  234.92
+                ],
+                [
+                  276.16,
+                  256.75
+                ],
+                [
+                  312.25,
+                  283.39
+                ],
+                [
+                  350.29,
+                  279.77
+                ],
+                [
+                  384.95,
+                  276.47
+                ],
+                [
+                  420.46,
+                  253.9
+                ],
+                [
+                  438.78,
+                  224.3
+                ],
+                [
+                  447.19,
+                  210.71
+                ],
+                [
+                  453.17,
+                  195.72
+                ],
+                [
+                  459.02,
+                  180.85
+                ],
+                [
+                  461.74,
+                  173.94
+                ],
+                [
+                  464.37,
+                  163.66
+                ],
+                [
+                  471.71,
+                  162.53
+                ],
+                [
+                  493.11,
+                  159.23
+                ],
+                [
+                  514.13,
+                  173.8
+                ],
+                [
+                  532.66,
+                  185
+                ],
+                [
+                  567.74,
+                  206.19
+                ],
+                [
+                  600.47,
+                  231.11
+                ],
+                [
+                  635.35,
+                  252.64
+                ]
+              ]
+            }
+          ],
+          "auto-notes": [
+            {
+              "point": [
+                735,
+                520
+              ]
+            },
+            {
+              "point": [
+                390.94366455078125,
+                125.76373291015625
+              ]
+            }
+          ]
+        }
+      },
+      "reference": {
+        "photoVisible": true,
+        "cvOverlayVisible": true,
+        "sourceName": "IMG_1670.jpg",
+        "sourceSha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b",
+        "revision": 1,
+        "recognitionStatus": "needs_review",
+        "stored": true,
+        "scope": "star.canvas-photo.v1:[\"/pl/course/1/question/254/preview/\",\"418\",\"automatic-photo\",\"[800,600,[-5.153846153846154,7.153846153846154],[-4.172413793103448,6.172413793103448]]\"]",
+        "fit": {
+          "x": 67.6714188730482,
+          "y": 10,
+          "width": 664.6571622539036,
+          "height": 580,
+          "scale": 0.3937542430414121
+        },
+        "ungraded": true
+      },
+      "restored_reference": {
+        "photoVisible": true,
+        "cvOverlayVisible": true,
+        "sourceName": "IMG_1670.jpg",
+        "sourceSha256": "a8f8b7e7a6275cc6742eb1814a6161b56a00cf00ecf194ee32e318efe52e1f1b",
+        "revision": 1,
+        "recognitionStatus": "needs_review",
+        "stored": true,
+        "scope": "star.canvas-photo.v1:[\"/pl/course/1/question/254/preview/\",\"418\",\"automatic-photo\",\"[800,600,[-5.153846153846154,7.153846153846154],[-4.172413793103448,6.172413793103448]]\"]",
+        "fit": {
+          "x": 67.6714188730482,
+          "y": 10,
+          "width": 664.6571622539036,
+          "height": 580,
+          "scale": 0.3937542430414121
+        },
+        "ungraded": true
+      },
+      "classification": "Manual native drawing over an ungraded, uncalibrated visual reference; not automatic recognition or calibrated photo transcription",
+      "url": "http://localhost:3000/pl/course/1/question/254/preview/?variant_id=418"
+    },
+    {
+      "id": "real--01",
+      "photo_visible": true,
+      "cv_overlay_visible": false,
+      "cv_status": "abstained",
+      "automatically_added_native_objects": 0,
+      "user_native_branches_added": 2,
+      "manually_added_source_dots": 0,
+      "native_editable": true,
+      "successfully_saved_graded": true,
+      "native_state": {
+        "ink": [
+          [
+            {
+              "x": 750,
+              "y": 540
+            },
+            {
+              "x": 756.6666666666666,
+              "y": 543.3333333333334
+            },
+            {
+              "x": 763.3333333333334,
+              "y": 546.6666666666666
+            },
+            {
+              "x": 770,
+              "y": 550
+            }
+          ],
+          [
+            {
+              "x": 23.63,
+              "y": 355.02
+            },
+            {
+              "x": 266.1,
+              "y": 282.93
+            },
+            {
+              "x": 506.53,
+              "y": 203.99
+            },
+            {
+              "x": 746.1,
+              "y": 122.78
+            }
+          ],
+          [
+            {
+              "x": 65.51,
+              "y": 465.06
+            },
+            {
+              "x": 273.59,
+              "y": 407.26
+            },
+            {
+              "x": 484.03,
+              "y": 357.09
+            },
+            {
+              "x": 689.24,
+              "y": 289.8
+            }
+          ]
+        ],
+        "points": [
+          {
+            "x": 735,
+            "y": 520
+          }
+        ]
+      },
+      "submitted": {
+        "apiVersion": "0.1",
+        "meta": {
+          "config": {
+            "width": 800,
+            "height": 600,
+            "xrange": [
+              -5.153846153846154,
+              7.153846153846154
+            ],
+            "yrange": [
+              -4.172413793103448,
+              6.172413793103448
+            ],
+            "xscale": "linear",
+            "yscale": "linear",
+            "coordinates": "cartesian",
+            "readonly": false,
+            "enforceBounds": false,
+            "safetyBuffer": 10,
+            "plugins": [
+              {
+                "name": "axes",
+                "colors": {
+                  "xaxisLabel": "blue",
+                  "yaxisLabel": "blue"
+                },
+                "fontSize": {
+                  "xaxisLabel": 14,
+                  "yaxisLabel": 14
+                },
+                "xaxisLabel": {
+                  "dx": 10,
+                  "dy": 10,
+                  "value": "x"
+                },
+                "yaxisLabel": {
+                  "dx": 10,
+                  "dy": 20,
+                  "value": "y"
+                }
+              },
+              {
+                "id": "auto-ink",
+                "name": "freeform",
+                "size": null,
+                "color": "blue",
+                "group": null,
+                "label": "Graph strokes",
+                "limit": null,
+                "closed": null,
+                "helper": false,
+                "hollow": null,
+                "opacity": null,
+                "readonly": false,
+                "arrowHead": null,
+                "dashStyle": null,
+                "fillColor": null,
+                "lengthConstraint": null,
+                "directionConstraint": null
+              },
+              {
+                "id": "auto-notes",
+                "name": "point",
+                "size": 15,
+                "color": "black",
+                "group": null,
+                "label": "Other marks",
+                "limit": null,
+                "closed": null,
+                "helper": false,
+                "hollow": false,
+                "opacity": null,
+                "readonly": false,
+                "arrowHead": null,
+                "dashStyle": null,
+                "fillColor": null,
+                "lengthConstraint": null,
+                "directionConstraint": null
+              }
+            ],
+            "assistedPhotoGeometry": true
+          },
+          "dataVersions": {
+            "$__history": "0.1",
+            "$__toolbar": "0.1",
+            "auto-ink": "0.1",
+            "auto-notes": "0.1"
+          }
+        },
+        "data": {
+          "$__history": {
+            "undoStack": [
+              {
+                "auto-ink": {
+                  "1": [
+                    [
+                      {
+                        "x": 23.63,
+                        "y": 355.02
+                      },
+                      {
+                        "x": 266.1,
+                        "y": 282.93
+                      },
+                      {
+                        "x": 506.53,
+                        "y": 203.99
+                      },
+                      {
+                        "x": 746.1,
+                        "y": 122.78
+                      }
+                    ]
+                  ],
+                  "_t": "a"
+                }
+              },
+              {
+                "auto-ink": {
+                  "2": [
+                    [
+                      {
+                        "x": 65.51,
+                        "y": 465.06
+                      },
+                      {
+                        "x": 273.59,
+                        "y": 407.26
+                      },
+                      {
+                        "x": 484.03,
+                        "y": 357.09
+                      },
+                      {
+                        "x": 689.24,
+                        "y": 289.8
+                      }
+                    ]
+                  ],
+                  "_t": "a"
+                }
+              }
+            ],
+            "redoStack": []
+          },
+          "$__toolbar": {
+            "activeItemID": "auto-ink",
+            "selectedDropdownItemMap": {}
+          },
+          "auto-ink": [
+            [
+              {
+                "x": 750,
+                "y": 540
+              },
+              {
+                "x": 756.6666666666666,
+                "y": 543.3333333333334
+              },
+              {
+                "x": 763.3333333333334,
+                "y": 546.6666666666666
+              },
+              {
+                "x": 770,
+                "y": 550
+              }
+            ],
+            [
+              {
+                "x": 23.63,
+                "y": 355.02
+              },
+              {
+                "x": 266.1,
+                "y": 282.93
+              },
+              {
+                "x": 506.53,
+                "y": 203.99
+              },
+              {
+                "x": 746.1,
+                "y": 122.78
+              }
+            ],
+            [
+              {
+                "x": 65.51,
+                "y": 465.06
+              },
+              {
+                "x": 273.59,
+                "y": 407.26
+              },
+              {
+                "x": 484.03,
+                "y": 357.09
+              },
+              {
+                "x": 689.24,
+                "y": 289.8
+              }
+            ]
+          ],
+          "auto-notes": [
+            {
+              "x": 735,
+              "y": 520
+            }
+          ]
+        },
+        "gradeable": {
+          "auto-ink": [
+            {
+              "spline": [
+                [
+                  750,
+                  540
+                ],
+                [
+                  756.6666666666666,
+                  543.3333333333334
+                ],
+                [
+                  763.3333333333334,
+                  546.6666666666666
+                ],
+                [
+                  770,
+                  550
+                ]
+              ]
+            },
+            {
+              "spline": [
+                [
+                  23.63,
+                  355.02
+                ],
+                [
+                  266.1,
+                  282.93
+                ],
+                [
+                  506.53,
+                  203.99
+                ],
+                [
+                  746.1,
+                  122.78
+                ]
+              ]
+            },
+            {
+              "spline": [
+                [
+                  65.51,
+                  465.06
+                ],
+                [
+                  273.59,
+                  407.26
+                ],
+                [
+                  484.03,
+                  357.09
+                ],
+                [
+                  689.24,
+                  289.8
+                ]
+              ]
+            }
+          ],
+          "auto-notes": [
+            {
+              "point": [
+                735,
+                520
+              ]
+            }
+          ]
+        }
+      },
+      "reference": {
+        "photoVisible": true,
+        "cvOverlayVisible": false,
+        "sourceName": "real--01-multiple-lines-graph-paper.png",
+        "sourceSha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+        "revision": 1,
+        "recognitionStatus": "abstained",
+        "stored": true,
+        "scope": "star.canvas-photo.v1:[\"/pl/course/1/question/254/preview/\",\"419\",\"automatic-photo\",\"[800,600,[-5.153846153846154,7.153846153846154],[-4.172413793103448,6.172413793103448]]\"]",
+        "fit": {
+          "x": 10,
+          "y": 42.43445692883893,
+          "width": 780,
+          "height": 515.1310861423221,
+          "scale": 0.9737827715355806
+        },
+        "ungraded": true
+      },
+      "restored_reference": {
+        "photoVisible": true,
+        "cvOverlayVisible": false,
+        "sourceName": "real--01-multiple-lines-graph-paper.png",
+        "sourceSha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+        "revision": 1,
+        "recognitionStatus": "abstained",
+        "stored": true,
+        "scope": "star.canvas-photo.v1:[\"/pl/course/1/question/254/preview/\",\"419\",\"automatic-photo\",\"[800,600,[-5.153846153846154,7.153846153846154],[-4.172413793103448,6.172413793103448]]\"]",
+        "fit": {
+          "x": 10,
+          "y": 42.43445692883893,
+          "width": 780,
+          "height": 515.1310861423221,
+          "scale": 0.9737827715355806
+        },
+        "ungraded": true
+      },
+      "classification": "Manual native drawing over an ungraded, uncalibrated visual reference; not automatic recognition or calibrated photo transcription",
+      "url": "http://localhost:3000/pl/course/1/question/254/preview/?variant_id=419"
+    },
+    {
+      "id": "real--06",
+      "photo_visible": true,
+      "cv_overlay_visible": true,
+      "cv_status": "needs_review",
+      "automatically_added_native_objects": 0,
+      "user_native_branches_added": 1,
+      "manually_added_source_dots": 0,
+      "native_editable": true,
+      "successfully_saved_graded": true,
+      "native_state": {
+        "ink": [
+          [
+            {
+              "x": 750,
+              "y": 540
+            },
+            {
+              "x": 756.6666666666666,
+              "y": 543.3333333333334
+            },
+            {
+              "x": 763.3333333333334,
+              "y": 546.6666666666666
+            },
+            {
+              "x": 770,
+              "y": 550
+            }
+          ],
+          [
+            {
+              "x": 103.79,
+              "y": 453.29
+            },
+            {
+              "x": 128.02,
+              "y": 444.2
+            },
+            {
+              "x": 154.04,
+              "y": 435.96
+            },
+            {
+              "x": 173.3,
+              "y": 418.67
+            },
+            {
+              "x": 221.57,
+              "y": 375.34
+            },
+            {
+              "x": 252.1,
+              "y": 315.35
+            },
+            {
+              "x": 286.06,
+              "y": 260.08
+            },
+            {
+              "x": 300.18,
+              "y": 237.08
+            },
+            {
+              "x": 314.14,
+              "y": 213.94
+            },
+            {
+              "x": 329.5,
+              "y": 191.74
+            },
+            {
+              "x": 336.33,
+              "y": 181.87
+            },
+            {
+              "x": 339.87,
+              "y": 168.4
+            },
+            {
+              "x": 350.2,
+              "y": 162.29
+            },
+            {
+              "x": 358.58,
+              "y": 157.34
+            },
+            {
+              "x": 369.65,
+              "y": 167.06
+            },
+            {
+              "x": 377.39,
+              "y": 172.96
+            },
+            {
+              "x": 401.17,
+              "y": 191.11
+            },
+            {
+              "x": 417.23,
+              "y": 217.77
+            },
+            {
+              "x": 434.49,
+              "y": 242.2
+            },
+            {
+              "x": 480.64,
+              "y": 307.54
+            },
+            {
+              "x": 523.39,
+              "y": 375.22
+            },
+            {
+              "x": 568.34,
+              "y": 441.4
+            }
+          ]
+        ],
+        "points": [
+          {
+            "x": 735,
+            "y": 520
+          }
+        ]
+      },
+      "submitted": {
+        "apiVersion": "0.1",
+        "meta": {
+          "config": {
+            "width": 800,
+            "height": 600,
+            "xrange": [
+              -5.153846153846154,
+              7.153846153846154
+            ],
+            "yrange": [
+              -4.172413793103448,
+              6.172413793103448
+            ],
+            "xscale": "linear",
+            "yscale": "linear",
+            "coordinates": "cartesian",
+            "readonly": false,
+            "enforceBounds": false,
+            "safetyBuffer": 10,
+            "plugins": [
+              {
+                "name": "axes",
+                "colors": {
+                  "xaxisLabel": "blue",
+                  "yaxisLabel": "blue"
+                },
+                "fontSize": {
+                  "xaxisLabel": 14,
+                  "yaxisLabel": 14
+                },
+                "xaxisLabel": {
+                  "dx": 10,
+                  "dy": 10,
+                  "value": "x"
+                },
+                "yaxisLabel": {
+                  "dx": 10,
+                  "dy": 20,
+                  "value": "y"
+                }
+              },
+              {
+                "id": "auto-ink",
+                "name": "freeform",
+                "size": null,
+                "color": "blue",
+                "group": null,
+                "label": "Graph strokes",
+                "limit": null,
+                "closed": null,
+                "helper": false,
+                "hollow": null,
+                "opacity": null,
+                "readonly": false,
+                "arrowHead": null,
+                "dashStyle": null,
+                "fillColor": null,
+                "lengthConstraint": null,
+                "directionConstraint": null
+              },
+              {
+                "id": "auto-notes",
+                "name": "point",
+                "size": 15,
+                "color": "black",
+                "group": null,
+                "label": "Other marks",
+                "limit": null,
+                "closed": null,
+                "helper": false,
+                "hollow": false,
+                "opacity": null,
+                "readonly": false,
+                "arrowHead": null,
+                "dashStyle": null,
+                "fillColor": null,
+                "lengthConstraint": null,
+                "directionConstraint": null
+              }
+            ],
+            "assistedPhotoGeometry": true
+          },
+          "dataVersions": {
+            "$__history": "0.1",
+            "$__toolbar": "0.1",
+            "auto-ink": "0.1",
+            "auto-notes": "0.1"
+          }
+        },
+        "data": {
+          "$__history": {
+            "undoStack": [
+              {
+                "auto-ink": {
+                  "1": [
+                    [
+                      {
+                        "x": 103.79,
+                        "y": 453.29
+                      },
+                      {
+                        "x": 128.02,
+                        "y": 444.2
+                      },
+                      {
+                        "x": 154.04,
+                        "y": 435.96
+                      },
+                      {
+                        "x": 173.3,
+                        "y": 418.67
+                      },
+                      {
+                        "x": 221.57,
+                        "y": 375.34
+                      },
+                      {
+                        "x": 252.1,
+                        "y": 315.35
+                      },
+                      {
+                        "x": 286.06,
+                        "y": 260.08
+                      },
+                      {
+                        "x": 300.18,
+                        "y": 237.08
+                      },
+                      {
+                        "x": 314.14,
+                        "y": 213.94
+                      },
+                      {
+                        "x": 329.5,
+                        "y": 191.74
+                      },
+                      {
+                        "x": 336.33,
+                        "y": 181.87
+                      },
+                      {
+                        "x": 339.87,
+                        "y": 168.4
+                      },
+                      {
+                        "x": 350.2,
+                        "y": 162.29
+                      },
+                      {
+                        "x": 358.58,
+                        "y": 157.34
+                      },
+                      {
+                        "x": 369.65,
+                        "y": 167.06
+                      },
+                      {
+                        "x": 377.39,
+                        "y": 172.96
+                      },
+                      {
+                        "x": 401.17,
+                        "y": 191.11
+                      },
+                      {
+                        "x": 417.23,
+                        "y": 217.77
+                      },
+                      {
+                        "x": 434.49,
+                        "y": 242.2
+                      },
+                      {
+                        "x": 480.64,
+                        "y": 307.54
+                      },
+                      {
+                        "x": 523.39,
+                        "y": 375.22
+                      },
+                      {
+                        "x": 568.34,
+                        "y": 441.4
+                      }
+                    ]
+                  ],
+                  "_t": "a"
+                }
+              }
+            ],
+            "redoStack": []
+          },
+          "$__toolbar": {
+            "activeItemID": "auto-ink",
+            "selectedDropdownItemMap": {}
+          },
+          "auto-ink": [
+            [
+              {
+                "x": 750,
+                "y": 540
+              },
+              {
+                "x": 756.6666666666666,
+                "y": 543.3333333333334
+              },
+              {
+                "x": 763.3333333333334,
+                "y": 546.6666666666666
+              },
+              {
+                "x": 770,
+                "y": 550
+              }
+            ],
+            [
+              {
+                "x": 103.79,
+                "y": 453.29
+              },
+              {
+                "x": 128.02,
+                "y": 444.2
+              },
+              {
+                "x": 154.04,
+                "y": 435.96
+              },
+              {
+                "x": 173.3,
+                "y": 418.67
+              },
+              {
+                "x": 221.57,
+                "y": 375.34
+              },
+              {
+                "x": 252.1,
+                "y": 315.35
+              },
+              {
+                "x": 286.06,
+                "y": 260.08
+              },
+              {
+                "x": 300.18,
+                "y": 237.08
+              },
+              {
+                "x": 314.14,
+                "y": 213.94
+              },
+              {
+                "x": 329.5,
+                "y": 191.74
+              },
+              {
+                "x": 336.33,
+                "y": 181.87
+              },
+              {
+                "x": 339.87,
+                "y": 168.4
+              },
+              {
+                "x": 350.2,
+                "y": 162.29
+              },
+              {
+                "x": 358.58,
+                "y": 157.34
+              },
+              {
+                "x": 369.65,
+                "y": 167.06
+              },
+              {
+                "x": 377.39,
+                "y": 172.96
+              },
+              {
+                "x": 401.17,
+                "y": 191.11
+              },
+              {
+                "x": 417.23,
+                "y": 217.77
+              },
+              {
+                "x": 434.49,
+                "y": 242.2
+              },
+              {
+                "x": 480.64,
+                "y": 307.54
+              },
+              {
+                "x": 523.39,
+                "y": 375.22
+              },
+              {
+                "x": 568.34,
+                "y": 441.4
+              }
+            ]
+          ],
+          "auto-notes": [
+            {
+              "x": 735,
+              "y": 520
+            }
+          ]
+        },
+        "gradeable": {
+          "auto-ink": [
+            {
+              "spline": [
+                [
+                  750,
+                  540
+                ],
+                [
+                  756.6666666666666,
+                  543.3333333333334
+                ],
+                [
+                  763.3333333333334,
+                  546.6666666666666
+                ],
+                [
+                  770,
+                  550
+                ]
+              ]
+            },
+            {
+              "spline": [
+                [
+                  103.79,
+                  453.29
+                ],
+                [
+                  128.02,
+                  444.2
+                ],
+                [
+                  154.04,
+                  435.96
+                ],
+                [
+                  173.3,
+                  418.67
+                ],
+                [
+                  221.57,
+                  375.34
+                ],
+                [
+                  252.1,
+                  315.35
+                ],
+                [
+                  286.06,
+                  260.08
+                ],
+                [
+                  300.18,
+                  237.08
+                ],
+                [
+                  314.14,
+                  213.94
+                ],
+                [
+                  329.5,
+                  191.74
+                ],
+                [
+                  336.33,
+                  181.87
+                ],
+                [
+                  339.87,
+                  168.4
+                ],
+                [
+                  350.2,
+                  162.29
+                ],
+                [
+                  358.58,
+                  157.34
+                ],
+                [
+                  369.65,
+                  167.06
+                ],
+                [
+                  377.39,
+                  172.96
+                ],
+                [
+                  401.17,
+                  191.11
+                ],
+                [
+                  417.23,
+                  217.77
+                ],
+                [
+                  434.49,
+                  242.2
+                ],
+                [
+                  480.64,
+                  307.54
+                ],
+                [
+                  523.39,
+                  375.22
+                ],
+                [
+                  568.34,
+                  441.4
+                ]
+              ]
+            }
+          ],
+          "auto-notes": [
+            {
+              "point": [
+                735,
+                520
+              ]
+            }
+          ]
+        }
+      },
+      "reference": {
+        "photoVisible": true,
+        "cvOverlayVisible": true,
+        "sourceName": "real--06-piecewise-graph-paper.png",
+        "sourceSha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+        "revision": 1,
+        "recognitionStatus": "needs_review",
+        "stored": true,
+        "scope": "star.canvas-photo.v1:[\"/pl/course/1/question/254/preview/\",\"420\",\"automatic-photo\",\"[800,600,[-5.153846153846154,7.153846153846154],[-4.172413793103448,6.172413793103448]]\"]",
+        "fit": {
+          "x": 34.73809523809524,
+          "y": 10,
+          "width": 730.5238095238095,
+          "height": 580,
+          "scale": 1.380952380952381
+        },
+        "ungraded": true
+      },
+      "restored_reference": {
+        "photoVisible": true,
+        "cvOverlayVisible": true,
+        "sourceName": "real--06-piecewise-graph-paper.png",
+        "sourceSha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+        "revision": 1,
+        "recognitionStatus": "needs_review",
+        "stored": true,
+        "scope": "star.canvas-photo.v1:[\"/pl/course/1/question/254/preview/\",\"420\",\"automatic-photo\",\"[800,600,[-5.153846153846154,7.153846153846154],[-4.172413793103448,6.172413793103448]]\"]",
+        "fit": {
+          "x": 34.73809523809524,
+          "y": 10,
+          "width": 730.5238095238095,
+          "height": 580,
+          "scale": 1.380952380952381
+        },
+        "ungraded": true
+      },
+      "classification": "Manual native drawing over an ungraded, uncalibrated visual reference; not automatic recognition or calibrated photo transcription",
+      "url": "http://localhost:3000/pl/course/1/question/254/preview/?variant_id=420"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "calibrated_photo_geometry_claimed": false,
+  "inference_requests": 0
+}

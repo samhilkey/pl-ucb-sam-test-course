@@ -24,8 +24,9 @@ async function acceptance (page, o) {
       window.StarCVAssisted.fromSelection = (...args) => { const g = build(...args); window.__correction = JSON.parse(JSON.stringify(g)); return g }
     })
   }
+  const openAdvanced = async () => { const d = page.locator('#automatic-photo-si-container .star-canvas-photo-options'); if (await d.count() && !await d.evaluate(el => el.open)) await d.locator('summary').click(); await page.locator('#automatic-photo-automatic-button').click() }
   const openUpload = async () => {
-    await page.locator('#automatic-photo-automatic-button').click()
+    await openAdvanced()
     await panel().locator('input[type=file]').setInputFiles(o.photo)
     await page.waitForFunction(() => !document.querySelector('.star-auto-retry').disabled)
   }
@@ -179,10 +180,10 @@ async function acceptance (page, o) {
   await panel().locator('.star-auto-retry').click(); await page.waitForFunction(() => !document.querySelector('.star-auto-retry').disabled); await calibrate(); await select(); await panel().locator('.star-auto-next').click(); await panel().locator('.star-auto-ack').check()
   await panel().locator('input[type=file]').setInputFiles(o.fixtures + '/ambiguous-axes.png'); await page.waitForFunction(() => !document.querySelector('.star-auto-retry').disabled)
   check(await panel().locator('.star-auto-confirm').isDisabled() && !await panel().locator('.star-auto-ack').isChecked(), 'Replacing the photo invalidates calibration, selection and final approval immediately')
-  await page.reload({ waitUntil: 'networkidle' }); await ready(); await page.locator('#automatic-photo-automatic-button').click()
+  await page.reload({ waitUntil: 'networkidle' }); await ready(); await openAdvanced()
   check(await panel().locator('.star-auto-confirm').isDisabled(), 'Browser refresh cannot restore an uncommitted review token')
   await panel().press('Escape'); check(await panel().isHidden() && await page.locator('#automatic-photo-automatic-button').evaluate(el => el === document.activeElement), 'Escape closes review and returns keyboard focus to its opener')
-  const beforeRecovery = await state(); await page.locator('#automatic-photo-automatic-button').click()
+  const beforeRecovery = await state(); await openAdvanced()
   await panel().locator('input[type=file]').setInputFiles({ name: 'broken.png', mimeType: 'image/png', buffer: Buffer.from('invalid image') })
   await panel().locator('.star-auto-status').filter({ hasText: 'Could not recognize this photo' }).waitFor()
   check(await panel().locator('.star-auto-confirm').isDisabled() && JSON.stringify((await state()).data) === JSON.stringify(beforeRecovery.data), 'Unreadable photo remains blocked and preserves native objects')
@@ -200,7 +201,7 @@ async function acceptance (page, o) {
   check((await manual.locator('.star-assisted-method').textContent()).includes('manually assisted'), 'Fallback explicitly changes the method to manually assisted')
   check(JSON.stringify((await state()).data) === JSON.stringify(beforeRecovery.data), 'Manual fallback handoff preserves every native object')
   await manual.screenshot({ path: o.output + '/same-photo-manual-fallback.png' })
-  await fresh(); await page.locator('#automatic-photo-automatic-button').click()
+  await fresh(); await openAdvanced()
   await panel().locator('input[type=file]').setInputFiles(o.fixtures + '/real--01-multiple-lines-graph-paper.png'); await page.waitForFunction(() => !document.querySelector('.star-auto-retry').disabled)
   check(await page.evaluate(() => window.__rawCV.strokes.length === 0) && await panel().locator('.star-auto-next').isHidden() && await panel().locator('.star-auto-confirm').isDisabled(), 'Existing no-strokes photograph cannot enter CV-assisted import or create geometry')
   check((await panel().locator('.star-auto-correct').getAttribute('class')).includes('btn-primary') && await panel().locator('.star-auto-correct').isEnabled(), 'No-strokes failure presents manual tracing as its one primary next action')

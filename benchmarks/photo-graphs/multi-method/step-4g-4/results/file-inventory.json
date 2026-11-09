@@ -1,0 +1,280 @@
+{
+  "scope": "All Step 4G-4 implementation, tests, documentation and selected evidence; inventory excludes itself",
+  "files": [
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/DEMO.md",
+      "bytes": 4566,
+      "sha256": "5e1bad2c4b659ade0511f1b95a235c247c21b626cce5735124a86ef37330216c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/REPORT.md",
+      "bytes": 10648,
+      "sha256": "686ff93ff51616dd3ee7442a00fa8ecfab4470f675301518ce9c0fbb9f027ca1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/TESTING.md",
+      "bytes": 3938,
+      "sha256": "e6ba535d7e4384cd9a1ecc5589673b33a67c9652de4681ca283950c6eb97cd64"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/input-manifest.json",
+      "bytes": 1504,
+      "sha256": "02543b4e0e6056922469b6b8b7033cafe209e0c01eeb8d1e3cf1a3941b78a2e3"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/IMG_1670--native-drawn.png",
+      "bytes": 393323,
+      "sha256": "64f8eb7f9301b6724c113fff2229135180544c586b4eaf073abb645600035284"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/IMG_1670--photo-and-cv.png",
+      "bytes": 391013,
+      "sha256": "353804efae5d1ab0b50e1b270e96a498be743c9fa60c9b18348fe8d0a5f90428"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/IMG_1670--saved-restored.png",
+      "bytes": 393368,
+      "sha256": "aa2a5a2be21a6a82921205c3d3098ddc1a29c72cc937ab5ac8eb99b8b0bc7172"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/demo-02-hidden.png",
+      "bytes": 44275,
+      "sha256": "9a47a8b0962262e89e06d7fca68f5bbf768f05dcfc3a9cd64b10610e6eaaf06e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/demo-04-native-correction.png",
+      "bytes": 394007,
+      "sha256": "27a39230812938ffce77a65474f96609a8d712360a8aa56a83d332b6dc100179"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/real--01--native-drawn.png",
+      "bytes": 313742,
+      "sha256": "bee624d804eb9cd914203d4d4e0e2250870e8041bb1fc51cd94538b6ea61dc96"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/real--01--photo-and-cv.png",
+      "bytes": 309985,
+      "sha256": "70311c994ea6ce1276b0bb25015233ab455b407cd1756bdad5eec26841453ed7"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/real--01--saved-restored.png",
+      "bytes": 313783,
+      "sha256": "6640972c6a4373f16331d1c44770e763b0ddd270066dd8124e7ea23615ee5f1b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/real--06--native-drawn.png",
+      "bytes": 429490,
+      "sha256": "99e673ddbb364d7390646a5879f8509cfda427599a9d18d9aea352ea3c9d3998"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/real--06--photo-and-cv.png",
+      "bytes": 425043,
+      "sha256": "a258e30f16a77feadabfa62a86555d05be9965200f95aa955877b73bc52def2c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/real--06--saved-restored.png",
+      "bytes": 429519,
+      "sha256": "de96f11e2a4b633b98073212d502d19ea4508fed694337a74916f115e526046c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/acceptance/results.json",
+      "bytes": 58235,
+      "sha256": "88dca891015f931bdb5b0c9f8089fb79460585982aaa200bb6e941b1e3d7fcc2"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/advanced-regression/native-restored.png",
+      "bytes": 393253,
+      "sha256": "0f033c76c1e0e4486d9bc81129c94a04ed6e3b8cca28ff66d84e2a09e52c488b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/advanced-regression/results.json",
+      "bytes": 301071,
+      "sha256": "788482a79e51cf4f7e45faa9c88410c13bb248c4b65837fa678f20fdaa413a9c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/advanced-regression/same-photo-manual-fallback.png",
+      "bytes": 336635,
+      "sha256": "3ca0ef9e906541202796959ee43733d9831e962a5c4e7379c97d6dc24b91535c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/credential-check.json",
+      "bytes": 357,
+      "sha256": "6a1fd4230eefb430cf487d265ba99102fdfd424c23eddf616d892c06e2f545ae"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/logs/advanced.log",
+      "bytes": 43,
+      "sha256": "dfe61cf386b3064c647f17e2a508366f086dd3492c96957d6f7016cc8eb96cb0"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/logs/all-unit.log",
+      "bytes": 25255,
+      "sha256": "3ac4325d4c6db3a5401ef970bd9692c43557dc3896867ec1871e6410ce8d36dd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/logs/canvas-browser.log",
+      "bytes": 35,
+      "sha256": "033ccdbf36a2bf06d5c36083fc771d116b2cbd8787dfe578a664588ffae767b1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/logs/manual.log",
+      "bytes": 49,
+      "sha256": "7c2a84eda3702865d387828f61ecabe26421a9a93d7c89a5263ea57bfe11b0ea"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/logs/native.log",
+      "bytes": 128,
+      "sha256": "431b87db8e1c526dac955116f22c2c8b3e9dfd5279db7ea3e05aad2ad3dd589e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/logs/recovery.log",
+      "bytes": 38,
+      "sha256": "c7cbd076941dd2854a4f9b2e55591f6f14b09ba95001253adce487b6bc71ad29"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/logs/server.log",
+      "bytes": 740,
+      "sha256": "3c21d88f2857bfcc800c22c90f40feaba7cddd035b8232e084bfdbd5ba1de6fd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/manual-regression/acceptance.json",
+      "bytes": 1526826,
+      "sha256": "17bc20d73ae825b5551ba1a799b6e385516caea215e34e3cbf59a351e742bf4d"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/manual-regression/evaluation.json",
+      "bytes": 6669,
+      "sha256": "ff1a64bcfd6d9dbe1a5d4506c4d990b17f5a952a60783472c9b1da7d0762d21a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/manual-regression/new-paper-01--presentation--final-restored.png",
+      "bytes": 50086,
+      "sha256": "b97164de6b70beca3b33547036b3fd4427a193de44cf963eafad040137805557"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/manual-regression/new-paper-01--presentation--manual-overlay.png",
+      "bytes": 2095565,
+      "sha256": "e2f5c02bbea9b189db4c905db87cca145f9a42a18374b0a071493fb189e02e9a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/manual-regression/new-paper-01--presentation--native-overlay.png",
+      "bytes": 2095641,
+      "sha256": "d152f5d879dc7ba1041a8a012393793eac29b3ef5bb69c81158cbb0d8a32e4c6"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/manual-regression/real--01-multiple-lines-graph-paper--branches--final-restored.png",
+      "bytes": 37968,
+      "sha256": "1d4af2f11a9653bc5f9d1a0c908e75f5bf4f316c49b9efec02f1d60b5fd07089"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/native-regression/results.json",
+      "bytes": 1762948,
+      "sha256": "639cffe7d9ba0aaa94aef19ee06c84b276754f133c23540aea21de0ffa1ddba4"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/native-regression/sharp-v--restored.png",
+      "bytes": 85803,
+      "sha256": "6c2f42caae5755fae88ec08f95c88f363f0abd794f5dc94d15210860bf5f6d8b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/native-regression/two-branches--restored.png",
+      "bytes": 84266,
+      "sha256": "2535def41fc7d8e3c1b13901e4abadb92869f94ba56202a27b10acf1500510c7"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/protected-files.json",
+      "bytes": 533,
+      "sha256": "6a28d80f5fa85d9aea8b9aa5d7f39717cc5b2b0d5273f0bec4521710d46b968c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/recovery/image-only-submission.png",
+      "bytes": 439940,
+      "sha256": "9d1f64227bda88cb4f638ba2c4afe0e02e3e66a806d81232f0996ff03f18d4dd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/recovery/mobile-canvas-reference.png",
+      "bytes": 131471,
+      "sha256": "413f764034090a1de917b238d5f54caf2e9a33ad615e65178f8936d8327e5e78"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/recovery/results.json",
+      "bytes": 1969,
+      "sha256": "acfa0c6962a4965ea2625d39ebe5f8103afe7f60450b1efe3071127b26cbcf4b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/workflow-captures.json",
+      "bytes": 979,
+      "sha256": "4703428bda3f0e635797b1d979e02c583228c351929c56ced2e8259310cdc997"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/results/workflow.gif",
+      "bytes": 1185614,
+      "sha256": "845fa2c6c3fca3a82a917dbb9f27efddf7c0cda320cfcf41c4c859f5a6258051"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/run-manual-regression.cjs",
+      "bytes": 2864,
+      "sha256": "d7bb4cbe187c0fbe6632ea38a7087fb47ab8b014e3833f3e3c14d7e4b29a9207"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4g-4/verification.json",
+      "bytes": 1417,
+      "sha256": "73699129d7907161eaea40c442c7a8ffa195fe9de472943c52edb0a29da59eb8"
+    },
+    {
+      "path": "elements/pl-sketch/info.json",
+      "bytes": 627,
+      "sha256": "120058666e6a94139ed770363cd4d994f7221b753137138b4b8c77ad46fae120"
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.css",
+      "bytes": 16709,
+      "sha256": "715413a66416d97df9584ca8427a24abe29189f9cd56faf2cb223d5089d7585a"
+    },
+    {
+      "path": "elements/pl-sketch/pl-sketch.js",
+      "bytes": 10799,
+      "sha256": "dbc1869ea3a56dba209382088840d3fc0ef4cedbc848be48cb494b73ad9571ea"
+    },
+    {
+      "path": "elements/pl-sketch/star-automatic.js",
+      "bytes": 38679,
+      "sha256": "887916154b682fc5ee7b35189ff2f385d4bd08e03911b12941b8be0793cd4543"
+    },
+    {
+      "path": "elements/pl-sketch/star-canvas-reference.js",
+      "bytes": 14888,
+      "sha256": "283b268423ed659a5d2f99775babbd261aac791c73fc5dd2803599037b0ec321"
+    },
+    {
+      "path": "questions/star-automatic-photo-test/question.html",
+      "bytes": 1229,
+      "sha256": "bb015b1a9ee2dcfdf12b40043a9b7f934bb81379a9877ff1de30fba00bfdc2ec"
+    },
+    {
+      "path": "tests/star-canvas-reference-browser.cjs",
+      "bytes": 14318,
+      "sha256": "c32b2126feba593046d7398c19aa7011afcf29219f3af6bbe74d4436b97c4179"
+    },
+    {
+      "path": "tests/star-canvas-reference-recovery.cjs",
+      "bytes": 11049,
+      "sha256": "e5cc243d36f6ef22e1ba314b9ac1830cdb2c233f6a60456b1e01059c7518d793"
+    },
+    {
+      "path": "tests/star-canvas-reference.test.cjs",
+      "bytes": 2534,
+      "sha256": "4c8a53a1e4f45dbe53efb07e95f17a957760b0d001085598cda9a7daf58587bb"
+    },
+    {
+      "path": "tests/star-cv-assisted-browser.cjs",
+      "bytes": 31398,
+      "sha256": "e3dcc7268b97bf43d6f0d80ced0f2fb41a5b8411e93ecfa454eb80010bc3d45e"
+    },
+    {
+      "path": "tests/star-native-browser.cjs",
+      "bytes": 25606,
+      "sha256": "929c1d3a1a4c3c7c3185dff7258ff9b23a0a35bd06c94f0892f9750857b45904"
+    }
+  ]
+}

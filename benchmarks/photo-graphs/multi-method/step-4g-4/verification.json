@@ -1,0 +1,52 @@
+{
+  "step": "4G-4",
+  "starting_commit": "f215d450c335f7b996caebba073e48716ff5609b",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "assessment": "PASS: local Chrome canvas reference; CONDITIONAL PASS: presentation",
+  "node_tests_passed": 127,
+  "server_tests_passed": 5,
+  "browser_assertions": {
+    "acceptance": 69,
+    "recovery": 21,
+    "native-regression": 165,
+    "advanced-regression": 139,
+    "manual-regression": 84
+  },
+  "browser_assertions_total": 478,
+  "original_jpeg_tested": true,
+  "original_jpeg_copied_into_git": false,
+  "photo_visible_cases": 3,
+  "cv_overlay_visible_cases": 2,
+  "automatic_native_imports_from_failed_photo_cases": 0,
+  "manually_drawn_native_saved_and_restored_cases": 3,
+  "image_only_feedback": "Invalid \u2014 invalid, not gradable",
+  "geometry_calibration_claimed_for_reference_fit": false,
+  "inference_requests": 0,
+  "external_photo_uploads": 0,
+  "frozen_backup_modified": false,
+  "browser_path": "Playwright CLI / local Chrome; Browser plugin not available",
+  "tested_viewports": [
+    [
+      1440,
+      1100
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      1280,
+      720
+    ]
+  ],
+  "actual_projector_checked": false,
+  "phone_camera_checked": false,
+  "other_browsers_checked_this_step": false,
+  "host_node": "v20.19.6",
+  "container_node": "v24.22.1",
+  "container": "star-automatic-cv-baseline-arm64"
+}
