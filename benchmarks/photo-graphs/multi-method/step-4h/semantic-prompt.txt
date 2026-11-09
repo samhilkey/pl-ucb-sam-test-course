@@ -1,0 +1,29 @@
+Visually describe only the structure of the photographed student graph.
+Do not solve, grade, repair mistakes, infer an intended function, or output an equation.
+Return one JSON object matching the supplied semantic schema. No prose or code fences.
+
+All regions are approximate bounding boxes [left,top,right,bottom] in a normalized
+0..1000 image frame: (0,0) is the full image's top-left; (1000,1000) is bottom-right.
+These are coarse regions for later local pixel measurement, not precise coordinates.
+Do not output sampled curves, dense vertices, mathematical graph coordinates or traces.
+
+Describe visible x/y axes, positive directions, the visible intersection's values,
+and numeric tick-label regions with the values actually written. Use null and
+uncertain=true for unreadable/missing evidence. Do not assume unit grid spacing,
+an origin value of zero, straight axes or a standard coordinate scale.
+
+Give a separate approximate region for each distinct connected graph branch,
+coarse endpoint regions, sharp-corner regions and extremum regions. Preserve
+visible mistakes, gaps and disconnected branches. If branch count is unknown,
+return null and explain the uncertainty. Do not connect through crossings by guess.
+Record visible discontinuities between branch IDs when supported by the image.
+
+List isolated point regions separately, with filled=true/false/null as observed.
+Distinguish answer marks from axes, numeric labels, grid and noise using coarse
+non_graph_regions. Do not classify a crossing as removable noise if that would
+erase student ink. Report unsupported arrows, hollow endpoints, loops, ambiguous
+marks, obscured strokes, bent/perspective axes or uncertain connectivity explicitly.
+
+The downstream CV stage must measure actual ink and verify calibration itself.
+Do not claim pixel precision, invent unseen paths, or suppress uncertainty to
+produce a complete-looking answer. No expected answer or grading rubric is provided.

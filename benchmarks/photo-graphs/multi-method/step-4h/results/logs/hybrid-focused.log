@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: controlled measured centerlines become explicitly reviewed hybrid native data, never automatic
+ok 1 - controlled measured centerlines become explicitly reviewed hybrid native data, never automatic
+  ---
+  duration_ms: 429.4035
+  ...
+# Subtest: real photo remains blocked with coarse human semantics; measured dot does not cure missing calibration/topology
+ok 2 - real photo remains blocked with coarse human semantics; measured dot does not cure missing calibration/topology
+  ---
+  duration_ms: 313.482625
+  ...
+# Subtest: uncertain, extra, dense-curve or out-of-bounds semantic fields fail closed
+ok 3 - uncertain, extra, dense-curve or out-of-bounds semantic fields fail closed
+  ---
+  duration_ms: 97.549125
+  ...
+# Subtest: semantics cannot invent a branch, filled dot, endpoint, corner, numeric scale or positive direction
+ok 4 - semantics cannot invent a branch, filled dot, endpoint, corner, numeric scale or positive direction
+  ---
+  duration_ms: 102.964167
+  ...
+# Subtest: no model transport, fixture substitution, revision relabeling or unconfirmed import
+ok 5 - no model transport, fixture substitution, revision relabeling or unconfirmed import
+  ---
+  duration_ms: 74.591209
+  ...
+# Subtest: hybrid native import requires both opt-ins, exact reviewed provenance and the existing stale/one-use guards
+ok 6 - hybrid native import requires both opt-ins, exact reviewed provenance and the existing stale/one-use guards
+  ---
+  duration_ms: 77.527708
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1492.360083

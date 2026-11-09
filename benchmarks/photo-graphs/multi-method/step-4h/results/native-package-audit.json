@@ -1,0 +1,16 @@
+{
+  "installed_package": "@prairielearn/sketchresponse",
+  "version": "0.2.1",
+  "source": "Installed source maps in local PrairieLearn container; actual runtime formats in browser/results.json",
+  "inspected_source_sha256": {
+    "freeform.js": "77c184c45745f9b36058c06199d5d7b79385a87855e3db9bf2b350d4b09886cd",
+    "line-segment.js": "06060a9e4ed92fe1fe9413132d0909f0f37fd6f7eeaf588a51dcf75e448e4f48",
+    "vertical-line.js": "4abe7ebb1c232e3333133da276f819d5d5d55377c931ec3d4a85c4f4d0c17c67",
+    "spline.js": "97d8c0881d11fa372c623cf6a6fe905098d91a11fc7f647e71665ad8262b9ae2",
+    "horizontal-line.js": "8160c7cd8d30373d7eb63ec39d3bda78a8113d374cdbd22350190f3665f205b7",
+    "fitcurve.js": "95e3e8a7080b8a752c6798584e6f44facb311d6b001112fdc01993dbcf1c5777",
+    "point.js": "cf8933732f78d1a739ee99034fa8c959ff664b3b41edb13ac40632068475c512",
+    "polyline.js": "9178720ecac903edcb59522d5abf32e69601af5d011d162ae102bd55d865f978"
+  },
+  "newly_enabled_question_tools": []
+}

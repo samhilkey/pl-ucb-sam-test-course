@@ -1,0 +1,43 @@
+{
+  "step": "4H offline checkpoint",
+  "external_transmission_authorized": false,
+  "external_transmissions": 0,
+  "input_cases": [
+    {
+      "id": "matching-answer-controlled",
+      "image": "/Users/alaiasun/GitHub/pl-ucb-sam-test-course/benchmarks/photo-graphs/multi-method/step-4h/inputs/matching-answer-controlled.png",
+      "source_kind": "controlled_raster",
+      "sha256": "bc0b66f72eac73ba1c08196439c1a8857d40ea2d70a30a12e66fce1b3467bd3f",
+      "semantic_source_kind": "human_authored_development_fixture",
+      "local_use": "Generated controlled input",
+      "no_reference_geometry_passed_to_fusion": true
+    },
+    {
+      "id": "sharp-v",
+      "image": "/Users/alaiasun/GitHub/pl-ucb-sam-test-course/benchmarks/photo-graphs/automatic-cv/experiment-01/inputs/sharp-v.png",
+      "source_kind": "controlled_raster",
+      "sha256": "0043cb8801da761af52373cac0aa8bd4d5f7322a1e4524ca54e5afe333addb85",
+      "semantic_source_kind": "human_authored_development_fixture",
+      "local_use": "Generated controlled input",
+      "no_reference_geometry_passed_to_fusion": true
+    },
+    {
+      "id": "two-branches-dot-controlled",
+      "image": "/Users/alaiasun/GitHub/pl-ucb-sam-test-course/benchmarks/photo-graphs/multi-method/step-4h/inputs/two-branches-dot-controlled.png",
+      "source_kind": "controlled_raster",
+      "sha256": "c020a801cd80ac917acf4de63a109993e49c0d8d79be853a2cd9bb4c6774f58d",
+      "semantic_source_kind": "human_authored_development_fixture",
+      "local_use": "Generated controlled input",
+      "no_reference_geometry_passed_to_fusion": true
+    },
+    {
+      "id": "IMG_1670",
+      "image": "/Users/alaiasun/GitHub/pl-ucb-sam-test-course/benchmarks/photo-graphs/multi-method/step-4g-1/results/IMG_1670--source.png",
+      "source_kind": "real_photo",
+      "sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+      "semantic_source_kind": "human_authored_development_fixture",
+      "local_use": "User-owned supplied photograph; reused locally, not held out",
+      "no_reference_geometry_passed_to_fusion": true
+    }
+  ]
+}

@@ -48,8 +48,13 @@
     const cvAssisted = options.cvAssisted === true && config.assistedPhotoGeometry === true && geometry.status === 'needs_review' &&
       geometry.provenance?.method === 'cv_assisted' && ['x', 'y'].every(axis => geometry.calibration.axes[axis].source === 'student_corrected') &&
       !geometry.warnings.length && !geometry.assistance.length && !geometry.uncertainty.regions.length && !geometry.topology.junctions.length && !!CVAssisted.validate(geometry)
-    if ((!assisted && !cvAssisted && geometry.status !== 'automatic') || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
-    if (geometry.points?.length && !cvAssisted) throw new Error('Isolated dots require a reviewed CV-assisted proposal; they cannot be silently dropped.')
+    const Hybrid = options.hybrid === true && (typeof module !== 'undefined' && module.exports ? require('./star-hybrid.js') : root.StarHybrid)
+    const hybrid = options.hybrid === true && config.experimentalHybridGeometry === true && config.assistedPhotoGeometry === true && geometry.status === 'needs_review' &&
+      geometry.provenance?.method === 'hybrid_development' && !geometry.warnings.length && !geometry.assistance.length &&
+      !geometry.uncertainty.regions.length && !geometry.topology.junctions.length && !!Hybrid?.validate(geometry)
+    if (geometry.provenance?.method === 'hybrid_development' && !hybrid) throw new Error('Offline hybrid geometry requires its experimental gate and reviewed provenance; it is not automatic recognition.')
+    if ((!assisted && !cvAssisted && !hybrid && geometry.status !== 'automatic') || geometry.calibration.status !== 'calibrated') throw new Error('Recognition needs correction before native import. Pixel geometry has been retained.')
+    if (geometry.points?.length && !cvAssisted && !hybrid) throw new Error('Isolated dots require a reviewed CV-assisted proposal; they cannot be silently dropped.')
     const tool = receivingTool(config, toolId)
     if (!state || !state.data || Array.isArray(state.data) || !Array.isArray(state.data[tool.id])) throw new Error('Invalid existing native tool state.')
     const drawings = geometry.strokes.map(s => {
@@ -72,7 +77,7 @@
       return [Math.min(...ps.map(p => p.x)), Math.max(...ps.map(p => p.x))]
     }).sort((a, b) => a[0] - b[0])
     for (let i = 0; i < ranges.length; i++) for (let j = i + 1; j < ranges.length; j++) {
-      if (!assisted && !cvAssisted && Math.min(ranges[i][1], ranges[j][1]) - Math.max(ranges[i][0], ranges[j][0]) > 5) throw new Error('Graphs overlap in x. Move or delete the conflicting native drawing, or correct the proposal, before importing.')
+      if (!assisted && !cvAssisted && !hybrid && Math.min(ranges[i][1], ranges[j][1]) - Math.max(ranges[i][0], ranges[j][0]) > 5) throw new Error('Graphs overlap in x. Move or delete the conflicting native drawing, or correct the proposal, before importing.')
     }
     let pointToolId = null; const points = []
     if (geometry.points?.length) {

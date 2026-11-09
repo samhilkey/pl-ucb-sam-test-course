@@ -1,0 +1,2670 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 1688,
+    "height": 1473,
+    "processing": {
+      "width": 900,
+      "height": 785,
+      "source_to_processing": [
+        0.533175355450237,
+        0,
+        0,
+        0.5329260013577732,
+        -0.2334123222748815,
+        -0.23353699932111338
+      ]
+    }
+  },
+  "coordinate_frame": {
+    "status": "uncertain",
+    "origin_pixel": null,
+    "axes": {
+      "x": {
+        "status": "uncertain",
+        "candidates": [
+          {
+            "start": [
+              0.4377777777777777,
+              512.7044585987261
+            ],
+            "end": [
+              1686.562222222222,
+              512.7044585987261
+            ],
+            "support": 0.6222222222222222,
+            "width_pixel": 1.8764331210191083
+          },
+          {
+            "start": [
+              0.4377777777777777,
+              782.8913382411855
+            ],
+            "end": [
+              1686.562222222222,
+              782.8913382411855
+            ],
+            "support": 0.6522222222222223,
+            "width_pixel": 5.629299363057325
+          }
+        ]
+      },
+      "y": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              1500.9040246698312,
+              0.43821656050955415
+            ],
+            "end": [
+              1500.9040246698312,
+              1471.5617834394905
+            ],
+            "support": 0.6331210191082802,
+            "width_pixel": 13.12888888888889
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          797.3739394411931
+        ]
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": [
+          105.51847133757963,
+          463.68666028344313,
+          1133.4824463666641
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "status": "uncertain",
+    "axes": {
+      "x": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      },
+      "y": {
+        "status": "unknown",
+        "source": "unknown",
+        "labels": []
+      }
+    },
+    "origin_graph": null,
+    "x_unit_vector_pixel": null,
+    "y_unit_vector_pixel": null
+  },
+  "strokes": [
+    {
+      "id": "stroke-1",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            739.4066666666666,
+            139.29426751592356
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            737.531111111111,
+            156.18216560509555
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-2",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            737.531111111111,
+            156.18216560509555
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            720.651111111111,
+            167.4407643312102
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            705.6466666666666,
+            195.58726114649681
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-3",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            737.531111111111,
+            156.18216560509555
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            745.0333333333333,
+            165.56433121019109
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-4",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            745.0333333333333,
+            165.56433121019109
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            760.0377777777778,
+            165.56433121019109
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            767.54,
+            171.1936305732484
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-5",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            745.0333333333333,
+            165.56433121019109
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            745.0333333333333,
+            304.4203821656051
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-6",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            745.0333333333333,
+            304.4203821656051
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            767.54,
+            298.7910828025478
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-7",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            745.0333333333333,
+            304.4203821656051
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            745.0333333333333,
+            448.90573248407645
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            750.66,
+            458.28789808917196
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-8",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            750.66,
+            458.28789808917196
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            778.7933333333333,
+            452.6585987261147
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-9",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            750.66,
+            458.28789808917196
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            746.9088888888889,
+            463.9171974522293
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            748.7844444444444,
+            486.4343949044586
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            769.4155555555556,
+            587.7617834394905
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            771.2911111111111,
+            627.1668789808917
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            778.7933333333333,
+            634.6726114649682
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-10",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            778.7933333333333,
+            634.6726114649682
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            816.3044444444445,
+            623.4140127388536
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            840.6866666666666,
+            606.5261146496815
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            851.9399999999999,
+            602.7732484076433
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            883.8244444444445,
+            576.5031847133758
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            928.8377777777778,
+            525.8394904458598
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            968.2244444444444,
+            448.90573248407645
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            983.2288888888888,
+            398.2420382165605
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            996.3577777777778,
+            332.5668789808917
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1003.86,
+            319.43184713375797
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1011.3622222222222,
+            321.30828025477706
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1018.8644444444444,
+            330.6904458598726
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1075.131111111111,
+            375.72484076433125
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1084.5088888888888,
+            379.4777070063694
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1135.148888888889,
+            422.6356687898089
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1174.5355555555554,
+            445.1528662420382
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1183.9133333333334,
+            454.5350318471338
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1210.171111111111,
+            465.79363057324844
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1277.691111111111,
+            514.5808917197452
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1307.7,
+            523.9630573248407
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1333.9577777777777,
+            544.603821656051
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1393.9755555555555,
+            576.5031847133758
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1452.1177777777777,
+            619.6611464968153
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1470.8733333333332,
+            625.2904458598726
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-11",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            778.7933333333333,
+            634.6726114649682
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            773.1666666666666,
+            651.5605095541401
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-12",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            773.1666666666666,
+            651.5605095541401
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            760.0377777777778,
+            653.4369426751592
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            739.4066666666666,
+            664.6955414012739
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            726.2777777777777,
+            664.6955414012739
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            707.5222222222222,
+            672.2012738853504
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            668.1355555555556,
+            674.0777070063695
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            641.8777777777777,
+            670.3248407643313
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            551.8511111111111,
+            638.4254777070064
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            486.20666666666665,
+            597.143949044586
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            411.1844444444444,
+            527.715923566879
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            386.8022222222222,
+            488.31082802547775
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            377.4244444444444,
+            460.1643312101911
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            371.79777777777775,
+            456.41146496815287
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            353.0422222222222,
+            469.5464968152866
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            244.26,
+            591.5146496815287
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            212.37555555555556,
+            615.9082802547771
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            191.74444444444444,
+            638.4254777070064
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            150.48222222222222,
+            668.4484076433121
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            109.22,
+            713.4828025477707
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-13",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            773.1666666666666,
+            651.5605095541401
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            778.7933333333333,
+            687.2127388535032
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            782.5444444444445,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-14",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            782.5444444444445,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            630.6244444444444,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-15",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            782.5444444444445,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            848.1888888888889,
+            784.7872611464968
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            870.6955555555555,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            921.3355555555555,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-16",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            782.5444444444445,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            793.7977777777778,
+            1015.5885350318472
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            797.5488888888889,
+            1038.1057324840765
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            797.5488888888889,
+            1094.3987261146497
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            818.18,
+            1240.76050955414
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-17",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            921.3355555555555,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            921.3355555555555,
+            758.5171974522293
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-18",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            921.3355555555555,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            945.7177777777778,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            973.8511111111111,
+            773.5286624203821
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1043.2466666666667,
+            781.0343949044586
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1075.131111111111,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-19",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            630.6244444444444,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            632.5,
+            758.5171974522293
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-20",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            630.6244444444444,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            581.86,
+            790.4165605095542
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            497.46,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            444.94444444444446,
+            792.2929936305733
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-21",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1075.131111111111,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1077.0066666666667,
+            762.2700636942675
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-22",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1075.131111111111,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1101.388888888889,
+            781.0343949044586
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1225.1755555555555,
+            773.5286624203821
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-23",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            444.94444444444446,
+            792.2929936305733
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            443.06888888888886,
+            762.2700636942675
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-24",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            444.94444444444446,
+            792.2929936305733
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            383.0511111111111,
+            799.7987261146498
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            349.2911111111111,
+            799.7987261146498
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            339.91333333333336,
+            811.0573248407644
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            321.15777777777777,
+            814.8101910828026
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            283.64666666666665,
+            811.0573248407644
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            264.8911111111111,
+            816.6866242038217
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-25",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1225.1755555555555,
+            773.5286624203821
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1223.3,
+            752.887898089172
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-26",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1225.1755555555555,
+            773.5286624203821
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1260.8111111111111,
+            773.5286624203821
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1305.8244444444445,
+            781.0343949044586
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1317.0777777777778,
+            777.2815286624204
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-27",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            264.8911111111111,
+            816.6866242038217
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            261.14,
+            781.0343949044586
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-28",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            264.8911111111111,
+            816.6866242038217
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            197.3711111111111,
+            818.5630573248408
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            169.23777777777778,
+            826.0687898089172
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-29",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1317.0777777777778,
+            777.2815286624204
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1317.0777777777778,
+            764.1464968152867
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1320.828888888889,
+            762.2700636942675
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1343.3355555555556,
+            766.0229299363058
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1343.3355555555556,
+            779.1579617834395
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1328.331111111111,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-30",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1317.0777777777778,
+            777.2815286624204
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1328.331111111111,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-31",
+      "component_id": "component-1",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1328.331111111111,
+            786.6636942675159
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1324.58,
+            796.0458598726115
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-32",
+      "component_id": "component-2",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            670.0111111111111,
+            263.13885350318475
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            664.3844444444444,
+            291.28535031847133
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            677.5133333333333,
+            302.543949044586
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            677.5133333333333,
+            313.80254777070064
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            662.5088888888889,
+            326.9375796178344
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            660.6333333333333,
+            332.5668789808917
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-33",
+      "component_id": "component-3",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            658.7577777777777,
+            443.2764331210191
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            677.5133333333333,
+            443.2764331210191
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            679.3888888888889,
+            462.0407643312102
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        }
+      ]
+    },
+    {
+      "id": "stroke-34",
+      "component_id": "component-3",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            679.3888888888889,
+            462.0407643312102
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            685.0155555555556,
+            462.0407643312102
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-35",
+      "component_id": "component-3",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            679.3888888888889,
+            462.0407643312102
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            664.3844444444444,
+            475.17579617834394
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-36",
+      "component_id": "component-4",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            709.3977777777777,
+            606.5261146496815
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            705.6466666666666,
+            632.796178343949
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-37",
+      "component_id": "component-5",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1236.4288888888889,
+            835.4509554140128
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            1242.0555555555554,
+            848.5859872611466
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1234.5533333333333,
+            867.3503184713376
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1242.0555555555554,
+            878.6089171974522
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1242.0555555555554,
+            893.6203821656051
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1232.6777777777777,
+            908.631847133758
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1223.3,
+            916.1375796178344
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-38",
+      "component_id": "component-6",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            662.5088888888889,
+            852.3388535031847
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            670.0111111111111,
+            906.7554140127389
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-39",
+      "component_id": "component-7",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            1082.6333333333332,
+            852.3388535031847
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            1093.8866666666665,
+            861.7210191082803
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1090.1355555555556,
+            886.1146496815287
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            1120.1444444444444,
+            878.6089171974522
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-40",
+      "component_id": "component-8",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            446.82,
+            871.1031847133759
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            459.94888888888886,
+            876.7324840764331
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            461.82444444444445,
+            891.743949044586
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            446.82,
+            914.2611464968153
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            443.06888888888886,
+            929.2726114649681
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            450.5711111111111,
+            931.1490445859873
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            474.9533333333333,
+            923.6433121019109
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-41",
+      "component_id": "component-9",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            940.0911111111111,
+            876.7324840764331
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            945.7177777777778,
+            914.2611464968153
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-42",
+      "component_id": "component-10",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            270.5177777777778,
+            878.6089171974522
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            272.3933333333333,
+            895.4968152866243
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            268.64222222222224,
+            899.2496815286624
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            266.76666666666665,
+            912.3847133757962
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            276.14444444444445,
+            919.8904458598727
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            285.52222222222224,
+            919.8904458598727
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            287.3977777777778,
+            925.5197452229299
+          ],
+          "graph": null,
+          "corner": true,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            281.7711111111111,
+            936.7783439490446
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": false
+        },
+        {
+          "pixel": [
+            263.0155555555555,
+            953.6662420382166
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-43",
+      "component_id": "component-11",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            219.87777777777777,
+            901.1261146496815
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            202.99777777777777,
+            906.7554140127389
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    },
+    {
+      "id": "stroke-44",
+      "component_id": "component-12",
+      "kind": "polyline",
+      "closed": false,
+      "simplification_tolerance_pixel": 2.3455414012738856,
+      "vertices": [
+        {
+          "pixel": [
+            820.0555555555555,
+            1263.2777070063694
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        },
+        {
+          "pixel": [
+            823.8066666666666,
+            1323.323566878981
+          ],
+          "graph": null,
+          "corner": false,
+          "endpoint": true
+        }
+      ]
+    }
+  ],
+  "topology": {
+    "stroke_count": 44,
+    "component_count": 12,
+    "components": [
+      {
+        "id": "component-1",
+        "stroke_ids": [
+          "stroke-1",
+          "stroke-2",
+          "stroke-3",
+          "stroke-4",
+          "stroke-5",
+          "stroke-6",
+          "stroke-7",
+          "stroke-8",
+          "stroke-9",
+          "stroke-10",
+          "stroke-11",
+          "stroke-12",
+          "stroke-13",
+          "stroke-14",
+          "stroke-15",
+          "stroke-16",
+          "stroke-17",
+          "stroke-18",
+          "stroke-19",
+          "stroke-20",
+          "stroke-21",
+          "stroke-22",
+          "stroke-23",
+          "stroke-24",
+          "stroke-25",
+          "stroke-26",
+          "stroke-27",
+          "stroke-28",
+          "stroke-29",
+          "stroke-30",
+          "stroke-31"
+        ]
+      },
+      {
+        "id": "component-2",
+        "stroke_ids": [
+          "stroke-32"
+        ]
+      },
+      {
+        "id": "component-3",
+        "stroke_ids": [
+          "stroke-33",
+          "stroke-34",
+          "stroke-35"
+        ]
+      },
+      {
+        "id": "component-4",
+        "stroke_ids": [
+          "stroke-36"
+        ]
+      },
+      {
+        "id": "component-5",
+        "stroke_ids": [
+          "stroke-37"
+        ]
+      },
+      {
+        "id": "component-6",
+        "stroke_ids": [
+          "stroke-38"
+        ]
+      },
+      {
+        "id": "component-7",
+        "stroke_ids": [
+          "stroke-39"
+        ]
+      },
+      {
+        "id": "component-8",
+        "stroke_ids": [
+          "stroke-40"
+        ]
+      },
+      {
+        "id": "component-9",
+        "stroke_ids": [
+          "stroke-41"
+        ]
+      },
+      {
+        "id": "component-10",
+        "stroke_ids": [
+          "stroke-42"
+        ]
+      },
+      {
+        "id": "component-11",
+        "stroke_ids": [
+          "stroke-43"
+        ]
+      },
+      {
+        "id": "component-12",
+        "stroke_ids": [
+          "stroke-44"
+        ]
+      }
+    ],
+    "junctions": [
+      {
+        "pixel": [
+          737.531111111111,
+          156.18216560509555
+        ],
+        "stroke_ids": [
+          "stroke-1",
+          "stroke-2",
+          "stroke-3"
+        ]
+      },
+      {
+        "pixel": [
+          745.0333333333333,
+          165.56433121019109
+        ],
+        "stroke_ids": [
+          "stroke-3",
+          "stroke-4",
+          "stroke-5"
+        ]
+      },
+      {
+        "pixel": [
+          745.0333333333333,
+          304.4203821656051
+        ],
+        "stroke_ids": [
+          "stroke-5",
+          "stroke-6",
+          "stroke-7"
+        ]
+      },
+      {
+        "pixel": [
+          750.66,
+          458.28789808917196
+        ],
+        "stroke_ids": [
+          "stroke-7",
+          "stroke-8",
+          "stroke-9"
+        ]
+      },
+      {
+        "pixel": [
+          778.7933333333333,
+          634.6726114649682
+        ],
+        "stroke_ids": [
+          "stroke-9",
+          "stroke-10",
+          "stroke-11"
+        ]
+      },
+      {
+        "pixel": [
+          773.1666666666666,
+          651.5605095541401
+        ],
+        "stroke_ids": [
+          "stroke-11",
+          "stroke-12",
+          "stroke-13"
+        ]
+      },
+      {
+        "pixel": [
+          782.5444444444445,
+          786.6636942675159
+        ],
+        "stroke_ids": [
+          "stroke-13",
+          "stroke-14",
+          "stroke-15",
+          "stroke-16"
+        ]
+      },
+      {
+        "pixel": [
+          921.3355555555555,
+          779.1579617834395
+        ],
+        "stroke_ids": [
+          "stroke-15",
+          "stroke-17",
+          "stroke-18"
+        ]
+      },
+      {
+        "pixel": [
+          630.6244444444444,
+          786.6636942675159
+        ],
+        "stroke_ids": [
+          "stroke-14",
+          "stroke-19",
+          "stroke-20"
+        ]
+      },
+      {
+        "pixel": [
+          1075.131111111111,
+          779.1579617834395
+        ],
+        "stroke_ids": [
+          "stroke-18",
+          "stroke-21",
+          "stroke-22"
+        ]
+      },
+      {
+        "pixel": [
+          444.94444444444446,
+          792.2929936305733
+        ],
+        "stroke_ids": [
+          "stroke-20",
+          "stroke-23",
+          "stroke-24"
+        ]
+      },
+      {
+        "pixel": [
+          1225.1755555555555,
+          773.5286624203821
+        ],
+        "stroke_ids": [
+          "stroke-22",
+          "stroke-25",
+          "stroke-26"
+        ]
+      },
+      {
+        "pixel": [
+          264.8911111111111,
+          816.6866242038217
+        ],
+        "stroke_ids": [
+          "stroke-24",
+          "stroke-27",
+          "stroke-28"
+        ]
+      },
+      {
+        "pixel": [
+          1317.0777777777778,
+          777.2815286624204
+        ],
+        "stroke_ids": [
+          "stroke-26",
+          "stroke-29",
+          "stroke-30"
+        ]
+      },
+      {
+        "pixel": [
+          1328.331111111111,
+          786.6636942675159
+        ],
+        "stroke_ids": [
+          "stroke-29",
+          "stroke-30",
+          "stroke-31"
+        ]
+      },
+      {
+        "pixel": [
+          679.3888888888889,
+          462.0407643312102
+        ],
+        "stroke_ids": [
+          "stroke-33",
+          "stroke-34",
+          "stroke-35"
+        ]
+      }
+    ]
+  },
+  "status": "needs_review",
+  "warnings": [
+    {
+      "code": "ambiguous_axes",
+      "message": "A unique upright dark axis pair was not detected. Confirm the coordinate frame."
+    },
+    {
+      "code": "uncertain_grid",
+      "message": "Regular graph-paper spacing was not recovered on both axes."
+    },
+    {
+      "code": "unknown_x_scale",
+      "message": "No consistent numeric scale evidence was found for the x axis."
+    },
+    {
+      "code": "unknown_y_scale",
+      "message": "No consistent numeric scale evidence was found for the y axis."
+    },
+    {
+      "code": "ink_junction",
+      "message": "Touching or branching ink has multiple possible paths; no branch pairing was guessed."
+    }
+  ],
+  "assistance": [
+    {
+      "target": "axes",
+      "reason": "ambiguous_axes"
+    },
+    {
+      "target": "grid",
+      "reason": "uncertain_grid"
+    },
+    {
+      "target": "x_scale",
+      "reason": "unknown_x_scale"
+    },
+    {
+      "target": "y_scale",
+      "reason": "unknown_y_scale"
+    },
+    {
+      "target": "strokes",
+      "reason": "ink_junction"
+    }
+  ],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [
+      {
+        "pixel": [
+          737.531111111111,
+          156.18216560509555
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          745.0333333333333,
+          165.56433121019109
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          745.0333333333333,
+          304.4203821656051
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          750.66,
+          458.28789808917196
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          778.7933333333333,
+          634.6726114649682
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          773.1666666666666,
+          651.5605095541401
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          782.5444444444445,
+          786.6636942675159
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          921.3355555555555,
+          779.1579617834395
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          630.6244444444444,
+          786.6636942675159
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          1075.131111111111,
+          779.1579617834395
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          444.94444444444446,
+          792.2929936305733
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          1225.1755555555555,
+          773.5286624203821
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          264.8911111111111,
+          816.6866242038217
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          1317.0777777777778,
+          777.2815286624204
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          1328.331111111111,
+          786.6636942675159
+        ],
+        "reason": "ink_junction"
+      },
+      {
+        "pixel": [
+          679.3888888888889,
+          462.0407643312102
+        ],
+        "reason": "ink_junction"
+      }
+    ],
+    "rejected_small_components": [
+      {
+        "bounds_pixel": [
+          [
+            812.5533333333333,
+            285.656050955414
+          ],
+          [
+            835.06,
+            306.2968152866242
+          ]
+        ],
+        "pixels_processing": 103,
+        "centroid_pixel": [
+          822.6776914778857,
+          296.1495021952879
+        ]
+      },
+      {
+        "bounds_pixel": [
+          [
+            606.2422222222223,
+            871.1031847133759
+          ],
+          [
+            634.3755555555556,
+            882.3617834394905
+          ]
+        ],
+        "pixels_processing": 83,
+        "centroid_pixel": [
+          620.4105756358769,
+          876.189901005295
+        ]
+      },
+      {
+        "bounds_pixel": [
+          [
+            403.6822222222222,
+            891.743949044586
+          ],
+          [
+            428.06444444444446,
+            904.8789808917197
+          ]
+        ],
+        "pixels_processing": 67,
+        "centroid_pixel": [
+          415.1595024875622,
+          899.0816427417054
+        ]
+      },
+      {
+        "bounds_pixel": [
+          [
+            820.0555555555555,
+            1340.211464968153
+          ],
+          [
+            827.5577777777778,
+            1351.4700636942675
+          ]
+        ],
+        "pixels_processing": 23,
+        "centroid_pixel": [
+          823.8066666666666,
+          1345.8407643312103
+        ]
+      }
+    ],
+    "assumptions": [
+      "Upright, approximately straight-on graph paper.",
+      "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+      "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+    ]
+  }
+}

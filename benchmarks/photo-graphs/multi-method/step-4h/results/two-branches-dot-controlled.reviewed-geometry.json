@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "input_revision": 0,
+  "image": {
+    "width": 640,
+    "height": 480,
+    "processing": {
+      "width": 640,
+      "height": 480,
+      "source_to_processing": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "status": "needs_review",
+  "coordinate_frame": {
+    "status": "detected",
+    "origin_pixel": [
+      270,
+      300
+    ],
+    "axes": {
+      "x": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              270,
+              300
+            ],
+            "end": [
+              310,
+              300
+            ],
+            "support": 0
+          }
+        ]
+      },
+      "y": {
+        "status": "detected",
+        "candidates": [
+          {
+            "start": [
+              270,
+              300
+            ],
+            "end": [
+              270,
+              260
+            ],
+            "support": 0
+          }
+        ]
+      }
+    },
+    "grid": {
+      "x": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": []
+      },
+      "y": {
+        "status": "unknown",
+        "spacing_pixel": null,
+        "lines_pixel": []
+      }
+    }
+  },
+  "calibration": {
+    "status": "calibrated",
+    "origin_graph": [
+      0,
+      0
+    ],
+    "x_unit_vector_pixel": [
+      40,
+      0
+    ],
+    "y_unit_vector_pixel": [
+      0,
+      -40
+    ],
+    "axes": {
+      "x": {
+        "status": "known",
+        "source": "student_corrected",
+        "intersection_value": 0,
+        "labels": []
+      },
+      "y": {
+        "status": "known",
+        "source": "student_corrected",
+        "intersection_value": 0,
+        "labels": []
+      }
+    }
+  },
+  "strokes": [
+    {
+      "source_stroke_ids": [
+        "stroke-1"
+      ],
+      "vertices": [
+        {
+          "pixel": [
+            320,
+            74
+          ],
+          "corner": false,
+          "endpoint": true,
+          "graph": [
+            1.25,
+            5.65
+          ]
+        },
+        {
+          "pixel": [
+            338,
+            119
+          ],
+          "corner": false,
+          "endpoint": false,
+          "graph": [
+            1.7,
+            4.525
+          ]
+        },
+        {
+          "pixel": [
+            366,
+            155
+          ],
+          "corner": false,
+          "endpoint": false,
+          "graph": [
+            2.4,
+            3.625
+          ]
+        },
+        {
+          "pixel": [
+            403,
+            173
+          ],
+          "corner": false,
+          "endpoint": false,
+          "graph": [
+            3.325,
+            3.175
+          ]
+        },
+        {
+          "pixel": [
+            444,
+            185
+          ],
+          "corner": false,
+          "endpoint": false,
+          "graph": [
+            4.35,
+            2.875
+          ]
+        },
+        {
+          "pixel": [
+            500,
+            191
+          ],
+          "corner": false,
+          "endpoint": true,
+          "graph": [
+            5.75,
+            2.725
+          ]
+        }
+      ],
+      "simplification_tolerance_pixel": 1.25,
+      "id": "cv-assisted-1",
+      "component_id": "cv-assisted-1",
+      "kind": "polyline",
+      "closed": false
+    },
+    {
+      "source_stroke_ids": [
+        "stroke-2"
+      ],
+      "vertices": [
+        {
+          "pixel": [
+            107,
+            334
+          ],
+          "corner": false,
+          "endpoint": true,
+          "graph": [
+            -4.075,
+            -0.85
+          ]
+        },
+        {
+          "pixel": [
+            146,
+            344
+          ],
+          "corner": false,
+          "endpoint": false,
+          "graph": [
+            -3.1,
+            -1.1
+          ]
+        },
+        {
+          "pixel": [
+            180,
+            360
+          ],
+          "corner": false,
+          "endpoint": false,
+          "graph": [
+            -2.25,
+            -1.5
+          ]
+        },
+        {
+          "pixel": [
+            210,
+            391
+          ],
+          "corner": false,
+          "endpoint": false,
+          "graph": [
+            -1.5,
+            -2.275
+          ]
+        },
+        {
+          "pixel": [
+            226,
+            430
+          ],
+          "corner": false,
+          "endpoint": true,
+          "graph": [
+            -1.1,
+            -3.25
+          ]
+        }
+      ],
+      "simplification_tolerance_pixel": 1.25,
+      "id": "cv-assisted-2",
+      "component_id": "cv-assisted-2",
+      "kind": "polyline",
+      "closed": false
+    }
+  ],
+  "points": [
+    {
+      "id": "mark-1",
+      "kind": "point",
+      "pixel": [
+        520,
+        100
+      ],
+      "graph": [
+        6.25,
+        5
+      ]
+    }
+  ],
+  "topology": {
+    "stroke_count": 2,
+    "component_count": 2,
+    "components": [
+      {
+        "id": "cv-assisted-1",
+        "stroke_ids": [
+          "cv-assisted-1"
+        ]
+      },
+      {
+        "id": "cv-assisted-2",
+        "stroke_ids": [
+          "cv-assisted-2"
+        ]
+      }
+    ],
+    "junctions": []
+  },
+  "warnings": [],
+  "assistance": [],
+  "uncertainty": {
+    "confidence_kind": "heuristic_not_probability",
+    "regions": [],
+    "assumptions": [
+      "OFFLINE DEVELOPMENT PROOF: human-authored coarse semantic regions, not Gemini recognition.",
+      "Vertices/dots are measured CV pixels; no fitting, clipping, snapping or inferred joins.",
+      "Existing CV numeric calibration was explicitly confirmed; compatibility axis fields are student-confirmed."
+    ]
+  },
+  "provenance": {
+    "method": "hybrid_development",
+    "automatically_recognized": false,
+    "semantic_source_kind": "development_fixture",
+    "photo_sha256": "c020a801cd80ac917acf4de63a109993e49c0d8d79be853a2cd9bb4c6774f58d",
+    "calibration_basis": "existing_CV_numeric_image_evidence_explicitly_confirmed",
+    "source_geometry": {
+      "schema_version": 1,
+      "input_revision": 0,
+      "image": {
+        "width": 640,
+        "height": 480,
+        "processing": {
+          "width": 640,
+          "height": 480,
+          "source_to_processing": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "coordinate_frame": {
+        "status": "detected",
+        "origin_pixel": [
+          270,
+          300
+        ],
+        "axes": {
+          "x": {
+            "status": "detected",
+            "candidates": [
+              {
+                "start": [
+                  0,
+                  300
+                ],
+                "end": [
+                  639,
+                  300
+                ],
+                "support": 0.9109375,
+                "width_pixel": 3
+              }
+            ]
+          },
+          "y": {
+            "status": "detected",
+            "candidates": [
+              {
+                "start": [
+                  270,
+                  0
+                ],
+                "end": [
+                  270,
+                  479
+                ],
+                "support": 0.9229166666666667,
+                "width_pixel": 3
+              }
+            ]
+          }
+        },
+        "grid": {
+          "x": {
+            "status": "detected",
+            "spacing_pixel": 40,
+            "lines_pixel": [
+              30,
+              70,
+              110,
+              150,
+              190,
+              230,
+              310,
+              350,
+              390,
+              430,
+              470,
+              569.2209240658899
+            ]
+          },
+          "y": {
+            "status": "detected",
+            "spacing_pixel": 40,
+            "lines_pixel": [
+              20,
+              60,
+              100,
+              140,
+              180,
+              220,
+              260,
+              340,
+              380,
+              420,
+              460
+            ]
+          }
+        }
+      },
+      "calibration": {
+        "status": "calibrated",
+        "axes": {
+          "x": {
+            "status": "known",
+            "source": "photo_detected",
+            "labels": [
+              {
+                "value": 1,
+                "match_error": 0,
+                "bounds_pixel": [
+                  [
+                    307,
+                    312
+                  ],
+                  [
+                    312,
+                    325
+                  ]
+                ],
+                "anchor_pixel": [
+                  310,
+                  300
+                ],
+                "tick": 1
+              },
+              {
+                "value": 2,
+                "match_error": 0,
+                "bounds_pixel": [
+                  [
+                    345,
+                    312
+                  ],
+                  [
+                    354,
+                    325
+                  ]
+                ],
+                "anchor_pixel": [
+                  350,
+                  300
+                ],
+                "tick": 2
+              },
+              {
+                "value": 3,
+                "match_error": 0,
+                "bounds_pixel": [
+                  [
+                    385,
+                    312
+                  ],
+                  [
+                    394,
+                    325
+                  ]
+                ],
+                "anchor_pixel": [
+                  390,
+                  300
+                ],
+                "tick": 3
+              }
+            ],
+            "units_per_grid": 1,
+            "intersection_value": 0
+          },
+          "y": {
+            "status": "known",
+            "source": "photo_detected",
+            "labels": [
+              {
+                "value": 1,
+                "match_error": 0,
+                "bounds_pixel": [
+                  [
+                    247,
+                    253
+                  ],
+                  [
+                    252,
+                    266
+                  ]
+                ],
+                "anchor_pixel": [
+                  270,
+                  260
+                ],
+                "tick": 1
+              },
+              {
+                "value": 2,
+                "match_error": 0,
+                "bounds_pixel": [
+                  [
+                    245,
+                    213
+                  ],
+                  [
+                    254,
+                    226
+                  ]
+                ],
+                "anchor_pixel": [
+                  270,
+                  220
+                ],
+                "tick": 2
+              },
+              {
+                "value": 3,
+                "match_error": 0,
+                "bounds_pixel": [
+                  [
+                    245,
+                    173
+                  ],
+                  [
+                    254,
+                    186
+                  ]
+                ],
+                "anchor_pixel": [
+                  270,
+                  180
+                ],
+                "tick": 3
+              }
+            ],
+            "units_per_grid": 1,
+            "intersection_value": 0
+          }
+        },
+        "origin_graph": [
+          0,
+          0
+        ],
+        "x_unit_vector_pixel": [
+          40,
+          0
+        ],
+        "y_unit_vector_pixel": [
+          0,
+          -40
+        ]
+      },
+      "strokes": [
+        {
+          "id": "stroke-1",
+          "component_id": "component-1",
+          "kind": "polyline",
+          "closed": false,
+          "simplification_tolerance_pixel": 1.25,
+          "vertices": [
+            {
+              "pixel": [
+                320,
+                74
+              ],
+              "graph": [
+                1.25,
+                5.65
+              ],
+              "corner": false,
+              "endpoint": true
+            },
+            {
+              "pixel": [
+                338,
+                119
+              ],
+              "graph": [
+                1.7,
+                4.525
+              ],
+              "corner": false,
+              "endpoint": false
+            },
+            {
+              "pixel": [
+                366,
+                155
+              ],
+              "graph": [
+                2.4,
+                3.625
+              ],
+              "corner": false,
+              "endpoint": false
+            },
+            {
+              "pixel": [
+                403,
+                173
+              ],
+              "graph": [
+                3.325,
+                3.175
+              ],
+              "corner": false,
+              "endpoint": false
+            },
+            {
+              "pixel": [
+                444,
+                185
+              ],
+              "graph": [
+                4.35,
+                2.875
+              ],
+              "corner": false,
+              "endpoint": false
+            },
+            {
+              "pixel": [
+                500,
+                191
+              ],
+              "graph": [
+                5.75,
+                2.725
+              ],
+              "corner": false,
+              "endpoint": true
+            }
+          ]
+        },
+        {
+          "id": "stroke-2",
+          "component_id": "component-2",
+          "kind": "polyline",
+          "closed": false,
+          "simplification_tolerance_pixel": 1.25,
+          "vertices": [
+            {
+              "pixel": [
+                107,
+                334
+              ],
+              "graph": [
+                -4.075,
+                -0.85
+              ],
+              "corner": false,
+              "endpoint": true
+            },
+            {
+              "pixel": [
+                146,
+                344
+              ],
+              "graph": [
+                -3.1,
+                -1.1
+              ],
+              "corner": false,
+              "endpoint": false
+            },
+            {
+              "pixel": [
+                180,
+                360
+              ],
+              "graph": [
+                -2.25,
+                -1.5
+              ],
+              "corner": false,
+              "endpoint": false
+            },
+            {
+              "pixel": [
+                210,
+                391
+              ],
+              "graph": [
+                -1.5,
+                -2.275
+              ],
+              "corner": false,
+              "endpoint": false
+            },
+            {
+              "pixel": [
+                226,
+                430
+              ],
+              "graph": [
+                -1.1,
+                -3.25
+              ],
+              "corner": false,
+              "endpoint": true
+            }
+          ]
+        }
+      ],
+      "topology": {
+        "stroke_count": 2,
+        "component_count": 2,
+        "components": [
+          {
+            "id": "component-1",
+            "stroke_ids": [
+              "stroke-1"
+            ]
+          },
+          {
+            "id": "component-2",
+            "stroke_ids": [
+              "stroke-2"
+            ]
+          }
+        ],
+        "junctions": []
+      },
+      "status": "automatic",
+      "warnings": [],
+      "assistance": [],
+      "uncertainty": {
+        "confidence_kind": "heuristic_not_probability",
+        "regions": [],
+        "rejected_small_components": [
+          {
+            "bounds_pixel": [
+              [
+                516,
+                96
+              ],
+              [
+                524,
+                104
+              ]
+            ],
+            "pixels_processing": 41,
+            "centroid_pixel": [
+              520,
+              100
+            ]
+          },
+          {
+            "bounds_pixel": [
+              [
+                267,
+                297
+              ],
+              [
+                273,
+                303
+              ]
+            ],
+            "pixels_processing": 25,
+            "centroid_pixel": [
+              270,
+              300
+            ]
+          }
+        ],
+        "assumptions": [
+          "Upright, approximately straight-on graph paper.",
+          "Thick neutral marker or dark saturated marker distinguishable from thin/pale axes and grid.",
+          "Local OCR accepts only isolated positive single-digit bitmap-like labels; two consistent labels per axis are required."
+        ]
+      }
+    },
+    "semantic_envelope": {
+      "kind": "development_fixture",
+      "model": null,
+      "photo_sha256": "c020a801cd80ac917acf4de63a109993e49c0d8d79be853a2cd9bb4c6774f58d",
+      "width": 640,
+      "height": 480,
+      "semantics": {
+        "schema_version": 1,
+        "coordinate_system": "normalized_0_1000",
+        "branch_count": 2,
+        "origin": {
+          "region": [
+            406.25,
+            604.1666666666666,
+            437.5,
+            645.8333333333334
+          ],
+          "uncertain": false
+        },
+        "axes": {
+          "x": {
+            "region": [
+              46.875,
+              604.1666666666666,
+              953.125,
+              645.8333333333334
+            ],
+            "positive_direction": "right",
+            "intersection_value": 0,
+            "uncertain": false,
+            "ticks": [
+              {
+                "value": 1,
+                "uncertain": false,
+                "region": [
+                  468.75,
+                  643.75,
+                  500,
+                  687.5
+                ]
+              },
+              {
+                "value": 2,
+                "uncertain": false,
+                "region": [
+                  531.25,
+                  643.75,
+                  562.5,
+                  687.5
+                ]
+              },
+              {
+                "value": 3,
+                "uncertain": false,
+                "region": [
+                  593.75,
+                  643.75,
+                  625,
+                  687.5
+                ]
+              }
+            ]
+          },
+          "y": {
+            "region": [
+              406.25,
+              41.666666666666664,
+              437.5,
+              958.3333333333334
+            ],
+            "positive_direction": "up",
+            "intersection_value": 0,
+            "uncertain": false,
+            "ticks": [
+              {
+                "value": 1,
+                "uncertain": false,
+                "region": [
+                  371.875,
+                  520.8333333333334,
+                  409.375,
+                  562.5
+                ]
+              },
+              {
+                "value": 2,
+                "uncertain": false,
+                "region": [
+                  371.875,
+                  437.5,
+                  409.375,
+                  479.1666666666667
+                ]
+              },
+              {
+                "value": 3,
+                "uncertain": false,
+                "region": [
+                  371.875,
+                  354.1666666666667,
+                  409.375,
+                  395.8333333333333
+                ]
+              }
+            ]
+          }
+        },
+        "branches": [
+          {
+            "id": "branch-1",
+            "region": [
+              140.625,
+              666.6666666666666,
+              382.8125,
+              937.5
+            ],
+            "endpoint_regions": [
+              [
+                140.625,
+                666.6666666666666,
+                195.3125,
+                729.1666666666666
+              ],
+              [
+                328.125,
+                864.5833333333334,
+                382.8125,
+                937.5
+              ]
+            ],
+            "corner_regions": [],
+            "extremum_regions": [],
+            "uncertain": false
+          },
+          {
+            "id": "branch-2",
+            "region": [
+              476.5625,
+              114.58333333333333,
+              804.6875,
+              437.5
+            ],
+            "endpoint_regions": [
+              [
+                476.5625,
+                114.58333333333333,
+                523.4375,
+                187.5
+              ],
+              [
+                757.8125,
+                364.5833333333333,
+                804.6875,
+                437.5
+              ]
+            ],
+            "corner_regions": [],
+            "extremum_regions": [],
+            "uncertain": false
+          }
+        ],
+        "isolated_points": [
+          {
+            "id": "dot-1",
+            "region": [
+              789.0625,
+              177.08333333333334,
+              835.9375,
+              239.58333333333334
+            ],
+            "filled": true,
+            "uncertain": false
+          }
+        ],
+        "non_graph_regions": [
+          {
+            "kind": "axis",
+            "region": [
+              406.25,
+              20.833333333333332,
+              437.5,
+              979.1666666666666
+            ]
+          },
+          {
+            "kind": "axis",
+            "region": [
+              31.25,
+              604.1666666666666,
+              968.75,
+              645.8333333333334
+            ]
+          },
+          {
+            "kind": "label",
+            "region": [
+              367.1875,
+              104.16666666666667,
+              410.9375,
+              593.75
+            ]
+          },
+          {
+            "kind": "label",
+            "region": [
+              453.125,
+              643.75,
+              632.8125,
+              697.9166666666666
+            ]
+          }
+        ],
+        "discontinuities": [],
+        "unsupported": [],
+        "uncertainty": []
+      }
+    },
+    "review": {
+      "confirmed": true
+    }
+  }
+}

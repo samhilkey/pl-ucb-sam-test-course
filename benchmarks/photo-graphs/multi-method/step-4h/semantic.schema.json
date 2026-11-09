@@ -1,0 +1,452 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "STAR semantic observations v1 \u2014 coarse regions only",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "coordinate_system": {
+      "type": "string",
+      "const": "normalized_0_1000"
+    },
+    "branch_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 20
+    },
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "region": {
+          "anyOf": [
+            {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 4,
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "uncertain": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "region",
+        "uncertain"
+      ]
+    },
+    "axes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "region": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1000
+                  },
+                  "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "positive_direction": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "right",
+                "left",
+                "up",
+                "down",
+                null
+              ]
+            },
+            "intersection_value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "uncertain": {
+              "type": "boolean"
+            },
+            "ticks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "region": {
+                    "type": "array",
+                    "minItems": 4,
+                    "maxItems": 4,
+                    "items": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1000
+                    },
+                    "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "uncertain": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "region",
+                  "value",
+                  "uncertain"
+                ]
+              }
+            }
+          },
+          "required": [
+            "region",
+            "positive_direction",
+            "intersection_value",
+            "uncertain",
+            "ticks"
+          ]
+        },
+        "y": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "region": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1000
+                  },
+                  "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "positive_direction": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "right",
+                "left",
+                "up",
+                "down",
+                null
+              ]
+            },
+            "intersection_value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "uncertain": {
+              "type": "boolean"
+            },
+            "ticks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "region": {
+                    "type": "array",
+                    "minItems": 4,
+                    "maxItems": 4,
+                    "items": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1000
+                    },
+                    "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "uncertain": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "region",
+                  "value",
+                  "uncertain"
+                ]
+              }
+            }
+          },
+          "required": [
+            "region",
+            "positive_direction",
+            "intersection_value",
+            "uncertain",
+            "ticks"
+          ]
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "branches": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "region": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+          },
+          "endpoint_regions": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1000
+                  },
+                  "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "corner_regions": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 4,
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+            }
+          },
+          "extremum_regions": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 4,
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+            }
+          },
+          "uncertain": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "region",
+          "endpoint_regions",
+          "corner_regions",
+          "extremum_regions",
+          "uncertain"
+        ]
+      }
+    },
+    "isolated_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "region": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+          },
+          "filled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "uncertain": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "region",
+          "filled",
+          "uncertain"
+        ]
+      }
+    },
+    "non_graph_regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "axis",
+              "label",
+              "grid",
+              "noise"
+            ]
+          },
+          "region": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+          }
+        },
+        "required": [
+          "kind",
+          "region"
+        ]
+      }
+    },
+    "discontinuities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "region": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "description": "Approximate [left,top,right,bottom] in normalized image coordinates; left<right and top<bottom."
+          },
+          "branch_ids": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "region",
+          "branch_ids"
+        ]
+      }
+    },
+    "unsupported": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "coordinate_system",
+    "branch_count",
+    "origin",
+    "axes",
+    "branches",
+    "isolated_points",
+    "non_graph_regions",
+    "discontinuities",
+    "unsupported",
+    "uncertainty"
+  ]
+}

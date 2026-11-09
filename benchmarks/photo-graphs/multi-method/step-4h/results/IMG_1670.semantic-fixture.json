@@ -1,0 +1,153 @@
+{
+  "kind": "development_fixture",
+  "model": null,
+  "photo_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231",
+  "width": 1688,
+  "height": 1473,
+  "semantics": {
+    "schema_version": 1,
+    "coordinate_system": "normalized_0_1000",
+    "branch_count": 1,
+    "origin": {
+      "region": [
+        440,
+        495,
+        490,
+        560
+      ],
+      "uncertain": true
+    },
+    "axes": {
+      "x": {
+        "region": [
+          75,
+          490,
+          820,
+          575
+        ],
+        "positive_direction": "right",
+        "intersection_value": 0,
+        "uncertain": true,
+        "ticks": []
+      },
+      "y": {
+        "region": [
+          415,
+          60,
+          505,
+          960
+        ],
+        "positive_direction": "up",
+        "intersection_value": 0,
+        "uncertain": true,
+        "ticks": []
+      }
+    },
+    "branches": [
+      {
+        "id": "branch-1",
+        "region": [
+          45,
+          180,
+          900,
+          510
+        ],
+        "endpoint_regions": [
+          [
+            45,
+            450,
+            90,
+            510
+          ],
+          [
+            835,
+            395,
+            900,
+            450
+          ]
+        ],
+        "corner_regions": [
+          [
+            195,
+            280,
+            250,
+            330
+          ],
+          [
+            565,
+            185,
+            630,
+            240
+          ]
+        ],
+        "extremum_regions": [
+          [
+            360,
+            430,
+            435,
+            480
+          ]
+        ],
+        "uncertain": false
+      }
+    ],
+    "isolated_points": [
+      {
+        "id": "dot-1",
+        "region": [
+          470,
+          185,
+          505,
+          220
+        ],
+        "filled": true,
+        "uncertain": false
+      }
+    ],
+    "non_graph_regions": [
+      {
+        "kind": "axis",
+        "region": [
+          415,
+          60,
+          505,
+          960
+        ]
+      },
+      {
+        "kind": "axis",
+        "region": [
+          75,
+          490,
+          820,
+          575
+        ]
+      },
+      {
+        "kind": "label",
+        "region": [
+          90,
+          560,
+          800,
+          700
+        ]
+      },
+      {
+        "kind": "label",
+        "region": [
+          365,
+          140,
+          425,
+          450
+        ]
+      }
+    ],
+    "discontinuities": [],
+    "unsupported": [
+      "Bent hand-drawn axes are not a verified affine frame."
+    ],
+    "uncertainty": [
+      "Numeric tick grounding and crossing separation need image evidence or a short user correction."
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source_kind": "development_fixture",
+  "automatically_recognized": false,
+  "importable_after_explicit_review": true,
+  "blockers": [],
+  "strokeDecisions": {
+    "stroke-1": "keep"
+  },
+  "markDecisions": {
+    "mark-1": "exclude"
+  },
+  "measured_points": [],
+  "measured_branch_count": 1,
+  "inserted_vertices": 0,
+  "pixel_source": "unchanged_local_CV_centerlines"
+}

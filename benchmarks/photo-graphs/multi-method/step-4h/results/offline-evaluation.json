@@ -1,0 +1,369 @@
+{
+  "step": "4H offline proof",
+  "inference_requests": 0,
+  "real_Gemini_semantics": 0,
+  "real_photo_hybrid_acceptance_passed": false,
+  "all_semantics_are_development_fixtures": true,
+  "outcomes": [
+    {
+      "id": "matching-answer-controlled",
+      "image_source_kind": "controlled_raster",
+      "semantic_source_kind": "human_authored_development_fixture",
+      "automatic_recognition_success_claimed": false,
+      "reviewed_native_candidate": true,
+      "source_cv_status": "automatic",
+      "source_cv_branch_fragments": 1,
+      "fusion": {
+        "source_kind": "development_fixture",
+        "automatically_recognized": false,
+        "importable_after_explicit_review": true,
+        "blockers": [],
+        "strokeDecisions": {
+          "stroke-1": "keep"
+        },
+        "markDecisions": {},
+        "measured_points": [],
+        "measured_branch_count": 1,
+        "inserted_vertices": 0,
+        "pixel_source": "unchanged_local_CV_centerlines"
+      },
+      "source_cv_metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.7046845058863159,
+        "geometry_to_reference_p95_pixel": 0.6746307870895759,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 0.6000000000000227,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0.00480769230767919,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "reviewed_fusion_metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.7046845058863159,
+        "geometry_to_reference_p95_pixel": 0.6746307870895759,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 0.6000000000000227,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0.00480769230767919,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "geometry_created_before_evaluator_reference_read": true,
+      "elapsed_ms": 529.108,
+      "photo_sha256": "bc0b66f72eac73ba1c08196439c1a8857d40ea2d70a30a12e66fce1b3467bd3f"
+    },
+    {
+      "id": "sharp-v",
+      "image_source_kind": "controlled_raster",
+      "semantic_source_kind": "human_authored_development_fixture",
+      "automatic_recognition_success_claimed": false,
+      "reviewed_native_candidate": true,
+      "source_cv_status": "automatic",
+      "source_cv_branch_fragments": 1,
+      "fusion": {
+        "source_kind": "development_fixture",
+        "automatically_recognized": false,
+        "importable_after_explicit_review": true,
+        "blockers": [],
+        "strokeDecisions": {
+          "stroke-1": "keep"
+        },
+        "markDecisions": {
+          "mark-1": "exclude"
+        },
+        "measured_points": [],
+        "measured_branch_count": 1,
+        "inserted_vertices": 0,
+        "pixel_source": "unchanged_local_CV_centerlines"
+      },
+      "source_cv_metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.4156232164338605,
+        "geometry_to_reference_p95_pixel": 0.41493034675777224,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 0,
+        "corner_error_pixel": 2.23606797749979,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "reviewed_fusion_metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 1,
+        "extracted_components": 1,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.4156232164338605,
+        "geometry_to_reference_p95_pixel": 0.41493034675777224,
+        "reference_centerline_coverage_within_3px": [
+          1
+        ],
+        "endpoint_max_error_pixel": 0,
+        "corner_error_pixel": 2.23606797749979,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "geometry_created_before_evaluator_reference_read": true,
+      "elapsed_ms": 251.365,
+      "photo_sha256": "0043cb8801da761af52373cac0aa8bd4d5f7322a1e4524ca54e5afe333addb85"
+    },
+    {
+      "id": "two-branches-dot-controlled",
+      "image_source_kind": "controlled_raster",
+      "semantic_source_kind": "human_authored_development_fixture",
+      "automatic_recognition_success_claimed": false,
+      "reviewed_native_candidate": true,
+      "source_cv_status": "automatic",
+      "source_cv_branch_fragments": 2,
+      "fusion": {
+        "source_kind": "development_fixture",
+        "automatically_recognized": false,
+        "importable_after_explicit_review": true,
+        "blockers": [],
+        "strokeDecisions": {
+          "stroke-1": "keep",
+          "stroke-2": "keep"
+        },
+        "markDecisions": {
+          "mark-1": "point",
+          "mark-2": "exclude"
+        },
+        "measured_points": [
+          {
+            "semantic_id": "dot-1",
+            "component_id": "mark-1",
+            "pixel": [
+              520,
+              100
+            ]
+          }
+        ],
+        "measured_branch_count": 2,
+        "inserted_vertices": 0,
+        "pixel_source": "unchanged_local_CV_centerlines"
+      },
+      "source_cv_metrics": {
+        "expected_strokes": 2,
+        "extracted_paths": 2,
+        "extracted_components": 2,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.6742482069462241,
+        "geometry_to_reference_p95_pixel": 0.6540405164230926,
+        "reference_centerline_coverage_within_3px": [
+          1,
+          1
+        ],
+        "endpoint_max_error_pixel": 1.4142135623730951,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "reviewed_fusion_metrics": {
+        "expected_strokes": 2,
+        "extracted_paths": 2,
+        "extracted_components": 2,
+        "branch_count_correct": true,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 0,
+        "false_connections": 0,
+        "spurious_paths": 0,
+        "reference_to_geometry_p95_pixel": 0.6742482069462241,
+        "geometry_to_reference_p95_pixel": 0.6540405164230926,
+        "reference_centerline_coverage_within_3px": [
+          1,
+          1
+        ],
+        "endpoint_max_error_pixel": 1.4142135623730951,
+        "corner_error_pixel": null,
+        "axis_origin_error_pixel": 0,
+        "note": "Controlled raster centerline diagnostics; not grading validity or physical-photo accuracy."
+      },
+      "geometry_created_before_evaluator_reference_read": true,
+      "elapsed_ms": 111.1840830000001,
+      "photo_sha256": "c020a801cd80ac917acf4de63a109993e49c0d8d79be853a2cd9bb4c6774f58d"
+    },
+    {
+      "id": "IMG_1670",
+      "image_source_kind": "real_photo",
+      "semantic_source_kind": "human_authored_development_fixture",
+      "automatic_recognition_success_claimed": false,
+      "reviewed_native_candidate": false,
+      "source_cv_status": "needs_review",
+      "source_cv_branch_fragments": 44,
+      "fusion": {
+        "source_kind": "development_fixture",
+        "automatically_recognized": false,
+        "importable_after_explicit_review": false,
+        "blockers": [
+          {
+            "code": "semantic_uncertainty",
+            "detail": "Resolve the reported semantic uncertainty; it is not silently discarded."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-6: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-7: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-8: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-9: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-11: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-33: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-34: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-35: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_stroke",
+            "detail": "stroke-36: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+          },
+          {
+            "code": "ambiguous_small_mark",
+            "detail": "mark-1: point and non-graph regions overlap; keep the measured candidate but block import."
+          },
+          {
+            "code": "branch_count",
+            "detail": "Measured connected branches do not match the semantic observation."
+          },
+          {
+            "code": "branch_identity",
+            "detail": "Branches cannot be paired uniquely without inventing connectivity."
+          },
+          {
+            "code": "calibration_missing",
+            "detail": "Numeric image evidence is insufficient. A future canvas correction must establish the unresolved axes/values; question answers cannot supply them."
+          }
+        ],
+        "strokeDecisions": {
+          "stroke-1": "exclude",
+          "stroke-2": "exclude",
+          "stroke-3": "exclude",
+          "stroke-4": "exclude",
+          "stroke-5": "exclude",
+          "stroke-10": "keep",
+          "stroke-12": "keep",
+          "stroke-13": "exclude",
+          "stroke-14": "exclude",
+          "stroke-15": "exclude",
+          "stroke-16": "exclude",
+          "stroke-17": "exclude",
+          "stroke-18": "exclude",
+          "stroke-19": "exclude",
+          "stroke-20": "exclude",
+          "stroke-21": "exclude",
+          "stroke-22": "exclude",
+          "stroke-23": "exclude",
+          "stroke-24": "exclude",
+          "stroke-25": "exclude",
+          "stroke-26": "exclude",
+          "stroke-27": "exclude",
+          "stroke-28": "exclude",
+          "stroke-29": "exclude",
+          "stroke-30": "exclude",
+          "stroke-31": "exclude",
+          "stroke-32": "exclude",
+          "stroke-37": "exclude",
+          "stroke-38": "exclude",
+          "stroke-39": "exclude",
+          "stroke-40": "exclude",
+          "stroke-41": "exclude",
+          "stroke-42": "exclude",
+          "stroke-43": "exclude",
+          "stroke-44": "exclude"
+        },
+        "markDecisions": {
+          "mark-1": "point",
+          "mark-2": "exclude",
+          "mark-3": "exclude",
+          "mark-4": "exclude"
+        },
+        "measured_points": [
+          {
+            "semantic_id": "dot-1",
+            "component_id": "mark-1",
+            "pixel": [
+              822.6776914778857,
+              296.1495021952879
+            ]
+          }
+        ],
+        "measured_branch_count": 0,
+        "inserted_vertices": 0,
+        "pixel_source": "unchanged_local_CV_centerlines"
+      },
+      "source_cv_metrics": {
+        "expected_strokes": 1,
+        "extracted_paths": 44,
+        "extracted_components": 12,
+        "branch_count_correct": false,
+        "missing_strokes": 0,
+        "partially_missing_strokes": 1,
+        "false_connections": 0,
+        "spurious_paths": 40,
+        "reference_to_geometry_p95_pixel": 11.68839736660122,
+        "geometry_to_reference_p95_pixel": 382.50966351790123,
+        "reference_centerline_coverage_within_3px": [
+          0.5394036208732694
+        ],
+        "endpoint_max_error_pixel": 4.155739368188691,
+        "corner_error_pixel": 5.842408391887308,
+        "axis_origin_error_pixel": null,
+        "note": "Approximate prior visual annotations; not independent human ground truth. Null distances mean no output, not zero error."
+      },
+      "reviewed_fusion_metrics": null,
+      "geometry_created_before_evaluator_reference_read": true,
+      "elapsed_ms": 733.256625,
+      "photo_sha256": "9c8247ec0be7d4ca68c4536eea990a0c5b0fce6250e8478a13b5aa5a0e190231"
+    }
+  ]
+}

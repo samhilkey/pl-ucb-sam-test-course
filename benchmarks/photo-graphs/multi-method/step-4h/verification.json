@@ -1,0 +1,40 @@
+{
+  "step": "4H architecture and offline proof checkpoint",
+  "starting_commit": "80b9f54b10e4fd1e206bde7d7cc3430d8b8301be",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "offline_checkpoint": "PASS",
+  "complete_real_photo_hybrid_pipeline": "BLOCKED",
+  "production_hybrid_enabled": false,
+  "node_tests_passed": 134,
+  "server_tests_passed": 5,
+  "semantic_schema_fixtures_validated_independently": 4,
+  "browser_assertions": {
+    "hybrid_proof": 53,
+    "native": 165,
+    "cv_assisted": 139,
+    "manual": 84
+  },
+  "browser_assertions_total": 441,
+  "controlled_matching_answer_visible_grade": "100%",
+  "matching_answer_input_kind": "controlled_raster_not_photo",
+  "controlled_geometry_native_candidates": 3,
+  "real_photo_hybrid_candidates_accepted": 0,
+  "real_photo_dot_candidate_not_native_imported": true,
+  "all_semantic_observations_human_authored_development_fixtures": true,
+  "real_Gemini_observations": 0,
+  "new_API_requests": 0,
+  "new_API_usage_tokens": 0,
+  "new_API_cost_dollars": 0,
+  "new_API_cost_basis": "No API requests in this step; no provider bill was queried.",
+  "new_request_approval": "not_granted",
+  "new_request_recommendation": "not_yet_for_photo_to_native_objective",
+  "fresh_image_transmission_scope_required_before_any_new_call": true,
+  "frozen_demo_backup_modified": false,
+  "primary_UI_modified": false,
+  "projector_checked_this_step": false,
+  "prior_dense_Gemini_experiment_unchanged": true,
+  "code_sha256": {
+    "elements/pl-sketch/star-hybrid.js": "5206ff484764fcacead335cb82880953adf324f64a8b0164c75d9881de5846a0",
+    "elements/pl-sketch/star-native.js": "b6cc66e919f45f3a53e10ae64afa7bb01ea6336306afe7daf819cc9181f877ed"
+  }
+}

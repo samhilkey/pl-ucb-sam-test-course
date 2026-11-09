@@ -1,0 +1,217 @@
+{
+  "kind": "development_fixture",
+  "model": null,
+  "photo_sha256": "c020a801cd80ac917acf4de63a109993e49c0d8d79be853a2cd9bb4c6774f58d",
+  "width": 640,
+  "height": 480,
+  "semantics": {
+    "schema_version": 1,
+    "coordinate_system": "normalized_0_1000",
+    "branch_count": 2,
+    "origin": {
+      "region": [
+        406.25,
+        604.1666666666666,
+        437.5,
+        645.8333333333334
+      ],
+      "uncertain": false
+    },
+    "axes": {
+      "x": {
+        "region": [
+          46.875,
+          604.1666666666666,
+          953.125,
+          645.8333333333334
+        ],
+        "positive_direction": "right",
+        "intersection_value": 0,
+        "uncertain": false,
+        "ticks": [
+          {
+            "value": 1,
+            "uncertain": false,
+            "region": [
+              468.75,
+              643.75,
+              500,
+              687.5
+            ]
+          },
+          {
+            "value": 2,
+            "uncertain": false,
+            "region": [
+              531.25,
+              643.75,
+              562.5,
+              687.5
+            ]
+          },
+          {
+            "value": 3,
+            "uncertain": false,
+            "region": [
+              593.75,
+              643.75,
+              625,
+              687.5
+            ]
+          }
+        ]
+      },
+      "y": {
+        "region": [
+          406.25,
+          41.666666666666664,
+          437.5,
+          958.3333333333334
+        ],
+        "positive_direction": "up",
+        "intersection_value": 0,
+        "uncertain": false,
+        "ticks": [
+          {
+            "value": 1,
+            "uncertain": false,
+            "region": [
+              371.875,
+              520.8333333333334,
+              409.375,
+              562.5
+            ]
+          },
+          {
+            "value": 2,
+            "uncertain": false,
+            "region": [
+              371.875,
+              437.5,
+              409.375,
+              479.1666666666667
+            ]
+          },
+          {
+            "value": 3,
+            "uncertain": false,
+            "region": [
+              371.875,
+              354.1666666666667,
+              409.375,
+              395.8333333333333
+            ]
+          }
+        ]
+      }
+    },
+    "branches": [
+      {
+        "id": "branch-1",
+        "region": [
+          140.625,
+          666.6666666666666,
+          382.8125,
+          937.5
+        ],
+        "endpoint_regions": [
+          [
+            140.625,
+            666.6666666666666,
+            195.3125,
+            729.1666666666666
+          ],
+          [
+            328.125,
+            864.5833333333334,
+            382.8125,
+            937.5
+          ]
+        ],
+        "corner_regions": [],
+        "extremum_regions": [],
+        "uncertain": false
+      },
+      {
+        "id": "branch-2",
+        "region": [
+          476.5625,
+          114.58333333333333,
+          804.6875,
+          437.5
+        ],
+        "endpoint_regions": [
+          [
+            476.5625,
+            114.58333333333333,
+            523.4375,
+            187.5
+          ],
+          [
+            757.8125,
+            364.5833333333333,
+            804.6875,
+            437.5
+          ]
+        ],
+        "corner_regions": [],
+        "extremum_regions": [],
+        "uncertain": false
+      }
+    ],
+    "isolated_points": [
+      {
+        "id": "dot-1",
+        "region": [
+          789.0625,
+          177.08333333333334,
+          835.9375,
+          239.58333333333334
+        ],
+        "filled": true,
+        "uncertain": false
+      }
+    ],
+    "non_graph_regions": [
+      {
+        "kind": "axis",
+        "region": [
+          406.25,
+          20.833333333333332,
+          437.5,
+          979.1666666666666
+        ]
+      },
+      {
+        "kind": "axis",
+        "region": [
+          31.25,
+          604.1666666666666,
+          968.75,
+          645.8333333333334
+        ]
+      },
+      {
+        "kind": "label",
+        "region": [
+          367.1875,
+          104.16666666666667,
+          410.9375,
+          593.75
+        ]
+      },
+      {
+        "kind": "label",
+        "region": [
+          453.125,
+          643.75,
+          632.8125,
+          697.9166666666666
+        ]
+      }
+    ],
+    "discontinuities": [],
+    "unsupported": [],
+    "uncertainty": []
+  }
+}

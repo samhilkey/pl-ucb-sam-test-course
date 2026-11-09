@@ -1,0 +1,27 @@
+{
+  "source_kind": "development_fixture",
+  "automatically_recognized": false,
+  "importable_after_explicit_review": true,
+  "blockers": [],
+  "strokeDecisions": {
+    "stroke-1": "keep",
+    "stroke-2": "keep"
+  },
+  "markDecisions": {
+    "mark-1": "point",
+    "mark-2": "exclude"
+  },
+  "measured_points": [
+    {
+      "semantic_id": "dot-1",
+      "component_id": "mark-1",
+      "pixel": [
+        520,
+        100
+      ]
+    }
+  ],
+  "measured_branch_count": 2,
+  "inserted_vertices": 0,
+  "pixel_source": "unchanged_local_CV_centerlines"
+}

@@ -1,0 +1,119 @@
+{
+  "source_kind": "development_fixture",
+  "automatically_recognized": false,
+  "importable_after_explicit_review": false,
+  "blockers": [
+    {
+      "code": "semantic_uncertainty",
+      "detail": "Resolve the reported semantic uncertainty; it is not silently discarded."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-6: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-7: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-8: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-9: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-11: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-33: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-34: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-35: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_stroke",
+      "detail": "stroke-36: no unique complete graph/non-graph region; no clipping, guessing or axis subtraction."
+    },
+    {
+      "code": "ambiguous_small_mark",
+      "detail": "mark-1: point and non-graph regions overlap; keep the measured candidate but block import."
+    },
+    {
+      "code": "branch_count",
+      "detail": "Measured connected branches do not match the semantic observation."
+    },
+    {
+      "code": "branch_identity",
+      "detail": "Branches cannot be paired uniquely without inventing connectivity."
+    },
+    {
+      "code": "calibration_missing",
+      "detail": "Numeric image evidence is insufficient. A future canvas correction must establish the unresolved axes/values; question answers cannot supply them."
+    }
+  ],
+  "strokeDecisions": {
+    "stroke-1": "exclude",
+    "stroke-2": "exclude",
+    "stroke-3": "exclude",
+    "stroke-4": "exclude",
+    "stroke-5": "exclude",
+    "stroke-10": "keep",
+    "stroke-12": "keep",
+    "stroke-13": "exclude",
+    "stroke-14": "exclude",
+    "stroke-15": "exclude",
+    "stroke-16": "exclude",
+    "stroke-17": "exclude",
+    "stroke-18": "exclude",
+    "stroke-19": "exclude",
+    "stroke-20": "exclude",
+    "stroke-21": "exclude",
+    "stroke-22": "exclude",
+    "stroke-23": "exclude",
+    "stroke-24": "exclude",
+    "stroke-25": "exclude",
+    "stroke-26": "exclude",
+    "stroke-27": "exclude",
+    "stroke-28": "exclude",
+    "stroke-29": "exclude",
+    "stroke-30": "exclude",
+    "stroke-31": "exclude",
+    "stroke-32": "exclude",
+    "stroke-37": "exclude",
+    "stroke-38": "exclude",
+    "stroke-39": "exclude",
+    "stroke-40": "exclude",
+    "stroke-41": "exclude",
+    "stroke-42": "exclude",
+    "stroke-43": "exclude",
+    "stroke-44": "exclude"
+  },
+  "markDecisions": {
+    "mark-1": "point",
+    "mark-2": "exclude",
+    "mark-3": "exclude",
+    "mark-4": "exclude"
+  },
+  "measured_points": [
+    {
+      "semantic_id": "dot-1",
+      "component_id": "mark-1",
+      "pixel": [
+        822.6776914778857,
+        296.1495021952879
+      ]
+    }
+  ],
+  "measured_branch_count": 0,
+  "inserted_vertices": 0,
+  "pixel_source": "unchanged_local_CV_centerlines"
+}

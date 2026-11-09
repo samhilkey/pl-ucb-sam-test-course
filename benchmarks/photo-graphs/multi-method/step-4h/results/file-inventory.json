@@ -1,0 +1,320 @@
+{
+  "scope": "Step 4H changed code, tests, documentation and evidence; inventory excludes itself",
+  "files": [
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/ARCHITECTURE.md",
+      "bytes": 8107,
+      "sha256": "f174140f43ffafb8e75206af1dacbb85d1a8c017d386b98ae2915b3ac1bcc242"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/REPORT.md",
+      "bytes": 10968,
+      "sha256": "1e40edb37b0cdbeff495371debaed409a1a6cb3e2fc1aa83d57b33aec0dd9bb5"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/TESTING.md",
+      "bytes": 5031,
+      "sha256": "c01d59da77dca4d12842a230f55260b653c9dc10a65e2b4552e5f2d926fdca68"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/fixtures.cjs",
+      "bytes": 7078,
+      "sha256": "5c80a68e77809b7cb90d46ac7dd7d16737044022bd4079437939426cad94c6b2"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/future-semantic-protocol.json",
+      "bytes": 1744,
+      "sha256": "eea728c0bb1f42b63a1cf6bf632e063b34fb5f7081435cb2c09a8a2969de7354"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/input-manifest.json",
+      "bytes": 2101,
+      "sha256": "840db1d6f62ccf1b7bc82f8eb6c6e43c4b1332f687aa4e790d3456fd42180a07"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/inputs/matching-answer-controlled.png",
+      "bytes": 10654,
+      "sha256": "bc0b66f72eac73ba1c08196439c1a8857d40ea2d70a30a12e66fce1b3467bd3f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/inputs/two-branches-dot-controlled.png",
+      "bytes": 15714,
+      "sha256": "c020a801cd80ac917acf4de63a109993e49c0d8d79be853a2cd9bb4c6774f58d"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/references/matching-answer-controlled.json",
+      "bytes": 34154,
+      "sha256": "bdccb441a90769791bff3f3ca0b3debdce6095534969819366b39e0a79e5822b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/IMG_1670.cv.json",
+      "bytes": 57602,
+      "sha256": "ac60cc876feba9d38272bd2a14a4809142d9bff51c2c90db02ebc62738ddd773"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/IMG_1670.fusion.json",
+      "bytes": 3782,
+      "sha256": "07a35c7beb5b3bcecc16edfe73d273443d46a92baa140e39b6f268d0e73f0826"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/IMG_1670.overlay.png",
+      "bytes": 2096058,
+      "sha256": "cf47b35bbf74cabcf28df1200aa15ea9589a4f5704dea1e2982918b47bd257ce"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/IMG_1670.semantic-fixture.json",
+      "bytes": 2662,
+      "sha256": "633f640785114f59bb7ad853361ce531881a857669212467e3d67183dac1e3da"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/IMG_1670--blocked-reference.png",
+      "bytes": 392768,
+      "sha256": "a14fcfee6a474d1c17ed281e1a06ed123c0b78b2753e63ab291bdd4a8e9f33ab"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/matching-answer-controlled--graded-restored.png",
+      "bytes": 198198,
+      "sha256": "14bc709a63a1b762c4c0035989bfb0954bf68897b95ecb3c6141ea6fa4ab91f8"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/matching-answer-controlled--native.png",
+      "bytes": 74622,
+      "sha256": "5b00a328829c8057ba47cb0915f6734c1bd37b6e9cae68af91891d4b47771b94"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/native-tool-audit.png",
+      "bytes": 25434,
+      "sha256": "e3ff41f860d0d8f2aae2d1a539108bbf7cfa90b7feff709beca24c36ae322949"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/results.json",
+      "bytes": 26868,
+      "sha256": "dfbef3d4cb73fec10d9b8aa3df3fb41d88c0a2475c424b354118630cb0afc325"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/sharp-v--graded-restored.png",
+      "bytes": 212938,
+      "sha256": "36ec129f80dedf17fe5afb390eb848a2b4b791e0dc7b3385a519f5861f3a679a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/sharp-v--native.png",
+      "bytes": 89207,
+      "sha256": "93b918ebcdc74eef4290a8b631988803b298e9ee8a4c1f7f2aa0b74aed322f52"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/two-branches-dot-controlled--graded-restored.png",
+      "bytes": 213208,
+      "sha256": "5774bd60e41fea4de850f96d85e47f1278c2fc507e2411497c024e670e163115"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser/two-branches-dot-controlled--native.png",
+      "bytes": 90250,
+      "sha256": "a88d520795f8022a16a700116b0ff96b07bd49b97e33f1e6de011bfca5bba7fe"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/browser-input.json",
+      "bytes": 47767,
+      "sha256": "8f3458c102ced830772d3bb0b92676c049d36f9becf106d44efe2f68d0512fab"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/credential-check.json",
+      "bytes": 357,
+      "sha256": "6a1fd4230eefb430cf487d265ba99102fdfd424c23eddf616d892c06e2f545ae"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/cv-assisted-regression.json",
+      "bytes": 10453,
+      "sha256": "fac171878d41b09ae5629ed4a42fcfd03ac9201b2a1a3749cb9bfa99b595119b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/browser.log",
+      "bytes": 52,
+      "sha256": "06ae5c29f26c1690452fc6b225458cc219d2d0cf64114a29e5544f5536ee7ff5"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/cv-assisted-regression.log",
+      "bytes": 43,
+      "sha256": "dfe61cf386b3064c647f17e2a508366f086dd3492c96957d6f7016cc8eb96cb0"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/hybrid-focused.log",
+      "bytes": 1599,
+      "sha256": "09facdb3f12da24c6632d454a1b5863f8f05c771828e2a652700de8dfaeef6f6"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/initial-unit-failure.log",
+      "bytes": 28011,
+      "sha256": "6eb3734fc648e61049b2d10836fd5801df44a709771998a382bbdbc1fc832fd4"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/manual-regression.log",
+      "bytes": 49,
+      "sha256": "7c2a84eda3702865d387828f61ecabe26421a9a93d7c89a5263ea57bfe11b0ea"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/native-regression.log",
+      "bytes": 128,
+      "sha256": "962e18b3adb2c373fdbbae554faa5e64ec1d8bf0791aa02019e2fc70b260d9b6"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/schema.log",
+      "bytes": 63,
+      "sha256": "2670ad98a4d1959a2651a4f8401fbc7bd2fe2ab4815e518e30970eb3e74d3faf"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/server.log",
+      "bytes": 740,
+      "sha256": "3c21d88f2857bfcc800c22c90f40feaba7cddd035b8232e084bfdbd5ba1de6fd"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/logs/unit.log",
+      "bytes": 26972,
+      "sha256": "2486bf6ab141ed395d69f59ff06e778816b38683d9cb6f0f7691adfe92089e8c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/manual-evaluation.json",
+      "bytes": 6669,
+      "sha256": "c044c812b43b7d581b2ee13cfc0f058e494440620ad8093b98dd5859cfc3d063"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/manual-regression.json",
+      "bytes": 7909,
+      "sha256": "60bd74c9dc55500d1974d3036082ea7d925295c6e1362cefcbe12088e936e6d1"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/matching-answer-controlled.cv.json",
+      "bytes": 8536,
+      "sha256": "08cc7e3b46df43bbb444339a66a2701b73fa37c3fc8055b42e1a5922773631c3"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/matching-answer-controlled.fusion.json",
+      "bytes": 349,
+      "sha256": "56bb374bb69b1e55bad05d8086de5ab0cd9bd1b1d77ed056d8a27b945e3c0156"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/matching-answer-controlled.overlay.png",
+      "bytes": 10994,
+      "sha256": "294678ba66f4412bc2c24a6f3855bdd015b9cfd50f2618ebb4b38a2ab619876b"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/matching-answer-controlled.reviewed-geometry.json",
+      "bytes": 20917,
+      "sha256": "f8e576bc4b41473e8a9448ea2e80ea2f92636dc96c90d7dc30fe1e851ded860f"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/matching-answer-controlled.semantic-fixture.json",
+      "bytes": 3721,
+      "sha256": "f59511ecc30314fa16d949772a33bfc08b7281107eec959336e22dd38e2adc99"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/native-package-audit.json",
+      "bytes": 977,
+      "sha256": "22741c9c41d07f2682225ccb495b6ac4d6f40afaae8f73162691269f961eb5d0"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/native-regression.json",
+      "bytes": 9784,
+      "sha256": "bb63329ccf71d97a92cc4bac01dbb61fd62945414df5f40252afe0903339810c"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/offline-evaluation.json",
+      "bytes": 13835,
+      "sha256": "1b05b3471c6a887e71deec9fc98d4ac01dfca730dacf1db3ef5b55a9c7a416ec"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/protected-files.json",
+      "bytes": 746,
+      "sha256": "d3cf03351a47f9a9cfae73d115de0c6436f6580031fbdef30e4043c0f533a024"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/sharp-v.cv.json",
+      "bytes": 6979,
+      "sha256": "8f4744f72271f0a1bae91820b36491b0c431230c2d6f94bdd0bfc36a7ce59f88"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/sharp-v.fusion.json",
+      "bytes": 376,
+      "sha256": "f2774ba4f4dace27b9a0bde7597b05b0e6cac4f8434b200b3adb1430a2e4714a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/sharp-v.overlay.png",
+      "bytes": 16279,
+      "sha256": "653f1e5de98cd8f6e5ea3a036752ac3f1316e0b1bf882b0c8067730c0d11789a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/sharp-v.reviewed-geometry.json",
+      "bytes": 17383,
+      "sha256": "e78dbd3d4f0deb74098bafe137afc54ab47393661c8173b133f67fe750540e86"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/sharp-v.semantic-fixture.json",
+      "bytes": 3755,
+      "sha256": "a9745bac522a5b6a1d5374484271a67249253e6f58ed0b16b5de3ce45de474e7"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/two-branches-dot-controlled.cv.json",
+      "bytes": 8595,
+      "sha256": "f8610974049dd4e627aa8e63347c729210b2b8a03a9c36c2aed0d378ba628a82"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/two-branches-dot-controlled.fusion.json",
+      "bytes": 550,
+      "sha256": "0b0dbc008c59250c81771ba8882734e5f9c24363d1e57f5c5e977d71c2b067ea"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/two-branches-dot-controlled.overlay.png",
+      "bytes": 16018,
+      "sha256": "ba0055e01eb00b9543fa8c710d7e32f84c1b0c54f09fcdb4bf81b9ee7f44b403"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/two-branches-dot-controlled.reviewed-geometry.json",
+      "bytes": 21703,
+      "sha256": "a42d35fb4106e758b9f7ef8788f4b4ed54220090b8862a6673abfc65d76c448a"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/results/two-branches-dot-controlled.semantic-fixture.json",
+      "bytes": 4370,
+      "sha256": "fa7fcddf4a6b08cb6fc9bbf12c76651d722a1848c46f6050ca768c49d89dee42"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/run-browser.cjs",
+      "bytes": 14621,
+      "sha256": "dbdc1dfe669e5e13e51b1fb75ddaafa0b8d5c05b183bee94b33fd56b5af5184e"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/run-offline.cjs",
+      "bytes": 3693,
+      "sha256": "6d19727868b57f8707e6e29ced9047763ebcf1dcc91228f80c99bd87a1ff2f3d"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/semantic-prompt.txt",
+      "bytes": 1951,
+      "sha256": "ce915093499130400153af50089709dfc5e6c12bf7a730bc47ff9bcb6030d413"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/semantic.schema.json",
+      "bytes": 11816,
+      "sha256": "7024e112475c4b4176d2458ca75fde8dea89df8e1a0daaf891e6bedd8218d4ce"
+    },
+    {
+      "path": "benchmarks/photo-graphs/multi-method/step-4h/verification.json",
+      "bytes": 1692,
+      "sha256": "c9b630d93d819bd10d4269d0df426d977a6066df43636f8f3531c03793601d86"
+    },
+    {
+      "path": "elements/pl-sketch/star-hybrid.js",
+      "bytes": 13924,
+      "sha256": "5206ff484764fcacead335cb82880953adf324f64a8b0164c75d9881de5846a0"
+    },
+    {
+      "path": "elements/pl-sketch/star-native.js",
+      "bytes": 11378,
+      "sha256": "b6cc66e919f45f3a53e10ae64afa7bb01ea6336306afe7daf819cc9181f877ed"
+    },
+    {
+      "path": "tests/star-hybrid.test.cjs",
+      "bytes": 6957,
+      "sha256": "36968ca90fd3f779caffadffd60ad0d59f6d8d5724323ab1c001fa94ba1d5c56"
+    }
+  ]
+}
