@@ -1,4 +1,5 @@
 import base64
+import copy
 import json
 
 import prairielearn as pl
@@ -170,6 +171,16 @@ def match_fun(
 ) -> tuple[float, int, list[str]]:
     tolerance = grader["tolerance"]
     feedback = grader["feedback"] or "Drawing does not match expected function."
+    if config.get("adaptivePhotoSplineTool"):
+        # Complementary native spline/polyline pieces form one displayed graph.
+        # Grade their union, not an incomplete domain separately for each tool.
+        # Keep submitted native state and gradeable evidence unchanged.
+        ids = [t["id"] for t in grader["toolid"] if t["name"] in {"freeform", "spline", "polyline"}]
+        curves = [curve for tid in ids for curve in submission["gradeable"].get(tid, [])]
+        if ids:
+            submission = copy.deepcopy(submission)
+            for tid in ids:
+                submission["gradeable"][tid] = curves if tid == ids[0] else []
     tools_to_check = get_tools_to_check(
         grader, submission, not_allowed=["vertical-line", "polygon"]
     )

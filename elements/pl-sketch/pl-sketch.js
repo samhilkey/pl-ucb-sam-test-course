@@ -21,6 +21,7 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
     // STAR: publish the handle so the hand-drawn workflow can reach this canvas.
     starInstances[id] = si
     if (config.editablePhotoDraftTool) window.StarEditableDraft.installGrading(si, config)
+    if (config.adaptivePhotoSplineTool) window.StarAdaptiveNative.installGrading(si, config)
 
     // STAR: the photo route, when the instructor turned it on for this question.
     if (handDrawn) {

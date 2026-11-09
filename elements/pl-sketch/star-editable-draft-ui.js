@@ -13,11 +13,19 @@ window.StarEditableDraftUI = (function () {
     panel.append(ui); const q = s => ui.querySelector(s)
     const layer = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject'); layer.setAttribute('width', config.width); layer.setAttribute('height', config.height); layer.setAttribute('aria-hidden', 'true'); layer.classList.add('star-draft-highlights'); layer.style.pointerEvents = 'none'
     const canvas = document.createElementNS('http://www.w3.org/1999/xhtml', 'canvas'); canvas.width = config.width; canvas.height = config.height; layer.append(canvas); svg.append(layer)
-    const session = StarNative.createSession(si, config, undefined, { editableDraft: true })
+    const adaptive = !!config.adaptivePhotoSplineTool
+    const session = adaptive ? StarAdaptiveNative.createSession(si, config) : StarNative.createSession(si, config, undefined, { editableDraft: true })
+    let acceptedGeometry = null
+    let styleChoice = null; let styleButton = null
+    if (adaptive) {
+      const label = document.createElement('label'); label.className = 'star-adaptive-choice'; label.textContent = 'Curve style '
+      styleChoice = document.createElement('select'); styleChoice.setAttribute('aria-label', 'Curve style'); styleChoice.innerHTML = '<option value="auto">Auto (recommended)</option><option value="smooth">Smooth curve when faithful</option><option value="original">Original trace</option>'; label.append(styleChoice); ui.insertBefore(label, q('.star-draft-axis-inputs'))
+      styleButton = document.createElement('button'); styleButton.type = 'button'; styleButton.className = 'btn btn-light border star-adaptive-style'; styleButton.textContent = 'Change curve style (before editing)'; styleButton.disabled = true; advanced.append(styleButton)
+    }
     let source = null; let hash = ''; let revision = 0; let phase = 'empty'; let axes = {}; let marker = 'origin'; let proposal = null; let geometry = null; let priorFrame = null; let automatic = false; let cursor = [config.width / 2, config.height / 2]
     const state = () => JSON.parse(si.getState())
     const cacheKey = () => reference.status().scope ? reference.status().scope + ':accepted-draft' : null
-    const accepted = () => { try { return !!hash && sessionStorage.getItem(cacheKey()) === hash && state().data[config.editablePhotoDraftTool].some(ps => ps.length >= 2) } catch (_) { return phase === 'student_accepted_native_draft' } }
+    const accepted = () => { try { const data = state().data; return !!hash && sessionStorage.getItem(cacheKey()) === hash && [config.editablePhotoDraftTool, config.adaptivePhotoSplineTool].filter(Boolean).some(id => data[id].some(ps => ps.length >= 2)) } catch (_) { return phase === 'student_accepted_native_draft' } }
     const frame = g => ({ origin_pixel: g.coordinate_frame.origin_pixel, origin_graph: g.calibration.origin_graph, x_unit_vector_pixel: g.calibration.x_unit_vector_pixel, y_unit_vector_pixel: g.calibration.y_unit_vector_pixel })
     const values = () => ({ ...axes, xValue: q('.star-draft-x').value === '' ? NaN : Number(q('.star-draft-x').value), yValue: q('.star-draft-y').value === '' ? NaN : Number(q('.star-draft-y').value) })
     function invalidate () { proposal = geometry = null; session.invalidate(revision); q('.star-draft-accept').hidden = true }
@@ -26,7 +34,9 @@ window.StarEditableDraftUI = (function () {
       const ring = p => { ctx.strokeStyle = '#b91c1c'; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(p[0], p[1], 10, 0, Math.PI * 2); ctx.stroke() }
       if (geometry && phase === 'provisional_prediction') {
         ctx.strokeStyle = '#087e41'; ctx.lineWidth = 3
-        for (const s of geometry.strokes) { ctx.beginPath(); s.vertices.forEach((v, i) => { const p = reference.toCanvas(v.pixel); if (i) ctx.lineTo(...p); else ctx.moveTo(...p) }); ctx.stroke(); for (const issue of StarNative.functionViolations(s, config)) ring(reference.toCanvas(issue.pixels[0])) }
+        if (proposal?.previewPaths) for (const ps of proposal.previewPaths) { ctx.beginPath(); ps.forEach((p, i) => { if (i) ctx.lineTo(...p); else ctx.moveTo(...p) }); ctx.stroke() }
+        else for (const s of geometry.strokes) { ctx.beginPath(); s.vertices.forEach((v, i) => { const p = reference.toCanvas(v.pixel); if (i) ctx.lineTo(...p); else ctx.moveTo(...p) }); ctx.stroke() }
+        for (const s of geometry.strokes) for (const issue of StarNative.functionViolations(s, config)) ring(reference.toCanvas(issue.pixels[0]))
       } else if (phase === 'calibration') {
         for (const [name, p] of Object.entries(axes)) { const v = reference.toCanvas(p); ctx.fillStyle = '#6930a8'; ctx.beginPath(); ctx.arc(...v, 5, 0, Math.PI * 2); ctx.fill(); ctx.font = 'bold 14px sans-serif'; ctx.fillText({ origin: 'O', xMarker: 'X', yMarker: 'Y' }[name], v[0] + 7, v[1] - 6) }
       }
@@ -43,14 +53,15 @@ window.StarEditableDraftUI = (function () {
       button?.click(); svg.scrollIntoView({ block: 'nearest' }); svg.focus({ preventScroll: true }); paint()
     }
     function close (restore = true) { ui.hidden = true; start.hidden = false; if (restore) reference.setFrame(priorFrame); invalidate(); if (!accepted()) phase = source ? 'ready' : 'empty'; paint() }
-    function preview () {
+    function preview (preparedGeometry = null) {
       invalidate()
       try {
         automatic = source.status === 'automatic' && source.calibration.status === 'calibrated'
-        const g = automatic ? source : StarEditableDraft.build({ source, photoSha256: hash, axisValues: values(), inputRevision: revision })
+        const g = preparedGeometry || (automatic ? source : StarEditableDraft.build({ source, photoSha256: hash, axisValues: values(), inputRevision: revision }))
         const p = session.propose(g); geometry = g; proposal = p; phase = 'provisional_prediction'; reference.setFrame(frame(g))
         q('.star-draft-axis-inputs').hidden = true; q('.star-draft-accept').hidden = false; q('.star-draft-realign').hidden = false
         q('.star-draft-method').textContent = automatic ? 'CV estimate · not imported yet' : 'CV-assisted estimate · axes confirmed by you; not imported yet'
+        if (p.plan) q('.star-draft-method').textContent += p.plan.spline_count ? ' · smooth sections; original corners and turns' : ' · original trace is safer for this ink'
         q('.star-draft-help').textContent = 'Here’s our best estimate. Accept it to move the vertices and adjust the curve before submitting. Red rings flag turns to check; some marks may be missing. Only accepted native drawings are graded.'
         paint()
       } catch (e) { q('.star-draft-help').textContent = e.message; paint() }
@@ -91,21 +102,26 @@ window.StarEditableDraftUI = (function () {
     ui.addEventListener('keydown', e => { e.stopPropagation(); if (e.key === 'Enter' && e.target.tagName === 'INPUT') e.preventDefault(); if (e.key === 'Escape') close() }); ui.addEventListener('keyup', e => e.stopPropagation())
     q('.star-draft-realign').addEventListener('click', () => { invalidate(); phase = 'calibration'; reference.setFrame(priorFrame); q('.star-draft-axis-inputs').hidden = false; q('.star-draft-help').textContent = 'Adjust the markers or written tick values.'; paint() })
     q('.star-draft-cancel').addEventListener('click', () => close())
+    if (adaptive) {
+      styleChoice.addEventListener('change', () => { session.setMode(styleChoice.value); preview(acceptedGeometry) })
+      styleButton.addEventListener('click', () => { if (!acceptedGeometry) return; priorFrame = reference.getFrame(); ui.hidden = false; start.hidden = true; preview(acceptedGeometry) })
+    }
     panel.addEventListener('click', e => { if (!ui.hidden && e.target.closest('.star-canvas-correct, .star-canvas-edit, .star-canvas-advanced-actions button')) close() }, true)
     container.querySelector('.si-toolbar')?.addEventListener('click', () => { if (!ui.hidden) close() })
     q('.star-draft-accept').addEventListener('click', () => {
       if (!proposal || !geometry) return
       try {
-        const g = geometry; const receipt = session.commit(proposal.token, true); reference.setFrame(frame(g), true); const key = cacheKey(); if (key) try { sessionStorage.setItem(key, hash) } catch (_) {}
+        const g = geometry; const representation = proposal.plan; const receipt = session.commit(proposal.token, true); reference.setFrame(frame(g), true); const key = cacheKey(); if (key) try { sessionStorage.setItem(key, hash) } catch (_) {}
+        if (adaptive) { acceptedGeometry = g; styleButton.disabled = false }
         ui.hidden = true; start.hidden = false; phase = 'student_accepted_native_draft'; invalidate(); start.textContent = 'Edit detected graph'; selectNative()
         reference.message('Here’s our best estimate. Drag its vertices with Select to adjust the curve, then Save & Grade. Highlighted turns are still part of your drawing.')
-        container.dispatchEvent(new CustomEvent('star-draft-imported', { detail: { geometry: g, receipt, method: automatic ? 'CV automatic candidate, explicitly accepted' : 'CV-assisted draft, student-confirmed axes', state: phase } }))
+        container.dispatchEvent(new CustomEvent('star-draft-imported', { detail: { geometry: g, receipt, ...(representation ? { representation } : {}), method: automatic ? 'CV automatic candidate, explicitly accepted' : 'CV-assisted draft, student-confirmed axes', state: phase } }))
       } catch (e) { invalidate(); start.hidden = false; q('.star-draft-help').textContent = e.message + ' Reopen Edit detected graph to prepare a current estimate.' }
     })
     container.closest('form')?.addEventListener('submit', () => { if (accepted()) phase = 'submitted_answer' })
-    panel.querySelector('.star-canvas-remove').addEventListener('click', () => { close(false); source = null; hash = ''; phase = 'empty'; start.disabled = true })
+    panel.querySelector('.star-canvas-remove').addEventListener('click', () => { close(false); source = null; hash = ''; phase = 'empty'; start.disabled = true; if (adaptive) { session.resetOwnership(); acceptedGeometry = null; styleButton.disabled = true } })
     const api = { update (event) {
-      if (event.kind === 'loading') { close(); revision = event.revision; session.invalidate(revision); source = null; start.disabled = true }
+      if (event.kind === 'loading') { close(); revision = event.revision; session.invalidate(revision); source = null; start.disabled = true; if (adaptive) { session.resetOwnership(); acceptedGeometry = null; styleButton.disabled = true } }
       if (event.kind === 'photo') hash = event.sha256
       if (event.kind === 'recognition' && event.revision === revision) { source = event.geometry; start.disabled = !source.strokes.length; const upload = panel.querySelector('.star-canvas-upload'); upload.classList.toggle('btn-primary', !source.strokes.length); upload.classList.toggle('btn-light', !!source.strokes.length); upload.classList.toggle('border', !!source.strokes.length); phase = accepted() ? 'student_accepted_native_draft' : 'ready'; reference.message(accepted() ? 'Your saved editable draft is restored. Use Select to drag its vertices.' : source.strokes.length ? 'A CV estimate is available. Choose Edit detected graph; confirm axes if needed.' : 'No usable curve was detected. Your photo is visible; draw with native tools or use manual tracing in Photo options.'); paint() }
     }, status: () => ({ phase, revision, hasProposal: !!proposal, photoSha256: hash, axisValues: values(), automatic, nativeTool: config.editablePhotoDraftTool }) }

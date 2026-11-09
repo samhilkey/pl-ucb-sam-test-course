@@ -2,6 +2,8 @@ import base64
 import copy
 import json
 import math
+import os
+import subprocess
 import random
 import re
 import string
@@ -79,6 +81,7 @@ class SketchClientConfig(TypedDict):
     readonly: NotRequired[bool]
     assistedPhotoGeometry: NotRequired[bool]
     editablePhotoDraftTool: NotRequired[str]
+    adaptivePhotoSplineTool: NotRequired[str]
 
 
 class SketchAnswerParams(TypedDict):
@@ -124,6 +127,7 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "automatic-photo",  # STAR: independent experimental CV import switch
         "preserve-photo-geometry",  # opt-in reviewed manual traces, no equation fit
         "editable-photo-draft-tool",  # local opt-in: accepted, vertex-editable polyline
+        "adaptive-photo-spline-tool",  # experimental renderer-verified smooth sections
     ]
     pl.check_attribs(element, required_attribs, optional_attribs)
 
@@ -315,6 +319,13 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
                 or not any(any(t["id"] == draft_tool_id for t in g["toolid"]) for g in graders)):
             raise ValueError("Editable photo drafts need preserve-photo-geometry and an editable open-polyline tool included in grading.")
         client_config["editablePhotoDraftTool"] = draft_tool_id
+    spline_id = pl.get_string_attrib(element, "adaptive-photo-spline-tool", None)
+    if spline_id is not None:
+        spline = tool_data.get(spline_id)
+        if (not draft_tool_id or not spline or spline["name"] != "spline" or spline["readonly"] or spline["helper"]
+                or not any({draft_tool_id, spline_id}.issubset({t["id"] for t in g["toolid"]}) and g["type"] == "match-function" for g in graders)):
+            raise ValueError("Adaptive photo splines need an editable spline and polyline sharing a function grading criterion.")
+        client_config["adaptivePhotoSplineTool"] = spline_id
 
     # Saving all processed data into a dictionary
     params: SketchAnswerParams = {
@@ -1060,6 +1071,16 @@ def _editable_draft_gradeable(paths: Any) -> list[dict[str, Any]]:
     return result
 
 
+def _adaptive_spline_gradeable(paths: Any) -> list[dict[str, Any]]:
+    _editable_draft_gradeable(paths)  # Same finite-coordinate and size contract.
+    if not any(paths):
+        return []
+    env = {k: v for k, v in os.environ.items() if k not in {"GEMINI_API_KEY", "GOOGLE_API_KEY"}}
+    result = subprocess.run(["node", os.path.join(os.path.dirname(__file__), "star-spline-server.cjs")],
+        input=json.dumps(paths, allow_nan=False), text=True, capture_output=True, timeout=5, check=True, env=env)
+    return json.loads(result.stdout)
+
+
 def parse(element_html: str, data: pl.QuestionData) -> None:
     element = lxml.html.fragment_fromstring(element_html)
     name = pl.get_string_attrib(element, "answers-name")
@@ -1087,6 +1108,12 @@ def parse(element_html: str, data: pl.QuestionData) -> None:
                 # grade a fitted path different from the rendered polyline or
                 # trust a client-provided ideal gradeable answer.
                 gradeable[draft_id] = _editable_draft_gradeable(submission_parsed["data"][draft_id])
+                data["submitted_answers"][name + "-sketchresponse-submission"] = base64.b64encode(
+                    json.dumps(submission_parsed).encode("utf-8")
+                ).decode("utf-8")
+            spline_id = data["params"][name]["config"].get("adaptivePhotoSplineTool")
+            if spline_id:
+                gradeable[spline_id] = _adaptive_spline_gradeable(submission_parsed["data"][spline_id])
                 data["submitted_answers"][name + "-sketchresponse-submission"] = base64.b64encode(
                     json.dumps(submission_parsed).encode("utf-8")
                 ).decode("utf-8")

@@ -1,0 +1,10 @@
+test_configured_tool_must_be_editable_open_polyline_and_graded (__main__.DraftTests.test_configured_tool_must_be_editable_open_polyline_and_graded) ... ok
+test_corrected_monotone_draft_uses_native_grader (__main__.DraftTests.test_corrected_monotone_draft_uses_native_grader) ... ok
+test_non_function_criterion_is_not_overridden_by_x_backtracking (__main__.DraftTests.test_non_function_criterion_is_not_overridden_by_x_backtracking) ... ok
+test_nonfinite_corrupt_or_single_vertex_draft_is_invalid (__main__.DraftTests.test_nonfinite_corrupt_or_single_vertex_draft_is_invalid) ... ok
+test_real_vertices_not_client_ideal_gradeable_determine_grading (__main__.DraftTests.test_real_vertices_not_client_ideal_gradeable_determine_grading) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
+
+OK

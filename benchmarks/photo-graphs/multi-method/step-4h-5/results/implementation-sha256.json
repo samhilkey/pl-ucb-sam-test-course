@@ -1,0 +1,17 @@
+{
+  "elements/pl-sketch/info.json": "aac2a7994935ad0e2dc2e4ba64840d87c5706fa049fcba53660e800929afeae4",
+  "elements/pl-sketch/pl-sketch.js": "409d5c70cf2532d005f5ae085ccfcb7dc88c2b9751d22956b2abe432251467d6",
+  "elements/pl-sketch/pl-sketch.py": "635ba0c0edc45527ad35f0d2167aa053eca923a13bed1c3058608fd5e94e0299",
+  "elements/pl-sketch/pl_sketch_grading.py": "74cb6043b18608b2254db15535704ba44a42b01de81321a44d5fe8e93cd0d46d",
+  "elements/pl-sketch/star-adaptive-geometry.js": "935b1eae152d96dcd51adef929ab574fea242c2ad853b43415a841a4e38fe45d",
+  "elements/pl-sketch/star-adaptive-native.js": "be566d846f47db84334463656e541c6875a30c16408a5f00a7c8e41dab3f4817",
+  "elements/pl-sketch/star-editable-draft-ui.js": "2c9e5207dd50f5bda69fb3498143650a1eeb1a5823f4437bc62c0561af2094a4",
+  "elements/pl-sketch/star-native-spline-fit.js": "f93f3b2fbd193301fb4f81ea6d530c6e99433a646d126c5e250c314947192e69",
+  "elements/pl-sketch/star-spline-server.cjs": "c2f8eae6323e04efbaa70330278b25eddbf77cc5ce3b39e9839fafac167864be",
+  "questions/star-adaptive-photo-test/info.json": "3ed9c5e6f21f58c4f58e37b630bb23373933bd7e5e31baea44a5cdbc089a41ab",
+  "questions/star-adaptive-photo-test/question.html": "63047b0ed14dea6cabc8d4d07fd52ec0cb7fa114a928af5781e01c83ebb2de80",
+  "tests/star-adaptive-browser.cjs": "ec7c6dfc8ca20ee2583b6c6d4a79ca6c8e0b9390f086c656bfde39b6117fe400",
+  "tests/star-adaptive-replays-browser.cjs": "97249a2422a0e0f5e176035767dc168eebc38a5e863d68779c244313a3f24f51",
+  "tests/star-adaptive-server.py": "0d2e04b07b04a64ca3f17cf6b6882476a8024d8000a5fa911e6bdb80fa93180c",
+  "tests/star-adaptive.test.cjs": "a78489a72eab45788b3764a2d1f9aa5daa015526cb06f1bbcbba527c20fb4672"
+}

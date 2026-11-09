@@ -1,0 +1,45 @@
+TAP version 13
+# Subtest: actual measured photo chooses native smooth sections while retaining corners, hook and irregular regions
+ok 1 - actual measured photo chooses native smooth sections while retaining corners, hook and irregular regions
+  ---
+  duration_ms: 465.086333
+  ...
+# Subtest: Original trace restores all measured vertices and no spline; invalid mode and nonfinite fitting fail closed
+ok 2 - Original trace restores all measured vertices and no spline; invalid mode and nonfinite fitting fail closed
+  ---
+  duration_ms: 0.332
+  ...
+# Subtest: representation replacement is explicit and replaces only the unchanged owned draft without duplicates
+ok 3 - representation replacement is explicit and replaces only the unchanged owned draft without duplicates
+  ---
+  duration_ms: 963.862375
+  ...
+# Subtest: stale photos, stale native proposals and corrupt tool configuration cannot import adaptive data
+ok 4 - stale photos, stale native proposals and corrupt tool configuration cannot import adaptive data
+  ---
+  duration_ms: 451.939833
+  ...
+# Subtest: readonly submission/solution canvases do not install an editable grading adapter
+ok 5 - readonly submission/solution canvases do not install an editable grading adapter
+  ---
+  duration_ms: 0.177167
+  ...
+# Subtest: a densely sampled measured straight stroke uses a two-endpoint polyline, not a spline
+ok 6 - a densely sampled measured straight stroke uses a two-endpoint polyline, not a spline
+  ---
+  duration_ms: 2.555292
+  ...
+# Subtest: separate branches and a reviewed independent point survive native style replacement
+ok 7 - separate branches and a reviewed independent point survive native style replacement
+  ---
+  duration_ms: 670.789958
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2612.394708

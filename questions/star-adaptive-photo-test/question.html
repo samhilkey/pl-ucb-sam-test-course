@@ -1,0 +1,21 @@
+<pl-question-panel>
+  <h4>Adaptive native photo curves (experimental)</h4>
+  <p>
+    <strong>Upload / Take photo → Edit detected graph → Save &amp; Grade.</strong>
+    Confirm the photo's axes if needed, then accept the approximate draft and drag
+    its vertices with Select. Highlighted turns remain part of your drawing until
+    you change them. Photo options retains detailed selection and manual tracing.
+    Local CV is assisted when you supply axes. Auto keeps corners and turns as original trace and fits only verified smooth sections. Gemini is not used.
+  </p>
+  <p>
+    Sketch $f(x)=x^2$. This sandbox keeps the native $x^2$ grader: an imported
+    sample can be graded incorrect while faithfully preserving its original marks.
+  </p>
+</pl-question-panel>
+<pl-sketch answers-name="adaptive-photo" x-range="-5,7" y-range="-4,6" width="800" height="600" allow-hand-drawn="true" automatic-photo="true" preserve-photo-geometry="true" editable-photo-draft-tool="auto-draft" adaptive-photo-spline-tool="auto-smooth">
+  <pl-sketch-tool id="auto-ink" type="free-draw" label="Graph strokes"></pl-sketch-tool>
+  <pl-sketch-tool id="auto-notes" type="point" label="Other marks"></pl-sketch-tool>
+  <pl-sketch-tool id="auto-draft" type="polyline" label="Edit vertices" color="#5b43d6"></pl-sketch-tool>
+  <pl-sketch-tool id="auto-smooth" type="spline" label="Smooth curve" color="#087e41"></pl-sketch-tool>
+  <pl-sketch-grade type="match-function" tool-id="auto-ink,auto-draft,auto-smooth" function="x**2" x-range="-2.2,2.2"></pl-sketch-grade>
+</pl-sketch>

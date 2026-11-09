@@ -1,0 +1,101 @@
+{
+  "main": [
+    {
+      "stroke_id": "cv-assisted-1",
+      "source_to_rendered_pixel": {
+        "mean": 0.8206200745469484,
+        "p95": 2.8009541241052704,
+        "max": 4.021798256992753
+      },
+      "rendered_to_source_pixel": {
+        "mean": 0.8106341448082576,
+        "p95": 2.748799424917146,
+        "max": 3.961701718243275
+      },
+      "combined_pixel": {
+        "mean": 0.8164102362483437,
+        "p95": 2.7886854184065264,
+        "max": 4.021798256992753
+      },
+      "global_endpoint_displacement_source_pixel": [
+        0.000031607088340273794,
+        0.000013281907103344747
+      ],
+      "maximum_native_joint_gap": 0,
+      "landmarks": [
+        {
+          "index": 1,
+          "kind": "corner_or_irregular_turn",
+          "turn_degrees": 71.57147028209933,
+          "displacement_source_pixel": 2.5421149729252077e-13
+        },
+        {
+          "index": 17,
+          "kind": "corner_or_irregular_turn",
+          "turn_degrees": 59.04568390887908,
+          "displacement_source_pixel": 1.1368683772161603e-13
+        },
+        {
+          "index": 22,
+          "kind": "corner_or_irregular_turn",
+          "turn_degrees": 54.160001178454294,
+          "displacement_source_pixel": 0
+        },
+        {
+          "index": 26,
+          "kind": "corner_or_irregular_turn",
+          "turn_degrees": 67.7459754247264,
+          "displacement_source_pixel": 2.2737367544323206e-13
+        },
+        {
+          "index": 27,
+          "kind": "corner_or_irregular_turn",
+          "turn_degrees": 45.00213810294858,
+          "displacement_source_pixel": 0
+        },
+        {
+          "index": 31,
+          "kind": "corner_or_irregular_turn",
+          "turn_degrees": 36.03107347126093,
+          "displacement_source_pixel": 0
+        },
+        {
+          "index": 1,
+          "kind": "x_max",
+          "displacement_source_pixel": 2.5421149729252077e-13
+        },
+        {
+          "index": 23,
+          "kind": "y_max",
+          "displacement_source_pixel": 0
+        },
+        {
+          "index": 1,
+          "kind": "local_x_extremum",
+          "displacement_source_pixel": 2.5421149729252077e-13
+        },
+        {
+          "index": 23,
+          "kind": "local_y_extremum",
+          "displacement_source_pixel": 0
+        }
+      ]
+    }
+  ],
+  "handles": [
+    43,
+    36
+  ],
+  "additional": [
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "branches": 1,
+      "handles": 7
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "branches": 2,
+      "handles": 10
+    }
+  ]
+}

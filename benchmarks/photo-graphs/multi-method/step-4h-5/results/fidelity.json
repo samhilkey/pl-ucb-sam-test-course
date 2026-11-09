@@ -1,0 +1,587 @@
+{
+  "scope": "Actual rendered native paths, sampled at <=0.5 native-pixel arc length in Chrome. No target equation in recognition or fitting. Distances in original source pixels.",
+  "main": {
+    "id": "IMG_1678",
+    "image_sha256": "bc1a75a4f46e0ebc43d43cfb26942d15306a69cc25530ae57309bd3f1a8dd9d9",
+    "measured_source_branches": 1,
+    "native_spline_objects": 2,
+    "native_polyline_objects": 3,
+    "original_handles": 43,
+    "adaptive_handles": 36,
+    "handle_reduction_percent": 16.279069767441857,
+    "fitting_policy": {
+      "p95_source_pixel": 3.981764705882353,
+      "max_source_pixel": 6,
+      "endpoint_source_pixel": 0.04,
+      "corner_turn_degrees": 35,
+      "native_quantization": 0.01,
+      "numerical_extremum_amplitude_native": 0.01
+    },
+    "branches": [
+      {
+        "stroke_id": "cv-assisted-1",
+        "source_to_rendered_pixel": {
+          "mean": 0.8206200745469484,
+          "p95": 2.8009541241052704,
+          "max": 4.021798256992753
+        },
+        "rendered_to_source_pixel": {
+          "mean": 0.8106341448082576,
+          "p95": 2.748799424917146,
+          "max": 3.961701718243275
+        },
+        "combined_pixel": {
+          "mean": 0.8164102362483437,
+          "p95": 2.7886854184065264,
+          "max": 4.021798256992753
+        },
+        "global_endpoint_displacement_source_pixel": [
+          0.000031607088340273794,
+          0.000013281907103344747
+        ],
+        "maximum_native_joint_gap": 0,
+        "landmarks": [
+          {
+            "index": 1,
+            "kind": "corner_or_irregular_turn",
+            "turn_degrees": 71.57147028209933,
+            "displacement_source_pixel": 2.5421149729252077e-13
+          },
+          {
+            "index": 17,
+            "kind": "corner_or_irregular_turn",
+            "turn_degrees": 59.04568390887908,
+            "displacement_source_pixel": 1.1368683772161603e-13
+          },
+          {
+            "index": 22,
+            "kind": "corner_or_irregular_turn",
+            "turn_degrees": 54.160001178454294,
+            "displacement_source_pixel": 0
+          },
+          {
+            "index": 26,
+            "kind": "corner_or_irregular_turn",
+            "turn_degrees": 67.7459754247264,
+            "displacement_source_pixel": 2.2737367544323206e-13
+          },
+          {
+            "index": 27,
+            "kind": "corner_or_irregular_turn",
+            "turn_degrees": 45.00213810294858,
+            "displacement_source_pixel": 0
+          },
+          {
+            "index": 31,
+            "kind": "corner_or_irregular_turn",
+            "turn_degrees": 36.03107347126093,
+            "displacement_source_pixel": 0
+          },
+          {
+            "index": 1,
+            "kind": "x_max",
+            "displacement_source_pixel": 2.5421149729252077e-13
+          },
+          {
+            "index": 23,
+            "kind": "y_max",
+            "displacement_source_pixel": 0
+          },
+          {
+            "index": 1,
+            "kind": "local_x_extremum",
+            "displacement_source_pixel": 2.5421149729252077e-13
+          },
+          {
+            "index": 23,
+            "kind": "local_y_extremum",
+            "displacement_source_pixel": 0
+          }
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "kind": "polyline",
+        "source_stroke_id": "cv-assisted-1",
+        "source_range": [
+          0,
+          2
+        ],
+        "handles": 3,
+        "actual_svg_sample_count": 12,
+        "source_to_rendered_pixel": {
+          "mean": 0.02180726861100957,
+          "p95": 0.17103735748009163,
+          "max": 0.17103735748009163
+        },
+        "rendered_to_source_pixel": {
+          "mean": 0.0006122960436188315,
+          "p95": 0.0008034596849469686,
+          "max": 0.0051983804873819576
+        },
+        "combined_pixel": {
+          "mean": 0.013036935134847884,
+          "p95": 0.024523536473536316,
+          "max": 0.17103735748009163
+        },
+        "endpoint_displacement_pixel": [
+          0.000031607088340273794,
+          0.0051983804873819576
+        ],
+        "axis_direction_changes": {
+          "x": {
+            "reference": 1,
+            "rendered": 1
+          },
+          "y": {
+            "reference": 0,
+            "rendered": 0
+          }
+        }
+      },
+      {
+        "kind": "spline",
+        "source_stroke_id": "cv-assisted-1",
+        "source_range": [
+          2,
+          16
+        ],
+        "handles": 8,
+        "actual_svg_sample_count": 542,
+        "source_to_rendered_pixel": {
+          "mean": 1.3174765805961997,
+          "p95": 3.3059788585898198,
+          "max": 4.021798256992977
+        },
+        "rendered_to_source_pixel": {
+          "mean": 1.3076643273172803,
+          "p95": 3.2364809626874136,
+          "max": 3.9617017182434986
+        },
+        "combined_pixel": {
+          "mean": 1.3133634782936665,
+          "p95": 3.2974917172916363,
+          "max": 4.021798256992977
+        },
+        "endpoint_displacement_pixel": [
+          0.0051983804873819576,
+          0.007360187335640091
+        ],
+        "axis_direction_changes": {
+          "x": {
+            "reference": 0,
+            "rendered": 0
+          },
+          "y": {
+            "reference": 0,
+            "rendered": 0
+          }
+        }
+      },
+      {
+        "kind": "polyline",
+        "source_stroke_id": "cv-assisted-1",
+        "source_range": [
+          16,
+          32
+        ],
+        "handles": 15,
+        "actual_svg_sample_count": 392,
+        "source_to_rendered_pixel": {
+          "mean": 0.09681880721702744,
+          "p95": 0.7936363883229144,
+          "max": 1.2076893265596877
+        },
+        "rendered_to_source_pixel": {
+          "mean": 0.090215247386925,
+          "p95": 0.7891376698070736,
+          "max": 1.1955307496063792
+        },
+        "combined_pixel": {
+          "mean": 0.09401426176372282,
+          "p95": 0.7936363883229144,
+          "max": 1.2076893265596877
+        },
+        "endpoint_displacement_pixel": [
+          0.007360187335640091,
+          0.00869189128476935
+        ],
+        "axis_direction_changes": {
+          "x": {
+            "reference": 0,
+            "rendered": 0
+          },
+          "y": {
+            "reference": 1,
+            "rendered": 1
+          }
+        }
+      },
+      {
+        "kind": "spline",
+        "source_stroke_id": "cv-assisted-1",
+        "source_range": [
+          32,
+          41
+        ],
+        "handles": 8,
+        "actual_svg_sample_count": 521,
+        "source_to_rendered_pixel": {
+          "mean": 0.8759377985927546,
+          "p95": 2.396851277347541,
+          "max": 2.977549775504578
+        },
+        "rendered_to_source_pixel": {
+          "mean": 0.876034105479542,
+          "p95": 2.3791626288158785,
+          "max": 2.9668517788036874
+        },
+        "combined_pixel": {
+          "mean": 0.8759783939714083,
+          "p95": 2.392480694786996,
+          "max": 2.977549775504578
+        },
+        "endpoint_displacement_pixel": [
+          0.00869189128476935,
+          0.012274490669084872
+        ],
+        "axis_direction_changes": {
+          "x": {
+            "reference": 0,
+            "rendered": 0
+          },
+          "y": {
+            "reference": 0,
+            "rendered": 0
+          }
+        }
+      },
+      {
+        "kind": "polyline",
+        "source_stroke_id": "cv-assisted-1",
+        "source_range": [
+          41,
+          42
+        ],
+        "handles": 2,
+        "actual_svg_sample_count": 14,
+        "source_to_rendered_pixel": {
+          "mean": 0.0007463303314657918,
+          "p95": 0.0014151610778636652,
+          "max": 0.0015023084575592923
+        },
+        "rendered_to_source_pixel": {
+          "mean": 0.001516712808665156,
+          "p95": 0.001389361735991811,
+          "max": 0.012274490669084872
+        },
+        "combined_pixel": {
+          "mean": 0.001083372665240514,
+          "p95": 0.0014151610778636652,
+          "max": 0.012274490669084872
+        },
+        "endpoint_displacement_pixel": [
+          0.012274490669084872,
+          0.000013281907127748828
+        ],
+        "axis_direction_changes": {
+          "x": {
+            "reference": 0,
+            "rendered": 0
+          },
+          "y": {
+            "reference": 0,
+            "rendered": 0
+          }
+        }
+      }
+    ],
+    "baseline_original_trace_displacement_pixel": 0,
+    "reference_scope": "Retained CV/manual centerline, not a blinded independent photograph annotation. Measures representation drift only.",
+    "classification": "CV-assisted axes; adaptive native representation. No manual curve trace or Gemini output. Final corrected grade follows explicit student edits.",
+    "fully_automatic_numeric_calibration": false,
+    "uncorrected_scores": [
+      "0%",
+      "0%",
+      "0%"
+    ],
+    "spline_edited_scores": [
+      "0%",
+      "0%",
+      "0%",
+      "0%"
+    ],
+    "student_corrected_scores": [
+      "100%",
+      "100%",
+      "100%",
+      "0%",
+      "0%"
+    ],
+    "endpoint_hook_preserved_before_student_edit": true,
+    "isolated_point_detection": "Not established by the real-photo CV route; existing annotation point retained."
+  },
+  "additional_manual_representation_replays": [
+    {
+      "id": "real--06-piecewise-graph-paper",
+      "image_sha256": "fea59f67b07f33432c8b2974489dc0a600547cc347f20bf46abf75a6d62b5ad6",
+      "measured_source_branches": 1,
+      "native_spline_objects": 0,
+      "native_polyline_objects": 1,
+      "original_handles": 7,
+      "adaptive_handles": 7,
+      "handle_reduction_percent": 0,
+      "fitting_policy": {
+        "p95_source_pixel": 1.75,
+        "max_source_pixel": 2.65,
+        "endpoint_source_pixel": 0.04,
+        "corner_turn_degrees": 35,
+        "native_quantization": 0.01,
+        "numerical_extremum_amplitude_native": 0.01
+      },
+      "branches": [
+        {
+          "stroke_id": "manual-1",
+          "source_to_rendered_pixel": {
+            "mean": 0.0001752705001523231,
+            "p95": 0.000027758457925153205,
+            "max": 0.018872382937943064
+          },
+          "rendered_to_source_pixel": {
+            "mean": 0.00000984315715097868,
+            "p95": 0.00002734778594199317,
+            "max": 0.00004050051833430554
+          },
+          "combined_pixel": {
+            "mean": 0.000040129086100455583,
+            "p95": 0.000027420115627573117,
+            "max": 0.018872382937943064
+          },
+          "global_endpoint_displacement_source_pixel": [
+            0.000010108118248565843,
+            0.000019814367879289376
+          ],
+          "maximum_native_joint_gap": 0,
+          "landmarks": [
+            {
+              "index": 5,
+              "kind": "corner_or_irregular_turn",
+              "turn_degrees": 110.48542441648084,
+              "displacement_source_pixel": 2.842170943040401e-14
+            },
+            {
+              "index": 5,
+              "kind": "y_min",
+              "displacement_source_pixel": 2.842170943040401e-14
+            },
+            {
+              "index": 5,
+              "kind": "local_y_extremum",
+              "displacement_source_pixel": 2.842170943040401e-14
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "kind": "polyline",
+          "source_stroke_id": "manual-1",
+          "source_range": [
+            0,
+            6
+          ],
+          "handles": 7,
+          "actual_svg_sample_count": 2655,
+          "source_to_rendered_pixel": {
+            "mean": 0.00017527050015917427,
+            "p95": 0.000027758457925153205,
+            "max": 0.018872382937943064
+          },
+          "rendered_to_source_pixel": {
+            "mean": 0.000009843157157303298,
+            "p95": 0.000027347785963691043,
+            "max": 0.00004050051835697421
+          },
+          "combined_pixel": {
+            "mean": 0.0000401290861068766,
+            "p95": 0.000027420115641391172,
+            "max": 0.018872382937943064
+          },
+          "endpoint_displacement_pixel": [
+            0.000010108118301316575,
+            0.000019814367879289376
+          ],
+          "axis_direction_changes": {
+            "x": {
+              "reference": 0,
+              "rendered": 0
+            },
+            "y": {
+              "reference": 1,
+              "rendered": 1
+            }
+          }
+        }
+      ],
+      "baseline_original_trace_displacement_pixel": 0,
+      "reference_scope": "Retained CV/manual centerline, not a blinded independent photograph annotation. Measures representation drift only.",
+      "classification": "real_photo_with_frozen_manual_trace_replay",
+      "automatic_recognition": false,
+      "calibration_evidence": "Operator-selected visible labeled tick references; approximate affine calibration."
+    },
+    {
+      "id": "real--01-multiple-lines-graph-paper",
+      "image_sha256": "ad95e07043f98c8c4772c694401ae5692f996ecc18ed86df90f98d6623d7b701",
+      "measured_source_branches": 2,
+      "native_spline_objects": 1,
+      "native_polyline_objects": 1,
+      "original_handles": 13,
+      "adaptive_handles": 10,
+      "handle_reduction_percent": 23.076923076923073,
+      "fitting_policy": {
+        "p95_source_pixel": 1.75,
+        "max_source_pixel": 2.65,
+        "endpoint_source_pixel": 0.04,
+        "corner_turn_degrees": 35,
+        "native_quantization": 0.01,
+        "numerical_extremum_amplitude_native": 0.01
+      },
+      "branches": [
+        {
+          "stroke_id": "manual-1",
+          "source_to_rendered_pixel": {
+            "mean": 0.409132421564682,
+            "p95": 1.2937268764923895,
+            "max": 1.5599884338060637
+          },
+          "rendered_to_source_pixel": {
+            "mean": 0.4095827831824064,
+            "p95": 1.2911562075863912,
+            "max": 1.5587328665020166
+          },
+          "combined_pixel": {
+            "mean": 0.4094245637793737,
+            "p95": 1.2957689360025724,
+            "max": 1.5599884338060637
+          },
+          "global_endpoint_displacement_source_pixel": [
+            0.0014190043072192437,
+            0.005888456165467188
+          ],
+          "maximum_native_joint_gap": 0,
+          "landmarks": []
+        },
+        {
+          "stroke_id": "manual-2",
+          "source_to_rendered_pixel": {
+            "mean": 0.00003740112969673081,
+            "p95": 0.00001802570755792642,
+            "max": 0.005169300853600226
+          },
+          "rendered_to_source_pixel": {
+            "mean": 0.000008006082132584223,
+            "p95": 0.00001889790655665461,
+            "max": 0.000028054019662218877
+          },
+          "combined_pixel": {
+            "mean": 0.00001840877843941061,
+            "p95": 0.000018739747038002856,
+            "max": 0.005169300853600226
+          },
+          "global_endpoint_displacement_source_pixel": [
+            0.0000033314867948172686,
+            0.000023002339831622336
+          ],
+          "maximum_native_joint_gap": 0,
+          "landmarks": []
+        }
+      ],
+      "parts": [
+        {
+          "kind": "spline",
+          "source_stroke_id": "manual-1",
+          "source_range": [
+            0,
+            6
+          ],
+          "handles": 4,
+          "actual_svg_sample_count": 1503,
+          "source_to_rendered_pixel": {
+            "mean": 0.40913242156469043,
+            "p95": 1.2937268764923895,
+            "max": 1.5599884338060999
+          },
+          "rendered_to_source_pixel": {
+            "mean": 0.4095827831824145,
+            "p95": 1.2911562075864225,
+            "max": 1.5587328665020517
+          },
+          "combined_pixel": {
+            "mean": 0.40942456377938186,
+            "p95": 1.2957689360026057,
+            "max": 1.5599884338060999
+          },
+          "endpoint_displacement_pixel": [
+            0.0014190043072440936,
+            0.005888456165467188
+          ],
+          "axis_direction_changes": {
+            "x": {
+              "reference": 0,
+              "rendered": 0
+            },
+            "y": {
+              "reference": 0,
+              "rendered": 0
+            }
+          }
+        },
+        {
+          "kind": "polyline",
+          "source_stroke_id": "manual-2",
+          "source_range": [
+            0,
+            5
+          ],
+          "handles": 6,
+          "actual_svg_sample_count": 1278,
+          "source_to_rendered_pixel": {
+            "mean": 0.00003740112970387633,
+            "p95": 0.000018025707521966708,
+            "max": 0.005169300853615026
+          },
+          "rendered_to_source_pixel": {
+            "mean": 0.000008006082139359163,
+            "p95": 0.000018897906611556416,
+            "max": 0.000028054019642277347
+          },
+          "combined_pixel": {
+            "mean": 0.000018408778446316702,
+            "p95": 0.000018739747079179215,
+            "max": 0.005169300853615026
+          },
+          "endpoint_displacement_pixel": [
+            0.0000033314868507931097,
+            0.000023002339834450403
+          ],
+          "axis_direction_changes": {
+            "x": {
+              "reference": 0,
+              "rendered": 0
+            },
+            "y": {
+              "reference": 0,
+              "rendered": 0
+            }
+          }
+        }
+      ],
+      "baseline_original_trace_displacement_pixel": 0,
+      "reference_scope": "Retained CV/manual centerline, not a blinded independent photograph annotation. Measures representation drift only.",
+      "classification": "real_photo_with_frozen_manual_trace_replay",
+      "automatic_recognition": false,
+      "calibration_evidence": "No numeric labels in source. Explicit demo-operator scale assignment, NOT inferred/recovered student units."
+    }
+  ]
+}

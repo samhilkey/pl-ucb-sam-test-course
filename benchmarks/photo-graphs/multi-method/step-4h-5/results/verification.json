@@ -1,0 +1,124 @@
+{
+  "step": "4H-5",
+  "assessment": "CONDITIONAL PASS: real-photo CV-assisted adaptive native representation; automatic numeric calibration remains unresolved. No general recognition claim.",
+  "checked_at_utc": "2026-11-09T22:49:01.199609+00:00",
+  "client_timezone": "America/Los_Angeles",
+  "branch": "feat/automatic-photo-recognition-cv",
+  "base_commit": "9550f6fde20b21d6659f062bc403e53a2b14b69a",
+  "current_work_is_unpushed_local_only": true,
+  "environment": {
+    "url": "http://localhost:3000/pl/course/1/question/256/preview/",
+    "h4_fallback_url": "http://localhost:3000/pl/course/1/question/254/preview/",
+    "frozen_manual_url": "http://localhost:3000/pl/course/1/question/255/preview/",
+    "host_node": "v20.19.6",
+    "container_node": "v24.22.1",
+    "native_sketchresponse": "0.2.1",
+    "browser": "Installed Chrome via Playwright CLI",
+    "browser_plugin": "not available",
+    "viewports": [
+      [
+        1440,
+        1100
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "projector": "not available / presenter check required"
+  },
+  "native_kernel": {
+    "installed_source": "@prairielearn/sketchresponse/dist source map: freeform/fitcurve.js",
+    "source_sha256": "95e3e8a7080b8a752c6798584e6f44facb311d6b001112fdc01993dbcf1c5777",
+    "wrapper": "elements/pl-sketch/star-native-spline-fit.js",
+    "native_svg_path_parity_verified": true
+  },
+  "tests": [
+    {
+      "command": "node --test tests/star-geometry.test.cjs tests/star-recognition.test.cjs tests/star-native.test.cjs tests/star-method-feasibility.test.cjs tests/star-assisted.test.cjs tests/star-fit-branches.cjs tests/star-fit-coverage.cjs tests/star-gemini-config.test.cjs tests/star-demo-backup.test.cjs tests/star-providers.test.cjs tests/star-gemini-pilot.test.cjs tests/star-gemini-once.test.cjs tests/star-gemini-observation.test.cjs tests/star-cv-assisted.test.cjs tests/star-canvas-reference.test.cjs tests/star-hybrid.test.cjs tests/star-targeted.test.cjs tests/star-semantic-provider.test.cjs tests/star-native-backtrack.test.cjs tests/star-editable-draft.test.cjs tests/star-adaptive.test.cjs",
+      "passed": 159,
+      "failed": 0,
+      "log": "logs/unit-all.log"
+    },
+    {
+      "command": "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-adaptive-server.py -v'",
+      "passed": 3,
+      "failed": 0,
+      "log": "logs/server.log"
+    },
+    {
+      "command": "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-editable-draft-server.py -v'",
+      "passed": 5,
+      "failed": 0,
+      "log": "logs/server-h4.log"
+    },
+    {
+      "command": "docker exec star-automatic-cv-baseline-arm64 sh -c 'PYTHONPATH=/PrairieLearn/apps/prairielearn/python:/course/elements/pl-sketch /PrairieLearn/.venv/bin/python -B /course/tests/star-assisted-server.py -v'",
+      "passed": 5,
+      "failed": 0,
+      "log": "logs/server-assisted.log"
+    },
+    {
+      "command": "node tests/star-adaptive-browser.cjs",
+      "passed_assertions": 33,
+      "failed_assertions": 0,
+      "log": "logs/browser.log",
+      "record": "browser/results.json"
+    },
+    {
+      "command": "node tests/star-adaptive-replays-browser.cjs",
+      "passed_assertions": 6,
+      "failed_assertions": 0,
+      "log": "logs/replays.log",
+      "record": "replays/results.json"
+    },
+    {
+      "command": "node tests/star-editable-draft-browser.cjs",
+      "passed_assertions": 43,
+      "failed_assertions": 0,
+      "log": "logs/h4-regression.log",
+      "record": "h4-regression.json.gz"
+    },
+    {
+      "command": "node benchmarks/photo-graphs/multi-method/step-4g-4/run-manual-regression.cjs",
+      "passed_assertions": 84,
+      "failed_assertions": 0,
+      "log": "logs/frozen-demo.log",
+      "record": "frozen-manual-regression.json.gz"
+    },
+    {
+      "command": "PL_PHOTO_TEST_CLI=/Users/alaiasun/.codex/skills/playwright/scripts/playwright_cli.sh PL_PHOTO_TEST_OUTPUT=/private/tmp/star-h5/native-browser node tests/star-native-browser.cjs",
+      "passed_assertions": 165,
+      "failed_assertions": 0,
+      "log": "logs/native-browser.log",
+      "record": "native-adapter-regression.json.gz"
+    }
+  ],
+  "totals": {
+    "node_tests_passed": 159,
+    "python_tests_passed": 13,
+    "browser_assertions_passed": 331
+  },
+  "frozen_files_unchanged": true,
+  "frozen_diff_command": "git diff --exit-code 9550f6fde20b21d6659f062bc403e53a2b14b69a -- questions/star-automatic-photo-test elements/pl-sketch/star-photo.js elements/pl-sketch/star-assisted.js elements/pl-sketch/star-recognition.js benchmarks/photo-graphs/multi-method/step-4f benchmarks/photo-graphs/multi-method/step-4h-4",
+  "inference_requests_this_step": 0,
+  "external_photo_uploads_this_step": 0,
+  "billing_changes": 0,
+  "provider_attempt_files_modified": false,
+  "new_recognition_model_or_algorithm": false,
+  "fit_input": "Existing measured ink and student-confirmed affine calibration; no grader answer, equation or reference annotation",
+  "evaluator_command": "node benchmarks/photo-graphs/multi-method/step-4h-5/evaluate.cjs",
+  "remaining_limitations": [
+    "One existing CV-assisted development photograph, not held-out automatic validation",
+    "Manual axes and numeric tick values still required",
+    "Original irregular middle and endpoint hook retain dense handles",
+    "Native hook handle overlap; exact target needed; touch/projector not tested",
+    "Style replacement blocked after intervening edits or refresh ownership loss",
+    "Existing objects preserved; isolated-point detection not established by this real-photo route",
+    "New code exists only on this Mac, unpushed local branch"
+  ]
+}

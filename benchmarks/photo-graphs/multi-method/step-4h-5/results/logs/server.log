@@ -1,0 +1,8 @@
+test_changed_spline_anchor_changes_the_real_grade (__main__.AdaptiveTests.test_changed_spline_anchor_changes_the_real_grade) ... ok
+test_complementary_native_parts_are_graded_as_one_full_domain (__main__.AdaptiveTests.test_complementary_native_parts_are_graded_as_one_full_domain) ... ok
+test_corrupt_spline_state_cannot_become_a_gradeable_curve (__main__.AdaptiveTests.test_corrupt_spline_state_cannot_become_a_gradeable_curve) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.112s
+
+OK
