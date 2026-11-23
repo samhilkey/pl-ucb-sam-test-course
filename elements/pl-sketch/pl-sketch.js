@@ -182,7 +182,8 @@ function starAddHandDrawnButton (id, si, config) {
           // Fewer control points than we sample for display: the student has to
           // be able to drag these, and a spline interpolates between them.
           try {
-            const curves = models.map((model) => window.StarFit.sampleCurve(model, 16))
+            // New photo tool: models carry ready-made spline points. Old fitted models carry f/lo/hi.
+            const curves = models.map((model) => model.points || window.StarFit.sampleCurve(model, 16))
             window.StarFit.placeCurves(si, config, toolId, curves)
           } catch (err) {
             return { ok: false, message: 'Could not place the curve: ' + err.message }
