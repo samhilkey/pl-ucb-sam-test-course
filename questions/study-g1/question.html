@@ -1,0 +1,49 @@
+<pl-question-panel>
+  <p>Sketch the graph of the given function on the supplied axes. Draw the important features as
+    accurately as you can. Work naturally; this is not a graded test of your math ability.
+    If the tool changes something you drew, review and correct it if possible. Tell us when you cannot.</p>
+  <p>Sketch the graph of $y = \frac{1}{x-1}$ using the provided coordinate axes
+    ($-5 \le x \le 5$; $-5 \le y \le 5$).</p>
+</pl-question-panel>
+
+<pl-sketch answers-name="graph" x-range="-5,5" y-range="-5,5" width="500" height="500"
+           unit-grid="true" allow-hand-drawn="true" allow-overlap="true">
+  <pl-sketch-tool id="draw" type="free-draw" label="Your graph"></pl-sketch-tool>
+  <pl-sketch-grade type="match-function" tool-id="draw" function="1/(x-1)" x-range="-5,0.8"
+                   feedback="The sketch differs from the target graph."></pl-sketch-grade>
+  <pl-sketch-grade type="match-function" tool-id="draw" function="1/(x-1)" x-range="1.2,5"
+                   feedback="The sketch differs from the target graph."></pl-sketch-grade>
+  <pl-sketch-grade type="undefined-in" tool-id="draw" x-range="0.8,1.2"
+                   feedback="The sketch differs from the target graph."></pl-sketch-grade>
+</pl-sketch>
+
+<pl-manual-grading-only>
+  <p><strong>Mathematical reference</strong></p>
+  <ul>
+    <li>The graph has two separate branches. The left branch lies below the $x$-axis and the right branch lies above it.</li>
+    <li>The vertical asymptote is $x = 1$ and the horizontal asymptote is $y = 0$.</li>
+    <li>The graph passes through $(0,-1)$ and $(2,1)$.</li>
+  </ul>
+  <p><strong>Human feature checklist</strong></p>
+  <p>Use the study's positional tolerance, set in grid squares before scoring, for coordinate comparisons.</p>
+  <p>Record 1 if the feature is present and 0 otherwise. Sum the four values for a score out of 4.</p>
+  <ol>
+    <li>Two separate branches.</li>
+    <li>Correct left/right sign and orientation.</li>
+    <li>Discontinuity at $x = 1$ with no bridge.</li>
+    <li>At least one correctly placed anchor point, $(0,-1)$ or $(2,1)$.</li>
+  </ol>
+  <p><strong>Transfer fidelity</strong></p>
+  <p>Score the original paper before revealing the import or PrairieLearn score. Apply the same
+    checklist to the raw and final graphs and keep all three human ratings. Record the PrairieLearn
+    percentage separately.</p>
+  <p>Compare the raw import and the final submission with the original paper. Record each feature
+    as preserved, changed, or cannot judge. A misconception present on paper can be faithfully
+    transferred. If an artifact is missing, record which comparison is unavailable.</p>
+  <ul>
+    <li>Was any branch deleted?</li>
+    <li>Were disconnected branches joined?</li>
+    <li>Did the asymptote shift?</li>
+    <li>Are sampled stroke locations within the predeclared grid-square tolerance?</li>
+  </ul>
+</pl-manual-grading-only>

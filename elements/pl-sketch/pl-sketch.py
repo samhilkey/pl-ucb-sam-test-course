@@ -40,6 +40,8 @@ class _AxesLabelFontSize(TypedDict):
 
 class AxesPlugin(TypedDict):
     name: Literal["axes"]
+    major: NotRequired[int]
+    minor: NotRequired[None]
     xaxisLabel: _AxesLabel
     yaxisLabel: _AxesLabel
     colors: _AxesLabelColors
@@ -117,6 +119,8 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "read-only",
         "overlay-solution",
         "allow-blank",
+        "allow-overlap",
+        "unit-grid",
         "allow-hand-drawn",  # STAR
     ]
     pl.check_attribs(element, required_attribs, optional_attribs)
@@ -124,6 +128,7 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
     # STAR: validate here so a typo in the attribute surfaces at sync time
     # rather than silently doing nothing when the question renders.
     pl.get_boolean_attrib(element, "allow-hand-drawn", ALLOW_HAND_DRAWN_DEFAULT)
+    pl.get_boolean_attrib(element, "allow-overlap", False)
 
     name = pl.get_string_attrib(element, "answers-name")
     pl.check_answers_names(data, name)
@@ -198,6 +203,9 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "colors": {"xaxisLabel": "blue", "yaxisLabel": "blue"},
         "fontSize": {"xaxisLabel": 14, "yaxisLabel": 14},
     }
+    if pl.get_boolean_attrib(element, "unit-grid", False):
+        axes_plugins["major"] = 1
+        axes_plugins["minor"] = None
     toolbar.insert(0, axes_plugins)
 
     # Check maximum width of toolbar
@@ -1088,11 +1096,8 @@ def parse(element_html: str, data: pl.QuestionData) -> None:
             data["format_errors"][name] = "Graph is blank."
             return
 
-    # validate that polygons have <= 30 vertices
-    # validate that spline-type objects with the same toolid don't overlap each other more than 15 px
-    # TODO: Consider moving the second check into the grader since it might be useful to make it configurable for
-    # each grading criterion. Arguably, drawing a non-function when a function is requested is an incorrect answer
-    # and does not need to be flagged as invalid.
+    # Allow study questions to retain overlapping strokes, including drawing errors.
+    allow_overlap = pl.get_boolean_attrib(element, "allow-overlap", False)
     spline_based_tool_names = ["freeform", "spline", "polyline"]
     params: SketchAnswerParams = data["params"][name]
     tool_data = params["tool_data"]
@@ -1119,6 +1124,7 @@ def parse(element_html: str, data: pl.QuestionData) -> None:
         elif (
             tool_data[toolid]["name"] in spline_based_tool_names
             and tool_data[toolid]["id"] not in no_overlap_check
+            and not allow_overlap
         ):
             if len(gradeable[toolid]) == 1:
                 continue

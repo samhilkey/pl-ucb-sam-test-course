@@ -1,7 +1,7 @@
 {
   "uuid": "E5244945-5090-410E-A46A-704D657AD45B",
-  "name": "cs000",
-  "title": "sam test course",
+  "name": "Sketch2Graph",
+  "title": "Photo-to-Graph Micropilot",
   "options": {
     "useNewQuestionRenderer": true
   },
@@ -78,6 +78,12 @@
       "description": "Quiz, Midterm, and Final Questions",
       "assessment": true
     },
+    {
+      "name": "study",
+      "color": "brown2",
+      "description": "Research study questions",
+      "assessment": true
+    },
 
     { "name": "quiz", "color": "pink1", "description": "Exam level." },
     { "name": "midterm", "color": "pink2", "description": "Exam level." },
@@ -141,6 +147,18 @@
       "name": "ddgarcia",
       "color": "brown1",
       "description": "This question was originally written by Dan Garcia (ddgarcia@berkeley.edu)",
+      "author": true
+    },
+    {
+      "name": "sam-hilkey",
+      "color": "brown1",
+      "description": "Author Sam Hilkey",
+      "author": true
+    },
+    {
+      "name": "zhe-sun",
+      "color": "brown1",
+      "description": "Author Zhe Sun",
       "author": true
     },
 
