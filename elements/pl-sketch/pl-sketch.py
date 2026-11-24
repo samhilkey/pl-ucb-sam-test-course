@@ -4,6 +4,7 @@ import json
 import random
 import re
 import string
+import sys
 from typing import Any, Literal, NotRequired, TypedDict, cast
 
 import chevron
@@ -78,6 +79,8 @@ class SketchClientConfig(TypedDict):
     plugins: list[ToolbarPlugin]
     initialstate: dict[str, DrawingData]
     readonly: NotRequired[bool]
+    pointCalibration: NotRequired[bool]
+    calibrationPoints: NotRequired[list[dict[str, Any]]]
 
 
 class SketchAnswerParams(TypedDict):
@@ -122,6 +125,7 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "allow-overlap",
         "unit-grid",
         "allow-hand-drawn",  # STAR
+        "allow-point-calibration",
     ]
     pl.check_attribs(element, required_attribs, optional_attribs)
 
@@ -301,6 +305,8 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
         "plugins": toolbar,
         "initialstate": initial_state,
     }
+    if pl.get_boolean_attrib(element, "allow-point-calibration", False):
+        client_config["pointCalibration"] = True
 
     # Saving all processed data into a dictionary
     params: SketchAnswerParams = {
@@ -908,6 +914,16 @@ def render(element_html: str, data: pl.QuestionData) -> str:
             # Note that the initialstate input and the submission output of the client have
             # the same format, so piping one into the other is very convenient.
             config["initialstate"] = submission_parsed["data"]
+            points = submission_parsed.get("calibrationPoints")
+            if config.get("pointCalibration") and data["panel"] != "answer" and isinstance(points, list):
+                config["calibrationPoints"] = [
+                    {"known": ref["known"], "onCurve": ref.get("onCurve") is True}
+                    for ref in points
+                    if isinstance(ref, dict)
+                    and isinstance(ref.get("known"), list)
+                    and len(ref["known"]) == 2
+                    and all(type(v) in (int, float) and abs(v) <= sys.float_info.max for v in ref["known"])
+                ]
         except Exception:
             data["format_errors"][name] = (
                 "Invalid or corrupted submission data received from SketchResponse."

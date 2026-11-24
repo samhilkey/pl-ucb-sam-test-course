@@ -9,6 +9,7 @@
     ],
     "elementScripts": [
       "star-fit.js",
+      "star-calibration.js",
       "star-photo.js",
       "pl-sketch.js"
     ],

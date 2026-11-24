@@ -20,6 +20,9 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
 
     // STAR: publish the handle so the hand-drawn workflow can reach this canvas.
     starInstances[id] = si
+    if (config.pointCalibration) {
+      si.messageBus.on('ready', () => starDrawCalibrationPoints(id, config))
+    }
 
     // STAR: the photo route, when the instructor turned it on for this question.
     if (handDrawn) {
@@ -70,6 +73,7 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
     const updateState = function () {
       const siGradeable = JSON.parse(si.getGradeable())
       const siState = JSON.parse(si.getState())
+      if (config.calibrationPoints?.length) siState.calibrationPoints = config.calibrationPoints
       // State is needed for restoring submissions, gradeable for grading; merge the two dicts to reduce redundancy
       siState.gradeable = siGradeable.data
       $('#' + id + '-sketchresponse-submission').val(
@@ -87,6 +91,54 @@ window.SketchInput = Object.assign(function (id, overlaySolution = false, handDr
 
   prepareData()
 }, { instances: starInstances })
+
+function starDrawCalibrationPoints (id, config) {
+  const container = document.getElementById(id + '-si-container')
+  const canvas = container.querySelector('svg.si-canvas')
+  if (!canvas) return
+  canvas.querySelector('.star-calibration-markers')?.remove()
+  document.getElementById(id + '-calibration-key')?.remove()
+  const points = config.calibrationPoints || []
+  if (!points.length) return
+  const make = name => document.createElementNS('http://www.w3.org/2000/svg', name)
+  const layer = make('g')
+  layer.setAttribute('class', 'star-calibration-markers')
+  layer.setAttribute('pointer-events', 'none')
+  const pixels = window.StarFit.graphToPixels(config, points.map(ref => ref.known))
+  const key = document.createElement('details')
+  key.id = id + '-calibration-key'
+  const summary = document.createElement('summary')
+  summary.textContent = 'Calibration points (' + points.length + ')'
+  const list = document.createElement('ol')
+  key.append(summary, list)
+  points.forEach(({ known, onCurve }, i) => {
+    const group = make('g')
+    const description = '(' + known.join(', ') + '), ' + (onCurve ? 'on curve' : 'calibration reference')
+    const item = document.createElement('li')
+    item.textContent = description
+    list.append(item)
+    group.setAttribute('transform', 'translate(' + pixels[i].x + ' ' + pixels[i].y + ')')
+    group.setAttribute('role', 'img')
+    group.setAttribute('aria-label', 'Point ' + (i + 1) + ' ' + description)
+    const circle = make('circle')
+    circle.setAttribute('r', '4')
+    circle.setAttribute('fill', onCurve ? '#175a91' : 'none')
+    circle.setAttribute('stroke', '#175a91')
+    circle.setAttribute('stroke-width', '2')
+    const label = make('text')
+    label.setAttribute('x', '6')
+    label.setAttribute('y', '-5')
+    label.setAttribute('fill', '#175a91')
+    label.setAttribute('stroke', 'white')
+    label.setAttribute('stroke-width', '3')
+    label.setAttribute('paint-order', 'stroke')
+    label.textContent = String(i + 1)
+    group.append(circle, label)
+    layer.append(group)
+  })
+  canvas.append(layer)
+  container.after(key)
+}
 
 // ---------------------------------------------------------------------------
 // STAR: hand-drawn submission route.
@@ -174,7 +226,7 @@ function starAddHandDrawnButton (id, si, config) {
       photoUI = window.StarPhoto.create({
         root: document.getElementById(id + '-star-ui'),
         config,
-        onConfirm: function (models) {
+        onConfirm: function (models, points = []) {
           const toolId = window.StarFit.curveToolId(config)
           if (!toolId) {
             return { ok: false, message: 'This question has no editable curve tool to draw into.' }
@@ -185,6 +237,10 @@ function starAddHandDrawnButton (id, si, config) {
             // New photo tool: models carry ready-made spline points. Old fitted models carry f/lo/hi.
             const curves = models.map((model) => model.points || window.StarFit.sampleCurve(model, 16))
             window.StarFit.placeCurves(si, config, toolId, curves)
+            if (config.pointCalibration) {
+              config.calibrationPoints = points.map(({ known, onCurve }) => ({ known, onCurve }))
+              starDrawCalibrationPoints(id, config)
+            }
           } catch (err) {
             return { ok: false, message: 'Could not place the curve: ' + err.message }
           }
